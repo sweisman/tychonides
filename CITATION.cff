@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this catalog and the original editions identified in its source records."
+title: "Tychonides: astronomical observation catalog"
+type: dataset
+version: tychonides-1.0.0
+license: CC0-1.0
+authors:
+  - family-names: Weisman
+    given-names: Scott
+url: "https://tychonides.com/"
+abstract: "A source-linked catalog of astronomical observations, calculations and supporting evidence. It combines the Mars selection from Tycho Brahe's Opera Omnia X–XIII, seven historical books covering multiple celestial bodies, and modern terrestrial optical observations, parallax experiments and image metadata."

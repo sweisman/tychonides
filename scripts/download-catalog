@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# SPDX-License-Identifier: AGPL-3.0-or-later
+set -euo pipefail
+
+if [[ ${1:-} == --help || $# -gt 1 ]]; then
+  printf 'Usage: %s [DESTINATION]\nDownloads, verifies and decompresses the catalog from this checkout.\nUse a destination without existing catalog files.\n' "$0"
+  exit 0
+fi
+
+root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
+manifest="$root/resources/catalog/manifest.json"
+destination=${1:-downloads}
+
+for command in curl jq gzip tychonides-verify; do
+  command -v "$command" >/dev/null || { printf 'Required command missing: %s\n' "$command" >&2; exit 1; }
+done
+for asset in manifest.json tychonides.csv tychonides.sqlite.gz tychonides.sqlite; do
+  if [[ -e "$destination/$asset" ]]; then
+    printf 'Catalog file already exists: %s/%s; choose a fresh destination.\n' "$destination" "$asset" >&2
+    exit 1
+  fi
+done
+
+mkdir -p -- "$destination"
+stage=$(mktemp -d "$destination/.catalog-download.XXXXXX")
+trap 'rm -rf -- "$stage"' EXIT
+while IFS=$'\t' read -r asset url; do
+  case "$asset" in
+    tychonides.sqlite.gz|tychonides.csv) ;;
+    *) printf 'Unexpected catalog asset: %s\n' "$asset" >&2; exit 1 ;;
+  esac
+  curl --fail --location --retry 2 --output "$stage/$asset" "$url"
+done < <(jq -er '.download_urls | to_entries[] | [.key, .value] | @tsv' "$manifest")
+cp -- "$manifest" "$stage/manifest.json"
+tychonides-verify "$stage"
+gzip -dk -- "$stage/tychonides.sqlite.gz"
+for asset in tychonides.sqlite.gz tychonides.csv tychonides.sqlite manifest.json; do
+  mv -- "$stage/$asset" "$destination/$asset"
+done
+printf 'Verified catalog ready: %s/tychonides.sqlite\n' "$destination"

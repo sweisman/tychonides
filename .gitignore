@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+build/
+*.egg-info/
+/work/
+/downloads/
+/resources/catalog/tychonides.*

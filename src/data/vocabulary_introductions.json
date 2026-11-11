@@ -1,0 +1,3 @@
+{
+  "modern": "JPL, USNO, Carlsberg and Tokyo coordinates are published reduced positions, not raw instrumental readings. JJMO includes original settings, source reductions and predictions. LCO supplies image metadata, not measured positions. See the [complete database schema](database-schema.md) and [source directory](data-sources.md)."
+}

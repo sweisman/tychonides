@@ -1,0 +1,27 @@
+title: Tychonides
+description: Finishing what Tycho Brahe started. An Ars Astronomica project.
+url: https://tychonides.com
+baseurl: ""
+repository: sweisman/tychonides
+lang: en-US
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+relative_links:
+  enabled: true
+
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - work
+  - data
+  - build
+  - dist
+  - vendor
+  - Gemfile
+  - Gemfile.lock

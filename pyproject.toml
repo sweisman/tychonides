@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tychonides"
+version = "1.0.0"
+description = "Historical astronomical observations and exact numerical normalization"
+license = {text = "AGPL-3.0-or-later"}
+requires-python = ">=3.11"
+dependencies = ["xlrd==2.0.2"]
+
+[project.scripts]
+tychonides = "tychonides.__main__:main"
+tychonides-verify = "tychonides.release_validation:main"
+
+[project.optional-dependencies]
+dev = ["ruff==0.17.3"]
+
+[tool.setuptools]
+packages = ["tychonides"]
+package-dir = {tychonides = "src"}
+
+[tool.setuptools.package-data]
+tychonides = ["data/*.json"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["F401", "F811", "F821", "B", "UP", "SIM", "RUF"]
+# Literal historical notation must survive unchanged; other confusables still warn.
+allowed-confusables = ["ſ", "′", "−", "–", "⁄"]
+# Nested resource/error scopes can be clearer than one long context-manager list.
+ignore = ["SIM117"]
+
+[tool.ruff.lint.per-file-ignores]
+# Separate the applicability guard from the detailed scientific constraints.
+"src/public_assertions.py" = ["SIM102"]

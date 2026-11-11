@@ -1,0 +1,23 @@
+# Normalization conventions
+
+These terms describe source meanings and explicit conversions; they do not establish observational independence or apply new corrections.
+
+See the [database schema](database-schema.md) and [catalog dictionary](catalog-data-dictionary.md).
+
+## derived_method
+
+| Term | Meaning |
+| --- | --- |
+| `JPL_fixed_width_conversion` | Exact conversion of the JPL documented fixed-width epoch or angular notation to the stated physical unit; no astrometric correction is added. |
+| `sexagesimal_conversion` | Exact arithmetic conversion of complete sexagesimal source components to the stated unit. |
+| `source_EDT_UTC_minus_4` | Conversion of the source's explicitly stated Eastern Daylight Time, UTC minus four hours, to UTC by adding four hours. |
+| `source_scalar` | A source value already expressed as a scalar in its stated unit; exposed with separate unsigned magnitude and signed value. |
+
+## derived_time_scale
+
+| Term | Meaning |
+| --- | --- |
+| `TT` | Terrestrial Time explicitly specified by the source; not relabeled UT or UT1. |
+| `UT1` | Universal Time based on Earth's rotation, explicitly identified as UT1 by the source. |
+| `UTC` | Coordinated Universal Time, explicitly stated or obtained through the recorded time-zone conversion. |
+| `UT_as_documented` | Universal Time as labeled in the source. No unsupported choice between UT1 and UTC is imposed. |

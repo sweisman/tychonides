@@ -1,0 +1,53 @@
+{
+  "release_id": "tychonides-1.0.0",
+  "schema_version": 5,
+  "status": "research_catalogue",
+  "index_contract": 1,
+  "vocabulary_contract": 1,
+  "quantities": 577020,
+  "groups": 91626,
+  "sources": 35,
+  "images": 1963,
+  "artifacts": 23,
+  "controls": 923,
+  "interpretations": 577023,
+  "quantities_by_source": {
+    "brahe-progymnasmata-erara": 22910,
+    "cds-carlsberg-planets": 96296,
+    "cds-tokyo-planets": 5548,
+    "jjmo-2001": 101,
+    "jjmo-2003": 216,
+    "jpl-bordeaux": 1419,
+    "jpl-herst": 8928,
+    "jpl-lapalma": 11712,
+    "jpl-tokyo": 1026,
+    "jpl-wash6a": 46875,
+    "jpl-wash6b": 9612,
+    "jpl-wash6c": 6903,
+    "jpl-wash9": 11910,
+    "longomontanus-astronomia-danica": 35349,
+    "origanus-ephemerides-brandenburgicae": 88727,
+    "riccioli-almagestum-novum-t1": 35802,
+    "riccioli-astronomia-reformata": 114155,
+    "snellius-observationes-hassiacae": 6189,
+    "tycho-oo-10": 4647,
+    "tycho-oo-11": 2727,
+    "tycho-oo-12": 7462,
+    "tycho-oo-13": 2207,
+    "ursus-fundamentum-astronomicum": 43,
+    "usno-w1": 21558,
+    "usno-w2": 34698
+  },
+  "code_license": "AGPL-3.0-or-later",
+  "data_license": "CC0-1.0",
+  "license_scope": "Project contributions; third-party sources retain their terms",
+  "sqlite_sha256": "dfeb762082452c8bbe1f9a2393e0cd3ab7cda25feadaffdebffb9e71500913f9",
+  "output_hashes": {
+    "tychonides.sqlite.gz": "4038cebe143026793aabe170830856ac51ee9321155a3fb7d2fa6f71773bafbd",
+    "tychonides.csv": "6b883a9ac7aea1f9c8ce5e4601ef10a423c154845c43394fd5f6b8b612dbd276"
+  },
+  "download_urls": {
+    "tychonides.sqlite.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.0/tychonides.sqlite.gz",
+    "tychonides.csv": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.0/tychonides.csv"
+  }
+}
