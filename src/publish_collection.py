@@ -23,6 +23,7 @@ from .release_transaction import publish
 from .release_validation import validate_release
 from .catalog_indexes import create_indexes
 from .catalog_files import working_files
+from .normalization import normalize_quantity
 
 IMAGE_FIELDS = {
     "DATE_OBS",
@@ -51,6 +52,40 @@ PRIVATE = re.compile(
 )
 
 
+def revise_counted_sign_boundaries(db):
+    """Keep the previous interpretation and select the corrected one."""
+    for row in db.execute("""
+        SELECT c.id,c.version,c.quantity,c.subject,c.reference_object,i.components_json,
+               i.flags_json,q.original_json
+        FROM catalogue c JOIN interpretations i ON i.quantity_id=c.id AND i.version=c.version
+        JOIN quantities q ON q.id=c.id
+        WHERE c.status='exact' AND json_extract(i.components_json,'$.sign_count') IS NOT NULL
+          AND CAST(json_extract(i.components_json,'$.degree') AS REAL)>=30
+    """).fetchall():
+        identifier, version, quantity, subject, reference, parts, flags, original = row
+        assertion = dict(json.loads(original), quantity=quantity, components=json.loads(parts))
+        norm = normalize_quantity(assertion)
+        if norm.get("normalization_issue") == "degree_outside_sign":
+            db.execute(
+                "INSERT INTO interpretations VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                (
+                    identifier,
+                    version + 1,
+                    quantity,
+                    subject,
+                    reference,
+                    norm["status"],
+                    norm["unit"],
+                    None,
+                    None,
+                    encoded(norm),
+                    parts,
+                    flags,
+                    encoded({"reason": "Counted sign has a noncanonical degree component"}),
+                ),
+            )
+
+
 def publish_collection(source, output, release_id=None):
     if release_id is None:
         import tomllib
@@ -75,6 +110,7 @@ def publish_collection(source, output, release_id=None):
             enrich_catalogue(db, load_registry())
             create_indexes(db)
             with db:
+                revise_counted_sign_boundaries(db)
                 db.execute(
                     "UPDATE artifacts SET content=NULL, redistribution_status='source_terms_apply_reference_only'"
                 )
@@ -106,7 +142,7 @@ def publish_collection(source, output, release_id=None):
                     image_pixels_included=False,
                     source_artifact_bytes_included=False,
                 )
-                db.execute("UPDATE metadata SET value_json='5' WHERE key='schema_version'")
+                db.execute("UPDATE metadata SET value_json='6' WHERE key='schema_version'")
                 for key, value in meta.items():
                     db.execute("INSERT INTO metadata VALUES (?,?)", (key, encoded(value)))
             counts = {
@@ -152,7 +188,7 @@ def publish_collection(source, output, release_id=None):
                 shutil.copyfileobj(incoming, compressed)
         manifest = dict(
             release_id=release_id,
-            schema_version=5,
+            schema_version=6,
             status="research_catalogue",
             index_contract=1,
             vocabulary_contract=1,

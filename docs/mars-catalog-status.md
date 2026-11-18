@@ -34,15 +34,14 @@ screening scope; it does not prove recognition of every implicit reference.
 | --- | ---: | ---: | ---: | ---: |
 | 10 | 4,647 | 4,629 | 2 | 16 |
 | 11 | 2,727 | 2,709 | 1 | 17 |
-| 12 | 7,462 | 7,450 | 7 | 5 |
+| 12 | 7,462 | 7,449 | 7 | 6 |
 | 13 | 2,207 | 2,196 | 1 | 10 |
 
 ## Pafko’s independent controls
 
-All **923** workbook entries retain source links. Reconciliation records **906
-magnitude agreements, sixteen reviewed differences and one incomplete printed
-value**. Numerical agreement was not used to choose source identities. See the
-[Pafko reconciliation](pafko-validation-status.md).
+All **923** workbook entries retain source links. The automated alignment uses
+location and timing evidence. The [Pafko reconciliation](pafko-validation-status.md)
+documents magnitude and hemisphere agreement and the scope of manual adjudication.
 
 There are **123 recorded Mars declination entries without
 workbook links**: 10: 12, 11: 34, 12: 73, 13: 4. This count
@@ -52,8 +51,8 @@ calculated declinations are counted separately by their source roles.
 
 ## Numerical interpretation
 
-**16,984 quantities have exact numerical conversions; 11
-are incomplete and 48 retain unsupported notation, components
+**16,983 quantities have exact numerical conversions; 11
+are incomplete and 49 retain unsupported notation, components
 or units.** Exact conversion preserves the stated number; it does not establish
 measurement accuracy. Missing digits, denominators and unit hierarchies remain
 unfilled. A source bound retains a threshold, not an exact measured position.

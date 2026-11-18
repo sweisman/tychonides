@@ -39,6 +39,9 @@ def derived_fields(payload):
             derived_unit=converted.get("unit"),
             derived_method=method,
         )
+        if converted.get("sign_indeterminate"):
+            result["derived_signed_value_exact"] = None
+            result["derived_signed_value_decimal"] = None
     if converted.get("timestamp"):
         result.update(derived_timestamp=converted["timestamp"], derived_method=method)
     if magnitude is not None or converted.get("timestamp"):
@@ -61,6 +64,8 @@ def page_url(source, locator, printed_page=None):
 
 
 def enrich_catalogue(db, registry):
+    from .numeric_integrity import qualify_retained_conversion
+
     db.executescript("""
     CREATE TABLE derived_values(
       quantity_id TEXT PRIMARY KEY REFERENCES quantities(id),
@@ -102,13 +107,26 @@ def enrich_catalogue(db, registry):
         )
     for row in db.execute(
         "SELECT id,source_id,artifact_sha256,locator,printed_page,original_json,scientific_metadata_json,source_payload_json FROM quantities"
-    ).fetchall():
+    ):
         identifier, sid, artifact, locator, printed_page, original, scientific, payload = row
         if payload:
             native = json.loads(payload)
-            from .numeric_integrity import validate_conversion
-
-            validate_conversion(native)
+            issue = qualify_retained_conversion(native)
+            if issue:
+                (flags,) = db.execute(
+                    "SELECT flags_json FROM interpretations WHERE quantity_id=? "
+                    "ORDER BY version DESC LIMIT 1",
+                    (identifier,),
+                ).fetchone()
+                db.execute(
+                    "UPDATE interpretations SET flags_json=? WHERE quantity_id=? "
+                    "AND version=(SELECT MAX(version) FROM interpretations WHERE quantity_id=?)",
+                    (
+                        encoded(list(dict.fromkeys([*json.loads(flags), issue]))),
+                        identifier,
+                        identifier,
+                    ),
+                )
             values = derived_fields(native)
             db.execute(
                 "INSERT INTO derived_values VALUES (?,?,?,?,?,?,?,?,?)",
@@ -126,16 +144,21 @@ def enrich_catalogue(db, registry):
                     "INSERT OR IGNORE INTO source_lines VALUES (?,?,?,?)",
                     (sid, artifact, locator, raw),
                 )
-                for column, text in (
-                    ("original_json", original),
-                    ("scientific_metadata_json", scientific),
-                    ("source_payload_json", payload),
-                ):
-                    data = json.loads(text)
+            if raw is not None or issue is not None:
+                original, scientific = json.loads(original), json.loads(scientific)
+                for data in (original, scientific, native):
                     data.pop("raw_line", None)
-                    db.execute(
-                        f"UPDATE quantities SET {column}=? WHERE id=?", (encoded(data), identifier)
-                    )
+                if issue is not None:
+                    for data in (original, scientific):
+                        if "derived_normalization" in native:
+                            data["derived_normalization"] = native["derived_normalization"]
+                        else:
+                            data.pop("derived_normalization", None)
+                db.execute(
+                    "UPDATE quantities SET original_json=?,scientific_metadata_json=?,"
+                    "source_payload_json=? WHERE id=?",
+                    (encoded(original), encoded(scientific), encoded(native), identifier),
+                )
         source = sources[sid]
         line = re.fullmatch(r"line (\d+)", locator or "")
         db.execute(

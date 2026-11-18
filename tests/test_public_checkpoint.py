@@ -3068,9 +3068,7 @@ class PublicCheckpointTests(unittest.TestCase):
                 self.module().public_assertion(bad)
         bad = copy.deepcopy(row)
         bad["direction"] = None
-        bad["normalized"] = normalize_quantity(
-            dict(quantity="ecliptic_latitude", components=dict(degree="91"))
-        )
+        bad["normalized"] = dict(bad["normalized"], magnitude="327600", magnitude_degrees="91")
         with self.assertRaises(ValueError):
             self.module().public_assertion(bad)
 

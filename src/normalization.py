@@ -1118,6 +1118,20 @@ def native_distance_value(components, units):
     return value, next(unit for unit in reversed(units) if unit in components)
 
 
+def counted_sign_degree_outside(components):
+    if "sign_count" not in components or "degree" not in components:
+        return False
+    degree = number(fraction_text(components["degree"]))
+    return degree > 30 or (
+        degree == 30
+        and any(
+            number(fraction_text(value)) > 0
+            for unit, value in components.items()
+            if unit not in {"sign_count", "degree"}
+        )
+    )
+
+
 def normalize_quantity(assertion):
     result = dict(
         status="unsupported",
@@ -1789,7 +1803,7 @@ def normalize_quantity(assertion):
             or quantity in ANGLE_QUANTITIES
             or quantity in ANGULAR_RATES
         ) and index == first_written
-        noncanonical_degree = unit == "degree" and "sign_count" in components and value > 30
+        noncanonical_degree = unit == "degree" and counted_sign_degree_outside(components)
         degree_outside_sign = degree_outside_sign or noncanonical_degree
         if value < 0 or (
             index > 0 and not leading_unbounded and not noncanonical_degree and value >= limit
@@ -1839,6 +1853,10 @@ def normalize_quantity(assertion):
         return result
     if quantity == "temporal_hour_count":
         total /= 3600
+    if quantity in {"declination", "ecliptic_latitude", "altitude"} and total > 90 * 3600:
+        raise ValueError("Coordinate outside the 90° range")
+    if quantity == "recorded_clock" and total >= 24 * 3600:
+        raise ValueError("Recorded clock outside the 24-hour range")
     result.update(status="exact", magnitude=str(total), unit=base)
     if base == "arcsecond":
         result["magnitude_degrees"] = str(total / 3600)

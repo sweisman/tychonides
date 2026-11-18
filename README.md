@@ -37,6 +37,12 @@ Historical prediction engines, reproducible observation–prediction comparisons
 correction experiments, parallax studies and the interactive explorer follow the
 [research milestones](docs/research-plan.md#next-research-milestones).
 
+Historical readings come from the published editions. Their numerical accuracy
+has no corpus-wide estimate. The Tycho subset has no accepted absolute observing
+timestamps. You can verify the released files, check individual readings against
+their citations, and run the public worked example. Rebuilding the historical
+catalog requires unpublished extraction and review inputs.
+
 ## One sky, several models
 
 The same observations can be approached through several astronomical systems:
@@ -93,13 +99,12 @@ sexagesimal components and decimal-degree conversions. Created separately from
 the Ars Astronomica editions and Tychonides extraction, it supplies an important
 independent control for the ingestion methodology.
 
-All **923 workbook rows** have been matched to source entries. The reconciliation
-checks source identification, extracted numerical expressions and exact unit
-conversions, preserving disagreements and incomplete readings. This tests the
-method against an independently entered dataset on a defined subset of the
-catalog. The two transcriptions describe the same underlying historical records;
-they do not add independent observations. See the
-[validation results and limits](docs/pafko-validation-status.md).
+The original reconciliation linked all **923 workbook rows** to source entries.
+Pafko’s quotations and the edition agree in unsigned magnitude for **906** rows,
+including **125** that also agree in hemisphere. Sixteen differed and one source
+value was incomplete. **685** rows received no source check, and source checks
+include structural review as well as reading checks. The workbook informed
+parser development. See the [validation results and limits](docs/pafko-validation-status.md).
 
 ## Quick start
 
@@ -122,7 +127,7 @@ Release assets; cloning the repository alone does not download them.
 | --- | --- |
 | Understand the project | [Research program](docs/research-plan.md) → [sources and coverage](docs/data-sources.md) |
 | Use the data | [Catalog guide](resources/catalog/README.md) → [worked values](docs/catalog-data-dictionary.md#worked-numerical-examples) → [source uses](docs/data-sources.md#intended-uses) |
-| Reproduce or contribute | [Workflow](docs/data-workflow.md) → [ingestion strategy](docs/ingestion-strategy.md) → [public worked example](docs/worked-example.md) → [tests](https://github.com/sweisman/tychonides/tree/main/tests) |
+| Verify or contribute | [Workflow](docs/data-workflow.md) → [ingestion strategy](docs/ingestion-strategy.md) → [public worked example](docs/worked-example.md) → [tests](https://github.com/sweisman/tychonides/tree/main/tests) |
 
 The [documentation index](docs/README.md) guides readers through source coverage,
 research, processing and technical references. See also the

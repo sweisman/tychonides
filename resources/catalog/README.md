@@ -1,10 +1,11 @@
 # Tychonides catalog
 
-**577,020 quantities in 91,626 source groups**, combining the Mars selection from
+**577,020 quantities and 91,626 source groups**, combining the Mars selection from
 Tycho Brahe’s four observational volumes, seven further historical books,
 JJMO experiments and JPL, USNO, Carlsberg and Tokyo optical observations.
 The catalog also includes source references, historical calculations and
 metadata for 1,963 image versions from Las Cumbres Observatory.
+Some quantities have no group, and some groups contain no quantity.
 
 Mars is the first research target. The seven supplementary books already extend
 the catalog to other celestial bodies, corrections and historical theories.
@@ -13,18 +14,17 @@ future acquisitions.
 
 ## Download
 
-Release **tychonides-1.0.0** provides the verified catalog as GitHub Release
+Release **tychonides-1.0.1** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.0/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.1/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.0/tychonides.csv)** — one row per quantity, with exact values, decimal
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.1/tychonides.csv)** — one row per quantity, with exact values, decimal
   conveniences and scientific qualifications.
 
-Release **tychonides-1.0.0**. Files are versioned GitHub Release assets; the repository
-keeps the [manifest](manifest.json) with download and uncompressed database
+The repository keeps the [manifest](manifest.json) with download and uncompressed database
 checksums. Compression reduces download size, without changing SQLite contents.
 
 After installing the package from a source checkout, run
@@ -40,14 +40,13 @@ see the [documentation index](../../docs/README.md).
 
 The [data sources directory](../../docs/data-sources.md) lists the books and
 observing programs. The original 17,043 historical quantities retain their
-identities and interpretations. The [seven-book extension](../../docs/historical-books-ingestion.md)
+identities and earlier interpretations. The [seven-book extension](../../docs/historical-books-ingestion.md)
 adds 303,175 quantities across the selected editions, with 4,078 selected regions
 given review decisions. The 256,802 modern quantities preserve source
 notation, timing conventions, frames, limb information and correction histories.
 Original modern values and separately derived conversions remain distinct.
 
-The new books contribute 295,191 exact conversions, 486 incomplete quantities
-and 7,498 unsupported or unresolved interpretations. Some numerical edition-note
+The seven-book coverage page gives the breakdown by interpretation status. Some numerical edition-note
 expressions remain contextual evidence rather than separate quantity rows.
 Source coverage does not establish observational independence, absolute timestamps
 or eligibility for a particular analysis. Missing source panels and ambiguous
@@ -61,10 +60,18 @@ incomplete; missing components are not replaced by zero. Numeric conversions and
 supported clock conversions are exposed in dedicated columns. TT, UT1 and the
 JPL source’s UT label remain distinct.
 
-Rows and groups are not counts of independent observations. The 360 potential
-JPL/USNO overlaps remain unmerged. Further source-level overlap warnings identify
-related JPL, USNO, Carlsberg and Tokyo publications; the full table counts are not
-additive counts of independent measurements. Image records identify external files; they do
+The affected JPL meridian series contain 803 all-zero position fields treated as
+missing placeholders. These rows retain the literal fields and carry
+`jpl_zero_placeholder` with no derived coordinate. Another 192 zero-degree
+declinations in Washington 6b, Washington 6c and Tokyo have a blank sign in
+series where signed values are uncertain near the equator. They carry
+`jpl_declination_sign_indeterminate` with an unsigned magnitude and a null
+signed coordinate. Other explicitly signed values still convert normally.
+
+The catalog retains 360 individually recorded JPL/USNO candidate links.
+Wider comparisons by target and epoch found additional potential overlaps in
+JPL, USNO, Carlsberg and Tokyo publications. Source occurrences remain separate.
+Image records identify external files; they do
 not include pixels or establish an astrometric solution. Original reports and
 supporting catalogs are cited rather than bundled as source documents.
 

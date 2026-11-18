@@ -17,6 +17,94 @@ from .catalog_release import CSV_COLUMNS
 from .catalog_enrichment import PUBLIC_CSV_COLUMNS
 from .core import digest
 from .catalog_files import catalog_files
+from .csv_projection import project_csv, same_cell
+
+
+def validate_derived_values(db, schema):
+    from .catalog_enrichment import derived_fields
+    from .numeric_integrity import (
+        JPL_COORDINATE_BOUNDS,
+        JPL_COORDINATE_FLAGS,
+        jpl_coordinate_issue,
+        validate_conversion,
+    )
+
+    query = """
+        SELECT c.*, q.source_payload_json, i.flags_json
+        FROM catalogue c JOIN quantities q ON q.id=c.id
+        JOIN interpretations i ON i.quantity_id=c.id AND i.version=c.version
+    """
+    if schema >= 6:
+        query += """
+            LEFT JOIN source_lines l USING(source_id,artifact_sha256,locator)
+        """
+        query = query.replace("i.flags_json", "i.flags_json, l.raw_line", 1)
+    query += """ WHERE q.source_payload_json IS NOT NULL
+                 OR (q.source_id GLOB 'jpl-*' AND
+                    (q.source_entry_id GLOB '*:declination' OR
+                     q.source_entry_id GLOB '*:right_ascension'))"""
+    for row in db.execute(query):
+        identifier = row["id"]
+        payload = json.loads(row["source_payload_json"] or "{}")
+        if schema >= 6 and row["source_id"].startswith("jpl-"):
+            quantity = row["source_entry_id"].rsplit(":", 1)[-1]
+            unit = {
+                "declination": "signed_ddmmss_centisecond",
+                "right_ascension": "hhmmss_millisecond",
+            }.get(quantity)
+            if unit is not None:
+                start, end = JPL_COORDINATE_BOUNDS[unit]
+                literal = (row["raw_line"] or "")[start:end]
+                if (
+                    not literal.strip()
+                    or row["expression"] != literal
+                    or payload.get("literal") != literal
+                    or payload.get("source_id") != row["source_id"]
+                    or payload.get("unit") != unit
+                    or row["unit"] != unit
+                    or row["quantity"] != quantity
+                    or row["value_exact"] is not None
+                    or row["signed_value_exact"] is not None
+                    or payload.get("normalized", {}).get("magnitude") is not None
+                ):
+                    raise ValueError("JPL coordinate differs from native field: " + identifier)
+                issue = jpl_coordinate_issue(row["source_id"], unit, literal)
+                flags = JPL_COORDINATE_FLAGS.intersection(json.loads(row["flags_json"]))
+                if flags != ({issue} if issue else set()):
+                    raise ValueError("JPL published flags differ from native field: " + identifier)
+        if schema >= 5:
+            validate_conversion(payload, legacy_jpl=schema == 5)
+        expected = derived_fields(payload)
+        if any(row[key] != value for key, value in expected.items()):
+            raise ValueError("Derived columns differ from preserved conversion: " + identifier)
+
+
+def validate_csv(db, path, columns, count):
+    with path.open(encoding="utf-8", newline="") as stream:
+        reader = csv.DictReader(stream)
+        if reader.fieldnames != list(columns):
+            raise ValueError("CSV columns differ from the documented export contract")
+        projected = iter(project_csv(db, columns))
+        candidate = next(projected, None)
+        seen = set()
+        for row in reader:
+            key = row["id"]
+            if key in seen:
+                raise ValueError("Duplicate or unknown CSV identity")
+            seen.add(key)
+            if candidate is not None and candidate["id"] == key:
+                expected = candidate
+                candidate = next(projected, None)
+            else:
+                # Accept existing exports presented in a different row order.
+                expected = next(project_csv(db, columns, identifier=key), None)
+                if expected is None:
+                    raise ValueError("Duplicate or unknown CSV identity")
+            for field in columns:
+                if not same_cell(field, row[field], expected[field]):
+                    raise ValueError("CSV/database value mismatch: " + key + ":" + field)
+    if len(seen) != count or count != db.execute("SELECT count(*) FROM catalogue").fetchone()[0]:
+        raise ValueError("Release quantity counts or identities differ")
 
 
 def validate_release(directory, assets_dir=None):
@@ -31,7 +119,8 @@ def validate_release(directory, assets_dir=None):
         raise ValueError("Manifest requires an output_hashes object")
     if type(manifest.get("quantities")) is not int or manifest["quantities"] < 0:
         raise ValueError("Manifest requires a nonnegative integer quantities count")
-    if manifest.get("schema_version", 3) not in (3, 4, 5):
+    schema = manifest.get("schema_version", 3)
+    if schema not in (3, 4, 5, 6):
         raise ValueError("Unsupported catalogue schema version")
     database_name, csv_name = catalog_files(manifest)
     compressed = database_name.endswith(".gz")
@@ -77,31 +166,14 @@ def validate_release(directory, assets_dir=None):
             ):
                 raise ValueError("Database integrity or relationship failure")
             db.row_factory = sqlite3.Row
-            rows = {row["id"]: dict(row) for row in db.execute("SELECT * FROM catalogue")}
-            if manifest.get("schema_version", 3) >= 4:
-                from .catalog_enrichment import derived_fields
-
-                for row in db.execute(
-                    "SELECT id,source_payload_json FROM quantities WHERE source_payload_json IS NOT NULL"
-                ):
-                    payload = json.loads(row["source_payload_json"])
-                    if manifest.get("schema_version", 3) >= 5:
-                        from .numeric_integrity import validate_conversion
-
-                        validate_conversion(payload)
-                    expected = derived_fields(payload)
-                    if any(rows[row["id"]][key] != value for key, value in expected.items()):
-                        raise ValueError(
-                            "Derived columns differ from preserved conversion: " + row["id"]
-                        )
+            if schema >= 4:
+                validate_derived_values(db, schema)
                 if db.execute(
                     "SELECT count(*) FROM sources WHERE title IS NULL OR author IS NULL OR publisher IS NULL OR date IS NULL OR date_kind IS NULL"
                 ).fetchone()[0]:
                     raise ValueError("Source bibliography is incomplete")
-            from .csv_projection import project_csv
-
-            columns = PUBLIC_CSV_COLUMNS if manifest.get("schema_version", 3) >= 4 else CSV_COLUMNS
-            if manifest.get("schema_version", 3) >= 5:
+            columns = PUBLIC_CSV_COLUMNS if schema >= 4 else CSV_COLUMNS
+            if schema >= 5:
                 columns += ("normalized_json",)
             projected = {r["id"]: r for r in project_csv(db, columns)}
             for key, table in (
@@ -121,24 +193,12 @@ def validate_release(directory, assets_dir=None):
                 db.execute("SELECT source_id,count(*) FROM quantities GROUP BY source_id")
             ):
                 raise ValueError("Manifest counts differ: quantities_by_source")
-    seen = set()
-    with (assets / csv_name).open(encoding="utf-8", newline="") as stream:
-        reader = csv.DictReader(stream)
-        if reader.fieldnames != list(columns):
-            raise ValueError("CSV columns differ from the documented export contract")
-        for row in reader:
-            key = row["id"]
-            if key in seen or key not in rows:
-                raise ValueError("Duplicate or unknown CSV identity")
-            seen.add(key)
-            from .csv_projection import same_cell
-
-            for field in columns:
-                if not same_cell(field, row[field], projected[key][field]):
-                    raise ValueError("CSV/database value mismatch: " + key + ":" + field)
-    if seen != set(rows) or len(seen) != manifest["quantities"]:
-        raise ValueError("Release quantity counts or identities differ")
-    return {"release_id": manifest.get("release_id"), "quantities": len(seen), "status": "verified"}
+            validate_csv(db, assets / csv_name, columns, manifest["quantities"])
+    return {
+        "release_id": manifest.get("release_id"),
+        "quantities": manifest["quantities"],
+        "status": "verified",
+    }
 
 
 def validate_documentation(root):
@@ -151,6 +211,7 @@ def validate_documentation(root):
 
     validate_reference_pages(root)
     validate_release_references(root)
+    validate_documented_totals(root)
     pages = [
         root / "README.md",
         root / "resources/catalog/README.md",
@@ -166,6 +227,37 @@ def validate_documentation(root):
                 and not (page.parent / unquote(link.path)).exists()
             ):
                 raise ValueError("Broken local documentation link: " + str(page) + ": " + target)
+
+
+def validate_documented_totals(root):
+    catalog = root / "resources/catalog"
+    manifest = json.loads((catalog / "manifest.json").read_text(encoding="utf-8"))
+    guide = (catalog / "README.md").read_text(encoding="utf-8")
+    headline = f"**{manifest['quantities']:,} quantities and {manifest['groups']:,} source groups**"
+    if headline not in guide:
+        raise ValueError("Catalog guide totals differ from the manifest")
+
+    pafko = json.loads((catalog / "pafko-validation.json").read_text(encoding="utf-8"))
+    count = pafko["workbook_rows"]
+    if count != manifest["controls"] or any(
+        sum(pafko[key].values()) != count for key in ("baseline", "replay", "source_checks")
+    ):
+        raise ValueError("Pafko totals differ from the control count")
+    baseline = pafko["baseline"]
+    agreements = baseline["magnitude_agreement"] + baseline["exact"]
+    total = f"| Total | {count} | {agreements} | {baseline['disagreement']} | {baseline['unresolved']} |"
+    page = (root / "docs/pafko-validation-status.md").read_text(encoding="utf-8")
+    home = (root / "README.md").read_text(encoding="utf-8")
+    if total not in page or any(
+        token not in home
+        for token in (
+            f"**{count} workbook rows**",
+            f"**{agreements}**",
+            f"**{baseline['exact']}**",
+            f"**{pafko['source_checks']['not_reviewed']}**",
+        )
+    ):
+        raise ValueError("Documented Pafko counts differ from the reconciliation tally")
 
 
 def validate_release_references(root):

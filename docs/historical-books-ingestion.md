@@ -1,6 +1,6 @@
 # Supplementary Historical Collections: Coverage and Limits
 
-Seven historical editions contribute **303,175 quantities in 10,930 source groups**,
+Seven historical editions contribute **303,175 quantities and 10,930 source groups**,
 covering all celestial bodies and relevant supporting material in the selected
 editions. All **4,078 selected source regions** have recorded review decisions.
 These records join the earlier Mars and modern collections in the
@@ -38,8 +38,8 @@ and correction states require source evidence. Follow the existing
 
 ## Numerical coverage and limits
 
-Of the new quantities, **295,191 have exact conversions**, **486 are incomplete**
-and **7,498 retain unsupported or unresolved interpretations**. Exactness describes
+Of these quantities, **295,189 have exact conversions**, **486 are incomplete**
+and **7,500 retain unsupported or unresolved interpretations**. Exactness describes
 rational arithmetic under the recorded interpretation, not observational accuracy.
 An unresolved expression is preserved without an invented scalar. Counts include
 historical inputs, calculations, adopted values, bounds and alternatives; they

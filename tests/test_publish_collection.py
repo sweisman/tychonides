@@ -1,5 +1,7 @@
 from contextlib import closing
+import csv
 import gzip
+from hashlib import sha256
 import json
 from pathlib import Path
 import sqlite3
@@ -24,6 +26,93 @@ class PrivacyScanTests(unittest.TestCase):
 
 
 class PublicCollectionTests(unittest.TestCase):
+    def test_jpl_legacy_rows_are_requalified_and_cannot_pass_with_a_fabricated_sign(self):
+        from src.catalog_release import adapt_source_quantities
+        from src.core import digest
+        from src.csv_projection import project_csv
+        from src.numeric_integrity import recompute_conversion
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            rows = []
+            for number, literal in enumerate((" 00000000", " 00571072", "-00571072"), 1):
+                unit = "signed_ddmmss_centisecond"
+                native = dict(
+                    source_id="jpl-wash6a" if number == 1 else "jpl-wash6c",
+                    artifact_sha256="a" * 64,
+                    id=f"line:{number}:declination",
+                    subject="Mars",
+                    quantity="declination",
+                    role="reduction",
+                    literal=literal,
+                    locator=f"line {number}",
+                    raw_line="P" + " " * 49 + literal,
+                    unit=unit,
+                    normalized={"magnitude": None, "unit": unit},
+                )
+                native["derived_normalization"] = recompute_conversion(native, legacy_jpl=True)
+                rows.append(native)
+            source, public, groups = adapt_source_quantities(rows)
+            write_catalogue(
+                root / "working",
+                source,
+                public,
+                [],
+                groups,
+                [],
+                [],
+                [],
+                [{"id": native["source_id"]} for native in (rows[0], rows[1])],
+                [],
+                {},
+                artifacts=[
+                    {"source_id": native["source_id"], "sha256": native["artifact_sha256"]}
+                    for native in (rows[0], rows[1])
+                ],
+            )
+            publish_collection(root / "working", root / "public")
+            database = root / "check.sqlite"
+            database.write_bytes(
+                gzip.decompress((root / "public/tychonides.sqlite.gz").read_bytes())
+            )
+            with closing(sqlite3.connect(database)) as db:
+                db.row_factory = sqlite3.Row
+                query = "SELECT derived_value_exact,derived_signed_value_exact FROM catalogue ORDER BY locator"
+                self.assertEqual(
+                    [tuple(row) for row in db.execute(query)],
+                    [(None, None), ("85768/25", None), ("85768/25", "-85768/25")],
+                )
+                for table, assignment, message in (
+                    ("derived_values", "derived_signed_value_exact='85768/25'", "Derived columns"),
+                    ("interpretations", "flags_json='[]'", "published flags"),
+                ):
+                    key = db.execute("SELECT id FROM catalogue WHERE locator='line 2'").fetchone()[
+                        0
+                    ]
+                    db.execute("SAVEPOINT fabricated")
+                    db.execute(f"UPDATE {table} SET {assignment} WHERE quantity_id=?", (key,))
+                    public = root / "public"
+                    csv_path = public / "tychonides.csv"
+                    with csv_path.open(encoding="utf-8", newline="") as stream:
+                        columns = csv.DictReader(stream).fieldnames
+                    with csv_path.open("w", encoding="utf-8", newline="") as stream:
+                        writer = csv.DictWriter(stream, columns)
+                        writer.writeheader()
+                        writer.writerows(project_csv(db, columns))
+                    altered = db.serialize()
+                    gzip_path = public / "tychonides.sqlite.gz"
+                    gzip_path.write_bytes(gzip.compress(altered))
+                    manifest_path = public / "manifest.json"
+                    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                    manifest["sqlite_sha256"] = sha256(altered).hexdigest()
+                    for path in (csv_path, gzip_path):
+                        manifest["output_hashes"][path.name] = digest(path)
+                    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+                    with self.assertRaisesRegex(ValueError, message):
+                        validate_release(public)
+                    db.execute("ROLLBACK TO fabricated")
+                    db.execute("RELEASE fabricated")
+
     def test_modern_values_are_queryable_and_shared_lines_roundtrip(self):
         from src.catalog_release import adapt_source_quantities
 

@@ -28,14 +28,14 @@ From a checkout, `python -m src` provides the same entry point.
 
 ## What Verification Checks
 
-For schema 5 releases, the verifier checks:
+For schema 6 releases, the verifier checks:
 
 | Check | Guarantee within this contract |
 | --- | --- |
 | File identity | Downloaded bytes and the decompressed database match manifest SHA-256 values. |
 | Database structure | SQLite integrity, foreign keys and declared indexes pass their checks. |
 | Representation consistency | Every CSV field agrees with the canonical database projection. JSON is compared structurally; decimal conveniences come from exact values. Row identities and all declared counts, including per-source totals, agree. |
-| Mechanical conversion | Supported modern conversions are recomputed from preserved native fields; displayed derived columns agree. No new astrometric correction is applied. |
+| Mechanical conversion | Supported modern conversions are recomputed from preserved notation. The JPL qualification rules additionally check the original fixed-width fields, the displayed flags and which derived values must be absent. |
 | Documentation contracts | With `--docs-root`, CSV and schema fields, vocabulary coverage, generated references, local links and release identifiers are checked. |
 
 The historical compiler separately checks literal components, explicit units and
@@ -142,12 +142,12 @@ external; working artifact bytes and local locators require public projection.
 
 ## Public Release
 
-The current release is [tychonides-1.0.0](../resources/catalog/README.md).
+The current release is [tychonides-1.0.1](../resources/catalog/README.md).
 To prepare its public files from a verified working catalog:
 
 ```sh
 python -m src.publish_collection --source WORKING_CATALOG \
-  --output PUBLIC_DIRECTORY --release-id tychonides-1.0.0
+  --output PUBLIC_DIRECTORY --release-id tychonides-1.0.1
 ```
 
 Packaging adds citations and derived-value columns, removes source-document bytes

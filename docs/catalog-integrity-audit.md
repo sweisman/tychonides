@@ -1,6 +1,6 @@
 # Numerical Integrity and Verification
 
-The current release uses schema 5. Verification covers the complete downloaded
+The current release uses schema 6. Verification covers the complete downloaded
 catalog, including its historical and modern records. The
 [catalog guide](../resources/catalog/README.md) identifies the release and totals;
 the [verification contract](data-workflow.md#what-verification-checks) enumerates

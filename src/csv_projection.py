@@ -5,35 +5,34 @@ import json
 import sqlite3
 
 
-def project_csv(db, columns):
+def project_csv(db, columns, *, identifier=None):
     db.row_factory = sqlite3.Row
     dates = dict(db.execute("SELECT id,data_json FROM dates"))
     sources = {
         r["id"]: json.loads(r["data_json"]) for r in db.execute("SELECT id,data_json FROM sources")
     }
-    quantities = {r["id"]: dict(r) for r in db.execute("SELECT * FROM quantities")}
-    interpretations = {
-        (r["quantity_id"], r["version"]): dict(r)
-        for r in db.execute("SELECT * FROM interpretations")
-    }
-    for row in db.execute("SELECT * FROM catalogue ORDER BY id"):
+    query = """
+        SELECT c.*, q.original_json, q.uncertainty_json, q.scientific_metadata_json,
+               i.flags_json, i.components_json, i.normalized_json
+        FROM catalogue c JOIN quantities q ON q.id=c.id
+        JOIN interpretations i ON i.quantity_id=c.id AND i.version=c.version
+    """
+    rows = (
+        db.execute(query + " ORDER BY c.id")
+        if identifier is None
+        else db.execute(query + " WHERE c.id=?", (identifier,))
+    )
+    for row in rows:
         row = dict(row)
-        q = quantities[row["id"]]
-        i = interpretations[row["id"], row["version"]]
-        original = json.loads(q["original_json"])
-        norm = json.loads(i["normalized_json"])
-        result = dict(q, **{k: v for k, v in row.items() if k not in q})
-        result.update(row)
-        result.update(
+        original = json.loads(row["original_json"])
+        norm = json.loads(row["normalized_json"])
+        row.update(
             interpretation_version=row["version"],
             original_quantity=original["quantity"],
             original_subject=original["subject"],
             original_normalization_status=original["normalized"]["status"],
             direction=original.get("direction"),
             record_status=original.get("record_status"),
-            flags_json=i["flags_json"],
-            components_json=i["components_json"],
-            normalized_json=i["normalized_json"],
             value_decimal=float(Fraction(row["value_exact"]))
             if row["value_exact"] is not None
             else None,
@@ -49,8 +48,8 @@ def project_csv(db, columns):
         )
         if "source_url" not in row:
             source = sources[row["source_id"]]
-            result["source_url"] = source.get("translation_pdf") or source.get("url")
-        yield {key: result.get(key) for key in columns}
+            row["source_url"] = source.get("translation_pdf") or source.get("url")
+        yield {key: row.get(key) for key in columns}
 
 
 def same_cell(key, actual, expected):

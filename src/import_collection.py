@@ -209,9 +209,6 @@ def read_collection(database, quantities):
             row = exported.get((sid, artifact, identifier))
             if row is None:
                 raise ValueError("Export omits a source quantity")
-            from .numeric_integrity import validate_conversion
-
-            validate_conversion(row)
             native = {
                 k: v
                 for k, v in row.items()
@@ -222,6 +219,9 @@ def read_collection(database, quantities):
                 "unit": unit,
             }:
                 raise ValueError("Export changed an original source payload or scalar")
+            from .numeric_integrity import qualify_retained_conversion
+
+            qualify_retained_conversion(row)
         sources = [
             dict(id=sid, url=url)
             for sid, url in db.execute("SELECT id,url FROM sources ORDER BY id")

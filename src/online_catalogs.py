@@ -18,7 +18,11 @@ from .catalog_release import adapt_source_quantities, write_catalogue
 from .checkout import require_checkout
 from .core import digest
 from .import_collection import merge_catalogues
-from .numeric_integrity import recompute_conversion, validate_conversion
+from .numeric_integrity import (
+    apply_jpl_coordinate_policy,
+    recompute_conversion,
+    validate_conversion,
+)
 from .recovery import write_json_atomic, write_text_atomic
 from .release_validation import validate_release
 
@@ -148,6 +152,7 @@ def fields(line, number, common, schema):
         row["normalized"] = dict(
             magnitude=str(Fraction(literal)) if unit in SCALAR_UNITS else None, unit=unit
         )
+        apply_jpl_coordinate_policy(row)
         converted = recompute_conversion(row)
         if converted is not None:
             row["derived_normalization"] = converted
@@ -169,6 +174,7 @@ def jpl_records(text, series):
         if line[21:25].strip() != STATIONS[series] or line[28] not in ORIGINS:
             raise ValueError(f"Unrecognized terrestrial station/type on line {number}")
         common = dict(
+            source_id="jpl-" + series,
             subject=(PLANETS | SATELLITES)[target],
             original_target_code=target,
             platform="ground",

@@ -1,8 +1,24 @@
 # Catalog releases
 
+## 1.0.1
+
+This revision qualifies **803** all-zero JPL fields as missing placeholders and
+withholds the sign for **192** nonzero declinations with an uncertain hemisphere.
+The native fields and all record identities are preserved.
+
+Three counted-sign entries with 30° and positive lower components now have
+unresolved interpretations. Exact 30° endpoints retain their existing
+interpretations. Earlier interpretations remain in the database.
+
+The verifier checks the affected JPL values and flags against the preserved
+fixed-width fields. Historical parsing now distinguishes attached note markers
+and clock abbreviations from numerical components and hemisphere indicators.
+The documentation defines the scope of the Pafko comparison, historical
+reproducibility, and the treatment of cross-publication overlap.
+
 ## 1.0.0 — initial public release
 
-A source-linked catalog of **577,020 quantities in 91,626 source groups**,
+A source-linked catalog of **577,020 quantities and 91,626 source groups**,
 combining historical astronomical books and modern terrestrial optical datasets.
 The selection includes recorded measurements, reductions, corrections, model
 parameters and worked calculations, with their evidential roles kept explicit.

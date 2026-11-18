@@ -269,7 +269,7 @@ def compare(args):
     public = public_records(catalogue, registry)
     write_json(out / "public_catalogue_draft.json", public)
     write_csv(out / "public_catalogue_draft.csv", public)
-    # Human decisions are never overwritten by reruns.
+    # Recorded adjudications, including Codex reviews, are preserved on reruns.
     if not (out / "adjudications.json").exists():
         write_json(out / "adjudications.json", [])
     summary = dict(

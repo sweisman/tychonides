@@ -1,0 +1,25 @@
+{
+  "workbook_rows": 923,
+  "baseline": {
+    "exact": 125,
+    "magnitude_agreement": 781,
+    "disagreement": 16,
+    "unresolved": 1
+  },
+  "source_checks": {
+    "source_supports_quote_and_translation": 144,
+    "not_reviewed": 685,
+    "source_structure_verified": 69,
+    "source_supports_translation": 14,
+    "magnitude_agreement_scan_verified": 6,
+    "partial_source_check": 3,
+    "source_supports_translation_and_target_correction": 2
+  },
+  "source_scan_alignment": 230,
+  "replay": {
+    "exact": 125,
+    "magnitude_agreement": 781,
+    "disagreement": 16,
+    "unresolved": 1
+  }
+}

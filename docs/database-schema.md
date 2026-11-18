@@ -1,6 +1,6 @@
 # Database schema reference
 
-Schema version 5. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.
+Schema versions 5 and 6 share this layout. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.
 JSON preserves structured qualifications. Foreign keys below identify relationship targets.
 See the [historical terms](historical-data-dictionary.md), [modern terms](modern-data-dictionary.md) and [normalization conventions](normalization-conventions.md).
 

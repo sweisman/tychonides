@@ -16,10 +16,25 @@ def angular_place_marks(text):
     return re.sub(r"ᵛⁱ{0,3}", lambda match: places[match[0]], text)
 
 
+SUPERSCRIPT_DIGITS = "⁰¹²³⁴⁵⁶⁷⁸⁹"
+BARE_NOTE_MARKER = re.compile(rf"(?<=\d)[{SUPERSCRIPT_DIGITS}]+(?![{SUPERSCRIPT_DIGITS}/⁄])")
+
+
 @lru_cache(maxsize=8192)
 def fraction_text(text):
     # Unicode decomposition exposes numerator/denominator without losing mixed fractions.
-    text = re.sub(r"(?<=\d)(?=[⁰¹²³⁴⁵⁶⁷⁸⁹])", " ", text)
+    # A bare attached marker requires review. Keep it distinct from decimal digits.
+    pieces = BARE_NOTE_MARKER.split(text)
+    markers = BARE_NOTE_MARKER.findall(text)
+    for index, piece in enumerate(pieces):
+        pieces[index] = _fraction_piece(piece)
+    return "".join(
+        piece + (markers[i] if i < len(markers) else "") for i, piece in enumerate(pieces)
+    )
+
+
+def _fraction_piece(text):
+    text = re.sub(rf"(?<=\d)(?=[{SUPERSCRIPT_DIGITS}])", " ", text)
     for ch in set(text):
         if unicodedata.category(ch) == "No" and "FRACTION" in unicodedata.name(ch, ""):
             text = text.replace(
@@ -142,7 +157,10 @@ MONTHS = [
 
 def hemisphere(label):
     # Meridian-altitude abbreviations describe the reduction, not its hemisphere.
-    label = re.sub(r"\b(?:ex\s+alt\.?|(?:the\s+)?altitude)\s*(?:m|merid)\.", "", label, flags=re.I)
+    label = re.split(r"\bH\s*\.\s*\d", label, maxsplit=1, flags=re.I)[0]
+    label = re.sub(
+        r"\b(?:ex\s+alt\.?|(?:the\s+)?altitude|alt\.?)\s*(?:m|merid)\.", "", label, flags=re.I
+    )
     if re.search(r"\bsouth(?:ern)?\b|\bmeridional|\b(?:M|Merid|aust|auſt|auft)\.", label, re.I):
         return -1
     if re.search(r"\bnorth(?:ern)?\b|\bBor\.|\bB\.(?!\w)|\bB\s*$", label, re.I):

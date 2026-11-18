@@ -7,7 +7,9 @@ provides a control set for the extraction and numerical interpretation of Tycho�
 
 ## Reconciliation result
 
-Every one of the **923 workbook rows has a unique source identity**. No rows were dropped to improve agreement.
+The original reconciliation linked **923 workbook rows** to unique source entries.
+It compared the workbook quotations with the edition text and checked the workbook’s
+numeric cells separately. The workbook informed the extraction and alignment rules.
 
 | Volume | Workbook rows | Magnitude agreement | Quotation difference | Incomplete source value |
 | --- | ---: | ---: | ---: | ---: |
@@ -17,15 +19,30 @@ Every one of the **923 workbook rows has a unique source identity**. No rows wer
 | XIII | 95 | 90 | 5 | 0 |
 | Total | 923 | 906 | 16 | 1 |
 
-Of the 906 magnitude agreements, 125 also agree in explicitly recoverable hemisphere. An unsigned agreement is not confirmation of a signed coordinate. The 16 quotation differences, 28 internal quotation/numerical conflicts, and 14 numerical-sign conflicts against source hemispheres have source-review evidence. These categories overlap and must not be added as independent error counts. Structural reviews are distinct from reviews of numerical glyphs; the complete set has not received an independent image audit of every figure.
+Of the 906 magnitude agreements, 125 also agree in explicitly recoverable hemisphere.
+For 685 rows there was no source check. The remaining checks include column structure
+and partial reviews as well as readings against the print. Codex recorded the
+adjudications, including 230 source-scan alignment decisions. Where scan fingerprints
+are unavailable, the bibliographic locus identifies the evidence to consult.
+The released catalog leaves 706 of the control-linked quantities unsigned.
+Quotations, numeric cells, and source hemispheres can conflict independently.
+
+A replay with the corrected parsers reproduced the same outcomes from the frozen
+extracted records and adjudications. The [reconciliation tally](../resources/catalog/pafko-validation.json)
+records the original and replay counts. The replay did not independently re-extract
+the current editions or review their images.
 
 Pafko's workbook contains source quotations, sexagesimal numerical components, and signed decimal degrees. The books use sexagesimal notation, including fractional minutes. Their agreement is checked with exact rational arithmetic before any decimal rounding. Original values remain intact; preferred readings and review decisions are separate.
 
-## The incomplete record
+## The incomplete printed record
 
 Workbook row 751 corresponds to the **second parallel declination at 8h18⅙ on 30 October 1595**, Volume XII, printed p. 452. The print itself gives **“17…”**. Both the final edition and the workbook preserve the incomplete expression.
 
 Its source identity is established, but its full numerical value is not recoverable from this printed witness. The normalized preferred magnitude remains null. Completing it would require additional primary evidence, such as the underlying manuscript; neither the workbook's numerical cells, the neighbouring reading, nor a modern prediction can supply the missing digits. This is a documented exception, so an unqualified claim that all 923 numerical values are confirmed would be false.
+
+An incomplete printed value is a different outcome from an unsupported catalog
+interpretation. For example, workbook row 83 is a quotation difference in this
+reconciliation and has no supported scalar in the catalog.
 
 ## Dates, clocks, targets, and roles
 
@@ -44,7 +61,10 @@ control. The earlier recorded value and the calculation input have separate
 links, although all three print 10°14½′. Equal values do not merge their source
 identities or establish statistical independence.
 
-No final-edition transcription or translation error has been confirmed in the discrepancies reviewed so far. A suspicious recorded number can already be present in the print: for example, Volume XII p. 446 prints 5h35⅙ within a sequence otherwise using 3h clocks. The edition preserves it. Record the anomaly separately from a proposed correction; do not silently emend it.
+The reviewed discrepancies in this comparison have not established a final-edition
+error. The [edition findings](edition-findings.md) cover other records. A suspicious
+number can originate in the print. For example, Volume XII p. 446 prints 5h35⅙
+within a sequence otherwise using 3h clocks. The edition preserves the printed value.
 
 ## Reproducibility and readiness
 

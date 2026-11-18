@@ -18,7 +18,7 @@ control agreement, release verification and analysis eligibility.
 | Interpret units and signs | [Exact numbers and units](#exact-numbers-and-units); [conversion conventions](#quantity-types-and-conversion-conventions) |
 | Interpret dates | [Dates and clocks](#dates-and-clocks) |
 | Follow dependencies | [Source relationships](#source-relationships-and-interpretation); [derivations](#derivations) |
-| Retain complete context | [Complete normalization](#complete-normalization-schema-5) |
+| Retain complete context | [Complete normalization](#complete-normalization-schema-5-and-later) |
 
 The detailed definitions below describe source-specific representations. The
 [schema reference](database-schema.md) gives SQL structure; the generated
@@ -1580,7 +1580,7 @@ Every published quantity, role and unit is defined in the [historical vocabulary
 
 Tycho source citations distinguish `original_edition` and `translation_edition` within `sources.data_json`. The historical subset version in release metadata denotes an unpublished working version, not a separate archived release.
 
-## Complete normalization (schema 5)
+## Complete normalization (schema 5 and later)
 
 `normalized_json` preserves the selected interpretation’s complete normalization object, including `longitude_origin`, `zodiac_sign`, `magnitude_degrees`, `zodiac_longitude_degrees`, `least_component_unit` and unresolved details when present. The existing degree decimal retains its original coordinate origin; it is not silently replaced by longitude from zodiac zero.
 

@@ -8,7 +8,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from .catalog import identity, normalize_quantity
-from .core import fraction_text, digest
+from .core import BARE_NOTE_MARKER, fraction_text, digest
 
 
 def coordinate_qualifiers(text):
@@ -68,6 +68,9 @@ def parse_coordinate(expression):
         return result
     text = expression.strip().replace("*", "").replace("`", "")
     text = re.sub(r"\[\^[^\]]+\]", "", text)
+    if BARE_NOTE_MARKER.search(text):
+        result["flags"].append("ambiguous_numeric_note_marker")
+        return result
     if re.search(r"\[recte:", text, re.I):
         text = re.split(r"\[recte:", text, flags=re.I)[0].strip()
         result["flags"].append("inline_variant_requires_extraction")
@@ -121,7 +124,7 @@ def parse_coordinate(expression):
     if components:
         try:
             normalized = normalize_quantity(dict(quantity="declination", components=components))
-        except ValueError:
+        except (ValueError, ZeroDivisionError):
             result["flags"].append("invalid_sexagesimal_components")
         else:
             result.update(components=components, normalized=normalized)

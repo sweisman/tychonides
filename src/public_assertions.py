@@ -1,6 +1,7 @@
 """Public assertions: shared catalogue responsibilities."""
 
 from .normalization import (
+    counted_sign_degree_outside,
     BODY_CALCULATIONS,
     HISTORICAL_INTERVAL_BODIES,
     normalize_quantity,
@@ -161,9 +162,7 @@ def public_assertion(row, *, source_registry=()):
     noncanonical_degree = (
         row["quantity"] in ANGLE_QUANTITIES
         and not row.get("incomplete")
-        and "sign_count" in parts
-        and "degree" in parts
-        and number(fraction_text(parts["degree"])) > 30
+        and counted_sign_degree_outside(parts)
     )
     if row.get("zodiac_sign") is not None:
         expected_named_sign = normalize_quantity(row)
