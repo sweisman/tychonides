@@ -4276,6 +4276,87 @@ class PublicCheckpointTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 self.module().public_assertion(dict(row, **changes))
 
+    def test_unresolved_log_cell_preserves_reading_without_a_scalar(self):
+        from src.normalization import normalize_quantity
+
+        row = dict(
+            self.fixture(),
+            quantity="unclassified_numeric_expression",
+            role="recorded_reading",
+            subject="Jupiter",
+            column=3,
+            line=123,
+            source_expression="16 42½",
+            components={},
+            flags=["source_notation_unresolved"],
+        )
+        row["normalized"] = normalize_quantity(row)
+        out = self.module().public_assertion(row)
+        self.assertEqual(out["numeric_expression_original"], "16 42½")
+        self.assertEqual(out["normalized"]["status"], "unsupported")
+        self.assertIsNone(out["normalized"]["magnitude"])
+        self.assertNotIn("text_original", out)
+        calibration = self.module().public_assertion(dict(row, subject="Spica", role="calibration"))
+        self.assertIsNone(calibration["normalized"]["magnitude"])
+
+        for changes in (
+            {"column": None},
+            {"flags": []},
+            {"printed_page": None},
+            {"subject": "Sun"},
+            {"source_expression": "16 42½ attached prose"},
+            {"normalized": dict(row["normalized"], magnitude="16")},
+        ):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                self.module().public_assertion(dict(row, **changes))
+
+    def test_unassigned_log_entry_keeps_its_units_and_role_unresolved(self):
+        from src.normalization import normalize_quantity
+
+        row = dict(
+            self.fixture(),
+            quantity="unclassified_numeric_expression",
+            role="unresolved",
+            subject="unassigned table entry",
+            column=2,
+            line=123,
+            source_expression="137 6⅙",
+            components={},
+            flags=["source_notation_unresolved"],
+        )
+        row["normalized"] = normalize_quantity(row)
+        out = self.module().public_assertion(row)
+        self.assertEqual(out["role"], "unresolved")
+        self.assertEqual(out["numeric_expression_original"], "137 6⅙")
+        self.assertIsNone(out["normalized"]["magnitude"])
+        prose = dict(
+            row,
+            subject="unassigned narrative entry",
+            column=None,
+            char_start=15,
+            char_end=22,
+            source_expression="7^h^ 12",
+        )
+        self.assertEqual(
+            self.module().public_assertion(prose)["numeric_expression_original"], "7^h^ 12"
+        )
+        for literal in ("H. 7 M. 12", "17° 21⅔′ ♑", "60′29″minus", "4° 9′10″B."):
+            variant = dict(prose, source_expression=literal, char_end=15 + len(literal))
+            self.assertEqual(
+                self.module().public_assertion(variant)["numeric_expression_original"], literal
+            )
+        with self.assertRaises(ValueError):
+            self.module().public_assertion(dict(prose, char_end=21))
+        for changes in (
+            {"column": None},
+            {"volume": 14},
+            {"subject": "Jupiter"},
+            {"reference": "Spica"},
+            {"source_expression": "137 6⅙ handwritten note"},
+        ):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                self.module().public_assertion(dict(row, **changes))
+
     def test_unclassified_calculation_numbers_support_other_bodies_without_inventing_units(self):
         from src.normalization import normalize_quantity
 

@@ -27,7 +27,10 @@ TIME = re.compile(
     re.I,
 )
 BARE_LABEL = re.compile(
-    rf"\b(?P<label>(?:declination|declinatio|declin\.|decl\.|altitude|altitudo|alt\.|azimuth|azim\.)\s*(?:of\s+)?(?:the\s+)?(?:Mars|Moon|Sun|♂|☾|☽|☉|⊙)?\s*(?:was|is)?\s*(?:\[[^\]]*\])?\s*[\]:,=]?\s*)(?P<value>{SIGNED}(?:\s+{NUMBER}){{1,2}})(?![\w/⁄])",
+    rf"\b(?P<label>(?:declination|declinatio|declin\.|decl\.|altitude|altitudo|alt\.|azimuth|azim\.)"
+    rf"\s*+(?:of\s+)?(?:the\s+)?(?:Mars|Moon|Sun|♂|☾|☽|☉|⊙)?"
+    rf"\s*+(?:was|is)?\s*+(?:\[[^\]]*\])?\s*+[\]:,=]?\s*+)"
+    rf"(?P<value>{SIGNED}(?:\s+{NUMBER}){{1,2}})(?![\w/⁄])",
     re.I,
 )
 NUMERIC = re.compile(rf"(?<!\w)[+−-]?(?:{COMMA_THOUSANDS_NUMBER}|{NUMBER})(?!\w)")

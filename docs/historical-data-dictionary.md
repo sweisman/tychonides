@@ -114,6 +114,7 @@ See the [database schema](database-schema.md) and [catalog dictionary](catalog-d
 | `reduction` | Quantity resulting from a stated observational reduction. |
 | `repeated_reading` | A separately recorded repeat; not an automatically independent observation. |
 | `source_alternative` | Alternative supplied by the source and retained without replacing the principal reading. |
+| `unresolved` | Original numerical entry whose observational or computational role is unestablished. |
 
 ## unit
 

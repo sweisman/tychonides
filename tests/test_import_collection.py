@@ -13,6 +13,57 @@ from src.catalog_release import write_catalogue
 
 
 class WorkingCatalogueMergeTests(unittest.TestCase):
+    def test_merge_set_unions_backlinks_at_a_shared_source_locus(self):
+        from test_catalog_release import CatalogueReleaseTests
+
+        from src.import_collection import merge_catalogue_set
+
+        source, public, contexts = CatalogueReleaseTests().fixture()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            inputs = [root / "first", root / "second"]
+            for i, path in enumerate(inputs):
+                locus = dict(
+                    id="example-locus",
+                    source_id="tycho-oo-11",
+                    printed_page=1,
+                    status="mapped_source_page" if i else "provisional_source_page",
+                    page_basis="reviewed_quantity_citation" if i else "automatic_page_index",
+                    quantity_ids=[source[i]["id"]],
+                    context_ids=[],
+                )
+                write_catalogue(
+                    path,
+                    [source[i]],
+                    [public[i]],
+                    [contexts[i]],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    [],
+                    {},
+                    loci=[locus],
+                )
+            output = root / "merged"
+            with patch("src.import_collection.WORK_ROOT", root):
+                merge_catalogue_set([*inputs, inputs[0]], output)
+            with closing(sqlite3.connect(output / "tychonides.sqlite")) as db:
+                payload = json.loads(db.execute("SELECT data_json FROM source_loci").fetchone()[0])
+                self.assertEqual(payload["page_basis"], "reviewed_quantity_citation")
+                self.assertEqual(
+                    db.execute("SELECT status FROM source_loci").fetchone()[0], "mapped_source_page"
+                )
+                expected = sorted(row["id"] for row in source)
+                self.assertEqual(payload["quantity_ids"], expected)
+                self.assertEqual(
+                    db.execute(
+                        "SELECT quantity_id FROM locus_quantities ORDER BY quantity_id"
+                    ).fetchall(),
+                    [(identifier,) for identifier in expected],
+                )
+
     def inputs(self, root):
         from test_catalog_release import CatalogueReleaseTests
 

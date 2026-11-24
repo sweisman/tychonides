@@ -271,6 +271,16 @@ def interpret_roman_places(row):
     return " ".join(canonical), components
 
 
+def unresolved_log_numeric_text(expression):
+    """Remove recognized notation marks for validation of a retained literal."""
+    text = re.sub(r"[ᴴᴹˢᵍᴾʰᵐ]", "", expression)
+    text = re.sub(r"\^[hmsogp]\^|(?<![A-Za-z])[HMSP]\.", "", text, flags=re.I)
+    text = re.sub(r"(?<![A-Za-z])(?:Gr?|Min)\.(?=\s*\d)", "", text, flags=re.I)
+    text = re.sub(r"(?<=[°′″])\s*(?:plus|minus|[BS]\.|Sept\.)$", "", text, flags=re.I)
+    text = text.translate({ord(glyph): None for glyph in ZODIAC_SIGNS.values()})
+    return fraction_text(text).replace("−", "-")
+
+
 def source_numeric_text(row, expression):
     """Interpret explicitly reviewed integer grouping without changing the literal."""
     if "comparison_label_original" in row or "comparison_sources" in row:

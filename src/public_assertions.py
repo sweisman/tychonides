@@ -5,6 +5,7 @@ from .normalization import (
     BODY_CALCULATIONS,
     HISTORICAL_INTERVAL_BODIES,
     normalize_quantity,
+    unresolved_log_numeric_text,
     VISUAL_REFERENCE_KINDS,
     unresolved_instrument_scalar,
     unresolved_visual_fraction,
@@ -43,6 +44,8 @@ def public_assertion(row, *, source_registry=()):
         raise ValueError("Unreviewed public endpoint label")
     if row["quantity"] not in QUANTITIES or row["role"] not in ROLES:
         raise ValueError("Unreviewed public quantity/role")
+    if row["role"] == "unresolved" and row["quantity"] != "unclassified_numeric_expression":
+        raise ValueError("Unresolved source role requires an unclassified numerical expression")
     calendar_count = (
         row["subject"] == "calendar calculation"
         and row["quantity"] == "source_scalar"
@@ -199,6 +202,39 @@ def public_assertion(row, *, source_registry=()):
             and isinstance(expression, str)
             and re.fullmatch(r"\d+\.\s+\d+\.", expression)
         )
+        unresolved_log_cell = (
+            key in range(10, 14)
+            and (
+                row["role"] == "calibration"
+                or (row["role"] == "recorded_reading" and row["subject"] in ("Jupiter", "Moon"))
+                or (row["role"] == "unresolved" and row["subject"] == "unassigned table entry")
+            )
+            and type(row.get("column")) is int
+            and row["column"] > 0
+            and type(row.get("line")) is int
+            and row["line"] > 0
+            and type(row.get("printed_page")) is int
+            and row["printed_page"] > 0
+            and "source_notation_unresolved" in row.get("flags", [])
+        )
+        start = row.get("char_start")
+        end = row.get("char_end")
+        unresolved_log_prose = (
+            key in range(10, 14)
+            and row["role"] == "unresolved"
+            and row["subject"] == "unassigned narrative entry"
+            and row.get("column") is None
+            and type(row.get("line")) is int
+            and row["line"] > 0
+            and type(row.get("printed_page")) is int
+            and row["printed_page"] > 0
+            and isinstance(expression, str)
+            and type(start) is int
+            and type(end) is int
+            and 0 <= start < end
+            and end - start == len(expression)
+            and "source_notation_unresolved" in row.get("flags", [])
+        )
         calculation = (
             row["role"] in ("calculation_intermediate", "historical_input")
             and row["subject"]
@@ -219,8 +255,10 @@ def public_assertion(row, *, source_registry=()):
         )
         if isinstance(numeric_expression, str):
             numeric_expression = numeric_expression.replace(r"\|", "|")
+            if row["role"] == "unresolved":
+                numeric_expression = unresolved_log_numeric_text(numeric_expression)
         if (
-            not (recorded_pair or calculation)
+            not (recorded_pair or calculation or unresolved_log_cell or unresolved_log_prose)
             or row["reference"] is not None
             or row.get("direction") is not None
             or row.get("components")

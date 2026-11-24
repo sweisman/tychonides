@@ -50,6 +50,7 @@ parallax corrections remain dependencies of reduced coordinate products.
 | Source | Material | Availability |
 | --- | --- | --- |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mars observations, clocks, calibrations, historical calculations and supporting records across four volumes | [Available: 17,043 quantities](../resources/catalog/README.md) |
+| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Jupiter and Moon observations and reductions, with directly related solar and stellar calibration | [Verified working acquisition](#jupiter-and-moon-coverage) |
 | [Wayne Pafko, Mars transcription](https://www.pafko.com/tycho/) | Independent transcription used to reconcile entries in Tycho’s books | 923 linked validation controls; not an additional observing program |
 | Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,910 quantities](historical-books-ingestion.md) |
 | Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,349 quantities](historical-books-ingestion.md) |
@@ -65,6 +66,36 @@ distinguish quantity rows, contextual annotation literals and unresolved cases.
 The [book source guide](sources.md) links editions, PDFs and original witnesses.
 The [historical evidence guide](historical-findings.md) identifies relevant sections
 and distinguishes new observations from repeated accounts of earlier evidence.
+
+### Jupiter and Moon coverage
+
+The working acquisition extends the four-volume observing logs from Mars to
+Jupiter and the Moon. The Moon selection includes dedicated observing sections,
+eclipses, occultations, and comparisons recorded elsewhere in the logs. Both
+selections include directly related solar and stellar readings, clock settings,
+refraction, parallax, and historical reductions. [Editions and printed witnesses](sources.md)
+
+| Opera Omnia volume | New quantities in the Jupiter selection | New quantities in the Moon selection |
+| --- | ---: | ---: |
+| X | 1,096 | 4,714 |
+| XI | 2,896 | 6,278 |
+| XII | 4,879 | 10,243 |
+| XIII | 3,689 | 2,658 |
+| **Total** | **12,560** | **23,893** |
+
+The working SQLite and CSV exports agree on 36,453 quantities across 9,710
+source groups. Reconciliation by source location identified 1,578 shared
+occurrences whose existing records are reused. The totals include calibration
+data and calculations alongside observations. For 16,071 quantities, the
+catalog preserves the literal reading and source location with its numerical
+interpretation still unresolved. Analysis eligibility requires separate
+review of the measurement role, time convention, reference objects, and
+applied corrections. [Catalog terminology](catalog-terms.md)
+
+The combined working catalog includes 613,473 quantities across all collections,
+including 53,496 from Tycho’s four observing volumes. The
+[public download](../resources/catalog/README.md) reports the coverage of the
+published release.
 
 ## Modern observing programs
 
@@ -122,7 +153,7 @@ findings and analysis questions are described in the [evidence guide](historical
 
 | Planned acquisition | Material | Prerequisite |
 | --- | --- | --- |
-| Remaining non-Mars records in Tycho’s *Thesaurus Observationum*, *Opera Omnia* X–XIII | Other planets, Sun, Moon, comets, stars and supporting calibrations | Select body/record scope and reuse occurrences already captured with Mars. [Located passages](historical-findings.md) provide starting points. |
+| Further records in Tycho’s *Thesaurus Observationum*, *Opera Omnia* X–XIII | Other planets, additional solar and stellar observations, comets, and supporting calibrations | Define the scope for each object and reuse shared source occurrences. [Located passages](historical-findings.md) provide starting points. |
 | Further works by Tycho, including cited material in *Opera Omnia* V and VIII | Mars commentary, calculations, correspondence and supplementary observations | Identify editions and cited passages; establish relationships to the logs. |
 | Hevelius and other Ars Astronomica authors | Historical observations, reductions and supporting tables | Select the works, editions and numerical sections. |
 | Origanus, daily ephemeris volumes beyond the ingested *Introductio* | Dated predictions and supporting tables | Identify the volumes and years actually available; keep predictions distinct from observations. |

@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from .catalog import ANGLE_QUANTITIES, identity, TIME_QUANTITIES, source_key, source_fields
-from .core import digest
+from .core import SUPERSCRIPT_DIGITS, digest
 from .inventory import blocks, plain
 
 
@@ -172,11 +172,17 @@ def literal_intervals(line, expression):
         ]
     intervals = []
     offset = 0
+    marked_measurement = re.search(r"(?:[°′″‴⁗ᴴᴹˢᵍᴾʰᵐ]|\^[hmsogp]\^)$", expression, re.I)
     while (start := line.find(expression, offset)) >= 0:
         end = start + len(expression)
         before = line[start - 1] if start else ""
         after = line[end] if end < len(line) else ""
-        if not (before.isalnum() or before == "_" or after.isalnum() or after == "_"):
+        note = marked_measurement and re.match(
+            rf"[{SUPERSCRIPT_DIGITS}]+(?=$|[\s*.,;:()\[\]])", line[end:]
+        )
+        if not (before.isalnum() or before == "_" or after == "_") and (
+            not after.isalnum() or note
+        ):
             intervals.append((start, end))
         # The preceding lookahead also admitted overlapping literal occurrences.
         offset = start + 1

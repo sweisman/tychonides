@@ -4832,6 +4832,7 @@
     "twentieth star of Ursa Major (Maestlin)",
     "twenty-second star of Virgo",
     "twenty-third star of Virgo",
+    "unassigned narrative entry",
     "unassigned table entry",
     "unformed star at the rising of Erichthonius",
     "unformed star below Arcturus of second magnitude",
@@ -7033,7 +7034,8 @@
     "recorded_reading",
     "reduction",
     "repeated_reading",
-    "source_alternative"
+    "source_alternative",
+    "unresolved"
   ],
   "FLAGS": [
     "absolute_time_unestablished",

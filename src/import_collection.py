@@ -27,8 +27,46 @@ def _identifier(name):
     return '"' + name.replace('"', '""') + '"'
 
 
+def _merge_locus_links(db):
+    """Combine backlinks and retain the strongest evidence for an agreed page."""
+    pairs = db.execute(
+        "SELECT m.id, m.data_json, s.data_json, m.status, s.status "
+        "FROM main.source_loci m JOIN incoming.source_loci s USING (id) "
+        "WHERE m.data_json IS NOT s.data_json OR m.status IS NOT s.status"
+    ).fetchall()
+    provisional = ("provisional_source_page", "automatic_page_index")
+    reviewed = ("mapped_source_page", "reviewed_quantity_citation")
+    for identifier, retained, incoming, retained_status, incoming_status in pairs:
+        current, new = json.loads(retained), json.loads(incoming)
+        if (current["status"], new["status"]) != (retained_status, incoming_status):
+            raise ValueError("Inconsistent source locus status: " + identifier)
+        quantities = set(current.pop("quantity_ids", [])) | set(new.pop("quantity_ids", []))
+        contexts = {
+            (r["context_id"], r["scope_id"])
+            for row in (current, new)
+            for r in row.pop("context_ids", [])
+        }
+        if current != new:
+            evidence = {(row.pop("status"), row.pop("page_basis", None)) for row in (current, new)}
+            if (
+                current != new
+                or evidence != {provisional, reviewed}
+                or not current.get("printed_page")
+            ):
+                raise ValueError("Conflicting source locus evidence: " + identifier)
+            current["status"], current["page_basis"] = reviewed
+        current["quantity_ids"] = sorted(quantities)
+        current["context_ids"] = [
+            dict(context_id=context, scope_id=scope) for context, scope in sorted(contexts)
+        ]
+        db.execute(
+            "UPDATE main.source_loci SET data_json=?, status=? WHERE id=?",
+            (encoded(current), current["status"], identifier),
+        )
+
+
 def _merge_catalogue_rows(db):
-    """Merge attached catalogues without replacing any conflicting identity."""
+    """Merge the attached input without replacing any conflicting identity."""
 
     def tables(alias):
         return [
@@ -40,16 +78,15 @@ def _merge_catalogue_rows(db):
         ]
 
     names = tables("main")
-    if any(tables(alias) != names for alias in ("original", "incoming")):
+    if tables("incoming") != names:
         raise ValueError("Incompatible catalogue table schema")
     columns = {}
     for name in names:
         quoted = _identifier(name)
         info = list(db.execute(f"PRAGMA main.table_info({quoted})"))
-        for alias in ("original", "incoming"):
-            other = list(db.execute(f"PRAGMA {alias}.table_info({quoted})"))
-            if [r[1:] for r in other] != [r[1:] for r in info]:
-                raise ValueError("Incompatible catalogue column schema: " + name)
+        other = list(db.execute(f"PRAGMA incoming.table_info({quoted})"))
+        if [r[1:] for r in other] != [r[1:] for r in info]:
+            raise ValueError("Incompatible catalogue column schema: " + name)
         columns[name] = [r[1] for r in info]
         fields = ",".join(_identifier(c) for c in columns[name])
         keys = [r[1] for r in sorted(info, key=lambda r: r[5]) if r[5]]
@@ -58,36 +95,48 @@ def _merge_catalogue_rows(db):
             f"INSERT OR IGNORE INTO main.{quoted} ({fields}) "
             f"SELECT {fields} FROM incoming.{quoted} ORDER BY {order}"
         )
-    for alias in ("original", "incoming"):
-        for name in names:
-            quoted = _identifier(name)
-            same = " AND ".join(f"m.{_identifier(c)} IS s.{_identifier(c)}" for c in columns[name])
-            if db.execute(
-                f"SELECT 1 FROM {alias}.{quoted} s WHERE NOT EXISTS "
-                f"(SELECT 1 FROM main.{quoted} m WHERE {same}) LIMIT 1"
-            ).fetchone():
-                raise ValueError("Conflicting or missing input row in " + name)
+    _merge_locus_links(db)
+    for name in names:
+        quoted = _identifier(name)
+        same = " AND ".join(
+            f"m.{_identifier(c)} IS s.{_identifier(c)}"
+            for c in columns[name]
+            if name != "source_loci" or c not in ("data_json", "status")
+        )
+        if db.execute(
+            f"SELECT 1 FROM incoming.{quoted} s WHERE NOT EXISTS "
+            f"(SELECT 1 FROM main.{quoted} m WHERE {same}) LIMIT 1"
+        ).fetchone():
+            raise ValueError("Conflicting or missing input row in " + name)
 
 
 def merge_catalogues(base, additional, output, *, repeat=False):
-    """Combine compatible working catalogues; retain their complete record graphs."""
+    """Combine two compatible working catalogues."""
+    return merge_catalogue_set((base, additional), output, repeat=repeat)
+
+
+def merge_catalogue_set(inputs, output, *, repeat=False):
+    """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
     from .catalog_release import CSV_COLUMNS
     from .csv_projection import project_csv
 
-    base, additional, output = (Path(p).resolve() for p in (base, additional, output))
+    inputs = tuple(dict.fromkeys(Path(p).resolve() for p in inputs))
+    if not inputs:
+        raise ValueError("Merge requires at least one input catalogue")
+    output = Path(output).resolve()
     if not output.is_relative_to(WORK_ROOT.resolve()):
         raise ValueError("Working catalogue merges require protected working storage")
-    if any(p.is_relative_to(output) or output.is_relative_to(p) for p in (base, additional)):
+    if any(p.is_relative_to(output) or output.is_relative_to(p) for p in inputs):
         raise ValueError("Merge output overlaps its read-only inputs")
     snapshots, fingerprints = [], {}
-    for directory in (base, additional):
+    for directory in inputs:
         validate_release(directory)
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
         if manifest.get("schema_version", 3) != 3:
             raise ValueError("Merge requires unprojected working catalogue schema 3")
         database, _csv_name = working_files(directory)
-        snapshots.append((directory, database, manifest))
+        snapshots.append(directory / database)
         fingerprints[directory / "manifest.json"] = digest(directory / "manifest.json")
         fingerprints.update(
             {directory / name: checksum for name, checksum in manifest["output_hashes"].items()}
@@ -96,25 +145,22 @@ def merge_catalogues(base, additional, output, *, repeat=False):
 
     def build(stage):
         stage.mkdir()
-        shutil.copyfile(base / snapshots[0][1], stage / "tychonides.sqlite")
+        shutil.copyfile(snapshots[0], stage / "tychonides.sqlite")
         with closing(sqlite3.connect((stage / "tychonides.sqlite").as_uri(), uri=True)) as db:
             db.execute("PRAGMA foreign_keys=OFF")
-            for alias, (directory, database, _) in zip(
-                ("original", "incoming"), snapshots, strict=True
-            ):
-                db.execute(
-                    f"ATTACH DATABASE ? AS {alias}",
-                    ((directory / database).as_uri() + "?mode=ro",),
-                )
+            metadata = dict(db.execute("SELECT key,value_json FROM main.metadata"))
+            for database in snapshots[1:]:
+                db.execute("ATTACH DATABASE ? AS incoming", (database.as_uri() + "?mode=ro",))
+                with db:
+                    _merge_catalogue_rows(db)
+                    for key, value in db.execute("SELECT key,value_json FROM incoming.metadata"):
+                        if key in ("schema_version", "release_id", "publication_status"):
+                            continue
+                        if key in metadata and json.loads(metadata[key]) != json.loads(value):
+                            raise ValueError("Conflicting catalogue metadata: " + key)
+                        metadata[key] = value
+                db.execute("DETACH DATABASE incoming")
             with db:
-                _merge_catalogue_rows(db)
-                metadata = dict(db.execute("SELECT key,value_json FROM main.metadata"))
-                for key, value in db.execute("SELECT key,value_json FROM incoming.metadata"):
-                    if key in ("schema_version", "release_id", "publication_status"):
-                        continue
-                    if key in metadata and json.loads(metadata[key]) != json.loads(value):
-                        raise ValueError("Conflicting catalogue metadata: " + key)
-                    metadata[key] = value
                 metadata.update(
                     schema_version=encoded(3),
                     release_id=encoded("combined-catalogue-draft"),
