@@ -1,0 +1,13 @@
+recorded_change,parallax,refraction,mean_arcseconds,standard_deviation_arcseconds,least_arcseconds,greatest_arcseconds
+from_altitudes,modern,tycho_stellar,+67.1,54.5,-35.0,+139.6
+from_altitudes,modern,longomontanus_mean,+16.5,62.5,-95.3,+95.8
+from_altitudes,modern,bennett,+13.0,58.2,-94.4,+88.8
+from_altitudes,850,tycho_stellar,+101.1,55.0,-1.9,+174.2
+from_altitudes,850,longomontanus_mean,+50.4,63.4,-62.2,+130.4
+from_altitudes,850,bennett,+47.0,59.0,-61.3,+123.4
+by_armillae,modern,tycho_stellar,+52.8,80.4,-55.5,+141.9
+by_armillae,modern,longomontanus_mean,+2.2,68.2,-94.6,+80.7
+by_armillae,modern,bennett,-1.3,73.8,-103.6,+77.1
+by_armillae,850,tycho_stellar,+86.8,79.2,-20.4,+172.4
+by_armillae,850,longomontanus_mean,+36.2,67.2,-59.5,+114.8
+by_armillae,850,bennett,+32.7,72.7,-68.4,+111.2

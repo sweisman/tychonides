@@ -1,0 +1,7 @@
+example,distance_earth_radii,altitude_degrees,printed_altitude_parallax_arcseconds,recomputed_arcseconds,modern_arcseconds
+"Venus, 1582 February 26",815,48.5,168,167.7,8.3
+"Venus, 1582 March 20, afternoon",623,57,180,180.3,9.0
+"Venus, 1582 March 20, evening",623,23.5,304,303.6,15.2
+"Venus, Opera Omnia XII p. 463",343,12,560,588.2,
+"Venus, Opera Omnia XII p. 468",348,3,592,591.9,
+"Venus, 1610 December 12",850,15.5,240,233.8,

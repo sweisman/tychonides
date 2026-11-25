@@ -15,7 +15,7 @@ Tycho’s nominal 3′ horizontal solar parallax gives a Sun–Earth distance of
 in modern units gives 7.31 million km or 4.54 million miles, close to the rounded
 4.6 million miles. At one modern astronomical unit the corresponding angle is
 8.79″. The historical scale therefore makes the horizontal parallax about 20.5
-times greater for the same relative orbital geometry. [Progymnasmata, solar-parallax table and p. 414](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) · [JPL equatorial Earth radius](https://ssd.jpl.nasa.gov/planets/phys_par.html) · [IAU astronomical unit](https://www.iau.org/static/resolutions/IAU2012_English.pdf)
+times greater for the same relative orbital geometry. [Progymnasmata, solar-parallax table and p. 414](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) · [JPL equatorial Earth radius](https://ssd.jpl.nasa.gov/planets/phys_par.html) · [JPL value of the astronomical unit](https://ssd.jpl.nasa.gov/astro_par.html)
 
 For distance `n` in Earth radii the horizontal angle is `asin(1/n)`. At apparent
 altitude `h` the altitude correction is `asin(cos(h)/n)` on a spherical Earth,
@@ -48,8 +48,9 @@ triangle discrepancies remains open. [Progymnasmata](https://arsastronomica.com/
 
 For Mercury, Tycho’s March 1589 reductions subtract 8′ for refraction and add
 3′ for parallax in declination. On March 24, 14°55′ becomes 14°47′ and then
-14°50′. At the logged approximate altitude of 5°, the modern declination
-corrections for March 24, 27, and 28 are +7.8″, +8.5″, and +8.8″. Holding his
+14°50′. At the logged approximate altitude of 5° and the printed hours of
+8:15, 8:09, and 8:15 p.m., the modern declination corrections for March 24, 27,
+and 28 are +7.8″, +8.5″, and +8.8″. Holding his
 refraction fixed on March 24 and varying only parallax gives 14°47′07.8″. In
 another reduction, on February 3, 1592, the printed altitude terms give
 8′15″ refraction minus 3′15″ parallax, or 5′. These calculations establish the
@@ -63,6 +64,7 @@ distance extremes. A particular observation requires its own distance and projec
 | Model as tabulated by Riccioli | Venus, far to near | Mercury, far to near |
 | --- | ---: | ---: |
 | Ptolemy | 2′25″–18′40″ | 17′15″–62′00″ |
+| Copernicus | 1′43″–11′30″ | 2′05″–5′40″ |
 | Tycho | 1′40″–11′25″ | 2′04″–5′35″ |
 | Longomontanus | 1′35″–11′25″ | 1′50″–5′50″ |
 | Kepler | 36″–3′45″ | 42″–2′00″ |
@@ -70,7 +72,8 @@ distance extremes. A particular observation requires its own distance and projec
 | Modern reference from NASA’s minimum and maximum Earth distances | 5.0″–34.4″ | 5.9″–17.0″ |
 
 The modern upper figures are geometric reference values. The nearest approaches
-can occur at elongations that make observation difficult. [Almagestum Novum I, p. 700](https://arsastronomica.com/works/giovanni-battista-riccioli-almagestum-novum-tomus-primus-pars-prior/) · [NASA Venus distances](https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html) · [NASA Mercury distances](https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html)
+can occur at elongations that make observation difficult. Riccioli’s table
+covers ten authorities, and [all of them are listed](figures/parallax-model-ranges.csv). [Almagestum Novum I, p. 700](https://arsastronomica.com/works/giovanni-battista-riccioli-almagestum-novum-tomus-primus-pars-prior/) · [NASA Venus distances](https://nssdc.gsfc.nasa.gov/planetary/factsheet/venusfact.html) · [NASA Mercury distances](https://nssdc.gsfc.nasa.gov/planetary/factsheet/mercuryfact.html)
 
 ## The March 1590 Venus test
 
@@ -92,6 +95,15 @@ Horizons ranges and declinations for each 1590 date. [Thesaurus Observationum II
 | 19 | +265″ | +180″ | −37.5″ | +191.0″ | −2.6″ |
 | 21 | +255″ | +120″ | −37.9″ | +178.3″ | −2.8″ |
 | 26 | +235″ | +170″ | −38.7″ | +141.9″ | −3.0″ |
+
+The catalog keeps each row of the recap together but does not record its day,
+and it dates the values December 20, 1590. The study gives the rows the page’s
+day labels in order, from the latest meridian clock to the earliest. Each
+recorded meridian altitude then lies within 31″ of the value the modern
+ephemeris gives for that day. A one-day error would move it by more than 10′.
+The catalog also does not say which of a row’s two armillae readings is the
+evening one. They are ordered like the row’s two altitude-derived
+declinations. [Selected pairs with catalog identities](../examples/parallax-venus-pairs.csv) · [Every term for each pair](figures/parallax-venus-pairs.csv)
 
 ### A calculation without a modern ephemeris
 
@@ -137,7 +149,12 @@ change by **65–165″**. In the modern comparison the signal in that observabl
 14–19″. An illustrative refraction law of `58″ × tan(zenith distance)` gives
 44–71″ of differential declination refraction across the pairs if retained in
 full. Even the historical 850-radius signal of 32–39″ is smaller than the
-disagreement between the methods. These seven pairs give a sensitivity check.
+disagreement between the methods. By the armillae, the recorded change exceeds
+the modern motion by 128–140″ on March 4, 11, and 15. On the four later dates
+the excess is between −58″ and +28″. After motion, parallax, and refraction
+are removed, the residuals still scatter by 55–80″ from pair to pair under
+[every combination of assumptions](planetary-parallax-comparisons.md#all-seven-venus-pairs).
+These seven pairs give a sensitivity check.
 An independent distance estimate would require the individual instrument
 calibrations, a reconstruction of the corrections already applied to the recap,
 and a fit that accounts for the shared errors within each session.
@@ -146,7 +163,9 @@ and a fit that accounts for the shared errors within each session.
 
 The [planetary correction comparisons](planetary-parallax-comparisons.md) cross
 historical and modern refraction with both parallax inputs for Mercury and Venus
-and extend the calculations to Mars, Jupiter, and Saturn.
+and extend the calculations to Mars, Jupiter, and Saturn. One
+[script](planetary-parallax-comparisons.md#inputs-and-reproduction) regenerates
+every table on both pages from committed inputs.
 
 - **Dates and times.** The log examples use Julian dates. For the modern benchmark,
   add 10 days to express these dates in the Gregorian calendar and treat the

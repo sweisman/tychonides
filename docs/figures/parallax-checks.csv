@@ -1,0 +1,35 @@
+quantity,value
+Solar distance for a 3 arcminute horizontal parallax (Earth radii),1145.92
+"That distance, rounded, in millions of kilometers",7.31
+That distance in millions of miles,4.54
+Horizontal parallax at one astronomical unit (arcseconds),8.79
+Ratio of 3 arcminutes to that parallax,20.47
+Jupiter 1593 horizontal parallax at the reduced distance (arcseconds),60.40
+Jupiter 1593 September altitude parallax (arcseconds),57.29
+Saturn 1599 horizontal parallax (arcseconds),21.94
+Venus p. 463 triangle side by the cosine rule (Earth radii),334.47
+Venus p. 463 altitude parallax at the printed distance (arcseconds),588.21
+Origanus Venus latitude by interpolation (arcseconds south),3785.00
+Origanus Mercury latitude by interpolation (arcseconds north),1036.25
+March 3 to 4 change in meridian altitude (arcseconds),1445.00
+March 3 to 4 interval between meridian clocks (hours),23.99
+March 4 motion by log interpolation (arcseconds),310.18
+March 3 to 4 change in ephemeris declination (arcseconds),1389.27
+Tangent-triangle distance of Venus (Earth radii),796.08
+March 4 parallax shift at that distance (arcseconds),-34.60
+"Method disagreement, altitude change minus armillae change, least of the seven pairs (arcseconds)",-165.00
+"Method disagreement, altitude change minus armillae change, greatest of the seven pairs (arcseconds)",140.00
+"Modern parallax shift, least of the seven pairs (arcseconds)",-3.03
+"Modern parallax shift, greatest of the seven pairs (arcseconds)",-1.88
+"Modern horizontal parallax of Venus, least of the seven pairs (arcseconds)",13.86
+"Modern horizontal parallax of Venus, greatest of the seven pairs (arcseconds)",18.72
+"Parallax shift at 850 Earth radii, least of the seven pairs (arcseconds)",-38.74
+"Parallax shift at 850 Earth radii, greatest of the seven pairs (arcseconds)",-32.41
+"Tangent-law differential refraction, least of the seven pairs (arcseconds)",43.54
+"Tangent-law differential refraction, greatest of the seven pairs (arcseconds)",71.12
+"Motion change for clocks 15 minutes early, least of the seven pairs (arcseconds)",0.06
+"Motion change for clocks 15 minutes early, greatest of the seven pairs (arcseconds)",0.07
+"Motion change for clocks 15 minutes late, least of the seven pairs (arcseconds)",-0.07
+"Motion change for clocks 15 minutes late, greatest of the seven pairs (arcseconds)",-0.05
+"Meridian altitude minus ephemeris, least of the seven pairs (arcseconds)",-30.41
+"Meridian altitude minus ephemeris, greatest of the seven pairs (arcseconds)",15.60

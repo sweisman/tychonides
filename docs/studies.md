@@ -109,7 +109,13 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 - **Limits.** The recorded geometry is held fixed while distance and refraction
   vary one at a time. Modern distances are taken at noon, independent of the
   source clocks.
-- **Rerun.** The page states its formulas and sources. No script is published yet.
+- **Rerun.** `python examples/planetary_parallax.py --output docs/figures`
+  regenerates the [outer-planet table](figures/parallax-outer-planets.csv) and
+  every other table on the page from committed inputs. A test regenerates the
+  tables.
+- **Reviewed.** November 25, 2026. The review reproduced every table, added the
+  script, tied each printed input to its catalog entry where one entry matches,
+  and made the list of Riccioli’s authorities the same on both parallax pages.
 
 ## Mercury and Venus parallax
 
@@ -125,5 +131,16 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 - **Inputs.** The *Progymnasmata*, *Opera Omnia* XII, and Longomontanus’s
   *Astronomia Danica*, with JPL Horizons distances for comparison.
 - **Limits.** Scenario calculations from recorded readings. They show the
-  sensitivity to each assumption and do not estimate a parallax.
-- **Rerun.** The page states its formulas and sources. No script is published yet.
+  sensitivity to each assumption and do not estimate a parallax. Across the
+  seven Venus pairs the residuals scatter by 55″ to 80″, more than the 34″
+  between the historical and modern parallax scales. The catalog does not
+  record the day of each pair, so the days are assigned in page order and
+  checked against the ephemeris.
+- **Rerun.** `python examples/planetary_parallax.py --output docs/figures`
+  regenerates the [seven-pair table](figures/parallax-venus-pairs.csv) and
+  every other table on the page from committed inputs. A test regenerates the
+  tables.
+- **Reviewed.** November 25, 2026. The review reproduced every table, added the
+  script and the selection of the Venus pairs from the catalog, extended the
+  scenario comparison from one pair to all seven, and stated the hours used for
+  Mercury.

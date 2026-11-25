@@ -1,0 +1,5 @@
+planet,julian_date,altitude_degrees,historical_distance_earth_radii,modern_range_au,historical_altitude_parallax_arcseconds,modern_altitude_parallax_arcseconds,tycho_stellar_refraction_arcseconds,tycho_solar_refraction_arcseconds,bennett_refraction_arcseconds,historical_net_tycho_stellar_arcseconds,historical_net_tycho_solar_arcseconds,historical_net_bennett_arcseconds,modern_net_tycho_stellar_arcseconds,modern_net_tycho_solar_arcseconds,modern_net_bennett_arcseconds
+Mars,1582-12-26,40.0000,721.0,0.64004,219.2,10.5,0.0,10.0,71.1,+219.2,+209.2,+148.1,+10.5,+0.5,-60.6
+Mars,1587-03-07,39.0000,682.1,0.65024,235.0,10.5,0.0,15.0,73.7,+235.0,+220.0,+161.4,+10.5,-4.5,-63.1
+Jupiter,1593-06-29,11.0000,3415.0,4.12913,59.3,2.1,300.0,570.0,295.6,-240.7,-510.7,-236.3,-297.9,-567.9,-293.5
+Saturn,1599-03-25,35.5958,9400.0,8.67392,17.8,0.8,0.0,32.0,83.3,+17.8,-14.2,-65.4,+0.8,-31.2,-82.4

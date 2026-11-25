@@ -1,0 +1,57 @@
+day,measure,expression,value_exact,unit,quantity_id,event_id,catalog_date
+4,meridian_clock,2^h^ 46½^m^,9990,second_of_time,assertion-v12-72fa2e1db816f7ef5144,event-v12-bc951d2542de2386a076,1590-12-20
+4,evening_clock,7^h^ 55½^m^,28530,second_of_time,assertion-v12-5ce1cafa04782ecb94bb,event-v12-bc951d2542de2386a076,1590-12-20
+4,meridian_altitude,51° 59′ 35″,187175,arcsecond,assertion-v12-2061603f95799d77a99c,event-v12-bc951d2542de2386a076,1590-12-20
+4,evening_altitude,21° 55⅙′,78910,arcsecond,assertion-v12-d0f1baa68872ff501191,event-v12-bc951d2542de2386a076,1590-12-20
+4,meridian_declination_from_altitude,17° 54⅓′,64460,arcsecond,assertion-v12-cc2bdad931ba3ae1982b,event-v12-bc951d2542de2386a076,1590-12-20
+4,evening_declination_from_altitude,18° 0½′,64830,arcsecond,assertion-v12-2a40a873661747c85daa,event-v12-bc951d2542de2386a076,1590-12-20
+4,meridian_declination_armillae,17° 54½′,64470,arcsecond,assertion-v12-189f23c4464f9852e50f,event-v12-bc951d2542de2386a076,1590-12-20
+4,evening_declination_armillae,18° 1¾′,64905,arcsecond,assertion-v12-fe8cbd7d79194533002b,event-v12-bc951d2542de2386a076,1590-12-20
+11,meridian_clock,2^h^ 45^m^,9900,second_of_time,assertion-v12-b455b1098fb9212d57ad,event-v12-c7716bea2d238783f797,1590-12-20
+11,evening_clock,7^h^ 50½^m^,28230,second_of_time,assertion-v12-901ea7d7787ce53c0e61,event-v12-c7716bea2d238783f797,1590-12-20
+11,meridian_altitude,54° 29′ 35″,196175,arcsecond,assertion-v12-4c76c267eae890e03a2b,event-v12-c7716bea2d238783f797,1590-12-20
+11,evening_altitude,24° 58½′,89910,arcsecond,assertion-v12-8aa1c56fdbad1ad0d5fd,event-v12-c7716bea2d238783f797,1590-12-20
+11,meridian_declination_from_altitude,20° 24⅓′,73460,arcsecond,assertion-v12-8aae63ca1516d8d7f3fa,event-v12-c7716bea2d238783f797,1590-12-20
+11,evening_declination_from_altitude,20° 27′ 55″,73675,arcsecond,assertion-v12-fd6aec77a87c3746d6a7,event-v12-c7716bea2d238783f797,1590-12-20
+11,meridian_declination_armillae,20° 25′,73500,arcsecond,assertion-v12-2204fdda5d9dcd101bbd,event-v12-c7716bea2d238783f797,1590-12-20
+11,evening_declination_armillae,20° 31⅓′,73880,arcsecond,assertion-v12-efb17534c52e6b5f1908,event-v12-c7716bea2d238783f797,1590-12-20
+15,meridian_clock,2^h^ 43¼^m^,9795,second_of_time,assertion-v12-4131904bd75a311b7e3c,event-v12-3e715f515b076363993c,1590-12-20
+15,evening_clock,7^h^ 40½^m^,27630,second_of_time,assertion-v12-d91b447be17cb745baee,event-v12-3e715f515b076363993c,1590-12-20
+15,meridian_altitude,55° 44⅚′,200690,arcsecond,assertion-v12-d97617da8e6298555e21,event-v12-3e715f515b076363993c,1590-12-20
+15,evening_altitude,26° 33¼′,95595,arcsecond,assertion-v12-440d6d3ddf6712a4192f,event-v12-3e715f515b076363993c,1590-12-20
+15,meridian_declination_from_altitude,21° 39′ 35″,77975,arcsecond,assertion-v12-17f743b6eb801c9b1258,event-v12-3e715f515b076363993c,1590-12-20
+15,evening_declination_from_altitude,21° 43⅚′,78230,arcsecond,assertion-v12-60f47de2c691f7d62caf,event-v12-3e715f515b076363993c,1590-12-20
+15,meridian_declination_armillae,21° 40½′,78030,arcsecond,assertion-v12-5afbec5f66aac905fd22,event-v12-3e715f515b076363993c,1590-12-20
+15,evening_declination_armillae,21° 46⅓′,78380,arcsecond,assertion-v12-7703c4620f466d2b7131,event-v12-3e715f515b076363993c,1590-12-20
+18,meridian_clock,2^h^ 41^m^ 22^s^,9682,second_of_time,assertion-v12-ac4242ff8ed3bbea1a4d,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,evening_clock,7^h^ 32⅔^m^,27160,second_of_time,assertion-v12-9d6a6645031a876724e6,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,meridian_altitude,56° 36⅙′,203770,arcsecond,assertion-v12-9819d786722c4fbbf621,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,evening_altitude,27° 39′,99540,arcsecond,assertion-v12-cf10c73858e016920bee,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,meridian_declination_from_altitude,22° 30′ 55″,81055,arcsecond,assertion-v12-f17b00c02bf2f9483fcf,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,evening_declination_from_altitude,22° 36½′,81390,arcsecond,assertion-v12-e2d3cd9ec383fe024f86,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,meridian_declination_armillae,22° 31¾′,81105,arcsecond,assertion-v12-6a1fcd4e803646453226,event-v12-d24cecd77dee0f2e1671,1590-12-20
+18,evening_declination_armillae,22° 35′,81300,arcsecond,assertion-v12-a39f701c9c5cf80efede,event-v12-d24cecd77dee0f2e1671,1590-12-20
+19,meridian_clock,2^h^ 41^m^ 4^s^,9664,second_of_time,assertion-v12-a16593df734899274c9e,event-v12-99196c606eeb17023eaf,1590-12-20
+19,evening_clock,7^h^ 31½^m^,27090,second_of_time,assertion-v12-88ddd046915edee9f737,event-v12-99196c606eeb17023eaf,1590-12-20
+19,meridian_altitude,56° 52′,204720,arcsecond,assertion-v12-8393e91031cc1322adbb,event-v12-99196c606eeb17023eaf,1590-12-20
+19,evening_altitude,27° 58′,100680,arcsecond,assertion-v12-fc0f51c5b9f9b91b8ee8,event-v12-99196c606eeb17023eaf,1590-12-20
+19,meridian_declination_from_altitude,22° 46¾′,82005,arcsecond,assertion-v12-7bdcc57373738b69e649,event-v12-99196c606eeb17023eaf,1590-12-20
+19,evening_declination_from_altitude,22° 51⅙′,82270,arcsecond,assertion-v12-85ffc33a39c7c6dbc3af,event-v12-99196c606eeb17023eaf,1590-12-20
+19,meridian_declination_armillae,22° 48′,82080,arcsecond,assertion-v12-34c311f7b9a834b2736c,event-v12-99196c606eeb17023eaf,1590-12-20
+19,evening_declination_armillae,22° 51′,82260,arcsecond,assertion-v12-969226f4b154a94e123f,event-v12-99196c606eeb17023eaf,1590-12-20
+21,meridian_clock,2^h^ 39¼^m^,9555,second_of_time,assertion-v12-e093a572325cf97d099c,event-v12-0874900866302bd79878,1590-12-20
+21,evening_clock,7^h^ 30⅓^m^,27020,second_of_time,assertion-v12-fd02ce735fe4a7efa640,event-v12-0874900866302bd79878,1590-12-20
+21,meridian_altitude,57° 23⅓′,206600,arcsecond,assertion-v12-64f4cb4412569708156c,event-v12-0874900866302bd79878,1590-12-20
+21,evening_altitude,28° 37⅓′,103040,arcsecond,assertion-v12-0218aa5f74940da741c7,event-v12-0874900866302bd79878,1590-12-20
+21,meridian_declination_from_altitude,23° 18 1/12′,83885,arcsecond,assertion-v12-e451513aaeb2a3950a82,event-v12-0874900866302bd79878,1590-12-20
+21,evening_declination_from_altitude,23° 22⅓′,84140,arcsecond,assertion-v12-b8b3ced59a6f1508668e,event-v12-0874900866302bd79878,1590-12-20
+21,meridian_declination_armillae,23° 19⅓′,83960,arcsecond,assertion-v12-5744d3f509f047721979,event-v12-0874900866302bd79878,1590-12-20
+21,evening_declination_armillae,23° 21⅓′,84080,arcsecond,assertion-v12-9db12471313db0aa98c1,event-v12-0874900866302bd79878,1590-12-20
+26,meridian_clock,2^h^ 33⅔^m^,9220,second_of_time,assertion-v12-27fa2f256cf3b76bf40e,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,evening_clock,7^h^ 21½^m^,26490,second_of_time,assertion-v12-c7e6b0a9035c9e062857,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,meridian_altitude,58° 30′,210600,arcsecond,assertion-v12-c8b79e1f4501a68b0f45,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,evening_altitude,30° 1¼′,108075,arcsecond,assertion-v12-672e144454ae57a2ef99,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,meridian_declination_from_altitude,24° 24¾′,87885,arcsecond,assertion-v12-f35cab6060caee71946f,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,evening_declination_from_altitude,24° 28⅔′,88120,arcsecond,assertion-v12-a071f2fc137c58f6e291,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,meridian_declination_armillae,24° 24⅚′,87890,arcsecond,assertion-v12-ecc59081fdc9044987dc,event-v12-74d10f081bb4cb2dd597,1590-12-20
+26,evening_declination_armillae,24° 27⅔′,88060,arcsecond,assertion-v12-0ce6dd9cc22ac4be90bf,event-v12-74d10f081bb4cb2dd597,1590-12-20

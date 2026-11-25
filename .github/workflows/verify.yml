@@ -31,6 +31,7 @@ jobs:
           python examples/mars_1595.py --output "$RUNNER_TEMP/mars-1595"
           python examples/mars_oppositions.py --output "$RUNNER_TEMP/mars-oppositions"
           python examples/refraction_tables.py --output "$RUNNER_TEMP/refraction-tables"
+          python examples/planetary_parallax.py --output "$RUNNER_TEMP/parallax"
       - name: Download versioned catalog assets
         env:
           GH_TOKEN: ${{ github.token }}
@@ -51,4 +52,4 @@ jobs:
       - name: Check the study selections against the catalog
         run: |
           gzip -dc /tmp/tychonides-assets/tychonides.sqlite.gz > "$RUNNER_TEMP/tychonides.sqlite"
-          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study
+          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study tests.test_parallax_study

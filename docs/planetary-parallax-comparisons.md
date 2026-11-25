@@ -45,8 +45,10 @@ distances in each model. The modern row uses NASA’s approximate distance limit
 | Tycho | 69″–515″ | 33.2″–60.3″ | 17.0″–28.3″ |
 | Longomontanus | 59″–515″ | 24.0″–41.8″ | 14.0″–21.0″ |
 | Kepler | 23″–147″ | 9.5″–15.7″ | 5.8″–7.8″ |
+| Riccioli | 10″–86″ | 4.3″–7.8″ | 2.3″–3.5″ |
 | Modern | 3.3″–24.1″ | 1.36″–2.24″ | 0.79″–1.09″ |
 
+Riccioli’s table covers ten authorities, and [all of them are listed](figures/parallax-model-ranges.csv).
 Sources. [Riccioli, *Almagestum Novum* I, p. 700](https://arsastronomica.com/works/giovanni-battista-riccioli-almagestum-novum-tomus-primus-pars-prior/) · NASA fact sheets for [Mars](https://nssdc.gsfc.nasa.gov/planetary/factsheet/marsfact.html), [Jupiter](https://nssdc.gsfc.nasa.gov/planetary/factsheet/jupiterfact.html), and [Saturn](https://nssdc.gsfc.nasa.gov/planetary/factsheet/saturnfact.html)
 
 ## Outer planets at the recorded altitudes
@@ -112,6 +114,9 @@ stellar *altitude* correction projected into declination (502.2″), and Bennett
 projected the same way (496.3″). The parallax corrections are +180″ in the
 historical reduction and +7.8″ from the modern distance and geometry. The
 altitude of about 5° makes the atmosphere assumption particularly important.
+One degree of altitude moves the projected refraction by 50″ to 95″. At 4°
+the stellar table gives 554.7″ and Bennett 591.8″. At 6° they give 450.2″
+and 425.7″. That is more than the columns below differ from one another.
 [Mercury reduction and source references](mercury-venus-parallax.md#reproducing-the-historical-corrections)
 
 | Net change in Mercury declination | Printed refraction | Tycho stellar table | Bennett standard |
@@ -138,8 +143,63 @@ parallax, and refraction from the same +370″ altitude-derived change. [Venus s
 Several combinations leave small residuals on March 4. The armillae give a
 change 65″ larger that night. Choosing a distance or refraction model by the
 smallest residual would overlook the disagreement between measurement methods.
+
+### All seven Venus pairs
+
+The same residual can be formed for each of the seven pairs, using the modern
+motion for every date. Each entry is the mean over the seven pairs, followed by
+the scatter from pair to pair.
+
+| Recorded change | Parallax | Tycho stellar | Longomontanus mean | Bennett standard |
+| --- | --- | ---: | ---: | ---: |
+| From altitudes | Modern | +67″ ± 55″ | +17″ ± 63″ | +13″ ± 58″ |
+| From altitudes | 850 Earth radii | +101″ ± 55″ | +50″ ± 63″ | +47″ ± 59″ |
+| By armillae | Modern | +53″ ± 80″ | +2″ ± 68″ | −1″ ± 74″ |
+| By armillae | 850 Earth radii | +87″ ± 79″ | +36″ ± 67″ | +33″ ± 73″ |
+
+The pairs scatter by 55″ to 80″, more than eight of the twelve March 4
+residuals above. If the pairs were independent, the mean of seven would be
+uncertain by 21″ to 30″. Adding either refraction rule lowers the mean by
+about 50″, roughly twice that uncertainty. Changing the parallax scale moves
+it by 34″, one to one and a half times that uncertainty. The pairs therefore
+hint at differential refraction and do not constrain the distance. The
+scatter also includes a change in the armillae series after March 15. [Summary for every combination](figures/parallax-venus-scenarios.csv) · [Every term for each pair](figures/parallax-venus-pairs.csv)
+
 The out-of-sample comparison requires other dates with established calibration
 and correction states. Origanus’s ingested introduction provides sample ephemeris
 directions and a way to interpolate them. It supplies no dated distance series
 for these examples. The historical range calculations here therefore come from
 the historical model distances and geometry stated above. [Origanus, *Ephemerides Brandenburgicae*](https://arsastronomica.com/works/david-origanus-ephemerides-brandenburgicae/)
+
+## Inputs and reproduction
+
+One [script](../examples/planetary_parallax.py) recomputes every table on this
+page and on the [Mercury and Venus page](mercury-venus-parallax.md). It runs
+offline and needs NumPy.
+
+- **Printed values.** A [selection script](../examples/parallax_select.py) reads
+  [Tychonides 1.3.1](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.1)
+  and writes the [printed inputs](../examples/parallax-inputs.csv), the
+  [Venus pairs](../examples/parallax-venus-pairs.csv), and
+  [Riccioli’s table](../examples/parallax-riccioli.csv). Of the 58 printed
+  inputs, 29 resolve to one catalog entry with an exact value and 12 to one
+  entry the catalog has not yet classified. The other 17 share their digits
+  with other entries on the cited pages, so the file gives the count and names
+  none. A declared value that disagrees with its catalog entry stops the script.
+- **Refraction tables.** Tycho’s solar and fixed-star tables come from the
+  [refraction study’s selection](../examples/refraction-tables.csv).
+- **Modern values.** A [second script](../examples/parallax_ephemeris.py) caches
+  the [Horizons declinations and distances](../examples/parallax-ephemeris.csv)
+  at each instant the tables use.
+- **Outputs.** The [outer-planet table](figures/parallax-outer-planets.csv), the
+  [worked examples](figures/parallax-examples.csv), [Mercury](figures/parallax-mercury.csv),
+  the [March 4 scenarios](figures/parallax-venus-march-4.csv), and the
+  [single numbers quoted in the text](figures/parallax-checks.csv).
+
+```sh
+python examples/parallax_select.py downloads/tychonides.sqlite
+python examples/parallax_ephemeris.py
+python examples/planetary_parallax.py --output docs/figures
+```
+
+Only the last command is needed to regenerate the tables.

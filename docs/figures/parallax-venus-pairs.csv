@@ -1,0 +1,8 @@
+day,interval_minutes,change_from_altitudes,change_by_armillae,parallax_850,modern_motion,modern_parallax,modern_horizontal_parallax,refraction_tycho_stellar,refraction_longomontanus_mean,refraction_bennett,refraction_tangent_law,motion_change_clocks_minus_15_minutes,motion_change_clocks_plus_15_minutes,meridian_altitude_minus_ephemeris,altitude_minus_armillae_change
+4,+309.0,+370.0,+435.0,-32.4,+295.0,-1.9,+13.9,+0.0,+85.8,+72.1,+71.1,+0.1,-0.1,+15.6,-65.0
+11,+305.5,+215.0,+380.0,-35.3,+252.2,-2.2,+15.1,+0.0,+60.3,+59.4,+58.4,+0.1,-0.1,+9.5,-165.0
+15,+297.2,+255.0,+350.0,-36.5,+221.2,-2.4,+16.0,+0.0,+50.5,+54.1,+53.1,+0.1,-0.1,-9.6,-95.0
+18,+291.3,+335.0,+195.0,-37.2,+198.0,-2.6,+16.6,+0.0,+43.8,+50.7,+49.7,+0.1,-0.1,-14.4,+140.0
+19,+290.4,+265.0,+180.0,-37.5,+191.0,-2.6,+16.9,+0.0,+41.9,+49.9,+48.8,+0.1,-0.1,-30.4,+85.0
+21,+291.1,+255.0,+120.0,-37.9,+178.3,-2.8,+17.4,+0.0,+39.1,+48.1,+47.1,+0.1,-0.1,+14.9,+135.0
+26,+287.8,+235.0,+170.0,-38.7,+141.9,-3.0,+18.7,+0.0,+33.4,+44.5,+43.5,+0.1,-0.1,+15.2,+65.0

@@ -1,0 +1,51 @@
+planet,authority,far_arcseconds,near_arcseconds,far_expression,near_expression,far_id,near_id
+Jupiter,Copernicus,83/3,539/12,27″ 40‴,44″ 55‴,assertion-sriccioli-almagestum-novum-t1-43dc2ff459a9d6e5a2f9,assertion-sriccioli-almagestum-novum-t1-5130f08ce0c83c7ae6a0
+Jupiter,Ismaël Boulliau,265/12,217/6,22″ 5‴,36″ 10‴,assertion-sriccioli-almagestum-novum-t1-1744c6d3a8057225e5e5,assertion-sriccioli-almagestum-novum-t1-752c66627453222cee8d
+Jupiter,Kepler,19/2,47/3,9″ 30‴,15″ 40‴,assertion-sriccioli-almagestum-novum-t1-4ac05ed012ceb9a50f91,assertion-sriccioli-almagestum-novum-t1-c15ba1b5b4f0e3ce7084
+Jupiter,Lansbergen,127/6,34,21″ 10‴,34″ 0‴,assertion-sriccioli-almagestum-novum-t1-e0d136fb1b1c1449f983,assertion-sriccioli-almagestum-novum-t1-64e594f76cb3dd7aaabb
+Jupiter,Longomontanus,24,167/4,24″ 0‴,41″ 45‴,assertion-sriccioli-almagestum-novum-t1-8eb192dae426171cbcea,assertion-sriccioli-almagestum-novum-t1-86275cf1914b6b859dd3
+Jupiter,Ourselves,13/3,31/4,4″ 20‴,7″ 45‴,assertion-sriccioli-almagestum-novum-t1-84aeb6b16dbd24226290,assertion-sriccioli-almagestum-novum-t1-38fd3d482c2735424c03
+Jupiter,Ptolemy,67/6,85/4,11″ 10‴,21″ 15‴,assertion-sriccioli-almagestum-novum-t1-fe70e3a4728effffcc43,assertion-sriccioli-almagestum-novum-t1-c5d95ca5260648293ee0
+Jupiter,Tycho,199/6,3619/60,33″ 10‴,60″ 19‴,assertion-sriccioli-almagestum-novum-t1-8fc2f788377aa1e7bcc9,assertion-sriccioli-almagestum-novum-t1-a2700aa964c2314bba5e
+Jupiter,al-Battānī,33/2,76/3,16″ 30‴,25″ 20‴,assertion-sriccioli-almagestum-novum-t1-4278283086e1f6da16ea,assertion-sriccioli-almagestum-novum-t1-d7e6b310401a4657bc61
+Jupiter,al-Farghānī,40/3,93/4,13″ 20‴,23″ 15‴,assertion-sriccioli-almagestum-novum-t1-edf0492424fe8c6e0c07,assertion-sriccioli-almagestum-novum-t1-3c6964bbcbc043ddcea7
+Mars,Copernicus,68,520,1′ 8″,8′ 40″,assertion-sriccioli-almagestum-novum-t1-ac927701388e43c83c24,assertion-sriccioli-almagestum-novum-t1-2bc71153c8fca76e5249
+Mars,Ismaël Boulliau,47,380,0′ 47″,6′ 20″,assertion-sriccioli-almagestum-novum-t1-f1698954572b790359e6,assertion-sriccioli-almagestum-novum-t1-a4fee43e8f48e419bd8f
+Mars,Kepler,23,147,0′ 23″,2′ 27″,assertion-sriccioli-almagestum-novum-t1-cd7da2813046ab6947e9,assertion-sriccioli-almagestum-novum-t1-5897d713e496c4d19166
+Mars,Lansbergen,46,415,0′ 46″,6′ 55″,assertion-sriccioli-almagestum-novum-t1-f428a0a8e8f4ab844aa8,assertion-sriccioli-almagestum-novum-t1-b6c93fc8ba7f27d3bdb2
+Mars,Longomontanus,59,515,0′ 59″,8′ 35″,assertion-sriccioli-almagestum-novum-t1-1411754b6197d8280f07,assertion-sriccioli-almagestum-novum-t1-9db49d0eada6f2054acf
+Mars,Ourselves,10,86,0′ 10″,1′ 26″,assertion-sriccioli-almagestum-novum-t1-883f3b06103620d51959,assertion-sriccioli-almagestum-novum-t1-7c93d1f88ae5c994a346
+Mars,Ptolemy,19,150,0′ 19″,2′ 30″,assertion-sriccioli-almagestum-novum-t1-59110e21dfb094dbb533,assertion-sriccioli-almagestum-novum-t1-89ddf18d7339d5295088
+Mars,Tycho,69,515,1′ 9″,8′ 35″,assertion-sriccioli-almagestum-novum-t1-541e87c3fce1e69a1586,assertion-sriccioli-almagestum-novum-t1-6888c557b5215bc30079
+Mars,al-Battānī,25,172,0′ 25″,2′ 52″,assertion-sriccioli-almagestum-novum-t1-3b27218015a28eb5fc7e,assertion-sriccioli-almagestum-novum-t1-92149626698579e6e493
+Mars,al-Farghānī,23,170,0′ 23″,2′ 50″,assertion-sriccioli-almagestum-novum-t1-7c7458eeb3d068365f07,assertion-sriccioli-almagestum-novum-t1-305934f3c2e0b50798c7
+Mercury,Copernicus,125,340,2′ 5″,5′ 40″,assertion-sriccioli-almagestum-novum-t1-0fafeb6672eca1d1f8fd,assertion-sriccioli-almagestum-novum-t1-dac652adc791a87343ea
+Mercury,Ismaël Boulliau,110,290,1′ 50″,4′ 50″,assertion-sriccioli-almagestum-novum-t1-56345596b849635e27ed,assertion-sriccioli-almagestum-novum-t1-ffbc4449e381c2c5533f
+Mercury,Kepler,42,120,0′ 42″,2′ 0″,assertion-sriccioli-almagestum-novum-t1-24b4508607ba69c1c747,assertion-sriccioli-almagestum-novum-t1-dcfe62082b08b46d673d
+Mercury,Lansbergen,95,258,1′ 35″,4′ 18″,assertion-sriccioli-almagestum-novum-t1-a391d9f17b61516a0218,assertion-sriccioli-almagestum-novum-t1-7e9185fa489409f0e8a8
+Mercury,Longomontanus,110,350,1′ 50″,5′ 50″,assertion-sriccioli-almagestum-novum-t1-aa49f37d860c3574a03b,assertion-sriccioli-almagestum-novum-t1-23f710fd4e319d4d7aa9
+Mercury,Ourselves,19,50,0′ 19″,0′ 50″,assertion-sriccioli-almagestum-novum-t1-07dd16f4cb65ac28e78b,assertion-sriccioli-almagestum-novum-t1-24072e622e9aacdaa25a
+Mercury,Ptolemy,1035,3720,17′ 15″,62′ 0″,assertion-sriccioli-almagestum-novum-t1-3b4f347e490c257f3c8b,assertion-sriccioli-almagestum-novum-t1-4474fc6117401063c2aa
+Mercury,Tycho,124,335,2′ 4″,5′ 35″,assertion-sriccioli-almagestum-novum-t1-debd05fc6cf6eb9c6219,assertion-sriccioli-almagestum-novum-t1-ca228ee0029e0ad16ee5
+Mercury,al-Battānī,2040,3210,34′ 0″,53′ 30″,assertion-sriccioli-almagestum-novum-t1-e1e88bb04f72bd43b3a6,assertion-sriccioli-almagestum-novum-t1-2df798b94dc888d2a03f
+Mercury,al-Farghānī,2030,3180,33′ 50″,53′ 0″,assertion-sriccioli-almagestum-novum-t1-a07c34d626c32a7967cc,assertion-sriccioli-almagestum-novum-t1-7193a45c10c64d8fcd59
+Saturn,Copernicus,33/2,275/12,16″ 30‴,22″ 55‴,assertion-sriccioli-almagestum-novum-t1-ba5cd70f9408e7c34758,assertion-sriccioli-almagestum-novum-t1-c1a3221a3ea155b6a809
+Saturn,Ismaël Boulliau,77/6,71/4,12″ 50‴,17″ 45‴,assertion-sriccioli-almagestum-novum-t1-316224bb1347f43e1fff,assertion-sriccioli-almagestum-novum-t1-1e60a8a818954a1bc16a
+Saturn,Kepler,35/6,31/4,5″ 50‴,7″ 45‴,assertion-sriccioli-almagestum-novum-t1-7bd73e1d625b78d79f97,assertion-sriccioli-almagestum-novum-t1-ae6439884b1407bd22bd
+Saturn,Lansbergen,12,97/6,12″ 0‴,16″ 10‴,assertion-sriccioli-almagestum-novum-t1-9785b1b212f21ce0e6b1,assertion-sriccioli-almagestum-novum-t1-f8afa7c73abdc18a280a
+Saturn,Longomontanus,14,21,14″ 0‴,21″ 0‴,assertion-sriccioli-almagestum-novum-t1-7d1e69eb21bc09df415f,assertion-sriccioli-almagestum-novum-t1-a58a7e75f5367a7700fe
+Saturn,Ourselves,7/3,7/2,2″ 20‴,3″ 30‴,assertion-sriccioli-almagestum-novum-t1-78e5f7269394113fe977,assertion-sriccioli-almagestum-novum-t1-58252a0961bbda7bc849
+Saturn,Ptolemy,47/6,35/3,7″ 50‴,11″ 40‴,assertion-sriccioli-almagestum-novum-t1-d805d1ce45f71d6a693a,assertion-sriccioli-almagestum-novum-t1-5de155cfd41837d9c20a
+Saturn,Tycho,17,85/3,17″ 0‴,28″ 20‴,assertion-sriccioli-almagestum-novum-t1-c378af6618bb90be3897,assertion-sriccioli-almagestum-novum-t1-0b0b627ad308e751ac74
+Saturn,al-Battānī,23/2,18,11″ 30‴,18″ 0‴,assertion-sriccioli-almagestum-novum-t1-36f008615606d2ad2741,assertion-sriccioli-almagestum-novum-t1-2ad8fa9678fff9266c6e
+Saturn,al-Farghānī,21/2,41/3,10″ 30‴,13″ 40‴,assertion-sriccioli-almagestum-novum-t1-aa63b61fad586b2247b7,assertion-sriccioli-almagestum-novum-t1-85e7dc05f68141c6f0b4
+Venus,Copernicus,103,690,1′ 43″,11′ 30″,assertion-sriccioli-almagestum-novum-t1-b2f88c95d501e3aafd79,assertion-sriccioli-almagestum-novum-t1-9887f546c4473a77e97b
+Venus,Ismaël Boulliau,75,750,1′ 15″,12′ 30″,assertion-sriccioli-almagestum-novum-t1-679b00fe52dc9f60c8ba,assertion-sriccioli-almagestum-novum-t1-a13a5320bf33b8bbe181
+Venus,Kepler,36,225,0′ 36″,3′ 45″,assertion-sriccioli-almagestum-novum-t1-3cf76c41b838bbe65c96,assertion-sriccioli-almagestum-novum-t1-1bfcd20b21ed57ed76c5
+Venus,Lansbergen,79,515,1′ 19″,8′ 35″,assertion-sriccioli-almagestum-novum-t1-cd1170547b874c8101e9,assertion-sriccioli-almagestum-novum-t1-c5f8550686d0f526dc05
+Venus,Longomontanus,95,685,1′ 35″,11′ 25″,assertion-sriccioli-almagestum-novum-t1-81e12f679d37f738ca13,assertion-sriccioli-almagestum-novum-t1-64a9e333d1fb414f41f0
+Venus,Ourselves,16,108,0′ 16″,1′ 48″,assertion-sriccioli-almagestum-novum-t1-06ec7821766ac007af28,assertion-sriccioli-almagestum-novum-t1-071f9ac4b216c77a353a
+Venus,Ptolemy,145,1120,2′ 25″,18′ 40″,assertion-sriccioli-almagestum-novum-t1-02ba012cfc6cd3bbe632,assertion-sriccioli-almagestum-novum-t1-2fb1087634673d99786d
+Venus,Tycho,100,685,1′ 40″,11′ 25″,assertion-sriccioli-almagestum-novum-t1-5bc9e9f8727ec4babe00,assertion-sriccioli-almagestum-novum-t1-4d7c2bc58a5fb006cd8d
+Venus,al-Battānī,200,1440,3′ 20″,24′ 0″,assertion-sriccioli-almagestum-novum-t1-811127d7e2a1792a2a01,assertion-sriccioli-almagestum-novum-t1-af459348e6f14dcab6f1
+Venus,al-Farghānī,178,1440,2′ 58″,24′ 0″,assertion-sriccioli-almagestum-novum-t1-1c89847923a4c1c42ff8,assertion-sriccioli-almagestum-novum-t1-1c8bcabcbe108fda2c43

@@ -1,0 +1,59 @@
+key,value,unit,source_id,printed_pages,printed_digits,catalog_entries,printed_page,expression,quantity,role,status,quantity_id
+mars_1582_distance,721,earth_radius,tycho-oo-10,200,721,1,200,721,distance_in_semidiameters,historical_input,exact,assertion-v10-5a2315b26b0c08b20b3d
+mars_1582_altitude,40,degree,tycho-oo-10,200,40 0,1,200,40ᴾ0,altitude,historical_input,exact,assertion-v10-63e1cc4ea55db8b98a57
+mars_1582_parallax,219,arcsecond,tycho-oo-10,200,0 3 39,1,200,0 3′ 39″,parallax_angle,reduction,exact,assertion-v10-81351313a23572f0df4e
+mars_1582_longitude_parallax,156,arcsecond,tycho-oo-10,200,0 2 36,1,200,0 2 36,parallax_angle,reduction,exact,assertion-v10-eb18569f85229432e290
+mars_1582_latitude_parallax,154,arcsecond,tycho-oo-10,200,0 2 34,1,200,0 2 34,parallax_angle,reduction,exact,assertion-v10-37ba523f28134b408396
+mars_1587_altitude,39,degree,tycho-oo-11,181 182 183 184 185 186 187,39,2,,,,,,
+mars_1587_parallax,235,arcsecond,tycho-oo-11,181 182 183 184 185 186 187,3 55,1,185,3′ 55″,parallax_angle,historical_correction,exact,assertion-v11-d6c7e6bd34b897319b79
+mars_1587_latitude_parallax,216,arcsecond,tycho-oo-11,181 182 183 184 185 186 187,3 36,1,185,3′ 36″,parallax_angle,historical_correction,exact,assertion-v11-e0a3a46ad962b3f04971
+jupiter_1593_mean_distance,3990,earth_radius,tycho-oo-12,280,3990,1,280,3990 semidiameters of the Earth,distance_in_semidiameters,historical_input,exact,assertion-v12-d20dfe36c54004af7417
+jupiter_1593_distance_reduction,575,earth_radius,tycho-oo-12,280,575,1,280,575,distance_in_semidiameters,historical_input,exact,assertion-v12-f6d0bde4bd153d26aa32
+jupiter_1593_distance,3415,earth_radius,tycho-oo-12,280,3415,1,280,3415,distance_in_semidiameters,reduction,exact,assertion-v12-4f5a515458817f60ef09
+jupiter_1593_altitude,11,degree,tycho-oo-12,280,11,1,280,11°,altitude,historical_input,exact,assertion-v12-105f24117986a41d3051
+jupiter_1593_parallax,59,arcsecond,tycho-oo-12,280,59,1,280,59″,parallax_angle,reduction,exact,assertion-v12-32c44f2e3595182d32f2
+jupiter_1593_september_distance,3042,earth_radius,tycho-oo-12,433,3042,1,433,3042,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-2dbe52acff682ba544ea
+jupiter_1593_september_altitude,97/3,degree,tycho-oo-12,433,32 1/3,1,433,32⅓°,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-9ec295d4d02a69586407
+jupiter_1593_september_parallax,56,arcsecond,tycho-oo-12,433,0 56,1,433,0′ 56″,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-2435805337c953051673
+saturn_1599_distance,9400,earth_radius,tycho-oo-13,168 169,9400,1,169,9400,unclassified_numeric_expression,unresolved,unsupported,assertion-v13-308596a3e26729be0b24
+saturn_1599_meridian_altitude,8543/240,degree,tycho-oo-13,168 169,35 35 45,1,168,35 35 45,altitude,recorded_reading,exact,assertion-v13-79f4dd49c26d68fe9001
+saturn_1599_instrument_adjustment,35,arcsecond,tycho-oo-13,168 169,35,1,168,35″,unclassified_numeric_expression,unresolved,unsupported,assertion-v13-2c48dc7e78fd34ad3891
+saturn_1599_latitude_parallax,18,arcsecond,tycho-oo-13,168 169,18,1,169,18″,unclassified_numeric_expression,unresolved,unsupported,assertion-v13-398ad01ad7eda4901bf8
+venus_1582_february_distance,815,earth_radius,brahe-progymnasmata-erara,157 158,815,1,158,815,distance_in_semidiameters,historical_input,exact,assertion-sbrahe-progymnasmata-erara-eaebd9c7eaa61f5de0c6
+venus_1582_february_altitude,97/2,degree,brahe-progymnasmata-erara,157 158,48 1/2,1,157,48½°,altitude,recorded_coordinate,exact,assertion-sbrahe-progymnasmata-erara-bdba5337c869ccec7e25
+venus_1582_february_parallax,168,arcsecond,brahe-progymnasmata-erara,157 158,0 2 48,2,,,,,,
+venus_1582_march_distance,623,earth_radius,brahe-progymnasmata-erara,160 161 162,623,2,,,,,,
+venus_1582_march_afternoon_altitude,57,degree,brahe-progymnasmata-erara,160,57,2,,,,,,
+venus_1582_march_afternoon_parallax,180,arcsecond,brahe-progymnasmata-erara,160,3 0,1,160,3 minutes 0 seconds,parallax_angle,historical_correction,exact,assertion-sbrahe-progymnasmata-erara-c789a5053b3c0326eabd
+venus_1582_march_evening_altitude,47/2,degree,brahe-progymnasmata-erara,161 162,23 1/2,1,161,23½°,altitude,recorded_coordinate,exact,assertion-sbrahe-progymnasmata-erara-51d67ae2e1dcb02e872c
+venus_1582_march_evening_parallax,304,arcsecond,brahe-progymnasmata-erara,161 162,0 5 4,2,,,,,,
+venus_p463_distance,343,earth_radius,tycho-oo-12,463,343,1,463,343,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-a8512df55f382ea64043
+venus_p463_altitude,12,degree,tycho-oo-12,463,12,5,,,,,,
+venus_p463_parallax,560,arcsecond,tycho-oo-12,463,9 20,1,463,9 20,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-4d3161613196a5fd5848
+venus_p463_refraction,360,arcsecond,tycho-oo-12,463,6 0,2,,,,,,
+venus_p463_side_a,1112,earth_radius,tycho-oo-12,463,1112,2,,,,,,
+venus_p463_side_b,822,earth_radius,tycho-oo-12,463,822,1,463,822,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-8c4a63f57f88f1554ab5
+venus_p463_included_angle,10,degree,tycho-oo-12,463,10 0,1,463,10 0,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-2a5165a95ec8c35daf4f
+venus_p468_distance,348,earth_radius,tycho-oo-12,468,348,1,468,348,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-66f7ccf0044096eec597
+venus_p468_altitude,3,degree,tycho-oo-12,468,3,6,,,,,,
+venus_p468_parallax,592,arcsecond,tycho-oo-12,468,9 52,1,468,9′ 52″,parallax_angle,historical_correction,exact,assertion-v12-85de65f2f33e732aebf1
+venus_1610_distance,850,earth_radius,longomontanus-astronomia-danica,185,850,1,185,850,distance_in_semidiameters,historical_input,exact,assertion-slongomontanus-astronomia-danica-ece61bf5bdc2ebfef3b3
+venus_1610_altitude,31/2,degree,longomontanus-astronomia-danica,185,15 1/2,2,,,,,,
+venus_1610_parallax,240,arcsecond,longomontanus-astronomia-danica,185,4,2,,,,,,
+mercury_1589_declination,179/12,degree,tycho-oo-11,339,14 55,1,339,14° 55′,unclassified_angle,recorded_reading,exact,assertion-v11-822d2bbebe0c4159853b
+mercury_1589_refraction,480,arcsecond,tycho-oo-11,339,8,3,,,,,,
+mercury_1589_parallax,180,arcsecond,tycho-oo-11,339,3,3,,,,,,
+mercury_1589_altitude,5,degree,tycho-oo-11,339,5,1,339,5°,unclassified_angle,unresolved,exact,assertion-v11-270747faacf287f2684f
+mercury_1589_march24_clock,33/4,hour,tycho-oo-11,339,8 1/4,2,,,,,,
+mercury_1589_march27_clock,163/20,hour,tycho-oo-11,339,8 9,4,,,,,,
+mercury_1589_march28_clock,33/4,hour,tycho-oo-11,339,8 15,6,,,,,,
+venus_1582_february_clock,43/12,hour,brahe-progymnasmata-erara,157 158,3 35,1,157,3^h^ 35^m^,recorded_clock,recorded_clock,exact,assertion-sbrahe-progymnasmata-erara-c2c9336e060863d7786b
+venus_1582_march_afternoon_clock,29/12,hour,brahe-progymnasmata-erara,160,2 25,1,160,2^h^ 25^m^,recorded_clock,recorded_clock,exact,assertion-sbrahe-progymnasmata-erara-cd7a953262fc683f140a
+venus_1582_march_evening_clock,491/60,hour,brahe-progymnasmata-erara,161 162,8 11,1,161,8 h 11 m,recorded_clock,recorded_clock,exact,assertion-sbrahe-progymnasmata-erara-41f3af72b11075d89d6e
+mercury_1592_refraction,495,arcsecond,tycho-oo-12,225,8 15,1,225,8′ 15″,refraction_angle,historical_input,exact,assertion-v12-a06397a2d4dcd2106cf2
+mercury_1592_parallax,195,arcsecond,tycho-oo-12,225,3 15,1,225,3 15,parallax_angle,historical_input,exact,assertion-v12-48fbab6290bdd97322ad
+venus_1590_march3_meridian_altitude,6191/120,degree,tycho-oo-12,51 52,51 35 1/2,1,51,51° 35½′,altitude,recorded_reading,exact,assertion-v12-b478427edd32622a9499
+venus_1590_march3_meridian_clock,167/60,hour,tycho-oo-12,51,2 47,1,51,2^h^ 47^m^,unclassified_numeric_expression,unresolved,unsupported,assertion-v12-e5d1f0d118ae8e2772cd
+venus_1590_march3_sun_separation,46,degree,tycho-oo-12,51,46 0,3,,,,,,
+origanus_venus_latitude,757/720,degree,origanus-ephemerides-brandenburgicae,143,1 3 5,1,143,1° 3′ 5″,ecliptic_latitude,reduction,exact,assertion-soriganus-ephemerides-brandenburgicae-89b2aed3493f479d3804
+origanus_mercury_latitude,1039/3600,degree,origanus-ephemerides-brandenburgicae,143,0 17 19,1,143,0° 17′ 19″,ecliptic_latitude,reduction,exact,assertion-soriganus-ephemerides-brandenburgicae-33e79935f91b8f51581d
