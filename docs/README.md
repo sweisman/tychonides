@@ -24,6 +24,7 @@ the extraction pipeline.
 | [Source directory](data-sources.md) | Which collections are ingested, what remains planned, and which observations are in scope? |
 | [Published editions and witnesses](sources.md) | Where can I read the books and check their original printed sources? |
 | [Tycho’s Mars coverage](mars-catalog-status.md) | What does the four-volume historical Mars selection contain, and what remains unresolved? |
+| [Tycho’s Jupiter and Moon coverage](data-sources.md#jupiter-and-moon-coverage) | What do the four volumes contribute, and how are shared readings and unresolved entries handled? |
 | [Supplementary historical coverage](historical-books-ingestion.md) | What material is represented from the seven additional historical editions? |
 | [Pafko’s independent transcription](pafko-validation-status.md) | How was the independently entered workbook reconciled, and which properties agree? |
 | [Edition findings](edition-findings.md) | Which discrepancies and interpretation questions have been documented? |

@@ -123,8 +123,9 @@ Images have versioned identifiers, checksums, byte counts, public locators and
 metadata. Large image files remain external to the catalog; measured centroids
 and reductions can be represented as quantities with their own provenance.
 These source-neutral facilities belong to the consolidated schema. The catalog
-combines the four-volume Mars selection, [seven supplementary historical books](historical-books-ingestion.md)
-and modern observing programs listed in the [source directory](data-sources.md).
+combines the Mars, Jupiter, and Moon selections from Tycho’s four observing
+volumes, [seven supplementary historical books](historical-books-ingestion.md),
+and the modern observing programs in the [source directory](data-sources.md).
 
 The supplementary books include literal numerical evidence in edition-note
 contexts that is not necessarily a separate quantity row. Contexts preserve

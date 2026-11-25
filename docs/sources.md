@@ -3,10 +3,10 @@
 For a compact list of historical and modern collections and their availability,
 see the [data sources directory](data-sources.md).
 
-The [seven supplementary editions](historical-books-ingestion.md) have been ingested
-alongside the four-volume Mars selection. The published books contain angular readings, recorded times, observing comments
-and historical calculations used in Tychonides. They are available for direct reading,
-independent transcription and computational extraction.
+The catalog combines the Mars, Jupiter, and Moon selections from Tycho’s four
+observing volumes with [seven supplementary editions](historical-books-ingestion.md).
+The published books contain the angular readings, recorded times, observing
+comments, and historical calculations used in Tychonides.
 
 ## Thesaurus Observationum
 

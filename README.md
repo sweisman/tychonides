@@ -26,12 +26,13 @@ the same common catalog. See the [research plan](docs/research-plan.md).
 
 ## Available now
 
-The [catalog](resources/catalog/README.md) provides original numerical
+The [downloadable catalog](resources/catalog/README.md#download) provides original numerical
 expressions, exact conversions, contextual relationships, source citations and
 verification tools in a single database and CSV export. Use it to inspect the
 evidence, compare source accounts and develop analyses. The
-[source directory](docs/data-sources.md) describes ingested collections and
-planned additions, with their coverage and interpretation limits.
+[source directory](docs/data-sources.md#ingested-historical-sources) lists the
+historical and modern collections already available, with coverage and
+interpretation limits.
 
 Historical prediction engines, reproducible observation–prediction comparisons,
 correction experiments, parallax studies and the interactive explorer follow the

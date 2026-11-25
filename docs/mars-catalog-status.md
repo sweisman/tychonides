@@ -1,6 +1,6 @@
 # Historical Mars catalog: coverage and limitations
 
-The [catalog](../resources/catalog/README.md) includes a historical subset of **17,043 source
+The [catalog](../resources/catalog/README.md) includes a historical Mars selection of **17,043 source
 quantities in 5,374 groups** from Tycho Brahe’s _Thesaurus
 Observationum_, _Opera Omnia_ X–XIII. The database includes 7,630 contextual
 records and 50 diagram descriptions alongside the numerical material.
@@ -161,8 +161,7 @@ scenarios, parallax investigations and the planned visual explorer.
 
 ## Historical subset and combined release
 
-This page describes the four-volume historical subset. The
-[current combined catalog](../resources/catalog/README.md) also contains the
-supplementary historical books and modern observing collections. Its guide gives
-the current release totals. See the
-[data sources directory](data-sources.md) for coverage by observing program.
+The [current combined catalog](../resources/catalog/README.md) also contains
+[Jupiter and Moon selections](data-sources.md#jupiter-and-moon-coverage) from
+the same four volumes, supplementary historical books, and modern observing
+collections. [Coverage by collection](data-sources.md)
