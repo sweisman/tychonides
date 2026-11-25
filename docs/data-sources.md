@@ -130,7 +130,7 @@ bodies also captured comparison readings, clock and instrument entries,
 correction and reduction material, and separate notes about observing
 circumstances. [Editions and printed witnesses](sources.md)
 
-| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.1 |
+| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.2 |
 | --- | ---: | ---: |
 | X | 11,737 | 31,772 |
 | XI | 14,807 | 40,132 |
@@ -147,8 +147,8 @@ printed page citations.
 
 #### Interpretation review
 
-[Release 1.3.1](../resources/catalog/README.md#download) contains **710,420 quantities**. The review
-classifies 8,341 of the initially unresolved entries and establishes exact
+[Release 1.3.2](../resources/catalog/README.md#download) contains **710,420 quantities**. The review
+made for release 1.3.1 classifies 8,341 of the initially unresolved entries and establishes exact
 values for another 14,234 whose uses remain open. It also recovers the complete
 expressions for three earlier readings while preserving their original
 fragments and identities.
@@ -164,6 +164,14 @@ Of the 23,848 initially unresolved entries that still lack an exact conversion,
 labels. Most of the remainder need evidence for the unit places or the
 purpose of a standalone number. Dates, clock origins, and observational
 roles retain their source qualifications. [Catalog terminology](catalog-terms.md)
+
+An [audit](status.md#audit-of-the-tycho-log-records) of release 1.3.1 found
+one family of fault in the records for bodies other than Mars: a date, a
+subject, or a quantity type kept past the place where the page replaces it.
+Release 1.3.2 corrects 9,127 values from the printed label or date line and
+keeps each earlier interpretation. It leaves 261 dates and 598 labels
+open. The audit did not cover the supplementary books or the modern
+collections.
 
 ## Modern observing programs
 

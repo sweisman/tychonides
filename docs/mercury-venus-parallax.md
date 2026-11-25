@@ -96,11 +96,13 @@ Horizons ranges and declinations for each 1590 date. [Thesaurus Observationum II
 | 21 | +255″ | +120″ | −37.9″ | +178.3″ | −2.8″ |
 | 26 | +235″ | +170″ | −38.7″ | +141.9″ | −3.0″ |
 
-The catalog keeps each row of the recap together but does not record its day,
-and it dates the values December 20, 1590. The study gives the rows the page’s
-day labels in order, from the latest meridian clock to the earliest. Each
-recorded meridian altitude then lies within 31″ of the value the modern
+The catalog keeps each row of the recap together. The study gives the rows the
+page’s day labels in order, from the latest meridian clock to the earliest.
+Each recorded meridian altitude then lies within 31″ of the value the modern
 ephemeris gives for that day. A one-day error would move it by more than 10′.
+Release 1.3.1 dated all of these values December 20, 1590, a date carried from
+an earlier entry. Release 1.3.2 dates each row from the day column of the
+recap, and its seven dates are the ones the study assigned.
 The catalog also does not say which of a row’s two armillae readings is the
 evening one. They are ordered like the row’s two altitude-derived
 declinations. [Selected pairs with catalog identities](../examples/parallax-venus-pairs.csv) · [Every term for each pair](figures/parallax-venus-pairs.csv)

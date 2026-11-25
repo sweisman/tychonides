@@ -4,6 +4,12 @@ from fractions import Fraction
 import json
 import sqlite3
 
+# Reviews whose record states the direction of the reading and is exported with its row.
+# Other review kinds leave the direction and the metadata as the source recorded them.
+PUBLISHED_REVIEWS = frozenset(
+    {"log_reading_interpretation", "reviewed_reading_revision", "reviewed_date_binding"}
+)
+
 
 def project_csv(db, columns, *, identifier=None):
     db.row_factory = sqlite3.Row
@@ -28,7 +34,8 @@ def project_csv(db, columns, *, identifier=None):
         norm = json.loads(row["normalized_json"])
         revision = json.loads(row["revision_json"] or "{}")
         direction = original.get("direction")
-        if revision.get("kind") == "log_reading_interpretation":
+        claims = revision.get("date_claim_ids", original.get("source_date_claim_ids", []))
+        if revision.get("kind") in PUBLISHED_REVIEWS:
             direction = revision.get("direction")
             metadata = json.loads(row["scientific_metadata_json"])
             metadata["interpretation_review"] = revision
@@ -49,7 +56,7 @@ def project_csv(db, columns, *, identifier=None):
             if norm.get("magnitude_degrees") is not None
             else None,
             date_claims_json=json.dumps(
-                [json.loads(dates[d]) for d in original.get("source_date_claim_ids", [])],
+                [json.loads(dates[d]) for d in claims],
                 ensure_ascii=False,
                 sort_keys=True,
                 separators=(",", ":"),

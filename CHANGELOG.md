@@ -1,5 +1,17 @@
 # Catalog releases
 
+## 1.3.2
+
+An audit of the records from Tycho’s four log volumes against the printed page
+adds 9,142 versioned interpretations. 6,430 readings take the date that their
+own heading, title, or table row prints in place of one carried from an
+earlier entry. Another 2,472 give up a carried date where the page prints none
+for them. 240 are retyped from the label of their row or column. Every
+revision cites its printed line and keeps the earlier interpretation, the
+printed expression, and the identity. The seven supplementary books and the
+modern collections were not part of this audit. The release contains
+**710,420 quantities and 115,972 source groups**. [Audit, corrections, and open candidates](docs/status.md#audit-of-the-tycho-log-records)
+
 ## 1.3.1
 
 The four-volume Tycho review adds 22,578 versioned interpretations while

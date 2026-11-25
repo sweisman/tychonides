@@ -272,6 +272,19 @@ previous normalizations are retained in protected history. The verifier permits
 only the reviewed direction and signed-magnitude changes and reports them
 separately. Ordinary imports continue to require unchanged prior quantities.
 
+A consolidated-stage revision corrects a reading that already carries an
+interpretation. A reading revision selects the quantity type, subject,
+reference, or role that the printed page establishes. A date revision binds
+readings to the date that their own heading or table states. Each decision
+names the reading, its current version and field values, and the lines of the
+bound edition that print the label and the reading. The printed expression,
+components, and value never change. A type change must reproduce the stored
+value, and a source group moves whole. The catalog records each revision as a
+new interpretation version. Its `interpretation_review` gives the kind
+(`reviewed_reading_revision` or `reviewed_date_binding`), the previous and
+revised fields or date claims, and the printed label with the reason. The
+decisions and edition fingerprints stay in working storage.
+
 `append --review` accepts either one reviewed JSON record or a nonempty list.
 Every packet and supplementary decision is validated before the ledger changes.
 Separate packets retain their own volumes and source intervals; unread gaps are

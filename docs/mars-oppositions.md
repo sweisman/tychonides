@@ -174,11 +174,11 @@ recomputed from DE441: the instant at which the apparent longitude of Mars is
 The [refraction study](refraction-tables.md) found Tycho’s corrections to a
 solar altitude 2.8′ to 2.9′ from the modern ones between 30° and 45°. At an
 equinox an altitude error of that size moves a longitude taken from the Sun’s
-declination by about 7′. The two results are consistent. This page does not
-test the link.
+declination by about 7′. The two results are consistent. The
+[solar theory study](solar-theory.md) tests the link.
 
 The tenth row is read with January, the month its own mean-longitude column
-requires, where the catalog gives June. It reproduces like the others. The
+requires, where the printed table has June. It reproduces like the others. The
 last four rows postdate Tycho’s death in 1601 and reproduce equally well.
 
 Limits: the tabulated hours are taken as mean time at Uraniborg, counted from
@@ -210,9 +210,10 @@ made after seeing residuals, so they are listed here.
 - **Calendar labels.** In 1591 the log prints calculations from Magini’s Padua
   observations with Gregorian dates, and the catalog labels them so. The rule
   had ignored the label. It now moves a date labeled Gregorian ten days earlier.
-- **The month of the 1600 opposition.** The catalog gives June for the tenth
-  row of Longomontanus’s table. The table’s own mean-longitude column places it
-  in January, and the rule now tests every row against that column.
+- **The month of the 1600 opposition.** The edition prints June for the tenth
+  row of Longomontanus’s table, and the catalog keeps that reading. The table’s
+  own mean-longitude column places it in January, and the rule now tests every
+  row against that column.
 - **Counts of distant rows.** The summary gained a count of rows more than half
   a degree from DE441 and a median difference. No row is removed on that basis.
 

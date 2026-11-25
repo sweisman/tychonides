@@ -10,6 +10,10 @@ assertion-v11-6f65682f602fd67f1edc,tycho-oo-11,63,Jupiter,ecliptic_longitude,his
 assertion-v11-8cea002fa9ad1f8bc0d3,tycho-oo-11,63,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,0° 9′,,no single complete date claim
 assertion-v11-9cae4ae6435a152dcd1e,tycho-oo-11,63,Jupiter,ecliptic_latitude,historical_prediction,Copernicus,0° 37′,,no single complete date claim
 assertion-v11-dbf193d2cba2384d5b74,tycho-oo-11,63,Jupiter,ecliptic_longitude,historical_prediction,Alphonsine,9° 59′ ♋,,no single complete date claim
+assertion-v12-03d8fca800ba4a9bbe0e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 36′ 0″,,no single complete date claim
+assertion-v12-4f9427fb6cfdce2fac26,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 34′ 39″,,no single complete date claim
+assertion-v12-a96988f1be6bca9f8112,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 22′ 12″,,no single complete date claim
+assertion-v12-ccea7338cb907c50bc9e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 7′ 30″,,no single complete date claim
 assertion-v10-28654efb9ff065310d63,tycho-oo-10,18,Mars,ecliptic_longitude,reduction,,29 0,1569-11-09,no printed zodiac sign
 assertion-v10-a8d825ced7bfc795f901,tycho-oo-10,18,Mars,ecliptic_latitude,historical_prediction,Alphonsine,1 35,1569-11-09,no printed latitude direction
 assertion-v10-fd4d00f50764e89c18e4,tycho-oo-10,18,Mars,ecliptic_latitude,historical_prediction,Stadius,1 45,1569-11-09,no printed latitude direction
@@ -54,17 +58,12 @@ assertion-v10-90f7b000fce1aa5e32ab,tycho-oo-10,398,Mars,ecliptic_latitude,histor
 assertion-v10-12e31960e6c7e4c3b1ce,tycho-oo-10,399,Mars,ecliptic_longitude,historical_prediction,,17 0¼ ♌,1585-04-15,no model name
 assertion-v11-0a95929a8d050b0bccfa,tycho-oo-11,63,Mars,ecliptic_longitude,reduction,,13° 27½′ ♌,1586-09-23,superseded by an adopted value on the same date
 assertion-v11-b03d14d25a0685dc3e10,tycho-oo-11,63,Mars,ecliptic_latitude,reduction,,1° 18½′ north,1586-09-23,superseded by an adopted value on the same date
-assertion-v11-b2c57dfc5d278cab2201,tycho-oo-11,162,Moon,ecliptic_latitude,reduction,,5° 48′,1587-08-18,no printed latitude direction
 assertion-v11-802642df0e2f7ce601d0,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 28′ 13″,1589-04-05,no printed latitude direction
 assertion-v11-c9db21a7598ce6f162ae,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 20′ 50″,1589-04-08,no printed latitude direction
 assertion-v11-4760adeaf10dbed739da,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 9′ 35″,1589-04-13,no printed latitude direction
 assertion-v11-396655ceb36718c3f10e,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 4′ 5″,1589-04-15,no printed latitude direction
 assertion-v11-32054cd837740dadaabd,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,0° 51′ 31″,1589-04-20,no printed latitude direction
 assertion-v12-b8c6bf13f2d11288dbae,tycho-oo-12,42,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,1° 45′ 0″,1590-01-24,no printed latitude direction
-assertion-v12-03d8fca800ba4a9bbe0e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 36′ 0″,1590-02-12,no printed latitude direction
-assertion-v12-4f9427fb6cfdce2fac26,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 34′ 39″,1590-02-12,no printed latitude direction
-assertion-v12-a96988f1be6bca9f8112,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 22′ 12″,1590-02-12,no printed latitude direction
-assertion-v12-ccea7338cb907c50bc9e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 7′ 30″,1590-02-12,no printed latitude direction
 assertion-v12-cdd00a6c225602958df9,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 42′ 37″,1590-02-12,no printed latitude direction
 assertion-v12-ce9c54b6198c6e4be4db,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 18′ 59″,1590-02-12,no printed latitude direction
 assertion-v12-c59a9890546c6ee506e9,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Prutenic,1° 59′ 8″,1590-03-15,no printed latitude direction

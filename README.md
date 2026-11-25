@@ -38,8 +38,13 @@ The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
 passage through four models. The [opposition study](docs/mars-oppositions.md)
 sets Tycho’s Mars longitudes and the tables of his day against a modern
 ephemeris. The [printed predictions study](docs/printed-predictions.md) does
-the same for every planet the logs compare with a table. The [refraction study](docs/refraction-tables.md) sets the printed
-tables of Tycho and Riccioli beside modern refraction. The
+the same for every planet the logs compare with a table. The
+[solar theory study](docs/solar-theory.md) rebuilds Tycho’s apogee and
+eccentricity from his printed equinoxes. The
+[refraction study](docs/refraction-tables.md) sets the printed tables of Tycho
+and Riccioli beside modern refraction. The
+[1587 parallax study](docs/mars-parallax-1587.md) tests his distances of Mars
+from the stars for a parallax. The
 [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
 results. The [studies page](docs/studies.md) lists each finished analysis with

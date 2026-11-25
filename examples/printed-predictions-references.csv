@@ -97,6 +97,7 @@ assertion-v11-1785a0865682117bf8d0,tycho-oo-11,54,Jupiter,ecliptic_longitude,red
 assertion-v11-8a61a7c0362a2c2fc28e,tycho-oo-11,54,Jupiter,ecliptic_longitude,reduction,13° 53½′ ♋,12467/120,1586-09-23,,,,,,1/2
 assertion-v11-8fdf1c035db8be16e513,tycho-oo-11,64,Mars,ecliptic_latitude,adopted_value,1° 18½′ north,157/120,1586-09-23,,,,,,1
 assertion-v11-f586dc60d85c35705712,tycho-oo-11,64,Mars,ecliptic_longitude,adopted_value,13° 27½′ ♌,3203/24,1586-09-23,,,,,,1
+assertion-v11-8fa85a8cc5f975dc3439,tycho-oo-11,88,Mercury,ecliptic_longitude,reduction,22° 37⅓′ ♎,9118/45,1586-10-25,,,,,,1
 assertion-v11-44a44b429d6b619ae459,tycho-oo-11,32,Moon,ecliptic_longitude,reduction,25° 26′ ♌,4363/30,1586-10-26,,,,,,1
 assertion-v11-ceeed2a03c5dc845adef,tycho-oo-11,185,Mars,ecliptic_longitude,reduction,24° 32′ ♍,2618/15,1587-03-09,after_noon,,assertion-v11-5b28ec7ad0ad20869999,9½^h^,34200,1
 assertion-v11-1fb8d2d0b5dd27186be0,tycho-oo-11,156,Moon,ecliptic_latitude,reduction,4° 15½′,511/120,1587-08-04,,,,,,1

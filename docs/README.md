@@ -47,9 +47,11 @@ the extraction pipeline.
 | [Mars reverses direction in 1595](mars-apparent-motion.md) | Four orbital geometries, Tycho’s Mars reductions, and reproducible figures and residuals. |
 | [Mars at the oppositions of 1580 to 1600](mars-oppositions.md) | Tycho’s longitudes against a modern ephemeris, three historical constructions, and the table predictions printed in the logs. |
 | [Printed predictions for the Moon and planets](printed-predictions.md) | Every table and ephemeris position printed in Tycho’s logs, against the log and a modern ephemeris. |
+| [Tycho’s solar theory against DE441](solar-theory.md) | His equinoxes, apogee, and eccentricity, rebuilt from the printed intervals and from his own altitude corrections. |
 | [Historical refraction tables against modern refraction](refraction-tables.md) | The printed tables of Tycho and Riccioli beside a modern formula, entry by entry. |
 | [Mars, Jupiter, and Saturn corrections](planetary-parallax-comparisons.md) | Recorded parallax and refraction corrections beside modern distances and refraction. |
 | [Mercury and Venus parallax](mercury-venus-parallax.md) | Historical reductions and the 1590 Venus experiment under historical and modern assumptions. |
+| [The parallax of Mars in 1587](mars-parallax-1587.md) | Tycho’s Mars-to-star distances on two nights, against the parallax in his log and the parallax from a modern ephemeris. |
 | [Visualization plan](visualization-plan.md) | Design references, views, and acceptance requirements for the interactive explorer. |
 | [Historical evidence for modern analysis](historical-findings.md) | Located passages, historical claims and questions for validation. |
 | [Historical and modern corrections](correction-comparisons.md) | Correction scenarios, shared errors, uncertainty and sensitivity procedures. |

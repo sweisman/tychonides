@@ -1,0 +1,11 @@
+case,readings,groups,implied_parallax_arcsec,standard_error_arcsec,rms_modern_arcsec,rms_tycho_arcsec
+both nights,48,9,-13,33,59,107
+1587-02-23,14,4,-312,22,88,164
+1587-03-10,34,5,88,23,42,72
+without the third star in the wing of Virgo,41,7,88,21,38,66
+every clock -10 minutes,48,9,-42,40,72,120
+every clock +10 minutes,48,9,12,30,52,98
+clocks toward setting +10 minutes,48,9,-8,34,61,107
+cold air,48,9,-9,36,63,108
+refractions from the log's table,48,9,22,41,72,107
+mean of the pairs,,5,62,108,,

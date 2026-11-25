@@ -53,4 +53,4 @@ jobs:
       - run: tychonides-verify resources/catalog --assets-dir /tmp/tychonides-assets --docs-root . --keep-database "$RUNNER_TEMP/tychonides.sqlite"
       - name: Check the study selections against the catalog
         run: |
-          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study tests.test_parallax_study tests.test_predictions_study
+          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study tests.test_parallax_study tests.test_predictions_study tests.test_solar_study tests.test_mars_parallax_study

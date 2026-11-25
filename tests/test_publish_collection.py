@@ -225,6 +225,15 @@ class PublicCollectionTests(unittest.TestCase):
                 self.assertEqual(
                     db.execute("SELECT count(*) FROM interpretations").fetchone()[0], 2
                 )
+                # The published counts cover the whole catalogue, not an earlier selection.
+                self.assertEqual(
+                    json.loads(
+                        db.execute(
+                            "SELECT value_json FROM metadata WHERE key='normalization_counts'"
+                        ).fetchone()[0]
+                    ),
+                    {"exact": 1, "unsupported": 1},
+                )
             with (root / "public/tychonides.sqlite.gz").open("ab") as stream:
                 stream.write(b"changed")
             with self.assertRaisesRegex(ValueError, "checksum"):

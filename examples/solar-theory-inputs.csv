@@ -1,0 +1,24 @@
+item,id,source_id,printed_page,quantity,expression,value_exact,unit,julian_date
+vernal equinox,assertion-sbrahe-progymnasmata-erara-79eb0b7a53dd47616ef0,brahe-progymnasmata-erara,13,calculation_epoch,21 | 30,77400,second_of_time,1584-03-09
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-e15856f4090862687a42,brahe-progymnasmata-erara,13,calculation_epoch,16 | 0,57600,second_of_time,1584-09-12
+vernal equinox,assertion-sbrahe-progymnasmata-erara-fd8042a2760bfe294074,brahe-progymnasmata-erara,13,calculation_epoch,3 | 19,11940,second_of_time,1585-03-10
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-7cf404a37cd6742c2b15,brahe-progymnasmata-erara,13,calculation_epoch,21 | 49,78540,second_of_time,1585-09-12
+vernal equinox,assertion-sbrahe-progymnasmata-erara-565a0612be86a376ad7e,brahe-progymnasmata-erara,13,calculation_epoch,9 | 8,32880,second_of_time,1586-03-10
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-d80dde73ac1e7326159a,brahe-progymnasmata-erara,13,calculation_epoch,3 | 38,13080,second_of_time,1586-09-13
+vernal equinox,assertion-sbrahe-progymnasmata-erara-79e63ab4686165a0eca3,brahe-progymnasmata-erara,13,calculation_epoch,14 | 56,53760,second_of_time,1587-03-10
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-1cb9e118afbf1ccfff21,brahe-progymnasmata-erara,13,calculation_epoch,9 | 26,33960,second_of_time,1587-09-13
+vernal equinox,assertion-sbrahe-progymnasmata-erara-418d483261fb4b07d098,brahe-progymnasmata-erara,13,calculation_epoch,20 | 45,74700,second_of_time,1588-03-09
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-b33b022f159a3bd3c406,brahe-progymnasmata-erara,13,calculation_epoch,15 | 15,54900,second_of_time,1588-09-12
+tropical year,assertion-sbrahe-progymnasmata-erara-ef1dbcb8935a7c903b2c,brahe-progymnasmata-erara,12,clock_elapsed_time,365^d^ 5^h^ 49^m^,31556940,second_of_time,
+vernal to autumnal equinox,assertion-sbrahe-progymnasmata-erara-8e4999dbb4ac4d1604c9,brahe-progymnasmata-erara,19,clock_elapsed_time,"186 days, 18½ hours",16137000,second_of_time,
+vernal equinox to 15 Taurus,assertion-sbrahe-progymnasmata-erara-726c1c027ba0f2611ce5,brahe-progymnasmata-erara,19,clock_elapsed_time,46^d^ 2^h^ 55^m^,3984900,second_of_time,
+15 Leo to autumnal equinox,assertion-sbrahe-progymnasmata-erara-41ce697f4ce27617ecfd,brahe-progymnasmata-erara,19,clock_elapsed_time,46^d^ 9^h^ 40^m^,4009200,second_of_time,
+apogee from 15 Taurus,assertion-sbrahe-progymnasmata-erara-839c513f88dc85b1cffc,brahe-progymnasmata-erara,23,ecliptic_longitude,5° 30′ of ♋,191/2,degree,
+apogee from 15 Leo,assertion-sbrahe-progymnasmata-erara-c3e1d3b18cfb270c429e,brahe-progymnasmata-erara,25,ecliptic_longitude,5° 27′ of Cancer [♋,1909/20,degree,
+eccentricity from 15 Taurus,assertion-sbrahe-progymnasmata-erara-511d670191af782dc16d,brahe-progymnasmata-erara,23,source_sexagesimal_length,2° 9′ 2″,3871/1800,source_length_part,
+eccentricity from 15 Leo,assertion-sbrahe-progymnasmata-erara-1a46b2964e622ad0cdb7,brahe-progymnasmata-erara,25,source_sexagesimal_length,2° 9′ 1″,7741/3600,source_length_part,
+adopted eccentricity,assertion-sbrahe-progymnasmata-erara-bbc67625b28266606ef0,brahe-progymnasmata-erara,26,source_scalar,"3,584",3584,source_scalar,
+obliquity,assertion-sbrahe-progymnasmata-erara-4db2508f614c5ce73c88,brahe-progymnasmata-erara,17,obliquity,23° 31½′,84690,arcsecond,
+horizontal parallax of the Sun,assertion-sbrahe-progymnasmata-erara-615339164b42fa61abbb,brahe-progymnasmata-erara,80,parallax_angle,3′ 0″,180,arcsecond,
+pole altitude,assertion-sbrahe-progymnasmata-erara-60667f0e87d3cd341eaa,brahe-progymnasmata-erara,218,altitude,55° 54′ 45″,201285,arcsecond,
+earlier pole altitude,assertion-sbrahe-progymnasmata-erara-c12cd9d77250c0b9aa79,brahe-progymnasmata-erara,28,altitude,P.55.M.54½,201270,arcsecond,

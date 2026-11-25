@@ -1,0 +1,49 @@
+id,printed_page,julian_date,daypart,clock_origin,origin_basis,star,hip,expression,separation_arcseconds_exact,clock_expression,clock_seconds,altitude_expression,altitude_arcseconds_exact,event_id
+assertion-v11-9e051cb0345177e8ed6b,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,third star in wing of Virgo,61941,4° 39⅙′,16750,7^h^ 46^m^,27960,9°,32400,event-v11-9485419934d41b6e66b6
+assertion-v11-1b89e5245e823d08c959,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,third star in wing of Virgo,61941,4° 39¼′,16755,7^h^ 53^m^,28380,10½°,37800,event-v11-3c4f1e56144df5584667
+assertion-v11-cb559f49e8637bc9bce5,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,third star in wing of Virgo,61941,4° 39½′,16770,7^h^ 56^m^,28560,10° 50′,39000,event-v11-b44975d85296c10bcf09
+assertion-v11-acfd46cfba5cb372282e,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,third star in wing of Virgo,61941,4° 39⅓′,16760,8^h^ 0^m^,28800,11¼°,40500,event-v11-4f25ba0d61e3c4578186
+assertion-v11-917d2eb6954a70603665,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,second star in wing of Virgo,60129,2° 29′,8940,8^h^ 5^m^,29100,12⅙°,43800,event-v11-31a31e7acda67ae084b7
+assertion-v11-d0f760086e1c66b2374c,181,1587-02-23,,noon,iuxta Horam a Meridie 7 Min. 45,second star in wing of Virgo,60129,2° 29⅙′,8950,8^h^ 10^m^,29400,,,event-v11-bac4fd96d58852754c58
+assertion-v11-25c686b4a9943a644dbc,181,1587-02-23,,midnight,P. M. N.,heart of Leo,49669,35° 46′,128760,1^h^ 32^m^,5520,,,event-v11-ef1299a50e982570be60
+assertion-v11-0bee9d944ef5a3a1c76d,181,1587-02-23,,midnight,P. M. N.,heart of Leo,49669,35° 45¾′,128745,1^h^ 33^m^,5580,,,event-v11-048640d98412524b968e
+assertion-v11-ec43a3004d3cf9d36db7,181,1587-02-23,,midnight,P. M. N.,heart of Leo,49669,35° 46′,128760,1^h^ 35½^m^,5730,,,event-v11-c47ae8b6b37dbd793c25
+assertion-v11-d31fa2f77b60b9e40ed5,181,1587-02-23,,midnight,P. M. N.,Spica,65474,19° 13½′,69210,1^h^ 40^m^,6000,,,event-v11-3f9f42674a20473440a2
+assertion-v11-8fc0bb83c8d8fd55815a,181,1587-02-23,,midnight,P. M. N.,Spica,65474,19° 13½′,69210,1^h^ 41½^m^,6090,,,event-v11-8c4c63837646918b827b
+assertion-v11-bd253ef932a1b5c8bd24,181,1587-02-23,,midnight,P. M. N.,Spica,65474,19° 13⅓′,69200,1^h^ 45^m^,6300,,,event-v11-17f161d397e0179f1bd2
+assertion-v11-d0d108abaaa263559730,181,1587-02-23,,midnight,P. M. N.,third star in wing of Virgo,61941,4° 45¾′,17145,5^h^ 7^m^,18420,,,event-v11-16e8d2fb79931142c956
+assertion-v11-9610bf61ae189c7d8a2d,182,1587-02-23,,midnight,P. M. N.,third star in wing of Virgo,61941,4° 45⅓′,17120,5^h^ 11^m^,18660,16½°,59400,event-v11-86b96a85b3782d78aa6b
+assertion-v11-89ed6b6efd1ff7a3bab7,185,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 13½′,108810,6^h^ 50½^m^,24630,13° 43′,49380,event-v11-c12a0d26d714f21c7498
+assertion-v11-ccac5365878ef95fc9df,185,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 13⅔′,108820,6^h^ 52^m^,24720,14° 0′,50400,event-v11-c32bc97df875c8730c78
+assertion-v11-634919b363f8d9dcb105,185,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 13⅔′,108820,6^h^ 54½^m^,24870,14° 13½′,51210,event-v11-219e8737ca3ffe3b3947
+assertion-v11-6742f57ad0a7c0a33631,185,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 13⅔′,108820,6^h^ 57⅓^m^,25040,14° 38′,52680,event-v11-717f970609789c1bf3ea
+assertion-v11-4695a458d65156fb364d,185,1587-03-10,after_noon,noon,date claim: after_noon,tail of Leo,57632,12° 0′,43200,7^h^ 4^m^ 6^s^,25446,15° 33′,55980,event-v11-68f1a6c6692b4905c62f
+assertion-v11-336ae5cac6080cbaede1,185,1587-03-10,after_noon,noon,date claim: after_noon,tail of Leo,57632,12° 0⅙′,43210,7^h^ 5^m^,25500,15° 42′,56520,event-v11-e4afd76e35057fac3277
+assertion-v11-33edfc26644b50c2a14d,185,1587-03-10,after_noon,noon,date claim: after_noon,tail of Leo,57632,12° 0¼′,43215,7^h^ 6^m^,25560,,,event-v11-699de42031f282ea2264
+assertion-v11-ee5166efc3829d96e87a,185,1587-03-10,after_noon,noon,date claim: after_noon,tail of Leo,57632,12° 0′,43200,7^h^ 8^m^ 20^s^,25700,16° 9′,58140,event-v11-01b9dbf87229090197c3
+assertion-v11-6a901fce8f40256207f2,185,1587-03-10,after_noon,noon,date claim: after_noon,Arcturus,69673,35° 44½′,128670,7^h^ 22^m^,26520,18° 3′,64980,event-v11-e78f7ef2160e97f324f7
+assertion-v11-90bc0fd5ffeb0b9bee1c,185,1587-03-10,after_noon,noon,date claim: after_noon,Arcturus,69673,35° 44⅚′,128690,7^h^ 24½^m^,26670,,,event-v11-0abfba0f3b10581ec185
+assertion-v11-fb1e0cebc826419c2b77,185,1587-03-10,after_noon,noon,date claim: after_noon,Arcturus,69673,35° 44½′,128670,7^h^ 26½^m^,26790,,,event-v11-0d336d781a4194f9c9c7
+assertion-v11-e2583c5bb81137d5a7a1,186,1587-03-10,after_noon,noon,date claim: after_noon,Spica,65474,24° 33½′,88410,11^h^ 36^m^,41760,,,event-v11-013b5bd69c2b19cf0493
+assertion-v11-30ba6d4c34bb5f1f719a,186,1587-03-10,after_noon,noon,date claim: after_noon,Spica,65474,24° 33⅔′,88420,11^h^ 38^m^,41880,,,event-v11-04f21c03f09896b899d4
+assertion-v11-72920e60979948b3fccd,186,1587-03-10,after_noon,noon,date claim: after_noon,Spica,65474,24° 33½′,88410,11^h^ 39^m^,41940,,,event-v11-580619a9d10303e04230
+assertion-v11-403e2d0b10fe595c61d7,186,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 8′,108480,11^h^ 53^m^,42780,,,event-v11-de481bfe5fbdf3f819ef
+assertion-v11-9ed6ce211a4d34f5f33c,186,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 7½′,108450,11^h^ 55^m^,42900,,,event-v11-64bd29dbcdd6f02f88f0
+assertion-v11-ec97638de793ab77afd6,186,1587-03-10,after_noon,noon,date claim: after_noon,heart of Leo,49669,30° 7⅔′,108460,12^h^ 2^m^,43320,,,event-v11-7ac1192a829475d92afb
+assertion-v11-3cf7ebd841368181abd3,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,third star in wing of Virgo,61941,10° 11′,36660,4^h^ 16½^m^,15390,16° 19′,58740,event-v11-55ddda472831250df255
+assertion-v11-9bbb092d7773b74bd686,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 48½′,128910,4^h^ 20½^m^,15630,15° 45′,56700,event-v11-2f71b23373bf4c817972
+assertion-v11-68ff053162f461a174bd,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 49′,128940,4^h^ 25½^m^,15930,15° 5′,54300,event-v11-1d623ca3d5a3dbcf3c03
+assertion-v11-0e345f7589d647fbeb0a,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 49⅙′,128950,4^h^ 28^m^,16080,14° 45′,53100,event-v11-6ea82f2ab2bec10fb4d7
+assertion-v11-3d0ee03d9872f9f55d24,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 49¼′,128955,4^h^ 29^m^,16140,14° 30′,52200,event-v11-31d2775ae103ab0e7bd0
+assertion-v11-2017e3b72eb65278dcab,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 49⅙′,128950,4^h^ 35^m^,16500,13° 50′,49800,event-v11-c556d986fabe18ed2d43
+assertion-v11-edb3ad332eec1ff273cf,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 49′,128940,4^h^ 42½^m^,16950,12° 40′,45600,event-v11-bd76a8f539fd066d7a70
+assertion-v11-d748ed3b92bad94cbcfc,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,tail of Leo,57632,11° 52⅓′,42740,4^h^ 48½^m^,17310,11° 49½′,42570,event-v11-48991830121eef7ea3fd
+assertion-v11-830f27b0557690df013c,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,tail of Leo,57632,11° 54′,42840,4^h^ 50½^m^,17430,11° 30′,41400,event-v11-44bd07e60303d7d993bf
+assertion-v11-3e71a8af9bb32e9babf0,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Spica,65474,24° 39⅔′,88780,4^h^ 53½^m^,17610,11° 7½′,40050,event-v11-69d0c0b984183934ac88
+assertion-v11-bfdde648b827b292956b,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Spica,65474,24° 39¼′,88755,4^h^ 56½^m^,17790,10° 41⅓′,38480,event-v11-2fa1c65a519561eff54c
+assertion-v11-68a9027cd2ab3b9b34e0,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Spica,65474,24° 39⅓′,88760,4^h^ 58½^m^,17910,10° 25′,37500,event-v11-8d42b0fe247e36dd4cd7
+assertion-v11-97c6dd2b7e18f83ea9d7,186,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Spica,65474,24° 39⅓′,88760,5^h^ 1^m^,18060,10° 10′,36600,event-v11-4f4789a9befe84efd7d2
+assertion-v11-4cd8a7b07d3c116b5382,187,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 48′,128880,5^h^ 5^m^,18300,9° 30′,34200,event-v11-e8ee804c27232b5b9148
+assertion-v11-7731888fbdf982c01435,187,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 48′,128880,5^h^ 7½^m^,18450,9° 10′,33000,event-v11-74bfade1965fc55b74ce
+assertion-v11-5a12912ca3a8fe922d27,187,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 48½′,128910,5^h^ 9¾^m^,18585,8° 55′,32100,event-v11-a8ab2373a4bced3cdfa2
+assertion-v11-f7dfadea0d59c7ab2663,187,1587-03-10,,midnight,Sequitur obseruatio ♂ ad occasum tendentis P. M. N.,Arcturus,69673,35° 48′,128880,5^h^ 13^m^,18780,8° 25′,30300,event-v11-d23fdcc64c070ceb6a26

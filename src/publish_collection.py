@@ -52,6 +52,15 @@ PRIVATE = re.compile(
 )
 
 
+SELECTION_FIELDS = (
+    "coverage",
+    "normalization_counts",
+    "limitations",
+    "counting_units",
+    "source_reference_screening",
+)
+
+
 def revise_counted_sign_boundaries(db):
     """Keep the previous interpretation and select the corrected one."""
     for row in db.execute("""
@@ -133,9 +142,30 @@ def publish_collection(source, output, release_id=None):
                     "historical_subset_version_kind",
                 ):
                     db.execute("DELETE FROM metadata WHERE key=?", (key,))
+                # Entries written for the first Mars selection keep that name. The counts
+                # under the catalogue's own name cover every current interpretation.
+                selection = {
+                    key: json.loads(value)
+                    for key, value in db.execute(
+                        "SELECT key,value_json FROM metadata WHERE key IN (?,?,?,?,?) ORDER BY key",
+                        SELECTION_FIELDS,
+                    ).fetchall()
+                }
+                db.execute("DELETE FROM metadata WHERE key IN (?,?,?,?,?)", SELECTION_FIELDS)
                 meta = dict(
                     publication_status="research_catalogue",
                     release_id=release_id,
+                    normalization_counts=dict(
+                        db.execute(
+                            """
+                            SELECT i.status,count(*) FROM interpretations i WHERE i.version=
+                             (SELECT MAX(version) FROM interpretations x
+                              WHERE x.quantity_id=i.quantity_id)
+                            GROUP BY i.status ORDER BY i.status
+                            """
+                        )
+                    ),
+                    **({"first_mars_selection": selection} if selection else {}),
                     code_license="AGPL-3.0-or-later",
                     data_license="CC0-1.0",
                     license_scope="Project contributions; third-party sources retain their terms",

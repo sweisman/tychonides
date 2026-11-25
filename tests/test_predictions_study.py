@@ -49,7 +49,7 @@ class PredictionSelectionTests(unittest.TestCase):
 
         with closing(sqlite3.connect(f"file:{CATALOG}?mode=ro", uri=True)) as db:
             predictions, references, excluded = predictions_select.select(db)
-        self.assertEqual((len(predictions), len(references), len(excluded)), (485, 326, 187))
+        self.assertEqual((len(predictions), len(references), len(excluded)), (485, 327, 186))
         files = {
             "printed-predictions.csv": (predictions_select.PREDICTION_FIELDS, predictions),
             "printed-predictions-references.csv": (predictions_select.REFERENCE_FIELDS, references),

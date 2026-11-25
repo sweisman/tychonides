@@ -179,7 +179,7 @@ only.
 ## Inputs and reproduction
 
 **Selection.** The [selection script](../examples/mars_select.py) reads
-[Tychonides 1.3.1](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.1)
+[Tychonides 1.3.2](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.2)
 and writes the [selected reductions](../examples/mars-observations.csv), the
 [printed predictions](../examples/mars-predictions.csv), the
 [opposition table](../examples/mars-oppositions.csv), and the

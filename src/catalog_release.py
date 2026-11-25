@@ -199,9 +199,8 @@ def adapt_source_quantities(records):
     return source, published, list(events.values())
 
 
-CATALOGUE_ROLE = """CASE
-    WHEN json_extract(i.revision_json,'$.kind')='log_reading_interpretation'
-    THEN json_extract(i.revision_json,'$.role') ELSE q.role END"""
+# A reviewed revision states the role it selects; other revisions keep the recorded role.
+CATALOGUE_ROLE = "COALESCE(json_extract(i.revision_json,'$.role'),q.role)"
 
 CATALOGUE_EXPRESSION = (
     "COALESCE(json_extract(i.revision_json,'$.completed_source_expression'),q.expression)"

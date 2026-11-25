@@ -1,0 +1,6 @@
+julian_date,star,first_session,second_session,readings,parallax_factor_change,observed_change_arcsec,motion_arcsec,refraction_arcsec,modern_parallax_arcsec,tycho_parallax_arcsec,observed_minus_modern_arcsec,observed_minus_tycho_arcsec,implied_parallax_arcsec
+1587-02-23,third star in wing of Virgo,evening,toward setting,4 and 2,0.86,374,457,185,11,260,-279,-528,-312
+1587-03-10,heart of Leo,evening,near the meridian,4 and 3,-0.54,-354,-294,97,-7,-165,-150,7,289
+1587-03-10,tail of Leo,evening,toward setting,4 and 2,-0.34,-416,-354,26,-5,-103,-84,15,259
+1587-03-10,Spica,near the meridian,toward setting,3 and 4,0.43,350,297,33,6,131,14,-111,47
+1587-03-10,Arcturus,evening,toward setting,3 and 10,0.91,243,356,-139,12,276,13,-250,28

@@ -1,0 +1,11 @@
+item,id,julian_date,expression,jd_ut,de441_longitude_degrees,printed_minus_de441_arcmin,printed_minus_de441_hours,reduction_gives_arcmin,reduction_gives_hours
+vernal equinox,assertion-sbrahe-progymnasmata-erara-79eb0b7a53dd47616ef0,1584-03-09,21 | 30,2299682.865944,359.88183,7.1,-2.87,8.5,-3.42
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-e15856f4090862687a42,1584-09-12,16 | 0,2299869.626028,180.11226,-6.7,2.74,-8.5,3.44
+vernal equinox,assertion-sbrahe-progymnasmata-erara-fd8042a2760bfe294074,1585-03-10,3 | 19,2300048.108303,359.87581,7.5,-3.01,8.5,-3.42
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-7cf404a37cd6742c2b15,1585-09-12,21 | 49,2300234.868387,180.11083,-6.7,2.71,-8.5,3.44
+vernal equinox,assertion-sbrahe-progymnasmata-erara-565a0612be86a376ad7e,1586-03-10,9 | 8,2300413.350660,359.87830,7.3,-2.95,8.5,-3.42
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-d80dde73ac1e7326159a,1586-09-13,3 | 38,2300600.110745,180.10989,-6.6,2.68,-8.5,3.44
+vernal equinox,assertion-sbrahe-progymnasmata-erara-79e63ab4686165a0eca3,1587-03-10,14 | 56,2300778.592323,359.87509,7.5,-3.03,8.5,-3.42
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-1cb9e118afbf1ccfff21,1587-09-13,9 | 26,2300965.352408,180.10982,-6.6,2.68,-8.5,3.44
+vernal equinox,assertion-sbrahe-progymnasmata-erara-418d483261fb4b07d098,1588-03-09,20 | 45,2301143.834679,359.87036,7.8,-3.14,8.5,-3.42
+autumnal equinox,assertion-sbrahe-progymnasmata-erara-b33b022f159a3bd3c406,1588-09-12,15 | 15,2301330.594765,180.10970,-6.6,2.68,-8.5,3.44

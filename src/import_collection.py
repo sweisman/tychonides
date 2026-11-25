@@ -209,11 +209,15 @@ def merge_catalogue_set(
     reviewed_loci=(),
     reviewed_readings=(),
     reviewed_log_pages=(),
+    reading_revisions=(),
+    date_revisions=(),
+    editions=None,
     verified_manifests=None,
 ):
     """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
     from .catalog_release import CSV_COLUMNS
+    from .catalog_revisions import apply_date_revisions, apply_reading_revisions
     from .csv_projection import project_csv
     from .log_interpretations import apply_log_interpretations, apply_log_page_reviews
 
@@ -230,6 +234,9 @@ def merge_catalogue_set(
     reviewed_loci = tuple(reviewed_loci)
     reviewed_readings = tuple(reviewed_readings)
     reviewed_log_pages = tuple(reviewed_log_pages)
+    reading_revisions = tuple(reading_revisions)
+    date_revisions = tuple(date_revisions)
+    editions = editions or {}
     verified_manifests = verified_manifests or {}
     for directory in inputs:
         manifest_path = directory / "manifest.json"
@@ -275,6 +282,8 @@ def merge_catalogue_set(
             with db:
                 apply_log_interpretations(db, reviewed_readings)
                 apply_log_page_reviews(db, reviewed_log_pages)
+                apply_reading_revisions(db, reading_revisions, editions)
+                apply_date_revisions(db, date_revisions, editions)
                 metadata.update(
                     schema_version=encoded(3),
                     release_id=encoded("combined-catalogue-draft"),
