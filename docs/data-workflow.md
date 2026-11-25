@@ -142,12 +142,12 @@ external; working artifact bytes and local locators require public projection.
 
 ## Public Release
 
-The current release is [tychonides-1.3.0](../resources/catalog/README.md).
+The current release is [tychonides-1.3.1](../resources/catalog/README.md).
 To prepare its public files from a verified working catalog:
 
 ```sh
 python -m src.publish_collection --source WORKING_CATALOG \
-  --output PUBLIC_DIRECTORY --release-id tychonides-1.3.0
+  --output PUBLIC_DIRECTORY --release-id tychonides-1.3.1
 ```
 
 Packaging adds citations and derived-value columns, removes source-document bytes

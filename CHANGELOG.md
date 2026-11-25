@@ -1,11 +1,11 @@
 # Catalog releases
 
-## Unreleased
+## 1.3.1
 
 The four-volume Tycho review adds 22,578 versioned interpretations while
 preserving the original readings and identities. It recovers 32 missing page
 citations and adds 25 distinct quantities and 1,657 context records. The
-verified working catalog contains 710,420 quantities. [Review coverage and remaining evidence](docs/data-sources.md#interpretation-review)
+release contains **710,420 quantities and 115,972 source groups**. [Review coverage and remaining evidence](docs/data-sources.md#interpretation-review)
 
 ## 1.3.0
 

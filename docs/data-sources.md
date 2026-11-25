@@ -52,7 +52,7 @@ parallax corrections remain dependencies of reduced coordinate products.
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mars observations, clocks, calibrations, historical calculations and supporting records across four volumes | [Available: 17,043 quantities](../resources/catalog/README.md) |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Jupiter and Moon observations and reductions, with directly related solar and stellar calibration | [Available: 36,453 quantities](#jupiter-and-moon-coverage) |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Sun, Saturn, and Venus observations, reductions, and supporting records | [Available: 46,300 additional quantities](#sun-saturn-and-venus-coverage) |
-| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mercury, seven comet accounts, fixed-star observations and catalogs, follow-up readings of the new star of 1572, and supporting records | [Available: 50,622 additional quantities](#full-log-coverage) |
+| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mercury, seven comet accounts, fixed-star observations and catalogs, follow-up readings of the new star of 1572, and supporting records | [Available: 50,647 additional quantities](#full-log-coverage) |
 | [Wayne Pafko, Mars transcription](https://www.pafko.com/tycho/) | Independent transcription used to reconcile entries in Tycho’s books | 923 linked validation controls; not an additional observing program |
 | Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,910 quantities](historical-books-ingestion.md) |
 | Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,349 quantities](historical-books-ingestion.md) |
@@ -130,25 +130,24 @@ bodies also captured comparison readings, clock and instrument entries,
 correction and reduction material, and separate notes about observing
 circumstances. [Editions and printed witnesses](sources.md)
 
-| Opera Omnia volume | Additional quantities | Quantities in the expanded catalog |
+| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.1 |
 | --- | ---: | ---: |
-| X | 11,737 | 31,752 |
-| XI | 14,807 | 40,130 |
+| X | 11,737 | 31,772 |
+| XI | 14,807 | 40,132 |
 | XII | 12,417 | 49,829 |
-| XIII | 11,661 | 28,707 |
-| **Total** | **50,622** | **150,418** |
+| XIII | 11,661 | 28,710 |
+| **Total** | **50,622** | **150,443** |
 
 The 1.3.0 additions span 2,397 source groups and include 1,698 separate observing
 context records. The release reuses existing records for matched source
 occurrences and preserves 46,423 of the added quantities as cited literal
 expressions with unresolved numerical interpretation. Its addition totals
 exclude 45 candidate spans flagged for overlap and 32 candidates awaiting
-printed page citations. Download the published intake in
-[tychonides-1.3.0](../resources/catalog/README.md#download).
+printed page citations.
 
 #### Interpretation review
 
-The verified working catalog contains **710,420 quantities**. The review
+[Release 1.3.1](../resources/catalog/README.md#download) contains **710,420 quantities**. The review
 classifies 8,341 of the initially unresolved entries and establishes exact
 values for another 14,234 whose uses remain open. It also recovers the complete
 expressions for three earlier readings while preserving their original

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tychonides"
-version = "1.3.0"
+version = "1.3.1"
 description = "Historical astronomical observations and exact numerical normalization"
 license = {text = "AGPL-3.0-or-later"}
 requires-python = ">=3.11"

@@ -31,8 +31,8 @@ Current interpretation plus usable derived conversions and citations.
 | `catalogue.locator` | TEXT | — | Source-native row, line, page or frame locator. |
 | `catalogue.volume` | INTEGER | — | Dreyer Opera Omnia volume for historical records; null for other collections. |
 | `catalogue.printed_page` | INTEGER | — | Printed bibliographic page, not automatically a PDF image index. |
-| `catalogue.expression` | TEXT | — | Literal source numeric expression. |
-| `catalogue.role` | TEXT | — | Evidential role; see the quantity and role reference. |
+| `catalogue.expression` | derived | — | Literal source numeric expression. |
+| `catalogue.role` | derived | — | Evidential role; see the quantity and role reference. |
 | `catalogue.event_id` | TEXT | — | Associated source group. |
 | `catalogue.series_id` | TEXT | — | Associated source series. |
 | `catalogue.version` | INTEGER | — | Interpretation version; zero preserves the initial interpretation. |

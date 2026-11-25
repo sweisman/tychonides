@@ -1,16 +1,16 @@
 {
-  "release_id": "tychonides-1.3.0",
+  "release_id": "tychonides-1.3.1",
   "schema_version": 6,
   "status": "research_catalogue",
   "index_contract": 1,
   "vocabulary_contract": 1,
-  "quantities": 710395,
+  "quantities": 710420,
   "groups": 115972,
   "sources": 35,
   "images": 1963,
   "artifacts": 23,
   "controls": 923,
-  "interpretations": 710401,
+  "interpretations": 733004,
   "quantities_by_source": {
     "brahe-progymnasmata-erara": 22910,
     "cds-carlsberg-planets": 96296,
@@ -30,10 +30,10 @@
     "riccioli-almagestum-novum-t1": 35802,
     "riccioli-astronomia-reformata": 114155,
     "snellius-observationes-hassiacae": 6189,
-    "tycho-oo-10": 31752,
-    "tycho-oo-11": 40130,
+    "tycho-oo-10": 31772,
+    "tycho-oo-11": 40132,
     "tycho-oo-12": 49829,
-    "tycho-oo-13": 28707,
+    "tycho-oo-13": 28710,
     "ursus-fundamentum-astronomicum": 43,
     "usno-w1": 21558,
     "usno-w2": 34698
@@ -41,13 +41,13 @@
   "code_license": "AGPL-3.0-or-later",
   "data_license": "CC0-1.0",
   "license_scope": "Project contributions; third-party sources retain their terms",
-  "sqlite_sha256": "9fe26f2381098f388db5e41af91630369103afbd1097a62109ddd3a0f1288d7c",
+  "sqlite_sha256": "9d730a480ea42270e9910c5b9af84ba12b37c1bcfe6c78972f90cdeebe8aad08",
   "output_hashes": {
-    "tychonides.sqlite.gz": "b10563c612ed3f9caf26dc1b7797d7d0d9e5f4678c2abfb0637ec2ca20754605",
-    "tychonides.csv": "145c38ba821c251371a7dccd68d1930418ae6589039d5f4baebfad4c32111a4d"
+    "tychonides.sqlite.gz": "4a5019bc3c0f3d13a08fabd5aa2fb57839acc7b57dca9e13ace447245e489e90",
+    "tychonides.csv": "e527aa2676bfab984e2bf749d2a50f65366ff54c4943de6bf8cfa4f971b7de2b"
   },
   "download_urls": {
-    "tychonides.sqlite.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.sqlite.gz",
-    "tychonides.csv": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.csv"
+    "tychonides.sqlite.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.1/tychonides.sqlite.gz",
+    "tychonides.csv": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.1/tychonides.csv"
   }
 }

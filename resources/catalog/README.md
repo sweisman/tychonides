@@ -1,6 +1,6 @@
 # Tychonides catalog
 
-**710,395 quantities and 115,972 source groups** from Tycho Brahe’s four
+**710,420 quantities and 115,972 source groups** from Tycho Brahe’s four
 observing volumes, seven further historical books, JJMO experiments, and JPL,
 USNO, Carlsberg, and Tokyo optical observations.
 The catalog also includes source references, historical calculations and
@@ -14,14 +14,14 @@ along with the calculations and instrument records that give them context.
 
 ## Download
 
-Release **tychonides-1.3.0** provides the verified catalog as GitHub Release
+Release **tychonides-1.3.1** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.1/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.csv)** — one row per quantity, with exact values, decimal
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.1/tychonides.csv)** — one row per quantity, with exact values, decimal
   conveniences and scientific qualifications.
 
 The repository keeps the [manifest](manifest.json) with download and uncompressed database
@@ -39,14 +39,14 @@ For a guide to the coverage pages, field definitions and processing methods,
 see the [documentation index](../../docs/README.md).
 
 The [data sources directory](../../docs/data-sources.md) lists the books and
-observing programs. Tycho’s four observing volumes contribute 150,418 quantities.
+observing programs. Tycho’s four observing volumes contribute 150,443 quantities.
 The [Jupiter and Moon selections](../../docs/data-sources.md#jupiter-and-moon-coverage)
 add 36,453 quantities to the original Mars selection. The
 [Sun, Saturn, and Venus selections](../../docs/data-sources.md#sun-saturn-and-venus-coverage)
 add 46,300 quantities. The [full-log intake](../../docs/data-sources.md#full-log-coverage)
 adds 50,622 quantities and reuses earlier records for matched source occurrences.
 The [interpretation review](../../docs/data-sources.md#interpretation-review)
-describes the verified working catalog prepared from that intake.
+adds 25 quantities and documents the revised readings and citations.
 The [seven-book extension](../../docs/historical-books-ingestion.md)
 adds 303,175 quantities across the selected editions, with 4,078 selected regions
 given review decisions. The 256,802 modern quantities preserve source
