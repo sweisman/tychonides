@@ -8,6 +8,7 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 | --- | --- | --- |
 | [Mars reverses direction in 1595](#mars-reverses-direction-in-1595) | Four model geometries against Tycho’s reductions | September to December 1595 |
 | [Mars at the oppositions of 1580 to 1600](#mars-at-the-oppositions-of-1580-to-1600) | Tycho’s longitudes, three constructions, and printed table predictions against a modern ephemeris | 1580 to 1600 |
+| [Historical refraction tables](#historical-refraction-tables) | The printed tables of Tycho and Riccioli against a modern formula | 1602 and 1665 |
 | [Mars, Jupiter, and Saturn corrections](#mars-jupiter-and-saturn-corrections) | Recorded parallax and refraction against modern values | 1582 to 1599 |
 | [Mercury and Venus parallax](#mercury-and-venus-parallax) | Historical reductions and the 1590 Venus test | 1582 to 1610 |
 
@@ -65,6 +66,29 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 - **Rerun.** `python examples/mars_oppositions.py --output docs/figures`
   regenerates the [summary](figures/mars-oppositions-summary.csv), the other
   tables, and both figures. A test regenerates the tables.
+- **Reviewed.** November 25, 2026, when the study was first published.
+
+## Historical refraction tables
+
+[Read the study](refraction-tables.md)
+
+- **Question.** How do the refraction tables Tycho and Riccioli printed compare
+  with modern refraction at the same altitudes?
+- **Result.** Tycho’s fixed-star table stays within 1′ of modern refraction
+  from 4° to 16°, then falls to zero at 20°, where modern refraction is 2′42″.
+  His solar table runs 4½′ higher, which does not cancel his 3′ solar parallax.
+  Riccioli’s equinoctial solar table equals Tycho’s solar table less that
+  parallax, within about an arcsecond from 0° to 24°.
+- **Inputs.** 310 table entries from the *Progymnasmata* and the *Astronomia
+  Reformata*, [selected from the catalog](../examples/refraction-tables.csv)
+  with their altitude arguments.
+- **Limits.** Printed tables, not observed refraction. Modern values come from
+  Bennett’s formula over a stated range of air conditions. Tycho’s lunar table,
+  Longomontanus’s tables, and Riccioli’s reprint of Tycho lack recorded
+  altitudes in the catalog and are left out.
+- **Rerun.** `python examples/refraction_tables.py --output docs/figures`
+  regenerates the [summary](figures/refraction-tables-summary.csv), the other
+  tables, and the figure. A test regenerates the tables.
 - **Reviewed.** November 25, 2026, when the study was first published.
 
 ## Mars, Jupiter, and Saturn corrections

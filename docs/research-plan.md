@@ -21,7 +21,7 @@ observations can resolve.
 | Kepler and opposition tables | The passage from readings through reductions to constructed opposition tables. |
 | Mars, Jupiter, and Saturn parallax | [Historically recorded and modern corrections](planetary-parallax-comparisons.md), with diurnal-parallax sensitivity and orbital triangulation as separate research questions. |
 | Mercury and Venus parallax | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md), with historical and modern distance and refraction assumptions. |
-| Accuracy and refraction | [Planetary correction comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. Extend to calibrated observing sessions and quantify instrument, timing, and atmospheric effects. |
+| Accuracy and refraction | [The printed refraction tables](refraction-tables.md) of Tycho and Riccioli are compared with modern refraction. [Planetary correction comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. Extend to calibrated observing sessions and quantify instrument, timing, and atmospheric effects. |
 | Stellar aberration | Test whether dated terrestrial stellar observations and their calibration records permit an independent determination of annual aberration, with refraction, instrument and seasonal effects evaluated separately. Mean catalog positions and corrections already applied retain their distinct roles. |
 | Other planets and records | Planetary, lunar, cometary and stellar observations within the same source-based approach. |
 
@@ -125,8 +125,8 @@ The core evidence is Tycho’s and other astronomers’ recorded observations. E
 analysis will retain those readings and identify the adjustments applied to them.
 The same eligible readings will be evaluated using the documented contemporary
 tables or procedures and modern calculations. Tycho’s refraction values and modern
-refraction predictions form a dedicated comparison; other corrections can vary
-where their meaning and inputs are established.
+refraction predictions form a [dedicated comparison](refraction-tables.md); other
+corrections can vary where their meaning and inputs are established.
 
 The [correction comparison design](correction-comparisons.md) distinguishes values
 as recorded, source-applied reductions, reconstructed historical corrections and

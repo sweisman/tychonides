@@ -37,7 +37,9 @@ interpretation limits.
 The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
 passage through four models. The [opposition study](docs/mars-oppositions.md)
 sets Tycho’s Mars longitudes and the tables of his day against a modern
-ephemeris. The [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
+ephemeris. The [refraction study](docs/refraction-tables.md) sets the printed
+tables of Tycho and Riccioli beside modern refraction. The
+[planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
 results. The [studies page](docs/studies.md) lists each finished analysis with
 its inputs and how to rerun it. The [status page](docs/status.md) shows what is
@@ -83,8 +85,9 @@ uncertain interpretations. Diurnal parallax and orbital triangulation likewise
 remain separate approaches to distance.
 
 The recorded observations remain the common evidence when corrections change.
-Analyses will compare contemporary tables, including Tycho’s refraction values,
-with modern calculations, making the effect of each correction choice visible.
+Analyses compare contemporary tables, beginning with
+[Tycho’s refraction values](docs/refraction-tables.md), with modern
+calculations, making the effect of each correction choice visible.
 The [correction comparison design](docs/correction-comparisons.md) describes these
 alternatives and their assumptions.
 
