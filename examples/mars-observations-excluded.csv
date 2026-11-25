@@ -1,0 +1,77 @@
+opposition,julian_date,source_id,printed_page,longitude_id,role,longitude_expression,reason
+,,tycho-oo-10,6,assertion-v10-0fcc39f87247e00f203d,historical_prediction,24.20 ♂ ♋,no single complete date claim
+,,tycho-oo-10,285,assertion-v10-435520eb7106ae8f2d94,historical_prediction,11 43 ♋,no single complete date claim
+,,tycho-oo-10,199,assertion-v10-540bd983c8e5c9b33bc3,reduction,16 47 53` ♋,no single complete date claim
+,,tycho-oo-10,391,assertion-v10-62c7272918ce0e035066,adopted_value,23 34 ♌,no single complete date claim
+,,tycho-oo-10,18,assertion-v10-7029b334d76197444b53,reduction,8^g^ 0′ of ♌,no single complete date claim
+,,tycho-oo-10,285,assertion-v10-a944ac6d7ed87063207e,historical_prediction,p. 101.51,no single complete date claim
+,,tycho-oo-10,285,assertion-v10-ce7122c1a467f7e8d116,historical_prediction,11ᵍ 51′ ♋,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-0204ffece6ae6a30addb,adopted_value,25° 25′,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-a3a9adc9068f0c9849ce,adopted_value,27° 15′ ♐,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-bc3d11bc7496f006e416,adopted_value,20° 8′,no single complete date claim
+,,tycho-oo-12,445,assertion-v12-cb20276eb5f30ea0d16f,reduction,26° 6½′ ♉,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-d7557b9c1814d806459b,adopted_value,25° 43′,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-e0d32fb1ac195d940a08,adopted_value,26° 2′,no single complete date claim
+,,tycho-oo-12,150,assertion-v12-f3d8931f79e1746077ac,adopted_value,21° 12′,no single complete date claim
+,,tycho-oo-12,221,assertion-v12-fc5862b2ac35bab51daf,reduction,7° 25⅓′ ♉,no single complete date claim
+III,1585-01-31,tycho-oo-10,390,assertion-v10-148c56eaf3f4a6fec458,reduction,21 12 ♌,superseded by an adopted value on the same date
+III,1585-01-31,tycho-oo-10,390,assertion-v10-2fe3d6ce50bf49d076ea,reduction,21° 11′ 52″ ♌,superseded by an adopted value on the same date
+III,1585-01-31,tycho-oo-10,388,assertion-v10-8de004b5d5ef9ca9f0c4,reduction,21 18 11 ♌,superseded by an adopted value on the same date
+III,1585-01-31,tycho-oo-10,390,assertion-v10-9c44c6aea5e0441ec9c4,reduction,21 0 ♌,superseded by an adopted value on the same date
+III,1585-01-31,tycho-oo-10,388,assertion-v10-c4e91b4e2b4899e45108,reduction,21 18 ♌,superseded by an adopted value on the same date
+III,1585-03-11,tycho-oo-10,397,assertion-v10-85edf39e1beb6f7ddd29,historical_prediction,11 17 51 ♌,no model name
+III,1585-03-12,tycho-oo-10,397,assertion-v10-bf1f1313ac53cdd09e2d,historical_prediction,11 17 5 ♌,no model name
+III,1585-03-13,tycho-oo-10,397,assertion-v10-64ed11ae6565bd0c255d,historical_prediction,11 15 56 ♌,no model name
+III,1585-03-14,tycho-oo-10,397,assertion-v10-7198707b37b1fd381be8,historical_prediction,11 16 1 ♌,no model name
+III,1585-03-16,tycho-oo-10,397,assertion-v10-fc457771b89c56d67506,historical_prediction,11 19 2 ♌,no model name
+III,1585-03-19,tycho-oo-10,397,assertion-v10-383c7e4f0dcc66117dcc,reduction,12 1 40 ♌,superseded by an adopted value on the same date
+III,1585-03-19,tycho-oo-10,397,assertion-v10-95003887b73d85fb184e,historical_prediction,11°28′5″ ♌,no model name
+III,1585-03-19,tycho-oo-10,397,assertion-v10-a9dc5259623a0561362a,reduction,12 1 40♌,superseded by an adopted value on the same date
+III,1585-03-26,tycho-oo-10,398,assertion-v10-216fcaddc0a44fc263d3,reduction,12 50 5,no printed zodiac sign
+III,1585-03-26,tycho-oo-10,398,assertion-v10-5cf5f5f589b455501612,historical_prediction,12°13½ ♌,no model name
+VI,1591-05-12,tycho-oo-12,151,assertion-v12-01d86d1c9d12d74fae4a,reduction,2° 24⅓′,no printed zodiac sign
+VI,1591-05-13,tycho-oo-12,151,assertion-v12-154db373773f444d51c5,reduction,2° 20′,no printed zodiac sign
+VI,1591-05-19,tycho-oo-12,151,assertion-v12-8803af5a65187ed82467,reduction,1° 34¾′,no printed zodiac sign
+VI,1591-05-21,tycho-oo-12,151,assertion-v12-042bc0b0eb2876642a4d,reduction,1° 15¾′,no printed zodiac sign
+VI,1591-05-24,tycho-oo-12,151,assertion-v12-2e3cf18651e3d519a61f,reduction,0° 40⅓′,no printed zodiac sign
+VI,1591-06-06,tycho-oo-12,142,assertion-v12-4488ce26bd833214038b,reduction,27° 15′ ♐,superseded by an adopted value on the same date
+VI,1591-06-06,tycho-oo-12,151,assertion-v12-4c1511f42de8c67114d1,reduction,27° 15′,no printed zodiac sign
+VI,1591-06-06,tycho-oo-12,150,assertion-v12-df3d386e410d425b8b04,reduction,27° 14⅙′ ♐,superseded by an adopted value on the same date
+VI,1591-06-06,tycho-oo-12,150,assertion-v12-e2af12ec1bda7db8187d,reduction,27° 16¼′,no printed zodiac sign
+VI,1591-06-10,tycho-oo-12,151,assertion-v12-2568b7327729f16d5c7d,reduction,26° 2½′,no printed zodiac sign
+VI,1591-06-10,tycho-oo-12,149,assertion-v12-4a74d7aca637feb835dd,reduction,26° 2½′ ♐,superseded by an adopted value on the same date
+VI,1591-06-10,tycho-oo-12,150,assertion-v12-53826c58ef203f5a67d6,reduction,26° 1′ 45″,no printed zodiac sign
+VI,1591-06-10,tycho-oo-12,150,assertion-v12-9518a2e993483d257e3d,reduction,26° 4¼′,no printed zodiac sign
+VI,1591-06-10,tycho-oo-12,143,assertion-v12-db5032a7de35a89b174a,reduction,26° 2′ 36″ ♐,superseded by an adopted value on the same date
+VI,1591-06-11,tycho-oo-12,149,assertion-v12-42827ed688ff29e29681,reduction,25° 43½′,no printed zodiac sign
+VI,1591-06-11,tycho-oo-12,151,assertion-v12-6fc257f77a77d8882eb3,reduction,25° 43′,no printed zodiac sign
+VI,1591-06-12,tycho-oo-12,151,assertion-v12-828a5c7a17dae398059e,reduction,25° 25′,no printed zodiac sign
+VI,1591-06-21,tycho-oo-12,149,assertion-v12-0f880b7103907598cf57,reduction,25° 39¾′,no printed zodiac sign
+VI,1591-06-21,tycho-oo-12,149,assertion-v12-9f900cffbfe9611c432a,reduction,25° 39′,no printed zodiac sign
+VI,1591-06-28,tycho-oo-12,149,assertion-v12-3ca0510cb1d35382e2d1,reduction,21° 12⅓′,no printed zodiac sign
+VI,1591-06-28,tycho-oo-12,151,assertion-v12-4d8d890d54e37a798c21,reduction,21° 12′,no printed zodiac sign
+VI,1591-07-08,tycho-oo-12,149,assertion-v12-f3daa665c002694134ed,reduction,21° 9⅚′,no printed zodiac sign
+VI,1591-07-17,tycho-oo-12,151,assertion-v12-b53cdcd109871f7b437d,reduction,20° 8′,no printed zodiac sign
+VIII,1595-10-28,tycho-oo-12,453,assertion-v12-0e86b7d429cc6310a827,reduction,18° 29⅗′ ♉,superseded by an adopted value on the same date
+VIII,1595-10-28,tycho-oo-12,453,assertion-v12-9199afb16a40d87b57cd,reduction,18° 29′ 20″ ♉,superseded by an adopted value on the same date
+VIII,1595-10-28,tycho-oo-12,453,assertion-v12-face4ab0f4c6e20064ab,reduction,18° 28′ 25″ ♉,superseded by an adopted value on the same date
+VIII,1595-10-30,tycho-oo-12,453,assertion-v12-b9cf76cd268c2821421e,reduction,17° 48½′ ♉,superseded by an adopted value on the same date
+VIII,1595-10-30,tycho-oo-12,453,assertion-v12-e09572b9f64f77a90d35,reduction,17° 47¼′,superseded by an adopted value on the same date
+VIII,1595-11-03,tycho-oo-12,454,assertion-v12-264a12f2e5e0b610bfd5,reduction,16° 18′ 12″ ♉,superseded by an adopted value on the same date
+VIII,1595-11-03,tycho-oo-12,454,assertion-v12-9649193e6db7aada66d8,reduction,16° 19′ 4″ ♉,superseded by an adopted value on the same date
+VIII,1595-12-17,tycho-oo-12,458,assertion-v12-e43c53f049dffa266ccc,reduction,11° 31′ 27″,no printed zodiac sign
+VIII,1595-12-18,tycho-oo-12,460,assertion-v12-a0be727d334e5fbf5ffe,reduction,11° 41′ 19″ ♉,superseded by an adopted value on the same date
+VIII,1595-12-18,tycho-oo-12,459,assertion-v12-c4f5b1db8ea5af8e4894,reduction,11° 41½′ ♉,superseded by an adopted value on the same date
+VIII,1595-12-18,tycho-oo-12,460,assertion-v12-faccc7b2d9dcd39830bc,reduction,11° 39′ 45″ ♉,superseded by an adopted value on the same date
+IX,1597-12-10,tycho-oo-13,112,assertion-v13-11d802147f39c3c57ffd,reduction,3 30 ♋,superseded by an adopted value on the same date
+IX,1597-12-10,tycho-oo-13,112,assertion-v13-b8df9e5654fd3295cf87,reduction,3 32½ ♋,superseded by an adopted value on the same date
+IX,1597-12-10,tycho-oo-13,112,assertion-v13-d2936e9ff116e5fef909,reduction,4°20′ ♋,superseded by an adopted value on the same date
+IX,1597-12-10,tycho-oo-13,151,assertion-v13-e2a5cdd1a3c9a678490a,reduction,3 40 ♋,superseded by an adopted value on the same date
+IX,1597-12-10,tycho-oo-13,154,assertion-v13-feda0f454531d5835398,reduction,3 40 15 ♋,superseded by an adopted value on the same date
+X,1600-01-19,tycho-oo-13,221,assertion-v13-20f9c7a69c66780b61fe,reduction,8° 18¾′ ♌,superseded by an adopted value on the same date
+X,1600-01-19,tycho-oo-13,244,assertion-v13-25289e290eebebf37c5e,reduction,in 8° 18′ 30″ ♌,superseded by an adopted value on the same date
+X,1600-01-19,tycho-oo-13,221,assertion-v13-81404eccf46bd48c1999,reduction,8°18⅖′ ♌,superseded by an adopted value on the same date
+X,1600-01-19,tycho-oo-13,221,assertion-v13-9ba769b7db8019a25f82,historical_prediction,♌ 8 19 48,no model name
+X,1600-01-22,tycho-oo-13,221,assertion-v13-a80cb0f800a754aba268,reduction,11 22 4 ♌,superseded by an adopted value on the same date
+X,1600-01-22,tycho-oo-13,244,assertion-v13-d4efb78f0c8c0203887c,reduction,7 7½ ♌,superseded by an adopted value on the same date
+X,1600-01-22,tycho-oo-13,221,assertion-v13-f85e7ac121017a46e69a,reduction,11 26 57 ♌,superseded by an adopted value on the same date

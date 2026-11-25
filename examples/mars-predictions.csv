@@ -1,0 +1,127 @@
+opposition,julian_date,daypart,source_id,printed_page,longitude_id,model,longitude_expression,within_sign_degrees_exact,longitude_degrees_exact
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-7632869f96aca1f9dce0,Alphonsine,5.48 ♊,29/5,329/5
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-deb9903d19c8921c89e1,Prutenic,6.15 ♊,25/4,265/4
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-04f1d1c1d8dd4bc621cf,Alphonsine,29.8 ♉,437/15,887/15
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-0c4b65af31ee58a84cb2,Prutenic,29.45 ♉,119/4,239/4
+I,1580-12-24,,tycho-oo-10,88,assertion-v10-72e6c7e34a4575294d7e,Alphonsine,28.10 ♉,169/6,349/6
+I,1580-12-24,,tycho-oo-10,88,assertion-v10-63b94c3e14a212f88500,Prutenic,29.0 ♉,29,59
+II,1582-12-28,after_noon,tycho-oo-10,391,assertion-v10-b771b94a785a5cc0f81c,Prutenic,16 46⅔ ♋,151/9,961/9
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-d7536ebe9faf6a616c65,Alphonsine,24 3 ♌,481/20,2881/20
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-5af54021fb3ef5168741,Copernicus,29 35 ♌,355/12,1795/12
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-a43d09d9a4a3d00e933e,Alphonsine,21 15 ♌,85/4,565/4
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-61cd9ee24dd9d5f3dc47,Copernicus,27 4 ♌,406/15,2206/15
+III,1585-01-24,,tycho-oo-10,388,assertion-v10-c2f5bd9e11c6890dfde9,Alphonsine,20 35 ♌,247/12,1687/12
+III,1585-01-24,,tycho-oo-10,388,assertion-v10-cb03950c405c0320ac32,Copernicus,26 25 ♌,317/12,1757/12
+III,1585-01-31,,tycho-oo-10,388,assertion-v10-0edefbbf58793631c900,Alphonsine,17 39 ♌,353/20,2753/20
+III,1585-01-31,,tycho-oo-10,388,assertion-v10-a8ddeffdd84e2a4d28a8,Copernicus,23 38 ♌,709/30,4309/30
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-1c444b21128cad10b071,Alphonsine,16 35 ♌,199/12,1639/12
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-72b57ab46aa5bbca350f,Copernicus,22 35 ♌,271/12,1711/12
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-941acc33d48a0f48f2b3,Alphonsine,16 11 ♌,971/60,8171/60
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-7c3a7f78f70e5b82f57e,Copernicus,22 8 ♌,332/15,2132/15
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-9ff98b4e1d9506e04f97,Alphonsine,8 34½ ♌,343/40,5143/40
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-ec4b967b55c7cb146219,Prutenic,12 54 ♌,129/10,1329/10
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-0b1c1ab037ec0c4771d4,Alphonsine,8 43 ♌,523/60,7723/60
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-676b1f2cff38e982638d,Copernicus,12 51 ♌,257/20,2657/20
+III,1585-03-19,,tycho-oo-10,397,assertion-v10-4cc94a110e9665c019f7,Alphonsine,9 7 ♌,547/60,7747/60
+III,1585-03-19,,tycho-oo-10,397,assertion-v10-da7bde6ac2e90d4fa6e5,Copernicus,12 57 ♌,259/20,2659/20
+III,1585-03-26,,tycho-oo-10,398,assertion-v10-113356919c42318791af,Alphonsine,10 0 ♌,10,130
+III,1585-03-26,,tycho-oo-10,398,assertion-v10-5f6631af71848a839501,Prutenic,13 35 ♌,163/12,1603/12
+IV,1587-03-09,after_noon,tycho-oo-11,185,assertion-v11-336e778edddcbde1aa82,Prutenic,26° 38′ ♍,799/30,5299/30
+V,1589-04-05,,tycho-oo-11,334,assertion-v11-b9bd3b6205df1989794a,Alphonsine,6° 27′ ♏,129/20,4329/20
+V,1589-04-05,,tycho-oo-11,334,assertion-v11-01d9582dad5fdf4d611c,Copernicus,9° 19′ ♏,559/60,13159/60
+V,1589-04-08,,tycho-oo-11,334,assertion-v11-e5ee26fd775d359ffddb,Alphonsine,5° 27′,109/20,4309/20
+V,1589-04-08,,tycho-oo-11,334,assertion-v11-35a5ffbb6925df59a909,Copernicus,8° 14′,247/30,6547/30
+V,1589-04-13,,tycho-oo-11,334,assertion-v11-052338289fb7f91cd1a0,Alphonsine,3° 43′,223/60,12823/60
+V,1589-04-13,,tycho-oo-11,334,assertion-v11-46990590381d475038ff,Copernicus,6° 27′,129/20,4329/20
+V,1589-04-15,,tycho-oo-11,334,assertion-v11-e48b8f80cb51f3c4d8c6,Alphonsine,3° 1′,181/60,12781/60
+V,1589-04-15,,tycho-oo-11,334,assertion-v11-bc4f81e6be9deffc3f92,Copernicus,5° 42′,57/10,2157/10
+V,1589-04-20,,tycho-oo-11,334,assertion-v11-d6b84fe1c3606e9f034b,Alphonsine,1° 14′,37/30,6337/30
+V,1589-04-20,,tycho-oo-11,334,assertion-v11-af8fa3f3b385fc4ed53d,Copernicus,3° 46′,113/30,6413/30
+V,1589-04-22,,tycho-oo-11,334,assertion-v11-3e53740e168280286e6d,Alphonsine,0° 34′,17/30,6317/30
+V,1589-04-22,,tycho-oo-11,334,assertion-v11-a24ea3f440c9ae688474,Copernicus,3° 1′,181/60,12781/60
+V,1589-04-23,,tycho-oo-11,334,assertion-v11-190007fffc7e16fe9e5d,Alphonsine,0° 16′,4/15,3154/15
+V,1589-04-23,,tycho-oo-11,334,assertion-v11-765291e30a8283caf2d4,Copernicus,2° 39′,53/20,4253/20
+V,1589-04-24,,tycho-oo-11,334,assertion-v11-fa6e9bc5efc624173d6d,Alphonsine,29° 58′ ♎,899/30,6299/30
+V,1589-04-24,,tycho-oo-11,334,assertion-v11-e34b191f10bb3a342efa,Copernicus,2° 17′,137/60,12737/60
+V,1589-04-26,,tycho-oo-11,334,assertion-v11-058cc3906e0f0c8a00f6,Alphonsine,29° 19′,1759/60,12559/60
+V,1589-04-26,,tycho-oo-11,334,assertion-v11-b94e6c0852a147ddaaeb,Copernicus,1° 33′,31/20,4231/20
+VI,1591-04-29,,tycho-oo-12,151,assertion-v12-b2ecba434ea9f494804f,Alphonsine,4° 48¾′ ♑,77/16,4397/16
+VI,1591-04-29,,tycho-oo-12,151,assertion-v12-face02b568531e9deecb,Copernicus,2° 11′ ♑,131/60,16331/60
+VI,1591-05-12,,tycho-oo-12,151,assertion-v12-75ee04b8b0649eb26adc,Alphonsine,5° 42½′,137/24,
+VI,1591-05-12,,tycho-oo-12,151,assertion-v12-5c48e140711d328cd390,Copernicus,2° 33⅓′,23/9,
+VI,1591-05-13,,tycho-oo-12,151,assertion-v12-d66bf1516bafb0293d60,Alphonsine,5° 42′,57/10,
+VI,1591-05-13,,tycho-oo-12,151,assertion-v12-4b4f979be4c1942ed097,Copernicus,2° 30⅓′,451/180,
+VI,1591-05-19,,tycho-oo-12,151,assertion-v12-06fa80b39d9edf45e953,Alphonsine,5° 20′,16/3,
+VI,1591-05-19,,tycho-oo-12,151,assertion-v12-dcf5ee7648b684c4c887,Copernicus,1° 50¼′,147/80,
+VI,1591-05-21,,tycho-oo-12,151,assertion-v12-2268c1c0ef74c1951c94,Alphonsine,5° 4¾′,1219/240,
+VI,1591-05-21,,tycho-oo-12,151,assertion-v12-54efefda98005405100d,Copernicus,1° 31⅓′,137/90,
+VI,1591-05-24,,tycho-oo-12,151,assertion-v12-bb7f93f087c7abbc018b,Alphonsine,4° 37′,277/60,
+VI,1591-05-24,,tycho-oo-12,151,assertion-v12-2c6944c0e3d6def440e2,Copernicus,0° 52⅓′,157/180,
+VI,1591-05-29,,tycho-oo-12,151,assertion-v12-fe53db82cc10262bf2dc,Alphonsine,3° 39′,73/20,
+VI,1591-05-29,,tycho-oo-12,151,assertion-v12-fe7dd89e509d4c8e6425,Copernicus,29° 36½′ ♐,3553/120,32353/120
+VI,1591-06-06,,tycho-oo-12,151,assertion-v12-272b780893cb17614c4c,Alphonsine,1° 36′,8/5,
+VI,1591-06-06,,tycho-oo-12,151,assertion-v12-f968a16cd639b413001f,Copernicus,27° 7′,1627/60,
+VI,1591-06-08,,tycho-oo-12,151,assertion-v12-cbb857ea467d8bdb1430,Alphonsine,0° 57′ ♑,19/20,5419/20
+VI,1591-06-08,,tycho-oo-12,152,assertion-v12-bda2c0abe12b32bd6d14,Copernicus,4 sex. 7° 42′,2477/10,
+VI,1591-06-08,,tycho-oo-12,151,assertion-v12-5dab8a18fa6970c4a78e,Prutenic,26° 27′ ♐,529/20,5329/20
+VI,1591-06-10,,tycho-oo-12,151,assertion-v12-f9340cac5c8f25c7b4b5,Alphonsine,0° 18′,3/10,
+VI,1591-06-10,,tycho-oo-12,151,assertion-v12-d59ebaecb37ef33f60cc,Copernicus,25° 46′,773/30,
+VI,1591-06-11,,tycho-oo-12,151,assertion-v12-3e0adc83930118a9653a,Alphonsine,29° 58′ ♐,899/30,8099/30
+VI,1591-06-11,,tycho-oo-12,151,assertion-v12-6f1ed2d7376a259dd42b,Copernicus,25° 25′,305/12,
+VI,1591-06-12,,tycho-oo-12,151,assertion-v12-ae5d12269f7b4ca7ec99,Alphonsine,29° 39′,593/20,
+VI,1591-06-12,,tycho-oo-12,151,assertion-v12-9db42bda3b6423e0befd,Copernicus,25° 3′,501/20,
+VI,1591-06-28,,tycho-oo-12,151,assertion-v12-c73a65396130c9f518fa,Alphonsine,24° 54′,249/10,
+VI,1591-06-28,,tycho-oo-12,151,assertion-v12-b0e52a89643c6623816d,Copernicus,20° 22′,611/30,
+VI,1591-07-17,,tycho-oo-12,151,assertion-v12-60a1200046190bd9d11c,Alphonsine,22° 37′,1357/60,
+VI,1591-07-17,,tycho-oo-12,151,assertion-v12-624eaf21d82f79332588,Copernicus,18° 51′,377/20,
+VII,1593-07-21,,tycho-oo-12,291,assertion-v12-62fb03ba2cc1b0d3b1dc,Alphonsine,22° 44′ ♓,341/15,5291/15
+VII,1593-07-21,,tycho-oo-12,291,assertion-v12-92a7c2348c3337fb6465,Copernicus,14° 48½′ ♓,1777/120,41377/120
+VII,1593-07-22,morning,tycho-oo-12,283,assertion-v12-5f0d2bed19e9b283fa6b,Alphonsine,22° 44′ ♓,341/15,5291/15
+VII,1593-07-22,morning,tycho-oo-12,283,assertion-v12-0e7e6666553facb4b194,Copernicus,"14° 48½′ ♓,",1777/120,41377/120
+VII,1593-07-30,,tycho-oo-12,291,assertion-v12-b5fd8f2f7821628d16f0,Alphonsine,22° 46′,683/30,10583/30
+VII,1593-07-30,,tycho-oo-12,291,assertion-v12-771cc4be361f78351812,Copernicus,13° 57′,279/20,6879/20
+VII,1593-07-31,morning,tycho-oo-12,284,assertion-v12-7ac485ef3032c434fa42,Alphonsine,22° 46′ ♓,683/30,10583/30
+VII,1593-07-31,morning,tycho-oo-12,284,assertion-v12-c6104d58aa46f3e91d4e,Copernicus,13° 57′ ♓,279/20,6879/20
+VII,1593-08-10,,tycho-oo-12,291,assertion-v12-8149c306fb130833f72c,Alphonsine,21° 26′,643/30,10543/30
+VII,1593-08-10,,tycho-oo-12,291,assertion-v12-981f08dbd5cdb75acb12,Copernicus,12° 0′,12,342
+VII,1593-08-11,morning,tycho-oo-12,285,assertion-v12-b8bae8affaeb5e1450a3,Alphonsine,21° 26′,643/30,
+VII,1593-08-11,morning,tycho-oo-12,285,assertion-v12-394609affe925e94feef,Copernicus,12° 0′ ♓,12,342
+VII,1593-08-17,,tycho-oo-12,291,assertion-v12-6780e141393bd85c1aad,Alphonsine,19° 38′,589/30,10489/30
+VII,1593-08-17,,tycho-oo-12,291,assertion-v12-d07057d2847256a7b901,Copernicus,10° 11′,611/60,20411/60
+VII,1593-08-18,morning,tycho-oo-12,286,assertion-v12-199605e59145662afe56,Alphonsine,19° 38′ ♓,589/30,10489/30
+VII,1593-08-18,morning,tycho-oo-12,286,assertion-v12-0c087655b7561eb2cc1a,Copernicus,10° 11′ ♓,611/60,20411/60
+VII,1593-08-20,,tycho-oo-12,291,assertion-v12-a0891b0235cd386766c4,Alphonsine,18° 46′,563/30,10463/30
+VII,1593-08-20,,tycho-oo-12,291,assertion-v12-5ae97932e6fa68134a56,Copernicus,9° 16′,139/15,5089/15
+VII,1593-08-21,morning,tycho-oo-12,286,assertion-v12-764e1a12d7b8a1c8004a,Alphonsine,18° 46′,563/30,
+VII,1593-08-21,before_midnight,tycho-oo-12,287,assertion-v12-ba9649b0fe0fd742b27d,Alphonsine,18° 29′ ♓,1109/60,20909/60
+VII,1593-08-21,,tycho-oo-12,291,assertion-v12-e27c9cdd6e2245d25fc3,Alphonsine,18° 29′,1109/60,20909/60
+VII,1593-08-21,before_midnight,tycho-oo-12,287,assertion-v12-1685d4c4b411419c2f2d,Copernicus,8° 58′ ♓,269/30,10169/30
+VII,1593-08-21,morning,tycho-oo-12,286,assertion-v12-404d37fb2cd2bbcfc911,Copernicus,9° 16′ ♓,139/15,5089/15
+VII,1593-08-21,,tycho-oo-12,291,assertion-v12-de759b503a9200cd7c0e,Copernicus,8° 58′,269/30,10169/30
+VII,1593-08-22,,tycho-oo-12,291,assertion-v12-b874cb8d517a6f8b8648,Alphonsine,18° 11′,1091/60,20891/60
+VII,1593-08-22,,tycho-oo-12,291,assertion-v12-7c4fec805f59b3ee9b95,Copernicus,8° 39′,173/20,6773/20
+VII,1593-08-23,,tycho-oo-12,291,assertion-v12-e46982badeffdb6dc0e6,Alphonsine,17° 53′,1073/60,20873/60
+VII,1593-08-23,,tycho-oo-12,291,assertion-v12-fc531d2383c5ee80903f,Copernicus,8° 21′,167/20,6767/20
+VII,1593-08-24,,tycho-oo-12,291,assertion-v12-a6248deb349bb17e0902,Alphonsine,12° 35′,151/12,4111/12
+VII,1593-08-24,,tycho-oo-12,291,assertion-v12-b92f241cdc17eeb6b296,Copernicus,7° 4′,106/15,5056/15
+VII,1593-08-29,,tycho-oo-12,291,assertion-v12-86aebbc13fa86208abe2,Alphonsine,15° 59′,959/60,20759/60
+VII,1593-08-29,,tycho-oo-12,291,assertion-v12-267afa8f503a449263e1,Copernicus,6° 42′,67/10,3367/10
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-cf640bb5c48cb527990b,Alphonsine,25⅙° ♉,151/6,331/6
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-9c447075f5723626173a,Prutenic,22⅚° ♉,137/6,317/6
+VIII,1595-09-30,before_noon,tycho-oo-12,445,assertion-v12-4d699f31ae88131ea7d5,Alphonsine,26° 16′,394/15,
+VIII,1595-09-30,before_noon,tycho-oo-12,445,assertion-v12-5aab39138aac30134b90,Copernicus,24° 20′,73/3,
+VIII,1595-10-12,evening,tycho-oo-12,446,assertion-v12-fc0e090808bb23a8651c,Alphonsine,23° 51′,477/20,
+VIII,1595-10-12,evening,tycho-oo-12,446,assertion-v12-dffe7f79cdfdf0ed5ee0,Copernicus,21° 56′,329/15,
+VIII,1595-10-16,morning,tycho-oo-12,446,assertion-v12-e667f3eea91d200cd460,Alphonsine,22° 50′,137/6,
+VIII,1595-10-16,morning,tycho-oo-12,446,assertion-v12-5f20b5cba1aa924d5cb4,Copernicus,21° 0′,21,
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-8d31e26ad974abbb4231,Alphonsine,19° 46′,593/30,
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-223e9771b474f6bcc401,Copernicus,17° 54′,179/10,
+IX,1597-12-13,after_noon,tycho-oo-13,151,assertion-v13-72853f479b3d73507360,Prutenic,3 51 ♋,77/20,1877/20
+X,1600-03-02,,tycho-oo-13,224,assertion-v13-627777acfee17388fdc0,Alphonsine,♋ 26° 15′,105/4,465/4
+X,1600-03-02,,tycho-oo-13,224,assertion-v13-a80396f42b8edfd73373,Copernicus,♌ 0° 40′,2/3,362/3
+X,1600-03-09,,tycho-oo-13,224,assertion-v13-48b3eeb8425806f0ec2f,Alphonsine,26 6,261/10,1161/10
+X,1600-03-09,,tycho-oo-13,224,assertion-v13-d01b4406b24318351a29,Copernicus,0 10,1/6,721/6
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-c9355015affa16fd846b,Alphonsine,26 23,1583/60,6983/60
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-cc2774c7430b939cda78,Copernicus,0 10,1/6,721/6
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-e0b039797f51d55b92c5,Alphonsine,26 30,53/2,233/2
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-aafae7585a25c1108a22,Copernicus,0 14,7/30,3607/30

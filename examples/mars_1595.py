@@ -1,247 +1,312 @@
-"""Reproduce the Mars comparison without network access or a catalog download."""
+"""Reproduce the 1595 Mars comparison without network access or a catalog download.
+
+Inputs are the CSV files beside this script: the selected log reductions, the
+opposition table, and cached JPL positions. `mars_select.py` and
+`mars_ephemeris.py` rebuild those inputs from the catalog and from Horizons.
+"""
 
 import argparse
 import csv
-from dataclasses import dataclass
-from datetime import date, timedelta
+from collections import defaultdict
+from datetime import date
 from fractions import Fraction
 from pathlib import Path
 
-import matplotlib
+import mars_model as mm
 import numpy as np
 
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-
-OPPOSITION_DATE = date(1595, 10, 31)  # Julian label, used for calendar arithmetic.
-OPPOSITION_LONGITUDE = 30 + 17 + (30 + 2 / 3) / 60
-OPPOSITION_JD = (OPPOSITION_DATE + timedelta(days=10)).toordinal() + 1721425
-APOGEE = (9 + 6 / 60 + 40 / 3600 + 28 + 8 / 60 + 40 / 3600 - (240 + 8 + 20 / 60)) % 360
-SUN_APOGEE = np.deg2rad(96)
-ANNUAL_RATE = np.deg2rad(360 / 365.2422)
-MARS_RATE = np.deg2rad(360 / 686.98)
-
-# JPL approximate positions, Table 2a. Columns a, e, inclination, mean
-# longitude, perihelion longitude, node longitude. Second row per century.
-EARTH_ELEMENTS = (
-    (1.00000018, 0.01673163, -0.00054346, 100.46691572, 102.93005885, -5.11260389),
-    (-0.00000003, -0.00003661, -0.01337178, 35999.37306329, 0.31795260, -0.24123856),
+NUMBER = "VIII"
+PREDICTION_KEEP = [
+    "julian_date", "source_id", "printed_page", "longitude_id", "model", "longitude_expression",
+]  # fmt: skip
+PREDICTION_FIELDS = [
+    *PREDICTION_KEEP, "sign_basis", "log_longitude_degrees", "prediction_minus_log_arcmin",
+    "de441_longitude_degrees", "prediction_minus_de441_arcmin",
+]  # fmt: skip
+VARIANTS = (
+    ("baseline", {}),
+    ("every row at nominal noon", {"time": "noon"}),
+    ("printed hours 30 minutes later", {"time": 0.5}),
+    ("printed hours 30 minutes earlier", {"time": -0.5}),
+    ("mean Sun opposite Mars at the anchor", {"mean_sun": "opposite Mars"}),
+    ("apsidal line 20 degrees earlier", {"apogee_shift": -20.0}),
+    ("apsidal line 10 degrees earlier", {"apogee_shift": -10.0}),
+    ("apsidal line 10 degrees later", {"apogee_shift": 10.0}),
+    ("Copernican Earth circle 0.65495", {"copernican": (0.146, 0.050, 0.65495)}),
+    ("Copernican small circles 1484 and 371", {"copernican": (0.1484, 0.0371, 0.658)}),
+    ("Tychonic radius rule with mean anomalies", {"radius_rule": "mean anomalies"}),
+    ("Tychonic constant annual radius", {"radius_rule": "constant"}),
+    (
+        "Tychonic uniform Sun and constant radius",
+        {"radius_rule": "constant", "eccentric_sun": False},
+    ),
+    ("without the September 7 globe estimates", {"omit": "1595-09-07"}),
+    ("without the log's computed opposition of October 29", {"omit": "1595-10-29"}),
 )
-MARS_ELEMENTS = (
-    (1.52371243, 0.09336511, 1.85181869, -4.56813164, -23.91744784, 49.71320984),
-    (0.00000097, 0.00009149, -0.00724757, 19140.29934243, 0.45223625, -0.26852431),
-)
 
 
-def angle(vector):
-    return np.angle(vector, deg=True)
+def load():
+    opposition = mm.load_oppositions()[NUMBER]
+    rows = mm.load_observations(NUMBER)
+    ephemeris = mm.load_ephemeris()
+    for row in rows:
+        cached = ephemeris[row["longitude_id"]]
+        if abs(float(cached["jd_ut"]) - row["jd_ut"]) > 2e-6:
+            raise ValueError("Cached ephemeris is stale; run mars_ephemeris.py")
+        row["de441_longitude"] = float(cached["longitude_degrees"])
+    return opposition, rows, ephemeris
 
 
-def wrapped(degrees):
-    return (degrees + 180) % 360 - 180
+def write_csv(path, fields, rows):
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(rows)
 
 
-def deferent(anomaly):
-    eccentric_offset = 6 / 60
-    along_ray = np.sqrt(1 - (eccentric_offset * np.sin(anomaly)) ** 2) - (
-        eccentric_offset * np.cos(anomaly)
-    )
-    return np.exp(1j * np.deg2rad(APOGEE)) * (
-        2 * eccentric_offset + along_ray * np.exp(1j * anomaly)
-    )
+def write_results(path, opposition, rows):
+    days, longitude, _, _ = mm.arrays(rows, opposition)
+    tracks = mm.models(days, opposition)
+    keep = [
+        "julian_date", "daypart", "source_id", "printed_page", "longitude_id", "role",
+        "longitude_expression", "longitude_degrees_exact", "date_weight", "epoch_expression",
+        "latitude_id", "latitude_arcseconds_exact",
+    ]  # fmt: skip
+    fields = [*keep, "time_basis", "jd_ut", "days_from_opposition", "modern_latitude_degrees"]
+    fields += ["de441_longitude_degrees", "de441_minus_log_arcmin"]
+    for track in tracks:
+        fields += [f"{track.key}_longitude_degrees", f"{track.key}_minus_log_arcmin"]
+    results = []
+    for i, row in enumerate(rows):
+        result = {name: row[name] for name in keep}
+        result |= {
+            "time_basis": row["time_basis"],
+            "jd_ut": f"{row['jd_ut']:.6f}",
+            "days_from_opposition": f"{days[i]:.4f}",
+            "modern_latitude_degrees": f"{tracks[-1].latitude[i]:.6f}",
+            "de441_longitude_degrees": f"{row['de441_longitude']:.6f}",
+            "de441_minus_log_arcmin": f"{(row['de441_longitude'] - longitude[i]) * 60:.2f}",
+        }
+        for track in tracks:
+            result[f"{track.key}_longitude_degrees"] = f"{track.longitude[i]:.6f}"
+            difference = mm.wrapped(track.longitude[i] - longitude[i]) * 60
+            result[f"{track.key}_minus_log_arcmin"] = f"{difference:.2f}"
+        results.append(result)
+    write_csv(path, fields, results)
 
 
-def epicycles(anomaly, large, small):
-    return np.exp(1j * anomaly) + large - small * np.exp(2j * anomaly)
-
-
-def longomontanus_annual_radius(solar_anomaly, mars_anomaly):
-    return (630275 + 11750 * (1 + np.cos(solar_anomaly)) + 12925 * (1 + np.cos(mars_anomaly))) / 1e6
-
-
-def anomaly_at_longitude(trajectory, longitude, apogee):
-    """Solve the monotone longitude near its corresponding circular phase."""
-    center = np.deg2rad(wrapped(longitude - apogee))
-    low, high = center - 0.4, center + 0.4
-    for _ in range(48):
-        mid = (low + high) / 2
-        if wrapped(angle(trajectory(mid)) - longitude) < 0:
-            low = mid
-        else:
-            high = mid
-    return (low + high) / 2
-
-
-def heliocentric_orbit(days_since_j2000, elements):
-    century = np.asarray(days_since_j2000)[..., None] / 36525
-    start, rates = np.asarray(elements)
-    a, e, inclination, mean_longitude, perihelion, node = np.moveaxis(
-        start + rates * century, -1, 0
-    )
-    mean_anomaly = np.deg2rad(wrapped(mean_longitude - perihelion))
-    eccentric_anomaly = mean_anomaly.copy()
-    for _ in range(6):
-        eccentric_anomaly -= (eccentric_anomaly - e * np.sin(eccentric_anomaly) - mean_anomaly) / (
-            1 - e * np.cos(eccentric_anomaly)
+def compare_predictions(opposition, rows):
+    """Each printed prediction beside the log and DE441 on the same date."""
+    by_date = defaultdict(list)
+    for row in rows:
+        by_date[row["julian_date"]].append(row)
+    table = []
+    for item in mm.load_predictions(opposition.number):
+        result = {name: item[name] for name in PREDICTION_KEEP}
+        signed = bool(item["longitude_degrees_exact"])
+        result["sign_basis"] = "printed" if signed else "not printed; compared within the sign"
+        value = float(
+            Fraction(item["longitude_degrees_exact"] or item["within_sign_degrees_exact"])
         )
-    x = a * (np.cos(eccentric_anomaly) - e)
-    y = a * np.sqrt(1 - e**2) * np.sin(eccentric_anomaly)
-    omega, inclination, node = np.deg2rad([perihelion - node, inclination, node])
-    along_node = x * np.cos(omega) - y * np.sin(omega)
-    across_node = x * np.sin(omega) + y * np.cos(omega)
-    projected = across_node * np.cos(inclination)
-    return np.stack(
-        [
-            along_node * np.cos(node) - projected * np.sin(node),
-            along_node * np.sin(node) + projected * np.cos(node),
-            across_node * np.sin(inclination),
-        ],
-        axis=-1,
-    )
+        same = by_date.get(item["julian_date"], [])
+        if same:
+            references = {
+                "log": np.mean([float(Fraction(row["longitude_degrees_exact"])) for row in same]),
+                "de441": np.mean([row["de441_longitude"] for row in same]),
+            }
+            for name, reference in references.items():
+                gap = (
+                    mm.wrapped(value - reference) if signed else (value - reference + 15) % 30 - 15
+                )
+                result[f"{name}_longitude_degrees"] = f"{reference:.6f}"
+                result[f"prediction_minus_{name}_arcmin"] = f"{gap * 60:.2f}"
+        table.append(result)
+    return table
 
 
-@dataclass(frozen=True)
-class Track:
-    name: str
-    key: str
-    color: str
-    style: str
-    earth: np.ndarray
-    mars: np.ndarray
-    guide: np.ndarray
-    latitude: np.ndarray | None = None
-
-    @property
-    def sightline(self):
-        return self.mars - self.earth
-
-    @property
-    def longitude(self):
-        return angle(self.sightline)
-
-
-def models(day):
-    day = np.asarray(day, dtype=float)
-    origin = np.zeros_like(day, dtype=complex)
-    apsis = np.exp(1j * np.deg2rad(APOGEE))
-    circular_earth = np.exp(1j * (np.deg2rad(OPPOSITION_LONGITUDE) + ANNUAL_RATE * day))
-
-    phase = anomaly_at_longitude(deferent, OPPOSITION_LONGITUDE, APOGEE)
-    center = deferent(phase + MARS_RATE * day) / (39.5 / 60)
-    ptolemy = Track(
-        "Ptolemaic equant", "ptolemaic", "#996019", "--", origin, center - circular_earth, center
-    )
-
-    def copernican(anomaly):
-        return apsis * epicycles(anomaly, 0.146, 0.050)
-
-    phase = anomaly_at_longitude(copernican, OPPOSITION_LONGITUDE, APOGEE)
-    mars = copernican(phase + MARS_RATE * day) / 0.658
-    copernicus = Track(
-        "Copernican circles", "copernican", "#07678a", ":", circular_earth, mars, origin
-    )
-
-    def longomontanus(anomaly):
-        return apsis * epicycles(anomaly, 0.1484, 0.0371)
-
-    def sun_trajectory(anomaly):
-        return np.exp(1j * SUN_APOGEE) * (1 / 28 + np.exp(1j * anomaly))
-
-    phase = anomaly_at_longitude(longomontanus, OPPOSITION_LONGITUDE, APOGEE)
-    mars_about_sun = longomontanus(phase + MARS_RATE * day)
-    solar_phase = anomaly_at_longitude(
-        sun_trajectory, OPPOSITION_LONGITUDE + 180, np.rad2deg(SUN_APOGEE)
-    )
-    sun_direction = np.angle(sun_trajectory(solar_phase + ANNUAL_RATE * day))
-    annual_radius = longomontanus_annual_radius(
-        sun_direction - SUN_APOGEE, np.angle(mars_about_sun / apsis)
-    )
-    sun = annual_radius * np.exp(1j * sun_direction) / 0.654950
-    mars = sun + mars_about_sun / 0.654950
-    tycho = Track("Tychonic (Longomontanus)", "tychonic", "#984481", "-.", origin, mars, sun)
-
-    # The date-centered comparison omits light time and sub-day TT/UT differences.
-    elapsed = OPPOSITION_JD - 2451545 + day
-    earth = heliocentric_orbit(elapsed, EARTH_ELEMENTS)
-    mars = heliocentric_orbit(elapsed, MARS_ELEMENTS)
-    geocentric = mars - earth
-    latitude = np.rad2deg(np.arctan2(geocentric[..., 2], np.hypot(*geocentric[..., :2].T)))
-    anchor = heliocentric_orbit(OPPOSITION_JD - 2451545, MARS_ELEMENTS) - heliocentric_orbit(
-        OPPOSITION_JD - 2451545, EARTH_ELEMENTS
-    )
-    phase = np.deg2rad(OPPOSITION_LONGITUDE - angle(complex(*anchor[:2])))
-    rotation = np.exp(1j * phase)
-    modern = Track(
-        "Modern Keplerian",
-        "modern",
-        "#276b4c",
-        "-",
-        rotation * (earth[..., 0] + 1j * earth[..., 1]),
-        rotation * (mars[..., 0] + 1j * mars[..., 1]),
-        origin,
-        latitude,
-    )
-    return ptolemy, copernicus, tycho, modern
-
-
-def read_observations(path):
-    with path.open(encoding="utf-8", newline="") as source:
-        rows = list(csv.DictReader(source))
+def measures(residual, weights, timed):
     return {
-        "rows": rows,
-        "day": np.array(
-            [(date.fromisoformat(row["julian_date"]) - OPPOSITION_DATE).days for row in rows]
-        ),
-        "longitude": np.array([float(Fraction(row["longitude_degrees_exact"])) for row in rows]),
-        "latitude": np.array([float(row["latitude_arcseconds"] or "nan") / 3600 for row in rows]),
+        "rms_degrees": f"{mm.weighted_rms(residual, weights):.3f}",
+        "rms_timed_degrees": f"{mm.weighted_rms(residual[timed], weights[timed]):.3f}",
+        "mean_timed_arcmin": f"{np.average(residual[timed], weights=weights[timed]) * 60:.2f}",
     }
 
 
-def write_results(path, observations):
-    tracks = models(observations["day"])
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        fields = [*observations["rows"][0], "nominal_jd", "modern_latitude_degrees"]
-        for track in tracks:
-            fields.extend([f"{track.key}_longitude_degrees", f"{track.key}_minus_log_arcmin"])
-        writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
-        writer.writeheader()
-        for i, row in enumerate(observations["rows"]):
-            result = {
-                **row,
-                "nominal_jd": OPPOSITION_JD + observations["day"][i],
-                "modern_latitude_degrees": f"{tracks[-1].latitude[i]:.6f}",
+def write_summary(path, opposition, rows, predictions):
+    days, longitude, weights, timed = mm.arrays(rows, opposition)
+    fields = [
+        "model", "kind", "rows", "first_station", "second_station", "retrograde_span_degrees",
+        "projected_distance", "rms_degrees", "rms_timed_degrees", "mean_timed_arcmin",
+    ]  # fmt: skip
+    summary = []
+    for track in mm.models(days, opposition):
+        summary.append(
+            {
+                "model": track.key,
+                "kind": "reconstruction",
+                "rows": len(rows),
+                **mm.describe(track, opposition),
+                **measures(mm.wrapped(track.longitude - longitude), weights, timed),
             }
-            for track in tracks:
-                predicted = track.longitude[i]
-                result[f"{track.key}_longitude_degrees"] = f"{predicted:.6f}"
-                difference = wrapped(predicted - observations["longitude"][i]) * 60
-                result[f"{track.key}_minus_log_arcmin"] = f"{difference:.2f}"
-            writer.writerow(result)
+        )
+    residual = np.array([row["de441_longitude"] for row in rows]) - longitude
+    summary.append(
+        {
+            "model": "de441",
+            "kind": "ephemeris",
+            "rows": len(rows),
+            **measures(residual, weights, timed),
+        }
+    )
+    for model in sorted({item["model"] for item in predictions}):
+        gaps = [
+            float(item["prediction_minus_log_arcmin"]) / 60
+            for item in predictions
+            if item["model"] == model and item.get("prediction_minus_log_arcmin")
+        ]
+        if gaps:
+            summary.append(
+                {
+                    "model": model,
+                    "kind": "printed prediction",
+                    "rows": len(gaps),
+                    "rms_degrees": f"{mm.weighted_rms(gaps, np.ones(len(gaps))):.3f}",
+                }
+            )
+    write_csv(path, fields, summary)
 
 
-def julian_label(day, _position=None):
-    return (OPPOSITION_DATE + timedelta(days=round(day))).strftime("%b %d").replace(" 0", " ")
+def write_sensitivity(path, opposition, rows):
+    days, longitude, weights, timed = mm.arrays(rows, opposition)
+    noon = np.array(
+        [mm.jd_ut(date.fromisoformat(row["julian_date"]), 12.0) - opposition.jd for row in rows]
+    )
+    labels = np.array([row["julian_date"] for row in rows])
+    table = []
+    for name, options in VARIANTS:
+        options = dict(options)
+        time, omit = options.pop("time", None), options.pop("omit", None)
+        when = noon if time == "noon" else days + (timed * time / 24 if time else 0)
+        use = labels != omit
+        result = {"variant": name}
+        for track in mm.models(when, opposition, **options):
+            residual = mm.wrapped(track.longitude - longitude)
+            rms = mm.weighted_rms(residual[use], weights[use])
+            result[f"{track.key}_rms_degrees"] = f"{rms:.3f}"
+        table.append(result)
+    write_csv(path, list(table[0]), table)
 
 
-def plot_motion(output, observations):
+def write_validation(path, opposition, rows, ephemeris):
+    """Checks of the coded constructions against values printed in the sources."""
+    fields = ["check", "opposition", "printed", "coded", "difference", "unit", "note"]
+    checks = []
+    for item in mm.load_oppositions().values():
+        coded = mm.first_inequality(item) % 360
+        # Compared within the sign, so a sign that differs between columns stays visible.
+        difference = (coded - item.computed + 15) % 30 - 15
+        notes = [] if item.apogee_basis == "printed row" else ["apsidal longitude from the line"]
+        if item.date_basis != "printed date":
+            notes.append(item.date_basis)
+        if abs(mm.wrapped(coded - item.computed)) > 15:
+            notes.append("printed sign differs from the observed column")
+        checks.append(
+            {
+                "check": "first inequality against the printed computed longitude",
+                "opposition": f"{item.number} {item.label}",
+                "printed": f"{item.computed:.4f}",
+                "coded": f"{coded:.4f}",
+                "difference": f"{difference * 60:.2f}",
+                "unit": "arcmin",
+                "note": "; ".join(notes),
+            }
+        )
+        cached = float(ephemeris[f"opposition-{item.number}"]["longitude_degrees"])
+        checks.append(
+            {
+                "check": "observed opposition longitude against DE441 at the printed time",
+                "opposition": f"{item.number} {item.label}",
+                "printed": f"{item.longitude:.4f}",
+                "coded": f"{cached:.4f}",
+                "difference": f"{mm.wrapped(cached - item.longitude) * 60:.2f}",
+                "unit": "arcmin",
+                "note": "DE441 minus Longomontanus",
+            }
+        )
+    computed = min(
+        (row for row in rows if row["julian_date"] == "1595-10-29"),
+        key=lambda row: Fraction(row["epoch_seconds"]),
+    )
+    days, longitude = mm.mean_opposition(opposition)
+    printed_days = computed["jd_ut"] - opposition.jd
+    printed_longitude = float(Fraction(computed["longitude_degrees_exact"]))
+    checks.append(
+        {
+            "check": "mean opposition time against the log's computed value",
+            "opposition": f"{opposition.number} {opposition.label}",
+            "printed": f"{printed_days:.4f}",
+            "coded": f"{days:.4f}",
+            "difference": f"{(days - printed_days) * 24:.2f}",
+            "unit": "hours",
+            "note": "days from the true opposition; solar model and Tychonic curve",
+        }
+    )
+    checks.append(
+        {
+            "check": "mean opposition longitude against the log's computed value",
+            "opposition": f"{opposition.number} {opposition.label}",
+            "printed": f"{printed_longitude:.4f}",
+            "coded": f"{longitude:.4f}",
+            "difference": f"{(longitude - printed_longitude) * 60:.2f}",
+            "unit": "arcmin",
+            "note": computed["longitude_expression"],
+        }
+    )
+    write_csv(path, fields, checks)
+
+
+def write_tables(output):
+    """Write every numerical output. Needs NumPy only."""
+    opposition, rows, ephemeris = load()
+    predictions = compare_predictions(opposition, rows)
+    write_results(output / "mars-1595-results.csv", opposition, rows)
+    write_csv(output / "mars-1595-predictions.csv", PREDICTION_FIELDS, predictions)
+    write_summary(output / "mars-1595-summary.csv", opposition, rows, predictions)
+    write_sensitivity(output / "mars-1595-sensitivity.csv", opposition, rows)
+    write_validation(output / "mars-1595-validation.csv", opposition, rows, ephemeris)
+    return opposition, rows
+
+
+def plot_motion(plt, output, opposition, rows):
     sample = np.linspace(-57, 56, 1131)
-    tracks = models(sample)
+    days, longitude, _, timed = mm.arrays(rows, opposition)
     fig, (ax, residuals) = plt.subplots(
         2, 1, figsize=(9, 7), sharex=True, height_ratios=(2, 1), layout="constrained"
     )
-    days = observations["day"]
-    longitude = observations["longitude"]
-    for track, at_records in zip(tracks, models(days), strict=True):
+    for track, at_records in zip(
+        mm.models(sample, opposition), mm.models(days, opposition), strict=True
+    ):
         ax.plot(sample, track.longitude, track.style, color=track.color, lw=2, label=track.name)
         residuals.plot(
             days,
-            wrapped(at_records.longitude - longitude),
+            mm.wrapped(at_records.longitude - longitude),
             linestyle="none",
             marker="o",
             ms=3.5,
             color=track.color,
         )
-    ax.scatter(days, longitude, zorder=8, s=26, c="#22262e", label="Tycho's dated reductions")
+    ax.scatter(
+        days[timed], longitude[timed], zorder=8, s=26, c="#22262e", label="Reductions, printed hour"
+    )
+    ax.scatter(
+        days[~timed],
+        longitude[~timed],
+        zorder=8,
+        s=26,
+        facecolors="white",
+        edgecolors="#22262e",
+        label="Reductions, nominal noon",
+    )
     ax.set(ylabel="Ecliptic longitude (degrees)", title="Mars reverses direction in 1595")
     ax.legend(ncols=2, frameon=False, loc="upper right", fontsize=9)
     residuals.axhline(0, color="#89939f", lw=0.8)
@@ -251,16 +316,22 @@ def plot_motion(output, observations):
         panel.grid(alpha=0.18)
         panel.spines[["top", "right"]].set_visible(False)
     ticks = [-54, -31, -16, 0, 15, 30, 53]
-    residuals.set_xticks(ticks, [julian_label(d) for d in ticks])
+    residuals.set_xticks(ticks, [label(opposition, d) for d in ticks])
     fig.savefig(output / "mars-1595-motion.png", dpi=170)
     plt.close(fig)
 
 
-def plot_geometry(output):
+def label(opposition, days):
+    return opposition.date_label(days).strftime("%b %d").replace(" 0", " ")
+
+
+def plot_geometry(plt, output, opposition):
     span = np.linspace(-140, 160, 601)
     snapshots = np.array([-36.0, 0.0, 36.0])
     fig, axes = plt.subplots(2, 2, figsize=(9, 8.7), layout="constrained")
-    for ax, track, positions in zip(axes.flat, models(span), models(snapshots), strict=True):
+    for ax, track, positions in zip(
+        axes.flat, mm.models(span, opposition), mm.models(snapshots, opposition), strict=True
+    ):
         ax.plot(track.mars.real, track.mars.imag, color=track.color, lw=2)
         ax.plot(track.earth.real, track.earth.imag, color="#425a79", lw=1.35)
         ax.plot(track.guide.real, track.guide.imag, color="#ba8a37", lw=1.25, ls="--")
@@ -309,25 +380,25 @@ def plot_geometry(output):
     plt.close(fig)
 
 
-def plot_sky(output, observations):
-    modern = models(np.linspace(-57, 56, 1131))[-1]
+def plot_sky(plt, output, opposition, rows):
+    modern = mm.models(np.linspace(-57, 56, 1131), opposition)[-1]
+    paired = [row for row in rows if row["latitude_arcseconds_exact"]]
     fig, ax = plt.subplots(figsize=(8.5, 4), layout="constrained")
     ax.plot(
         modern.longitude, modern.latitude, color=modern.color, lw=2, label="Modern Keplerian track"
     )
-    paired = np.isfinite(observations["latitude"])
     ax.scatter(
-        observations["longitude"][paired],
-        observations["latitude"][paired],
+        [float(Fraction(row["longitude_degrees_exact"])) for row in paired],
+        [float(Fraction(row["latitude_arcseconds_exact"])) / 3600 for row in paired],
         color="#22262e",
         zorder=5,
         s=27,
         label="Tycho's paired reductions",
     )
     for day in (-43, 0, 53):
-        track = models([day])[-1]
+        track = mm.models([day], opposition)[-1]
         ax.annotate(
-            julian_label(day),
+            label(opposition, day),
             (track.longitude[0], track.latitude[0]),
             xytext=(3, 8),
             textcoords="offset points",
@@ -347,16 +418,23 @@ def plot_sky(output, observations):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--tables-only", action="store_true", help="skip the figures")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
-    observations = read_observations(Path(__file__).with_name("mars-1595-observations.csv"))
+    opposition, rows = write_tables(args.output)
+    if args.tables_only:
+        return
+    import matplotlib
+
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
     plt.rcParams.update({"font.size": 11, "axes.titleweight": "bold", "axes.labelcolor": "#263445"})
-    write_results(args.output / "mars-1595-results.csv", observations)
-    plot_motion(args.output, observations)
-    plot_geometry(args.output)
-    plot_sky(args.output, observations)
+    plot_motion(plt, args.output, opposition, rows)
+    plot_geometry(plt, args.output, opposition)
+    plot_sky(plt, args.output, opposition, rows)
 
 
 if __name__ == "__main__":

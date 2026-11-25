@@ -1,0 +1,15 @@
+number,year,month,day,hour,minute,printed_month,date_basis,observed_longitude_id,observed_longitude_expression,observed_longitude_degrees_exact,mean_longitude_expression,anomaly_expression,precession_expression,computed_longitude_expression,difference_expression
+I,1580,11,18,1,30,Nov.,printed date,assertion-slongomontanus-astronomia-danica-e8fbf701a9aab3e0b896,♊ 6 27½,1595/24,0 · 27 54 35,4 · 27 11 10,0 · 1 11,♊ 6 27½,0
+II,1582,12,28,4,0,Dec.,printed date,assertion-slongomontanus-astronomia-danica-566f16ce96bc9acc9b8d,♋ 16 54½,12829/120,1 · 11 28 40,5 · 10 44 20,27 57 50,♋ 16 55½,1 +
+III,1585,1,30,19,15,Ian.,printed date,assertion-slongomontanus-astronomia-danica-73d95e680b5db4a4d0db,♌ 21 35½,16991/120,1 · 52 10 10,5 · 51 25 30,27 59 10,♌ 21 37,0⅚ +
+IV,1587,3,6,7,20,Mart.,printed date,assertion-slongomontanus-astronomia-danica-bdce9fceee3429048644,♍ 25 42,1757/10,2 · 32 47 35,0 · 32 2 40,28 1 5,♍ 25 42⅛,0⅙ +
+V,1589,4,14,6,20,April.,printed date,assertion-slongomontanus-astronomia-danica-ef676426fcf8344b6577,♏ 4 23,12863/60,3 · 16 16 20,1 · 15 31 10,28 3 0,♍ 4 26½,3½ +
+VI,1591,6,8,7,45,Iunii,printed date,assertion-slongomontanus-astronomia-danica-712560d5b87cf35eec26,♐ 26 42,2667/10,4 · 7 40 5,2 · 6 54 23,28 5 0,♐ 26 45⅓,3⅓ +
+VII,1593,8,25,17,30,Aug.,printed date,assertion-slongomontanus-astronomia-danica-c7630523e7133d26f25f,♓ 12 15,1369/4,5 · 11 49 20,3 · 11 3 20,28 6 45,♓ 12 14¾,0¼ −
+VIII,1595,10,31,0,40,Octo.,printed date,assertion-slongomontanus-astronomia-danica-2c7bb844ada08d4199bb,♉ 17 30⅔,2138/45,0 · 9 6 40,4 · 8 20 0,28 8 40,♉ 17 29½,1¼ −
+IX,1597,12,13,16,0,Dec.,printed date,assertion-slongomontanus-astronomia-danica-9c436c9be4542f7db165,♋ 2 27,1849/20,0 · 55 2 30,4 · 54 15 25,28 10 25,♋ 2 26,1 −
+X,1600,1,18,14,0,Iunii,month from the mean-longitude column,assertion-slongomontanus-astronomia-danica-962767f29c705c6ebe0c,♌ 8 37,7717/60,1 · 36 24 45,5 · 35 37 10,28 12 20,♌ 8 37⅙,0⅙ +
+XI,1602,2,20,14,15,Feb.,printed date,assertion-slongomontanus-astronomia-danica-f0862937db1a719e1297,♍ 12 26,4873/30,2 · 16 46 35,0 · 15 58 40,28 14 5,♍ 12 24,2 −
+XII,1604,3,28,16,20,Mart.,printed date,assertion-slongomontanus-astronomia-danica-f3cd2bc784ad1950ff48,♎ 18 36½,23833/120,2 · 58 45 20,0 · 57 57 0,28 15 55,♎ 18 36½,⅓ +
+XIII,1608,7,24,2,0,Iulii,printed date,assertion-slongomontanus-astronomia-danica-8a1cd71799a744421f2b,♒ 11 10,1867/6,4 · 45 53 15,2 · 45 14 30,28 17 50,♒ 11 13⅓,3⅓ +
+XIV,1610,10,8,16,50,Octo.,printed date,assertion-slongomontanus-astronomia-danica-48343ad976c2719e9e1b,♈ 25 30,51/2,5 · 48 35 0,3 · 47 55 20,28 21 45,♈ 25 26⅔,3⅓ −

@@ -1,0 +1,31 @@
+check,opposition,printed,coded,difference,unit,note
+first inequality against the printed computed longitude,I 1580 Nov 18,66.4583,66.4487,-0.58,arcmin,apsidal longitude from the line
+observed opposition longitude against DE441 at the printed time,I 1580 Nov 18,66.4583,66.4747,0.98,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,II 1582 Dec 28,106.9250,106.9068,-1.09,arcmin,
+observed opposition longitude against DE441 at the printed time,II 1582 Dec 28,106.9083,106.9425,2.05,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,III 1585 Jan 30,141.6167,141.5829,-2.03,arcmin,
+observed opposition longitude against DE441 at the printed time,III 1585 Jan 30,141.5917,141.6053,0.82,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,IV 1587 Mar 6,175.7021,175.6719,-1.81,arcmin,
+observed opposition longitude against DE441 at the printed time,IV 1587 Mar 6,175.7000,175.7801,4.81,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,V 1589 Apr 14,154.4417,214.4102,-1.89,arcmin,printed sign differs from the observed column
+observed opposition longitude against DE441 at the printed time,V 1589 Apr 14,214.3833,214.4554,4.33,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,VI 1591 Jun 8,266.7556,266.7196,-2.16,arcmin,
+observed opposition longitude against DE441 at the printed time,VI 1591 Jun 8,266.7000,266.6744,-1.54,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,VII 1593 Aug 25,342.2458,342.2215,-1.46,arcmin,
+observed opposition longitude against DE441 at the printed time,VII 1593 Aug 25,342.2500,342.2746,1.47,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,VIII 1595 Oct 31,47.4917,47.4474,-2.66,arcmin,
+observed opposition longitude against DE441 at the printed time,VIII 1595 Oct 31,47.5111,47.5602,2.95,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,IX 1597 Dec 13,92.4333,92.4020,-1.88,arcmin,
+observed opposition longitude against DE441 at the printed time,IX 1597 Dec 13,92.4500,92.4324,-1.06,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,X 1600 Jan 18,128.6194,128.5952,-1.46,arcmin,month from the mean-longitude column
+observed opposition longitude against DE441 at the printed time,X 1600 Jan 18,128.6167,128.6559,2.35,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,XI 1602 Feb 20,162.4000,162.3702,-1.79,arcmin,
+observed opposition longitude against DE441 at the printed time,XI 1602 Feb 20,162.4333,162.4940,3.64,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,XII 1604 Mar 28,198.6083,198.5765,-1.91,arcmin,
+observed opposition longitude against DE441 at the printed time,XII 1604 Mar 28,198.6083,198.6578,2.97,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,XIII 1608 Jul 24,311.2222,311.1535,-4.12,arcmin,
+observed opposition longitude against DE441 at the printed time,XIII 1608 Jul 24,311.1667,311.1821,0.92,arcmin,DE441 minus Longomontanus
+first inequality against the printed computed longitude,XIV 1610 Oct 8,25.4444,25.4083,-2.17,arcmin,
+observed opposition longitude against DE441 at the printed time,XIV 1610 Oct 8,25.5000,25.4939,-0.36,arcmin,DE441 minus Longomontanus
+mean opposition time against the log's computed value,VIII 1595 Oct 31,-1.1208,-1.1488,-0.67,hours,days from the true opposition; solar model and Tychonic curve
+mean opposition longitude against the log's computed value,VIII 1595 Oct 31,47.9347,47.9113,-1.41,arcmin,17° 56′ 5″ ♉

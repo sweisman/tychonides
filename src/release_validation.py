@@ -217,16 +217,43 @@ def validate_documentation(root):
         root / "resources/catalog/README.md",
         *sorted((root / "docs").glob("*.md")),
     ]
+    validate_links(pages)
+
+
+def validate_links(pages):
+    """Require every local link to reach a file and, in Markdown, an existing heading."""
     for page in pages:
         for target in re.findall(r"\]\(([^\s)]+)\)", page.read_text(encoding="utf-8")):
             link = urlsplit(target)
-            if (
-                not link.scheme
-                and not link.netloc
-                and link.path
-                and not (page.parent / unquote(link.path)).exists()
-            ):
+            if link.scheme or link.netloc:
+                continue
+            linked = page.parent / unquote(link.path) if link.path else page
+            if not linked.exists():
                 raise ValueError("Broken local documentation link: " + str(page) + ": " + target)
+            if linked.is_dir():
+                linked = linked / "README.md"
+            if (
+                link.fragment
+                and linked.suffix == ".md"
+                and linked.is_file()
+                and unquote(link.fragment)
+                not in heading_anchors(linked.read_text(encoding="utf-8"))
+            ):
+                raise ValueError("Broken documentation anchor: " + str(page) + ": " + target)
+
+
+def heading_anchors(text):
+    """Anchors the website generates for a page's headings, plus explicit ones."""
+    text = re.sub(r"^```.*?^```", "", text, flags=re.S | re.M)
+    anchors, seen = set(re.findall(r"<a\s+(?:id|name)=\"([^\"]+)\"", text)), {}
+    for heading in re.findall(r"^#{1,6}\s+(.+?)\s*#*\s*$", text, re.M):
+        label = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", heading)
+        label = re.sub(r"(?<!\w)[*_]+|[*_]+(?!\w)|`", "", label)
+        label = re.sub(r"[^\w\- ]", "", label.strip().lower()).replace(" ", "-")
+        count = seen.get(label, 0)
+        anchors.add(f"{label}-{count}" if count else label)
+        seen[label] = count + 1
+    return anchors
 
 
 def validate_documented_totals(root):

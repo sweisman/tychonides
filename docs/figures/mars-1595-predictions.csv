@@ -1,0 +1,11 @@
+julian_date,source_id,printed_page,longitude_id,model,longitude_expression,sign_basis,log_longitude_degrees,prediction_minus_log_arcmin,de441_longitude_degrees,prediction_minus_de441_arcmin
+1595-09-07,tycho-oo-12,443,assertion-v12-cf640bb5c48cb527990b,Alphonsine,25⅙° ♉,printed,54.416667,45.00,54.450823,42.95
+1595-09-07,tycho-oo-12,443,assertion-v12-9c447075f5723626173a,Prutenic,22⅚° ♉,printed,54.416667,-95.00,54.450823,-97.05
+1595-09-30,tycho-oo-12,445,assertion-v12-4d699f31ae88131ea7d5,Alphonsine,26° 16′,not printed; compared within the sign,56.108333,9.50,56.105176,9.69
+1595-09-30,tycho-oo-12,445,assertion-v12-5aab39138aac30134b90,Copernicus,24° 20′,not printed; compared within the sign,56.108333,-106.50,56.105176,-106.31
+1595-10-12,tycho-oo-12,446,assertion-v12-fc0e090808bb23a8651c,Alphonsine,23° 51′,not printed; compared within the sign,53.875000,-1.50,53.953761,-6.23
+1595-10-12,tycho-oo-12,446,assertion-v12-dffe7f79cdfdf0ed5ee0,Copernicus,21° 56′,not printed; compared within the sign,53.875000,-116.50,53.953761,-121.23
+1595-10-16,tycho-oo-12,446,assertion-v12-e667f3eea91d200cd460,Alphonsine,22° 50′,not printed; compared within the sign,52.929167,-5.75,52.930829,-5.85
+1595-10-16,tycho-oo-12,446,assertion-v12-5f20b5cba1aa924d5cb4,Copernicus,21° 0′,not printed; compared within the sign,52.929167,-115.75,52.930829,-115.85
+1595-10-25,tycho-oo-12,447,assertion-v12-8d31e26ad974abbb4231,Alphonsine,19° 46′,not printed; compared within the sign,49.875000,-6.50,49.812121,-2.73
+1595-10-25,tycho-oo-12,447,assertion-v12-223e9771b474f6bcc401,Copernicus,17° 54′,not printed; compared within the sign,49.875000,-118.50,49.812121,-114.73

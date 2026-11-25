@@ -16,6 +16,8 @@ tychonides-verify = "tychonides.release_validation:main"
 
 [project.optional-dependencies]
 dev = ["ruff==0.17.3"]
+# The study scripts in examples/. Tables need NumPy; figures also need Matplotlib.
+analysis = ["numpy>=1.26", "matplotlib>=3.8"]
 
 [tool.setuptools]
 packages = ["tychonides"]

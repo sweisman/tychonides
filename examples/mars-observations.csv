@@ -1,0 +1,156 @@
+opposition,julian_date,daypart,source_id,printed_page,longitude_id,role,longitude_expression,longitude_degrees_exact,date_weight,epoch_id,epoch_expression,epoch_seconds,latitude_id,latitude_arcseconds_exact
+I,1580-11-12,,tycho-oo-10,84,assertion-v10-0caacbebc0486fab9d13,reduction,8.36¼ ♊,3293/48,1,assertion-v10-eac8495d2563bef1c36e,H. 10⅚,39000,assertion-v10-2a7cf66e1ce9d5d8ea58,4570
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-9d0671470bb160f7823c,reduction,6.47 ♊,4007/60,1/2,,,,assertion-v10-17b3094b7fc91afeb0dc,5700
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-c6a9066c35fbd715334c,reduction,6.47 ♊,4007/60,1/2,assertion-v10-eab598e5c8a0b96a6273,H. 10,36000,,
+I,1580-12-10,,tycho-oo-10,86,assertion-v10-99dffa47f462bca4ea21,reduction,0.2 ♊,1801/30,1/3,,,,,
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-ae8decf44e9e76b2b299,reduction,0.5 ♊,721/12,1/3,,,,,
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-f0e003c85866a1a530fb,reduction,0.15 ♊,241/4,1/3,,,,assertion-v10-9d1e2699d989a52005f4,9000
+I,1580-12-24,,tycho-oo-10,88,assertion-v10-812291e91e08939c9b31,reduction,1.20′ ♊,184/3,1,,,,assertion-v10-d836bfba299d01fcb04b,2100
+II,1582-11-12,morning,tycho-oo-10,174,assertion-v10-4f9e766afeadbe4434f6,reduction,26 35½` ♋,13991/120,1,assertion-v10-7c5c7ef2085be73371b7,6¾,24300,assertion-v10-ee4213420879eb651b4a,8100
+II,1582-12-26,after_noon,tycho-oo-10,196,assertion-v10-e9e994b277f7663215d0,reduction,17° 38′ 41″` ♋,387521/3600,1,assertion-v10-a6bed29d953ac3263580,8½,30600,,
+II,1582-12-27,before_noon,tycho-oo-10,197,assertion-v10-efa589a4f3e156ef59a4,reduction,17° 27′ 12″` ♋,8059/75,1,assertion-v10-6107f6638cdeab627357,7¼,26100,,
+II,1582-12-28,after_noon,tycho-oo-10,198,assertion-v10-0442a61ec47acfcb5e8c,reduction,16 47` ♋,6407/60,1/3,assertion-v10-f029b6b257ff135b1287,11½,41400,,
+II,1582-12-28,,tycho-oo-10,199,assertion-v10-ede656f5a822029865f9,reduction,16° 49′ 32` ♋,96143/900,1/3,assertion-v10-1148847d6674deb90f41,H. 11 M. `39¼,41955,,
+II,1582-12-28,after_noon,tycho-oo-10,199,assertion-v10-f3894f19db8512d09a2f,reduction,16 47 56` ♋,96119/900,1/3,assertion-v10-ed89658150112f988304,11.1′,39660,,
+II,1582-12-30,after_noon,tycho-oo-10,198,assertion-v10-011ce04ab82d73eeb140,reduction,16 2 45` ♋,25451/240,1/2,assertion-v10-83f6e1097c09c17aeb5c,8.3′,28980,assertion-v10-4e6111382ebaf03857ca,14787
+II,1582-12-30,,tycho-oo-10,197,assertion-v10-b2b03bef8868767e4b23,reduction,16 0½` ♋,12721/120,1/2,,,,assertion-v10-34f067082b6a4ef84193,14880
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-0dbc201d1f8391b8970c,reduction,27 29½ ♌,17699/120,1/3,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,assertion-v10-3335bcdcc072ace0a25b,15600
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-14ce862ac4154b111aff,reduction,27 29½ ♌,17699/120,1/3,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,assertion-v10-f892702104382b6e38eb,15600
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-bae21bed003bf65012de,reduction,27 30 11 ♌,531011/3600,1/3,,,,assertion-v10-250e420dd1f1ac53ed00,15498
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-78cdc31e97b4ab0728c5,reduction,24 47¼ ♌,11583/80,1/2,,,,,
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-cb010f1c8848c748a8d1,reduction,24° 47′ 16″ ♌,130309/900,1/2,,,,,
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-185398c1e894f3b6df67,reduction,23° 58′ 24 ♌,10798/75,1/4,assertion-v10-33d5306a9b7c4cb2eb13,7¼,26100,,
+III,1585-01-24,,tycho-oo-10,388,assertion-v10-7d96dbed7d8f79f831f9,reduction,24 7¼ ♌,34589/240,1/4,,,,assertion-v10-5c03c90bed7ee98b825b,16260
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-8342247be783608da93e,reduction,24 4 30 ♌,5763/40,1/4,assertion-v10-33d5306a9b7c4cb2eb13,7¼,26100,,
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-e87fcb3b778a44df39dd,reduction,24° 7′ 34″ ♌,259427/1800,1/4,,,,,
+III,1585-01-31,,tycho-oo-10,390,assertion-v10-f429946947b84dc75d8d,adopted_value,23 34 ♌,4307/30,1,,,,,
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-087b96ceff2304f4f3b2,reduction,20 11 13 ♌,504673/3600,1/2,assertion-v10-630cd928faa460d4f5cf,6¼,22500,,
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-42c92e3eec418c910924,reduction,20 11¼ ♌,2243/16,1/2,assertion-v10-630cd928faa460d4f5cf,6¼,22500,,
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-0f3381d0ffbca6bdc3dd,reduction,19 47 34 ♌,251627/1800,1/2,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,,
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-196b23e26dc00d76f21c,reduction,19 47½ ♌,3355/24,1/2,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,,
+III,1585-02-17,,tycho-oo-10,392,assertion-v10-3bf57ab2a2cc46c7bc8b,reduction,15 12⅗ ♌,13521/100,1,assertion-v10-14b13b92d108758a2a6d,9⅚,35400,assertion-v10-a03ee919e886a3a19dcd,15195
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-4d7768e3d017137d48b0,reduction,11 45 56♌,118589/900,1/2,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,,
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-8f9f952505f5137e4588,reduction,11 45 56 ♌,118589/900,1/2,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,,
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-6524aacfdfda94093713,reduction,11 51 24♌,39557/300,1/2,assertion-v10-a2067459695371c230e8,7⅚,28200,,
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-8831051db605f8ed612f,reduction,11 51 24 ♌,39557/300,1/2,assertion-v10-a2067459695371c230e8,7⅚,28200,,
+III,1585-03-19,,tycho-oo-10,397,assertion-v10-ab40d0bf03f0e7ea505b,adopted_value,12ᵍ 2′ ♌,3961/30,1,assertion-v10-2742e1e707087522871e,8,28800,,
+III,1585-03-26,,tycho-oo-10,398,assertion-v10-6e1322bb4a1316ea5765,reduction,12 50 ♌,797/6,1,assertion-v10-68a3c4a0ebaca9e35cf8,8⅓,30000,,
+IV,1587-01-10,morning,tycho-oo-11,181,assertion-v11-2562d51b2c6fea94e901,reduction,3° 5′ 57″ ♎,219719/1200,1,,,,assertion-v11-bebb904ff8460342e430,11023
+IV,1587-01-14,,tycho-oo-11,181,assertion-v11-f80660e8256c975db49c,reduction,3° 54′ 0″ ♎,1839/10,1,assertion-v11-5275fedf1171b6143d1e,16⅔^h^,60000,assertion-v11-528735dabf5bc89e0335,11548
+IV,1587-01-15,,tycho-oo-11,181,assertion-v11-495fe34cb213edaebdd1,reduction,4° 0′ 48″ ♎,13801/75,1,assertion-v11-dd446d970c3f30ed0c34,15^h^ 57^m^,57420,assertion-v11-f43e24891cfb39ab09c7,11577
+IV,1587-03-07,after_noon,tycho-oo-11,184,assertion-v11-24118b269c619c507788,reduction,25° 10′ 20″ ♍,31531/180,1,assertion-v11-b0759f7ff5c4b2300d48,19^h^ 10^m^,69000,,
+IV,1587-03-09,after_noon,tycho-oo-11,185,assertion-v11-ceeed2a03c5dc845adef,reduction,24° 32′ ♍,2618/15,1,assertion-v11-5b28ec7ad0ad20869999,9½^h^,34200,,
+V,1589-04-05,,tycho-oo-11,333,assertion-v11-0348d7c921237b70e9c5,reduction,7° 31′ 10″ ♏,78307/360,1/2,assertion-v11-18e4cc34aa04647e5144,11^h^ 33^m^,41580,,
+V,1589-04-05,,tycho-oo-11,334,assertion-v11-d8f0d8fcba26f771d6fe,reduction,7° 31⅙′ ♏,78307/360,1/2,assertion-v11-70c7db5492e2a9c2fc02,11^h^ 33^m^,41580,assertion-v11-11e2cf6f174212e4fc9b,5295
+V,1589-04-08,,tycho-oo-11,334,assertion-v11-8fa49d877ca4066a0c0d,reduction,6° 30′,433/2,1/2,assertion-v11-da87c929dd819f2b145c,12^h^ 54^m^,46440,assertion-v11-64efe5aad79ce2f4e6a8,4850
+V,1589-04-08,,tycho-oo-11,333,assertion-v11-8ff50e080039bc7e902b,reduction,6° 29′ 57″ ♏,259799/1200,1/2,assertion-v11-46e85fcd6de24e2b3474,12^h^ 54^m^,46440,,
+V,1589-04-13,night,tycho-oo-11,333,assertion-v11-28b813949581cbf2c2ef,reduction,4° 43′ 19″ ♏,772999/3600,1/2,,,,,
+V,1589-04-13,,tycho-oo-11,334,assertion-v11-e651510f3ea8e342ddc4,reduction,4° 43⅓′,3865/18,1/2,assertion-v11-f2898b39b5fd8eef4001,11^h^ 17^m^,40620,assertion-v11-2d278784c8c8d172a1c4,4180
+V,1589-04-14,noon,tycho-oo-11,334,assertion-v11-bcd7c333371803d2d751,reduction,4° 30′ 49″ ♏,772249/3600,1/3,,,,,
+V,1589-04-14,,tycho-oo-11,334,assertion-v11-dc23fcb8183e14ccfb4c,reduction,4° 24′ 33″ ♏,257291/1200,1/3,,,,,
+V,1589-04-14,,tycho-oo-11,334,assertion-v11-f4d41da404b7c19ed1a2,reduction,4° 24½′ ♏,25729/120,1/3,assertion-v11-a1edeea9a8c045f3904c,6^h^ 22⅚^m^,22970,,
+V,1589-04-15,,tycho-oo-11,334,assertion-v11-2548886149d33b343724,reduction,3° 58⅓′,7703/36,1/2,assertion-v11-34fabf8d33688f072b12,12^h^ 5^m^,43500,assertion-v11-6df279c45fb16b5c0f9b,3845
+V,1589-04-15,,tycho-oo-11,333,assertion-v11-c26ccc74b1b80543dfd4,reduction,3° 58′ 21″ ♏,85589/400,1/2,,,,,
+V,1589-04-20,,tycho-oo-11,333,assertion-v11-1fd06477cb62bdc904a0,reduction,2° 10′ 5″ ♏,152761/720,1/2,,,,,
+V,1589-04-20,,tycho-oo-11,334,assertion-v11-deb080d51628f564e061,reduction,2° 10 1/12′,152761/720,1/2,assertion-v11-5c63a55c3dea191d5793,11^h^ 1^m^,39660,assertion-v11-b2df712b52e6587c2ff2,3090
+V,1589-04-22,,tycho-oo-11,334,assertion-v11-58744290285531281f87,reduction,1° 39⅙′,15239/72,1,assertion-v11-4fef6d207883a2e663d0,11^h^ 29^m^,41340,assertion-v11-810b9a3f2440d282bc2e,3020
+V,1589-04-23,,tycho-oo-11,334,assertion-v11-515e504b5221ba159a07,reduction,1° 4⅚′,75989/360,1,assertion-v11-d886bf817e6e8981f166,10^h^ 42^m^,38520,assertion-v11-1d4df5c9fea2560124ca,2580
+V,1589-04-24,,tycho-oo-11,334,assertion-v11-4fe291974f019a6f79df,reduction,0° 43½′,8429/40,1,assertion-v11-3748ed5d391929f73549,10^h^ 36^m^,38160,assertion-v11-db3425e9355493add00d,2330
+V,1589-04-26,,tycho-oo-11,334,assertion-v11-480e0600888a3c85cdc3,reduction,0° 2½′,5041/24,1,assertion-v11-5f7cf10a472fee17734b,11^h^ 14^m^,40440,assertion-v11-97efeba5a48590fba8cb,2000
+V,1589-05-06,,tycho-oo-11,335,assertion-v11-68051812399fda78840a,reduction,27° 7⅓′ ♎,18641/90,1,,,,,
+VI,1591-04-29,after_midnight,tycho-oo-12,140,assertion-v12-26a82b99670d2d524349,reduction,2° 15⅙′ ♑,98011/360,1/2,,,,,
+VI,1591-04-29,,tycho-oo-12,151,assertion-v12-b531b0b7f399635dd188,reduction,2° 15⅙′ ♑,98011/360,1/2,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400,assertion-v12-fdfd36c6889366231d4e,-5085
+VI,1591-05-12,,tycho-oo-12,140,assertion-v12-6665d149c230bae9695d,reduction,2° 24′ 27″ ♑,108963/400,1,,,,,
+VI,1591-05-14,morning,tycho-oo-12,140,assertion-v12-6a505cbb4a9a1b26918e,reduction,2° 20′ ♑,817/3,1,,,,,
+VI,1591-05-19,after_midnight,tycho-oo-12,141,assertion-v12-5b8535643caac637abd2,reduction,1° 34¾′ ♑,65179/240,1,,,,,
+VI,1591-05-21,after_midnight,tycho-oo-12,141,assertion-v12-98f3996e7476fc9f25fa,reduction,1° 15′ 48″ ♑,81379/300,1,,,,,
+VI,1591-05-24,after_midnight,tycho-oo-12,142,assertion-v12-ef2d3f1c264a8c329347,reduction,0° 40⅓′ ♑,48721/180,1,,,,,
+VI,1591-05-29,after_midnight,tycho-oo-12,142,assertion-v12-3122dfe293a768234e36,reduction,29° 30⅓′ ♐,48511/180,1/2,,,,,
+VI,1591-05-29,,tycho-oo-12,151,assertion-v12-8ab00c1d901050895ebb,reduction,29° 30⅓′ ♐,48511/180,1/2,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720,assertion-v12-671a7425b17b9a276d90,-12315
+VI,1591-06-06,,tycho-oo-12,150,assertion-v12-82b66b4b1c45961d8050,adopted_value,27° 15′ 0″ ♐,1069/4,1,assertion-v12-d31d40bd2f0c0b62e03c,12^h^ 10^m^,43800,assertion-v12-cf5a3901ce787194d125,-14130
+VI,1591-06-08,,tycho-oo-12,150,assertion-v12-0378a570b318339ac30e,reduction,26° 37′ 42″ ♐,159977/600,1/2,,,,,
+VI,1591-06-08,,tycho-oo-12,151,assertion-v12-b7bd2546d74f84f0c799,reduction,26° 37′ 42″ ♐,159977/600,1/2,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880,assertion-v12-d1ac0123d5256c3baa56,-14520
+VI,1591-06-10,,tycho-oo-12,150,assertion-v12-7b18f81a539a443ea329,adopted_value,26° 2½′ ♐,6385/24,1,assertion-v12-be86af99d499fc384f9c,11^h^ 40^m^,42000,assertion-v12-72197155f6d113449d27,-14910
+VI,1591-06-11,before_midnight,tycho-oo-12,143,assertion-v12-280826c7d08520c32778,reduction,25° 43½′ ♐,10629/40,1,,,,,
+VI,1591-06-12,evening,tycho-oo-12,143,assertion-v12-013a7e92602f82519fa2,reduction,25° 25⅔′ ♐,47777/180,1,,,,,
+VI,1591-06-20,night,tycho-oo-12,149,assertion-v12-10752a6af68ceaf5905f,reduction,25° 59′ 6″ ♐,53197/200,1/6,,,,,
+VI,1591-06-20,night,tycho-oo-12,148,assertion-v12-a140376b2ec6793cd98a,reduction,25° 59′ ♐,15959/60,1/6,,,,,
+VI,1591-06-20,,tycho-oo-12,149,assertion-v12-aa7e605f7e952d57eeef,reduction,25° 59¹⁄₁₂′ ♐,191509/720,1/6,assertion-v12-2e45c0ae8ebd72566dcd,"10^h^, about",36000,assertion-v12-766eb06dde7c1185901a,-14560
+VI,1591-06-20,night,tycho-oo-12,148,assertion-v12-ac7dfaf7e7ff2c99c6d7,reduction,25° 58′ 55″ ♐,191507/720,1/6,,,,,
+VI,1591-06-20,night,tycho-oo-12,148,assertion-v12-c885f7158d41a422ba9a,reduction,25° 59′ ♐,15959/60,1/6,,,,,
+VI,1591-06-20,night,tycho-oo-12,148,assertion-v12-d167f4e3ffdcafa90bac,reduction,25° 58′ 58″ ♐,478769/1800,1/6,,,,,
+VI,1591-06-21,,tycho-oo-12,148,assertion-v12-392531748407e9c9797e,reduction,25° 38′ ♐,7969/30,1/2,,,,,
+VI,1591-06-21,,tycho-oo-12,149,assertion-v12-8cf99e1043567b05427b,reduction,25° 39′ ♐,5313/20,1/2,,,,,
+VI,1591-06-28,evening,tycho-oo-12,144,assertion-v12-245732594e8836e6f0da,reduction,21° 12⅓′ ♐,47017/180,1,,,,,
+VI,1591-07-08,night,tycho-oo-12,149,assertion-v12-58195a88f63bc32a5d26,reduction,21° 9′ 48″ ♐,78349/300,1,,,,,
+VI,1591-07-16,evening,tycho-oo-12,144,assertion-v12-6760c5fd2ab17c2525e2,reduction,20° 8′ ♐,3902/15,1,,,,,
+VII,1593-07-21,,tycho-oo-12,291,assertion-v12-5c5b778a6db75d556ca1,reduction,17° 45¾′ ♓,27821/80,1,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400,assertion-v12-55431c25a947992828e3,-20775
+VII,1593-07-22,morning,tycho-oo-12,283,assertion-v12-b4248e324541e71b5dc2,reduction,17° 45′ 45″ ♓,27821/80,1,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200,assertion-v12-56e61c5f6f3a6206d28e,-20775
+VII,1593-07-24,,tycho-oo-12,291,assertion-v12-b7c104bbbe82b2afbc83,reduction,17° 51⅓′,31307/90,1,assertion-v12-4ad6e83831b168a2d1f3,13 40,49200,assertion-v12-7d2b17a4d38e790f2d3c,-21240
+VII,1593-07-25,morning,tycho-oo-12,284,assertion-v12-94dce412074347f7f6a6,reduction,17° 51′ 20″ ♓,31307/90,1,assertion-v12-5daabed9938d0863a1a7,1^h^ 40^m^,6000,assertion-v12-aa7d7bfb027bbe2eff0b,-21240
+VII,1593-07-30,,tycho-oo-12,291,assertion-v12-40755103ef48662a8a87,reduction,17° 39½′,41719/120,1,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500,assertion-v12-4f29ef9ff8a6804469f2,-21975
+VII,1593-07-31,morning,tycho-oo-12,284,assertion-v12-877a664badac854067d3,reduction,17° 39½′ ♓,41719/120,1,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300,assertion-v12-377019dd799ddac3b6c6,-21975
+VII,1593-08-10,,tycho-oo-12,291,assertion-v12-ff74ce13b52b463e68fe,reduction,16° 7½′,2769/8,1,assertion-v12-ee4af4820ae1f0b70760,13 45,49500,assertion-v12-61cb1f724badfd96586f,-22732
+VII,1593-08-11,morning,tycho-oo-12,285,assertion-v12-42456a6cbd7e6d6bd4b5,reduction,16° 7½′ ♓,2769/8,1,assertion-v12-6cb12fd07016ec4a08bf,1¾^h^,6300,assertion-v12-5b3657c41c64ddcd8480,-22732
+VII,1593-08-17,,tycho-oo-12,291,assertion-v12-095c99f5e5894f825eba,reduction,14° 29′ 5″,248029/720,1,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800,assertion-v12-42d5211ba45a8a02744d,-22567
+VII,1593-08-18,morning,tycho-oo-12,286,assertion-v12-1522117bc221a3032739,reduction,14° 29¹⁄₁₂′ ♓,248029/720,1,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600,assertion-v12-17e38d662aa9862c9b5f,-22567
+VII,1593-08-20,,tycho-oo-12,291,assertion-v12-3ce9cb463e1fc5672a9c,reduction,13° 44′ 0″,5156/15,1,assertion-v12-9dcd0b2a5216280408c6,13 0,46800,assertion-v12-120e46ecd1c3887f45dc,-22440
+VII,1593-08-21,,tycho-oo-12,291,assertion-v12-29ea0a79b64a6671b08b,reduction,13° 26′ 30″,41213/120,1/3,assertion-v12-f16bd831d876211119d0,12 30,45000,assertion-v12-01fefa3cb53f17e63937,-22296
+VII,1593-08-21,before_midnight,tycho-oo-12,287,assertion-v12-e43edf3b126d869dcc12,reduction,13° 26½′ ♓,41213/120,1/3,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800,assertion-v12-977902a7547e96bb1fff,-22295
+VII,1593-08-21,morning,tycho-oo-12,286,assertion-v12-fbe3dab39b09cef04667,reduction,13° 44′ ♓,5156/15,1/3,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600,assertion-v12-5224355d5f1592294f37,-22440
+VII,1593-08-22,,tycho-oo-12,291,assertion-v12-0fec23284c77d1b68084,reduction,13° 10′ 15″,82361/240,1/2,assertion-v12-13cbeec5de384dac72af,12 20,44400,assertion-v12-7eff29ae2b4dfb12a2f5,-22130
+VII,1593-08-22,after_midnight,tycho-oo-12,289,assertion-v12-5d4b721c9e5cc799a1ce,reduction,13° 10¼′ ♓,82361/240,1/2,assertion-v12-4f5828f11caafa80f461,0⅓^h^,1200,assertion-v12-f7b68816eb4f8162a5d1,-22130
+VII,1593-08-23,,tycho-oo-12,290,assertion-v12-2fba24d65e98c5766f90,reduction,12° 54⅚′ ♓,123449/360,1/3,assertion-v12-39b8a78c1a2d2c208f59,12⅚^h^,46200,assertion-v12-c6bcb258ba8e5b4807a5,-22095
+VII,1593-08-23,,tycho-oo-12,291,assertion-v12-786ce100e0ed1e13b90e,reduction,12° 54′ 20″,61723/180,1/3,assertion-v12-5ab807975418bc910977,11 0,39600,assertion-v12-1d0446ac45921445f66d,-22050
+VII,1593-08-23,,tycho-oo-12,290,assertion-v12-fe4ec2beed747dc9f939,reduction,12° 54⅓′ ♓,61723/180,1/3,assertion-v12-3510a733fe3892988e90,11^h^,39600,assertion-v12-90d16a2452c2a6c1184b,-22050
+VII,1593-08-24,after_noon,tycho-oo-12,291,assertion-v12-7cb6c93380539df4ed35,reduction,12° 41⅔′ ♓,12337/36,1/4,assertion-v12-a43181d6ed5ae807eed7,5^h^ 4^m^,18240,,
+VII,1593-08-24,,tycho-oo-12,290,assertion-v12-a31fd62a20afc5980f4e,reduction,12° 37′ 50″ ♓,123347/360,1/4,assertion-v12-d2c9e674983cb800ccea,10½^h^,37800,assertion-v12-97223c42574cb2978f85,-21925
+VII,1593-08-24,,tycho-oo-12,291,assertion-v12-c2b87ea71b2371907177,reduction,12° 37′ 50″,123347/360,1/4,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800,assertion-v12-b860b1604d372088b4f4,-21930
+VII,1593-08-24,,tycho-oo-12,290,assertion-v12-dd354b6b06d00dbfd2e3,reduction,12° 40′ 15″ ♓,82241/240,1/4,assertion-v12-2b0554bd4ecf800ce630,11^h^ 0^m^,39600,assertion-v12-e0c4af1c6b922e25b50c,-21968
+VII,1593-08-29,,tycho-oo-12,291,assertion-v12-0a647639f401e3a9b80d,reduction,11° 15′ 25″,49141/144,1/2,assertion-v12-40c0492645067dff6685,10 20,37200,assertion-v12-42cec8b18e7a62a666e8,-21135
+VII,1593-08-29,,tycho-oo-12,290,assertion-v12-0e779869f7c133c65908,reduction,11° 15⅖′ ♓,102377/300,1/2,assertion-v12-1d5b475f939888eabecc,10⅓^h^,37200,assertion-v12-30881f277239580bdac9,-21135
+VII,1593-09-21,,tycho-oo-12,292,assertion-v12-3e8f091f9a82377c43f0,reduction,7° 20⅙′ ♓,121441/360,1,assertion-v12-cff29554b1bdbae02cae,9⅔^h^,34800,assertion-v12-a8daa80adfb7b3c549d1,-15225
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-20db458f540ce93400c1,reduction,24⅓° ♉,163/3,1/2,,,,assertion-v12-9d076144d4bdc75e932a,-3600
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-e804babe099a9bca3e7c,reduction,24½° ♉,109/2,1/2,,,,assertion-v12-5ba2ab5752adcaa9203c,-7200
+VIII,1595-09-18,morning,tycho-oo-12,444,assertion-v12-0e7a226dafa92c0715fd,reduction,26° 7′ 13″ ♉,202033/3600,1,,,,assertion-v12-0eaad4c664e90e15c3b4,-6111
+VIII,1595-09-30,before_noon,tycho-oo-12,445,assertion-v12-059112b0c0b9680ae17c,reduction,26° 6½′ ♉,6733/120,1,assertion-v12-a34dc2b7c78cca0e06f2,4^h^,14400,assertion-v12-1a197e4c256e20dff03d,-5160
+VIII,1595-10-12,evening,tycho-oo-12,446,assertion-v12-f9c426621027d177597c,reduction,23° 52½′ ♉,431/8,1,,,,assertion-v12-809372d713dae963430b,-3240
+VIII,1595-10-16,morning,tycho-oo-12,446,assertion-v12-1eb4b7b5b0f47732a503,reduction,22° 55¾′ ♉,12703/240,1,assertion-v12-36b6ecde0caa664bccb6,3^h^ 35^m^,12900,assertion-v12-eab9d512b132eb8a23b6,-2620
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-8fad832b40a7dee4ed8d,reduction,19° 53′ 0″ ♉,2993/60,1/2,assertion-v12-00c2cfb8d02e00670f31,6¾^h^,24300,assertion-v12-80464e7fd0ae59a372d4,-830
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-e12465198fe70aae5c47,reduction,19° 52′ 0″ ♉,748/15,1/2,,,,assertion-v12-e3c272f19809f7b519a3,-780
+VIII,1595-10-26,evening,tycho-oo-12,449,assertion-v12-7085805d3baffaffb868,reduction,19° 13′ 23″ ♉,177203/3600,1,assertion-v12-c959788884a0dfac52b6,11⅙^h^,40200,assertion-v12-497adf2b6ddba54cb739,-486
+VIII,1595-10-27,,tycho-oo-12,453,assertion-v12-f4f95893cb28d701b270,reduction,18° 52′ 15″ ♉,11729/240,1/2,assertion-v12-8a4ed212c7235b343ee0,12⅓^h^,44400,,
+VIII,1595-10-27,,tycho-oo-12,453,assertion-v12-f9acb381e9dd52684f3f,reduction,18° 51¼′ ♉,2345/48,1/2,assertion-v12-8a4ed212c7235b343ee0,12⅓^h^,44400,,
+VIII,1595-10-28,,tycho-oo-12,453,assertion-v12-1781ddd8f4beda09ed96,adopted_value,18° 28′ 22″ ♉,87251/1800,1,assertion-v12-d394764b4b92fba80885,12¼^h^,44100,,
+VIII,1595-10-29,,tycho-oo-12,455,assertion-v12-dd8eae8af843ce0ec9d4,reduction,17° 56′ 5″ ♉,34513/720,1/2,assertion-v12-5dfc4826bb47c15f72a9,21^h^ 46^m^,78360,assertion-v12-6d4cc9dddffaf352c148,315
+VIII,1595-10-29,,tycho-oo-12,453,assertion-v12-f886040087c54dd7a9b1,reduction,17° 56½′ ♉,5753/120,1/2,assertion-v12-c6883a568e5b87ca1314,21^h^ 50^m^,78600,assertion-v12-69d6a877bfd748dca38f,330
+VIII,1595-10-30,,tycho-oo-12,454,assertion-v12-2369dee87ecbbd5b113c,adopted_value,17° 48⅔′ ♉,4303/90,1,assertion-v12-89b2503d990c54d94573,8^h^,28800,assertion-v12-945b52acb873b93c1598,210
+VIII,1595-11-03,,tycho-oo-12,455,assertion-v12-cbb6b8fd20a433092ac0,adopted_value,16° 18⅓′ ♉ limited,1667/36,1,assertion-v12-28e19a4c77413106dc0d,12^h^,43200,assertion-v12-39abc5bbd8ea0c037b42,990
+VIII,1595-11-23,,tycho-oo-12,456,assertion-v12-71c83e720e8a7ff588a2,reduction,11° 6¾′ ♉,3289/80,1,assertion-v12-2a44b56b975fec45bbd7,9½^h^,34200,assertion-v12-b43ec1ffa0be4f4dde5b,6015
+VIII,1595-12-06,,tycho-oo-12,457,assertion-v12-7942d36656cb182ba466,reduction,10° 26′ 16″ ♉,18197/450,1/2,,,,assertion-v12-580eb5f8df6deff09418,5344
+VIII,1595-12-06,,tycho-oo-12,457,assertion-v12-f97d7c000c8cfd6baaee,reduction,10° 25′ 35″ ♉,29107/720,1/2,,,,,
+VIII,1595-12-18,,tycho-oo-12,460,assertion-v12-fcdc4a8659cf3089bb43,adopted_value,11° 41′ 0″ ♉,2501/60,1,assertion-v12-446e7e268eb6d8662ed2,8⅔^h^,31200,assertion-v12-6540d3bc4f1b06f26839,6000
+VIII,1595-12-23,,tycho-oo-12,460,assertion-v12-e00be0eb9c39612baf0e,reduction,12° 39′ 45″ ♉,3413/80,1,,,,assertion-v12-d6b08cafc35348889878,6271
+IX,1597-12-06,,tycho-oo-13,111,assertion-v13-e833f80e3399a4880dfe,reduction,5° 24 M. of ♋,477/5,1,,,,,
+IX,1597-12-10,,tycho-oo-13,112,assertion-v13-387a93f1fec92debbd3f,adopted_value,3 49 ♋³,5629/60,1,,,,assertion-v13-8c741e5c668bf46bbcdc,11100
+IX,1597-12-13,after_noon,tycho-oo-13,154,assertion-v13-268177fcc6839bc50269,reduction,2° 29′ ♋,5549/60,1/2,assertion-v13-e866513996709b82f114,H. 13 M. 35 p.m.,48900,assertion-v13-1c49a207ae04d62e81f0,12540
+IX,1597-12-13,after_noon,tycho-oo-13,151,assertion-v13-55e2b8c5e402cbc1f461,reduction,2 Gr. 28 Mi. ♋,1387/15,1/2,assertion-v13-a0368c4afffaf6856f89,13 hours Mi. 26 p. M.,48360,assertion-v13-1a94d6827deb15dcdbb0,12420
+IX,1597-12-18,,tycho-oo-13,154,assertion-v13-29709473cadf2666d522,reduction,0 32 40 ♋,8149/90,1/2,assertion-v13-875f0d26ca5107ddff1a,H. 11⅚,42600,assertion-v13-6e9c482ce14d0db0a282,12870
+IX,1597-12-18,,tycho-oo-13,151,assertion-v13-b7e8a3655b368fa99508,reduction,0° 31½′ ♋,3621/40,1/2,,,,assertion-v13-29e619f4aa08abd34d61,12900
+X,1599-12-13,,tycho-oo-13,181,assertion-v13-09fe614b2129fb982808,reduction,18° 9′ 12″ ♌,20723/150,1,,,,assertion-v13-6d7ef130ac2132bf0c7c,10805
+X,1599-12-14,,tycho-oo-13,181,assertion-v13-c46241ff6066c62cd2b6,reduction,18 14 39,165893/1200,1,,,,assertion-v13-c3b9ef7f725fb73fe5c8,10718
+X,1600-01-01,night,tycho-oo-13,219,assertion-v13-4e98d2b8c99b6bcaa0a9,reduction,17 29 47 ♌,494987/3600,1,,,,assertion-v13-db784fcb1a02d4658f78,13543
+X,1600-01-05,night,tycho-oo-13,219,assertion-v13-f5a7a6bb7fb86c4b3527,reduction,16 43 3 ♌,54687/400,1,,,,assertion-v13-681d636a4b11a5f5895f,14214
+X,1600-01-12,,tycho-oo-13,244,assertion-v13-556bc24afd0e3e2e3fae,reduction,11 0 ♌,131,1,,,,assertion-v13-d96222c8ee6d261f9c52,16155
+X,1600-01-19,after_noon,tycho-oo-13,221,assertion-v13-4964e4f607dbd7636300,adopted_value,8° 19′ ♌,7699/60,1,assertion-v13-6f975038eb8c93666501,H. 9 M. 40 P.M.,34800,,
+X,1600-01-20,night,tycho-oo-13,220,assertion-v13-f1e7fff86d63e17476bc,reduction,12 5 25 ♌,19021/144,1,,,,assertion-v13-1235619743e017faced2,15823
+X,1600-01-22,night,tycho-oo-13,221,assertion-v13-0368d5f685ecd8f2097b,adopted_value,11 24 30 ♌,15769/120,1,,,,,
+X,1600-01-24,night,tycho-oo-13,221,assertion-v13-d0eeb490f9ccd2162723,reduction,10 38 46 ♌,235163/1800,1,,,,assertion-v13-5e87f51c379e54921a98,16120
+X,1600-03-02,after_noon,tycho-oo-13,224,assertion-v13-30de45bb0b854ad2e134,reduction,29 14 46♋,214643/1800,1/2,assertion-v13-7b0e1a87c341aea776e7,H. 10,36000,assertion-v13-caab1b6743da0630ef04,13851
+X,1600-03-02,,tycho-oo-13,224,assertion-v13-a500730c99507183f0eb,reduction,♋ 29° 14′ 46″,214643/1800,1/2,,,,,
+X,1600-03-09,after_noon,tycho-oo-13,224,assertion-v13-0bd62806ae0693f606ff,reduction,28 57 4♋,26764/225,1/2,assertion-v13-53ad58455948a5cb8804,H. 9½,34200,assertion-v13-a3e6ed288ac083b9c24e,13035
+X,1600-03-09,,tycho-oo-13,224,assertion-v13-2750cf22560f51d2fbad,reduction,28 57 4,26764/225,1/2,,,,,
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-d073dfbd63c59da358b3,reduction,29 12 30♋,2861/24,1/2,assertion-v13-b1ab0b19ea648fdc5895,H. 9⅓,33600,assertion-v13-21046a6b3854233aca45,12173
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-ffd14d480c836a0b7126,reduction,29 12 30,2861/24,1/2,,,,,
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-0f13396c0aec379a48af,reduction,29 17 53,429473/3600,1/2,,,,,
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-28445d5692941516b812,reduction,29 17 53♋,429473/3600,1/2,assertion-v13-9dd7cba65b4645cd3638,H. 9¼,33300,assertion-v13-689838ffec73b92eac8b,11985

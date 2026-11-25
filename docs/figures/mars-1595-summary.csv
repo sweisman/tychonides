@@ -1,0 +1,9 @@
+model,kind,rows,first_station,second_station,retrograde_span_degrees,projected_distance,rms_degrees,rms_timed_degrees,mean_timed_arcmin
+ptolemaic,reconstruction,21,1595-09-23,1595-12-02,14.84,0.484,0.502,0.440,5.00
+copernican,reconstruction,21,1595-09-23,1595-12-02,14.26,0.493,0.673,0.568,5.82
+tychonic,reconstruction,21,1595-09-24,1595-12-03,15.23,0.504,0.271,0.206,-0.60
+modern,reconstruction,21,1595-09-24,1595-12-04,16.01,0.496,0.060,0.046,-2.63
+de441,ephemeris,21,,,,,0.040,0.017,0.48
+Alphonsine,printed prediction,5,,,,,0.349,,
+Copernicus,printed prediction,4,,,,,1.907,,
+Prutenic,printed prediction,1,,,,,1.583,,

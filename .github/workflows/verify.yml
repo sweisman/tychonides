@@ -17,15 +17,17 @@ jobs:
           - python: '3.14'
             os: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v6
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '${{ matrix.python }}'
-      - run: python -m pip install '.[dev]'
-      - run: ruff check src tests
-      - run: ruff format --check src tests
+      - run: python -m pip install '.[dev,analysis]'
+      - run: ruff check src tests examples
+      - run: ruff format --check src tests examples
       - run: python -m unittest discover -s tests
       - run: tychonides --help
+      - name: Regenerate the study tables and figures
+        run: python examples/mars_1595.py --output "$RUNNER_TEMP/mars-1595"
       - name: Download versioned catalog assets
         env:
           GH_TOKEN: ${{ github.token }}
@@ -43,3 +45,7 @@ jobs:
             done
           done < <(jq -er '.output_hashes | keys[]' resources/catalog/manifest.json)
       - run: tychonides-verify resources/catalog --assets-dir /tmp/tychonides-assets --docs-root .
+      - name: Check the study selections against the catalog
+        run: |
+          gzip -dc /tmp/tychonides-assets/tychonides.sqlite.gz > "$RUNNER_TEMP/tychonides.sqlite"
+          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study

@@ -15,26 +15,31 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 [Read the study](mars-apparent-motion.md)
 
 - **Question.** How closely do Ptolemaic, Copernican, Tychonic, and modern
-  Keplerian geometries follow Mars through one retrograde passage as Tycho’s
-  reductions record it?
-- **Result.** All four produce the reversal. The 14 reductions follow the modern
-  track most closely, with a root-mean-square longitude difference of 0.10°.
-  Three historical geometries, built on one shared opposition longitude and
-  apsidal direction, differ from the reductions by 0.29° to 0.65° and give
-  retrograde spans of 14.2° to 15.2°, against 16.0° for the modern track. On
-  four dates the Alphonsine longitudes printed in the log lie within 6′ of
-  Tycho’s reductions on average, and the printed Copernican ones about 114′.
-- **Inputs.** Fourteen dated longitude reductions from *Opera Omnia* XII,
-  pp. 442–460, in a [source table](../examples/mars-1595-observations.csv) with
-  catalog identities. The opposition anchor and Tychonic parameters come from
-  Longomontanus’s *Astronomia Danica*.
-- **Limits.** A date-level comparison at nominal noon. The historical curves
-  test the stated constructions under common conditions, not the historical
-  tables. The scatter describes this selection and carries no uncertainty
-  estimate.
+  constructions follow Mars through one retrograde passage as Tycho’s
+  reductions record it, and how close were the table predictions he printed?
+- **Result.** All four constructions produce the reversal. Where the log prints
+  a usable hour, Tycho’s reductions agree with the JPL DE441 ephemeris to about
+  one arcminute. Historical curves tied to one opposition longitude differ from
+  the log by 0.27° (Tychonic), 0.50° (Ptolemaic), and 0.67° (Copernican). That
+  order changes with the assumed apsidal direction, so it does not rank the
+  systems. From September 30 the printed Alphonsine predictions stay within 10′
+  of the log, and the printed Copernican ones run 106′ to 119′ behind.
+- **Inputs.** Twenty-one longitude reductions on 16 dates from *Opera Omnia*
+  XII, pp. 443–460, [selected from the catalog](../examples/mars-observations.csv)
+  by a written rule. The opposition anchor and Tychonic parameters come from
+  Longomontanus’s *Astronomia Danica*. Modern positions are cached from JPL
+  Horizons.
+- **Limits.** One passage, with residuals that are correlated from night to
+  night and carry no uncertainty. The Tychonic parameters were derived from a
+  set of oppositions that includes this one. Nine rows have no usable hour and
+  are evaluated at local noon.
 - **Rerun.** `python examples/mars_1595.py --output docs/figures` regenerates
-  the [numerical output](figures/mars-1595-results.csv) and all three figures.
-  It needs NumPy and Matplotlib.
+  the [results](figures/mars-1595-results.csv), the summary, sensitivity,
+  validation, and prediction tables, and all three figures. The tables need
+  NumPy and the figures need Matplotlib. A test regenerates the tables.
+- **Reviewed.** November 25, 2026. The review replaced 14 hand-chosen rows with
+  a written selection rule, used the printed hours, corrected the placement of
+  the mean Sun, and added the sensitivity and validation tables.
 
 ## Mars, Jupiter, and Saturn corrections
 
