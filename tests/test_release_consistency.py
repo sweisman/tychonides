@@ -64,7 +64,11 @@ class ReleaseConsistencyTests(unittest.TestCase):
                 with self.subTest(file=name):
                     target = root / name
                     original = target.read_text(encoding="utf-8")
-                    target.write_text(original.replace(version, "99.0.0", 1), encoding="utf-8")
+                    prefix = "" if name == "pyproject.toml" else "tychonides-"
+                    target.write_text(
+                        original.replace(prefix + version, prefix + "99.0.0", 1),
+                        encoding="utf-8",
+                    )
                     with self.assertRaisesRegex(ValueError, "[Rr]elease"):
                         release_validation.validate_release_references(root)
                     target.write_text(original, encoding="utf-8")

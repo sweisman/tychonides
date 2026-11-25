@@ -43,7 +43,7 @@ These are parallel workstreams, not a fixed import order. All follow the
 
 | Workstream | Material | Completion criterion for each release |
 | --- | --- | --- |
-| Remaining Tycho logs | Other planets, additional solar and stellar observations, comets, and supporting records across all four volumes | Extend the [Mars, Jupiter, and Moon coverage](data-sources.md#jupiter-and-moon-coverage) by defining each selection, recording unresolved cases, and reusing shared source occurrences. |
+| Remaining Tycho logs | Other planets, additional stellar observations, comets, and supporting records across all four volumes | Extend the [existing log coverage](data-sources.md#ingested-historical-sources) by defining each selection, recording unresolved cases, and reusing shared source occurrences. The catalog includes the [Sun, Saturn, and Venus selections](data-sources.md#sun-saturn-and-venus-coverage). |
 | Other works by Tycho | Relevant observations, calibrations, correction tables and model inputs, including the Progymnasmata | Identify work and edition, classify evidential roles and trace repeated accounts to their earlier records. |
 | Other historical astronomers | Hevelius and other relevant authors in Ars Astronomica | Identify the available public work and edition before selecting passages; establish observer and publication lineage, units and eligibility. |
 | Additional modern collections | Suitable datasets as they are found | Establish platform, measurement method, spectral band, timing, reduction history, provenance and redistribution terms before import. |

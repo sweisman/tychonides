@@ -1,5 +1,14 @@
 # Catalog releases
 
+## 1.2.0
+
+The catalog adds 19,173 Sun, 11,504 Saturn, and 15,623 Venus quantities from
+Tycho’s four observing volumes, including solar eclipse records, meridian
+altitudes, clocks, and historical reductions. Shared readings retain their
+existing identities. Six earlier date claims gained or corrected a year based
+on the printed section headings. The release contains **659,773 quantities and
+113,575 source groups**. [Coverage by volume](docs/data-sources.md#sun-saturn-and-venus-coverage)
+
 ## 1.1.0
 
 The catalog adds 12,560 quantities from the Jupiter selection and 23,893

@@ -115,7 +115,43 @@ def merge_catalogues(base, additional, output, *, repeat=False):
     return merge_catalogue_set((base, additional), output, repeat=repeat)
 
 
-def merge_catalogue_set(inputs, output, *, repeat=False):
+def _apply_working_date_reviews(db, reviews):
+    """Apply source-reviewed year bindings to the copied baseline only."""
+    for previous, reviewed in reviews:
+        changed = {
+            key
+            for key in previous.keys() | reviewed.keys()
+            if previous.get(key) != reviewed.get(key)
+        }
+        if (
+            previous.keys() != reviewed.keys()
+            or "year" not in changed
+            or not changed <= {"year", "component_status"}
+            or reviewed.get("claim_basis") != "reviewed_source_context"
+            or reviewed.get("calendar_validation") != "not_performed"
+            or reviewed.get("accepted_observing_date") is not None
+            or reviewed.get("absolute_timestamp") is not None
+            or type(reviewed["year"]) is not int
+            or not 1 <= reviewed["year"] <= 9999
+            or reviewed["component_status"]
+            != (
+                "complete_named_components"
+                if all(reviewed.get(key) is not None for key in ("year", "month", "day"))
+                else "partial_named_components"
+            )
+        ):
+            raise ValueError("Working date review must bind only the source year")
+        updated = db.execute(
+            "UPDATE dates SET data_json=? WHERE id=? AND data_json=?",
+            (encoded(reviewed), previous["id"], encoded(previous)),
+        ).rowcount
+        if updated != 1:
+            raise ValueError("Reviewed date does not match the frozen baseline: " + previous["id"])
+
+
+def merge_catalogue_set(
+    inputs, output, *, repeat=False, reviewed_dates=(), verified_manifests=None
+):
     """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
     from .catalog_release import CSV_COLUMNS
@@ -130,14 +166,24 @@ def merge_catalogue_set(inputs, output, *, repeat=False):
     if any(p.is_relative_to(output) or output.is_relative_to(p) for p in inputs):
         raise ValueError("Merge output overlaps its read-only inputs")
     snapshots, fingerprints = [], {}
+    reviewed_dates = tuple(reviewed_dates)
+    verified_manifests = verified_manifests or {}
     for directory in inputs:
-        validate_release(directory)
-        manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
+        manifest_path = directory / "manifest.json"
+        manifest_hash = digest(manifest_path)
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if verified_manifests.get(directory) == manifest_hash:
+            # The caller has already checked this exact manifest and its assets.
+            for filename, checksum in manifest["output_hashes"].items():
+                if digest(directory / filename) != checksum:
+                    raise ValueError("Previously verified input changed: " + filename)
+        else:
+            validate_release(directory)
         if manifest.get("schema_version", 3) != 3:
             raise ValueError("Merge requires unprojected working catalogue schema 3")
         database, _csv_name = working_files(directory)
         snapshots.append(directory / database)
-        fingerprints[directory / "manifest.json"] = digest(directory / "manifest.json")
+        fingerprints[manifest_path] = manifest_hash
         fingerprints.update(
             {directory / name: checksum for name, checksum in manifest["output_hashes"].items()}
         )
@@ -149,6 +195,8 @@ def merge_catalogue_set(inputs, output, *, repeat=False):
         with closing(sqlite3.connect((stage / "tychonides.sqlite").as_uri(), uri=True)) as db:
             db.execute("PRAGMA foreign_keys=OFF")
             metadata = dict(db.execute("SELECT key,value_json FROM main.metadata"))
+            with db:
+                _apply_working_date_reviews(db, reviewed_dates)
             for database in snapshots[1:]:
                 db.execute("ATTACH DATABASE ? AS incoming", (database.as_uri() + "?mode=ro",))
                 with db:
