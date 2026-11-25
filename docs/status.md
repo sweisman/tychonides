@@ -17,7 +17,7 @@ Last updated November 25, 2026.
 | Mars, Jupiter, and Saturn parallax | Initial calculations | [Recorded and modern corrections](planetary-parallax-comparisons.md) are compared. | Parallax feasibility |
 | Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md) are recomputed under historical and modern assumptions. | Parallax feasibility |
 | Accuracy and refraction | Tables compared | The [refraction tables](refraction-tables.md) of Tycho and Riccioli are set against modern refraction. The [planetary comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. In 1595 Tycho’s Mars longitudes agree with DE441 to about one arcminute where the log prints a usable hour. | The tables that lack recorded altitudes, then the observations behind the tables and calibrated observing sessions |
-| Kepler and opposition tables | Planned | | |
+| Kepler and opposition tables | Table checked | Longomontanus’s fourteen oppositions [reproduce from DE441](mars-oppositions.md#the-opposition-table-against-de441) within 4′ in longitude. | The steps from the log’s readings to each tabulated opposition |
 | Interactive visualization | Planned | [Visualization plan](visualization-plan.md) | Catalog explorer |
 | Stellar aberration | Planned | | |
 | Other planets and records | Planned | The catalog covers the planets, Sun, Moon, comets, and stars in Tycho’s logs. | |
@@ -55,6 +55,7 @@ The research program gives each milestone’s
 
 | Date | Result |
 | --- | --- |
+| November 25, 2026 | Reproduction: [the opposition table against DE441](mars-oppositions.md#the-opposition-table-against-de441). All fourteen longitudes fall within 4′. The tabulated instants differ by up to three hours in a seasonal pattern that matches a solar equation 7′ too large. |
 | November 25, 2026 | Study: [Printed predictions for the Moon and planets](printed-predictions.md). Alphonsine longitudes of Saturn run 2.9° ahead in 1590 and 1591 while the Copernican ones stay within 10′. Copernican longitudes of Mars are within 37′ away from opposition. |
 | November 25, 2026 | Verification: the release check now recomputes 123,591 exact historical values from their printed expressions, reports any check it skips, guards the totals in the source directory, and decompresses the database once beside the download. |
 | November 25, 2026 | Review of the two parallax studies: every table now regenerates from a script and committed inputs, the printed inputs are tied to catalog entries, and the Venus scenario comparison covers all seven pairs of March 1590. |
@@ -84,8 +85,9 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
    [published comparison](refraction-tables.md). Reproduce Tycho’s refraction
    values from the solar altitudes behind them.
 4. **Printed calculations.** Reproduce selected historical results at their
-   stated epochs from the documented parameters, beginning with the opposition
-   table and the parallax campaigns.
+   stated epochs from the documented parameters, beginning with the steps from
+   the log’s readings to each tabulated opposition, the solar theory behind
+   them, and the parallax campaigns.
 5. **Parallax feasibility.** Test what diurnal parallax the observations could
    recover at their actual cadence under declared error assumptions.
 6. **Catalog explorer.** Build the first interactive view of the catalog.

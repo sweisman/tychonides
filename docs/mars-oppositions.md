@@ -131,6 +131,64 @@ not a place within a sign, so it is left out. An earlier version of this page
 compared it within the sign, 11° from the log, which put the Copernican mean
 for 1591 at +48′.
 
+## The opposition table against DE441
+
+Each row of Longomontanus’s table gives the instant at which Mars stood
+opposite the Sun and the longitude of Mars at that instant. Both can be
+recomputed from DE441: the instant at which the apparent longitude of Mars is
+180° from that of the Sun, and the longitude of Mars then.
+
+| Opposition | Table minus DE441 longitude | DE441 opposition after the tabulated instant | Sun implied by the row minus DE441 |
+| --- | ---: | ---: | ---: |
+| 1580 Nov 18 | −1.8′ | −0.84 h | −3.9′ |
+| 1582 Dec 28 | −0.9′ | +1.12 h | +1.9′ |
+| 1585 Jan 30 | +0.3′ | +1.14 h | +3.2′ |
+| 1587 Mar 6 | −1.7′ | +3.24 h | +6.4′ |
+| 1589 Apr 14 | −2.0′ | +2.53 h | +4.1′ |
+| 1591 Jun 8 | +1.2′ | −0.45 h | +0.1′ |
+| 1593 Aug 25 | −3.1′ | −2.38 h | −8.9′ |
+| 1595 Oct 31 | −3.9′ | −1.06 h | −6.6′ |
+| 1597 Dec 13 | +0.7′ | −0.38 h | −0.3′ |
+| 1600 Jan 18 | −0.2′ | +2.18 h | +5.4′ |
+| 1602 Feb 20 | −0.5′ | +3.17 h | +7.4′ |
+| 1604 Mar 28 | −0.6′ | +2.50 h | +5.5′ |
+| 1608 Jul 24 | −1.7′ | −1.23 h | −4.7′ |
+| 1610 Oct 8 | −1.0′ | −1.66 h | −5.2′ |
+
+- **The longitudes reproduce.** All fourteen lie between 3.9′ behind and 1.2′
+  ahead of the DE441 longitude at opposition, and twelve lie within 2′. The
+  mean difference is −1.1′.
+- **The instants differ by up to three hours, by season.** The DE441 opposition
+  falls 1.1 to 3.2 hours after the tabulated instant at the seven oppositions
+  from late December to mid-April. It falls 0.4 to 2.4 hours before it at the
+  seven from June to mid-December.
+- **The pattern is that of the solar theory.** A row asserts that the Sun stood
+  opposite its longitude at its instant. That implied Sun runs up to 7.4′
+  ahead of DE441 in February and March and up to 8.9′ behind in late August.
+  It agrees within 0.3′ at the oppositions of June 1591 and December 1597. The
+  eccentric solar circle of the *Astronomia Danica*, with eccentricity 1/28,
+  has a largest equation of 2° 03′. The Earth’s orbit in 1600 gives 1° 56′. A
+  solar equation too large by that 7′ accounts for the implied Sun within 2.7′
+  in every row.
+
+The [refraction study](refraction-tables.md) found Tycho’s corrections to a
+solar altitude 2.8′ to 2.9′ from the modern ones between 30° and 45°. At an
+equinox an altitude error of that size moves a longitude taken from the Sun’s
+declination by about 7′. The two results are consistent. This page does not
+test the link.
+
+The tenth row is read with January, the month its own mean-longitude column
+requires, where the catalog gives June. It reproduces like the others. The
+last four rows postdate Tycho’s death in 1601 and reproduce equally well.
+
+Limits: the tabulated hours are taken as mean time at Uraniborg, counted from
+noon. The equation of time, up to 16 minutes, is not applied. It can move an
+offset by 0.3 hours and the implied Sun by 0.7′. The
+[script](../examples/mars_opposition_table.py) reads
+[cached JPL Horizons positions](../examples/mars-opposition-table-ephemeris.csv)
+of Mars and the Sun every six hours and writes the
+[full comparison](figures/mars-opposition-table.csv).
+
 ## The 1600 opposition is set aside
 
 By count, 1600 belongs with the main set: 17 rows on 13 dates. Read as

@@ -30,6 +30,7 @@ jobs:
         run: |
           python examples/mars_1595.py --output "$RUNNER_TEMP/mars-1595"
           python examples/mars_oppositions.py --output "$RUNNER_TEMP/mars-oppositions"
+          python examples/mars_opposition_table.py --output "$RUNNER_TEMP/mars-opposition-table"
           python examples/refraction_tables.py --output "$RUNNER_TEMP/refraction-tables"
           python examples/planetary_parallax.py --output "$RUNNER_TEMP/parallax"
           python examples/printed_predictions.py --output "$RUNNER_TEMP/printed-predictions"

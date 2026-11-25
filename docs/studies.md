@@ -55,7 +55,10 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
   Alphonsine and Copernican predictions miss by up to 4.7° and 4.2°, with
   neither reliably closer. Curves tied to each opposition depart from the log
   by up to 0.6° for the Ptolemaic and Copernican constructions and up to 0.2°
-  for the Tychonic one, which was fitted to these oppositions.
+  for the Tychonic one, which was fitted to these oppositions. Longomontanus’s
+  fourteen tabulated oppositions reproduce from DE441 within 4′ in longitude
+  and three hours in time, and the timing differences follow the 7′ excess of
+  his solar equation.
 - **Inputs.** 149 longitude reductions and 125 printed predictions from
   *Opera Omnia* X–XIII, selected from the catalog by the rule written for 1595,
   with Longomontanus’s opposition table and cached JPL Horizons positions.
@@ -65,7 +68,10 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
   or withheld, so this is not a predictive test.
 - **Rerun.** `python examples/mars_oppositions.py --output docs/figures`
   regenerates the [summary](figures/mars-oppositions-summary.csv), the other
-  tables, and both figures. A test regenerates the tables.
+  tables, and both figures.
+  `python examples/mars_opposition_table.py --output docs/figures` regenerates
+  the [opposition table comparison](figures/mars-opposition-table.csv). Tests
+  regenerate the tables.
 - **Reviewed.** November 25, 2026. One Copernican prediction of 1591, printed
   as 247° 42′ with no zodiac sign, had been compared within the sign. It is
   now left out, which moves the Copernican mean for 1591 from +48′ to −8′.
