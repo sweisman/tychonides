@@ -37,7 +37,8 @@ interpretation limits.
 The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
 passage through four models. The [opposition study](docs/mars-oppositions.md)
 sets Tycho’s Mars longitudes and the tables of his day against a modern
-ephemeris. The [refraction study](docs/refraction-tables.md) sets the printed
+ephemeris. The [printed predictions study](docs/printed-predictions.md) does
+the same for every planet the logs compare with a table. The [refraction study](docs/refraction-tables.md) sets the printed
 tables of Tycho and Riccioli beside modern refraction. The
 [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
@@ -100,21 +101,22 @@ result can be followed back to its source. The
 [source directory](docs/data-sources.md) explains each collection’s contribution
 and the evidence needed to use it in an analysis.
 
-## An independent check: Pafko’s Mars transcription
+## A second transcription: Pafko’s Mars workbook
 
 For his [visualization project](https://www.pafko.com/tycho/), Wayne Pafko manually
 entered records from Tycho’s printed observation logs into an
 [Excel workbook](https://www.pafko.com/tycho/mars.xls). It contains source quotations,
-sexagesimal components and decimal-degree conversions. Created separately from
-the Ars Astronomica editions and Tychonides extraction, it supplies an important
-independent control for the ingestion methodology.
+sexagesimal components and decimal-degree conversions. It was created separately
+from the Ars Astronomica editions and the Tychonides extraction, so it is an
+independent transcription of the same pages.
 
 The original reconciliation linked all **923 workbook rows** to source entries.
 Pafko’s quotations and the edition agree in unsigned magnitude for **906** rows,
 including **125** that also agree in hemisphere. Sixteen differed and one source
 value was incomplete. **685** rows received no source check, and source checks
-include structural review as well as reading checks. The workbook informed
-parser development. See the [validation results and limits](docs/pafko-validation-status.md).
+include structural review as well as reading checks. The workbook also informed
+parser development, so the agreement checks the readings and is not an
+independent test of the method. See the [validation results and limits](docs/pafko-validation-status.md).
 
 ## Quick start
 

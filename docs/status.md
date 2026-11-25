@@ -13,7 +13,7 @@ Last updated November 25, 2026.
 | --- | --- | --- | --- |
 | Observation catalog | Available and expanding | [Release 1.3.1](../resources/catalog/README.md#download) holds 710,420 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. | [Planned acquisitions](data-sources.md#planned-ingestions) |
 | Mars apparent motion and geometry | Nine oppositions compared | [The 1595 retrograde passage](mars-apparent-motion.md) and [the oppositions of 1580 to 1600](mars-oppositions.md) compare Tycho’s reductions with four constructions and the JPL DE441 ephemeris. | The 1600 opposition, once the calendar of its entries is recorded |
-| Historical model comparison | Mars compared | The opposition study tabulates every Alphonsine, Copernican, and Prutenic prediction of Mars that the logs print near opposition. | Printed predictions for the other planets and away from opposition, and Ursus’s formulation where the sources permit |
+| Historical model comparison | Printed predictions compared | The [printed predictions study](printed-predictions.md) compares every table and ephemeris position the logs print for the five planets with the log and DE441. The opposition study covers Mars near opposition. | The Moon, once the hours of its entries are recorded, then independently reconstructed tables and Ursus’s formulation where the sources permit |
 | Mars, Jupiter, and Saturn parallax | Initial calculations | [Recorded and modern corrections](planetary-parallax-comparisons.md) are compared. | Parallax feasibility |
 | Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md) are recomputed under historical and modern assumptions. | Parallax feasibility |
 | Accuracy and refraction | Tables compared | The [refraction tables](refraction-tables.md) of Tycho and Riccioli are set against modern refraction. The [planetary comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. In 1595 Tycho’s Mars longitudes agree with DE441 to about one arcminute where the log prints a usable hour. | The tables that lack recorded altitudes, then the observations behind the tables and calibrated observing sessions |
@@ -21,6 +21,22 @@ Last updated November 25, 2026.
 | Interactive visualization | Planned | [Visualization plan](visualization-plan.md) | Catalog explorer |
 | Stellar aberration | Planned | | |
 | Other planets and records | Planned | The catalog covers the planets, Sun, Moon, comets, and stars in Tycho’s logs. | |
+
+## State of the catalog rows
+
+Of the 150,443 quantities from Tycho’s four logs in release 1.3.1:
+
+| State | Quantities | Share |
+| --- | ---: | ---: |
+| Exact value with an assigned type and role | 57,535 | 38% |
+| Exact value, type not yet assigned | 24,805 | 16% |
+| Printed expression kept, no numerical interpretation yet | 68,092 | 45% |
+| Incomplete value | 11 | under 1% |
+
+The studies draw mainly on the first row. The database’s own `metadata` table still
+describes the first Mars selection of 17,043 quantities in its
+`normalization_counts` and `coverage` entries, not the whole catalog. Use the
+manifest for catalog totals.
 
 ## Milestones
 
@@ -39,6 +55,8 @@ The research program gives each milestone’s
 
 | Date | Result |
 | --- | --- |
+| November 25, 2026 | Study: [Printed predictions for the Moon and planets](printed-predictions.md). Alphonsine longitudes of Saturn run 2.9° ahead in 1590 and 1591 while the Copernican ones stay within 10′. Copernican longitudes of Mars are within 37′ away from opposition. |
+| November 25, 2026 | Verification: the release check now recomputes 123,591 exact historical values from their printed expressions, reports any check it skips, guards the totals in the source directory, and decompresses the database once beside the download. |
 | November 25, 2026 | Review of the two parallax studies: every table now regenerates from a script and committed inputs, the printed inputs are tied to catalog entries, and the Venus scenario comparison covers all seven pairs of March 1590. |
 | November 25, 2026 | Study: [Historical refraction tables against modern refraction](refraction-tables.md). Tycho’s fixed-star table stays within 1′ of modern refraction from 4° to 16° and stops at 20°. His solar table runs 4½′ higher. |
 | November 25, 2026 | Study: [Mars at the oppositions of 1580 to 1600](mars-oppositions.md). Tycho’s longitudes agree with a modern ephemeris within 5′ at nine oppositions. The printed table predictions miss by up to 4.7°. |
@@ -56,9 +74,9 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
 
 ## Next up
 
-1. **Printed predictions.** Extend the comparison of printed Alphonsine,
-   Copernican, Prutenic, and ephemeris predictions from Mars near opposition to
-   the other planets and the rest of the logs.
+1. **Printed predictions of the Moon.** Record the hours of the 59 lunar
+   predictions and of the log’s values beside them, then add the Moon to the
+   [published comparison](printed-predictions.md).
 2. **The 1600 opposition.** Establish the calendar of the 1599 to 1601 entries
    from the printed pages, then add that opposition.
 3. **Refraction tables.** Record the altitude of each entry in Tycho’s lunar

@@ -1,0 +1,188 @@
+id,source_id,printed_page,body,quantity,role,model,expression,julian_date,reason
+assertion-v10-05957464f3f5c9c55fff,tycho-oo-10,6,Saturn,ecliptic_longitude,historical_prediction,Carelli,1.46 ♌ ♄,,no single complete date claim
+assertion-v10-0fcc39f87247e00f203d,tycho-oo-10,6,Mars,ecliptic_longitude,historical_prediction,Carelli,24.20 ♂ ♋,,no single complete date claim
+assertion-v10-435520eb7106ae8f2d94,tycho-oo-10,285,Mars,ecliptic_longitude,historical_prediction,Copernicus,11 43 ♋,,no single complete date claim
+assertion-v10-98e3e7df39fbe3c8db29,tycho-oo-10,6,Jupiter,ecliptic_longitude,historical_prediction,Carelli,4.3 ♌ ♃,,no single complete date claim
+assertion-v10-a944ac6d7ed87063207e,tycho-oo-10,285,Mars,ecliptic_longitude,historical_prediction,Copernicus,p. 101.51,,no single complete date claim
+assertion-v10-ce7122c1a467f7e8d116,tycho-oo-10,285,Mars,ecliptic_longitude,historical_prediction,Copernicus,11ᵍ 51′ ♋,,no single complete date claim
+assertion-v10-d15052d524ee60c85195,tycho-oo-10,6,Venus,ecliptic_longitude,historical_prediction,Carelli,19 20 ♀ ♋,,no single complete date claim
+assertion-v11-6f65682f602fd67f1edc,tycho-oo-11,63,Jupiter,ecliptic_longitude,historical_prediction,Copernicus,9° 50′ ♋,,no single complete date claim
+assertion-v11-8cea002fa9ad1f8bc0d3,tycho-oo-11,63,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,0° 9′,,no single complete date claim
+assertion-v11-9cae4ae6435a152dcd1e,tycho-oo-11,63,Jupiter,ecliptic_latitude,historical_prediction,Copernicus,0° 37′,,no single complete date claim
+assertion-v11-dbf193d2cba2384d5b74,tycho-oo-11,63,Jupiter,ecliptic_longitude,historical_prediction,Alphonsine,9° 59′ ♋,,no single complete date claim
+assertion-v10-28654efb9ff065310d63,tycho-oo-10,18,Mars,ecliptic_longitude,reduction,,29 0,1569-11-09,no printed zodiac sign
+assertion-v10-a8d825ced7bfc795f901,tycho-oo-10,18,Mars,ecliptic_latitude,historical_prediction,Alphonsine,1 35,1569-11-09,no printed latitude direction
+assertion-v10-fd4d00f50764e89c18e4,tycho-oo-10,18,Mars,ecliptic_latitude,historical_prediction,Stadius,1 45,1569-11-09,no printed latitude direction
+assertion-v10-8450f79977d406ee72fd,tycho-oo-10,22,Mars,ecliptic_latitude,historical_prediction,Stadius,3.20,1570-01-07,no printed latitude direction
+assertion-v10-618f54d9ea76e1b0abf1,tycho-oo-10,25,Moon,ecliptic_latitude,reduction,,5.26,1570-01-16,no printed latitude direction
+assertion-v10-01594994784ae17c5275,tycho-oo-10,35,Mars,ecliptic_longitude,reduction,,3 33 ♍,1570-02-15,superseded by an adopted value on the same date
+assertion-v10-3a0edfaa2832c8e4b9f2,tycho-oo-10,35,Mars,ecliptic_longitude,reduction,,3 24 ♍,1570-02-15,superseded by an adopted value on the same date
+assertion-v10-929b718fa94435f078be,tycho-oo-10,35,Mars,ecliptic_longitude,reduction,,3 27 ♍,1570-02-15,superseded by an adopted value on the same date
+assertion-v10-f62b938928cf6b27e6f6,tycho-oo-10,27,Mars,ecliptic_latitude,historical_prediction,Prutenic,4^g^ 16′,1570-02-26,no printed latitude direction
+assertion-v10-04d543f3e2406db65491,tycho-oo-10,30,Mars,ecliptic_longitude,reduction,,24^g^ 18′,1570-03-28,no printed zodiac sign
+assertion-v10-6459d2870a4d6cecfac5,tycho-oo-10,34,Mars,ecliptic_latitude,reduction,,1 56,1570-04-26,no printed latitude direction
+assertion-v10-c3d1cd21571adaecd8ca,tycho-oo-10,34,Mars,ecliptic_latitude,historical_prediction,Prutenic,2 0,1570-04-26,no printed latitude direction
+assertion-v10-1a0c7258b382b1a39975,tycho-oo-10,63,Mars,ecliptic_longitude,reduction,,`p. 12 M. 40` ♈,1578-09-15,superseded by an adopted value on the same date
+assertion-v10-4c4a86fad94533dbaa1a,tycho-oo-10,63,Mars,ecliptic_longitude,reduction,,`p. 12 M. 51¼` ♈,1578-09-15,superseded by an adopted value on the same date
+assertion-v10-4e79aa0fa47fa338ba37,tycho-oo-10,64,Mars,ecliptic_longitude,reduction,,`p. 12 M. 52` ♈,1578-09-15,superseded by an adopted value on the same date
+assertion-v10-60445b14c35933830294,tycho-oo-10,64,Mars,ecliptic_longitude,reduction,,`p. 12 M. 40` ♈,1578-09-15,superseded by an adopted value on the same date
+assertion-v10-f7306a8d445dcf245238,tycho-oo-10,65,Mars,ecliptic_latitude,reduction,,2 5½ Merid.,1578-10-23,superseded by an adopted value on the same date
+assertion-v10-fd25074cc5875be7c099,tycho-oo-10,65,Mars,ecliptic_longitude,reduction,,`5 12½` ♈,1578-10-23,superseded by an adopted value on the same date
+assertion-v10-5c7a33b807d3a304e7e3,tycho-oo-10,85,Mars,ecliptic_latitude,historical_prediction,Alphonsine,1½,1580-11-17,no printed latitude direction
+assertion-v10-8aeb9411cb31331da704,tycho-oo-10,85,Mars,ecliptic_latitude,historical_prediction,Prutenic,lat. 0,1580-11-17,no printed latitude direction
+assertion-v10-3f26059ef7c17b5313b8,tycho-oo-10,85,Mars,ecliptic_latitude,historical_prediction,Prutenic,1.25,1580-12-10,no printed latitude direction
+assertion-v10-b49da45433df506dcccb,tycho-oo-10,85,Mars,ecliptic_latitude,historical_prediction,Alphonsine,2.8,1580-12-10,no printed latitude direction
+assertion-v10-aa5bfc31e74fde79bcca,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,,4 31 3,1585-01-24,no printed latitude direction
+assertion-v10-148c56eaf3f4a6fec458,tycho-oo-10,390,Mars,ecliptic_longitude,reduction,,21 12 ♌,1585-01-31,superseded by an adopted value on the same date
+assertion-v10-2fe3d6ce50bf49d076ea,tycho-oo-10,390,Mars,ecliptic_longitude,reduction,,21° 11′ 52″ ♌,1585-01-31,superseded by an adopted value on the same date
+assertion-v10-8de004b5d5ef9ca9f0c4,tycho-oo-10,388,Mars,ecliptic_longitude,reduction,,21 18 11 ♌,1585-01-31,superseded by an adopted value on the same date
+assertion-v10-9c44c6aea5e0441ec9c4,tycho-oo-10,390,Mars,ecliptic_longitude,reduction,,21 0 ♌,1585-01-31,superseded by an adopted value on the same date
+assertion-v10-c4e91b4e2b4899e45108,tycho-oo-10,388,Mars,ecliptic_longitude,reduction,,21 18 ♌,1585-01-31,superseded by an adopted value on the same date
+assertion-v10-85edf39e1beb6f7ddd29,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11 17 51 ♌,1585-03-11,no model name
+assertion-v10-bf1f1313ac53cdd09e2d,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11 17 5 ♌,1585-03-12,no model name
+assertion-v10-64ed11ae6565bd0c255d,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11 15 56 ♌,1585-03-13,no model name
+assertion-v10-7198707b37b1fd381be8,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11 16 1 ♌,1585-03-14,no model name
+assertion-v10-fc457771b89c56d67506,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11 19 2 ♌,1585-03-16,no model name
+assertion-v10-383c7e4f0dcc66117dcc,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,,12 1 40 ♌,1585-03-19,superseded by an adopted value on the same date
+assertion-v10-95003887b73d85fb184e,tycho-oo-10,397,Mars,ecliptic_longitude,historical_prediction,,11°28′5″ ♌,1585-03-19,no model name
+assertion-v10-a9dc5259623a0561362a,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,,12 1 40♌,1585-03-19,superseded by an adopted value on the same date
+assertion-v10-216fcaddc0a44fc263d3,tycho-oo-10,398,Mars,ecliptic_longitude,reduction,,12 50 5,1585-03-26,no printed zodiac sign
+assertion-v10-327c483fb49f6af42157,tycho-oo-10,398,Mars,ecliptic_latitude,reduction,,2 50 14,1585-03-26,no printed latitude direction
+assertion-v10-4e2b0101a9d2a178add5,tycho-oo-10,398,Mars,ecliptic_latitude,reduction,,2 50¼ S.,1585-03-26,no printed latitude direction
+assertion-v10-5cf5f5f589b455501612,tycho-oo-10,398,Mars,ecliptic_longitude,historical_prediction,,12°13½ ♌,1585-03-26,no model name
+assertion-v10-90f7b000fce1aa5e32ab,tycho-oo-10,398,Mars,ecliptic_latitude,historical_prediction,Prutenic,2 57 S.,1585-03-26,no printed latitude direction
+assertion-v10-12e31960e6c7e4c3b1ce,tycho-oo-10,399,Mars,ecliptic_longitude,historical_prediction,,17 0¼ ♌,1585-04-15,no model name
+assertion-v11-0a95929a8d050b0bccfa,tycho-oo-11,63,Mars,ecliptic_longitude,reduction,,13° 27½′ ♌,1586-09-23,superseded by an adopted value on the same date
+assertion-v11-b03d14d25a0685dc3e10,tycho-oo-11,63,Mars,ecliptic_latitude,reduction,,1° 18½′ north,1586-09-23,superseded by an adopted value on the same date
+assertion-v11-b2c57dfc5d278cab2201,tycho-oo-11,162,Moon,ecliptic_latitude,reduction,,5° 48′,1587-08-18,no printed latitude direction
+assertion-v11-802642df0e2f7ce601d0,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 28′ 13″,1589-04-05,no printed latitude direction
+assertion-v11-c9db21a7598ce6f162ae,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 20′ 50″,1589-04-08,no printed latitude direction
+assertion-v11-4760adeaf10dbed739da,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 9′ 35″,1589-04-13,no printed latitude direction
+assertion-v11-396655ceb36718c3f10e,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,1° 4′ 5″,1589-04-15,no printed latitude direction
+assertion-v11-32054cd837740dadaabd,tycho-oo-11,333,Mars,ecliptic_latitude,reduction,,0° 51′ 31″,1589-04-20,no printed latitude direction
+assertion-v12-b8c6bf13f2d11288dbae,tycho-oo-12,42,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,1° 45′ 0″,1590-01-24,no printed latitude direction
+assertion-v12-03d8fca800ba4a9bbe0e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 36′ 0″,1590-02-12,no printed latitude direction
+assertion-v12-4f9427fb6cfdce2fac26,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 34′ 39″,1590-02-12,no printed latitude direction
+assertion-v12-a96988f1be6bca9f8112,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 22′ 12″,1590-02-12,no printed latitude direction
+assertion-v12-ccea7338cb907c50bc9e,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 7′ 30″,1590-02-12,no printed latitude direction
+assertion-v12-cdd00a6c225602958df9,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Alphonsine,1° 42′ 37″,1590-02-12,no printed latitude direction
+assertion-v12-ce9c54b6198c6e4be4db,tycho-oo-12,31,Saturn,ecliptic_latitude,historical_prediction,Prutenic,2° 18′ 59″,1590-02-12,no printed latitude direction
+assertion-v12-c59a9890546c6ee506e9,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Prutenic,1° 59′ 8″,1590-03-15,no printed latitude direction
+assertion-v12-e168a270eeb23bdee60e,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,2° 3′ 0″,1590-03-15,no printed latitude direction
+assertion-v12-37ac5d830b02e77087b0,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Prutenic,1° 58′ 48″,1590-04-17,no printed latitude direction
+assertion-v12-de3aa8855eed78f60017,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,2° 59′ 35″,1590-04-17,no printed latitude direction
+assertion-v12-2cf081a4367f137522ae,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Alphonsine,1° 25′ 26″,1590-07-11,no printed latitude direction
+assertion-v12-ece20a8c2a90c5a4b15b,tycho-oo-12,43,Jupiter,ecliptic_latitude,historical_prediction,Prutenic,1° 26′ 9″,1590-07-11,no printed latitude direction
+assertion-v12-01d86d1c9d12d74fae4a,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,2° 24⅓′,1591-05-12,no printed zodiac sign
+assertion-v12-154db373773f444d51c5,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,2° 20′,1591-05-13,no printed zodiac sign
+assertion-v12-8803af5a65187ed82467,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,1° 34¾′,1591-05-19,no printed zodiac sign
+assertion-v12-042bc0b0eb2876642a4d,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,1° 15¾′,1591-05-21,no printed zodiac sign
+assertion-v12-2e3cf18651e3d519a61f,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,0° 40⅓′,1591-05-24,no printed zodiac sign
+assertion-v12-0f8dd49d43b8536c0759,tycho-oo-12,150,Mars,ecliptic_latitude,reduction,,3° 55⅙′,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-4488ce26bd833214038b,tycho-oo-12,142,Mars,ecliptic_longitude,reduction,,27° 15′ ♐,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-4c1511f42de8c67114d1,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,27° 15′,1591-06-06,no printed zodiac sign
+assertion-v12-80652705458979859d66,tycho-oo-12,142,Mars,ecliptic_latitude,reduction,,3° 55½′ south,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-b407c799ce6c8bd6a6c3,tycho-oo-12,150,Mars,ecliptic_latitude,reduction,,3° 55⅔′ south,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-d2558702282561ced37f,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,,3° 55½′,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-df3d386e410d425b8b04,tycho-oo-12,150,Mars,ecliptic_longitude,reduction,,27° 14⅙′ ♐,1591-06-06,superseded by an adopted value on the same date
+assertion-v12-e2af12ec1bda7db8187d,tycho-oo-12,150,Mars,ecliptic_longitude,reduction,,27° 16¼′,1591-06-06,no printed zodiac sign
+assertion-v12-bab4c11a95abe198125d,tycho-oo-12,151,Mars,ecliptic_latitude,historical_prediction,Alphonsine,4° 48′,1591-06-08,no printed latitude direction
+assertion-v12-bda2c0abe12b32bd6d14,tycho-oo-12,152,Mars,ecliptic_longitude,historical_prediction,Copernicus,4 sex. 7° 42′,1591-06-08,no zodiac sign and a value of 30 degrees or more
+assertion-v12-0a113bc40ec57a82375f,tycho-oo-12,148,Mars,ecliptic_latitude,reduction,,3° 59′ A.,1591-06-10,no printed latitude direction
+assertion-v12-10752a6af68ceaf5905f,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,25° 59′ 6″ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-207bcb3bf53df567fe87,tycho-oo-12,150,Mars,ecliptic_latitude,reduction,,4° 8¼′,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-2568b7327729f16d5c7d,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,26° 2½′,1591-06-10,no printed zodiac sign
+assertion-v12-4a74d7aca637feb835dd,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,26° 2½′ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-4d196a173760d3b639f5,tycho-oo-12,150,Mars,ecliptic_latitude,reduction,,4° 8⅓′,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-53826c58ef203f5a67d6,tycho-oo-12,150,Mars,ecliptic_longitude,reduction,,26° 1′ 45″,1591-06-10,no printed zodiac sign
+assertion-v12-5ca9a62cc41fb544612b,tycho-oo-12,143,Mars,ecliptic_latitude,reduction,,4° 8′ 20″ south,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-6d7bfb2a1ab9b5f8e818,tycho-oo-12,148,Mars,ecliptic_latitude,reduction,,3° 59′ A.,1591-06-10,no printed latitude direction
+assertion-v12-766eb06dde7c1185901a,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,,4° 2⅔′ south,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-9518a2e993483d257e3d,tycho-oo-12,150,Mars,ecliptic_longitude,reduction,,26° 4¼′,1591-06-10,no printed zodiac sign
+assertion-v12-a140376b2ec6793cd98a,tycho-oo-12,148,Mars,ecliptic_longitude,reduction,,25° 59′ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-aa7e605f7e952d57eeef,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,25° 59¹⁄₁₂′ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-ac7dfaf7e7ff2c99c6d7,tycho-oo-12,148,Mars,ecliptic_longitude,reduction,,25° 58′ 55″ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-c6a73a6475c4706b3349,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,,4° 8½′,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-c885f7158d41a422ba9a,tycho-oo-12,148,Mars,ecliptic_longitude,reduction,,25° 59′ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-d167f4e3ffdcafa90bac,tycho-oo-12,148,Mars,ecliptic_longitude,reduction,,25° 58′ 58″ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-d77a0045ff08470675a8,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,,4° 2′ 40″ south,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-db5032a7de35a89b174a,tycho-oo-12,143,Mars,ecliptic_longitude,reduction,,26° 2′ 36″ ♐,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-e16aebb7b0265384954a,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,,4° 8½′ south,1591-06-10,superseded by an adopted value on the same date
+assertion-v12-0f880b7103907598cf57,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,25° 39¾′,1591-06-11,no printed zodiac sign
+assertion-v12-14cb4050bff0778d5395,tycho-oo-12,148,Mars,ecliptic_latitude,reduction,,4° 4′ A.,1591-06-11,no printed latitude direction
+assertion-v12-3166245e49d1790a67d9,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,,4° 9′,1591-06-11,no printed latitude direction
+assertion-v12-42827ed688ff29e29681,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,25° 43½′,1591-06-11,no printed zodiac sign
+assertion-v12-6fc257f77a77d8882eb3,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,25° 43′,1591-06-11,no printed zodiac sign
+assertion-v12-9f900cffbfe9611c432a,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,25° 39′,1591-06-11,no printed zodiac sign
+assertion-v12-828a5c7a17dae398059e,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,25° 25′,1591-06-12,no printed zodiac sign
+assertion-v12-3ca0510cb1d35382e2d1,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,21° 12⅓′,1591-06-28,no printed zodiac sign
+assertion-v12-4d8d890d54e37a798c21,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,21° 12′,1591-06-28,no printed zodiac sign
+assertion-v12-f3daa665c002694134ed,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,,21° 9⅚′,1591-06-28,no printed zodiac sign
+assertion-v12-b53cdcd109871f7b437d,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,,20° 8′,1591-07-17,no printed zodiac sign
+assertion-v12-3d8c805381bc16c0e8f3,tycho-oo-12,153,Venus,ecliptic_longitude,reduction,,0° 44′ 3″,1591-09-27,no printed zodiac sign
+assertion-v12-9a3b18ea426c76c73633,tycho-oo-12,153,Venus,ecliptic_longitude,reduction,,0° 41′ 0″,1591-09-27,no printed zodiac sign
+assertion-v12-02be1b7788fc340e3936,tycho-oo-12,280,Jupiter,ecliptic_latitude,reduction,,0° 18′ 50″,1593-06-29,no printed latitude direction
+assertion-v12-0dc025aa4bf2705bfb3e,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 12′ 45″,1593-06-29,no printed latitude direction
+assertion-v12-28447e9061845850d6f1,tycho-oo-12,280,Jupiter,ecliptic_longitude,reduction,,17° 25′ 50″ ♑,1593-06-29,superseded by an adopted value on the same date
+assertion-v12-3260595d6a03099470cb,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 17′ 35″,1593-06-29,no printed latitude direction
+assertion-v12-4604271b572e8d832473,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 12′ 43″,1593-06-29,no printed latitude direction
+assertion-v12-4c5709ea68adac69663b,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 24′ 0″ ♑,1593-06-29,superseded by an adopted value on the same date
+assertion-v12-588847700af5b03c0742,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 24⅔′ ♑,1593-06-29,superseded by an adopted value on the same date
+assertion-v12-594e715f6e9f279afddc,tycho-oo-12,280,Jupiter,ecliptic_latitude,reduction,,0° 18′ 0″,1593-06-29,no printed latitude direction
+assertion-v12-66705b5aa6c3544a427d,tycho-oo-12,280,Jupiter,ecliptic_latitude,reduction,,0° 17′ 40″,1593-06-29,no printed latitude direction
+assertion-v12-903db7e5c86d79f9f454,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 17′ 40″,1593-06-29,no printed latitude direction
+assertion-v12-9921f14814de4c3f886c,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 20′ 50″,1593-06-29,no printed zodiac sign
+assertion-v12-a1fdf16f543c173c5f7e,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 24⅔′,1593-06-29,no printed zodiac sign
+assertion-v12-ad8e95c62cb3cebee14c,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 23′ 0″,1593-06-29,no printed zodiac sign
+assertion-v12-b24db59742691ceff876,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 21⅔′,1593-06-29,no printed zodiac sign
+assertion-v12-b2ba0779d24f11bf7b4e,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 17′ 40″,1593-06-29,no printed latitude direction
+assertion-v12-b8d411c632d865f34fa4,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 21′ 15″² ♑,1593-06-29,superseded by an adopted value on the same date
+assertion-v12-e7e27411dddef7392f23,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 23⅓′,1593-06-29,no printed zodiac sign
+assertion-v12-f1d2ced54184e815b744,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,,0° 12⅔′,1593-06-29,no printed latitude direction
+assertion-v12-fe7c0bad314c141a2a15,tycho-oo-12,279,Jupiter,ecliptic_longitude,reduction,,17° 23′ 15″,1593-06-29,no printed zodiac sign
+assertion-v12-38c01b9c3df37042b811,tycho-oo-12,306,Mars,ecliptic_latitude,reduction,,6° 8′ 6″,1593-08-10,no printed latitude direction
+assertion-v12-4f47c583cc2cffb8734d,tycho-oo-12,306,Mars,ecliptic_latitude,reduction,,6 6,1593-08-10,no printed latitude direction
+assertion-v12-393f38722933a301d203,tycho-oo-12,285,Mars,ecliptic_latitude,historical_prediction,Copernicus,6° 30′,1593-08-11,no printed latitude direction
+assertion-v12-9fbf8462896f4c794265,tycho-oo-12,285,Mars,ecliptic_latitude,historical_prediction,Alphonsine,6° 0′,1593-08-11,no printed latitude direction
+assertion-v12-5019695e4ca92028fbad,tycho-oo-12,286,Mars,ecliptic_latitude,historical_prediction,Alphonsine,6° 10′,1593-08-21,no printed latitude direction
+assertion-v12-c7f4f3f80dc839e2b1ff,tycho-oo-12,306,Mars,ecliptic_latitude,reduction,,6 9,1593-08-24,no printed latitude direction
+assertion-v12-e1492ef1e384e8ea5248,tycho-oo-12,306,Mars,ecliptic_latitude,reduction,,6 2,1593-08-24,no printed latitude direction
+assertion-v12-b2d36ccaa9d61658238c,tycho-oo-12,299,Mars,ecliptic_latitude,historical_prediction,Copernicus,0° 0′,1593-12-30,no printed latitude direction
+assertion-v12-232c50d064ed68d4ad54,tycho-oo-12,443,Mars,ecliptic_latitude,historical_prediction,Alphonsine,2° 0′ decreasing,1595-09-07,no printed latitude direction
+assertion-v12-0beeb8e7fcb44cb956ef,tycho-oo-12,445,Mars,ecliptic_latitude,historical_prediction,Copernicus,2° 31′,1595-09-30,no printed latitude direction
+assertion-v12-ef9d0fb20ea8d29a3e5f,tycho-oo-12,445,Mars,ecliptic_latitude,historical_prediction,Alphonsine,1° 18′,1595-09-30,no printed latitude direction
+assertion-v12-9eeaa77592f3f9cbc058,tycho-oo-12,446,Mars,ecliptic_latitude,historical_prediction,Copernicus,2° 9′,1595-10-12,no printed latitude direction
+assertion-v12-f5cb8b24c9282f2942b2,tycho-oo-12,446,Mars,ecliptic_latitude,historical_prediction,Alphonsine,0° 45′,1595-10-12,no printed latitude direction
+assertion-v12-4275345e3d78d05093ab,tycho-oo-12,446,Mars,ecliptic_latitude,historical_prediction,Copernicus,1° 55′,1595-10-16,no printed latitude direction
+assertion-v12-ea2e276de14e55700749,tycho-oo-12,446,Mars,ecliptic_latitude,historical_prediction,Alphonsine,0° 33′,1595-10-16,no printed latitude direction
+assertion-v13-4cf74e1ab5049235f247,tycho-oo-13,151,Mars,ecliptic_latitude,historical_prediction,Prutenic,2° 33′,1597-12-13,no printed latitude direction
+assertion-v13-340b10a1a8af767aae5e,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,1° 2′ 1″ ♌,1599-10-20,superseded by an adopted value on the same date
+assertion-v13-41c3b48c9e5fadd0fd5b,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 19 0 B.,1599-10-20,superseded by an adopted value on the same date
+assertion-v13-453eece41af84c6eb156,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 17 3,1599-10-20,no printed latitude direction
+assertion-v13-a52c6abfefc330bc8b54,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,,1^G^ 0^M^ 57^S^ ♌,1599-10-20,superseded by an adopted value on the same date
+assertion-v13-c181677a71c3567d2589,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,,1^G^ 18^M^ 0^S^ B.,1599-10-20,superseded by an adopted value on the same date
+assertion-v13-fab8c65f7a7dcfa645a7,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,0 59 52,1599-10-20,superseded by an adopted value on the same date
+assertion-v13-43ed4ff73879116b2136,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,1 30 9,1599-10-21,no printed zodiac sign
+assertion-v13-7e06990d84134c5532ec,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,1 28 41,1599-10-21,no printed zodiac sign
+assertion-v13-a4c0c90a6a2ac6d6da2c,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,,1 29 25,1599-10-21,superseded by an adopted value on the same date
+assertion-v13-1274917d4c8eb9cce82a,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 21 43,1599-10-24,no printed latitude direction
+assertion-v13-336596c66149a4f169b7,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,2 57 9,1599-10-24,no printed zodiac sign
+assertion-v13-8c2eb84e44f9a92530ee,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,,2 55 41,1599-10-24,superseded by an adopted value on the same date
+assertion-v13-9d6dee25284177654eb1,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,,1 21 45,1599-10-24,superseded by an adopted value on the same date
+assertion-v13-c2f79de8ee77b31d2500,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,2 54 14,1599-10-24,no printed zodiac sign
+assertion-v13-f607f5c3dcfe0f83f32e,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 21 46,1599-10-24,no printed latitude direction
+assertion-v13-1339acb89489f29f9995,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,4 19 10,1599-10-27,no printed zodiac sign
+assertion-v13-281f86138aa21bb3946f,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,,1 26 0,1599-10-27,superseded by an adopted value on the same date
+assertion-v13-65f9320eb960188e0b8e,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 24 30,1599-10-27,no printed latitude direction
+assertion-v13-a7fa8788f724dbf300d4,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,,4 17 10,1599-10-27,superseded by an adopted value on the same date
+assertion-v13-cf9657651c1d14bd073f,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,4 15 9,1599-10-27,no printed zodiac sign
+assertion-v13-d60046fd802917d9d21c,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 27 32,1599-10-27,no printed latitude direction
+assertion-v13-419f1f8417e2aecea9db,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 20 12,1599-10-29,no printed latitude direction
+assertion-v13-4536bee53b3207a8d07a,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 31 13,1599-10-29,no printed latitude direction
+assertion-v13-526925cc5db4551f201d,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,5 10 48,1599-10-29,no printed zodiac sign
+assertion-v13-7a68f38c6f97ca9b2e9d,tycho-oo-13,180,Mars,ecliptic_longitude,reduction,,5 7 35,1599-10-29,no printed zodiac sign
+assertion-v13-8a9ec694eafedc3c41d6,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 28 9,1599-10-29,no printed latitude direction
+assertion-v13-c8cdb6ea098a655d06fa,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,,1 30 49,1599-10-29,no printed latitude direction
+assertion-v13-da460eb23c33966c2995,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,,1 29 40,1599-10-29,superseded by an adopted value on the same date
+assertion-v13-e8da38a6fd1c2e572c73,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,,5 9 10,1599-10-29,superseded by an adopted value on the same date
+assertion-v13-9ba769b7db8019a25f82,tycho-oo-13,221,Mars,ecliptic_longitude,historical_prediction,,♌ 8 19 48,1600-01-19,no model name

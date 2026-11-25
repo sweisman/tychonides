@@ -56,7 +56,7 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
   neither reliably closer. Curves tied to each opposition depart from the log
   by up to 0.6° for the Ptolemaic and Copernican constructions and up to 0.2°
   for the Tychonic one, which was fitted to these oppositions.
-- **Inputs.** 149 longitude reductions and 126 printed predictions from
+- **Inputs.** 149 longitude reductions and 125 printed predictions from
   *Opera Omnia* X–XIII, selected from the catalog by the rule written for 1595,
   with Longomontanus’s opposition table and cached JPL Horizons positions.
 - **Limits.** The 1600 opposition is set aside because the catalog does not
@@ -66,6 +66,35 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 - **Rerun.** `python examples/mars_oppositions.py --output docs/figures`
   regenerates the [summary](figures/mars-oppositions-summary.csv), the other
   tables, and both figures. A test regenerates the tables.
+- **Reviewed.** November 25, 2026. One Copernican prediction of 1591, printed
+  as 247° 42′ with no zodiac sign, had been compared within the sign. It is
+  now left out, which moves the Copernican mean for 1591 from +48′ to −8′.
+
+## Printed predictions for the Moon and planets
+
+[Read the study](printed-predictions.md)
+
+- **Question.** How close were the table and ephemeris positions that Tycho’s
+  logs print for the planets, measured against his own values and a modern
+  ephemeris?
+- **Result.** For Saturn in 1590 and 1591 the Alphonsine longitudes run 2.9°
+  ahead of JPL DE441 and the Copernican ones stay within 10′, while the
+  Copernican latitudes lie about 1° south. For Mars more than 60 days from
+  opposition the Copernican longitudes have a median difference of 20′,
+  against 1.9° near opposition. Tycho’s own timed longitudes agree with DE441
+  within a few arcminutes.
+- **Inputs.** 485 printed predictions from 1563 to 1600 and 326 values of the
+  log on the same dates, [selected from the catalog](../examples/printed-predictions.csv),
+  with cached JPL Horizons positions.
+- **Limits.** The log does not state the hour of a prediction, so 257 of 426
+  comparisons use local noon. The 59 predictions of the Moon are listed and
+  not compared. Forty Mars predictions of 1599 and 1600 are set aside because
+  their calendar is not recorded. One Venus entry 51° from the ephemeris is
+  flagged for review. Samples for Mercury, Venus, and Jupiter are small.
+- **Rerun.** `python examples/printed_predictions.py --output docs/figures`
+  regenerates the [summary](figures/printed-predictions-summary.csv), the
+  [results](figures/printed-predictions-results.csv), and the figure. A test
+  regenerates the tables.
 - **Reviewed.** November 25, 2026, when the study was first published.
 
 ## Historical refraction tables

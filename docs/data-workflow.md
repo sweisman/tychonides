@@ -21,6 +21,10 @@ decompresses `tychonides.sqlite`. To verify files obtained separately:
 tychonides-verify resources/catalog --assets-dir downloads --docs-root .
 ```
 
+The verifier decompresses the database once, into a temporary folder beside the
+downloaded files, and removes it afterward. Add `--keep-database PATH` to keep
+the verified database. It needs about 4 GB of free space beside the files.
+
 Alternatively, place the matching manifest beside the files and run
 `tychonides-verify downloads`. The installed package is `tychonides`;
 `tychonides --help` and `python -m tychonides --help` expose its commands.
@@ -36,11 +40,19 @@ For schema 6 releases, the verifier checks:
 | Database structure | SQLite integrity, foreign keys and declared indexes pass their checks. |
 | Representation consistency | Every CSV field agrees with the canonical database projection. JSON is compared structurally; decimal conveniences come from exact values. Row identities and all declared counts, including per-source totals, agree. |
 | Mechanical conversion | Supported modern conversions are recomputed from preserved notation. The JPL qualification rules additionally check the original fixed-width fields, the displayed flags and which derived values must be absent. |
-| Documentation contracts | With `--docs-root`, CSV and schema fields, vocabulary coverage, generated references, local links and release identifiers are checked. |
+| Marked historical values | An exact historical angle or clock time is recomputed from its printed expression when that expression carries every unit mark and no other table cell contributes. In release 1.3.1 this covers 123,591 values, about a third of the exact historical values. |
+| Documentation contracts | With `--docs-root`, CSV and schema fields, vocabulary coverage, generated references, local links and their heading anchors, documented totals and release identifiers are checked. |
 
 The historical compiler separately checks literal components, explicit units and
 reviewed source bindings. The download verifier does not repeat that compilation
 or inspect source images. Earlier schemas have their own verification contracts.
+
+Two limits follow from how the files are made. The CSV and the database come
+from the same export code, so their agreement shows that neither file is
+damaged and does not test a value independently. Historical values without
+complete unit marks rely on the compiler’s review and are not recomputed here.
+The verifier’s result lists any check it skipped because the manifest omits
+the field that check needs. The published manifest must carry every such field.
 
 Verification establishes the enumerated checks, not measurement accuracy,
 observational independence, an accepted historical epoch or eligibility for an

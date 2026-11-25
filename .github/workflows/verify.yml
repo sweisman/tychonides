@@ -32,6 +32,7 @@ jobs:
           python examples/mars_oppositions.py --output "$RUNNER_TEMP/mars-oppositions"
           python examples/refraction_tables.py --output "$RUNNER_TEMP/refraction-tables"
           python examples/planetary_parallax.py --output "$RUNNER_TEMP/parallax"
+          python examples/printed_predictions.py --output "$RUNNER_TEMP/printed-predictions"
       - name: Download versioned catalog assets
         env:
           GH_TOKEN: ${{ github.token }}
@@ -48,8 +49,7 @@ jobs:
               sleep "$((attempt * 5))"
             done
           done < <(jq -er '.output_hashes | keys[]' resources/catalog/manifest.json)
-      - run: tychonides-verify resources/catalog --assets-dir /tmp/tychonides-assets --docs-root .
+      - run: tychonides-verify resources/catalog --assets-dir /tmp/tychonides-assets --docs-root . --keep-database "$RUNNER_TEMP/tychonides.sqlite"
       - name: Check the study selections against the catalog
         run: |
-          gzip -dc /tmp/tychonides-assets/tychonides.sqlite.gz > "$RUNNER_TEMP/tychonides.sqlite"
-          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study tests.test_parallax_study
+          TYCHONIDES_CATALOG="$RUNNER_TEMP/tychonides.sqlite" python -m unittest tests.test_mars_study tests.test_refraction_study tests.test_parallax_study tests.test_predictions_study

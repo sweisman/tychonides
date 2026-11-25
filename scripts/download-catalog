@@ -2,16 +2,23 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 set -euo pipefail
 
-if [[ ${1:-} == --help || $# -gt 1 ]]; then
+usage() {
   printf 'Usage: %s [DESTINATION]\nDownloads, verifies and decompresses the catalog from this checkout.\nUse a destination without existing catalog files.\n' "$0"
+}
+if [[ ${1:-} == --help ]]; then
+  usage
   exit 0
+fi
+if [[ $# -gt 1 || ${1:-} == -* ]]; then
+  usage >&2
+  exit 2
 fi
 
 root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 manifest="$root/resources/catalog/manifest.json"
 destination=${1:-downloads}
 
-for command in curl jq gzip tychonides-verify; do
+for command in curl jq tychonides-verify; do
   command -v "$command" >/dev/null || { printf 'Required command missing: %s\n' "$command" >&2; exit 1; }
 done
 for asset in manifest.json tychonides.csv tychonides.sqlite.gz tychonides.sqlite; do
@@ -32,8 +39,8 @@ while IFS=$'\t' read -r asset url; do
   curl --fail --location --retry 2 --output "$stage/$asset" "$url"
 done < <(jq -er '.download_urls | to_entries[] | [.key, .value] | @tsv' "$manifest")
 cp -- "$manifest" "$stage/manifest.json"
-tychonides-verify "$stage"
-gzip -dk -- "$stage/tychonides.sqlite.gz"
+# The verifier decompresses the database once, beside the download, and keeps it.
+tychonides-verify "$stage" --keep-database "$stage/tychonides.sqlite"
 for asset in tychonides.sqlite.gz tychonides.csv tychonides.sqlite manifest.json; do
   mv -- "$stage/$asset" "$destination/$asset"
 done

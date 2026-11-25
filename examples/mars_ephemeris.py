@@ -46,12 +46,16 @@ def numbers(line):
     return values
 
 
-def fetch(epochs):
-    """Longitude and latitude for each UT Julian date, in the order given."""
+def fetch(epochs, target="4"):
+    """Longitude and latitude of a Horizons target for each UT Julian date, in the order given."""
     found = []
     for start in range(0, len(epochs), CHUNK):
         part = epochs[start : start + CHUNK]
-        query = {**SETTINGS, "TLIST": "'" + " ".join(f"{jd:.6f}" for jd in part) + "'"}
+        query = {
+            **SETTINGS,
+            "COMMAND": f"'{target}'",
+            "TLIST": "'" + " ".join(f"{jd:.6f}" for jd in part) + "'",
+        }
         request = urllib.request.Request(
             API + "?" + urllib.parse.urlencode(query), headers={"User-Agent": "ephemeris-cache"}
         )

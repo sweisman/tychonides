@@ -1,0 +1,327 @@
+id,source_id,printed_page,body,quantity,role,expression,degrees_exact,julian_date,daypart,calendar_label,epoch_id,epoch_expression,epoch_seconds,date_weight
+assertion-v10-726eccdf8f8b9353711a,tycho-oo-10,5,Jupiter,ecliptic_longitude,adopted_value,♃ in 3 ♌ ⎭,123,1564-05-01,after_noon,,,,,1
+assertion-v10-35681d7ab03cdad388a5,tycho-oo-10,5,Mars,ecliptic_longitude,adopted_value,♂ in 14 ♋ ⎪ com-,104,1564-05-01,after_noon,,,,,1
+assertion-v10-4b86d1f79cc8f10c4c67,tycho-oo-10,5,Saturn,ecliptic_longitude,adopted_value,♄ in 0 ♌ ⎬ pleto,120,1564-05-01,after_noon,,,,,1
+assertion-v10-9ecd986e34eeacc788c2,tycho-oo-10,5,Venus,ecliptic_longitude,adopted_value,♀ in 25^G^ ♊ ⎫,85,1564-05-01,after_noon,,,,,1
+assertion-v10-a8d6805c51cda1e02f32,tycho-oo-10,14,Mars,ecliptic_longitude,reduction,about 1° 10′ ♌,727/6,1568-01-10,before_noon,,,,,1
+assertion-v10-3d240189b65e33d0289f,tycho-oo-10,18,Mars,ecliptic_longitude,reduction,28¼ ♌,593/4,1569-11-07,morning,,,,,1
+assertion-v10-64b88489ffb1850e5445,tycho-oo-10,18,Mars,ecliptic_longitude,reduction,28^g^ 50′,893/6,1569-11-09,morning,,,,,1/2
+assertion-v10-69b6d16a627096f6a59c,tycho-oo-10,18,Mars,ecliptic_longitude,reduction,28^g^ 45′,595/4,1569-11-09,morning,,,,,1/2
+assertion-v10-350bf633466ac47c1684,tycho-oo-10,19,Mars,ecliptic_latitude,reduction,1 50 Sept.,11/6,1569-11-11,,,,,,1/2
+assertion-v10-8458bf70627044813baa,tycho-oo-10,19,Mars,ecliptic_latitude,reduction,1 50 Sep.,11/6,1569-11-11,,,,,,1/2
+assertion-v10-6b4db9a4392443a8c3a0,tycho-oo-10,19,Mars,ecliptic_longitude,reduction,29 40 ♌,449/3,1569-11-11,,,,,,1/3
+assertion-v10-b37065567c5f010a2a9c,tycho-oo-10,19,Mars,ecliptic_longitude,reduction,29 45 ♌,599/4,1569-11-11,,,,,,1/3
+assertion-v10-f225e579c1508d7e2b7b,tycho-oo-10,19,Mars,ecliptic_longitude,reduction,exactly at the beginning of ♍,150,1569-11-11,morning,,,,,1/3
+assertion-v10-77a1a200bdfa5a7609aa,tycho-oo-10,22,Mars,ecliptic_latitude,reduction,3½ north,7/2,1570-01-07,,,,,,1
+assertion-v10-05c47f4bff0079605f5e,tycho-oo-10,21,Mars,ecliptic_longitude,reduction,13^g^,491/3,1570-01-07,,,,,,1
+assertion-v10-130595965ba25fdf3571,tycho-oo-10,25,Moon,ecliptic_longitude,reduction,4^g^ 30′,129/2,1570-01-16,,,,,,1/3
+assertion-v10-6d038549d01f1a4b5948,tycho-oo-10,25,Moon,ecliptic_longitude,reduction,4^g^ 8′ ♊,962/15,1570-01-16,,,,,,1/3
+assertion-v10-6d4593bdd4c1db0d5c86,tycho-oo-10,25,Moon,ecliptic_longitude,reduction,4^g^ 7′ ♊,3847/60,1570-01-16,,,,,,1/3
+assertion-v10-ff0edced8012a02b2a7c,tycho-oo-10,35,Mars,ecliptic_longitude,adopted_value,3 27¾ ♍,12277/80,1570-02-15,,,,,,1
+assertion-v10-26c0b2dde6bab7508d72,tycho-oo-10,27,Mars,ecliptic_longitude,reduction,♌ 29 0,149,1570-02-26,,,,,,1/2
+assertion-v10-f3f146fda803d396bff7,tycho-oo-10,35,Mars,ecliptic_longitude,reduction,29 18 ♌,1493/10,1570-02-26,,,,,,1/2
+assertion-v10-1d490a5d64229943e6fc,tycho-oo-10,31,Mars,ecliptic_longitude,reduction,"24 18 ♌,",1443/10,1570-03-28,,,,,,1
+assertion-v10-1d846981fcb27f11417c,tycho-oo-10,34,Mars,ecliptic_latitude,reduction,1 56 B,29/15,1570-04-26,,,,,,1/3
+assertion-v10-71762637bec7daa284e2,tycho-oo-10,34,Mars,ecliptic_latitude,reduction,1 56 B,29/15,1570-04-26,,,,,,1/3
+assertion-v10-e991df3894eb14c12a72,tycho-oo-10,34,Mars,ecliptic_latitude,reduction,1^g^ and 50′,11/6,1570-04-26,,,,,,1/3
+assertion-v10-04a0d92a8453212a95c3,tycho-oo-10,34,Mars,ecliptic_longitude,reduction,29⅓^g^ ♌,448/3,1570-04-26,,,,,,1/4
+assertion-v10-6b20ab5759083a7ae4db,tycho-oo-10,34,Mars,ecliptic_longitude,reduction,29.25 ♌,1793/12,1570-04-26,,,,,,1/4
+assertion-v10-c831befd35d806d2bad9,tycho-oo-10,34,Mars,ecliptic_longitude,reduction,29.25 ♌,1793/12,1570-04-26,,,,,,1/4
+assertion-v10-d2b2dd96db4085205464,tycho-oo-10,34,Mars,ecliptic_longitude,reduction,29.25 ♌,1793/12,1570-04-26,,,,,,1/4
+assertion-v10-6131d2cbf394c6c2cedd,tycho-oo-10,63,Mars,ecliptic_longitude,adopted_value,his longitude was in `p. 12 M. 50` ♈,77/6,1578-09-15,,,assertion-v10-18d595c3ca8127221b25,1½ H. P. M. N.,5400,1/5
+assertion-v10-94a6f0e99462bacf6b18,tycho-oo-10,63,Mars,ecliptic_longitude,adopted_value,`p. 12 M. 45` ♈,51/4,1578-09-15,,,assertion-v10-483371930aecdd6c631a,`1`^H^ `30`^M^,5400,1/5
+assertion-v10-99b57259ee4a61bfc4ea,tycho-oo-10,63,Mars,ecliptic_longitude,adopted_value,p. 12 M. 50,77/6,1578-09-15,,,assertion-v10-483371930aecdd6c631a,`1`^H^ `30`^M^,5400,1/5
+assertion-v10-ba5ee37bce4dc5081450,tycho-oo-10,64,Mars,ecliptic_longitude,adopted_value,`p. 12 M. 50`,77/6,1578-09-15,,,assertion-v10-f8475f77e460723e97a8,1 M. 30,5400,1/5
+assertion-v10-bee7cd48832273ba44df,tycho-oo-10,63,Mars,ecliptic_longitude,adopted_value,"in `p. 12 M. 50` ♈, and from this",77/6,1578-09-15,,,assertion-v10-18d595c3ca8127221b25,1½ H. P. M. N.,5400,1/5
+assertion-v10-8bed4a7bc40475421909,tycho-oo-10,65,Mars,ecliptic_latitude,adopted_value,2.5 M.,-25/12,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490,1
+assertion-v10-eb842c37339df3e54ee3,tycho-oo-10,65,Mars,ecliptic_longitude,adopted_value,`5.12` ♈,26/5,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490,1
+assertion-v10-9d0671470bb160f7823c,tycho-oo-10,85,Mars,ecliptic_longitude,reduction,6.47 ♊,4007/60,1580-11-17,,,,,,1/2
+assertion-v10-c6a9066c35fbd715334c,tycho-oo-10,85,Mars,ecliptic_longitude,reduction,6.47 ♊,4007/60,1580-11-17,,,assertion-v10-eab598e5c8a0b96a6273,H. 10,36000,1/2
+assertion-v10-99dffa47f462bca4ea21,tycho-oo-10,86,Mars,ecliptic_longitude,reduction,0.2 ♊,1801/30,1580-12-10,,,,,,1/3
+assertion-v10-ae8decf44e9e76b2b299,tycho-oo-10,85,Mars,ecliptic_longitude,reduction,0.5 ♊,721/12,1580-12-10,,,,,,1/3
+assertion-v10-f0e003c85866a1a530fb,tycho-oo-10,85,Mars,ecliptic_longitude,reduction,0.15 ♊,241/4,1580-12-10,,,,,,1/3
+assertion-v10-d836bfba299d01fcb04b,tycho-oo-10,88,Mars,ecliptic_latitude,reduction,0.35,7/12,1580-12-24,,,,,,1
+assertion-v10-812291e91e08939c9b31,tycho-oo-10,88,Mars,ecliptic_longitude,reduction,1.20′ ♊,184/3,1580-12-24,,,,,,1
+assertion-v10-0442a61ec47acfcb5e8c,tycho-oo-10,198,Mars,ecliptic_longitude,reduction,16 47` ♋,6407/60,1582-12-28,after_noon,,assertion-v10-f029b6b257ff135b1287,11½,41400,1/3
+assertion-v10-ede656f5a822029865f9,tycho-oo-10,199,Mars,ecliptic_longitude,reduction,16° 49′ 32` ♋,96143/900,1582-12-28,,,assertion-v10-1148847d6674deb90f41,H. 11 M. `39¼,41955,1/3
+assertion-v10-f3894f19db8512d09a2f,tycho-oo-10,199,Mars,ecliptic_longitude,reduction,16 47 56` ♋,96119/900,1582-12-28,after_noon,,assertion-v10-ed89658150112f988304,11.1′,39660,1/3
+assertion-v10-6b57eb93df60ce38447a,tycho-oo-10,250,Mars,ecliptic_longitude,reduction,29 55 ♋,1439/12,1583-04-19,,,,,,1/2
+assertion-v10-e27c95e11ece580544ad,tycho-oo-10,250,Mars,ecliptic_longitude,reduction,29 50 ♋,719/6,1583-04-19,,,,,,1/2
+assertion-v10-866b697532fe2159edb8,tycho-oo-10,321,Mars,ecliptic_latitude,reduction,2 12 24 B.,331/150,1584-11-12,after_noon,,assertion-v10-85f6e274f5d4449df916,13 26 P. M.,48360,1
+assertion-v10-a9e5d266b217159f88dd,tycho-oo-10,321,Mars,ecliptic_longitude,reduction,23 14 15 ♌,11459/80,1584-11-12,after_noon,,assertion-v10-85f6e274f5d4449df916,13 26 P. M.,48360,1
+assertion-v10-250e420dd1f1ac53ed00,tycho-oo-10,384,Mars,ecliptic_latitude,reduction,4 18 18 B.,861/200,1585-01-14,,,,,,1/3
+assertion-v10-3335bcdcc072ace0a25b,tycho-oo-10,384,Mars,ecliptic_latitude,reduction,4 20 B.,13/3,1585-01-14,,,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,1/3
+assertion-v10-f892702104382b6e38eb,tycho-oo-10,384,Mars,ecliptic_latitude,reduction,4 20 B.,13/3,1585-01-14,,,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,1/3
+assertion-v10-0dbc201d1f8391b8970c,tycho-oo-10,384,Mars,ecliptic_longitude,reduction,27 29½ ♌,17699/120,1585-01-14,,,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,1/3
+assertion-v10-14ce862ac4154b111aff,tycho-oo-10,384,Mars,ecliptic_longitude,reduction,27 29½ ♌,17699/120,1585-01-14,,,assertion-v10-4781dd4358246bf05937,16 M. 40,60000,1/3
+assertion-v10-bae21bed003bf65012de,tycho-oo-10,384,Mars,ecliptic_longitude,reduction,27 30 11 ♌,531011/3600,1585-01-14,,,,,,1/3
+assertion-v10-db11e6e963bf51685cc4,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,4 28¾ B.,215/48,1585-01-22,,,,,,1/2
+assertion-v10-f43a7d647d9192874cbe,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,4 28 46 B.,8063/1800,1585-01-22,,,,,,1/2
+assertion-v10-78cdc31e97b4ab0728c5,tycho-oo-10,388,Mars,ecliptic_longitude,reduction,24 47¼ ♌,11583/80,1585-01-22,,,,,,1/2
+assertion-v10-cb010f1c8848c748a8d1,tycho-oo-10,388,Mars,ecliptic_longitude,reduction,24° 47′ 16″ ♌,130309/900,1585-01-22,,,,,,1/2
+assertion-v10-5c03c90bed7ee98b825b,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,4 31 B.,271/60,1585-01-24,,,,,,1
+assertion-v10-185398c1e894f3b6df67,tycho-oo-10,387,Mars,ecliptic_longitude,reduction,23° 58′ 24 ♌,10798/75,1585-01-24,,,assertion-v10-33d5306a9b7c4cb2eb13,7¼,26100,1/4
+assertion-v10-7d96dbed7d8f79f831f9,tycho-oo-10,388,Mars,ecliptic_longitude,reduction,24 7¼ ♌,34589/240,1585-01-24,,,,,,1/4
+assertion-v10-8342247be783608da93e,tycho-oo-10,387,Mars,ecliptic_longitude,reduction,24 4 30 ♌,5763/40,1585-01-24,,,assertion-v10-33d5306a9b7c4cb2eb13,7¼,26100,1/4
+assertion-v10-e87fcb3b778a44df39dd,tycho-oo-10,387,Mars,ecliptic_longitude,reduction,24° 7′ 34″ ♌,259427/1800,1585-01-24,,,,,,1/4
+assertion-v10-38bc14209b9f97048600,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,4 31 B.,271/60,1585-01-31,,,,,,1/2
+assertion-v10-b16d49b00b3353e2ef47,tycho-oo-10,388,Mars,ecliptic_latitude,reduction,4 30 58,8129/1800,1585-01-31,,,,,,1/2
+assertion-v10-f429946947b84dc75d8d,tycho-oo-10,390,Mars,ecliptic_longitude,adopted_value,23 34 ♌,4307/30,1585-01-31,,,,,,1
+assertion-v10-30e4edc63f139162d0eb,tycho-oo-10,389,Mars,ecliptic_latitude,reduction,4 28B.,67/15,1585-02-03,,,assertion-v10-630cd928faa460d4f5cf,6¼,22500,1/2
+assertion-v10-99989d694659ca4cd785,tycho-oo-10,389,Mars,ecliptic_latitude,reduction,4 27 59 / B.,16079/3600,1585-02-03,,,assertion-v10-630cd928faa460d4f5cf,6¼,22500,1/2
+assertion-v10-087b96ceff2304f4f3b2,tycho-oo-10,389,Mars,ecliptic_longitude,reduction,20 11 13 ♌,504673/3600,1585-02-03,,,assertion-v10-630cd928faa460d4f5cf,6¼,22500,1/2
+assertion-v10-42c92e3eec418c910924,tycho-oo-10,389,Mars,ecliptic_longitude,reduction,20 11¼ ♌,2243/16,1585-02-03,,,assertion-v10-630cd928faa460d4f5cf,6¼,22500,1/2
+assertion-v10-0337df7f9c72cefea45b,tycho-oo-10,389,Mars,ecliptic_latitude,reduction,4 28 8 B.,2011/450,1585-02-04,,,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,1/2
+assertion-v10-94b5edacce5f7f1da50f,tycho-oo-10,389,Mars,ecliptic_latitude,reduction,4 28 B.,67/15,1585-02-04,,,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,1/2
+assertion-v10-0f3381d0ffbca6bdc3dd,tycho-oo-10,389,Mars,ecliptic_longitude,reduction,19 47 34 ♌,251627/1800,1585-02-04,,,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,1/2
+assertion-v10-196b23e26dc00d76f21c,tycho-oo-10,389,Mars,ecliptic_longitude,reduction,19 47½ ♌,3355/24,1585-02-04,,,assertion-v10-b94f0604f7e7773ff4df,6.40,24000,1/2
+assertion-v10-060a32f1fe1b4765f6ed,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 22 3B.,1347/400,1585-03-12,,,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,1/2
+assertion-v10-b34920ede837b393f1d7,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 22 3 B.,1347/400,1585-03-12,,,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,1/2
+assertion-v10-4d7768e3d017137d48b0,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,11 45 56♌,118589/900,1585-03-12,,,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,1/2
+assertion-v10-8f9f952505f5137e4588,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,11 45 56 ♌,118589/900,1585-03-12,,,assertion-v10-547caf7a792b8b1917ff,9⅓,33600,1/2
+assertion-v10-171bb16d2475c1bb4377,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 13 28B.,1451/450,1585-03-16,,,assertion-v10-a2067459695371c230e8,7⅚,28200,1/2
+assertion-v10-c4b992c11829bcdd9ada,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 13 28 B.,1451/450,1585-03-16,,,assertion-v10-a2067459695371c230e8,7⅚,28200,1/2
+assertion-v10-6524aacfdfda94093713,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,11 51 24♌,39557/300,1585-03-16,,,assertion-v10-a2067459695371c230e8,7⅚,28200,1/2
+assertion-v10-8831051db605f8ed612f,tycho-oo-10,397,Mars,ecliptic_longitude,reduction,11 51 24 ♌,39557/300,1585-03-16,,,assertion-v10-a2067459695371c230e8,7⅚,28200,1/2
+assertion-v10-24ea715b1ac44f671c98,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 6 4 B.,2791/900,1585-03-19,,,assertion-v10-7968b8118befcef18b4a,8¼,29700,1/2
+assertion-v10-8e32bfd465e182d465a6,tycho-oo-10,397,Mars,ecliptic_latitude,reduction,3 6 4B.,2791/900,1585-03-19,,,assertion-v10-7968b8118befcef18b4a,8¼,29700,1/2
+assertion-v10-ab40d0bf03f0e7ea505b,tycho-oo-10,397,Mars,ecliptic_longitude,adopted_value,12ᵍ 2′ ♌,3961/30,1585-03-19,,,assertion-v10-2742e1e707087522871e,8,28800,1
+assertion-v10-6e1322bb4a1316ea5765,tycho-oo-10,398,Mars,ecliptic_longitude,reduction,12 50 ♌,797/6,1585-03-26,,,assertion-v10-68a3c4a0ebaca9e35cf8,8⅓,30000,1
+assertion-v10-a3239773275f30e3538d,tycho-oo-10,399,Mars,ecliptic_latitude,reduction,2 9 B.,43/20,1585-04-15,,,assertion-v10-b21edb124c42fd7edec5,9 50,35400,1/2
+assertion-v10-b66108835c2fc7272f93,tycho-oo-10,399,Mars,ecliptic_latitude,reduction,2 9 B.,43/20,1585-04-15,,,assertion-v10-b21edb124c42fd7edec5,9 50,35400,1/2
+assertion-v10-bb8a24afdae265d24a04,tycho-oo-10,399,Mars,ecliptic_longitude,reduction,17 37½ ♌,1101/8,1585-04-15,,,assertion-v10-b21edb124c42fd7edec5,9 50,35400,1/2
+assertion-v10-db3b9296d620edac65c5,tycho-oo-10,399,Mars,ecliptic_longitude,reduction,17 37½ ♌,1101/8,1585-04-15,,,assertion-v10-b21edb124c42fd7edec5,9 50,35400,1/2
+assertion-v11-ea242b5d8e23fe27bc97,tycho-oo-11,54,Jupiter,ecliptic_latitude,reduction,0° 4⅓′,-13/180,1586-09-23,,,,,,1/2
+assertion-v11-f3f332514f1b5c30be12,tycho-oo-11,54,Jupiter,ecliptic_latitude,reduction,0° 4⅓′,-13/180,1586-09-23,,,,,,1/2
+assertion-v11-1785a0865682117bf8d0,tycho-oo-11,54,Jupiter,ecliptic_longitude,reduction,13° 53½′ ♋,12467/120,1586-09-23,,,,,,1/2
+assertion-v11-8a61a7c0362a2c2fc28e,tycho-oo-11,54,Jupiter,ecliptic_longitude,reduction,13° 53½′ ♋,12467/120,1586-09-23,,,,,,1/2
+assertion-v11-8fdf1c035db8be16e513,tycho-oo-11,64,Mars,ecliptic_latitude,adopted_value,1° 18½′ north,157/120,1586-09-23,,,,,,1
+assertion-v11-f586dc60d85c35705712,tycho-oo-11,64,Mars,ecliptic_longitude,adopted_value,13° 27½′ ♌,3203/24,1586-09-23,,,,,,1
+assertion-v11-44a44b429d6b619ae459,tycho-oo-11,32,Moon,ecliptic_longitude,reduction,25° 26′ ♌,4363/30,1586-10-26,,,,,,1
+assertion-v11-ceeed2a03c5dc845adef,tycho-oo-11,185,Mars,ecliptic_longitude,reduction,24° 32′ ♍,2618/15,1587-03-09,after_noon,,assertion-v11-5b28ec7ad0ad20869999,9½^h^,34200,1
+assertion-v11-1fb8d2d0b5dd27186be0,tycho-oo-11,156,Moon,ecliptic_latitude,reduction,4° 15½′,511/120,1587-08-04,,,,,,1
+assertion-v11-d15b395f728d4218f42f,tycho-oo-11,156,Moon,ecliptic_longitude,reduction,7° 51′ ♑,5557/20,1587-08-04,,,,,,1
+assertion-v11-3f63f36e271024e26a3a,tycho-oo-11,157,Moon,ecliptic_latitude,reduction,3° 57⅙′,1423/360,1587-08-05,,,,,,1
+assertion-v11-7030517018f517cf83f4,tycho-oo-11,158,Moon,ecliptic_longitude,reduction,21° 57′ 48″ ♑,87589/300,1587-08-05,,,,,,1/2
+assertion-v11-db5e55114ea4f18f63a1,tycho-oo-11,157,Moon,ecliptic_longitude,reduction,21° 48½′ ♑,35017/120,1587-08-05,,,,,,1/2
+assertion-v11-fc4405d2650006832897,tycho-oo-11,329,Jupiter,ecliptic_latitude,reduction,1° 28′ 10″,529/360,1589-01-30,,,,,,1
+assertion-v11-a1f2a63d980674a9a2d1,tycho-oo-11,329,Jupiter,ecliptic_longitude,reduction,15° 43′ 7″ ♍,596587/3600,1589-01-30,,,,,,1
+assertion-v11-1a37ffd045393c54f5e1,tycho-oo-11,329,Jupiter,ecliptic_latitude,reduction,1° 30′,3/2,1589-02-21,,,,,,1/2
+assertion-v11-1fc44962f69bee7bd6ad,tycho-oo-11,329,Jupiter,ecliptic_latitude,reduction,1° 30′ 11″,5411/3600,1589-02-21,,,,,,1/2
+assertion-v11-3a28427f939c01649def,tycho-oo-11,329,Jupiter,ecliptic_longitude,reduction,13° 1′ 58″ ♍,293459/1800,1589-02-21,,,,,,1/2
+assertion-v11-e2b930c08ed7b5bfd41d,tycho-oo-11,329,Jupiter,ecliptic_longitude,reduction,13° 2′ ♍,4891/30,1589-02-21,,,,,,1/2
+assertion-v11-11e2cf6f174212e4fc9b,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,1° 28¼′,353/240,1589-04-05,,,assertion-v11-70c7db5492e2a9c2fc02,11^h^ 33^m^,41580,1
+assertion-v11-0348d7c921237b70e9c5,tycho-oo-11,333,Mars,ecliptic_longitude,reduction,7° 31′ 10″ ♏,78307/360,1589-04-05,,,assertion-v11-18e4cc34aa04647e5144,11^h^ 33^m^,41580,1/2
+assertion-v11-d8f0d8fcba26f771d6fe,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,7° 31⅙′ ♏,78307/360,1589-04-05,,,assertion-v11-70c7db5492e2a9c2fc02,11^h^ 33^m^,41580,1/2
+assertion-v11-64efe5aad79ce2f4e6a8,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,1° 20⅚′,97/72,1589-04-08,,,assertion-v11-da87c929dd819f2b145c,12^h^ 54^m^,46440,1
+assertion-v11-8fa49d877ca4066a0c0d,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,6° 30′,433/2,1589-04-08,,,assertion-v11-da87c929dd819f2b145c,12^h^ 54^m^,46440,1/2
+assertion-v11-8ff50e080039bc7e902b,tycho-oo-11,333,Mars,ecliptic_longitude,reduction,6° 29′ 57″ ♏,259799/1200,1589-04-08,,,assertion-v11-46e85fcd6de24e2b3474,12^h^ 54^m^,46440,1/2
+assertion-v11-2d278784c8c8d172a1c4,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,1° 9⅔′,209/180,1589-04-13,,,assertion-v11-f2898b39b5fd8eef4001,11^h^ 17^m^,40620,1
+assertion-v11-28b813949581cbf2c2ef,tycho-oo-11,333,Mars,ecliptic_longitude,reduction,4° 43′ 19″ ♏,772999/3600,1589-04-13,night,,,,,1/2
+assertion-v11-e651510f3ea8e342ddc4,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,4° 43⅓′,3865/18,1589-04-13,,,assertion-v11-f2898b39b5fd8eef4001,11^h^ 17^m^,40620,1/2
+assertion-v11-6df279c45fb16b5c0f9b,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,1° 4 1/12′,769/720,1589-04-15,,,assertion-v11-34fabf8d33688f072b12,12^h^ 5^m^,43500,1
+assertion-v11-2548886149d33b343724,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,3° 58⅓′,7703/36,1589-04-15,,,assertion-v11-34fabf8d33688f072b12,12^h^ 5^m^,43500,1/2
+assertion-v11-c26ccc74b1b80543dfd4,tycho-oo-11,333,Mars,ecliptic_longitude,reduction,3° 58′ 21″ ♏,85589/400,1589-04-15,,,,,,1/2
+assertion-v11-b2df712b52e6587c2ff2,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,0° 51½′,103/120,1589-04-20,,,assertion-v11-5c63a55c3dea191d5793,11^h^ 1^m^,39660,1
+assertion-v11-1fd06477cb62bdc904a0,tycho-oo-11,333,Mars,ecliptic_longitude,reduction,2° 10′ 5″ ♏,152761/720,1589-04-20,,,,,,1/2
+assertion-v11-deb080d51628f564e061,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,2° 10 1/12′,152761/720,1589-04-20,,,assertion-v11-5c63a55c3dea191d5793,11^h^ 1^m^,39660,1/2
+assertion-v11-810b9a3f2440d282bc2e,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,0° 50⅓′,151/180,1589-04-22,,,assertion-v11-4fef6d207883a2e663d0,11^h^ 29^m^,41340,1
+assertion-v11-58744290285531281f87,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,1° 39⅙′,15239/72,1589-04-22,,,assertion-v11-4fef6d207883a2e663d0,11^h^ 29^m^,41340,1
+assertion-v11-1d4df5c9fea2560124ca,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,0° 43′,43/60,1589-04-23,,,assertion-v11-d886bf817e6e8981f166,10^h^ 42^m^,38520,1
+assertion-v11-515e504b5221ba159a07,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,1° 4⅚′,75989/360,1589-04-23,,,assertion-v11-d886bf817e6e8981f166,10^h^ 42^m^,38520,1
+assertion-v11-db3425e9355493add00d,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,0° 38⅚′,233/360,1589-04-24,,,assertion-v11-3748ed5d391929f73549,10^h^ 36^m^,38160,1
+assertion-v11-4fe291974f019a6f79df,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,0° 43½′,8429/40,1589-04-24,,,assertion-v11-3748ed5d391929f73549,10^h^ 36^m^,38160,1
+assertion-v11-97efeba5a48590fba8cb,tycho-oo-11,334,Mars,ecliptic_latitude,reduction,0° 33⅓′,5/9,1589-04-26,,,assertion-v11-5f7cf10a472fee17734b,11^h^ 14^m^,40440,1
+assertion-v11-480e0600888a3c85cdc3,tycho-oo-11,334,Mars,ecliptic_longitude,reduction,0° 2½′,5041/24,1589-04-26,,,assertion-v11-5f7cf10a472fee17734b,11^h^ 14^m^,40440,1
+assertion-v12-364b118445b420e2c87c,tycho-oo-12,140,Mars,ecliptic_latitude,reduction,1° 24¾′ south,-113/80,1591-04-29,after_midnight,,,,,1/2
+assertion-v12-fdfd36c6889366231d4e,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,1° 24¾′ south,-113/80,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400,1/2
+assertion-v12-26a82b99670d2d524349,tycho-oo-12,140,Mars,ecliptic_longitude,reduction,2° 15⅙′ ♑,98011/360,1591-04-29,after_midnight,,,,,1/2
+assertion-v12-b531b0b7f399635dd188,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,2° 15⅙′ ♑,98011/360,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400,1/2
+assertion-v12-4e7fb642edd309464a7f,tycho-oo-12,140,Mars,ecliptic_latitude,reduction,2° 15′ south,-9/4,1591-05-12,,,,,,1/2
+assertion-v12-b2d8674f20fe16793ff6,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,2° 15′,-9/4,1591-05-12,,Julian,assertion-v12-2e740b4c7725536ac714,13^h^ 40^m^,49200,1/2
+assertion-v12-6665d149c230bae9695d,tycho-oo-12,140,Mars,ecliptic_longitude,reduction,2° 24′ 27″ ♑,108963/400,1591-05-12,,,,,,1
+assertion-v12-26b602d5f6de479456f6,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,2° 28¾′,-119/48,1591-05-13,,Julian,assertion-v12-dffe6bd3f085030065ae,13^h^ 50^m^,49800,1
+assertion-v12-53e842bf10e55d1fca3d,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,2° 40¼′,-641/240,1591-05-19,,Julian,assertion-v12-d50cb6d1052d55ce86b8,13^h^ 40^m^,49200,1/2
+assertion-v12-d91a14294622e2609393,tycho-oo-12,141,Mars,ecliptic_latitude,reduction,2° 40¼′ south,-641/240,1591-05-19,after_midnight,,,,,1/2
+assertion-v12-5b8535643caac637abd2,tycho-oo-12,141,Mars,ecliptic_longitude,reduction,1° 34¾′ ♑,65179/240,1591-05-19,after_midnight,,,,,1
+assertion-v12-2343ef9b67cc364df036,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,2° 52′,-43/15,1591-05-21,,Julian,assertion-v12-24584a99b73e931ffd65,13^h^ 34^m^,48840,1/2
+assertion-v12-50d2367c4783991710ba,tycho-oo-12,141,Mars,ecliptic_latitude,reduction,2° 52½′ south,-23/8,1591-05-21,after_midnight,,,,,1/2
+assertion-v12-98f3996e7476fc9f25fa,tycho-oo-12,141,Mars,ecliptic_longitude,reduction,1° 15′ 48″ ♑,81379/300,1591-05-21,after_midnight,,,,,1
+assertion-v12-06f5825ac4f736352bcd,tycho-oo-12,142,Mars,ecliptic_latitude,reduction,3° 5′ south,-37/12,1591-05-24,after_midnight,,,,,1/2
+assertion-v12-4068728ada0c3e07d49d,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,3° 5′,-37/12,1591-05-24,,Julian,assertion-v12-e6807b215267f78db4d7,13^h^ 13^m^,47580,1/2
+assertion-v12-ef2d3f1c264a8c329347,tycho-oo-12,142,Mars,ecliptic_longitude,reduction,0° 40⅓′ ♑,48721/180,1591-05-24,after_midnight,,,,,1
+assertion-v12-671a7425b17b9a276d90,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,3° 25¼′,-821/240,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720,1/2
+assertion-v12-e223a693514a596d9b1c,tycho-oo-12,142,Mars,ecliptic_latitude,reduction,3° 25¼′ south,-821/240,1591-05-29,after_midnight,,,,,1/2
+assertion-v12-3122dfe293a768234e36,tycho-oo-12,142,Mars,ecliptic_longitude,reduction,29° 30⅓′ ♐,48511/180,1591-05-29,after_midnight,,,,,1/2
+assertion-v12-8ab00c1d901050895ebb,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,29° 30⅓′ ♐,48511/180,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720,1/2
+assertion-v12-cf5a3901ce787194d125,tycho-oo-12,150,Mars,ecliptic_latitude,adopted_value,3° 55′ 30″ south,-157/40,1591-06-06,,Julian,assertion-v12-d31d40bd2f0c0b62e03c,12^h^ 10^m^,43800,1
+assertion-v12-82b66b4b1c45961d8050,tycho-oo-12,150,Mars,ecliptic_longitude,adopted_value,27° 15′ 0″ ♐,1069/4,1591-06-06,,Julian,assertion-v12-d31d40bd2f0c0b62e03c,12^h^ 10^m^,43800,1
+assertion-v12-d1ac0123d5256c3baa56,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,4° 2′ south,-121/30,1591-06-08,,Julian,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880,1
+assertion-v12-0378a570b318339ac30e,tycho-oo-12,150,Mars,ecliptic_longitude,reduction,26° 37′ 42″ ♐,159977/600,1591-06-08,,Julian,,,,1/2
+assertion-v12-b7bd2546d74f84f0c799,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,26° 37′ 42″ ♐,159977/600,1591-06-08,,Julian,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880,1/2
+assertion-v12-72197155f6d113449d27,tycho-oo-12,150,Mars,ecliptic_latitude,adopted_value,4° 8′ 30″ south,-497/120,1591-06-10,,Julian,assertion-v12-be86af99d499fc384f9c,11^h^ 40^m^,42000,1
+assertion-v12-7b18f81a539a443ea329,tycho-oo-12,150,Mars,ecliptic_longitude,adopted_value,26° 2½′ ♐,6385/24,1591-06-10,,Julian,assertion-v12-be86af99d499fc384f9c,11^h^ 40^m^,42000,1
+assertion-v12-50a92e2ee5181d0fb313,tycho-oo-12,143,Mars,ecliptic_latitude,reduction,4° 12′ south,-21/5,1591-06-11,before_midnight,,,,,1/5
+assertion-v12-66cd7525964e6ed18efc,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 8⅙′ south,-1489/360,1591-06-11,,Gregorian,,,,1/5
+assertion-v12-6f9b0e94ecaeee847c83,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 8⅙′,-1489/360,1591-06-11,,Gregorian,assertion-v12-4b528059cddb1c7a1211,9^h^ 52^m^,35520,1/5
+assertion-v12-889ec9cbcd6783d5b81f,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 12′,-21/5,1591-06-11,,Julian,assertion-v12-80f962f216a50d3e8a5d,11^h^ 30^m^,41400,1/5
+assertion-v12-f7cebc4b96d4d368ac9e,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,4° 12′,-21/5,1591-06-11,,Julian,assertion-v12-bcfe1ca85574b3561c37,11^h^ 30^m^,41400,1/5
+assertion-v12-280826c7d08520c32778,tycho-oo-12,143,Mars,ecliptic_longitude,reduction,25° 43½′ ♐,10629/40,1591-06-11,before_midnight,,,,,1/3
+assertion-v12-392531748407e9c9797e,tycho-oo-12,148,Mars,ecliptic_longitude,reduction,25° 38′ ♐,7969/30,1591-06-11,,Gregorian,,,,1/3
+assertion-v12-8cf99e1043567b05427b,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,25° 39′ ♐,5313/20,1591-06-11,,Gregorian,,,,1/3
+assertion-v12-bf7d6b3aa839a6aff6f0,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,4° 14½′,-509/120,1591-06-12,,Julian,assertion-v12-57ffa132ce40d86ff87c,11^h^ 50^m^,42600,1/2
+assertion-v12-ce04f3764c0114d90a20,tycho-oo-12,143,Mars,ecliptic_latitude,reduction,4° 14½′ south,-509/120,1591-06-12,evening,,,,,1/2
+assertion-v12-013a7e92602f82519fa2,tycho-oo-12,143,Mars,ecliptic_longitude,reduction,25° 25⅔′ ♐,47777/180,1591-06-12,evening,,,,,1
+assertion-v12-04f62ad46a5b5775e07e,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 45⅓′,-214/45,1591-06-28,,Julian,assertion-v12-dafb322fca134925b8ba,10^h^ 26^m^,37560,1/5
+assertion-v12-29e973e3f51a8a4af03f,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 49⅓′,-217/45,1591-06-28,,Gregorian,assertion-v12-f895673bddb7fc4c11b5,9^h^ 50^m^,35400,1/5
+assertion-v12-30168ebd8bbe5342edfa,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,4° 45½′,-571/120,1591-06-28,,Julian,assertion-v12-d0ec7ac2a870d79838f9,10^h^ 26^m^,37560,1/5
+assertion-v12-9acad6585ff3e14f00b3,tycho-oo-12,149,Mars,ecliptic_latitude,reduction,4° 49⅓′ south,-217/45,1591-06-28,night,Gregorian,,,,1/5
+assertion-v12-ecd65d5e82e4f605d469,tycho-oo-12,144,Mars,ecliptic_latitude,reduction,4° 45⅓′ south,-214/45,1591-06-28,evening,,,,,1/5
+assertion-v12-245732594e8836e6f0da,tycho-oo-12,144,Mars,ecliptic_longitude,reduction,21° 12⅓′ ♐,47017/180,1591-06-28,evening,,,,,1/2
+assertion-v12-58195a88f63bc32a5d26,tycho-oo-12,149,Mars,ecliptic_longitude,reduction,21° 9′ 48″ ♐,78349/300,1591-06-28,night,Gregorian,,,,1/2
+assertion-v12-a9a1f9a501c5d03d14a9,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,4° 50′,-29/6,1591-07-17,,Julian,assertion-v12-7224712d7f0a426bc80a,9^h^ 32^m^,34320,1
+assertion-v12-5512b3a36de295a06c12,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,2° 49¾′,-679/240,1591-09-26,,Julian,assertion-v12-2dd2f1b05b04140ca4a2,7^h^ 0^m^,25200,1/2
+assertion-v12-914776602b989071ce65,tycho-oo-12,145,Mars,ecliptic_latitude,reduction,2° 49¾′ south,-679/240,1591-09-26,evening,,,,,1/2
+assertion-v12-b5afb57988a73a345bef,tycho-oo-12,145,Mars,ecliptic_longitude,reduction,18° 34¼′ ♑,69257/240,1591-09-26,evening,,,,,1/2
+assertion-v12-fc9b462e64d21bb69c68,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,18° 34¼′ ♑,69257/240,1591-09-26,,Julian,assertion-v12-2dd2f1b05b04140ca4a2,7^h^ 0^m^,25200,1/2
+assertion-v12-2ef9f4e04e290e59f17a,tycho-oo-12,153,Venus,ecliptic_latitude,reduction,3° 30′ 53″ south,-12653/3600,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260,1/3
+assertion-v12-622bf9e7841ba0e65b34,tycho-oo-12,153,Venus,ecliptic_latitude,reduction,3° 26½′,-413/120,1591-09-27,evening,,,,,1/3
+assertion-v12-c8460f8a084edd2f8080,tycho-oo-12,153,Venus,ecliptic_latitude,reduction,3° 9′ 45″,-253/80,1591-09-27,evening,,,,,1/3
+assertion-v12-2d2fbb8b2a35b64e5855,tycho-oo-12,153,Venus,ecliptic_longitude,reduction,0° 31′ 43″ ♐,865903/3600,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260,1
+assertion-v12-25b3c335c1d1b5b84423,tycho-oo-12,151,Mars,ecliptic_latitude,reduction,0° 16½′ south,-11/40,1591-12-10,,Julian,assertion-v12-9f02e3ddba1f20e7c60f,5^h^ 26^m^,19560,1/2
+assertion-v12-fb26cb00fa763254ec04,tycho-oo-12,147,Mars,ecliptic_latitude,reduction,0° 16′ 28″ south,-247/900,1591-12-10,evening,,,,,1/2
+assertion-v12-502f8e9e8500e2094440,tycho-oo-12,151,Mars,ecliptic_longitude,reduction,10° 3½′ ♓,40807/120,1591-12-10,,Julian,assertion-v12-9f02e3ddba1f20e7c60f,5^h^ 26^m^,19560,1/2
+assertion-v12-8003cf699fc683aee67f,tycho-oo-12,147,Mars,ecliptic_longitude,reduction,10° 3′ 33″ ♓¹,408071/1200,1591-12-10,evening,,,,,1/2
+assertion-v12-95c2e30d6694b6abb8f9,tycho-oo-12,126,Moon,ecliptic_latitude,reduction,4° 42⅓′,-847/180,1591-12-16,,,,,,1/2
+assertion-v12-96eb7397dddacbad75b0,tycho-oo-12,126,Moon,ecliptic_latitude,reduction,4° 41⅙′,-1687/360,1591-12-16,,,,,,1/2
+assertion-v12-2d4b6a421be0d40d02e4,tycho-oo-12,126,Moon,ecliptic_longitude,reduction,18° 18′ ♉,483/10,1591-12-16,,,,,,1
+assertion-v12-8507838012fcead3ded8,tycho-oo-12,220,Mars,ecliptic_latitude,reduction,0° 6¾′ north,9/80,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960,1
+assertion-v12-6861bbd161a39fc7ca2a,tycho-oo-12,220,Mars,ecliptic_longitude,reduction,19° 17⅖′ ♈,1929/100,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960,1
+assertion-v12-1999b95a2a47af879836,tycho-oo-12,225,Mercury,ecliptic_latitude,reduction,0° 50′ 33″ north,337/400,1592-02-03,,,assertion-v12-414ed165c4a0d413d751,5⅔^h^,20400,1/3
+assertion-v12-3e0f782a97dd5bd82231,tycho-oo-12,225,Mercury,ecliptic_latitude,reduction,0° 47⅖′ north,79/100,1592-02-03,,,assertion-v12-414ed165c4a0d413d751,5⅔^h^,20400,1/3
+assertion-v12-fb8ab75f4745bb100b11,tycho-oo-12,225,Mercury,ecliptic_latitude,reduction,0° 46½′ north,31/40,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400,1/3
+assertion-v12-32008ee75babb11a47fe,tycho-oo-12,225,Mercury,ecliptic_longitude,reduction,12° 15¾′ ♓,27381/80,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400,1/3
+assertion-v12-c0d822a6f4f012f75b37,tycho-oo-12,225,Mercury,ecliptic_longitude,reduction,12° 18′ 0″ ♓,3423/10,1592-02-03,,,assertion-v12-414ed165c4a0d413d751,5⅔^h^,20400,1/3
+assertion-v12-e4232d5269394abbc8a6,tycho-oo-12,225,Mercury,ecliptic_longitude,reduction,12° 21′ 46″ ♓,616253/1800,1592-02-03,,,assertion-v12-414ed165c4a0d413d751,5⅔^h^,20400,1/3
+assertion-v12-6a3fbc626db53c3eda30,tycho-oo-12,226,Mercury,ecliptic_latitude,reduction,1° 38⅙′ north,589/360,1592-02-06,,,assertion-v12-25552a2aea6bb79d542e,5^h^ 54^m^,21240,1/2
+assertion-v12-7e56614f7445da7dfed7,tycho-oo-12,226,Mercury,ecliptic_latitude,reduction,1° 32⅔′ north,139/90,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120,1/2
+assertion-v12-4abe621e735604ed1fe4,tycho-oo-12,226,Mercury,ecliptic_longitude,reduction,15° 18⅓′ ♓,12431/36,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120,1/3
+assertion-v12-8e1b9d8f30d9cd7c9195,tycho-oo-12,226,Mercury,ecliptic_longitude,reduction,15° 23½′ ♓,41447/120,1592-02-06,,,assertion-v12-25552a2aea6bb79d542e,5^h^ 54^m^,21240,1/3
+assertion-v12-c9c3ee9f415877aba50f,tycho-oo-12,226,Mercury,ecliptic_longitude,reduction,15° 19¼′ ♓,82877/240,1592-02-06,,,assertion-v12-25552a2aea6bb79d542e,5^h^ 54^m^,21240,1/3
+assertion-v12-2f849f57a5c5af52f5d0,tycho-oo-12,280,Jupiter,ecliptic_latitude,reduction,0° 17′ 0″,-17/60,1593-06-29,,,assertion-v12-3204fbc8d586db76aa7f,3½^h^,12600,1/3
+assertion-v12-de6c4f6621eaf10c59bb,tycho-oo-12,279,Jupiter,ecliptic_latitude,reduction,0° 13′ 50″ south,-83/360,1593-06-29,,,,,,1/3
+assertion-v12-ea2cf512bdfdfce6f0bc,tycho-oo-12,280,Jupiter,ecliptic_latitude,reduction,0° 17′,-17/60,1593-06-29,,,assertion-v12-e1abe8ae387ce874b7cf,12^h^,43200,1/3
+assertion-v12-b6ed87a093614670a66b,tycho-oo-12,280,Jupiter,ecliptic_longitude,adopted_value,17° 23′ 0″ ♑,17243/60,1593-06-29,,,assertion-v12-7ca76d37abbe87f96ec7,12^h^,43200,1
+assertion-v12-55431c25a947992828e3,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,5° 46¼′ south,-277/48,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400,1
+assertion-v12-5c5b778a6db75d556ca1,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,17° 45¾′ ♓,27821/80,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400,1
+assertion-v12-56e61c5f6f3a6206d28e,tycho-oo-12,283,Mars,ecliptic_latitude,reduction,5° 46′ 15″ south,-277/48,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200,1
+assertion-v12-b4248e324541e71b5dc2,tycho-oo-12,283,Mars,ecliptic_longitude,reduction,17° 45′ 45″ ♓,27821/80,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200,1
+assertion-v12-4f29ef9ff8a6804469f2,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 6¼′,-293/48,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500,1
+assertion-v12-40755103ef48662a8a87,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,17° 39½′,41719/120,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500,1
+assertion-v12-377019dd799ddac3b6c6,tycho-oo-12,284,Mars,ecliptic_latitude,reduction,6° 6′ 15″ south,-293/48,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300,1
+assertion-v12-877a664badac854067d3,tycho-oo-12,284,Mars,ecliptic_longitude,reduction,17° 39½′ ♓,41719/120,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300,1
+assertion-v12-61cb1f724badfd96586f,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 18′ 52″,-5683/900,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500,1/2
+assertion-v12-e0811c8f7bbecfce4ae0,tycho-oo-12,307,Mars,ecliptic_latitude,reduction,6° 14½′,-749/120,1593-08-10,,,,,,1/2
+assertion-v12-ff74ce13b52b463e68fe,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,16° 7½′,2769/8,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500,1
+assertion-v12-42456a6cbd7e6d6bd4b5,tycho-oo-12,285,Mars,ecliptic_longitude,reduction,16° 7½′ ♓,2769/8,1593-08-11,morning,,assertion-v12-6cb12fd07016ec4a08bf,1¾^h^,6300,1
+assertion-v12-42d5211ba45a8a02744d,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 16′ 7″,-22567/3600,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800,1
+assertion-v12-095c99f5e5894f825eba,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,14° 29′ 5″,248029/720,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800,1
+assertion-v12-17e38d662aa9862c9b5f,tycho-oo-12,286,Mars,ecliptic_latitude,reduction,6° 16′ 7″ south,-22567/3600,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600,1
+assertion-v12-1522117bc221a3032739,tycho-oo-12,286,Mars,ecliptic_longitude,reduction,14° 29¹⁄₁₂′ ♓,248029/720,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600,1
+assertion-v12-120e46ecd1c3887f45dc,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 14′ 0″,-187/30,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800,1
+assertion-v12-3ce9cb463e1fc5672a9c,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,13° 44′ 0″,5156/15,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800,1
+assertion-v12-01fefa3cb53f17e63937,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 11′ 36″,-929/150,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000,1/3
+assertion-v12-5224355d5f1592294f37,tycho-oo-12,286,Mars,ecliptic_latitude,reduction,6° 14′ south,-187/30,1593-08-21,morning,,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600,1/3
+assertion-v12-977902a7547e96bb1fff,tycho-oo-12,287,Mars,ecliptic_latitude,reduction,6° 11′ 35″ south,-4459/720,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800,1/3
+assertion-v12-29ea0a79b64a6671b08b,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,13° 26′ 30″,41213/120,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000,1/3
+assertion-v12-e43edf3b126d869dcc12,tycho-oo-12,287,Mars,ecliptic_longitude,reduction,13° 26½′ ♓,41213/120,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800,1/3
+assertion-v12-fbe3dab39b09cef04667,tycho-oo-12,286,Mars,ecliptic_longitude,reduction,13° 44′ ♓,5156/15,1593-08-21,morning,,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600,1/3
+assertion-v12-7eff29ae2b4dfb12a2f5,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 8′ 50″,-2213/360,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400,1/2
+assertion-v12-f7b68816eb4f8162a5d1,tycho-oo-12,289,Mars,ecliptic_latitude,reduction,6° 8⅚′ south,-2213/360,1593-08-22,after_midnight,,assertion-v12-4f5828f11caafa80f461,0⅓^h^,1200,1/2
+assertion-v12-0fec23284c77d1b68084,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,13° 10′ 15″,82361/240,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400,1/2
+assertion-v12-5d4b721c9e5cc799a1ce,tycho-oo-12,289,Mars,ecliptic_longitude,reduction,13° 10¼′ ♓,82361/240,1593-08-22,after_midnight,,assertion-v12-4f5828f11caafa80f461,0⅓^h^,1200,1/2
+assertion-v12-1d0446ac45921445f66d,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 7′ 30″,-49/8,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600,1/3
+assertion-v12-90d16a2452c2a6c1184b,tycho-oo-12,290,Mars,ecliptic_latitude,reduction,6° 7½′ south,-49/8,1593-08-23,,,assertion-v12-3510a733fe3892988e90,11^h^,39600,1/3
+assertion-v12-c6bcb258ba8e5b4807a5,tycho-oo-12,290,Mars,ecliptic_latitude,reduction,6° 8¼′ south,-491/80,1593-08-23,,,assertion-v12-39b8a78c1a2d2c208f59,12⅚^h^,46200,1/3
+assertion-v12-2fba24d65e98c5766f90,tycho-oo-12,290,Mars,ecliptic_longitude,reduction,12° 54⅚′ ♓,123449/360,1593-08-23,,,assertion-v12-39b8a78c1a2d2c208f59,12⅚^h^,46200,1/3
+assertion-v12-786ce100e0ed1e13b90e,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,12° 54′ 20″,61723/180,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600,1/3
+assertion-v12-fe4ec2beed747dc9f939,tycho-oo-12,290,Mars,ecliptic_longitude,reduction,12° 54⅓′ ♓,61723/180,1593-08-23,,,assertion-v12-3510a733fe3892988e90,11^h^,39600,1/3
+assertion-v12-9711cba357425ed33152,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 3′,-121/20,1593-08-24,after_noon,,assertion-v12-a43181d6ed5ae807eed7,5^h^ 4^m^,18240,1/6
+assertion-v12-97223c42574cb2978f85,tycho-oo-12,290,Mars,ecliptic_latitude,reduction,6° 5′ 25″ south,-877/144,1593-08-24,,,assertion-v12-d2c9e674983cb800ccea,10½^h^,37800,1/6
+assertion-v12-b860b1604d372088b4f4,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 5′ 30″,-731/120,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800,1/6
+assertion-v12-e0c4af1c6b922e25b50c,tycho-oo-12,290,Mars,ecliptic_latitude,reduction,6° 6′ 8″ south,-1373/225,1593-08-24,,,assertion-v12-2b0554bd4ecf800ce630,11^h^ 0^m^,39600,1/6
+assertion-v12-f932b5f363d9fb3a1f19,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,6° 6′ south,-61/10,1593-08-24,after_noon,,assertion-v12-a43181d6ed5ae807eed7,5^h^ 4^m^,18240,1/6
+assertion-v12-fb700700679b793175a7,tycho-oo-12,307,Mars,ecliptic_latitude,reduction,6° 2½′,-145/24,1593-08-24,,,,,,1/6
+assertion-v12-7cb6c93380539df4ed35,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,12° 41⅔′ ♓,12337/36,1593-08-24,after_noon,,assertion-v12-a43181d6ed5ae807eed7,5^h^ 4^m^,18240,1/4
+assertion-v12-a31fd62a20afc5980f4e,tycho-oo-12,290,Mars,ecliptic_longitude,reduction,12° 37′ 50″ ♓,123347/360,1593-08-24,,,assertion-v12-d2c9e674983cb800ccea,10½^h^,37800,1/4
+assertion-v12-c2b87ea71b2371907177,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,12° 37′ 50″,123347/360,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800,1/4
+assertion-v12-dd354b6b06d00dbfd2e3,tycho-oo-12,290,Mars,ecliptic_longitude,reduction,12° 40′ 15″ ♓,82241/240,1593-08-24,,,assertion-v12-2b0554bd4ecf800ce630,11^h^ 0^m^,39600,1/4
+assertion-v12-30881f277239580bdac9,tycho-oo-12,290,Mars,ecliptic_latitude,reduction,5° 52¼′ south,-1409/240,1593-08-29,,,assertion-v12-1d5b475f939888eabecc,10⅓^h^,37200,1/2
+assertion-v12-42cec8b18e7a62a666e8,tycho-oo-12,291,Mars,ecliptic_latitude,reduction,5° 52¼′,-1409/240,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200,1/2
+assertion-v12-0a647639f401e3a9b80d,tycho-oo-12,291,Mars,ecliptic_longitude,reduction,11° 15′ 25″,49141/144,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200,1/2
+assertion-v12-0e779869f7c133c65908,tycho-oo-12,290,Mars,ecliptic_longitude,reduction,11° 15⅖′ ♓,102377/300,1593-08-29,,,assertion-v12-1d5b475f939888eabecc,10⅓^h^,37200,1/2
+assertion-v12-3e3b17684b66200db3a5,tycho-oo-12,297,Mars,ecliptic_latitude,reduction,0° 0′ 45″ north,1/80,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200,1/2
+assertion-v12-4eb93d0be8f79841c9ea,tycho-oo-12,297,Mars,ecliptic_latitude,reduction,0° 1′ 0″ south,-1/60,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200,1/2
+assertion-v12-9a3dfb397e18cfb0216c,tycho-oo-12,297,Mars,ecliptic_longitude,reduction,4° 44′ 0″ ♈,71/15,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200,1/2
+assertion-v12-d1ebb3fdbb443f18ab6a,tycho-oo-12,297,Mars,ecliptic_longitude,reduction,4° 45′ ♈,19/4,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200,1/2
+assertion-v12-16f4076efdeccb60e09b,tycho-oo-12,298,Mars,ecliptic_latitude,reduction,0° 12′ 36″ north,21/100,1593-12-19,,,assertion-v12-d3aa49881c48f925a1f1,5^h^ 35^m^,20100,1/3
+assertion-v12-55894cee78de60b5754f,tycho-oo-12,298,Mars,ecliptic_latitude,reduction,0° 15′ 0″ north,1/4,1593-12-19,,,assertion-v12-8a4444c1adc2ce60187e,5⅗^h^,20160,1/3
+assertion-v12-6b1b5e3c8ddecbd7c5c5,tycho-oo-12,298,Mars,ecliptic_latitude,reduction,0° 13′ 50″ north,83/360,1593-12-19,,,assertion-v12-22fb9e7c868286954bd4,6^h^ 20^m^,22800,1/3
+assertion-v12-67cfd098ab4a5a1e05ce,tycho-oo-12,298,Mars,ecliptic_longitude,reduction,9° 44′ 55″ ♈,7019/720,1593-12-19,,,,,,1/4
+assertion-v12-7bec1b68886b00b88914,tycho-oo-12,298,Mars,ecliptic_longitude,reduction,9° 45′ 6″ ♈,5851/600,1593-12-19,,,assertion-v12-d3aa49881c48f925a1f1,5^h^ 35^m^,20100,1/4
+assertion-v12-943d9d1207d4aafe63fc,tycho-oo-12,298,Mars,ecliptic_longitude,reduction,9° 45′ 50″ ♈,703/72,1593-12-19,,,assertion-v12-8a4444c1adc2ce60187e,5⅗^h^,20160,1/4
+assertion-v12-fdd59a62bc609bdfd230,tycho-oo-12,298,Mars,ecliptic_longitude,reduction,9° 45′ 55″ ♈,7031/720,1593-12-19,,,assertion-v12-22fb9e7c868286954bd4,6^h^ 20^m^,22800,1/4
+assertion-v12-a6023fa7972789e76466,tycho-oo-12,299,Mars,ecliptic_latitude,reduction,0° 24′ 40″ north,37/90,1593-12-30,,,assertion-v12-e7f2c76b58fe186317f6,5½^h^,19800,1
+assertion-v12-9f2155c245ad798060ae,tycho-oo-12,299,Mars,ecliptic_longitude,reduction,16° 2′ 23″ ♈,57743/3600,1593-12-30,,,assertion-v12-e7f2c76b58fe186317f6,5½^h^,19800,1
+assertion-v12-03adb3a280ed627e4aa5,tycho-oo-12,347,Mars,ecliptic_latitude,reduction,0° 19½′ north,13/40,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000,1/3
+assertion-v12-3335323065db71f8a8ea,tycho-oo-12,347,Mars,ecliptic_latitude,reduction,0° 20½′ north,41/120,1594-11-29,morning,,assertion-v12-01b5c4ad739d98d3c961,6⅗^h^,23760,1/3
+assertion-v12-bd01d852924fcacfae10,tycho-oo-12,347,Mars,ecliptic_latitude,reduction,0° 26½′ north,53/120,1594-11-29,morning,,assertion-v12-01b5c4ad739d98d3c961,6⅗^h^,23760,1/3
+assertion-v12-0393e42959edfe84b251,tycho-oo-12,347,Mars,ecliptic_longitude,reduction,18° 26¼′ ♏,3655/16,1594-11-29,morning,,assertion-v12-01b5c4ad739d98d3c961,6⅗^h^,23760,1/3
+assertion-v12-71745fd0dce97b4c5fec,tycho-oo-12,347,Mars,ecliptic_longitude,reduction,18° 31′ 0″ ♏,13711/60,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000,1/3
+assertion-v12-dea74056fc47dd6ad508,tycho-oo-12,347,Mars,ecliptic_longitude,reduction,18° 31½′ ♏,9141/40,1594-11-29,morning,,assertion-v12-01b5c4ad739d98d3c961,6⅗^h^,23760,1/3
+assertion-v12-96c4893a358265bb9bcd,tycho-oo-12,348,Mars,ecliptic_latitude,reduction,0° 15¼′ north,61/240,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100,1/2
+assertion-v12-fc5e3233e29ea376eadf,tycho-oo-12,348,Mars,ecliptic_latitude,reduction,0° 19′ 34″ north,587/1800,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100,1/2
+assertion-v12-10d849169be2a41a51ca,tycho-oo-12,348,Mars,ecliptic_longitude,reduction,26° 5′ ♏,2833/12,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100,1/2
+assertion-v12-f938f2a56152a71c0f71,tycho-oo-12,348,Mars,ecliptic_longitude,reduction,26° 2′ 34″ ♏,424877/1800,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100,1/2
+assertion-v12-5ba2ab5752adcaa9203c,tycho-oo-12,443,Mars,ecliptic_latitude,reduction,2° 0′ south,-2,1595-09-07,morning,,,,,1/2
+assertion-v12-9d076144d4bdc75e932a,tycho-oo-12,443,Mars,ecliptic_latitude,reduction,1° 0′ south,-1,1595-09-07,morning,,,,,1/2
+assertion-v12-20db458f540ce93400c1,tycho-oo-12,443,Mars,ecliptic_longitude,reduction,24⅓° ♉,163/3,1595-09-07,morning,,,,,1/2
+assertion-v12-e804babe099a9bca3e7c,tycho-oo-12,443,Mars,ecliptic_longitude,reduction,24½° ♉,109/2,1595-09-07,morning,,,,,1/2
+assertion-v12-059112b0c0b9680ae17c,tycho-oo-12,445,Mars,ecliptic_longitude,reduction,26° 6½′ ♉,6733/120,1595-09-30,before_noon,,assertion-v12-a34dc2b7c78cca0e06f2,4^h^,14400,1
+assertion-v12-f9c426621027d177597c,tycho-oo-12,446,Mars,ecliptic_longitude,reduction,23° 52½′ ♉,431/8,1595-10-12,evening,,,,,1
+assertion-v12-1eb4b7b5b0f47732a503,tycho-oo-12,446,Mars,ecliptic_longitude,reduction,22° 55¾′ ♉,12703/240,1595-10-16,morning,,assertion-v12-36b6ecde0caa664bccb6,3^h^ 35^m^,12900,1
+assertion-v12-80464e7fd0ae59a372d4,tycho-oo-12,447,Mars,ecliptic_latitude,reduction,0° 13′ 50″ south,-83/360,1595-10-25,morning,,assertion-v12-00c2cfb8d02e00670f31,6¾^h^,24300,1/2
+assertion-v12-e3c272f19809f7b519a3,tycho-oo-12,447,Mars,ecliptic_latitude,reduction,0° 13′ 0″ south,-13/60,1595-10-25,morning,,,,,1/2
+assertion-v12-8fad832b40a7dee4ed8d,tycho-oo-12,447,Mars,ecliptic_longitude,reduction,19° 53′ 0″ ♉,2993/60,1595-10-25,morning,,assertion-v12-00c2cfb8d02e00670f31,6¾^h^,24300,1/2
+assertion-v12-e12465198fe70aae5c47,tycho-oo-12,447,Mars,ecliptic_longitude,reduction,19° 52′ 0″ ♉,748/15,1595-10-25,morning,,,,,1/2
+assertion-v13-268177fcc6839bc50269,tycho-oo-13,154,Mars,ecliptic_longitude,reduction,2° 29′ ♋,5549/60,1597-12-13,after_noon,,assertion-v13-e866513996709b82f114,H. 13 M. 35 p.m.,48900,1/2
+assertion-v13-55e2b8c5e402cbc1f461,tycho-oo-13,151,Mars,ecliptic_longitude,reduction,2 Gr. 28 Mi. ♋,1387/15,1597-12-13,after_noon,,assertion-v13-a0368c4afffaf6856f89,13 hours Mi. 26 p. M.,48360,1/2
+assertion-v13-953c66f64412d4cb581e,tycho-oo-13,180,Mars,ecliptic_latitude,adopted_value,1 18 1 B.,4681/3600,1599-10-20,,,,,,1
+assertion-v13-259d8eb14c5cb990bc9b,tycho-oo-13,180,Mars,ecliptic_longitude,adopted_value,1 0 56 ♌,54457/450,1599-10-20,,,,,,1
+assertion-v13-8df2838f73de1599700e,tycho-oo-13,180,Mars,ecliptic_latitude,reduction,1 15 37 B.,4537/3600,1599-10-21,,,,,,1/2
+assertion-v13-a05d58fcfb345792d0c9,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,1 19 34,2387/1800,1599-10-21,,,,,,1/2
+assertion-v13-f355d753e164bc96ec9c,tycho-oo-13,180,Mars,ecliptic_longitude,adopted_value,1 29 25 ♌,87473/720,1599-10-21,,,,,,1
+assertion-v13-71795f965227d46b932a,tycho-oo-13,180,Mars,ecliptic_latitude,adopted_value,1 21 45 B.,109/80,1599-10-24,,,,,,1
+assertion-v13-a94631796daa895d2f94,tycho-oo-13,180,Mars,ecliptic_longitude,adopted_value,2 55 41 ♌,442541/3600,1599-10-24,,,,,,1
+assertion-v13-4047056e67d5431a0079,tycho-oo-13,181,Mars,ecliptic_latitude,reduction,1 23 20,25/18,1599-10-25,,,,,,1
+assertion-v13-6970a46e52e5cb34395a,tycho-oo-13,181,Mars,ecliptic_longitude,reduction,3 22 20,22207/180,1599-10-25,,,,,,1
+assertion-v13-68523fa734debca9c169,tycho-oo-13,180,Mars,ecliptic_latitude,adopted_value,1 26 0 B.,43/30,1599-10-27,,,,,,1
+assertion-v13-82ff5df7831bab70c81e,tycho-oo-13,180,Mars,ecliptic_longitude,adopted_value,4 17 10 ♌,44743/360,1599-10-27,,,,,,1
+assertion-v13-481bcde67377be94d943,tycho-oo-13,180,Mars,ecliptic_latitude,adopted_value,1 29 40 B.,269/180,1599-10-29,,,,,,1
+assertion-v13-c678cfebaf62f17a049b,tycho-oo-13,180,Mars,ecliptic_longitude,adopted_value,5 9 10 ♌,9011/72,1599-10-29,,,,,,1
+assertion-v13-c7dfd35dc1e007879d1e,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 50 51 S.,1539/400,1600-03-02,,,,,,1/2
+assertion-v13-caab1b6743da0630ef04,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 50 51 S.,1539/400,1600-03-02,after_noon,,assertion-v13-7b0e1a87c341aea776e7,H. 10,36000,1/2
+assertion-v13-30de45bb0b854ad2e134,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,29 14 46♋,214643/1800,1600-03-02,after_noon,,assertion-v13-7b0e1a87c341aea776e7,H. 10,36000,1/2
+assertion-v13-a500730c99507183f0eb,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,♋ 29° 14′ 46″,214643/1800,1600-03-02,,,,,,1/2
+assertion-v13-a3e6ed288ac083b9c24e,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 37 15 S.,869/240,1600-03-09,after_noon,,assertion-v13-53ad58455948a5cb8804,H. 9½,34200,1/2
+assertion-v13-c9fdc190199e8d52c0f7,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 37 15,869/240,1600-03-09,,,,,,1/2
+assertion-v13-0bd62806ae0693f606ff,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,28 57 4♋,26764/225,1600-03-09,after_noon,,assertion-v13-53ad58455948a5cb8804,H. 9½,34200,1/2
+assertion-v13-2750cf22560f51d2fbad,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,28 57 4,26764/225,1600-03-09,,,,,,1/2
+assertion-v13-21046a6b3854233aca45,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 22 53 S.,12173/3600,1600-03-15,,,assertion-v13-b1ab0b19ea648fdc5895,H. 9⅓,33600,1/2
+assertion-v13-b58e17991b6df9007cb5,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 22 53,12173/3600,1600-03-15,,,,,,1/2
+assertion-v13-d073dfbd63c59da358b3,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,29 12 30♋,2861/24,1600-03-15,,,assertion-v13-b1ab0b19ea648fdc5895,H. 9⅓,33600,1/2
+assertion-v13-ffd14d480c836a0b7126,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,29 12 30,2861/24,1600-03-15,,,,,,1/2
+assertion-v13-689838ffec73b92eac8b,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 19 45 S.,799/240,1600-03-16,,,assertion-v13-9dd7cba65b4645cd3638,H. 9¼,33300,1/2
+assertion-v13-a907b7b0245cac6102a6,tycho-oo-13,224,Mars,ecliptic_latitude,reduction,3 19 45,799/240,1600-03-16,,,,,,1/2
+assertion-v13-0f13396c0aec379a48af,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,29 17 53,429473/3600,1600-03-16,,,,,,1/2
+assertion-v13-28445d5692941516b812,tycho-oo-13,224,Mars,ecliptic_longitude,reduction,29 17 53♋,429473/3600,1600-03-16,,,assertion-v13-9dd7cba65b4645cd3638,H. 9¼,33300,1/2

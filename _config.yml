@@ -18,6 +18,10 @@ relative_links:
 exclude:
   - AGENTS.md
   - CLAUDE.md
+  - pyproject.toml
+  - scripts
+  - tests
+  - "src/*.py"
   - work
   - data
   - build

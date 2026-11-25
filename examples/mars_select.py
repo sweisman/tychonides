@@ -39,7 +39,8 @@ Rules, in order:
 8. A prediction is an exact Mars ecliptic longitude with the role of a
    historical prediction, a model name, and one complete date in a window.
    Predictions printed without a zodiac sign keep only their value within
-   the sign.
+   the sign. Such a value of 30 degrees or more is left out, because it
+   cannot be a place within a sign.
 """
 
 import argparse
@@ -297,6 +298,9 @@ def predictions(db, centers, drop):
             continue
         if not row["model"]:
             drop(row, "no model name", number, when)
+            continue
+        if not row["longitude_degrees_exact"] and Fraction(row["within_sign_degrees_exact"]) >= 30:
+            drop(row, "no zodiac sign and a value of 30 degrees or more", number, when)
             continue
         dated = {"julian_date": when, "daypart": daypart, "calendar_label": calendar}
         kept.append({**row, "opposition": number, **dated})

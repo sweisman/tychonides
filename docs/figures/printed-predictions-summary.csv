@@ -1,0 +1,60 @@
+body,quantity,model,set,predictions,flagged_for_review,with_a_log_value,timed,mean_minus_log_arcmin,median_absolute_minus_log_arcmin,largest_absolute_minus_log_arcmin,mean_minus_de441_arcmin,median_absolute_minus_de441_arcmin,largest_absolute_minus_de441_arcmin,median_absolute_minus_de441_timed_arcmin,median_absolute_log_minus_de441_timed_arcmin
+Moon,ecliptic_latitude,Alphonsine,main,14,0,3,0,,,,,,,,
+Moon,ecliptic_latitude,Copernicus,main,1,0,0,0,,,,,,,,
+Moon,ecliptic_latitude,Prutenic,main,11,0,2,0,,,,,,,,
+Moon,ecliptic_latitude,Leovitius,main,1,0,0,0,,,,,,,,
+Moon,ecliptic_longitude,Alphonsine,main,14,0,5,0,,,,,,,,
+Moon,ecliptic_longitude,Copernicus,main,1,0,0,0,,,,,,,,
+Moon,ecliptic_longitude,Prutenic,main,13,0,6,0,,,,,,,,
+Moon,ecliptic_longitude,Stadius,main,1,0,0,0,,,,,,,,
+Moon,ecliptic_longitude,Leovitius,main,2,0,2,0,,,,,,,,
+Moon,ecliptic_longitude,Carelli,main,1,0,0,0,,,,,,,,
+Mercury,ecliptic_latitude,Alphonsine,main,4,0,2,2,-6.3,9.1,15.4,-18.1,21.8,32.0,8.3,1.0
+Mercury,ecliptic_latitude,Copernicus,main,2,0,2,2,2.2,7.6,9.8,3.2,6.8,10.1,6.8,1.0
+Mercury,ecliptic_latitude,Prutenic,main,2,0,0,0,,,,-78.2,78.2,87.0,,
+Mercury,ecliptic_longitude,Alphonsine,main,4,0,2,2,57.1,57.1,82.6,22.1,60.9,87.6,61.1,4.0
+Mercury,ecliptic_longitude,Copernicus,main,2,0,2,2,-2.8,10.8,13.6,1.2,9.8,11.0,9.8,4.0
+Mercury,ecliptic_longitude,Prutenic,main,2,0,0,0,,,,-32.8,112.8,145.5,,
+Venus,ecliptic_latitude,Alphonsine,main,2,1,1,0,65.4,65.4,65.4,73.8,73.8,73.8,,
+Venus,ecliptic_latitude,Copernicus,main,2,1,1,0,159.4,159.4,159.4,167.8,167.8,167.8,,
+Venus,ecliptic_longitude,Alphonsine,main,2,1,1,1,-31.7,31.7,31.7,-35.3,35.3,35.3,35.3,3.6
+Venus,ecliptic_longitude,Copernicus,main,2,1,1,1,-31.2,31.2,31.2,-34.8,34.8,34.8,34.8,3.6
+Venus,ecliptic_longitude,Stadius,main,2,0,1,0,-126.0,126.0,126.0,-20.4,20.4,20.7,,
+Venus,ecliptic_longitude,Carelli,main,2,0,1,0,-57.0,57.0,57.0,47.6,47.6,48.3,,
+Mars,ecliptic_latitude,Alphonsine,away from opposition,15,0,13,9,-9.3,16.2,37.0,-5.4,16.9,60.4,3.6,1.8
+Mars,ecliptic_latitude,Alphonsine,calendar unrecorded,10,0,10,0,-16.9,15.3,22.2,-19.3,30.9,34.8,,
+Mars,ecliptic_latitude,Alphonsine,near opposition,45,0,44,27,-6.9,12.4,94.0,-9.0,12.4,54.2,11.3,2.0
+Mars,ecliptic_latitude,Copernicus,away from opposition,10,0,10,6,-22.9,28.8,43.5,-15.5,13.9,42.0,18.1,2.0
+Mars,ecliptic_latitude,Copernicus,calendar unrecorded,10,0,10,0,-23.1,33.7,35.0,-25.5,50.9,53.8,,
+Mars,ecliptic_latitude,Copernicus,near opposition,46,0,46,29,19.1,35.0,80.0,19.8,35.2,72.8,29.0,2.0
+Mars,ecliptic_latitude,Prutenic,away from opposition,3,0,2,2,-13.2,16.8,30.0,-33.0,42.5,58.6,30.3,15.0
+Mars,ecliptic_latitude,Prutenic,near opposition,5,0,4,2,15.0,62.5,75.0,-4.7,39.6,54.3,31.5,0.8
+Mars,ecliptic_latitude,Stadius,away from opposition,1,0,1,0,-3.0,3.0,3.0,-19.3,19.3,19.3,,
+Mars,ecliptic_latitude,Leovitius,away from opposition,1,0,1,0,0.0,0.0,0.0,-13.3,13.3,13.3,,
+Mars,ecliptic_longitude,Alphonsine,away from opposition,25,0,21,9,-11.9,85.5,211.8,-37.3,93.9,227.0,87.0,4.5
+Mars,ecliptic_longitude,Alphonsine,calendar unrecorded,10,0,10,0,-101.2,60.2,179.8,-282.4,319.4,329.4,,
+Mars,ecliptic_longitude,Alphonsine,near opposition,57,0,55,30,80.7,216.2,355.0,88.2,218.9,318.1,260.0,0.9
+Mars,ecliptic_longitude,Copernicus,away from opposition,13,0,13,6,-3.0,16.6,57.5,-3.9,19.9,36.8,20.5,3.9
+Mars,ecliptic_longitude,Copernicus,calendar unrecorded,10,0,10,0,37.6,18.8,85.2,-143.6,240.4,267.4,,
+Mars,ecliptic_longitude,Copernicus,near opposition,50,0,48,28,-59.8,111.8,335.4,-57.6,111.0,334.8,176.7,1.1
+Mars,ecliptic_longitude,Prutenic,away from opposition,10,0,8,4,12.5,123.5,193.0,33.6,125.9,239.8,90.9,4.8
+Mars,ecliptic_longitude,Prutenic,near opposition,10,0,10,5,2.0,56.5,140.0,19.5,39.1,123.5,68.4,0.4
+Mars,ecliptic_longitude,Stadius,away from opposition,8,0,6,0,41.7,61.8,110.0,39.6,31.5,96.0,,
+Mars,ecliptic_longitude,Leovitius,away from opposition,1,0,1,0,-156.0,156.0,156.0,-170.1,170.1,170.1,,
+Mars,ecliptic_longitude,Carelli,away from opposition,3,0,1,0,-160.0,160.0,160.0,-63.8,65.0,66.2,,
+Jupiter,ecliptic_latitude,Alphonsine,main,5,0,4,0,5.3,12.4,14.7,11.7,14.0,31.7,,
+Jupiter,ecliptic_latitude,Copernicus,main,2,0,2,0,1.6,35.3,36.9,3.4,36.6,40.0,,
+Jupiter,ecliptic_latitude,Prutenic,main,2,0,2,0,-2.1,2.1,4.2,-1.0,1.6,2.6,,
+Jupiter,ecliptic_longitude,Alphonsine,main,4,0,4,1,-60.2,68.0,89.1,-58.9,66.3,86.7,49.0,0.1
+Jupiter,ecliptic_longitude,Copernicus,main,2,0,2,1,-10.8,21.8,32.5,-11.2,22.1,33.3,10.9,0.1
+Jupiter,ecliptic_longitude,Prutenic,main,1,0,1,0,11.0,11.0,11.0,14.4,14.4,14.4,,
+Jupiter,ecliptic_longitude,Stadius,main,2,0,1,0,-90.0,90.0,90.0,0.9,0.9,1.0,,
+Jupiter,ecliptic_longitude,Carelli,main,2,0,1,0,-130.0,130.0,130.0,-39.1,39.1,39.2,,
+Saturn,ecliptic_latitude,Alphonsine,main,8,0,0,0,,,,-4.1,4.8,6.5,,
+Saturn,ecliptic_latitude,Copernicus,main,7,0,0,0,,,,-58.9,59.7,60.6,,
+Saturn,ecliptic_latitude,Prutenic,main,1,0,0,0,,,,-49.9,49.9,49.9,,
+Saturn,ecliptic_longitude,Alphonsine,main,7,0,0,0,,,,168.6,174.5,176.2,,
+Saturn,ecliptic_longitude,Copernicus,main,7,0,0,0,,,,-2.9,6.3,9.3,,
+Saturn,ecliptic_longitude,Prutenic,main,1,0,0,0,,,,3.1,3.1,3.1,,
+Saturn,ecliptic_longitude,Stadius,main,2,0,1,0,-144.0,144.0,144.0,-36.7,36.7,37.5,,
+Saturn,ecliptic_longitude,Carelli,main,2,0,1,0,-7.0,7.0,7.0,99.8,99.8,100.1,,

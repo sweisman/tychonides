@@ -37,7 +37,7 @@ screening scope; it does not prove recognition of every implicit reference.
 | 12 | 7,462 | 7,449 | 7 | 6 |
 | 13 | 2,207 | 2,196 | 1 | 10 |
 
-## Pafko’s independent controls
+## Controls from Pafko’s transcription
 
 All **923** workbook entries retain source links. The automated alignment uses
 location and timing evidence. The [Pafko reconciliation](pafko-validation-status.md)

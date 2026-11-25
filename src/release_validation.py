@@ -3,7 +3,9 @@
 import argparse
 from contextlib import closing
 import csv
+from fractions import Fraction
 import gzip
+import os
 import shutil
 import tempfile
 import json
@@ -79,6 +81,67 @@ def validate_derived_values(db, schema):
             raise ValueError("Derived columns differ from preserved conversion: " + identifier)
 
 
+MODERN_SOURCE_PREFIXES = ("cds", "jjmo", "jpl", "usno")
+PUBLISHED_MANIFEST_FIELDS = (
+    "schema_version",
+    "vocabulary_contract",
+    "index_contract",
+    "sqlite_sha256",
+    "groups",
+    "sources",
+    "images",
+    "artifacts",
+    "controls",
+    "interpretations",
+    "quantities_by_source",
+)
+
+
+def validate_marked_values(db):
+    """Recompute exact historical values whose printed expression carries every unit mark.
+
+    An expression qualifies when it binds completely and its finest marked unit is the
+    interpretation's least component unit, so no other table cell contributes to the value.
+    Returns the number of values recomputed.
+    """
+    from .core import number
+    from .numeric_integrity import explicit_angular_components, explicit_postfix_clock_components
+
+    scale = {
+        "degree": 3600,
+        "arcminute": 60,
+        "arcsecond": 1,
+        "hour": 3600,
+        "minute": 60,
+        "second": 1,
+    }
+    parsers = {
+        "arcsecond": explicit_angular_components,
+        "second_of_time": explicit_postfix_clock_components,
+    }
+    checked = 0
+    for identifier, expression, unit, value, least in db.execute(
+        """SELECT c.id, c.expression, c.unit, c.value_exact,
+                  json_extract(i.normalized_json, '$.least_component_unit')
+           FROM catalogue c JOIN quantities q ON q.id=c.id
+           JOIN interpretations i ON i.quantity_id=c.id AND i.version=c.version
+           WHERE q.source_payload_json IS NULL AND c.status='exact'
+             AND c.unit IN ('arcsecond','second_of_time') AND c.value_exact IS NOT NULL"""
+    ):
+        parts = parsers[unit](expression or "")
+        if parts is None or list(parts)[-1] != least:
+            continue
+        if Fraction(value) != sum(number(text) * scale[name] for name, text in parts.items()):
+            raise ValueError("Exact value differs from its marked expression: " + identifier)
+        checked += 1
+    return checked
+
+
+def scratch_directory(assets):
+    """Unpack beside the assets when possible; the system temporary directory is often memory."""
+    return assets if os.access(assets, os.W_OK) else None
+
+
 def validate_csv(db, path, columns, count):
     with path.open(encoding="utf-8", newline="") as stream:
         reader = csv.DictReader(stream)
@@ -107,7 +170,8 @@ def validate_csv(db, path, columns, count):
         raise ValueError("Release quantity counts or identities differ")
 
 
-def validate_release(directory, assets_dir=None):
+def validate_release(directory, assets_dir=None, keep_database=None):
+    """Verify a release. A compressed database is unpacked once and kept at keep_database if given."""
     directory = Path(directory).resolve()
     assets = Path(assets_dir).resolve() if assets_dir is not None else directory
     if (directory / ".pending-release").exists():
@@ -119,6 +183,8 @@ def validate_release(directory, assets_dir=None):
         raise ValueError("Manifest requires an output_hashes object")
     if type(manifest.get("quantities")) is not int or manifest["quantities"] < 0:
         raise ValueError("Manifest requires a nonnegative integer quantities count")
+    # Optional manifest fields skip their checks. Each skipped check is reported.
+    skipped = ["schema_version"] if "schema_version" not in manifest else []
     schema = manifest.get("schema_version", 3)
     if schema not in (3, 4, 5, 6):
         raise ValueError("Unsupported catalogue schema version")
@@ -140,7 +206,10 @@ def validate_release(directory, assets_dir=None):
             raise ValueError("Missing release file: " + name)
         if digest(assets / name) != expected:
             raise ValueError("Release checksum mismatch: " + name)
-    with tempfile.TemporaryDirectory(prefix="tychonides-verify-") as temporary:
+    recomputed = None
+    with tempfile.TemporaryDirectory(
+        prefix=".tychonides-verify-", dir=scratch_directory(assets)
+    ) as temporary:
         database = assets / database_name
         if compressed:
             database = Path(temporary) / "tychonides.sqlite"
@@ -156,10 +225,14 @@ def validate_release(directory, assets_dir=None):
                 from .vocabulary import validate_vocabulary
 
                 validate_vocabulary(db)
+            else:
+                skipped.append("vocabulary_contract")
             if manifest.get("index_contract") == 1:
                 from .catalog_indexes import validate_indexes
 
                 validate_indexes(db)
+            else:
+                skipped.append("index_contract")
             if (
                 db.execute("PRAGMA integrity_check").fetchone()[0] != "ok"
                 or db.execute("PRAGMA foreign_key_check").fetchall()
@@ -172,10 +245,11 @@ def validate_release(directory, assets_dir=None):
                     "SELECT count(*) FROM sources WHERE title IS NULL OR author IS NULL OR publisher IS NULL OR date IS NULL OR date_kind IS NULL"
                 ).fetchone()[0]:
                     raise ValueError("Source bibliography is incomplete")
+            if schema >= 6:
+                recomputed = validate_marked_values(db)
             columns = PUBLIC_CSV_COLUMNS if schema >= 4 else CSV_COLUMNS
             if schema >= 5:
                 columns += ("normalized_json",)
-            projected = {r["id"]: r for r in project_csv(db, columns)}
             for key, table in (
                 ("groups", "groups"),
                 ("sources", "sources"),
@@ -184,20 +258,27 @@ def validate_release(directory, assets_dir=None):
                 ("controls", "control_links"),
                 ("interpretations", "interpretations"),
             ):
-                if (
-                    key in manifest
-                    and manifest[key] != db.execute("SELECT count(*) FROM " + table).fetchone()[0]
-                ):
+                if key not in manifest:
+                    skipped.append(key)
+                elif manifest[key] != db.execute("SELECT count(*) FROM " + table).fetchone()[0]:
                     raise ValueError("Manifest count differs: " + key)
-            if "quantities_by_source" in manifest and manifest["quantities_by_source"] != dict(
+            if "quantities_by_source" not in manifest:
+                skipped.append("quantities_by_source")
+            elif manifest["quantities_by_source"] != dict(
                 db.execute("SELECT source_id,count(*) FROM quantities GROUP BY source_id")
             ):
                 raise ValueError("Manifest counts differ: quantities_by_source")
             validate_csv(db, assets / csv_name, columns, manifest["quantities"])
+        if compressed and keep_database is not None:
+            kept = Path(keep_database).resolve()
+            kept.parent.mkdir(parents=True, exist_ok=True)
+            shutil.move(database, kept)
     return {
         "release_id": manifest.get("release_id"),
         "quantities": manifest["quantities"],
         "status": "verified",
+        "marked_values_recomputed": recomputed,
+        "skipped_checks": skipped,
     }
 
 
@@ -263,6 +344,21 @@ def validate_documented_totals(root):
     headline = f"**{manifest['quantities']:,} quantities and {manifest['groups']:,} source groups**"
     if headline not in guide:
         raise ValueError("Catalog guide totals differ from the manifest")
+    sources = manifest.get("quantities_by_source", {})
+    logs = sum(count for name, count in sources.items() if name.startswith("tycho-oo-"))
+    modern = sum(
+        count for name, count in sources.items() if name.split("-")[0] in MODERN_SOURCE_PREFIXES
+    )
+    books = manifest["quantities"] - logs - modern
+    directory = (root / "docs/data-sources.md").read_text(encoding="utf-8")
+    for statement in (
+        f"**{manifest['quantities']:,} quantities**",
+        f"**{logs:,}** |",
+        f"contribute {books:,} quantities",
+        f"contain **{modern:,} quantities**",
+    ):
+        if statement not in directory:
+            raise ValueError("Source directory totals differ from the manifest: " + statement)
 
     pafko = json.loads((catalog / "pafko-validation.json").read_text(encoding="utf-8"))
     count = pafko["workbook_rows"]
@@ -292,6 +388,9 @@ def validate_release_references(root):
     root = Path(root)
     manifest = json.loads((root / "resources/catalog/manifest.json").read_text(encoding="utf-8"))
     release_id = manifest["release_id"]
+    missing = [field for field in PUBLISHED_MANIFEST_FIELDS if field not in manifest]
+    if missing:
+        raise ValueError("Published manifest omits checked fields: " + ", ".join(missing))
     project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
     if release_id != "tychonides-" + project["project"]["version"]:
         raise ValueError("Release version differs between manifest and pyproject.toml")
@@ -320,18 +419,33 @@ def main():
     parser.add_argument(
         "--assets-dir", type=Path, help="Downloaded files, if separate from the manifest directory"
     )
+    parser.add_argument(
+        "--keep-database",
+        type=Path,
+        help="Keep the verified, decompressed database at this path",
+    )
     args = parser.parse_args()
+    assets = (args.assets_dir or args.directory).resolve()
+    if args.keep_database and args.keep_database.exists():
+        parser.error("--keep-database path already exists: " + str(args.keep_database))
     try:
-        result = validate_release(args.directory, args.assets_dir)
-        if args.docs_root:
-            validate_documentation(args.docs_root)
-            manifest = json.loads((args.directory / "manifest.json").read_text(encoding="utf-8"))
-            if manifest.get("schema_version", 3) >= 4:
-                from .schema_docs import open_database, validate_schema_docs
+        with tempfile.TemporaryDirectory(
+            prefix=".tychonides-verify-", dir=scratch_directory(assets)
+        ) as hold:
+            # One decompression serves the release checks, the schema check, and the caller.
+            unpacked = args.keep_database or Path(hold) / "tychonides.sqlite"
+            result = validate_release(args.directory, args.assets_dir, keep_database=unpacked)
+            if args.docs_root:
+                validate_documentation(args.docs_root)
+                manifest = json.loads(
+                    (args.directory / "manifest.json").read_text(encoding="utf-8")
+                )
+                if manifest.get("schema_version", 3) >= 4:
+                    from .schema_docs import open_database, validate_schema_docs
 
-                name, _ = catalog_files(manifest)
-                with open_database((args.assets_dir or args.directory) / name) as db:
-                    validate_schema_docs(db, args.docs_root)
+                    name, _ = catalog_files(manifest)
+                    with open_database(unpacked if unpacked.is_file() else assets / name) as db:
+                        validate_schema_docs(db, args.docs_root)
     except (ValueError, OSError, sqlite3.DatabaseError) as error:
         parser.error(str(error))
     print(json.dumps(result, sort_keys=True))

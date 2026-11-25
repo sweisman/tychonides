@@ -3,7 +3,7 @@ import re
 import unicodedata
 from collections import defaultdict
 from fractions import Fraction
-from functools import lru_cache
+from functools import lru_cache, wraps
 
 
 def digest(path):
@@ -46,10 +46,27 @@ def _fraction_piece(text):
 
 @lru_cache(maxsize=8192)
 def number(text):
+    """An exact value from a whole number, a fraction, or a whole number and a fraction."""
     parts = text.strip().split()
+    if sum("/" not in part for part in parts) > 1:
+        raise ValueError("Several whole numbers are not one value: " + text)
     return sum((Fraction(p) for p in parts), Fraction())
 
 
+def unknown_for_zero_denominator(parser):
+    """Report notation with a zero denominator as unknown."""
+
+    @wraps(parser)
+    def checked(text):
+        try:
+            return parser(text)
+        except ZeroDivisionError:
+            return None
+
+    return checked
+
+
+@unknown_for_zero_denominator
 def angle(text):
     """Unsigned arcseconds, exact; unknown/unsupported notation stays unknown."""
     if "?" in text:
@@ -70,6 +87,7 @@ def angle(text):
     return d * 3600 + minute * 60 + sec
 
 
+@unknown_for_zero_denominator
 def time_key(text):
     text = fraction_text(text)
     m = re.search(
@@ -81,9 +99,13 @@ def time_key(text):
         return None
     if re.search(r"[0-9/°′″]", text[: m.start()] + text[m.end() :]):
         return None
-    return str(number(m[1]) * 3600 + number(m[2] or "0") * 60 + number(m[3] or "0"))
+    minute, sec = number(m[2] or "0"), number(m[3] or "0")
+    if minute >= 60 or sec >= 60:
+        return None
+    return str(number(m[1]) * 3600 + minute * 60 + sec)
 
 
+@unknown_for_zero_denominator
 def recorded_clock(text):
     """Literal wall-clock reading; AM/PM text is retained by the caller, not converted."""
     if len(re.findall(r"\bH\.", text, re.I)) != 1:
@@ -113,6 +135,7 @@ def recorded_clock(text):
     return str(hh * 3600 + mm * 60 + ss)
 
 
+@unknown_for_zero_denominator
 def quote_angle(text):
     """Best-effort unsigned declination from Pafko's quotation, never its numeric cells."""
     if "?" in text:

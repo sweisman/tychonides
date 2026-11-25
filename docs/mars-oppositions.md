@@ -104,7 +104,7 @@ for the same date and with DE441 at that reduction’s time.
 | 1585 Jan 30 | −205′ (10) | +112′ (8) | +57′ (2) |
 | 1587 Mar 6 | | | +124′ (1) |
 | 1589 Apr 14 | −57′ (9) | +96′ (9) | |
-| 1591 Jun 8 | +231′ (12) | +48′ (12) | −14′ (1) |
+| 1591 Jun 8 | +231′ (12) | −8′ (11) | −14′ (1) |
 | 1593 Aug 25 | +284′ (16) | −253′ (16) | |
 | 1595 Oct 31 | +8′ (5) | −115′ (4) | −97′ (1) |
 | 1597 Dec 13 | | | +83′ (1) |
@@ -126,8 +126,10 @@ also gives the differences from the log and the medians.
 Limits: the log does not state the hour of a prediction. Predictions printed
 without a zodiac sign are compared within the sign. Four predictions in 1591
 have no reduction on their date and are not compared. One Copernican entry in
-1591 lies 11° from the log and is kept. It raises that mean to +48′, while the
-median Copernican difference in 1591 is 11′.
+1591 is printed as 4 sexagenae 7° 42′, or 247° 42′, with no zodiac sign. It is
+not a place within a sign, so it is left out. An earlier version of this page
+compared it within the sign, 11° from the log, which put the Copernican mean
+for 1591 at +48′.
 
 ## The 1600 opposition is set aside
 
@@ -166,6 +168,7 @@ made after seeing residuals, so they are listed here.
 | Reductions without a printed zodiac sign | 21 | A sign is never supplied from neighboring entries. |
 | Reductions without one complete date | 15 | The date claim is missing, partial, or multiple. |
 | Predictions without a model name | 8 | The table cannot be identified. |
+| Prediction of 30° or more without a zodiac sign | 1 | It cannot be a place within a sign. |
 | Printed hours labeled before noon or after midnight | | The catalog leaves their day origin open. Those rows are kept and evaluated at local noon. |
 
 Sixty of the 149 selected rows have no usable hour. The
