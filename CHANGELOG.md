@@ -1,5 +1,14 @@
 # Catalog releases
 
+## 1.1.0
+
+The catalog adds 12,560 quantities from the Jupiter selection and 23,893
+from the Moon selection across all four volumes of Tycho’s observing logs.
+The selections include eclipses, occultations, observing clocks, calibration
+readings, and historical reductions. Shared occurrences retain their existing
+records. The release contains **613,473 quantities and 101,336 source groups**.
+[Coverage by volume](docs/data-sources.md#jupiter-and-moon-coverage)
+
 ## 1.0.1
 
 This revision qualifies **803** all-zero JPL fields as missing placeholders and

@@ -50,7 +50,7 @@ parallax corrections remain dependencies of reduced coordinate products.
 | Source | Material | Availability |
 | --- | --- | --- |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mars observations, clocks, calibrations, historical calculations and supporting records across four volumes | [Available: 17,043 quantities](../resources/catalog/README.md) |
-| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Jupiter and Moon observations and reductions, with directly related solar and stellar calibration | [Verified working acquisition](#jupiter-and-moon-coverage) |
+| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Jupiter and Moon observations and reductions, with directly related solar and stellar calibration | [Available: 36,453 quantities](#jupiter-and-moon-coverage) |
 | [Wayne Pafko, Mars transcription](https://www.pafko.com/tycho/) | Independent transcription used to reconcile entries in Tycho’s books | 923 linked validation controls; not an additional observing program |
 | Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,910 quantities](historical-books-ingestion.md) |
 | Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,349 quantities](historical-books-ingestion.md) |
@@ -69,7 +69,7 @@ and distinguishes new observations from repeated accounts of earlier evidence.
 
 ### Jupiter and Moon coverage
 
-The working acquisition extends the four-volume observing logs from Mars to
+The catalog extends coverage of the four-volume observing logs from Mars to
 Jupiter and the Moon. The Moon selection includes dedicated observing sections,
 eclipses, occultations, and comparisons recorded elsewhere in the logs. Both
 selections include directly related solar and stellar readings, clock settings,
@@ -83,7 +83,7 @@ refraction, parallax, and historical reductions. [Editions and printed witnesses
 | XIII | 3,689 | 2,658 |
 | **Total** | **12,560** | **23,893** |
 
-The working SQLite and CSV exports agree on 36,453 quantities across 9,710
+The Jupiter and Moon selections contribute 36,453 quantities across 9,710
 source groups. Reconciliation by source location identified 1,578 shared
 occurrences whose existing records are reused. The totals include calibration
 data and calculations alongside observations. For 16,071 quantities, the
@@ -92,10 +92,8 @@ interpretation still unresolved. Analysis eligibility requires separate
 review of the measurement role, time convention, reference objects, and
 applied corrections. [Catalog terminology](catalog-terms.md)
 
-The combined working catalog includes 613,473 quantities across all collections,
-including 53,496 from Tycho’s four observing volumes. The
-[public download](../resources/catalog/README.md) reports the coverage of the
-published release.
+The complete catalog includes 613,473 quantities across all collections,
+including 53,496 from Tycho’s four observing volumes. [Download the catalog](../resources/catalog/README.md#download)
 
 ## Modern observing programs
 

@@ -1,8 +1,8 @@
 # Tychonides catalog
 
-**577,020 quantities and 91,626 source groups**, combining the Mars selection from
-Tycho Brahe’s four observational volumes, seven further historical books,
-JJMO experiments and JPL, USNO, Carlsberg and Tokyo optical observations.
+**613,473 quantities and 101,336 source groups**, combining the Mars, Jupiter,
+and Moon selections from Tycho Brahe’s four observational volumes, seven further
+historical books, JJMO experiments, and JPL, USNO, Carlsberg, and Tokyo optical observations.
 The catalog also includes source references, historical calculations and
 metadata for 1,963 image versions from Las Cumbres Observatory.
 Some quantities have no group, and some groups contain no quantity.
@@ -14,14 +14,14 @@ future acquisitions.
 
 ## Download
 
-Release **tychonides-1.0.1** provides the verified catalog as GitHub Release
+Release **tychonides-1.1.0** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.1/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.1.0/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.0.1/tychonides.csv)** — one row per quantity, with exact values, decimal
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.1.0/tychonides.csv)** — one row per quantity, with exact values, decimal
   conveniences and scientific qualifications.
 
 The repository keeps the [manifest](manifest.json) with download and uncompressed database
@@ -39,8 +39,10 @@ For a guide to the coverage pages, field definitions and processing methods,
 see the [documentation index](../../docs/README.md).
 
 The [data sources directory](../../docs/data-sources.md) lists the books and
-observing programs. The original 17,043 historical quantities retain their
-identities and earlier interpretations. The [seven-book extension](../../docs/historical-books-ingestion.md)
+observing programs. Tycho’s four observing volumes contribute 53,496 quantities.
+The [Jupiter and Moon selections](../../docs/data-sources.md#jupiter-and-moon-coverage)
+add 36,453 quantities to the original Mars selection and retain shared records under
+their existing identities. The [seven-book extension](../../docs/historical-books-ingestion.md)
 adds 303,175 quantities across the selected editions, with 4,078 selected regions
 given review decisions. The 256,802 modern quantities preserve source
 notation, timing conventions, frames, limb information and correction histories.
@@ -99,7 +101,7 @@ explain original and derived columns, zodiac origins and clocks.
 
 For a subsequent convenience query, `COALESCE` can select a derived value when
 present, but always select its corresponding unit and retain the method and
-source-specific interpretation. Schema 5 CSV contains `normalized_json`, the
+source-specific interpretation. The CSV contains `normalized_json`, the
 complete selected normalization; SQLite retains the full relationship structure.
 See [verification](../../docs/data-workflow.md#what-verification-checks),
 [terminology](../../docs/catalog-terms.md) and [intended source uses](../../docs/data-sources.md#intended-uses).
