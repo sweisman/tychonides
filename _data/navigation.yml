@@ -1,0 +1,15 @@
+# Site navigation, in display order. Each url is the published address of a
+# page in this repository: docs/status.md is served at /docs/status.html, and a
+# README.md is served as its directory.
+- title: Tychonides
+  url: /
+- title: Status
+  url: /docs/status.html
+- title: Studies
+  url: /docs/studies.html
+- title: Catalog
+  url: /resources/catalog/
+- title: Sources
+  url: /docs/data-sources.html
+- title: Docs
+  url: /docs/

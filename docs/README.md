@@ -1,8 +1,17 @@
 # Documentation
 
-Tychonides provides a downloadable research catalog. Historical prediction engines,
-correction experiments, parallax and aberration studies, and the interactive
-explorer are planned. Start with the route that matches your purpose.
+Tychonides provides a downloadable research catalog and its first studies: a
+model comparison for the 1595 Mars retrograde passage and comparisons of
+historical and modern planetary parallax and refraction corrections. Historical
+prediction engines, parallax feasibility tests, the aberration study, and the
+interactive explorer are planned. Start with the route that matches your purpose.
+
+## Where the Project Stands
+
+| Page | What it answers |
+| --- | --- |
+| [Status](status.md) | What are the objectives, what has been done to date, and what comes next? |
+| [Studies](studies.md) | Which analyses are finished, what did they find, and how can I rerun them? |
 
 ## Use the Data
 
@@ -34,8 +43,11 @@ the extraction pipeline.
 
 | Page | Purpose |
 | --- | --- |
-| [Research program](research-plan.md) | Questions, milestones, model-comparison rules and visualization requirements. |
+| [Research program](research-plan.md) | Questions, milestones, and model-comparison rules. |
 | [Mars reverses direction in 1595](mars-apparent-motion.md) | Four orbital geometries, Tycho’s Mars reductions, and reproducible figures and residuals. |
+| [Mars, Jupiter, and Saturn corrections](planetary-parallax-comparisons.md) | Recorded parallax and refraction corrections beside modern distances and refraction. |
+| [Mercury and Venus parallax](mercury-venus-parallax.md) | Historical reductions and the 1590 Venus experiment under historical and modern assumptions. |
+| [Visualization plan](visualization-plan.md) | Design references, views, and acceptance requirements for the interactive explorer. |
 | [Historical evidence for modern analysis](historical-findings.md) | Located passages, historical claims and questions for validation. |
 | [Historical and modern corrections](correction-comparisons.md) | Correction scenarios, shared errors, uncertainty and sensitivity procedures. |
 

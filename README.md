@@ -37,7 +37,9 @@ interpretation limits.
 The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
 passage through four models. The [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
-results. The [research milestones](docs/research-plan.md#next-research-milestones)
+results. The [studies page](docs/studies.md) lists each finished analysis with
+its inputs and how to rerun it. The [status page](docs/status.md) shows what is
+done and what comes next, and the [research milestones](docs/research-plan.md#next-research-milestones)
 cover predictive tests, parallax feasibility, and the interactive explorer.
 
 Historical readings come from the published editions. Their numerical accuracy
@@ -128,6 +130,7 @@ Release assets; cloning the repository alone does not download them.
 
 | Your goal | Reading route |
 | --- | --- |
+| See what is done and what is next | [Status](docs/status.md) → [studies](docs/studies.md) |
 | Understand the project | [Research program](docs/research-plan.md) → [sources and coverage](docs/data-sources.md) |
 | Use the data | [Catalog guide](resources/catalog/README.md) → [worked values](docs/catalog-data-dictionary.md#worked-numerical-examples) → [source uses](docs/data-sources.md#intended-uses) |
 | Verify or contribute | [Workflow](docs/data-workflow.md) → [ingestion strategy](docs/ingestion-strategy.md) → [public worked example](docs/worked-example.md) → [tests](https://github.com/sweisman/tychonides/tree/main/tests) |
