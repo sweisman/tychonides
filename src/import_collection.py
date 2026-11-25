@@ -27,41 +27,74 @@ def _identifier(name):
     return '"' + name.replace('"', '""') + '"'
 
 
+def _reconciled_locus_claim(current, new):
+    evidence_rank = {
+        ("page_unestablished", None): 0,
+        ("provisional_source_page", "automatic_page_index"): 1,
+        ("mapped_source_page", "reviewed_quantity_citation"): 2,
+    }
+    claims = []
+    identities = []
+    for row in (current, new):
+        identity = {
+            k: v
+            for k, v in row.items()
+            if k not in {"quantity_ids", "context_ids", "printed_page", "status", "page_basis"}
+        }
+        page = row.get("printed_page")
+        rank = evidence_rank.get((row["status"], row.get("page_basis")))
+        if rank is None or (rank == 0) != (page is None):
+            return None
+        if page is not None and (type(page) is not int or page < 1):
+            return None
+        identities.append(identity)
+        claims.append((rank, page, row["status"], row.get("page_basis")))
+    known_pages = {page for _, page, _, _ in claims if page is not None}
+    if identities[0] != identities[1] or len(known_pages) > 1:
+        return None
+    _, page, status, basis = max(claims, key=lambda claim: claim[0])
+    return dict(identities[0], printed_page=page, status=status, page_basis=basis)
+
+
 def _merge_locus_links(db):
     """Combine backlinks and retain the strongest evidence for an agreed page."""
     pairs = db.execute(
-        "SELECT m.id, m.data_json, s.data_json, m.status, s.status "
+        "SELECT m.id, m.data_json, s.data_json, m.status, s.status, m.printed_page, s.printed_page "
         "FROM main.source_loci m JOIN incoming.source_loci s USING (id) "
-        "WHERE m.data_json IS NOT s.data_json OR m.status IS NOT s.status"
+        "WHERE m.data_json IS NOT s.data_json OR m.status IS NOT s.status "
+        "OR m.printed_page IS NOT s.printed_page"
     ).fetchall()
-    provisional = ("provisional_source_page", "automatic_page_index")
-    reviewed = ("mapped_source_page", "reviewed_quantity_citation")
-    for identifier, retained, incoming, retained_status, incoming_status in pairs:
+    for (
+        identifier,
+        retained,
+        incoming,
+        retained_status,
+        incoming_status,
+        old_page,
+        new_page,
+    ) in pairs:
         current, new = json.loads(retained), json.loads(incoming)
-        if (current["status"], new["status"]) != (retained_status, incoming_status):
+        if (current["status"], new["status"]) != (retained_status, incoming_status) or (
+            current["printed_page"],
+            new["printed_page"],
+        ) != (old_page, new_page):
             raise ValueError("Inconsistent source locus status: " + identifier)
-        quantities = set(current.pop("quantity_ids", [])) | set(new.pop("quantity_ids", []))
+        quantities = set(current.get("quantity_ids", [])) | set(new.get("quantity_ids", []))
         contexts = {
             (r["context_id"], r["scope_id"])
             for row in (current, new)
-            for r in row.pop("context_ids", [])
+            for r in row.get("context_ids", [])
         }
-        if current != new:
-            evidence = {(row.pop("status"), row.pop("page_basis", None)) for row in (current, new)}
-            if (
-                current != new
-                or evidence != {provisional, reviewed}
-                or not current.get("printed_page")
-            ):
-                raise ValueError("Conflicting source locus evidence: " + identifier)
-            current["status"], current["page_basis"] = reviewed
+        current = _reconciled_locus_claim(current, new)
+        if current is None:
+            raise ValueError("Conflicting source locus evidence: " + identifier)
         current["quantity_ids"] = sorted(quantities)
         current["context_ids"] = [
             dict(context_id=context, scope_id=scope) for context, scope in sorted(contexts)
         ]
         db.execute(
-            "UPDATE main.source_loci SET data_json=?, status=? WHERE id=?",
-            (encoded(current), current["status"], identifier),
+            "UPDATE main.source_loci SET data_json=?, status=?, printed_page=? WHERE id=?",
+            (encoded(current), current["status"], current["printed_page"], identifier),
         )
 
 
@@ -101,7 +134,7 @@ def _merge_catalogue_rows(db):
         same = " AND ".join(
             f"m.{_identifier(c)} IS s.{_identifier(c)}"
             for c in columns[name]
-            if name != "source_loci" or c not in ("data_json", "status")
+            if name != "source_loci" or c not in ("data_json", "status", "printed_page")
         )
         if db.execute(
             f"SELECT 1 FROM incoming.{quoted} s WHERE NOT EXISTS "
@@ -149,8 +182,26 @@ def _apply_working_date_reviews(db, reviews):
             raise ValueError("Reviewed date does not match the frozen baseline: " + previous["id"])
 
 
+def _apply_working_locus_reviews(db, reviews):
+    for previous, reviewed in reviews:
+        if (
+            previous.get("status") != "provisional_source_page"
+            or previous.keys() != reviewed.keys()
+            or {k for k in previous if previous[k] != reviewed[k]} != {"printed_page"}
+            or type(reviewed["printed_page"]) is not int
+            or reviewed["printed_page"] < 1
+        ):
+            raise ValueError("Working locus review must replace only a provisional printed page")
+        updated = db.execute(
+            "UPDATE source_loci SET data_json=?, printed_page=? WHERE id=? AND data_json=?",
+            (encoded(reviewed), reviewed["printed_page"], previous["id"], encoded(previous)),
+        ).rowcount
+        if updated != 1:
+            raise ValueError("Reviewed source locus does not match the frozen baseline")
+
+
 def merge_catalogue_set(
-    inputs, output, *, repeat=False, reviewed_dates=(), verified_manifests=None
+    inputs, output, *, repeat=False, reviewed_dates=(), reviewed_loci=(), verified_manifests=None
 ):
     """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
@@ -167,6 +218,7 @@ def merge_catalogue_set(
         raise ValueError("Merge output overlaps its read-only inputs")
     snapshots, fingerprints = [], {}
     reviewed_dates = tuple(reviewed_dates)
+    reviewed_loci = tuple(reviewed_loci)
     verified_manifests = verified_manifests or {}
     for directory in inputs:
         manifest_path = directory / "manifest.json"
@@ -197,6 +249,7 @@ def merge_catalogue_set(
             metadata = dict(db.execute("SELECT key,value_json FROM main.metadata"))
             with db:
                 _apply_working_date_reviews(db, reviewed_dates)
+                _apply_working_locus_reviews(db, reviewed_loci)
             for database in snapshots[1:]:
                 db.execute("ATTACH DATABASE ? AS incoming", (database.as_uri() + "?mode=ro",))
                 with db:

@@ -43,7 +43,7 @@ These are parallel workstreams, not a fixed import order. All follow the
 
 | Workstream | Material | Completion criterion for each release |
 | --- | --- | --- |
-| Remaining Tycho logs | Other planets, additional stellar observations, comets, and supporting records across all four volumes | Extend the [existing log coverage](data-sources.md#ingested-historical-sources) by defining each selection, recording unresolved cases, and reusing shared source occurrences. The catalog includes the [Sun, Saturn, and Venus selections](data-sources.md#sun-saturn-and-venus-coverage). |
+| Tycho’s four observing logs | Planets, the Sun and Moon, fixed stars, comets, the new star, and supporting observations and calculations | [Full log coverage](data-sources.md#full-log-coverage) documents source evidence and unresolved cases. Establish eligibility for each analysis. |
 | Other works by Tycho | Relevant observations, calibrations, correction tables and model inputs, including the Progymnasmata | Identify work and edition, classify evidential roles and trace repeated accounts to their earlier records. |
 | Other historical astronomers | Hevelius and other relevant authors in Ars Astronomica | Identify the available public work and edition before selecting passages; establish observer and publication lineage, units and eligibility. |
 | Additional modern collections | Suitable datasets as they are found | Establish platform, measurement method, spectral band, timing, reduction history, provenance and redistribution terms before import. |
@@ -53,11 +53,10 @@ acquisitions with their prerequisites. [Historical evidence for modern analysis]
 collects located passages, historical claims and interpretation questions. A source is
 not counted as imported merely because its book or archive has been identified.
 
-The [seven-book acquisition](historical-books-ingestion.md) is complete: 303,175
-additional quantities cover all bodies within the selected editions. The remaining
-non-Mars material in Tycho's observation logs, other works, Hevelius and newly found
-modern datasets remain future acquisitions. Explicitly unresolved interpretations
-are research inputs, not missing source regions to ingest again.
+The [seven-book acquisition](historical-books-ingestion.md) adds 303,175
+quantities across the selected editions. The [planned acquisitions](data-sources.md#planned-ingestions)
+include further works by Tycho, Hevelius and others, and additional modern
+datasets. Unresolved interpretations remain research inputs.
 
 ## Model-comparison protocol
 

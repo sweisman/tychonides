@@ -5,12 +5,9 @@ and validation. A reported correction, distance or parallax claim is evidence of
 historical practice; it is not an established modern result.
 
 The [research plan](research-plan.md) defines the studies and validation methods.
-The [source directory](data-sources.md) and [historical coverage](historical-books-ingestion.md)
-define what has been ingested. The seven supplementary editions are already
-represented; the remaining non-Mars log material and additional publications
-belong to the [planned ingestion queue](data-sources.md#planned-ingestions). The passages below
-identify evidence and interpretation questions, not instructions to repeat completed
-acquisition.
+The [source directory](data-sources.md) documents the coverage of Tycho’s four
+logs and the seven supplementary editions. It also lists future acquisitions.
+The passages below identify evidence and interpretation questions for analysis.
 
 | Topic | Starting points |
 | --- | --- |

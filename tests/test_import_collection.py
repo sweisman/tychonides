@@ -13,6 +13,20 @@ from src.catalog_release import write_catalogue
 
 
 class WorkingCatalogueMergeTests(unittest.TestCase):
+    def test_missing_locus_page_can_be_completed_but_conflicting_pages_are_rejected(self):
+        from src.import_collection import _reconciled_locus_claim
+
+        unknown = dict(id="example-locus", printed_page=None, status="page_unestablished")
+        indexed = dict(
+            unknown,
+            printed_page=7,
+            status="provisional_source_page",
+            page_basis="automatic_page_index",
+        )
+        self.assertEqual(_reconciled_locus_claim(unknown, indexed), indexed)
+        self.assertEqual(_reconciled_locus_claim(indexed, unknown), indexed)
+        self.assertIsNone(_reconciled_locus_claim(indexed, dict(indexed, printed_page=8)))
+
     def test_merge_set_unions_backlinks_at_a_shared_source_locus(self):
         from test_catalog_release import CatalogueReleaseTests
 
@@ -26,9 +40,9 @@ class WorkingCatalogueMergeTests(unittest.TestCase):
                 locus = dict(
                     id="example-locus",
                     source_id="tycho-oo-11",
-                    printed_page=1,
-                    status="mapped_source_page" if i else "provisional_source_page",
-                    page_basis="reviewed_quantity_citation" if i else "automatic_page_index",
+                    printed_page=1 if i else None,
+                    status="mapped_source_page" if i else "page_unestablished",
+                    page_basis="reviewed_quantity_citation" if i else None,
                     quantity_ids=[source[i]["id"]],
                     context_ids=[],
                 )
@@ -53,7 +67,8 @@ class WorkingCatalogueMergeTests(unittest.TestCase):
                 payload = json.loads(db.execute("SELECT data_json FROM source_loci").fetchone()[0])
                 self.assertEqual(payload["page_basis"], "reviewed_quantity_citation")
                 self.assertEqual(
-                    db.execute("SELECT status FROM source_loci").fetchone()[0], "mapped_source_page"
+                    db.execute("SELECT status, printed_page FROM source_loci").fetchone(),
+                    ("mapped_source_page", 1),
                 )
                 expected = sorted(row["id"] for row in source)
                 self.assertEqual(payload["quantity_ids"], expected)

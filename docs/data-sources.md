@@ -52,6 +52,7 @@ parallax corrections remain dependencies of reduced coordinate products.
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mars observations, clocks, calibrations, historical calculations and supporting records across four volumes | [Available: 17,043 quantities](../resources/catalog/README.md) |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Jupiter and Moon observations and reductions, with directly related solar and stellar calibration | [Available: 36,453 quantities](#jupiter-and-moon-coverage) |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Sun, Saturn, and Venus observations, reductions, and supporting records | [Available: 46,300 additional quantities](#sun-saturn-and-venus-coverage) |
+| Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mercury, seven comet accounts, fixed-star observations and catalogs, follow-up readings of the new star of 1572, and supporting records | [Available: 50,622 additional quantities](#full-log-coverage) |
 | [Wayne Pafko, Mars transcription](https://www.pafko.com/tycho/) | Independent transcription used to reconcile entries in Tycho’s books | 923 linked validation controls; not an additional observing program |
 | Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,910 quantities](historical-books-ingestion.md) |
 | Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,349 quantities](historical-books-ingestion.md) |
@@ -115,10 +116,39 @@ and reference readings that accompany them. [Editions and printed witnesses](sou
 The additions span 12,239 source groups and include 595 separate context entries.
 The quantity totals cover observations, calibration values, and calculations.
 Verified source matches reuse existing readings. Unresolved expressions retain
-their original notation and citations. The released catalog contains
-659,773 quantities across 35 sources, including 99,796 from Tycho’s four observing
-volumes. Year assignments for shared date claims follow the printed section
-headings. [Download the catalog](../resources/catalog/README.md#download)
+their original notation and citations. Through the Sun, Saturn, and Venus
+selections, Tycho’s four observing volumes contribute 99,796 quantities. Year
+assignments for shared date claims follow the printed section headings.
+
+### Full Log Coverage
+
+The expanded coverage draws on the final editions of all four volumes. It
+includes Mercury, the comet accounts for 1577–1578, 1580, 1582, 1585, 1590,
+1593, and 1596, fixed-star observing sections and catalogs, and the 1573
+follow-up readings of the new star of 1572. A sweep across the complete log
+bodies also captured comparison readings, clock and instrument entries,
+correction and reduction material, and separate notes about observing
+circumstances. [Editions and printed witnesses](sources.md)
+
+| Opera Omnia volume | Additional quantities | Quantities in the expanded catalog |
+| --- | ---: | ---: |
+| X | 11,737 | 31,752 |
+| XI | 14,807 | 40,130 |
+| XII | 12,417 | 49,829 |
+| XIII | 11,661 | 28,707 |
+| **Total** | **50,622** | **150,418** |
+
+The additions span 2,397 source groups and include 1,698 separate observing
+context records. The catalog reuses existing records for matched source
+occurrences. It preserves 46,423 of the added quantities as cited literal
+expressions with unresolved numerical interpretation. The full-volume sweep
+also identified 45 candidate spans with unresolved overlaps and 32 candidates
+with unestablished printed pages. These candidates remain outside the addition
+totals. Dates and clock readings retain their historical interpretation limits.
+[Catalog terminology](catalog-terms.md)
+
+The full log coverage is available in
+[tychonides-1.3.0](../resources/catalog/README.md#download).
 
 ## Modern observing programs
 
@@ -176,7 +206,6 @@ findings and analysis questions are described in the [evidence guide](historical
 
 | Planned acquisition | Material | Prerequisite |
 | --- | --- | --- |
-| Further records in Tycho’s *Thesaurus Observationum*, *Opera Omnia* X–XIII | Other planets, stellar observations, comets, and supporting calibrations | Define the scope for each object and reuse shared source occurrences. [Located passages](historical-findings.md) provide starting points. |
 | Further works by Tycho, including cited material in *Opera Omnia* V and VIII | Mars commentary, calculations, correspondence and supplementary observations | Identify editions and cited passages; establish relationships to the logs. |
 | Hevelius and other Ars Astronomica authors | Historical observations, reductions and supporting tables | Select the works, editions and numerical sections. |
 | Origanus, daily ephemeris volumes beyond the ingested *Introductio* | Dated predictions and supporting tables | Identify the volumes and years actually available; keep predictions distinct from observations. |

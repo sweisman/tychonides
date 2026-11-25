@@ -1,28 +1,27 @@
 # Tychonides catalog
 
-**659,773 quantities and 113,575 source groups**, combining the Mars, Jupiter,
-Moon, Sun, Saturn, and Venus selections from Tycho Brahe’s four observational
-volumes, seven further historical books, JJMO experiments, and JPL, USNO,
-Carlsberg, and Tokyo optical observations.
+**710,395 quantities and 115,972 source groups** from Tycho Brahe’s four
+observing volumes, seven further historical books, JJMO experiments, and JPL,
+USNO, Carlsberg, and Tokyo optical observations.
 The catalog also includes source references, historical calculations and
 metadata for 1,963 image versions from Las Cumbres Observatory.
 Some quantities have no group, and some groups contain no quantity.
 
-Mars is the first research target. The seven supplementary books already extend
-the catalog to other celestial bodies, corrections and historical theories.
-Further bodies in Tycho's observation logs and additional collections remain
-future acquisitions.
+Mars is the first research target. Tycho’s logs also preserve observations of
+the Sun, Moon, other planets, comets, fixed stars, and the new star of 1572,
+along with the calculations and instrument records that give them context.
+[Full log coverage](../../docs/data-sources.md#full-log-coverage)
 
 ## Download
 
-Release **tychonides-1.2.0** provides the verified catalog as GitHub Release
+Release **tychonides-1.3.0** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.2.0/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.2.0/tychonides.csv)** — one row per quantity, with exact values, decimal
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.0/tychonides.csv)** — one row per quantity, with exact values, decimal
   conveniences and scientific qualifications.
 
 The repository keeps the [manifest](manifest.json) with download and uncompressed database
@@ -40,12 +39,13 @@ For a guide to the coverage pages, field definitions and processing methods,
 see the [documentation index](../../docs/README.md).
 
 The [data sources directory](../../docs/data-sources.md) lists the books and
-observing programs. Tycho’s four observing volumes contribute 99,796 quantities.
+observing programs. Tycho’s four observing volumes contribute 150,418 quantities.
 The [Jupiter and Moon selections](../../docs/data-sources.md#jupiter-and-moon-coverage)
 add 36,453 quantities to the original Mars selection. The
 [Sun, Saturn, and Venus selections](../../docs/data-sources.md#sun-saturn-and-venus-coverage)
-add 46,300 quantities and reuse previously cataloged readings identified by source
-occurrence. The [seven-book extension](../../docs/historical-books-ingestion.md)
+add 46,300 quantities. The [full-log intake](../../docs/data-sources.md#full-log-coverage)
+adds 50,622 quantities and reuses earlier records for matched source occurrences.
+The [seven-book extension](../../docs/historical-books-ingestion.md)
 adds 303,175 quantities across the selected editions, with 4,078 selected regions
 given review decisions. The 256,802 modern quantities preserve source
 notation, timing conventions, frames, limb information and correction histories.

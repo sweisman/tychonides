@@ -247,7 +247,7 @@ def attach_table_row_context(batch, row, declaration, text, context_index):
         row["zodiac_sign_basis_key"] = key
 
 
-def materialize_review(review, text, spans):
+def materialize_review(review, text, spans, *, source_lines=None):
     """Expand reviewed cell groups without inferring targets or event associations."""
     from .catalog import SOURCE_WORD_NUMBERS, normalize_quantity, source_numeric_text, source_key
     from .coordinate_staging import parse_coordinate
@@ -279,7 +279,7 @@ def materialize_review(review, text, spans):
             )
             for s in selected
         ]
-    lines = text.splitlines()
+    lines = text.splitlines() if source_lines is None else source_lines
     prose_candidates = {}
 
     def prose_for(line):

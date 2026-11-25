@@ -1,5 +1,15 @@
 # Catalog releases
 
+## 1.3.0
+
+The catalog adds **50,622 quantities** from Tycho’s four observing volumes.
+Coverage includes Mercury, all seven comet accounts, fixed stars and stellar
+catalogs, the 1573 follow-up readings of the new star of 1572, and supporting
+clock, instrument, calibration, and reduction evidence. Shared source
+occurrences retain their existing identities. The release contains
+**710,395 quantities and 115,972 source groups**.
+[Full log coverage and interpretation limits](docs/data-sources.md#full-log-coverage)
+
 ## 1.2.0
 
 The catalog adds 19,173 Sun, 11,504 Saturn, and 15,623 Venus quantities from
