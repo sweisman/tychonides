@@ -211,6 +211,10 @@ the fitted result; a useful sensitivity limit is a complete feasibility result.
 
 ## Comparisons and checks
 
+The [planetary parallax comparisons](planetary-parallax-comparisons.md) apply
+historical and modern distance and refraction scenarios to the same source
+quantities, including a separate test of Venus’s motion correction.
+
 *Opera Omnia* XIII p.219 reports that the Benátky sextant and revolving
 quadrant gave altitudes 2′ too high from their initial setup on 28 August,
 and that the affected entries were corrected wherever they could be found.

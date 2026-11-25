@@ -4,9 +4,9 @@ Tychonides investigates celestial motion through Tycho Brahe’s observations an
 astronomical theories used to interpret them. Mars provides a common thread through
 orbital geometry, historical model comparison, observational accuracy and distance.
 
-The catalog provides recorded quantities and source context. Historical prediction
-engines, correction comparisons and astronomical analyses are planned; the
-milestones below define their completion criteria.
+The catalog provides recorded quantities and source context. The milestones below
+guide historical reconstructions, correction comparisons, and tests of what the
+observations can resolve.
 
 ## Research strands
 
@@ -17,7 +17,8 @@ milestones below define their completion criteria.
 | Historical model comparison | Planned | Ptolemaic, Copernican, Tychonic and modern formulations; Ursus and Longomontanus where source evidence permits. |
 | Interactive visualization | Planned | Linked views of planetary geometry, observed directions, predictions and residuals. |
 | Kepler and opposition tables | Planned | The passage from readings through reductions to constructed opposition tables. |
-| Mars parallax | Planned | Diurnal-parallax sensitivity, observing geometry and the separate problem of orbital triangulation. |
+| Mars, Jupiter, and Saturn parallax | Initial calculations | [Historically recorded and modern corrections](planetary-parallax-comparisons.md), with diurnal-parallax sensitivity and orbital triangulation as separate research questions. |
+| Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md), with historical and modern distance and refraction assumptions. |
 | Accuracy and refraction | Planned | Compare Tycho’s and other historical correction values with modern calculations on the same recorded observations; assess instrument, timing and atmospheric effects. |
 | Stellar aberration | Planned | Test whether dated terrestrial stellar observations and their calibration records permit an independent determination of annual aberration, with refraction, instrument and seasonal effects evaluated separately. Mean catalog positions and corrections already applied retain their distinct roles. |
 | Other planets and records | Planned | Planetary, lunar, cometary and stellar observations within the same source-based approach. |
