@@ -35,6 +35,7 @@ the extraction pipeline.
 | Page | Purpose |
 | --- | --- |
 | [Research program](research-plan.md) | Questions, milestones, model-comparison rules and visualization requirements. |
+| [Mars reverses direction in 1595](mars-apparent-motion.md) | Four orbital geometries, Tycho’s Mars reductions, and reproducible figures and residuals. |
 | [Historical evidence for modern analysis](historical-findings.md) | Located passages, historical claims and questions for validation. |
 | [Historical and modern corrections](correction-comparisons.md) | Correction scenarios, shared errors, uncertainty and sensitivity procedures. |
 

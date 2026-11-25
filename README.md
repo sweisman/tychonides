@@ -34,9 +34,11 @@ evidence, compare source accounts and develop analyses. The
 historical and modern collections already available, with coverage and
 interpretation limits.
 
-Historical prediction engines, reproducible observation–prediction comparisons,
-correction experiments, parallax studies and the interactive explorer follow the
-[research milestones](docs/research-plan.md#next-research-milestones).
+The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
+passage through four models. The [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
+show how historical and modern distance and refraction assumptions change the
+results. The [research milestones](docs/research-plan.md#next-research-milestones)
+cover predictive tests, parallax feasibility, and the interactive explorer.
 
 Historical readings come from the published editions. Their numerical accuracy
 has no corpus-wide estimate. The Tycho subset has no accepted absolute observing

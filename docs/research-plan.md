@@ -8,18 +8,20 @@ The catalog provides recorded quantities and source context. The milestones belo
 guide historical reconstructions, correction comparisons, and tests of what the
 observations can resolve.
 
-## Research strands
+<a id="research-strands"></a>
+
+## Research objectives
 
 | Strand | Status | Research purpose |
 | --- | --- | --- |
-| Observation catalog | Mars and modern collections plus seven historical books ingested | Source-linked measurements, observing context, historical calculations and exact numerical representations. |
-| Mars apparent motion and geometry | Planned | Retrograde loops, oppositions, inclination constraints and relative distances. |
-| Historical model comparison | Planned | Ptolemaic, Copernican, Tychonic and modern formulations; Ursus and Longomontanus where source evidence permits. |
+| Observation catalog | Available and expanding | Source-linked measurements and calculations from [Tycho’s four logs](data-sources.md#full-log-coverage), seven supplementary historical books, and modern optical collections. |
+| Mars apparent motion and geometry | First apparition compared | [The 1595 retrograde passage](mars-apparent-motion.md) compares 14 dated reductions with four model geometries, including station dates, retrograde span, and model-relative distances. |
+| Historical model comparison | Initial comparison | The 1595 study includes a geometry comparison at a common opposition longitude and a comparison with the Alphonsine and Copernican predictions printed in the log. Extend to independently reconstructed historical ephemerides, additional apparitions, and Ursus’s formulation where the sources permit. |
 | Interactive visualization | Planned | Linked views of planetary geometry, observed directions, predictions and residuals. |
 | Kepler and opposition tables | Planned | The passage from readings through reductions to constructed opposition tables. |
 | Mars, Jupiter, and Saturn parallax | Initial calculations | [Historically recorded and modern corrections](planetary-parallax-comparisons.md), with diurnal-parallax sensitivity and orbital triangulation as separate research questions. |
 | Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md), with historical and modern distance and refraction assumptions. |
-| Accuracy and refraction | Planned | Compare Tycho’s and other historical correction values with modern calculations on the same recorded observations; assess instrument, timing and atmospheric effects. |
+| Accuracy and refraction | Initial calculations | [Planetary correction comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. Extend to calibrated observing sessions and quantify instrument, timing, and atmospheric effects. |
 | Stellar aberration | Planned | Test whether dated terrestrial stellar observations and their calibration records permit an independent determination of annual aberration, with refraction, instrument and seasonal effects evaluated separately. Mean catalog positions and corrections already applied retain their distinct roles. |
 | Other planets and records | Planned | Planetary, lunar, cometary and stellar observations within the same source-based approach. |
 
@@ -33,9 +35,18 @@ observations can resolve.
 | Parallax feasibility | Recovery experiments at the actual cadence under declared error assumptions | Report zero-signal false positives, recovery bias, uncertainty coverage, detectable range and confounding effects. A useful bound or sensitivity limit completes this milestone; a positive detection is not required. |
 | Scientific visualization | Interactive views of the accepted calculations | A selected point resolves to the same observation, interpretation, prediction and residual as the analysis export. |
 
+The 1595 study provides a reproducible date-level comparison with source-linked
+inputs, figures, and numerical residuals. Measurement-level comparisons require
+justified observing times, instrument and site evidence, and correction states.
 Historical reconstruction and targeted source extraction can proceed alongside
-preparation of the first subset. Catalog expansion need not wait for an orbit fit,
-and the wider program does not depend on detecting Tycho-era parallax.
+that work.
+
+For Mars, the next steps move from repeating the date-level comparison at
+additional oppositions to reproducing published calculations at their stated
+epochs. Predictive comparisons will use documented historical parameters and
+reserve whole apparitions for evaluating refitted models. Parallax feasibility
+and interactive views can build on the validated observation and prediction
+records.
 
 ## Ingestion program
 
@@ -119,8 +130,10 @@ The [correction comparison design](correction-comparisons.md) distinguishes valu
 as recorded, source-applied reductions, reconstructed historical corrections and
 modern alternatives. Compatible combinations will expose how correction choices
 affect the result. Unknown conditions remain explicit assumptions, and already
-reduced values will not receive the same correction twice. This comparison is
-planned; the current catalog preserves its source evidence and prerequisites.
+reduced values will not receive the same correction twice. The
+[planetary examples](planetary-parallax-comparisons.md) show how changing one
+assumption at a time affects a result. The catalog preserves the evidence
+needed for comparisons at the level of individual observing sessions.
 
 ## Related Sources
 
