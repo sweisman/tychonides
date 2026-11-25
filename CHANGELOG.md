@@ -1,5 +1,17 @@
 # Catalog releases
 
+## 1.3.3
+
+A first audit of the seven supplementary books and the modern collections adds
+98 versioned interpretations. Each gives the longitude of an apogee, a
+perigee, or a node its printed subject where the catalog had recorded the
+longitude of the Sun or planet itself. In the JPL series Washington 6b and 6c,
+350 right ascensions and declinations that stand as whole minutes with zero
+seconds now carry `jpl_zero_seconds_placeholder` and no derived coordinate.
+The USNO publication of the same observations confirms 338 of them. No printed
+expression, exact value, or identity changed. The release contains
+**710,420 quantities and 115,972 source groups**. [Audit, corrections, and open items](docs/status.md#audit-of-the-other-works)
+
 ## 1.3.2
 
 An audit of the records from Tycho’s four log volumes against the printed page

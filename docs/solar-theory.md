@@ -152,7 +152,7 @@ of it.
 ## Inputs and reproduction
 
 The [selection script](../examples/solar_select.py) reads
-[Tychonides 1.3.2](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.2)
+[Tychonides 1.3.3](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.3)
 and writes the [printed elements](../examples/solar-theory-inputs.csv) with
 their catalog identities. Tycho’s solar refraction table comes from the
 [refraction study](refraction-tables.md). The

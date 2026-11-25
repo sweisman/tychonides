@@ -5,13 +5,13 @@ comes next. The [research program](research-plan.md) defines the objectives and
 milestones. The [source directory](data-sources.md) defines catalog coverage.
 Finished analyses are collected on the [studies page](studies.md).
 
-Last updated November 25, 2026.
+Last updated November 26, 2026.
 
 ## Objectives
 
 | Objective | Status | Done so far | Next step |
 | --- | --- | --- | --- |
-| Observation catalog | Available, [audit under way](#audit-of-the-tycho-log-records) | [Release 1.3.2](../resources/catalog/README.md#download) holds 710,420 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. The records of the four logs are audited and corrected. | The audit of the other works, then the [planned acquisitions](data-sources.md#planned-ingestions) |
+| Observation catalog | Available, [audited](#audit-of-the-tycho-log-records) | [Release 1.3.3](../resources/catalog/README.md#download) holds 710,420 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. The records of the four logs are audited and corrected. The [other works](#audit-of-the-other-works) have had a first audit. | The open items of both audits, then the [planned acquisitions](data-sources.md#planned-ingestions) |
 | Mars apparent motion and geometry | Nine oppositions compared | [The 1595 retrograde passage](mars-apparent-motion.md) and [the oppositions of 1580 to 1600](mars-oppositions.md) compare Tycho’s reductions with four constructions and the JPL DE441 ephemeris. | The 1600 opposition, once the calendar of its entries is recorded |
 | Historical model comparison | Printed predictions compared | The [printed predictions study](printed-predictions.md) compares every table and ephemeris position the logs print for the five planets with the log and DE441. The opposition study covers Mars near opposition. | The Moon, once the hours of its entries are recorded, then independently reconstructed tables and Ursus’s formulation where the sources permit |
 | Mars, Jupiter, and Saturn parallax | One campaign tested | [Recorded and modern corrections](planetary-parallax-comparisons.md) are compared. [The Mars-to-star distances of 1587](mars-parallax-1587.md) are tested for a parallax. | The campaign of 1582 and 1583, then parallax feasibility |
@@ -24,7 +24,7 @@ Last updated November 25, 2026.
 
 ## State of the catalog rows
 
-Of the 150,443 quantities from Tycho’s four logs in release 1.3.2:
+Of the 150,443 quantities from Tycho’s four logs in release 1.3.3:
 
 | State | Quantities | Share |
 | --- | ---: | ---: |
@@ -46,15 +46,9 @@ four log volumes in release 1.3.1. Each correction cites the printed label or
 date line it rests on and keeps the earlier interpretation beside it. No
 printed expression or exact value changed.
 
-The audit covered the 150,443 quantities from the four logs. It did not cover
-the seven supplementary books (303,175 quantities) or the modern collections
-(256,802 quantities). Those have had only the checks that every release runs
-on the whole catalog. Their audit is the [next step](#next-up). Its first
-tests have found two kinds of fault that release 1.3.2 does not correct. In
-the books, about a hundred longitudes of an apogee or a node are recorded as
-the place of the Sun or planet itself. In two of the JPL Washington series,
-338 coordinates that the observers did not measure to the second stand with
-zero seconds.
+The audit covered the 150,443 quantities from the four logs. The seven
+supplementary books (303,175 quantities) and the modern collections (256,802
+quantities) have had a [first audit of their own](#audit-of-the-other-works).
 
 The records of Tycho’s four log volumes entered the catalog in two ways. The
 Mars records came first, under rules that were revised each time the page
@@ -183,6 +177,100 @@ release 1.3.2. Four of the six earlier studies select the same inputs. The
 printed predictions study had flagged a Venus entry that stood 51° from the
 ephemeris. With the date its heading prints, the entry lies 3′ away.
 
+## Audit of the other works
+
+Release 1.3.3 carries the corrections from a first audit of the seven
+supplementary books and the modern collections in release 1.3.2. It is less
+complete than the audit of the logs, and what it left untested is listed
+below.
+
+**The books.** Four tests were run on the 303,175 quantities.
+
+1. **Named points.** Row labels, column headings, and the words before a
+   value in prose were searched for an apogee, a perigee, an aphelion, or a
+   node where the catalog gives the longitude of the Sun, the Moon, or a
+   planet.
+2. **Ephemeris.** Each dated place of the Sun, the Moon, and the planets was
+   compared with JPL Horizons, in both calendars where the record states
+   none. Of 3,977 values tested, 227 were flagged.
+3. **Dates.** In Snellius’s *Observationes Hassiacae*, each dated value was
+   compared with the nearest day and month printed at or above it. 4,780
+   agree and 123 were flagged.
+4. **Sample.** 100 exact values that no test flagged were drawn at random and
+   read against the edition. 36 of them are coordinates of the Sun, the Moon,
+   or a planet.
+
+The first test found one family of fault. The longitude of an apogee, a
+perigee, or a node was recorded as the longitude of the body. Other records
+in the catalog already name such points, as in “Sun apogee” and “ascending
+node of Mars.” Release 1.3.3 gives 98 values their printed subject in the same
+form:
+
+| Subject in release 1.3.3 | Values | Works |
+| --- | ---: | --- |
+| Sun apogee | 81 | Riccioli’s two works, Snellius, *Progymnasmata* |
+| Sun perigee | 1 | *Astronomia Reformata* |
+| Apogee of Saturn, Jupiter, or Mars | 6 | Longomontanus |
+| Ascending node of Saturn, Jupiter, or Mars | 6 | Longomontanus |
+| Node of Mercury or the Moon | 4 | *Almagestum Novum* |
+
+Each correction cites the heading or the words that name the point and keeps
+the earlier interpretation. The quantity type, the printed expression, and the
+exact value did not change.
+
+The flagged groups of the ephemeris test with the largest differences were
+read. All follow the edition. They are misprints of the original that the
+edition keeps, some with its own correction beside them, steps of worked
+examples, positions written in horoscope figures, and places computed by
+other authors. They are questions about the sources, not faults of the
+catalog. Origanus’s horoscope figures hold 81 of the flagged values, and only
+the four with the largest differences were read. The other flagged values
+that were not read differ from the ephemeris by less than 3°. The flagged
+dates in Snellius that were read belong to long calculations whose date line
+stands far above them.
+
+In the sample, one value of 100 had a wrong type. Longomontanus gives a lunar
+distance in sixtieths of the Earth’s semidiameter, and the catalog records its
+minutes as an angle. No sampled value had a wrong subject or date. Three had a
+doubtful role.
+
+**The modern collections.** A sample of observations of each body in each
+collection was compared with the apparent place from JPL Horizons. The median
+difference is 0.3″ to 1.0″ in all twelve collections tested. The outliers
+were read and led to one fault. In the JPL series Washington 6b and 6c, 350
+right ascensions and declinations stand as whole minutes with zero seconds.
+The USNO publication of the same observation prints 338 of them without
+seconds. The other 12 belong to observations that the USNO tables in the
+catalog do not hold. Among the fields of these two series that do carry
+seconds, the last digits are spread evenly, so a measured declination would
+end in zero seconds about once in 6,000 times. Release 1.3.3 marks the 350
+fields `jpl_zero_seconds_placeholder` and gives them no derived coordinate.
+The printed fields are unchanged.
+
+**Still open.**
+
+- 32 values on 18 lines of *Progymnasmata* and Longomontanus whose passage
+  the edition revised after the catalog was made. The catalog holds the
+  earlier reading.
+- Named points that the test found and did not settle: columns of latitude
+  limits, the lunar apogee, for which the catalog has no subject, and 224
+  table cells that the column test could not place.
+- The Mercury observations on pp. 346 and 347 of *Astronomia Reformata*. The
+  edition dates them 1589. Tycho’s log has the same readings in April 1595.
+- One whole-minute right ascension each in the JPL series Washington 6a and
+  Tokyo, with no USNO record beside it.
+- The two values of the lunar distance found by the sample, and one place of
+  Saturn as seen from the Sun that is recorded as its ecliptic longitude.
+- The roles, as in the logs.
+
+**Not tested.** Dates in the books other than Snellius, whose tables need
+rules of their own. The JJMO records, and 698 USNO rows that the catalog keeps
+without parsed coordinates. Values the catalog leaves unclassified. The checks
+were made against the project’s editions, not against scans of the printed
+pages.
+
+The [study selections](studies.md) were rerun on release 1.3.3. None changed.
+
 ## Milestones
 
 The research program gives each milestone’s
@@ -200,6 +288,7 @@ The research program gives each milestone’s
 
 | Date | Result |
 | --- | --- |
+| November 26, 2026 | Catalog 1.3.3: corrections from a [first audit of the other works](#audit-of-the-other-works). 98 longitudes of an apogee, a perigee, or a node in the books take their printed subject. 350 whole-minute coordinates in two JPL series are marked as placeholders. 710,420 quantities and 115,972 source groups. |
 | November 26, 2026 | Catalog 1.3.2: corrections from the audit of the Tycho log records. 6,430 values take the date the page prints for them, 2,472 give up a date carried from an earlier entry, and 240 are retyped from their labels. 710,420 quantities and 115,972 source groups. |
 | November 25, 2026 | [Audit of the Tycho log records](#audit-of-the-tycho-log-records): label, date, ephemeris, and sample tests on every record of the four logs. The Mars records hold one mistyped reading. The records for the other bodies hold 10,959 date candidates and 1,235 label candidates of one family. |
 | November 25, 2026 | Study: [The parallax of Mars in 1587](mars-parallax-1587.md). Five pairs of sessions give −312″ to 289″. The distances fix neither the 302″ in the log nor the 13″ of DE441. |
@@ -224,10 +313,10 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
 
 ## Next up
 
-1. **Audit of the other works.** Apply the label, date, ephemeris, and sample
-   tests to the seven supplementary books and the modern collections, and
-   compare the records of the books with the current editions. Correct what
-   the tests find in a further release.
+1. **Open items in the other works.** Re-read the 32 values whose passage the
+   edition revised, settle the named points that the
+   [audit](#audit-of-the-other-works) left open, and write date tests for the
+   table layouts of the books other than Snellius.
 2. **Open candidates in the Tycho logs.** Settle the 261 dates and 598 labels
    that the [audit](#audit-of-the-tycho-log-records) left open, and the roles
    of the computed rows in the comparison tables.

@@ -141,7 +141,7 @@ keeps them.
 ## Inputs and reproduction
 
 The [selection script](../examples/mars_parallax_select.py) reads
-[Tychonides 1.3.2](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.2)
+[Tychonides 1.3.3](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.3)
 and writes the [selected distances](../examples/mars-parallax-readings.csv)
 with their clocks, recorded altitudes, and catalog identities. All 48
 distances, clocks, and altitudes were compared with the text of the edition,

@@ -27,7 +27,7 @@ def validate_derived_values(db, schema):
     from .numeric_integrity import (
         JPL_COORDINATE_BOUNDS,
         JPL_COORDINATE_FLAGS,
-        jpl_coordinate_issue,
+        jpl_coordinate_issues,
         validate_conversion,
     )
 
@@ -70,9 +70,9 @@ def validate_derived_values(db, schema):
                     or payload.get("normalized", {}).get("magnitude") is not None
                 ):
                     raise ValueError("JPL coordinate differs from native field: " + identifier)
-                issue = jpl_coordinate_issue(row["source_id"], unit, literal)
+                issues = jpl_coordinate_issues(row["source_id"], unit, literal)
                 flags = JPL_COORDINATE_FLAGS.intersection(json.loads(row["flags_json"]))
-                if flags != ({issue} if issue else set()):
+                if flags != set(issues):
                     raise ValueError("JPL published flags differ from native field: " + identifier)
         if schema >= 5:
             validate_conversion(payload, legacy_jpl=schema == 5)

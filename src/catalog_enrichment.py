@@ -111,8 +111,8 @@ def enrich_catalogue(db, registry):
         identifier, sid, artifact, locator, printed_page, original, scientific, payload = row
         if payload:
             native = json.loads(payload)
-            issue = qualify_retained_conversion(native)
-            if issue:
+            issues = qualify_retained_conversion(native)
+            if issues:
                 (flags,) = db.execute(
                     "SELECT flags_json FROM interpretations WHERE quantity_id=? "
                     "ORDER BY version DESC LIMIT 1",
@@ -122,7 +122,7 @@ def enrich_catalogue(db, registry):
                     "UPDATE interpretations SET flags_json=? WHERE quantity_id=? "
                     "AND version=(SELECT MAX(version) FROM interpretations WHERE quantity_id=?)",
                     (
-                        encoded(list(dict.fromkeys([*json.loads(flags), issue]))),
+                        encoded(list(dict.fromkeys([*json.loads(flags), *issues]))),
                         identifier,
                         identifier,
                     ),
@@ -144,11 +144,11 @@ def enrich_catalogue(db, registry):
                     "INSERT OR IGNORE INTO source_lines VALUES (?,?,?,?)",
                     (sid, artifact, locator, raw),
                 )
-            if raw is not None or issue is not None:
+            if raw is not None or issues:
                 original, scientific = json.loads(original), json.loads(scientific)
                 for data in (original, scientific, native):
                     data.pop("raw_line", None)
-                if issue is not None:
+                if issues:
                     for data in (original, scientific):
                         if "derived_normalization" in native:
                             data["derived_normalization"] = native["derived_normalization"]

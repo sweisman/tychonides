@@ -390,48 +390,65 @@ JPL_COORDINATE_BOUNDS = {
 }
 JPL_INDETERMINATE_SIGN = {"jpl-wash6b", "jpl-wash6c", "jpl-tokyo"}
 JPL_ZERO_PLACEHOLDER_SERIES = {"jpl-herst", "jpl-wash6a", "jpl-wash9"}
-JPL_COORDINATE_FLAGS = {"jpl_zero_placeholder", "jpl_declination_sign_indeterminate"}
+# In these series a coordinate that was not observed stands as whole minutes with zero seconds.
+# The USNO publication of the same observation prints that coordinate without its seconds.
+JPL_ZERO_SECONDS_SERIES = {"jpl-wash6b", "jpl-wash6c"}
+JPL_NO_COORDINATE = {"jpl_zero_placeholder", "jpl_zero_seconds_placeholder"}
+JPL_COORDINATE_FLAGS = JPL_NO_COORDINATE | {"jpl_declination_sign_indeterminate"}
 
 
-def jpl_coordinate_issue(source_id, unit, literal):
+def jpl_coordinate_issues(source_id, unit, literal):
+    """Every qualification a JPL coordinate field carries, as a tuple."""
     if not source_id.startswith("jpl-") or unit not in JPL_COORDINATE_BOUNDS:
-        return None
+        return ()
+    signed = unit.startswith("signed_")
     if source_id in JPL_ZERO_PLACEHOLDER_SERIES and re.fullmatch(
-        r"[+ -]0{8}" if unit.startswith("signed_") else r" *0+", literal
+        r"[+ -]0{8}" if signed else r" *0+", literal
     ):
-        return "jpl_zero_placeholder"
+        return ("jpl_zero_placeholder",)
+    issues = []
     if (
-        unit == "signed_ddmmss_centisecond"
-        and source_id in JPL_INDETERMINATE_SIGN
-        and re.fullmatch(r" 00[0-9]{6}", literal)
+        source_id in JPL_ZERO_SECONDS_SERIES
+        and re.fullmatch(r"[+ -][ 0-9]{4}0{4}" if signed else r"[ 0-9]{4}0{5}", literal)
+        and literal.strip(" +-0")
     ):
-        return "jpl_declination_sign_indeterminate"
-    return None
+        issues.append("jpl_zero_seconds_placeholder")
+    if signed and source_id in JPL_INDETERMINATE_SIGN and re.fullmatch(r" 00[0-9]{6}", literal):
+        issues.append("jpl_declination_sign_indeterminate")
+    return tuple(issues)
 
 
 def apply_jpl_coordinate_policy(row):
-    issue = jpl_coordinate_issue(row.get("source_id", ""), row.get("unit"), row["literal"])
-    if issue is not None:
-        row["flags"] = list(dict.fromkeys([*row.get("flags", []), issue]))
+    issues = jpl_coordinate_issues(row.get("source_id", ""), row.get("unit"), row["literal"])
+    if issues:
+        row["flags"] = list(dict.fromkeys([*row.get("flags", []), *issues]))
         converted = recompute_conversion(row)
         if converted is None:
             row.pop("derived_normalization", None)
         else:
             row["derived_normalization"] = converted
-    return issue
+    return issues
 
 
 def qualify_retained_conversion(row):
-    """Upgrade a previously valid conversion without accepting a fabricated legacy value."""
+    """Upgrade a previously valid conversion without accepting a fabricated earlier value.
+
+    The earlier value must agree with the rules the row already carried: none for a row
+    without a JPL flag, otherwise the rules whose flags it has.
+    """
     prior = row.copy()
-    issue = apply_jpl_coordinate_policy(row)
-    if issue and prior != row:
-        validate_conversion(prior, legacy_jpl=True)
+    issues = apply_jpl_coordinate_policy(row)
+    if issues and prior != row:
+        carried = JPL_COORDINATE_FLAGS.intersection(prior.get("flags", []))
+        if carried:
+            validate_conversion(prior, without=set(issues) - carried)
+        else:
+            validate_conversion(prior, legacy_jpl=True)
     validate_conversion(row)
-    return issue
+    return issues
 
 
-def recompute_conversion(row, *, legacy_jpl=False):
+def recompute_conversion(row, *, legacy_jpl=False, without=()):
     literal, unit = row["literal"], row.get("unit", row.get("normalized", {}).get("unit"))
     if "incomplete_coordinate" in row.get("flags", []) and (
         legacy_jpl or unit not in JPL_COORDINATE_BOUNDS
@@ -467,13 +484,15 @@ def recompute_conversion(row, *, legacy_jpl=False):
             value = (a * 3600 + b * 60 + c) * (-1 if literal[0] == "-" else 1)
         if not 0 <= b < 60 or not 0 <= c < 60:
             raise ValueError("Invalid fixed-width component")
-        issue = (
-            None if legacy_jpl else jpl_coordinate_issue(row.get("source_id", ""), unit, literal)
+        issues = (
+            set()
+            if legacy_jpl
+            else set(jpl_coordinate_issues(row.get("source_id", ""), unit, literal)) - set(without)
         )
-        if issue == "jpl_zero_placeholder":
+        if issues & JPL_NO_COORDINATE:
             return None
         result = dict(magnitude=str(value), unit="arcsecond", method="JPL_fixed_width_conversion")
-        if issue == "jpl_declination_sign_indeterminate":
+        if "jpl_declination_sign_indeterminate" in issues:
             result["sign_indeterminate"] = True
         return result
     if unit == "JPL_D12.5_UT":
@@ -500,12 +519,13 @@ def recompute_conversion(row, *, legacy_jpl=False):
     return None
 
 
-def validate_conversion(row, *, legacy_jpl=False):
-    expected = recompute_conversion(row, legacy_jpl=legacy_jpl)
+def validate_conversion(row, *, legacy_jpl=False, without=()):
+    """Check a row's conversion. `without` names JPL rules the row does not carry yet."""
+    expected = recompute_conversion(row, legacy_jpl=legacy_jpl, without=without)
     if not legacy_jpl:
-        issue = jpl_coordinate_issue(row.get("source_id", ""), row.get("unit"), row["literal"])
+        issues = jpl_coordinate_issues(row.get("source_id", ""), row.get("unit"), row["literal"])
         actual = JPL_COORDINATE_FLAGS.intersection(row.get("flags", []))
-        if actual != ({issue} if issue else set()):
+        if actual != set(issues) - set(without):
             raise ValueError("JPL coordinate qualification differs from the source field")
     supplied = row.get("derived_normalization")
     if supplied != expected:

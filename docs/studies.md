@@ -21,7 +21,9 @@ came out unchanged. The printed predictions gained corrected dates for eight
 predictions and one more log value. The seven Venus pairs of 1590 now carry
 their printed dates in the catalog, which does not change that study’s
 numbers. The solar theory and the 1587 parallax studies are published on
-catalog 1.3.2 from the start.
+catalog 1.3.2 from the start. Catalog 1.3.3 corrects records in the
+supplementary books and the JPL series. Every selection was rerun on it and
+none changed.
 
 ## Mars reverses direction in 1595
 

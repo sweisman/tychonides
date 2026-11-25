@@ -40,7 +40,7 @@ For schema 6 releases, the verifier checks:
 | Database structure | SQLite integrity, foreign keys and declared indexes pass their checks. |
 | Representation consistency | Every CSV field agrees with the canonical database projection. JSON is compared structurally; decimal conveniences come from exact values. Row identities and all declared counts, including per-source totals, agree. |
 | Mechanical conversion | Supported modern conversions are recomputed from preserved notation. The JPL qualification rules additionally check the original fixed-width fields, the displayed flags and which derived values must be absent. |
-| Marked historical values | An exact historical angle or clock time is recomputed from its printed expression when that expression carries every unit mark and no other table cell contributes. In release 1.3.2 this covers 123,591 values, about a third of the exact historical values. |
+| Marked historical values | An exact historical angle or clock time is recomputed from its printed expression when that expression carries every unit mark and no other table cell contributes. In release 1.3.3 this covers 123,591 values, about a third of the exact historical values. |
 | Documentation contracts | With `--docs-root`, CSV and schema fields, vocabulary coverage, generated references, local links and their heading anchors, documented totals and release identifiers are checked. |
 
 The historical compiler separately checks literal components, explicit units and
@@ -154,12 +154,12 @@ external; working artifact bytes and local locators require public projection.
 
 ## Public Release
 
-The current release is [tychonides-1.3.2](../resources/catalog/README.md).
+The current release is [tychonides-1.3.3](../resources/catalog/README.md).
 To prepare its public files from a verified working catalog:
 
 ```sh
 python -m src.publish_collection --source WORKING_CATALOG \
-  --output PUBLIC_DIRECTORY --release-id tychonides-1.3.2
+  --output PUBLIC_DIRECTORY --release-id tychonides-1.3.3
 ```
 
 Packaging adds citations and derived-value columns, removes source-document bytes

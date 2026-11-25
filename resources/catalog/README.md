@@ -14,27 +14,30 @@ along with the calculations and instrument records that give them context.
 
 ## Download
 
-Release **tychonides-1.3.2** provides the verified catalog as GitHub Release
+Release **tychonides-1.3.3** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.2/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.3/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.2/tychonides.csv)** — one row per quantity, with exact values, decimal
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.3/tychonides.csv)** — one row per quantity, with exact values, decimal
   conveniences and scientific qualifications.
 
 The repository keeps the [manifest](manifest.json) with download and uncompressed database
 checksums. Compression reduces download size, without changing SQLite contents.
 
-This release carries the corrections from an
-[audit of the Tycho log records](../../docs/status.md#audit-of-the-tycho-log-records).
-In the records for bodies other than Mars, 6,430 values take the date the page
-prints for them, 2,472 give up a date carried over from an earlier entry, and
-240 are retyped from their labels. Each keeps its earlier interpretation in
-the database. Some candidates remain open, and the supplementary books and
-modern collections have not been audited in this way. Check a date, a type, or
-a subject against the printed page before relying on it.
+Releases 1.3.2 and 1.3.3 carry the corrections from two audits. In the
+[Tycho log records](../../docs/status.md#audit-of-the-tycho-log-records) for
+bodies other than Mars, 6,430 values take the date the page prints for them,
+2,472 give up a date carried over from an earlier entry, and 240 are retyped
+from their labels. In the
+[supplementary books](../../docs/status.md#audit-of-the-other-works), 98
+longitudes of an apogee, a perigee, or a node take their printed subject. Each
+keeps its earlier interpretation in the database. Candidates remain open in
+both audits, and the audit of the books and the modern collections is less
+complete than the audit of the logs. Check a date, a type, or a subject
+against the printed page before relying on it.
 
 After installing the package from a source checkout, run
 `./scripts/download-catalog downloads` to fetch, verify and decompress both
@@ -83,6 +86,14 @@ declinations in Washington 6b, Washington 6c and Tokyo have a blank sign in
 series where signed values are uncertain near the equator. They carry
 `jpl_declination_sign_indeterminate` with an unsigned magnitude and a null
 signed coordinate. Other explicitly signed values still convert normally.
+
+In Washington 6b and 6c, 350 right ascensions and declinations stand as whole
+minutes with zero seconds. The USNO publication of the same observation prints
+338 of them without seconds, and the other 12 have no USNO record in the
+catalog. These fields retain their literal text and carry
+`jpl_zero_seconds_placeholder` with no derived coordinate. Seven of them are
+also among the zero-degree declinations with a blank sign. Those seven carry
+both flags and no derived coordinate.
 
 The catalog retains 360 individually recorded JPL/USNO candidate links.
 Wider comparisons by target and epoch found additional potential overlaps in
