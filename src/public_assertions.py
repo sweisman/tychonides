@@ -18,6 +18,7 @@ from .public_relationships import identifier
 import re
 from fractions import Fraction
 from .core import number, fraction_text
+from .numeric_integrity import explicit_angular_components, explicit_time_components
 from .catalog import (
     ANGLE_QUANTITIES,
     source_key,
@@ -44,7 +45,37 @@ def public_assertion(row, *, source_registry=()):
         raise ValueError("Unreviewed public endpoint label")
     if row["quantity"] not in QUANTITIES or row["role"] not in ROLES:
         raise ValueError("Unreviewed public quantity/role")
-    if row["role"] == "unresolved" and row["quantity"] != "unclassified_numeric_expression":
+    explicitly_marked_angle = (
+        row["role"] == "unresolved"
+        and row["quantity"] == "unclassified_angle"
+        and key in range(10, 14)
+        and row["subject"] in {"unassigned table entry", "unassigned narrative entry"}
+        and "measurement_type_unresolved" in row.get("flags", [])
+        and bool(row.get("components"))
+        and row["components"] == explicit_angular_components(row["source_expression"])
+    )
+    explicitly_marked_time = (
+        row["quantity"] == "unclassified_time"
+        and row["role"] == "unresolved"
+        and key in range(10, 14)
+        and row["subject"] in {"unassigned table entry", "unassigned narrative entry"}
+        and bool(row.get("components"))
+        and row["components"] == explicit_time_components(row["source_expression"])
+        and row.get("direction") is None
+        and row["reference"] is None
+        and row.get("event_id") is None
+        and row["normalized"]["status"] == "exact"
+        and row["normalized"] == normalize_quantity(row)
+    )
+    if row["quantity"] == "unclassified_time" and not explicitly_marked_time:
+        raise ValueError(
+            "Unclassified time requires complete literal time places and unresolved use"
+        )
+    if (
+        row["role"] == "unresolved"
+        and row["quantity"] not in {"unclassified_numeric_expression", "unclassified_time"}
+        and not explicitly_marked_angle
+    ):
         raise ValueError("Unresolved source role requires an unclassified numerical expression")
     calendar_count = (
         row["subject"] == "calendar calculation"
@@ -1323,6 +1354,7 @@ def public_assertion(row, *, source_registry=()):
                     row["role"] == "historical_input"
                     and "not_an_additional_raw_reading" in row.get("flags", [])
                 )
+                or explicitly_marked_angle
             )
             or row.get("direction") is not None
             or row["reference"] is not None

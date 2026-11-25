@@ -78,6 +78,7 @@
     "temporal_hour_count": "Count of unequal or temporal hours in the stated day or night, retaining native sexagesimal subdivisions without conversion to ordinary clock seconds.",
     "transit_clock": "Clock reading associated with a transit or meridian passage.",
     "unclassified_angle": "Known angular expression whose more specific observational role is unresolved.",
+    "unclassified_time": "Exact value in explicitly marked hours, minutes, or seconds whose use, clock origin, and epoch remain unresolved.",
     "unclassified_numeric_expression": "Preserved numerical expression whose unit or interpretation is unresolved.",
     "zenith_distance": "Angular distance from the zenith as stated by the source; kept distinct from altitude and distance from the meridian. No complement is silently applied."
   },

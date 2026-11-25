@@ -1857,6 +1857,32 @@ class PublicCheckpointTests(unittest.TestCase):
         self.assertNotIn("clock_runs_fast", out["flags"])
         self.assertIsNone(out["normalized"]["signed_magnitude"])
 
+    def test_explicit_angle_can_be_normalized_without_an_observing_role(self):
+        from src.normalization import normalize_quantity
+
+        row = dict(
+            self.fixture(),
+            quantity="unclassified_angle",
+            role="unresolved",
+            subject="unassigned table entry",
+            reference=None,
+            direction=None,
+            event_id=None,
+            source_expression="12° 30′ 1/2″",
+            components={"degree": "12", "arcminute": "30", "arcsecond": "1/2"},
+            flags=["measurement_type_unresolved"],
+        )
+        row["normalized"] = normalize_quantity(row)
+        output = self.module().public_assertion(row)
+        self.assertEqual(output["normalized"]["magnitude"], "90001/2")
+        self.assertEqual(output["role"], "unresolved")
+        with self.assertRaises(ValueError):
+            self.module().public_assertion(dict(row, source_expression="12 30 1/2"))
+        with self.assertRaises(ValueError):
+            self.module().public_assertion(
+                dict(row, components={"degree": "13", "arcminute": "30"})
+            )
+
     def test_unclassified_angle_alternative_preserves_type_uncertainty(self):
         from src.catalog import normalize_quantity
 
@@ -4021,6 +4047,45 @@ class PublicCheckpointTests(unittest.TestCase):
             dict(reference="Mars"),
             dict(role="historical_input"),
             dict(quantity="altitude"),
+        ):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                self.module().public_assertion(dict(row, **changes))
+
+    def test_explicit_time_places_can_preserve_an_unresolved_use(self):
+        from src.catalog import normalize_quantity
+
+        row = dict(
+            self.fixture(),
+            quantity="unclassified_time",
+            role="unresolved",
+            subject="unassigned table entry",
+            direction=None,
+            reference=None,
+            event_id=None,
+            source_expression="7^H^ 6⅚^M^",
+            components={"hour": "7", "minute": "6 5/6"},
+            flags=[],
+        )
+        row["normalized"] = normalize_quantity(row)
+        public = self.module().public_assertion(row)
+        self.assertEqual(
+            (public["role"], public["normalized"]["magnitude"], public["normalized"]["unit"]),
+            ("unresolved", "25610", "second_of_time"),
+        )
+        prefixed = self.module().public_assertion(dict(row, source_expression="H.7 M.6⅚"))
+        self.assertEqual(prefixed["normalized"], public["normalized"])
+        minutes = dict(
+            row,
+            source_expression="6⅚^m^",
+            components={"minute": "6 5/6"},
+        )
+        minutes["normalized"] = normalize_quantity(minutes)
+        self.assertEqual(self.module().public_assertion(minutes)["normalized"]["magnitude"], "410")
+        for changes in (
+            dict(source_expression="7 6⅚"),
+            dict(components={"hour": "7", "second": "6 5/6"}),
+            dict(role="recorded_clock"),
+            dict(event_id="observing-event"),
         ):
             with self.subTest(changes=changes), self.assertRaises(ValueError):
                 self.module().public_assertion(dict(row, **changes))

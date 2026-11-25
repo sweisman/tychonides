@@ -4,7 +4,7 @@ from fractions import Fraction
 import json
 import re
 
-from .catalog_release import CSV_COLUMNS, encoded
+from .catalog_release import CATALOGUE_EXPRESSION, CATALOGUE_ROLE, CSV_COLUMNS, encoded
 
 DERIVED_COLUMNS = (
     "derived_value_exact",
@@ -171,10 +171,10 @@ def enrich_catalogue(db, registry):
                 locator,
             ),
         )
-    db.executescript("""
+    db.executescript(f"""
     DROP VIEW catalogue;
     CREATE VIEW catalogue AS SELECT q.id,q.source_id,q.artifact_sha256,q.source_entry_id,q.locator,
-      q.volume,q.printed_page,q.expression,q.role,q.event_id,q.series_id,
+      q.volume,q.printed_page,{CATALOGUE_EXPRESSION} AS expression,{CATALOGUE_ROLE} AS role,q.event_id,q.series_id,
       i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact,
       d.derived_value_exact,d.derived_signed_value_exact,d.derived_unit,
       d.derived_value_decimal,d.derived_signed_value_decimal,d.derived_method,

@@ -12,3 +12,8 @@ A calculated coordinate can be useful for studying historical reductions while
 remaining unsuitable as a raw reading for a parallax analysis. Null values mean
 unestablished or inapplicable information as documented for the field, not zero.
 These are documentation terms, not additional database fields.
+
+An exact conversion can coexist with an unresolved role. A printed angle can
+establish a magnitude while its coordinate type remains open. A value in
+explicitly marked hours, minutes, or seconds can be converted to seconds of time
+while its use, clock origin, and epoch remain open.

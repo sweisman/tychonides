@@ -7013,6 +7013,7 @@
     "transit_clock",
     "unclassified_angle",
     "unclassified_numeric_expression",
+    "unclassified_time",
     "zenith_distance"
   ],
   "ROLES": [

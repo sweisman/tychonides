@@ -45,6 +45,8 @@ add 36,453 quantities to the original Mars selection. The
 [Sun, Saturn, and Venus selections](../../docs/data-sources.md#sun-saturn-and-venus-coverage)
 add 46,300 quantities. The [full-log intake](../../docs/data-sources.md#full-log-coverage)
 adds 50,622 quantities and reuses earlier records for matched source occurrences.
+The [interpretation review](../../docs/data-sources.md#interpretation-review)
+describes the verified working catalog prepared from that intake.
 The [seven-book extension](../../docs/historical-books-ingestion.md)
 adds 303,175 quantities across the selected editions, with 4,078 selected regions
 given review decisions. The 256,802 modern quantities preserve source

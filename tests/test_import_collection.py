@@ -13,6 +13,147 @@ from src.catalog_release import write_catalogue
 
 
 class WorkingCatalogueMergeTests(unittest.TestCase):
+    def test_page_review_preserves_original_and_corrects_shared_citation(self):
+        from test_catalog_release import CatalogueReleaseTests
+
+        from src.catalog_release import CSV_COLUMNS
+        from src.csv_projection import project_csv
+        from src.log_interpretations import apply_log_page_reviews
+
+        source, public, contexts = CatalogueReleaseTests().fixture()
+        identifiers = [row["id"] for row in source]
+        locus = dict(
+            id="locus-shared",
+            source_id="tycho-oo-11",
+            printed_page=334,
+            status="mapped_source_page",
+            page_basis="reviewed_quantity_citation",
+            quantity_ids=identifiers,
+            context_ids=[],
+        )
+        decisions = [
+            dict(
+                quantity_id=row["id"],
+                volume=11,
+                previous_printed_page=334,
+                printed_page=335,
+                source_expression=row["source_expression"],
+            )
+            for row in source
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            write_catalogue(
+                root, source, public, contexts, [], [], [], [], [], [], {}, loci=[locus]
+            )
+            with closing(sqlite3.connect(root / "tychonides.sqlite")) as db:
+                with self.assertRaisesRegex(ValueError, "shared printed locus"), db:
+                    apply_log_page_reviews(db, decisions[:1])
+                originals = db.execute(
+                    "SELECT id,original_json FROM quantities ORDER BY id"
+                ).fetchall()
+                with db:
+                    self.assertEqual(apply_log_page_reviews(db, decisions), 2)
+                self.assertEqual(
+                    db.execute("SELECT id,original_json FROM quantities ORDER BY id").fetchall(),
+                    originals,
+                )
+                self.assertEqual(
+                    {int(row["printed_page"]) for row in project_csv(db, CSV_COLUMNS)}, {335}
+                )
+                indexed, current = db.execute(
+                    "SELECT printed_page,data_json FROM source_loci WHERE id=?", (locus["id"],)
+                ).fetchone()
+                self.assertEqual(indexed, 335)
+                self.assertEqual(json.loads(current)["previous_printed_page"], 334)
+
+    def test_reading_revision_keeps_the_original_and_exports_the_reviewed_sign(self):
+        from test_catalog_release import CatalogueReleaseTests
+
+        from src.catalog_release import CSV_COLUMNS, source_value_hash
+        from src.csv_projection import project_csv
+        from src.log_interpretations import apply_log_interpretations
+        from src.normalization import normalize_quantity
+
+        source, public, contexts = CatalogueReleaseTests().fixture()
+        reading = dict(
+            source[0],
+            source_expression="13° 24",
+            role="unresolved",
+            quantity="unclassified_numeric_expression",
+            subject="unassigned table entry",
+            flags=["source_notation_unresolved"],
+        )
+        reading["normalized"] = normalize_quantity(reading)
+        projection = dict(
+            public[0],
+            **{k: reading[k] for k in ("role", "quantity", "subject", "flags", "normalized")},
+        )
+        interpretation = dict(
+            quantity="declination",
+            role="recorded_coordinate",
+            subject="fixed star",
+            reference=None,
+            direction="north",
+            components={"degree": "13", "arcminute": "24", "arcsecond": "30"},
+            zodiac_sign=None,
+            flags=[],
+        )
+        decision = dict(
+            quantity_id=reading["id"],
+            volume=11,
+            column=2,
+            printed_page=334,
+            source_expression=reading["source_expression"],
+            source_value_sha256=source_value_hash(reading),
+            occurrence=[3, 9],
+            interpretation=interpretation,
+            normalized=normalize_quantity(interpretation),
+            basis=dict(
+                interpretation,
+                designation="The sixth star",
+                label="Declination, north",
+                column=2,
+                completed_source_field=dict(expression="13° 24′ 30″", occurrence=[3, 14]),
+            ),
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            write_catalogue(root, [reading], [projection], contexts[:1], [], [], [], [], [], [], {})
+            with closing(sqlite3.connect(root / "tychonides.sqlite")) as db:
+                original = tuple(db.execute("SELECT * FROM quantities").fetchone())
+                altered = dict(
+                    decision,
+                    interpretation=dict(
+                        interpretation, components={"degree": "14", "arcminute": "24"}
+                    ),
+                )
+                with self.assertRaisesRegex(ValueError, "explicit places"), db:
+                    apply_log_interpretations(db, [altered])
+                with db:
+                    apply_log_interpretations(db, [decision])
+                selected = next(project_csv(db, CSV_COLUMNS))
+                self.assertEqual(
+                    (
+                        selected["role"],
+                        selected["direction"],
+                        selected["signed_value_exact"],
+                        selected["interpretation_version"],
+                        selected["expression"],
+                    ),
+                    ("recorded_coordinate", "north", "48270", 1, "13° 24′ 30″"),
+                )
+                self.assertEqual(tuple(db.execute("SELECT * FROM quantities").fetchone()), original)
+                self.assertEqual(
+                    [
+                        row[0]
+                        for row in db.execute(
+                            "SELECT version FROM interpretations ORDER BY version"
+                        )
+                    ],
+                    [0, 1],
+                )
+
     def test_missing_locus_page_can_be_completed_but_conflicting_pages_are_rejected(self):
         from src.import_collection import _reconciled_locus_claim
 

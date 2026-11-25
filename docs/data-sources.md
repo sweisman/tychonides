@@ -138,17 +138,33 @@ circumstances. [Editions and printed witnesses](sources.md)
 | XIII | 11,661 | 28,707 |
 | **Total** | **50,622** | **150,418** |
 
-The additions span 2,397 source groups and include 1,698 separate observing
-context records. The catalog reuses existing records for matched source
-occurrences. It preserves 46,423 of the added quantities as cited literal
-expressions with unresolved numerical interpretation. The full-volume sweep
-also identified 45 candidate spans with unresolved overlaps and 32 candidates
-with unestablished printed pages. These candidates remain outside the addition
-totals. Dates and clock readings retain their historical interpretation limits.
-[Catalog terminology](catalog-terms.md)
-
-The full log coverage is available in
+The 1.3.0 additions span 2,397 source groups and include 1,698 separate observing
+context records. The release reuses existing records for matched source
+occurrences and preserves 46,423 of the added quantities as cited literal
+expressions with unresolved numerical interpretation. Its addition totals
+exclude 45 candidate spans flagged for overlap and 32 candidates awaiting
+printed page citations. Download the published intake in
 [tychonides-1.3.0](../resources/catalog/README.md#download).
+
+#### Interpretation review
+
+The verified working catalog contains **710,420 quantities**. The review
+classifies 8,341 of the initially unresolved entries and establishes exact
+values for another 14,234 whose uses remain open. It also recovers the complete
+expressions for three earlier readings while preserving their original
+fragments and identities.
+
+The review accounts for all 45 whole-log overlap flags and 249 earlier
+matching flags. Two possible locations remain for one daily-motion entry.
+It recovers all 32 missing page citations on 19 lines and corrects eight
+reading citations and three context locators in Volume X. The supplements
+contribute 25 distinct quantities and 1,657 context records.
+
+Of the 23,848 initially unresolved entries that still lack an exact conversion,
+1,478 are documentary context, including star identifiers and calendar
+labels. Most of the remainder need evidence for the unit places or the
+purpose of a standalone number. Dates, clock origins, and observational
+roles retain their source qualifications. [Catalog terminology](catalog-terms.md)
 
 ## Modern observing programs
 

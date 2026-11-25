@@ -419,6 +419,7 @@ TIME_QUANTITIES = {
     "temporal_hour_count",
     "clock_drift",
     "annotated_time",
+    "unclassified_time",
     "meridian_time_difference",
     "inferred_time",
 }
@@ -1814,6 +1815,7 @@ def normalize_quantity(assertion):
                 "clock_elapsed_time",
                 "clock_correction",
                 "temporal_hour_count",
+                "unclassified_time",
                 "right_ascension_difference",
             )
             or quantity in ANGLE_QUANTITIES

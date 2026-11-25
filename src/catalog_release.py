@@ -199,7 +199,25 @@ def adapt_source_quantities(records):
     return source, published, list(events.values())
 
 
-SCHEMA = """
+CATALOGUE_ROLE = """CASE
+    WHEN json_extract(i.revision_json,'$.kind')='log_reading_interpretation'
+    THEN json_extract(i.revision_json,'$.role') ELSE q.role END"""
+
+CATALOGUE_EXPRESSION = (
+    "COALESCE(json_extract(i.revision_json,'$.completed_source_expression'),q.expression)"
+)
+
+WORKING_CATALOGUE_VIEW = f"""
+CREATE VIEW catalogue AS SELECT q.id,q.source_id,q.artifact_sha256,q.source_entry_id,q.locator,
+ q.volume,q.printed_page,{CATALOGUE_EXPRESSION} AS expression,{CATALOGUE_ROLE} AS role,q.event_id,q.series_id,
+ i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact
+ FROM quantities q JOIN interpretations i ON i.quantity_id=q.id
+ WHERE i.version=(SELECT MAX(j.version) FROM interpretations j WHERE j.quantity_id=q.id);
+"""
+
+
+SCHEMA = (
+    """
 PRAGMA foreign_keys=ON;
 CREATE TABLE metadata(key TEXT PRIMARY KEY,value_json TEXT NOT NULL);
 CREATE TABLE sources(id TEXT PRIMARY KEY,author TEXT,work_id TEXT,edition_id TEXT,title TEXT,volume INTEGER,data_json TEXT NOT NULL);
@@ -246,12 +264,9 @@ CREATE TABLE quantity_links(from_id TEXT REFERENCES quantities(id) DEFERRABLE IN
 CREATE VIEW diagrams AS SELECT * FROM contexts WHERE kind='source_diagram';
 CREATE VIEW source_records AS SELECT id,source_id,artifact_sha256,source_entry_id,expression,components_json,
  COALESCE(source_payload_json,original_json) AS source_payload_json FROM quantities;
-CREATE VIEW catalogue AS SELECT q.id,q.source_id,q.artifact_sha256,q.source_entry_id,q.locator,
- q.volume,q.printed_page,q.expression,q.role,q.event_id,q.series_id,
- i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact
- FROM quantities q JOIN interpretations i ON i.quantity_id=q.id
- WHERE i.version=(SELECT MAX(j.version) FROM interpretations j WHERE j.quantity_id=q.id);
 """
+    + WORKING_CATALOGUE_VIEW
+)
 
 
 SCIENCE_FIELDS = (

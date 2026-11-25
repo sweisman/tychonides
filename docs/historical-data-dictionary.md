@@ -87,6 +87,7 @@ See the [database schema](database-schema.md) and [catalog dictionary](catalog-d
 | `transit_clock` | Clock reading associated with a transit or meridian passage. |
 | `unclassified_angle` | Known angular expression whose more specific observational role is unresolved. |
 | `unclassified_numeric_expression` | Preserved numerical expression whose unit or interpretation is unresolved. |
+| `unclassified_time` | Exact value in explicitly marked hours, minutes, or seconds whose use, clock origin, and epoch remain unresolved. |
 | `zenith_distance` | Angular distance from the zenith as stated by the source; kept distinct from altitude and distance from the meridian. No complement is silently applied. |
 
 ## role

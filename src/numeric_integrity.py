@@ -43,6 +43,145 @@ MARKS = {
 }
 
 
+def explicit_angular_components(expression):
+    """Bind complete printed degree and subunit marks without guessing their use."""
+    match = re.fullmatch(
+        rf"({NUMBER})\s*(?:°|\^g\^)(?:\s*({NUMBER})\s*′)?(?:\s*({NUMBER})\s*″)?",
+        fraction_text(expression).strip(),
+    )
+    if not match:
+        return None
+    return {
+        unit: value
+        for unit, value in zip(("degree", "arcminute", "arcsecond"), match.groups(), strict=True)
+        if value is not None
+    }
+
+
+def split_zodiac_notation(expression):
+    """Separate a single named-sign glyph from either edge of a literal."""
+    from .normalization import ZODIAC_SIGNS
+
+    value = expression.strip()
+    for sign, glyph in ZODIAC_SIGNS.items():
+        if value.startswith(glyph):
+            return value.removeprefix(glyph).lstrip(), sign
+        if value.endswith(glyph):
+            return value.removesuffix(glyph).rstrip(), sign
+    return value, None
+
+
+def log_zodiac_column_sign(expression):
+    """Read a named zodiac origin from a longitude heading or a standalone sign cell."""
+    label, sign = split_zodiac_notation(expression)
+    if label.casefold() in ("", "longit.", "longitude"):
+        return sign
+    return None
+
+
+def log_point_form_components(expression):
+    """Read degrees and minutes when the edition identifies point-form notation."""
+    match = re.fullmatch(rf"({NUMBER})(?:\s*\.\s*|\s+et\s+)({NUMBER})", fraction_text(expression))
+    if match:
+        return {"degree": match[1], "arcminute": match[2]}
+    return None
+
+
+def explicit_postfix_clock_components(expression):
+    """Read the complete printed format exemplified by 7H 6⅚M."""
+    match = re.fullmatch(
+        rf"({NUMBER})\s*(?:H|\^h\^)(?:\s*({NUMBER})\s*(?:M|\^m\^))?"
+        rf"(?:\s*({NUMBER})\s*(?:S|\^s\^))?",
+        fraction_text(expression).strip(),
+        re.I,
+    )
+    if not match:
+        return None
+    return {
+        unit: value
+        for unit, value in zip(("hour", "minute", "second"), match.groups(), strict=True)
+        if value is not None
+    }
+
+
+def explicit_time_components(expression):
+    """Bind complete marked time fields without implying a clock or an epoch."""
+    if parts := explicit_postfix_clock_components(expression):
+        return parts
+    text = fraction_text(expression).strip()
+    if match := re.fullmatch(
+        rf"H\.\s*({NUMBER})(?:\s*M\.\s*({NUMBER}))?(?:\s*S\.\s*({NUMBER}))?",
+        text,
+        re.I,
+    ):
+        units = ("hour", "minute", "second")
+    else:
+        match = re.fullmatch(rf"({NUMBER})\s*\^m\^(?:\s*({NUMBER})\s*\^s\^)?", text, re.I)
+        units = ("minute", "second")
+    if match:
+        return {
+            unit: value
+            for unit, value in zip(units, match.groups(), strict=True)
+            if value is not None
+        }
+    if match := re.fullmatch(rf"({NUMBER})\s*\^s\^", text, re.I):
+        return {"second": match[1]}
+    return None
+
+
+def explicit_angular_subunits(expression):
+    """Read complete marked minutes and seconds in a field already known to be angular."""
+    text = fraction_text(expression).strip()
+    if match := re.fullmatch(rf"({NUMBER})\s*′(?:\s*({NUMBER})\s*″)?", text):
+        return {
+            unit: value
+            for unit, value in zip(("arcminute", "arcsecond"), match.groups(), strict=True)
+            if value is not None
+        }
+    if match := re.fullmatch(rf"({NUMBER})\s*″", text):
+        return {"arcsecond": match[1]}
+    return None
+
+
+def completed_log_components(expression, *, clock):
+    """Read all unit places in a reviewed complete field, including editorial marks."""
+    text = fraction_text(expression).strip().replace("[′]", "′").replace("[″]", "″")
+    if clock:
+        match = re.fullmatch(rf"H\.\s*({NUMBER})\s+({NUMBER})\s*′(?:\s*({NUMBER})\s*″)?", text)
+        return (
+            {
+                unit: value
+                for unit, value in zip(("hour", "minute", "second"), match.groups(), strict=True)
+                if value is not None
+            }
+            if match
+            else None
+        )
+    value, _ = split_zodiac_notation(text)
+    return explicit_angular_components(value) or explicit_angular_subunits(value)
+
+
+def declared_component_units(heading):
+    """Read clock or angular component places printed in a table heading."""
+    markers = re.findall(r"(?<!\w)([gh])\.\s*m\.(?:\s*(s)\.)?(?!\w)", heading, re.I)
+    if len(markers) != 1:
+        return None
+    first, third = markers[0]
+    units = (
+        ("degree", "arcminute", "arcsecond")
+        if first.lower() == "g"
+        else ("hour", "minute", "second")
+    )
+    return units if third else units[:2]
+
+
+def unmarked_components(expression, units):
+    match = re.fullmatch(
+        r"\s+".join(f"({NUMBER})" for _ in units), fraction_text(expression).strip()
+    )
+    return dict(zip(units, match.groups(), strict=True)) if match else None
+
+
 def validate_units(
     expression,
     components,

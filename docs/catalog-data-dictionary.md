@@ -178,7 +178,7 @@ Columns have a fixed order, verified against the exporter:
 | Columns | Meaning |
 | --- | --- |
 | `id`, `source_id`, `artifact_sha256`, `source_entry_id`, `locator` | Quantity identity, source and artifact version, native identity and locator where available. |
-| `volume`, `printed_page`, `expression` | Printed citation and original numerical expression. |
+| `volume`, `printed_page`, `expression` | Printed citation and selected source expression. A review that recovers a clipped field retains the previous fragment in `quantities.expression` and records both forms in `interpretation_review`. |
 | `quantity`, `role`, `subject`, `reference_object` | Measurement type, evidential role and endpoints. |
 | `status`, `unit`, `value_exact`, `signed_value_exact` | Normalization status, units and exact rational values. |
 | `value_decimal`, `value_degrees_decimal` | Convenient decimal values; degree conversion only where defined. |

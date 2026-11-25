@@ -201,12 +201,21 @@ def _apply_working_locus_reviews(db, reviews):
 
 
 def merge_catalogue_set(
-    inputs, output, *, repeat=False, reviewed_dates=(), reviewed_loci=(), verified_manifests=None
+    inputs,
+    output,
+    *,
+    repeat=False,
+    reviewed_dates=(),
+    reviewed_loci=(),
+    reviewed_readings=(),
+    reviewed_log_pages=(),
+    verified_manifests=None,
 ):
     """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
     from .catalog_release import CSV_COLUMNS
     from .csv_projection import project_csv
+    from .log_interpretations import apply_log_interpretations, apply_log_page_reviews
 
     inputs = tuple(dict.fromkeys(Path(p).resolve() for p in inputs))
     if not inputs:
@@ -219,6 +228,8 @@ def merge_catalogue_set(
     snapshots, fingerprints = [], {}
     reviewed_dates = tuple(reviewed_dates)
     reviewed_loci = tuple(reviewed_loci)
+    reviewed_readings = tuple(reviewed_readings)
+    reviewed_log_pages = tuple(reviewed_log_pages)
     verified_manifests = verified_manifests or {}
     for directory in inputs:
         manifest_path = directory / "manifest.json"
@@ -262,6 +273,8 @@ def merge_catalogue_set(
                         metadata[key] = value
                 db.execute("DETACH DATABASE incoming")
             with db:
+                apply_log_interpretations(db, reviewed_readings)
+                apply_log_page_reviews(db, reviewed_log_pages)
                 metadata.update(
                     schema_version=encoded(3),
                     release_id=encoded("combined-catalogue-draft"),
