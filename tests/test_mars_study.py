@@ -94,6 +94,18 @@ class MarsStudyTests(unittest.TestCase):
             for name in produced:
                 self.assert_tables_close(table(Path(scratch) / name), table(FIGURES / name), name)
 
+    def test_opposition_tables_regenerate_from_committed_inputs(self):
+        import mars_oppositions
+
+        with tempfile.TemporaryDirectory() as scratch:
+            mars_oppositions.write_tables(Path(scratch))
+            produced = sorted(path.name for path in Path(scratch).iterdir())
+            self.assertEqual(
+                produced, sorted(path.name for path in FIGURES.glob("mars-oppositions-*.csv"))
+            )
+            for name in produced:
+                self.assert_tables_close(table(Path(scratch) / name), table(FIGURES / name), name)
+
     def test_heliocentric_and_earth_centered_directions_agree(self):
         # Tolerance fixed in advance: a billionth of a degree of longitude.
         import mars_model

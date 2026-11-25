@@ -45,9 +45,9 @@ VARIANTS = (
 )
 
 
-def load():
-    opposition = mm.load_oppositions()[NUMBER]
-    rows = mm.load_observations(NUMBER)
+def load(number=NUMBER):
+    opposition = mm.load_oppositions()[number]
+    rows = mm.load_observations(number)
     ephemeris = mm.load_ephemeris()
     for row in rows:
         cached = ephemeris[row["longitude_id"]]

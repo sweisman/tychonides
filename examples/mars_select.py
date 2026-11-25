@@ -20,7 +20,9 @@ Rules, in order:
 1. A candidate is an exact Mars ecliptic longitude in Tycho's four logs whose
    role is a reduction or an adopted value.
 2. It needs exactly one complete date claim (year, month, day) and a printed
-   zodiac sign. A sign is never supplied from neighboring entries.
+   zodiac sign. A sign is never supplied from neighboring entries. A date the
+   catalog labels Gregorian is moved ten days earlier to the Julian calendar.
+   A date with no calendar label is taken as Julian and the label stays blank.
 3. The date must lie within 60 days of the opposition date in the table.
 4. On each date the adopted values are used if the log prints any. Otherwise
    every reduction for that date is used. The rows of one date share a total
@@ -47,12 +49,13 @@ import sqlite3
 import statistics
 import unicodedata
 from collections import defaultdict
-from datetime import date
+from datetime import date, timedelta
 from fractions import Fraction
 from pathlib import Path
 
 HERE = Path(__file__).parent
 WINDOW_DAYS = 60
+GREGORIAN_LEAD_DAYS = 10  # Valid from 1582 to February 1700.
 MEAN_MOTION = Fraction(36000, 68698)  # Degrees of mean longitude per day.
 LOGS = "('tycho-oo-10', 'tycho-oo-11', 'tycho-oo-12', 'tycho-oo-13')"
 MONTHS = {
@@ -66,13 +69,14 @@ OPPOSITION_FIELDS = [
     "computed_longitude_expression", "difference_expression",
 ]  # fmt: skip
 OBSERVATION_FIELDS = [
-    "opposition", "julian_date", "daypart", "source_id", "printed_page", "longitude_id", "role",
-    "longitude_expression", "longitude_degrees_exact", "date_weight", "epoch_id",
-    "epoch_expression", "epoch_seconds", "latitude_id", "latitude_arcseconds_exact",
+    "opposition", "julian_date", "daypart", "calendar_label", "source_id", "printed_page",
+    "longitude_id", "role", "longitude_expression", "longitude_degrees_exact", "date_weight",
+    "epoch_id", "epoch_expression", "epoch_seconds", "latitude_id", "latitude_arcseconds_exact",
 ]  # fmt: skip
 PREDICTION_FIELDS = [
-    "opposition", "julian_date", "daypart", "source_id", "printed_page", "longitude_id", "model",
-    "longitude_expression", "within_sign_degrees_exact", "longitude_degrees_exact",
+    "opposition", "julian_date", "daypart", "calendar_label", "source_id", "printed_page",
+    "longitude_id", "model", "longitude_expression", "within_sign_degrees_exact",
+    "longitude_degrees_exact",
 ]  # fmt: skip
 EXCLUDED_FIELDS = [
     "opposition", "julian_date", "source_id", "printed_page", "longitude_id", "role",
@@ -187,7 +191,10 @@ def oppositions(db):
 
 
 def date_claim(db, identifier):
-    """The date and daypart of a quantity's single complete date claim, or the reason it has none."""
+    """Julian date, daypart, and calendar label of a quantity's single complete date claim.
+
+    The last item is the reason when there is no such claim.
+    """
     claims = [
         json.loads(data)
         for (data,) in db.execute(
@@ -202,13 +209,16 @@ def date_claim(db, identifier):
         if all(isinstance(claim.get(part), int) for part in ("year", "month", "day"))
     ]
     if len(complete) != 1:
-        return None, "", "no single complete date claim"
+        return None, "", "", "no single complete date claim"
     claim = complete[0]
     try:
         when = date(claim["year"], claim["month"], claim["day"])
     except ValueError:
-        return None, "", "impossible calendar date"
-    return when, claim.get("daypart") or "", ""
+        return None, "", "", "impossible calendar date"
+    calendar = claim.get("calendar") or ""
+    if calendar == "Gregorian":
+        when -= timedelta(days=GREGORIAN_LEAD_DAYS)
+    return when, claim.get("daypart") or "", calendar, ""
 
 
 def window(centers, when):
@@ -278,7 +288,7 @@ def predictions(db, centers, drop):
             "within_sign_degrees_exact": normalized.get("magnitude_degrees"),
             "longitude_degrees_exact": normalized.get("zodiac_longitude_degrees") or "",
         }
-        when, daypart, reason = date_claim(db, identifier)
+        when, daypart, calendar, reason = date_claim(db, identifier)
         if reason:
             drop(row, reason)
             continue
@@ -288,7 +298,8 @@ def predictions(db, centers, drop):
         if not row["model"]:
             drop(row, "no model name", number, when)
             continue
-        kept.append({**row, "opposition": number, "julian_date": when, "daypart": daypart})
+        dated = {"julian_date": when, "daypart": daypart, "calendar_label": calendar}
+        kept.append({**row, "opposition": number, **dated})
     return sorted(kept, key=lambda row: (row["julian_date"], row["model"], row["longitude_id"]))
 
 
@@ -301,7 +312,7 @@ def select(db):
         excluded.append({**row, "opposition": number, "julian_date": when, "reason": reason})
 
     for row in candidates(db):
-        when, daypart, reason = date_claim(db, row["longitude_id"])
+        when, daypart, calendar, reason = date_claim(db, row["longitude_id"])
         if reason:
             drop(row, reason)
             continue
@@ -311,7 +322,7 @@ def select(db):
         if row["longitude_degrees_exact"] is None:
             drop(row, "no printed zodiac sign", number, when)
         else:
-            row["daypart"] = daypart
+            row["daypart"], row["calendar_label"] = daypart, calendar
             chosen[(number, when)].append(row)
 
     selected = []

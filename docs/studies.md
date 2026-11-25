@@ -7,6 +7,7 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 | Study | Subject | Period |
 | --- | --- | --- |
 | [Mars reverses direction in 1595](#mars-reverses-direction-in-1595) | Four model geometries against Tycho’s reductions | September to December 1595 |
+| [Mars at the oppositions of 1580 to 1600](#mars-at-the-oppositions-of-1580-to-1600) | Tycho’s longitudes, three constructions, and printed table predictions against a modern ephemeris | 1580 to 1600 |
 | [Mars, Jupiter, and Saturn corrections](#mars-jupiter-and-saturn-corrections) | Recorded parallax and refraction against modern values | 1582 to 1599 |
 | [Mercury and Venus parallax](#mercury-and-venus-parallax) | Historical reductions and the 1590 Venus test | 1582 to 1610 |
 
@@ -40,6 +41,31 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 - **Reviewed.** November 25, 2026. The review replaced 14 hand-chosen rows with
   a written selection rule, used the printed hours, corrected the placement of
   the mean Sun, and added the sensitivity and validation tables.
+
+## Mars at the oppositions of 1580 to 1600
+
+[Read the study](mars-oppositions.md)
+
+- **Question.** Across the oppositions Tycho’s logs cover, how close are his
+  reduced longitudes to a modern ephemeris, how do the historical constructions
+  follow each passage, and how close were the table predictions he printed?
+- **Result.** At nine oppositions, where the log prints a usable hour, Tycho’s
+  longitudes differ from the JPL DE441 ephemeris by 0.5′ to 4.6′. The printed
+  Alphonsine and Copernican predictions miss by up to 4.7° and 4.2°, with
+  neither reliably closer. Curves tied to each opposition depart from the log
+  by up to 0.6° for the Ptolemaic and Copernican constructions and up to 0.2°
+  for the Tychonic one, which was fitted to these oppositions.
+- **Inputs.** 149 longitude reductions and 126 printed predictions from
+  *Opera Omnia* X–XIII, selected from the catalog by the rule written for 1595,
+  with Longomontanus’s opposition table and cached JPL Horizons positions.
+- **Limits.** The 1600 opposition is set aside because the catalog does not
+  record the calendar of its entries. Sixty rows have no usable hour. Two rows
+  far from the ephemeris are kept and listed for review. Nothing is refitted
+  or withheld, so this is not a predictive test.
+- **Rerun.** `python examples/mars_oppositions.py --output docs/figures`
+  regenerates the [summary](figures/mars-oppositions-summary.csv), the other
+  tables, and both figures. A test regenerates the tables.
+- **Reviewed.** November 25, 2026, when the study was first published.
 
 ## Mars, Jupiter, and Saturn corrections
 

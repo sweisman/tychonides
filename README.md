@@ -35,7 +35,9 @@ historical and modern collections already available, with coverage and
 interpretation limits.
 
 The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
-passage through four models. The [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
+passage through four models. The [opposition study](docs/mars-oppositions.md)
+sets Tycho’s Mars longitudes and the tables of his day against a modern
+ephemeris. The [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
 results. The [studies page](docs/studies.md) lists each finished analysis with
 its inputs and how to rerun it. The [status page](docs/status.md) shows what is

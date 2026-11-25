@@ -12,8 +12,8 @@ Last updated November 25, 2026.
 | Objective | Status | Done so far | Next step |
 | --- | --- | --- | --- |
 | Observation catalog | Available and expanding | [Release 1.3.1](../resources/catalog/README.md#download) holds 710,420 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. | [Planned acquisitions](data-sources.md#planned-ingestions) |
-| Mars apparent motion and geometry | First apparition compared | [The 1595 retrograde passage](mars-apparent-motion.md) compares 21 reductions on 16 dates with four constructions and the JPL DE441 ephemeris. | The other oppositions covered by Tycho’s logs |
-| Historical model comparison | Initial comparison | The 1595 study compares constructions at a common opposition longitude and tabulates every table prediction the log prints for that passage. | Printed predictions across all four logs, more apparitions, and Ursus’s formulation where the sources permit |
+| Mars apparent motion and geometry | Nine oppositions compared | [The 1595 retrograde passage](mars-apparent-motion.md) and [the oppositions of 1580 to 1600](mars-oppositions.md) compare Tycho’s reductions with four constructions and the JPL DE441 ephemeris. | The 1600 opposition, once the calendar of its entries is recorded |
+| Historical model comparison | Mars compared | The opposition study tabulates every Alphonsine, Copernican, and Prutenic prediction of Mars that the logs print near opposition. | Printed predictions for the other planets and away from opposition, and Ursus’s formulation where the sources permit |
 | Mars, Jupiter, and Saturn parallax | Initial calculations | [Recorded and modern corrections](planetary-parallax-comparisons.md) are compared. | Parallax feasibility |
 | Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md) are recomputed under historical and modern assumptions. | Parallax feasibility |
 | Accuracy and refraction | Initial calculations | The [planetary comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. In 1595 Tycho’s Mars longitudes agree with DE441 to about one arcminute where the log prints a usable hour. | Historical refraction tables against modern refraction, then calibrated observing sessions |
@@ -39,6 +39,7 @@ The research program gives each milestone’s
 
 | Date | Result |
 | --- | --- |
+| November 25, 2026 | Study: [Mars at the oppositions of 1580 to 1600](mars-oppositions.md). Tycho’s longitudes agree with a modern ephemeris within 5′ at nine oppositions. The printed table predictions miss by up to 4.7°. |
 | November 25, 2026 | Review of the 1595 Mars study: inputs selected from the catalog by a written rule, printed hours used, the JPL DE441 ephemeris added, and sensitivity, validation, and prediction tables published with a regeneration test. |
 | November 25, 2026 | Study: [Mars reverses direction in 1595](mars-apparent-motion.md), with its inputs, residuals, figure, and script. |
 | November 25, 2026 | Study: [Mars, Jupiter, and Saturn corrections](planetary-parallax-comparisons.md) and [Mercury and Venus parallax](mercury-venus-parallax.md). |
@@ -53,12 +54,11 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
 
 ## Next up
 
-1. **More Mars oppositions.** Repeat the comparison at the other oppositions
-   covered by Tycho’s logs. The selection and time rules were fixed on 1595
-   before any other residual was computed.
-2. **Printed predictions.** Compare the Alphonsine, Copernican, Prutenic, and
-   ephemeris predictions printed throughout the logs with Tycho’s reductions
-   and with a modern ephemeris.
+1. **Printed predictions.** Extend the comparison of printed Alphonsine,
+   Copernican, Prutenic, and ephemeris predictions from Mars near opposition to
+   the other planets and the rest of the logs.
+2. **The 1600 opposition.** Establish the calendar of the 1599 to 1601 entries
+   from the printed pages, then add that opposition.
 3. **Refraction tables.** Compare the refraction tables of Tycho, Longomontanus,
    and Riccioli with modern refraction.
 4. **Printed calculations.** Reproduce selected historical results at their

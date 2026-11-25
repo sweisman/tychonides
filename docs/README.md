@@ -45,6 +45,7 @@ the extraction pipeline.
 | --- | --- |
 | [Research program](research-plan.md) | Questions, milestones, and model-comparison rules. |
 | [Mars reverses direction in 1595](mars-apparent-motion.md) | Four orbital geometries, Tycho’s Mars reductions, and reproducible figures and residuals. |
+| [Mars at the oppositions of 1580 to 1600](mars-oppositions.md) | Tycho’s longitudes against a modern ephemeris, three historical constructions, and the table predictions printed in the logs. |
 | [Mars, Jupiter, and Saturn corrections](planetary-parallax-comparisons.md) | Recorded parallax and refraction corrections beside modern distances and refraction. |
 | [Mercury and Venus parallax](mercury-venus-parallax.md) | Historical reductions and the 1590 Venus experiment under historical and modern assumptions. |
 | [Visualization plan](visualization-plan.md) | Design references, views, and acceptance requirements for the interactive explorer. |

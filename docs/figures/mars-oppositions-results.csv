@@ -1,0 +1,150 @@
+opposition,julian_date,daypart,source_id,printed_page,longitude_id,role,longitude_expression,longitude_degrees_exact,date_weight,epoch_expression,time_basis,days_from_opposition,ptolemaic_minus_log_arcmin,copernican_minus_log_arcmin,tychonic_minus_log_arcmin,modern_minus_log_arcmin,de441_minus_log_arcmin
+I,1580-11-12,,tycho-oo-10,84,assertion-v10-0caacbebc0486fab9d13,reduction,8.36¼ ♊,3293/48,1,H. 10⅚,printed hour from noon,-5.6111,-9.01,-13.51,-5.37,0.82,1.72
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-9d0671470bb160f7823c,reduction,6.47 ♊,4007/60,1/2,,nominal noon,-1.0625,3.07,2.24,3.85,5.02,5.96
+I,1580-11-17,,tycho-oo-10,85,assertion-v10-c6a9066c35fbd715334c,reduction,6.47 ♊,4007/60,1/2,H. 10,printed hour from noon,-0.6458,-5.80,-6.30,-5.32,-4.61,-3.65
+I,1580-12-10,,tycho-oo-10,86,assertion-v10-99dffa47f462bca4ea21,reduction,0.2 ♊,1801/30,1/3,,nominal noon,21.9375,22.02,34.19,2.61,-15.58,-14.23
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-ae8decf44e9e76b2b299,reduction,0.5 ♊,721/12,1/3,,nominal noon,21.9375,19.02,31.19,-0.39,-18.58,-17.23
+I,1580-12-10,,tycho-oo-10,85,assertion-v10-f0e003c85866a1a530fb,reduction,0.15 ♊,241/4,1/3,,nominal noon,21.9375,9.02,21.19,-10.39,-28.58,-27.23
+I,1580-12-24,,tycho-oo-10,88,assertion-v10-812291e91e08939c9b31,reduction,1.20′ ♊,184/3,1,,nominal noon,35.9375,-117.85,-103.88,-145.54,-167.43,-165.39
+II,1582-11-12,morning,tycho-oo-10,174,assertion-v10-4f9e766afeadbe4434f6,reduction,26 35½` ♋,13991/120,1,6¾,printed morning hour,-46.3854,-23.35,-42.91,-21.56,-0.42,1.83
+II,1582-12-26,after_noon,tycho-oo-10,196,assertion-v10-e9e994b277f7663215d0,reduction,17° 38′ 41″` ♋,387521/3600,1,8½,printed hour from noon,-1.8125,-2.19,-2.85,-1.35,-0.58,1.38
+II,1582-12-27,before_noon,tycho-oo-10,197,assertion-v10-efa589a4f3e156ef59a4,reduction,17° 27′ 12″` ♋,8059/75,1,7¼,"nominal noon, hour label open",-1.1667,-5.67,-6.09,-5.12,-4.64,-2.64
+II,1582-12-28,after_noon,tycho-oo-10,198,assertion-v10-0442a61ec47acfcb5e8c,reduction,16 47` ♋,6407/60,1/3,11½,printed hour from noon,0.3125,0.27,0.37,0.12,-0.01,2.06
+II,1582-12-28,,tycho-oo-10,199,assertion-v10-ede656f5a822029865f9,reduction,16° 49′ 32` ♋,96143/900,1/3,H. 11 M. `39¼,printed hour from noon,0.3189,-2.42,-2.31,-2.57,-2.69,-0.63
+II,1582-12-28,after_noon,tycho-oo-10,199,assertion-v10-f3894f19db8512d09a2f,reduction,16 47 56` ♋,96119/900,1/3,11.1′,printed hour from noon,0.2924,-0.20,-0.10,-0.34,-0.46,1.60
+II,1582-12-30,after_noon,tycho-oo-10,198,assertion-v10-011ce04ab82d73eeb140,reduction,16 2 45` ♋,25451/240,1/2,8.3′,printed hour from noon,2.1688,1.70,2.41,0.69,-0.15,2.00
+II,1582-12-30,,tycho-oo-10,197,assertion-v10-b2b03bef8868767e4b23,reduction,16 0½` ♋,12721/120,1/2,,nominal noon,1.8333,11.66,12.26,10.81,10.09,12.22
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-0dbc201d1f8391b8970c,reduction,27 29½ ♌,17699/120,1/3,16 M. 40,printed hour from noon,-16.1076,-1.70,-0.68,2.25,0.31,1.43
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-14ce862ac4154b111aff,reduction,27 29½ ♌,17699/120,1/3,16 M. 40,printed hour from noon,-16.1076,-1.70,-0.68,2.25,0.31,1.43
+III,1585-01-14,,tycho-oo-10,384,assertion-v10-bae21bed003bf65012de,reduction,27 30 11 ♌,531011/3600,1/3,,nominal noon,-16.8021,10.02,11.02,14.18,12.21,13.34
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-78cdc31e97b4ab0728c5,reduction,24 47¼ ♌,11583/80,1/2,,nominal noon,-8.8021,13.19,14.06,14.90,13.59,14.53
+III,1585-01-22,,tycho-oo-10,388,assertion-v10-cb010f1c8848c748a8d1,reduction,24° 47′ 16″ ♌,130309/900,1/2,,nominal noon,-8.8021,13.17,14.04,14.89,13.58,14.52
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-185398c1e894f3b6df67,reduction,23° 58′ 24 ♌,10798/75,1/4,7¼,printed hour from noon,-6.5000,10.41,11.11,11.52,10.51,11.36
+III,1585-01-24,,tycho-oo-10,388,assertion-v10-7d96dbed7d8f79f831f9,reduction,24 7¼ ♌,34589/240,1/4,,nominal noon,-6.8021,8.44,9.17,9.63,8.57,9.44
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-8342247be783608da93e,reduction,24 4 30 ♌,5763/40,1/4,7¼,printed hour from noon,-6.5000,4.31,5.01,5.42,4.41,5.26
+III,1585-01-24,,tycho-oo-10,387,assertion-v10-e87fcb3b778a44df39dd,reduction,24° 7′ 34″ ♌,259427/1800,1/4,,nominal noon,-6.8021,8.13,8.85,9.31,8.25,9.12
+III,1585-01-31,,tycho-oo-10,390,assertion-v10-f429946947b84dc75d8d,adopted_value,23 34 ♌,4307/30,1,,nominal noon,0.1979,-123.26,-123.28,-123.27,-123.24,-122.42
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-087b96ceff2304f4f3b2,reduction,20 11 13 ♌,504673/3600,1/2,6¼,printed hour from noon,3.4583,1.26,0.78,1.17,1.76,2.70
+III,1585-02-03,,tycho-oo-10,389,assertion-v10-42c92e3eec418c910924,reduction,20 11¼ ♌,2243/16,1/2,6¼,printed hour from noon,3.4583,1.22,0.75,1.14,1.73,2.67
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-0f3381d0ffbca6bdc3dd,reduction,19 47 34 ♌,251627/1800,1/2,6.40,printed hour from noon,4.4757,0.67,0.04,0.64,1.40,2.38
+III,1585-02-04,,tycho-oo-10,389,assertion-v10-196b23e26dc00d76f21c,reduction,19 47½ ♌,3355/24,1/2,6.40,printed hour from noon,4.4757,0.73,0.11,0.70,1.46,2.44
+III,1585-02-17,,tycho-oo-10,392,assertion-v10-3bf57ab2a2cc46c7bc8b,reduction,15 12⅗ ♌,13521/100,1,9⅚,printed hour from noon,17.6076,-6.96,-9.34,-2.78,-0.19,0.75
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-4d7768e3d017137d48b0,reduction,11 45 56♌,118589/900,1/2,9⅓,printed hour from noon,40.5868,-26.04,-28.54,-3.82,-1.45,-0.37
+III,1585-03-12,,tycho-oo-10,397,assertion-v10-8f9f952505f5137e4588,reduction,11 45 56 ♌,118589/900,1/2,9⅓,printed hour from noon,40.5868,-26.04,-28.54,-3.82,-1.45,-0.37
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-6524aacfdfda94093713,reduction,11 51 24♌,39557/300,1/2,7⅚,printed hour from noon,44.5243,-29.70,-31.78,-4.07,-2.14,-1.15
+III,1585-03-16,,tycho-oo-10,397,assertion-v10-8831051db605f8ed612f,reduction,11 51 24 ♌,39557/300,1/2,7⅚,printed hour from noon,44.5243,-29.70,-31.78,-4.07,-2.14,-1.15
+III,1585-03-19,,tycho-oo-10,397,assertion-v10-ab40d0bf03f0e7ea505b,adopted_value,12ᵍ 2′ ♌,3961/30,1,8,printed hour from noon,47.5312,-31.44,-33.14,-3.27,-1.73,-0.81
+III,1585-03-26,,tycho-oo-10,398,assertion-v10-6e1322bb4a1316ea5765,reduction,12 50 ♌,797/6,1,8⅓,printed hour from noon,54.5451,-35.24,-35.87,-1.50,-1.00,-0.07
+IV,1587-01-10,morning,tycho-oo-11,181,assertion-v11-2562d51b2c6fea94e901,reduction,3° 5′ 57″ ♎,219719/1200,1,,nominal noon,-55.3056,-1.92,0.11,6.40,-0.98,4.42
+IV,1587-01-14,,tycho-oo-11,181,assertion-v11-f80660e8256c975db49c,reduction,3° 54′ 0″ ♎,1839/10,1,16⅔^h^,printed hour from noon,-50.6111,-6.36,-4.16,2.11,-4.73,0.66
+IV,1587-01-15,,tycho-oo-11,181,assertion-v11-495fe34cb213edaebdd1,reduction,4° 0′ 48″ ♎,13801/75,1,15^h^ 57^m^,printed hour from noon,-49.6410,-5.78,-3.55,2.67,-4.03,1.36
+IV,1587-03-07,after_noon,tycho-oo-11,184,assertion-v11-24118b269c619c507788,reduction,25° 10′ 20″ ♍,31531/180,1,19^h^ 10^m^,printed hour from noon,1.4931,-3.64,-3.54,-3.03,-3.30,1.51
+IV,1587-03-09,after_noon,tycho-oo-11,185,assertion-v11-ceeed2a03c5dc845adef,reduction,24° 32′ ♍,2618/15,1,9½^h^,printed hour from noon,3.0903,-3.15,-2.90,-1.75,-2.37,2.47
+V,1589-04-05,,tycho-oo-11,333,assertion-v11-0348d7c921237b70e9c5,reduction,7° 31′ 10″ ♏,78307/360,1/2,11^h^ 33^m^,printed hour from noon,-8.7826,-5.84,-10.84,-11.88,-4.01,0.55
+V,1589-04-05,,tycho-oo-11,334,assertion-v11-d8f0d8fcba26f771d6fe,reduction,7° 31⅙′ ♏,78307/360,1/2,11^h^ 33^m^,printed hour from noon,-8.7826,-5.84,-10.84,-11.88,-4.01,0.55
+V,1589-04-08,,tycho-oo-11,334,assertion-v11-8fa49d877ca4066a0c0d,reduction,6° 30′,433/2,1/2,12^h^ 54^m^,printed hour from noon,-5.7264,-5.09,-8.54,-9.51,-4.10,0.32
+V,1589-04-08,,tycho-oo-11,333,assertion-v11-8ff50e080039bc7e902b,reduction,6° 29′ 57″ ♏,259799/1200,1/2,12^h^ 54^m^,printed hour from noon,-5.7264,-5.04,-8.49,-9.46,-4.05,0.37
+V,1589-04-13,night,tycho-oo-11,333,assertion-v11-28b813949581cbf2c2ef,reduction,4° 43′ 19″ ♏,772999/3600,1/2,,nominal noon,-1.2639,7.28,6.47,6.16,7.43,11.75
+V,1589-04-13,,tycho-oo-11,334,assertion-v11-e651510f3ea8e342ddc4,reduction,4° 43⅓′,3865/18,1/2,11^h^ 17^m^,printed hour from noon,-0.7938,-2.97,-3.48,-3.68,-2.88,1.44
+V,1589-04-14,noon,tycho-oo-11,334,assertion-v11-bcd7c333371803d2d751,reduction,4° 30′ 49″ ♏,772249/3600,1/3,,nominal noon,-0.2639,-2.03,-2.20,-2.27,-2.00,2.32
+V,1589-04-14,,tycho-oo-11,334,assertion-v11-dc23fcb8183e14ccfb4c,reduction,4° 24′ 33″ ♏,257291/1200,1/3,,nominal noon,-0.2639,4.24,4.06,3.99,4.26,8.59
+V,1589-04-14,,tycho-oo-11,334,assertion-v11-f4d41da404b7c19ed1a2,reduction,4° 24½′ ♏,25729/120,1/3,6^h^ 22⅚^m^,printed hour from noon,0.0020,-1.54,-1.54,-1.54,-1.54,2.78
+V,1589-04-15,,tycho-oo-11,334,assertion-v11-2548886149d33b343724,reduction,3° 58⅓′,7703/36,1/2,12^h^ 5^m^,printed hour from noon,1.2396,-2.63,-1.81,-1.45,-2.73,1.62
+V,1589-04-15,,tycho-oo-11,333,assertion-v11-c26ccc74b1b80543dfd4,reduction,3° 58′ 21″ ♏,85589/400,1/2,,nominal noon,0.7361,8.46,8.95,9.16,8.40,12.73
+V,1589-04-20,,tycho-oo-11,333,assertion-v11-1fd06477cb62bdc904a0,reduction,2° 10′ 5″ ♏,152761/720,1/2,,nominal noon,5.7361,6.08,10.05,12.13,5.96,10.49
+V,1589-04-20,,tycho-oo-11,334,assertion-v11-deb080d51628f564e061,reduction,2° 10 1/12′,152761/720,1/2,11^h^ 1^m^,printed hour from noon,6.1951,-4.02,0.28,2.57,-4.11,0.44
+V,1589-04-22,,tycho-oo-11,334,assertion-v11-58744290285531281f87,reduction,1° 39⅙′,15239/72,1,11^h^ 29^m^,printed hour from noon,8.2146,-17.14,-11.37,-8.08,-17.02,-12.39
+V,1589-04-23,,tycho-oo-11,334,assertion-v11-515e504b5221ba159a07,reduction,1° 4⅚′,75989/360,1,10^h^ 42^m^,printed hour from noon,9.1819,-3.60,2.89,6.68,-3.35,1.33
+V,1589-04-24,,tycho-oo-11,334,assertion-v11-4fe291974f019a6f79df,reduction,0° 43½′,8429/40,1,10^h^ 36^m^,printed hour from noon,10.1778,-3.41,3.82,8.16,-2.99,1.71
+V,1589-04-26,,tycho-oo-11,334,assertion-v11-480e0600888a3c85cdc3,reduction,0° 2½′,5041/24,1,11^h^ 14^m^,printed hour from noon,12.2042,-4.42,4.29,9.81,-3.60,1.12
+V,1589-05-06,,tycho-oo-11,335,assertion-v11-68051812399fda78840a,reduction,27° 7⅓′ ♎,18641/90,1,,nominal noon,21.7361,-0.25,15.01,26.75,3.57,8.04
+VI,1591-04-29,after_midnight,tycho-oo-12,140,assertion-v12-26a82b99670d2d524349,reduction,2° 15⅙′ ♑,98011/360,1/2,,nominal noon,-40.3229,-0.40,-16.37,-31.62,-3.99,-6.00
+VI,1591-04-29,,tycho-oo-12,151,assertion-v12-b531b0b7f399635dd188,reduction,2° 15⅙′ ♑,98011/360,1/2,14^h^ 0^m^,printed hour from noon,-39.7396,3.17,-12.78,-28.23,-0.74,-2.72
+VI,1591-05-12,,tycho-oo-12,140,assertion-v12-6665d149c230bae9695d,reduction,2° 24′ 27″ ♑,108963/400,1,,nominal noon,-27.3229,10.86,-3.36,-21.14,1.39,-0.30
+VI,1591-05-14,morning,tycho-oo-12,140,assertion-v12-6a505cbb4a9a1b26918e,reduction,2° 20′ ♑,817/3,1,,nominal noon,-25.3229,6.96,-6.71,-24.41,-3.04,-4.81
+VI,1591-05-19,after_midnight,tycho-oo-12,141,assertion-v12-5b8535643caac637abd2,reduction,1° 34¾′ ♑,65179/240,1,,nominal noon,-20.3229,17.58,5.65,-11.06,6.91,4.96
+VI,1591-05-21,after_midnight,tycho-oo-12,141,assertion-v12-98f3996e7476fc9f25fa,reduction,1° 15′ 48″ ♑,81379/300,1,,nominal noon,-18.3229,17.28,6.20,-9.79,6.65,4.68
+VI,1591-05-24,after_midnight,tycho-oo-12,142,assertion-v12-ef2d3f1c264a8c329347,reduction,0° 40⅓′ ♑,48721/180,1,,nominal noon,-15.3229,18.35,8.70,-5.82,8.16,6.22
+VI,1591-05-29,after_midnight,tycho-oo-12,142,assertion-v12-3122dfe293a768234e36,reduction,29° 30⅓′ ♐,48511/180,1/2,,nominal noon,-10.3229,17.47,10.62,-0.41,9.14,7.45
+VI,1591-05-29,,tycho-oo-12,151,assertion-v12-8ab00c1d901050895ebb,reduction,29° 30⅓′ ♐,48511/180,1/2,12^h^ 42^m^,printed hour from noon,-9.7937,9.08,2.55,-8.04,1.02,-0.63
+VI,1591-06-06,,tycho-oo-12,150,assertion-v12-82b66b4b1c45961d8050,adopted_value,27° 15′ 0″ ♐,1069/4,1,12^h^ 10^m^,printed hour from noon,-1.8160,2.23,0.97,-1.29,0.35,-1.12
+VI,1591-06-08,,tycho-oo-12,150,assertion-v12-0378a570b318339ac30e,reduction,26° 37′ 42″ ♐,159977/600,1/2,,nominal noon,-0.3229,10.61,10.38,9.97,10.26,8.74
+VI,1591-06-08,,tycho-oo-12,151,assertion-v12-b7bd2546d74f84f0c799,reduction,26° 37′ 42″ ♐,159977/600,1/2,13^h^ 18^m^,printed hour from noon,0.2313,-0.23,-0.07,0.23,0.02,-1.52
+VI,1591-06-10,,tycho-oo-12,150,assertion-v12-7b18f81a539a443ea329,adopted_value,26° 2½′ ♐,6385/24,1,11^h^ 40^m^,printed hour from noon,2.1632,-3.08,-1.57,1.24,-0.64,-2.29
+VI,1591-06-11,before_midnight,tycho-oo-12,143,assertion-v12-280826c7d08520c32778,reduction,25° 43½′ ♐,10629/40,1/3,,nominal noon,2.6771,5.76,7.62,11.12,8.81,7.12
+VI,1591-06-11,,tycho-oo-12,148,assertion-v12-392531748407e9c9797e,reduction,25° 38′ ♐,7969/30,1/3,,nominal noon,2.6771,11.26,13.12,16.62,14.31,12.62
+VI,1591-06-11,,tycho-oo-12,149,assertion-v12-8cf99e1043567b05427b,reduction,25° 39′ ♐,5313/20,1/3,,nominal noon,2.6771,10.26,12.12,15.62,13.31,11.62
+VI,1591-06-12,evening,tycho-oo-12,143,assertion-v12-013a7e92602f82519fa2,reduction,25° 25⅔′ ♐,47777/180,1,,nominal noon,3.6771,3.81,6.36,11.21,8.07,6.33
+VI,1591-06-28,evening,tycho-oo-12,144,assertion-v12-245732594e8836e6f0da,reduction,21° 12⅓′ ♐,47017/180,1/2,,nominal noon,19.6771,-22.54,-10.92,15.43,3.40,1.90
+VI,1591-06-28,night,tycho-oo-12,149,assertion-v12-58195a88f63bc32a5d26,reduction,21° 9′ 48″ ♐,78349/300,1/2,,nominal noon,19.6771,-20.01,-8.38,17.97,5.93,4.43
+VI,1591-07-16,evening,tycho-oo-12,144,assertion-v12-6760c5fd2ab17c2525e2,reduction,20° 8′ ♐,3902/15,1,,nominal noon,37.6771,-67.05,-52.29,-10.95,-22.61,-24.61
+VII,1593-07-21,,tycho-oo-12,291,assertion-v12-5c5b778a6db75d556ca1,reduction,17° 45¾′ ♓,27821/80,1,14^h^ 0^m^,printed hour from noon,-35.1458,49.29,40.34,-7.55,-2.05,-0.51
+VII,1593-07-22,morning,tycho-oo-12,283,assertion-v12-b4248e324541e71b5dc2,reduction,17° 45′ 45″ ♓,27821/80,1,2^h^ 0^m^,printed morning hour,-35.1458,49.29,40.34,-7.55,-2.05,-0.51
+VII,1593-07-24,,tycho-oo-12,291,assertion-v12-b7c104bbbe82b2afbc83,reduction,17° 51⅓′,31307/90,1,13 40,printed hour from noon,-32.1597,46.78,38.01,-7.11,-2.02,-0.61
+VII,1593-07-25,morning,tycho-oo-12,284,assertion-v12-94dce412074347f7f6a6,reduction,17° 51′ 20″ ♓,31307/90,1,1^h^ 40^m^,printed morning hour,-32.1597,46.78,38.01,-7.11,-2.02,-0.61
+VII,1593-07-30,,tycho-oo-12,291,assertion-v12-40755103ef48662a8a87,reduction,17° 39½′,41719/120,1,13 45,printed hour from noon,-26.1562,41.06,32.94,-5.32,-1.03,0.38
+VII,1593-07-31,morning,tycho-oo-12,284,assertion-v12-877a664badac854067d3,reduction,17° 39½′ ♓,41719/120,1,1^h^ 45^m^,printed morning hour,-26.1562,41.06,32.94,-5.32,-1.03,0.38
+VII,1593-08-10,,tycho-oo-12,291,assertion-v12-ff74ce13b52b463e68fe,reduction,16° 7½′,2769/8,1,13 45,printed hour from noon,-15.1562,23.46,17.78,-4.39,-1.58,0.35
+VII,1593-08-11,morning,tycho-oo-12,285,assertion-v12-42456a6cbd7e6d6bd4b5,reduction,16° 7½′ ♓,2769/8,1,1¾^h^,printed morning hour,-15.1562,23.46,17.78,-4.39,-1.58,0.35
+VII,1593-08-17,,tycho-oo-12,291,assertion-v12-095c99f5e5894f825eba,reduction,14° 29′ 5″,248029/720,1,13 0,printed hour from noon,-8.1875,12.23,8.92,-2.27,-0.59,1.06
+VII,1593-08-18,morning,tycho-oo-12,286,assertion-v12-1522117bc221a3032739,reduction,14° 29¹⁄₁₂′ ♓,248029/720,1,1^h^ 0^m^,printed morning hour,-8.1875,12.23,8.92,-2.27,-0.59,1.06
+VII,1593-08-20,,tycho-oo-12,291,assertion-v12-3ce9cb463e1fc5672a9c,reduction,13° 44′ 0″,5156/15,1,13 0,printed hour from noon,-5.1875,4.59,2.45,-4.30,-3.18,-1.70
+VII,1593-08-21,,tycho-oo-12,291,assertion-v12-29ea0a79b64a6671b08b,reduction,13° 26′ 30″,41213/120,1/3,12 30,printed hour from noon,-4.2083,4.51,2.77,-2.60,-1.69,-0.24
+VII,1593-08-21,before_midnight,tycho-oo-12,287,assertion-v12-e43edf3b126d869dcc12,reduction,13° 26½′ ♓,41213/120,1/3,0½^h^,printed hour from noon,-4.7083,13.50,11.56,5.49,6.51,7.97
+VII,1593-08-21,morning,tycho-oo-12,286,assertion-v12-fbe3dab39b09cef04667,reduction,13° 44′ ♓,5156/15,1/3,1^h^ 0^m^,printed morning hour,-5.1875,4.59,2.45,-4.30,-3.18,-1.70
+VII,1593-08-22,,tycho-oo-12,291,assertion-v12-0fec23284c77d1b68084,reduction,13° 10′ 15″,82361/240,1/2,12 20,printed hour from noon,-3.2153,2.84,1.50,-2.52,-1.81,-0.38
+VII,1593-08-22,after_midnight,tycho-oo-12,289,assertion-v12-5d4b721c9e5cc799a1ce,reduction,13° 10¼′ ♓,82361/240,1/2,0⅓^h^,"nominal noon, hour label open",-3.7292,12.12,10.57,5.86,6.68,8.12
+VII,1593-08-23,,tycho-oo-12,290,assertion-v12-2fba24d65e98c5766f90,reduction,12° 54⅚′ ♓,123449/360,1/3,12⅚^h^,printed hour from noon,-2.1944,-0.22,-1.13,-3.82,-3.32,-1.89
+VII,1593-08-23,,tycho-oo-12,291,assertion-v12-786ce100e0ed1e13b90e,reduction,12° 54′ 20″,61723/180,1/3,11 0,printed hour from noon,-2.2708,1.66,0.72,-2.06,-1.55,-0.13
+VII,1593-08-23,,tycho-oo-12,290,assertion-v12-fe4ec2beed747dc9f939,reduction,12° 54⅓′ ♓,61723/180,1/3,11^h^,printed hour from noon,-2.2708,1.66,0.72,-2.06,-1.55,-0.13
+VII,1593-08-24,after_noon,tycho-oo-12,291,assertion-v12-7cb6c93380539df4ed35,reduction,12° 41⅔′ ♓,12337/36,1/4,5^h^ 4^m^,printed hour from noon,-1.5181,0.71,0.07,-1.75,-1.41,0.03
+VII,1593-08-24,,tycho-oo-12,290,assertion-v12-a31fd62a20afc5980f4e,reduction,12° 37′ 50″ ♓,123347/360,1/4,10½^h^,printed hour from noon,-1.2917,0.45,-0.09,-1.64,-1.34,0.10
+VII,1593-08-24,,tycho-oo-12,291,assertion-v12-c2b87ea71b2371907177,reduction,12° 37′ 50″,123347/360,1/4,10 30,printed hour from noon,-1.2917,0.45,-0.09,-1.64,-1.34,0.10
+VII,1593-08-24,,tycho-oo-12,290,assertion-v12-dd354b6b06d00dbfd2e3,reduction,12° 40′ 15″ ♓,82241/240,1/4,11^h^ 0^m^,printed hour from noon,-1.2708,-2.34,-2.88,-4.40,-4.11,-2.67
+VII,1593-08-29,,tycho-oo-12,291,assertion-v12-0a647639f401e3a9b80d,reduction,11° 15′ 25″,49141/144,1/2,10 20,printed hour from noon,3.7014,-5.60,-4.05,-0.23,-1.13,0.55
+VII,1593-08-29,,tycho-oo-12,290,assertion-v12-0e779869f7c133c65908,reduction,11° 15⅖′ ♓,102377/300,1/2,10⅓^h^,printed hour from noon,3.7014,-5.58,-4.03,-0.21,-1.11,0.56
+VII,1593-09-21,,tycho-oo-12,292,assertion-v12-3e8f091f9a82377c43f0,reduction,7° 20⅙′ ♓,121441/360,1,9⅔^h^,printed hour from noon,26.6736,-7.61,1.24,6.50,-1.34,0.32
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-20db458f540ce93400c1,reduction,24⅓° ♉,163/3,1/2,,nominal noon,-54.0278,1.69,-16.42,-15.03,4.01,7.05
+VIII,1595-09-07,morning,tycho-oo-12,443,assertion-v12-e804babe099a9bca3e7c,reduction,24½° ♉,109/2,1/2,,nominal noon,-54.0278,-8.31,-26.42,-25.03,-5.99,-2.95
+VIII,1595-09-18,morning,tycho-oo-12,444,assertion-v12-0e7a226dafa92c0715fd,reduction,26° 7′ 13″ ♉,202033/3600,1,,nominal noon,-43.0278,-11.11,-30.51,-22.44,-0.81,2.55
+VIII,1595-09-30,before_noon,tycho-oo-12,445,assertion-v12-059112b0c0b9680ae17c,reduction,26° 6½′ ♉,6733/120,1,4^h^,"nominal noon, hour label open",-31.0278,-21.30,-39.66,-25.00,-3.20,-0.19
+VIII,1595-10-12,evening,tycho-oo-12,446,assertion-v12-f9c426621027d177597c,reduction,23° 52½′ ♉,431/8,1,,nominal noon,-19.0278,-18.42,-32.08,-15.75,1.53,4.73
+VIII,1595-10-16,morning,tycho-oo-12,446,assertion-v12-1eb4b7b5b0f47732a503,reduction,22° 55¾′ ♉,12703/240,1,3^h^ 35^m^,printed morning hour,-15.3785,-21.67,-33.15,-18.02,-3.22,0.10
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-8fad832b40a7dee4ed8d,reduction,19° 53′ 0″ ♉,2993/60,1/2,6¾^h^,printed morning hour,-6.2465,-14.64,-19.53,-11.54,-4.92,-1.89
+VIII,1595-10-25,morning,tycho-oo-12,447,assertion-v12-e12465198fe70aae5c47,reduction,19° 52′ 0″ ♉,748/15,1/2,,nominal noon,-6.0278,-18.10,-22.83,-15.07,-8.68,-5.66
+VIII,1595-10-26,evening,tycho-oo-12,449,assertion-v12-7085805d3baffaffb868,reduction,19° 13′ 23″ ♉,177203/3600,1,11⅙^h^,printed hour from noon,-4.5625,-9.50,-13.08,-7.03,-2.15,0.82
+VIII,1595-10-27,,tycho-oo-12,453,assertion-v12-f4f95893cb28d701b270,reduction,18° 52′ 15″ ♉,11729/240,1/2,12⅓^h^,printed hour from noon,-3.5139,-9.90,-12.66,-7.89,-4.12,-1.17
+VIII,1595-10-27,,tycho-oo-12,453,assertion-v12-f9acb381e9dd52684f3f,reduction,18° 51¼′ ♉,2345/48,1/2,12⅓^h^,printed hour from noon,-3.5139,-8.90,-11.66,-6.89,-3.12,-0.17
+VIII,1595-10-28,,tycho-oo-12,453,assertion-v12-1781ddd8f4beda09ed96,adopted_value,18° 28′ 22″ ♉,87251/1800,1,12¼^h^,printed hour from noon,-2.5174,-6.46,-8.43,-4.95,-2.24,0.69
+VIII,1595-10-29,,tycho-oo-12,455,assertion-v12-dd8eae8af843ce0ec9d4,reduction,17° 56′ 5″ ♉,34513/720,1/2,21^h^ 46^m^,printed hour from noon,-1.1208,-2.70,-3.58,-1.99,-0.78,2.15
+VIII,1595-10-29,,tycho-oo-12,453,assertion-v12-f886040087c54dd7a9b1,reduction,17° 56½′ ♉,5753/120,1/2,21^h^ 50^m^,printed hour from noon,-1.1181,-3.18,-4.05,-2.47,-1.26,1.67
+VIII,1595-10-30,,tycho-oo-12,454,assertion-v12-2369dee87ecbbd5b113c,adopted_value,17° 48⅔′ ♉,4303/90,1,8^h^,printed hour from noon,-0.6944,-3.95,-4.49,-3.50,-2.75,0.18
+VIII,1595-11-03,,tycho-oo-12,455,assertion-v12-cbb6b8fd20a433092ac0,adopted_value,16° 18⅓′ ♉ limited,1667/36,1,12^h^,printed hour from noon,3.4722,3.72,6.37,1.14,-2.61,0.47
+VIII,1595-11-23,,tycho-oo-12,456,assertion-v12-71c83e720e8a7ff588a2,reduction,11° 6¾′ ♉,3289/80,1,9½^h^,printed hour from noon,23.3681,40.66,54.13,17.86,-2.87,0.41
+VIII,1595-12-06,,tycho-oo-12,457,assertion-v12-7942d36656cb182ba466,reduction,10° 26′ 16″ ♉,18197/450,1/2,,nominal noon,35.9722,54.97,70.63,21.24,-4.14,-0.44
+VIII,1595-12-06,,tycho-oo-12,457,assertion-v12-f97d7c000c8cfd6baaee,reduction,10° 25′ 35″ ♉,29107/720,1/2,,nominal noon,35.9722,55.65,71.31,21.93,-3.46,0.24
+VIII,1595-12-18,,tycho-oo-12,460,assertion-v12-fcdc4a8659cf3089bb43,adopted_value,11° 41′ 0″ ♉,2501/60,1,8⅔^h^,printed hour from noon,48.3333,64.32,79.65,24.22,-2.07,1.59
+VIII,1595-12-23,,tycho-oo-12,460,assertion-v12-e00be0eb9c39612baf0e,reduction,12° 39′ 45″ ♉,3413/80,1,,nominal noon,52.9722,61.16,75.98,19.77,-6.24,-2.61
+IX,1597-12-06,,tycho-oo-13,111,assertion-v13-e833f80e3399a4880dfe,reduction,5° 24 M. of ♋,477/5,1,,nominal noon,-7.6667,-5.65,-10.39,-1.47,4.55,3.28
+IX,1597-12-10,,tycho-oo-13,112,assertion-v13-387a93f1fec92debbd3f,adopted_value,3 49 ♋³,5629/60,1,,nominal noon,-3.6667,0.64,-1.54,2.79,5.57,4.36
+IX,1597-12-13,after_noon,tycho-oo-13,154,assertion-v13-268177fcc6839bc50269,reduction,2° 29′ ♋,5549/60,1/2,H. 13 M. 35 p.m.,printed hour from noon,-0.1007,0.27,0.21,0.33,0.40,-0.66
+IX,1597-12-13,after_noon,tycho-oo-13,151,assertion-v13-55e2b8c5e402cbc1f461,reduction,2 Gr. 28 Mi. ♋,1387/15,1/2,13 hours Mi. 26 p. M.,printed hour from noon,-0.1069,1.41,1.35,1.47,1.55,0.49
+IX,1597-12-18,,tycho-oo-13,154,assertion-v13-29709473cadf2666d522,reduction,0 32 40 ♋,8149/90,1/2,H. 11⅚,printed hour from noon,4.8264,7.47,10.01,4.46,1.20,0.31
+IX,1597-12-18,,tycho-oo-13,151,assertion-v13-b7e8a3655b368fa99508,reduction,0° 31½′ ♋,3621/40,1/2,,nominal noon,4.3333,19.33,21.63,16.62,13.67,12.78
+X,1599-12-13,,tycho-oo-13,181,assertion-v13-09fe614b2129fb982808,reduction,18° 9′ 12″ ♌,20723/150,1,,nominal noon,-36.5833,-0.55,-7.63,6.20,11.28,13.37
+X,1599-12-14,,tycho-oo-13,181,assertion-v13-c46241ff6066c62cd2b6,reduction,18 14 39,165893/1200,1,,nominal noon,-35.5833,-9.07,-15.86,-2.20,2.63,4.70
+X,1600-01-01,night,tycho-oo-13,219,assertion-v13-4e98d2b8c99b6bcaa0a9,reduction,17 29 47 ♌,494987/3600,1,,nominal noon,-17.5833,-154.25,-156.19,-148.88,-147.84,-145.40
+X,1600-01-05,night,tycho-oo-13,219,assertion-v13-f5a7a6bb7fb86c4b3527,reduction,16 43 3 ♌,54687/400,1,,nominal noon,-13.5833,-181.69,-182.87,-177.49,-176.97,-174.58
+X,1600-01-12,,tycho-oo-13,244,assertion-v13-556bc24afd0e3e2e3fae,reduction,11 0 ♌,131,1,,nominal noon,-6.5833,11.52,11.23,13.41,13.43,15.63
+X,1600-01-19,after_noon,tycho-oo-13,221,assertion-v13-4964e4f607dbd7636300,adopted_value,8° 19′ ♌,7699/60,1,H. 9 M. 40 P.M.,printed hour from noon,0.8194,-1.53,-1.53,-1.72,-1.69,0.69
+X,1600-01-20,night,tycho-oo-13,220,assertion-v13-f1e7fff86d63e17476bc,reduction,12 5 25 ♌,19021/144,1,,nominal noon,1.4167,-242.18,-242.18,-242.49,-242.44,-240.03
+X,1600-01-22,night,tycho-oo-13,221,assertion-v13-0368d5f685ecd8f2097b,adopted_value,11 24 30 ♌,15769/120,1,,nominal noon,3.4167,-248.72,-248.77,-249.38,-249.24,-246.75
+X,1600-01-24,night,tycho-oo-13,221,assertion-v13-d0eeb490f9ccd2162723,reduction,10 38 46 ♌,235163/1800,1,,nominal noon,5.4167,-249.87,-250.01,-250.78,-250.52,-247.98
+X,1600-03-02,after_noon,tycho-oo-13,224,assertion-v13-30de45bb0b854ad2e134,reduction,29 14 46♋,214643/1800,1/2,H. 10,printed hour from noon,43.8333,-31.20,-33.97,-14.91,-12.74,-10.47
+X,1600-03-02,,tycho-oo-13,224,assertion-v13-a500730c99507183f0eb,reduction,♋ 29° 14′ 46″,214643/1800,1/2,,nominal noon,43.4167,-31.90,-34.68,-15.93,-13.75,-11.46
+X,1600-03-09,after_noon,tycho-oo-13,224,assertion-v13-0bd62806ae0693f606ff,reduction,28 57 4♋,26764/225,1/2,H. 9½,printed hour from noon,50.8125,15.90,13.36,37.43,39.26,41.45
+X,1600-03-09,,tycho-oo-13,224,assertion-v13-2750cf22560f51d2fbad,reduction,28 57 4,26764/225,1/2,,nominal noon,50.4167,13.37,10.81,34.61,36.46,38.65
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-d073dfbd63c59da358b3,reduction,29 12 30♋,2861/24,1/2,H. 9⅓,printed hour from noon,56.8056,50.46,48.34,76.33,77.72,80.02
+X,1600-03-15,,tycho-oo-13,224,assertion-v13-ffd14d480c836a0b7126,reduction,29 12 30,2861/24,1/2,,nominal noon,56.4167,46.57,44.42,72.17,73.59,75.89
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-0f13396c0aec379a48af,reduction,29 17 53,429473/3600,1/2,,nominal noon,57.4167,51.36,49.30,77.66,79.00,81.31
+X,1600-03-16,,tycho-oo-13,224,assertion-v13-28445d5692941516b812,reduction,29 17 53♋,429473/3600,1/2,H. 9¼,printed hour from noon,57.8021,55.43,53.40,82.00,83.31,85.62

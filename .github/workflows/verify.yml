@@ -27,7 +27,9 @@ jobs:
       - run: python -m unittest discover -s tests
       - run: tychonides --help
       - name: Regenerate the study tables and figures
-        run: python examples/mars_1595.py --output "$RUNNER_TEMP/mars-1595"
+        run: |
+          python examples/mars_1595.py --output "$RUNNER_TEMP/mars-1595"
+          python examples/mars_oppositions.py --output "$RUNNER_TEMP/mars-oppositions"
       - name: Download versioned catalog assets
         env:
           GH_TOKEN: ${{ github.token }}

@@ -4,7 +4,9 @@ In the autumn of 1595, Tycho’s reductions place Mars in Taurus. Its longitude
 peaks near 26°07′ on September 18 and falls to about 10°26′ on December 6, a
 westward movement of about **15°41′**. By December 18 it is moving eastward
 again. This page sets those reductions beside four constructions of the motion,
-a modern ephemeris, and the table predictions Tycho printed next to them.
+a modern ephemeris, and the table predictions Tycho printed next to them. The
+[opposition study](mars-oppositions.md) repeats it at the other oppositions in
+the logs.
 [*Thesaurus Observationum* III, *Opera Omnia* XII, pp. 443–460](https://arsastronomica.com/works/tycho-brahe-thesaurus-observationum-tomus-tertius/)
 
 ![The 1595 longitude curve and model-minus-log differences](figures/mars-1595-motion.png)
@@ -186,7 +188,8 @@ for each. It consults no model and no ephemeris.
 
 - A candidate is an exact Mars longitude in Tycho’s logs, classed as a
   reduction or an adopted value, with one complete date and a printed zodiac
-  sign, within 60 days of the tabulated opposition.
+  sign, within 60 days of the tabulated opposition. A date the catalog labels
+  Gregorian is moved ten days earlier to the Julian calendar.
 - A date uses its adopted values where the log prints any, and otherwise every
   reduction for that date. The catalog records the page of each entry but not
   its position on the page, so no rule can prefer the first or last trial.

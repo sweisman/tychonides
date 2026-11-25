@@ -1,0 +1,71 @@
+opposition,set,variant,ptolemaic_rms_degrees,copernican_rms_degrees,tychonic_rms_degrees,modern_rms_degrees
+I,sparse,baseline,0.997,0.907,1.215,1.407
+I,sparse,every date read as Gregorian,2.767,2.668,2.846,3.008
+I,sparse,every row at local noon,0.993,0.901,1.215,1.411
+I,sparse,mean Sun opposite Mars at the anchor,1.120,1.017,1.215,1.407
+I,sparse,apsidal line 20 degrees earlier,1.402,1.325,1.584,1.407
+I,sparse,apsidal line 10 degrees earlier,1.195,1.104,1.399,1.407
+I,sparse,apsidal line 10 degrees later,0.823,0.756,1.040,1.407
+II,sparse,baseline,0.191,0.330,0.175,0.065
+II,sparse,every date read as Gregorian,3.444,3.424,3.512,3.547
+II,sparse,every row at local noon,0.209,0.337,0.196,0.124
+II,sparse,mean Sun opposite Mars at the anchor,0.138,0.273,0.175,0.065
+II,sparse,apsidal line 20 degrees earlier,0.079,0.137,0.081,0.065
+II,sparse,apsidal line 10 degrees earlier,0.120,0.223,0.117,0.065
+II,sparse,apsidal line 10 degrees later,0.285,0.449,0.252,0.065
+III,main,baseline,0.698,0.707,0.628,0.626
+III,main,every date read as Gregorian,2.687,2.695,2.701,2.687
+III,main,every row at local noon,0.708,0.716,0.636,0.633
+III,main,mean Sun opposite Mars at the anchor,0.628,0.630,0.628,0.626
+III,main,apsidal line 20 degrees earlier,0.728,0.703,0.632,0.626
+III,main,apsidal line 10 degrees earlier,0.726,0.722,0.632,0.626
+III,main,apsidal line 10 degrees later,0.656,0.664,0.629,0.626
+IV,sparse,baseline,0.075,0.053,0.060,0.056
+IV,sparse,every date read as Gregorian,2.839,2.827,2.776,2.836
+IV,sparse,every row at local noon,0.172,0.157,0.140,0.163
+IV,sparse,mean Sun opposite Mars at the anchor,0.528,0.555,0.060,0.056
+IV,sparse,apsidal line 20 degrees earlier,0.697,0.722,0.516,0.056
+IV,sparse,apsidal line 10 degrees earlier,0.349,0.340,0.207,0.056
+IV,sparse,apsidal line 10 degrees later,0.164,0.189,0.242,0.056
+V,main,baseline,0.113,0.134,0.186,0.109
+V,main,every date read as Gregorian,3.344,3.306,3.308,3.369
+V,main,every row at local noon,0.096,0.156,0.219,0.103
+V,main,mean Sun opposite Mars at the anchor,0.112,0.166,0.186,0.109
+V,main,apsidal line 20 degrees earlier,0.158,0.259,0.307,0.109
+V,main,apsidal line 10 degrees earlier,0.118,0.193,0.242,0.109
+V,main,apsidal line 10 degrees later,0.143,0.106,0.141,0.109
+VI,main,baseline,0.357,0.265,0.245,0.143
+VI,main,every date read as Gregorian,2.226,2.150,2.054,2.138
+VI,main,every row at local noon,0.366,0.276,0.255,0.160
+VI,main,mean Sun opposite Mars at the anchor,0.349,0.239,0.245,0.143
+VI,main,apsidal line 20 degrees earlier,0.211,0.290,0.597,0.143
+VI,main,apsidal line 10 degrees earlier,0.242,0.241,0.415,0.143
+VI,main,apsidal line 10 degrees later,0.515,0.368,0.192,0.143
+VII,main,baseline,0.483,0.389,0.084,0.039
+VII,main,every date read as Gregorian,2.108,2.037,1.832,1.846
+VII,main,every row at local noon,0.496,0.402,0.113,0.087
+VII,main,mean Sun opposite Mars at the anchor,0.263,0.169,0.084,0.039
+VII,main,apsidal line 20 degrees earlier,0.839,0.731,0.319,0.039
+VII,main,apsidal line 10 degrees earlier,0.649,0.551,0.112,0.039
+VII,main,apsidal line 10 degrees later,0.355,0.257,0.205,0.039
+VIII,main,baseline,0.502,0.673,0.271,0.060
+VIII,main,every date read as Gregorian,2.459,2.396,2.530,2.656
+VIII,main,every row at local noon,0.508,0.676,0.289,0.129
+VIII,main,mean Sun opposite Mars at the anchor,0.416,0.613,0.271,0.060
+VIII,main,apsidal line 20 degrees earlier,0.282,0.242,0.315,0.060
+VIII,main,apsidal line 10 degrees earlier,0.285,0.415,0.124,0.060
+VIII,main,apsidal line 10 degrees later,0.771,0.944,0.537,0.060
+IX,sparse,baseline,0.131,0.166,0.105,0.101
+IX,sparse,every date read as Gregorian,3.612,3.493,3.701,3.853
+IX,sparse,every row at local noon,0.198,0.225,0.179,0.173
+IX,sparse,mean Sun opposite Mars at the anchor,0.131,0.166,0.105,0.101
+IX,sparse,apsidal line 20 degrees earlier,0.097,0.103,0.094,0.101
+IX,sparse,apsidal line 10 degrees earlier,0.110,0.130,0.096,0.101
+IX,sparse,apsidal line 10 degrees later,0.159,0.205,0.121,0.101
+X,calendar unrecorded,baseline,2.294,2.299,2.317,2.316
+X,calendar unrecorded,every date read as Gregorian,1.486,1.488,1.497,1.498
+X,calendar unrecorded,every row at local noon,2.293,2.298,2.314,2.313
+X,calendar unrecorded,mean Sun opposite Mars at the anchor,2.315,2.316,2.317,2.316
+X,calendar unrecorded,apsidal line 20 degrees earlier,2.288,2.288,2.295,2.316
+X,calendar unrecorded,apsidal line 10 degrees earlier,2.287,2.288,2.300,2.316
+X,calendar unrecorded,apsidal line 10 degrees later,2.320,2.331,2.351,2.316

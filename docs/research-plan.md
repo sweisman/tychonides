@@ -15,7 +15,7 @@ observations can resolve.
 | Strand | Research purpose |
 | --- | --- |
 | Observation catalog | Source-linked measurements and calculations from [Tycho’s four logs](data-sources.md#full-log-coverage), seven supplementary historical books, and modern optical collections. |
-| Mars apparent motion and geometry | [The 1595 retrograde passage](mars-apparent-motion.md) compares 21 reductions on 16 dates with four model geometries and a modern ephemeris, including station dates, retrograde span, and model-relative distances. |
+| Mars apparent motion and geometry | [The 1595 retrograde passage](mars-apparent-motion.md) compares 21 reductions on 16 dates with four model geometries and a modern ephemeris, including station dates, retrograde span, and model-relative distances. [The oppositions of 1580 to 1600](mars-oppositions.md) repeat the comparison under the same rules. |
 | Historical model comparison | The 1595 study includes a geometry comparison at a common opposition longitude and a comparison with the Alphonsine and Copernican predictions printed in the log. Extend to independently reconstructed historical ephemerides, additional apparitions, and Ursus’s formulation where the sources permit. |
 | Interactive visualization | Linked views of planetary geometry, observed directions, predictions and residuals. |
 | Kepler and opposition tables | The passage from readings through reductions to constructed opposition tables. |
