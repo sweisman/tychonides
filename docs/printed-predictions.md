@@ -32,7 +32,7 @@ rest of the logs.
   ahead.
 - **Tycho’s own values agree with DE441 far better than any table.** Where the
   log prints the hour, the median difference between his longitude and DE441
-  is 0.4′ to 4.8′ for Mars, 4′ for Mercury and Venus, and 0.1′ for Jupiter.
+  is 1.0′ to 4.8′ for Mars, 4′ for Mercury and Venus, and 0.1′ for Jupiter.
 
 ## Longitudes
 
@@ -47,15 +47,15 @@ Each cell is the printed value minus DE441, in arcminutes.
 | Venus | Copernicus | 2 | −44 | 44 | 53 |
 | Venus | Stadius | 2 | −20 | 20 | 21 |
 | Venus | Carelli | 2 | +48 | 48 | 48 |
-| Mars, away from opposition | Alphonsine | 25 | −37 | 94 | 227 |
-| Mars, away from opposition | Copernicus | 13 | −4 | 20 | 37 |
+| Mars, away from opposition | Alphonsine | 25 | −38 | 94 | 227 |
+| Mars, away from opposition | Copernicus | 13 | −5 | 20 | 37 |
 | Mars, away from opposition | Prutenic | 10 | +34 | 126 | 240 |
 | Mars, away from opposition | Stadius | 8 | +40 | 32 | 96 |
 | Mars, away from opposition | Leovitius | 1 | −170 | 170 | 170 |
 | Mars, away from opposition | Carelli | 3 | −64 | 65 | 66 |
-| Mars, near opposition | Alphonsine | 57 | +88 | 219 | 318 |
-| Mars, near opposition | Copernicus | 50 | −58 | 111 | 335 |
-| Mars, near opposition | Prutenic | 10 | +20 | 39 | 124 |
+| Mars, near opposition | Alphonsine | 57 | +89 | 219 | 318 |
+| Mars, near opposition | Copernicus | 50 | −57 | 111 | 335 |
+| Mars, near opposition | Prutenic | 10 | +21 | 37 | 124 |
 | Jupiter | Alphonsine | 4 | −59 | 66 | 87 |
 | Jupiter | Copernicus | 2 | −11 | 22 | 33 |
 | Jupiter | Prutenic | 1 | +14 | 14 | 14 |
@@ -85,14 +85,14 @@ for example, share one date.
 | Mercury | Copernicus | 2 | +3 | 7 | 10 |
 | Mercury | Prutenic | 2 | −78 | 78 | 86 |
 | Venus | Alphonsine | 2 | +23 | 51 | 74 |
-| Venus | Copernicus | 2 | +84 | 84 | 168 |
+| Venus | Copernicus | 2 | +85 | 85 | 168 |
 | Mars, away from opposition | Alphonsine | 15 | −5 | 17 | 60 |
-| Mars, away from opposition | Copernicus | 10 | −15 | 14 | 42 |
+| Mars, away from opposition | Copernicus | 10 | −16 | 14 | 42 |
 | Mars, away from opposition | Prutenic | 3 | −33 | 43 | 59 |
 | Mars, away from opposition | Stadius | 1 | −19 | 19 | 19 |
 | Mars, away from opposition | Leovitius | 1 | −13 | 13 | 13 |
-| Mars, near opposition | Alphonsine | 45 | −9 | 12 | 54 |
-| Mars, near opposition | Copernicus | 46 | +20 | 35 | 73 |
+| Mars, near opposition | Alphonsine | 45 | −9 | 12 | 53 |
+| Mars, near opposition | Copernicus | 46 | +20 | 35 | 74 |
 | Mars, near opposition | Prutenic | 5 | −5 | 40 | 54 |
 | Jupiter | Alphonsine | 5 | +12 | 14 | 32 |
 | Jupiter | Copernicus | 2 | +3 | 37 | 40 |
@@ -103,10 +103,10 @@ for example, share one date.
 
 A positive difference is north of DE441. In September 1591 the printed
 latitudes of Venus are −2° 17′ (Alphonsine) and −0° 43′ (Copernicus), where
-DE441 gives −3° 31′ and the log −3° 22′.
+DE441 gives −3° 31′ and the mean of the log’s four values is −3° 25′.
 
 The [summary](figures/printed-predictions-summary.csv) also gives every
-difference from the log, and the medians for the rows with printed hours. The
+difference from the log, and the medians for the rows with a printed hour. The
 [results](figures/printed-predictions-results.csv) list each prediction.
 
 ## May 1564
@@ -144,21 +144,32 @@ calculations for different hours.
   printed entry. It now flags none.
 - **Mercury, October 25, 1586.** Release 1.3.1 dated the four predictions on
   *Opera Omnia* XI p. 79 October 29. Their heading prints October 25, before
-  noon. The log’s own longitude for that morning is 13′ from DE441. The
-  Alphonsine longitude is 167′ ahead and the Prutenic one 99′.
+  noon. The mean of the log’s five longitudes for that day is 13′ from
+  DE441. The Alphonsine longitude is 167′ ahead and the Prutenic one 99′.
+- **Predictions typed by the audit.** Release 1.3.4 types 98 more longitudes
+  and latitudes of the Moon and the planets as predictions, from labels that
+  give them to a named model, a set of tables, or an ephemeris. The catalog
+  does not yet record the name of the source for these values, so 78 of them
+  have no model name here, and 20 have no single complete date. They are
+  listed among the excluded candidates and enter no comparison. The same
+  release gives the log more values of its own on four dates: Mercury on
+  October 25 and 29, 1586, the Moon on January 6, 1587, and Venus on
+  September 27, 1591. The differences from the log changed on those dates.
+  No difference from DE441 changed.
 - **Mars, 1599 and 1600.** The catalog records no calendar for 40 predictions
   from these years. Read as Julian, the log’s own longitudes of October 1599
   lie 4.3° to 4.7° from DE441, the pattern of a ten-day calendar shift. These
   predictions are reported as a separate set in the summary file.
-- **One Copernican entry for Mars in 1591** is printed as 4 sexagenae 7° 42′
-  with no zodiac sign. It is not a place within a sign and is left out.
+- **One Copernican entry for Mars in 1591** is printed as 4 sexagenae 7° 42′.
+  The catalog records it as a mean longitude counted from the first star of
+  Aries. It is not a place in the zodiac and is left out.
 
 | Left out | Count | Reason |
 | --- | ---: | --- |
 | Predictions without a printed latitude direction | 32 | A direction is never supplied from neighboring entries. |
-| Predictions without one complete date | 15 | The date claim is missing, partial, or multiple. |
-| Predictions without a model name | 9 | The table cannot be identified. |
-| Prediction of 30° or more without a zodiac sign | 1 | It cannot be a place within a sign. |
+| Predictions without one complete date | 35 | The date claim is missing, partial, or multiple. |
+| Predictions without a model name | 87 | The catalog records no name for the table. For 78 the page names it. |
+| Prediction that is a mean longitude | 1 | It is counted from the first star of Aries, not from the equinox. |
 | Log values superseded on their date | 55 | The log prints an adopted value for the same date. |
 | Log values without a printed zodiac sign | 38 | A sign is never supplied from neighboring entries. |
 | Log values without a printed latitude direction | 36 | As above. |
@@ -169,12 +180,16 @@ and are compared within the sign.
 
 ## Limits
 
-- **The hour of a prediction is not stated.** DE441 is taken at the hours of
-  the log’s own values for that date where the log prints them, which covers
-  169 predictions. The other 257 compared predictions use local noon. In twelve
-  hours DE441 moves by up to 36′ in longitude for Mercury and Venus, 22′ for
-  Mars, 4′ for Jupiter, and 3′ for Saturn. The noon-based differences carry
-  that much uncertainty. The Jupiter and Saturn results hardly depend on it.
+- **The hour of a prediction is often not stated.** DE441 is taken at the
+  hours of the log’s own values for that date where the log prints them all,
+  which covers 169 predictions. For 63 more the log prints the hour of the
+  calculation itself, and DE441 is taken there. The other 194 compared
+  predictions use local noon. Two of them carry an hour marked “A.M.”, which
+  the rule does not place, because it can mean a clock hour or hours before
+  noon. In twelve hours DE441 moves by up to 36′ in longitude for Mercury and
+  Venus, 22′ for Mars, 4′ for Jupiter, and 3′ for Saturn. The noon-based
+  differences carry that much uncertainty. The Jupiter and Saturn results
+  hardly depend on it.
 - **Small samples.** Mercury appears on 4 dates, Venus on 4, Jupiter on 7, and
   Saturn on 11. Mars appears on 98.
 - **Repeated entries count each time.** A later summary page can repeat a

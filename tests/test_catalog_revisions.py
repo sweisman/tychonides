@@ -8,8 +8,11 @@ import unittest
 from src.catalog_release import CSV_COLUMNS, SCHEMA, encoded
 from src.catalog_revisions import (
     DATE_REVISION,
+    EDITION_READING,
     READING_REVISION,
+    REVIEWED_KINDS,
     apply_date_revisions,
+    apply_edition_readings,
     apply_reading_revisions,
 )
 from src.csv_projection import PUBLISHED_REVIEWS, project_csv
@@ -24,6 +27,14 @@ LINES = [
     "**In the month of March, in the year 1590.** [MENSE MARTIO ANNI 1590.]",
     "| 4 | 2^h^ 46½^m^ [2 46½] | 51° 59′ 35″ |",
     "| 8 51 | 2° 45½′ |",
+    "its longitude from the mean equinox is composed as 5s 9° 9′ 25″, aggregated as 6° 24⅓′ nearly.",
+    "the distance between the limits, which is 3° 15′ of the circle.",
+    "there come 2 days 2 hours 11⅗, and the interval of 733,805 days 16h 54′ 13″ holds them.",
+    "| 19 | 1 | 27 | 33 | 20 | 41 | 24 [recte: 4] |",
+    "the year holds 365 days, 5^h^ 56^m^ 53^s^; at its least it adds to these a further 24^m^ 38^s^.",
+    "| The first star | 7^h^ | 12^m^ |",
+    "| The second star | | 29^m^ |",
+    "the month runs to 29 days, 12^h^ 44^m^ 3^s^ 10‴ 58⁗ [recte: 38⁗] 10^v^.",
 ]
 TEXT = "\n".join(LINES)
 EDITIONS = {SOURCE: {"sha256": hashlib.sha256(TEXT.encode()).hexdigest(), "lines": LINES}}
@@ -214,6 +225,32 @@ def retyping(**changes):
     return decision
 
 
+def southward(**changes):
+    decision = dict(
+        quantity_id=reading("december"),
+        source_id=SOURCE,
+        printed_page=12,
+        source_expression="2° 45½′",
+        version=0,
+        edition_sha256=EDITIONS[SOURCE]["sha256"],
+        previous=dict(
+            quantity="altitude", subject="Venus", reference=None, role="recorded_reading"
+        ),
+        revised=dict(
+            quantity="declination", subject="Venus", reference=None, role="recorded_coordinate"
+        ),
+        direction=dict(previous=None, revised="south", label="8 51"),
+        basis=dict(
+            kind="printed_label",
+            label="8 51",
+            lines=[6],
+            statement="The row names the declination and prints it on this side of the equator.",
+        ),
+    )
+    decision.update(changes)
+    return decision
+
+
 def redating(**changes):
     decision = dict(
         source_id=SOURCE,
@@ -258,6 +295,7 @@ class ProjectionTests(DatabaseCase):
 
     def test_every_reviewed_revision_is_published_with_its_row(self):
         self.assertLessEqual({READING_REVISION, DATE_REVISION}, PUBLISHED_REVIEWS)
+        self.assertLessEqual(set(REVIEWED_KINDS), PUBLISHED_REVIEWS)
 
 
 class ReadingRevisionTests(DatabaseCase):
@@ -320,6 +358,575 @@ class ReadingRevisionTests(DatabaseCase):
         with self.assertRaisesRegex(ValueError, "frozen reading"):
             apply_reading_revisions(db, [retyping(), retyping()], EDITIONS)
 
+    def test_a_printed_direction_is_set_and_one_printed_for_another_value_is_dropped(self):
+        db = self.database()
+        south = southward()
+        with db:
+            apply_reading_revisions(db, [south], EDITIONS)
+        row = exported(db, "december")
+        self.assertEqual(
+            (row["quantity"], row["direction"], row["value_exact"], row["signed_value_exact"]),
+            ("declination", "south", "9930", "-9930"),
+        )
+        review = json.loads(row["scientific_metadata_json"])["interpretation_review"]
+        self.assertEqual((review["previous_direction"], review["direction_label"]), (None, "8 51"))
+        back = dict(
+            south,
+            version=1,
+            previous=south["revised"],
+            revised=south["previous"],
+            direction=dict(previous="south", revised=None, label="8 51"),
+        )
+        with db:
+            apply_reading_revisions(db, [back], EDITIONS)
+        row = exported(db, "december")
+        self.assertEqual(
+            (row["quantity"], row["direction"], row["value_exact"], row["signed_value_exact"]),
+            ("altitude", None, "9930", None),
+        )
+
+    def test_a_direction_the_page_does_not_print_is_rejected(self):
+        cases = (
+            (dict(previous="north", revised="south", label="8 51"), "Direction revision"),
+            (dict(previous=None, revised=None, label="8 51"), "Direction revision"),
+            (dict(previous=None, revised="east", label="8 51"), "Direction revision"),
+            (
+                dict(previous=None, revised="south", label="south"),
+                "do not print the reviewed label",
+            ),
+        )
+        for direction, message in cases:
+            db = self.database()
+            with self.subTest(direction=direction), self.assertRaisesRegex(ValueError, message):
+                apply_reading_revisions(db, [southward(direction=direction)], EDITIONS)
+
+
+CALCULATION = dict(
+    quantity="calculation_angle",
+    subject="Saturn calculation",
+    reference=None,
+    role="historical_input",
+)
+
+
+ELAPSED = dict(CALCULATION, quantity="clock_elapsed_time")
+COUNT = dict(CALCULATION, quantity="source_scalar")
+
+
+def from_text(
+    db, name, expression, value, components, event=None, typing=None, unit="arcsecond", page=12
+):
+    """Add a reading from running text. It is a calculation angle unless typed otherwise."""
+    identifier = reading(name)
+    typing = typing or CALCULATION
+    normalized = dict(status="exact", unit=unit, magnitude=value, signed_magnitude=None)
+    original = dict(
+        typing,
+        id=identifier,
+        volume=12,
+        printed_page=page,
+        direction=None,
+        flags=["not_an_additional_raw_reading"],
+        normalized=normalized,
+        source_date_claim_ids=[],
+    )
+    db.execute(
+        "INSERT INTO quantities VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        (
+            identifier,
+            12,
+            page,
+            expression,
+            typing["role"],
+            event,
+            None,
+            encoded(original),
+            encoded(components),
+            "{}",
+            SOURCE,
+            None,
+            identifier,
+            None,
+            "{}",
+            None,
+        ),
+    )
+    db.execute(
+        "INSERT INTO interpretations VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+        (
+            identifier,
+            0,
+            typing["quantity"],
+            typing["subject"],
+            None,
+            "exact",
+            unit,
+            value,
+            None,
+            encoded(normalized),
+            encoded(components),
+            '["not_an_additional_raw_reading"]',
+            None,
+        ),
+    )
+
+
+def completing(name="composed", **changes):
+    decision = dict(
+        quantity_id=reading(name),
+        source_id=SOURCE,
+        printed_page=12,
+        source_expression="9° 9′ 25″",
+        version=0,
+        edition_sha256=EDITIONS[SOURCE]["sha256"],
+        expression="5s 9° 9′ 25″",
+        components=dict(sign_count="5", degree="9", arcminute="9", arcsecond="25"),
+        previous=dict(CALCULATION),
+        revised=dict(CALCULATION),
+        basis=dict(
+            kind="printed_expression",
+            label="composed as 5s 9° 9′ 25″",
+            lines=[7],
+            statement="The line prints a count of signs before the degrees.",
+        ),
+    )
+    decision.update(changes)
+    return decision
+
+
+def merging(**changes):
+    decision = completing(
+        "minutes",
+        source_expression="15′",
+        expression="3° 15′",
+        components=dict(degree="3", arcminute="15"),
+        absorbed=[reading("degrees")],
+        basis=dict(
+            kind="printed_expression",
+            label="which is 3° 15′ of the circle",
+            lines=[8],
+            statement="The line prints the degrees and the minutes as one distance.",
+        ),
+    )
+    decision.update(changes)
+    return decision
+
+
+YEAR = dict(day="365", hour="5", minute="24", second="38")
+CLOCK = dict(hour="7", minute="29")
+MONTH_FIRST = "29 days, 12^h^ 44^m^ 3^s^ 10‴ 58⁗"
+MONTH = dict(
+    day="29", hour="12", minute="44", second="3", time_third="10", time_fourth="58", time_fifth="10"
+)
+
+
+def in_parts(name, first, parts, components, lines, **changes):
+    decision = completing(
+        name,
+        source_expression=first,
+        expression=" … ".join(parts),
+        parts=parts,
+        components=components,
+        previous=dict(ELAPSED),
+        revised=dict(ELAPSED),
+        basis=dict(
+            kind="printed_expression",
+            label=parts[0],
+            lines=lines,
+            statement="The page prints this value in parts with other text between them.",
+        ),
+    )
+    decision.update(changes)
+    return decision
+
+
+class EditionReadingTests(DatabaseCase):
+    def database(self):
+        db = super().database()
+        with db:
+            from_text(
+                db,
+                "composed",
+                "9° 9′ 25″",
+                "32965",
+                dict(degree="9", arcminute="9", arcsecond="25"),
+            )
+            from_text(db, "sum", "6° 24¼′", "23055", dict(degree="6", arcminute="24 1/4"))
+            from_text(db, "minutes", "15′", "900", dict(arcminute="15"))
+            from_text(db, "degrees", "3°", "10800", dict(degree="3"))
+        return db
+
+    def current(self, db, name):
+        return db.execute(
+            "SELECT expression,version,value_exact,status,unit FROM catalogue WHERE id=?",
+            (reading(name),),
+        ).fetchone()
+
+    def test_a_part_of_a_printed_expression_is_completed_from_its_line(self):
+        db = self.database()
+        with db:
+            revised, absorbed = apply_edition_readings(db, [completing()], EDITIONS)
+        self.assertEqual((revised, absorbed), ([reading("composed")], []))
+        self.assertEqual(
+            self.current(db, "composed"), ("5s 9° 9′ 25″", 1, "572965", "exact", "arcsecond")
+        )
+        intake = db.execute(
+            "SELECT q.expression,i.value_exact FROM quantities q JOIN interpretations i "
+            "ON i.quantity_id=q.id AND i.version=0 WHERE q.id=?",
+            (reading("composed"),),
+        ).fetchone()
+        self.assertEqual(intake, ("9° 9′ 25″", "32965"))
+        review = json.loads(exported(db, "composed")["scientific_metadata_json"])[
+            "interpretation_review"
+        ]
+        self.assertEqual(review["kind"], EDITION_READING)
+        self.assertEqual(review["previous_source_expression"], "9° 9′ 25″")
+        self.assertEqual(review["previous_value_exact"], "32965")
+        self.assertEqual(review["basis"]["source_label"], "composed as 5s 9° 9′ 25″")
+
+    def test_a_reading_the_edition_corrected_takes_the_printed_numerals(self):
+        db = self.database()
+        decision = completing(
+            "sum",
+            source_expression="6° 24¼′",
+            expression="6° 24⅓′",
+            components=dict(degree="6", arcminute="24 1/3"),
+            basis=dict(
+                kind="printed_expression",
+                label="aggregated as 6° 24⅓′",
+                lines=[7],
+                statement="The edition now reads a third where it read a quarter.",
+            ),
+        )
+        with db:
+            apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual(self.current(db, "sum"), ("6° 24⅓′", 1, "23060", "exact", "arcsecond"))
+
+    def test_a_record_that_holds_the_rest_of_the_expression_is_merged(self):
+        db = self.database()
+        with db:
+            absorbed = apply_edition_readings(db, [merging()], EDITIONS)[1]
+        self.assertEqual(absorbed, [reading("degrees")])
+        self.assertEqual(self.current(db, "minutes"), ("3° 15′", 1, "11700", "exact", "arcsecond"))
+        for table, column in (("quantities", "id"), ("interpretations", "quantity_id")):
+            left = db.execute(
+                f"SELECT count(*) FROM {table} WHERE {column}=?", (reading("degrees"),)
+            ).fetchone()[0]
+            self.assertEqual(left, 0)
+        review = json.loads(exported(db, "minutes")["scientific_metadata_json"])[
+            "interpretation_review"
+        ]
+        self.assertEqual(
+            [(record["id"], record["source_expression"]) for record in review["absorbed_readings"]],
+            [(reading("degrees"), "3°")],
+        )
+        self.assertEqual(db.execute("PRAGMA foreign_key_check").fetchall(), [])
+
+    def test_readings_that_the_line_does_not_print_are_rejected(self):
+        thirds = dict(degree="6", arcminute="24 1/3")
+        cases = (
+            (completing(expression="6s 9° 9′ 25″"), "do not print the reviewed label"),
+            (
+                completing(components=dict(sign_count="5", degree="9", arcminute="9")),
+                "Components differ",
+            ),
+            (
+                completing(components=dict(degree="5", arcminute="9", arcsecond="9", second="25")),
+                "component unit mismatch",
+            ),
+            (
+                completing(
+                    components=dict(sign_count="9", degree="5", arcminute="9", arcsecond="25")
+                ),
+                "Components differ",
+            ),
+            (completing(expression="6° 24⅓′", components=thirds), "still print the earlier"),
+            (completing(version=1), "frozen reading"),
+            (completing(expression="9° 9′ 25″"), "frozen reading"),
+            (completing(absorbed=[reading("degrees")]), "Only the rest"),
+            (merging(absorbed=[reading("sum")]), "Only the rest"),
+        )
+        for decision, message in cases:
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                apply_edition_readings(self.database(), [decision], EDITIONS)
+
+    def test_a_reading_left_incomplete_takes_the_part_that_the_edition_now_prints(self):
+        db = self.database()
+        with db:
+            from_text(db, "open", "6°", None, dict(degree="6"))
+            db.execute(
+                "UPDATE interpretations SET status='incomplete' WHERE quantity_id=?",
+                (reading("open"),),
+            )
+            decision = completing(
+                "open",
+                source_expression="6°",
+                expression="6° 24⅓′",
+                components=dict(degree="6", arcminute="24 1/3"),
+                basis=dict(
+                    kind="printed_expression",
+                    label="aggregated as 6° 24⅓′",
+                    lines=[7],
+                    statement="The edition now prints the minutes.",
+                ),
+            )
+            apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual(self.current(db, "open"), ("6° 24⅓′", 1, "23060", "exact", "arcsecond"))
+
+    def test_a_second_record_of_the_same_expression_joins_its_reading(self):
+        whole = dict(
+            source_expression="3° 15′",
+            expression="3° 15′",
+            components=dict(degree="3", arcminute="15"),
+            basis=merging()["basis"],
+        )
+        db = self.database()
+        with db:
+            from_text(db, "whole", "3° 15′", "11700", dict(degree="3", arcminute="15"))
+            from_text(db, "twin", "3° 15′", "11700", dict(degree="3", arcminute="15"))
+            decision = completing("whole", absorbed=[reading("twin")], **whole)
+            revised, absorbed = apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual((revised, absorbed), ([reading("whole")], [reading("twin")]))
+        self.assertEqual(self.current(db, "whole"), ("3° 15′", 1, "11700", "exact", "arcsecond"))
+        self.assertIsNone(self.current(db, "twin"))
+        review = json.loads(
+            db.execute(
+                "SELECT revision_json FROM interpretations WHERE quantity_id=? AND version=1",
+                (reading("whole"),),
+            ).fetchone()[0]
+        )
+        self.assertEqual(
+            [(record["id"], record["source_expression"]) for record in review["absorbed_readings"]],
+            [(reading("twin"), "3° 15′")],
+        )
+
+    def test_a_fragment_joins_a_reading_that_already_holds_the_whole_expression(self):
+        whole = dict(
+            source_expression="3° 15′",
+            expression="3° 15′",
+            components=dict(degree="3", arcminute="15"),
+            basis=merging()["basis"],
+        )
+        db = self.database()
+        with db:
+            from_text(db, "whole", "3° 15′", "11700", dict(degree="3", arcminute="15"))
+            decision = completing("whole", absorbed=[reading("minutes")], **whole)
+            revised, absorbed = apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual((revised, absorbed), ([reading("whole")], [reading("minutes")]))
+        self.assertEqual(self.current(db, "whole"), ("3° 15′", 1, "11700", "exact", "arcsecond"))
+        self.assertIsNone(self.current(db, "minutes"))
+        cases = (
+            (completing("whole", **whole), "frozen reading"),
+            (
+                completing(
+                    "whole",
+                    absorbed=[reading("minutes")],
+                    **dict(whole, components=dict(arcminute="3", arcsecond="15")),
+                ),
+                "keeps its components",
+            ),
+        )
+        for decision, message in cases:
+            db = self.database()
+            from_text(db, "whole", "3° 15′", "11700", dict(degree="3", arcminute="15"))
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                apply_edition_readings(db, [decision], EDITIONS)
+
+    def test_the_end_of_a_value_printed_across_a_page_break_joins_its_reading(self):
+        spelled = dict(
+            source_expression="3 degrees 15 minutes",
+            expression="3° 15′",
+            components=dict(degree="3", arcminute="15"),
+            basis=merging()["basis"],
+        )
+        decision = completing("spelled", absorbed=[reading("end")], **spelled)
+
+        def database(page, parts):
+            db = self.database()
+            whole = dict(degree="3", arcminute="15")
+            from_text(db, "spelled", "3 degrees 15 minutes", "11700", whole)
+            from_text(db, "end", "15 minutes", "900", parts, page=page)
+            return db
+
+        db = database(13, dict(arcminute="15"))
+        with db:
+            absorbed = apply_edition_readings(db, [decision], EDITIONS)[1]
+        self.assertEqual(absorbed, [reading("end")])
+        self.assertEqual(self.current(db, "spelled"), ("3° 15′", 1, "11700", "exact", "arcsecond"))
+        self.assertIsNone(self.current(db, "end"))
+        refused = (
+            (14, dict(arcminute="15")),
+            (13, dict(arcsecond="15")),
+            (12, dict(arcminute="15")),
+        )
+        for page, parts in refused:
+            with (
+                self.subTest(page=page, parts=parts),
+                self.assertRaisesRegex(ValueError, "Only the rest"),
+            ):
+                apply_edition_readings(database(page, parts), [decision], EDITIONS)
+
+    def test_a_value_set_in_neighboring_cells_takes_all_of_them(self):
+        thirds = dict(hour="1", minute="27", second="33", time_third="20")
+        share = dict(proportional_minute="41", proportional_second="24")
+        portion = dict(CALCULATION, quantity="proportional_minutes")
+        cases = (
+            ("hours", "1", "1 | 27 | 33 | 20", thirds, ELAPSED, "15760/3", "second_of_time"),
+            ("share", "41", "41 | 24", share, portion, "69/100", "ratio"),
+        )
+        for name, first, cells, parts, typing, value, unit in cases:
+            db = self.database()
+            decision = completing(
+                name,
+                source_expression=first,
+                expression=cells,
+                components=parts,
+                previous=dict(typing),
+                revised=dict(typing),
+                basis=dict(
+                    kind="printed_expression",
+                    label=cells,
+                    lines=[10],
+                    statement="The row prints the parts of this value in neighboring cells.",
+                ),
+            )
+            with self.subTest(name=name), db:
+                from_text(db, name, first, value, parts, typing=typing, unit=unit)
+                apply_edition_readings(db, [decision], EDITIONS)
+                self.assertEqual(self.current(db, name), (cells, 1, value, "exact", unit))
+
+    def test_a_value_printed_in_parts_shows_each_part_in_printed_order(self):
+        cases = (
+            ("year", "365 days", ["365 days, 5^h^", "24^m^ 38^s^"], YEAR, "31555478", [11]),
+            ("watch", "7^h^", ["7^h^", "29^m^"], CLOCK, "26940", [12, 13]),
+            ("month", MONTH_FIRST, [MONTH_FIRST, "10^v^"], MONTH, "55111172749/21600", [14]),
+        )
+        for name, first, parts, components, value, lines in cases:
+            db = self.database()
+            decision = in_parts(name, first, parts, components, lines)
+            with self.subTest(name=name), db:
+                from_text(db, name, first, value, components, typing=ELAPSED, unit="second_of_time")
+                apply_edition_readings(db, [decision], EDITIONS)
+                self.assertEqual(
+                    self.current(db, name),
+                    (" … ".join(parts), 1, value, "exact", "second_of_time"),
+                )
+
+    def test_parts_that_the_lines_do_not_print_in_this_order_are_rejected(self):
+        whole = dict(hour="7", minute="12")
+        cases = (
+            (
+                "lines cited out of order",
+                in_parts("watch", "7^h^", ["7^h^", "29^m^"], CLOCK, [13, 12]),
+            ),
+            ("an unprinted part", in_parts("watch", "7^h^", ["7^h^", "30^m^"], CLOCK, [12, 13])),
+            ("one part", in_parts("watch", "7^h^", ["7^h^ | 12^m^"], whole, [12])),
+            (
+                "an expression that is not the parts",
+                in_parts(
+                    "watch", "7^h^", ["7^h^", "29^m^"], CLOCK, [12, 13], expression="7^h^ 29^m^"
+                ),
+            ),
+        )
+        for name, decision in cases:
+            db = self.database()
+            with self.subTest(name=name), db:
+                from_text(
+                    db, "watch", "7^h^", "26940", CLOCK, typing=ELAPSED, unit="second_of_time"
+                )
+                with self.assertRaises(ValueError):
+                    apply_edition_readings(db, [decision], EDITIONS)
+
+    def test_a_whole_expression_with_a_number_of_no_stated_unit_keeps_no_value(self):
+        interval = dict(
+            source_expression="2 days 2 hours",
+            expression="2 days 2 hours 11⅗",
+            components={},
+            previous=dict(ELAPSED),
+            revised=dict(ELAPSED),
+            basis=dict(
+                kind="printed_expression",
+                label="2 days 2 hours 11⅗",
+                lines=[9],
+                statement="The line prints a third number without a unit.",
+            ),
+        )
+
+        def database():
+            db = self.database()
+            from_text(
+                db, "interval", "2 days 2 hours", "180000", dict(day="2", hour="2"), None, ELAPSED,
+                "second_of_time",
+            )  # fmt: skip
+            from_text(
+                db, "loose", "11⅗", "58/5", dict(scalar="11 3/5"), None, COUNT, "source_scalar"
+            )
+            return db
+
+        db = database()
+        with db:
+            decision = completing("interval", absorbed=[reading("loose")], **interval)
+            apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual(
+            self.current(db, "interval"), ("2 days 2 hours 11⅗", 1, None, "unsupported", None)
+        )
+        review = json.loads(exported(db, "interval")["scientific_metadata_json"])[
+            "interpretation_review"
+        ]
+        self.assertEqual(review["previous_value_exact"], "180000")
+        # A corrected reading is not a longer one, so it may not lose its value this way.
+        corrected = completing(
+            "sum", source_expression="6° 24¼′", expression="6° 24⅓′", components={}
+        )
+        retyped = completing("interval", **dict(interval, revised=dict(CALCULATION)))
+        for decision in (corrected, retyped):
+            with self.assertRaisesRegex(ValueError, "does not convert"):
+                apply_edition_readings(database(), [decision], EDITIONS)
+
+    def test_a_long_number_that_the_edition_groups_is_the_same_number(self):
+        db = self.database()
+        with db:
+            from_text(
+                db, "hours", "16h 54′ 13″", "60853", dict(hour="16", minute="54", second="13"),
+                None, ELAPSED, "second_of_time",
+            )  # fmt: skip
+            from_text(
+                db, "count", "733805", "733805", dict(scalar="733805"), None, COUNT, "source_scalar"
+            )
+            decision = completing(
+                "hours",
+                source_expression="16h 54′ 13″",
+                expression="733,805 days 16h 54′ 13″",
+                components=dict(day="733805", hour="16", minute="54", second="13"),
+                previous=dict(ELAPSED),
+                revised=dict(ELAPSED),
+                absorbed=[reading("count")],
+                basis=dict(
+                    kind="printed_expression",
+                    label="733,805 days 16h 54′ 13″",
+                    lines=[9],
+                    statement="The line prints the days before the hours.",
+                ),
+            )
+            apply_edition_readings(db, [decision], EDITIONS)
+        self.assertEqual(
+            self.current(db, "hours"),
+            ("733,805 days 16h 54′ 13″", 1, "63400812853", "exact", "second_of_time"),
+        )
+
+    def test_a_reading_is_completed_once_and_a_merged_record_is_gone(self):
+        with self.assertRaisesRegex(ValueError, "frozen reading"):
+            apply_edition_readings(self.database(), [completing(), completing()], EDITIONS)
+        again = completing(
+            "degrees",
+            source_expression="3°",
+            expression="3° 15′",
+            components=dict(degree="3", arcminute="15"),
+            basis=merging()["basis"],
+        )
+        with self.assertRaisesRegex(ValueError, "Missing reviewed historical reading"):
+            apply_edition_readings(self.database(), [merging(), again], EDITIONS)
+
 
 class DateRevisionTests(DatabaseCase):
     def test_a_whole_group_moves_to_the_date_its_table_prints(self):
@@ -354,6 +961,31 @@ class DateRevisionTests(DatabaseCase):
             (DATE_REVISION, [OLD], [new]),
         )
         self.assertEqual(db.execute("PRAGMA foreign_key_check").fetchall(), [])
+
+    def test_a_book_claim_is_revised_without_the_notes_on_its_own_date(self):
+        book = dict(
+            stated(OLD, 12, 20),
+            source_id=SOURCE,
+            source_clock_qualification="After noon of the preceding day",
+            source_date_role="calculation_target",
+        )
+        del book["volume"]
+        db = self.database()
+        db.execute("UPDATE dates SET data_json=? WHERE id=?", (encoded(book), OLD))
+        with db:
+            apply_date_revisions(db, [redating()], EDITIONS)
+        (new,) = db.execute("SELECT date_id FROM group_dates WHERE group_id='event-a'").fetchone()
+        claim = json.loads(
+            db.execute("SELECT data_json FROM dates WHERE id=?", (new,)).fetchone()[0]
+        )
+        self.assertEqual(set(claim), set(book) - {"source_clock_qualification", "source_date_role"})
+        self.assertEqual((claim["source_id"], claim["month"], claim["day"]), (SOURCE, 3, 4))
+        # A date tied to a model is not a plain claim. It is refused.
+        db = self.database()
+        modeled = encoded(dict(book, model_name="Prutenic"))
+        db.execute("UPDATE dates SET data_json=? WHERE id=?", (modeled, OLD))
+        with self.assertRaisesRegex(ValueError, "plain reviewed claim"), db:
+            apply_date_revisions(db, [redating()], EDITIONS)
 
     def test_a_date_the_page_does_not_print_for_a_group_is_withdrawn(self):
         db = self.database()
@@ -435,6 +1067,94 @@ class DateRevisionTests(DatabaseCase):
         row = exported(db, "march")
         self.assertEqual((row["role"], row["interpretation_version"]), ("repeated_reading", 2))
         self.assertEqual(json.loads(row["date_claims_json"])[0]["day"], 4)
+
+    def test_a_line_that_names_the_last_day_of_its_month_keeps_that_rule(self):
+        last = dict(year=1590, month=3, day_rule="last_day_of_month", daypart_original="VESPERI")
+        db = self.database()
+        with db:
+            apply_date_revisions(db, [redating(date=last)], EDITIONS)
+        (new,) = db.execute("SELECT date_id FROM group_dates WHERE group_id='event-a'").fetchone()
+        claim = json.loads(
+            db.execute("SELECT data_json FROM dates WHERE id=?", (new,)).fetchone()[0]
+        )
+        self.assertEqual(
+            (claim["year"], claim["month"], claim["day"], claim["day_rule"], claim["daypart"]),
+            (1590, 3, None, "last_day_of_month", "evening"),
+        )
+        self.assertEqual(claim["component_status"], "partial_named_components")
+        (value,) = db.execute(
+            "SELECT value_json FROM contexts WHERE context_id=?", (new,)
+        ).fetchone()
+        self.assertEqual(
+            json.loads(value),
+            dict(
+                year=1590,
+                month=3,
+                day=None,
+                day_rule="last_day_of_month",
+                daypart_original="VESPERI",
+            ),
+        )
+        printed = json.loads(exported(db, "march")["date_claims_json"])[0]
+        self.assertEqual((printed["day"], printed["day_rule"]), (None, "last_day_of_month"))
+        for date in (
+            dict(last, day_rule="following_named_day"),
+            dict(last, day=31),
+            dict(year=1590, month=3, daypart_original=None),
+        ):
+            db = self.database()
+            with (
+                self.subTest(date=date),
+                self.assertRaisesRegex(ValueError, "complete printed components"),
+            ):
+                apply_date_revisions(db, [redating(date=date)], EDITIONS)
+
+    def test_a_heading_for_the_night_beside_a_named_day_keeps_that_relation(self):
+        night = dict(
+            year=1590, month=3, day=4, daypart_original="NOCTE", day_relation="preceding_night"
+        )
+        db = self.database()
+        with db:
+            apply_date_revisions(db, [redating(date=night)], EDITIONS)
+        (new,) = db.execute("SELECT date_id FROM group_dates WHERE group_id='event-a'").fetchone()
+        claim = json.loads(
+            db.execute("SELECT data_json FROM dates WHERE id=?", (new,)).fetchone()[0]
+        )
+        self.assertEqual(
+            (
+                claim["day"],
+                claim["daypart"],
+                claim["source_date_role"],
+                claim["source_day_relation"],
+                claim["component_status"],
+            ),
+            (4, "night", "observation_label", "preceding_night", "complete_named_components"),
+        )
+        (value,) = db.execute(
+            "SELECT value_json FROM contexts WHERE context_id=?", (new,)
+        ).fetchone()
+        self.assertEqual(
+            json.loads(value), dict(year=1590, month=3, day=4, daypart_original="NOCTE")
+        )
+        printed = json.loads(exported(db, "march")["date_claims_json"])[0]
+        self.assertEqual(printed["source_day_relation"], "preceding_night")
+        for date in (
+            dict(night, day_relation="same_night"),
+            dict(night, daypart_original="VESPERI"),
+            dict(night, daypart_original=None),
+            dict(
+                year=1590,
+                month=3,
+                day_rule="last_day_of_month",
+                **{"daypart_original": "NOCTE", "day_relation": "preceding_night"},
+            ),
+        ):
+            db = self.database()
+            with (
+                self.subTest(date=date),
+                self.assertRaisesRegex(ValueError, "complete printed components"),
+            ):
+                apply_date_revisions(db, [redating(date=date)], EDITIONS)
 
     def test_partial_groups_and_unprinted_readings_are_rejected(self):
         cases = (

@@ -210,6 +210,7 @@ def merge_catalogue_set(
     reviewed_readings=(),
     reviewed_log_pages=(),
     reading_revisions=(),
+    edition_readings=(),
     date_revisions=(),
     editions=None,
     verified_manifests=None,
@@ -217,7 +218,11 @@ def merge_catalogue_set(
     """Combine working catalogue bundles in a single verified export."""
     from .catalog_files import working_files
     from .catalog_release import CSV_COLUMNS
-    from .catalog_revisions import apply_date_revisions, apply_reading_revisions
+    from .catalog_revisions import (
+        apply_date_revisions,
+        apply_edition_readings,
+        apply_reading_revisions,
+    )
     from .csv_projection import project_csv
     from .log_interpretations import apply_log_interpretations, apply_log_page_reviews
 
@@ -235,6 +240,7 @@ def merge_catalogue_set(
     reviewed_readings = tuple(reviewed_readings)
     reviewed_log_pages = tuple(reviewed_log_pages)
     reading_revisions = tuple(reading_revisions)
+    edition_readings = tuple(edition_readings)
     date_revisions = tuple(date_revisions)
     editions = editions or {}
     verified_manifests = verified_manifests or {}
@@ -283,6 +289,7 @@ def merge_catalogue_set(
                 apply_log_interpretations(db, reviewed_readings)
                 apply_log_page_reviews(db, reviewed_log_pages)
                 apply_reading_revisions(db, reading_revisions, editions)
+                apply_edition_readings(db, edition_readings, editions)
                 apply_date_revisions(db, date_revisions, editions)
                 metadata.update(
                     schema_version=encoded(3),
@@ -581,7 +588,7 @@ def main():
     mode.add_argument("--catalogue", type=Path, help="Additional unprojected working catalogue")
     parser.add_argument("--quantities", type=Path)
     parser.add_argument("--overlaps", type=Path)
-    parser.add_argument("--base", default="work/combined-catalogue/expanded", type=Path)
+    parser.add_argument("--base", required=True, type=Path)
     parser.add_argument("--output", default="work/combined-catalogue/imported", type=Path)
     parser.add_argument(
         "--repeat", action="store_true", help="Verify matching catalogue-merge exports"

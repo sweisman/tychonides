@@ -3,8 +3,8 @@
 The study runs offline from printed-predictions-ephemeris.csv. This script
 rebuilds that file from JPL Horizons (DE441): the apparent geocentric ecliptic
 longitude and latitude of date for the Moon and each planet, at local noon and
-the following midnight of every prediction date and at the instant of every
-log value on those dates.
+the following midnight of every prediction date, at the instant of every log
+value on those dates, and at the printed hour of each calculation.
 
     python examples/predictions_ephemeris.py
 

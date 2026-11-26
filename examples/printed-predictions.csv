@@ -1,486 +1,486 @@
-id,source_id,printed_page,body,quantity,model,expression,degrees_exact,basis,julian_date,daypart,calendar_label
-assertion-v10-aca5394e7ff41c780a28,tycho-oo-10,5,Moon,ecliptic_longitude,Carelli,☾ in 5° 5′ ♋,1141/12,printed sign,1564-04-15,,
-assertion-v10-46ae9b6557d0712b0a24,tycho-oo-10,5,Moon,ecliptic_longitude,Stadius,☾ was in 5° 0′ ♋ [Cancer],95,printed sign,1564-04-15,,
-assertion-v10-899f2edce8a030884bd1,tycho-oo-10,25,Moon,ecliptic_latitude,Leovitius,4^g^ 57′,-99/20,printed direction,1570-01-16,,
-assertion-v10-1f9e3aa41821d81a4505,tycho-oo-10,25,Moon,ecliptic_longitude,Leovitius,5^g^ and 5 minutes ♊,781/12,printed sign,1570-01-16,,
-assertion-v10-bc80065cafce01b41a91,tycho-oo-10,25,Moon,ecliptic_longitude,Leovitius,5^g^ 6′ ♊,651/10,printed sign,1570-01-16,,
-assertion-v10-49721d77472e5361694e,tycho-oo-10,25,Moon,ecliptic_longitude,Prutenic,4.20 ♊,193/3,printed sign,1570-01-16,,
-assertion-v10-da0e9e4403490d959ceb,tycho-oo-10,25,Moon,ecliptic_longitude,Prutenic,4^g^ 20′,193/3,printed sign,1570-01-16,,
-assertion-v11-6e55e992a2aa343f4684,tycho-oo-11,31,Moon,ecliptic_latitude,Alphonsine,4° 53½′,-587/120,printed direction,1586-10-24,,
-assertion-v11-c89f654d35bfaf708367,tycho-oo-11,31,Moon,ecliptic_latitude,Alphonsine,4° 53¼′,-391/80,printed direction,1586-10-24,,
-assertion-v11-9dfeadc0667a55fd30a7,tycho-oo-11,31,Moon,ecliptic_latitude,Prutenic,4° 55′,-59/12,printed direction,1586-10-24,,
-assertion-v11-fb52547c3cdaf6d047ee,tycho-oo-11,31,Moon,ecliptic_latitude,Prutenic,4° 5¼′,-327/80,printed direction,1586-10-24,,
-assertion-v11-8978067f9462b2fe1afe,tycho-oo-11,31,Moon,ecliptic_longitude,Alphonsine,26° 15′ ♋,465/4,printed sign,1586-10-24,,
-assertion-v11-c84a1b0790025d0d7766,tycho-oo-11,31,Moon,ecliptic_longitude,Alphonsine,26° 24½′ ♋,13969/120,printed sign,1586-10-24,,
-assertion-v11-0bb4687b129f6caf7641,tycho-oo-11,31,Moon,ecliptic_longitude,Prutenic,26° 15′ ♋,465/4,printed sign,1586-10-24,,
-assertion-v11-381b13a47964ec205c2b,tycho-oo-11,31,Moon,ecliptic_longitude,Prutenic,26° 5′ ♋,1393/12,printed sign,1586-10-24,,
-assertion-v11-02a11f5cce1f6324f35c,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 32′,-68/15,printed direction,1586-10-25,,
-assertion-v11-70cd305d230356e58884,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 31′,-271/60,printed direction,1586-10-25,,
-assertion-v11-d385d8c5bae3c35fe0d1,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 31′,-271/60,printed direction,1586-10-25,,
-assertion-v11-38387f23f1fd23e3e7a7,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 32′,-68/15,printed direction,1586-10-25,,
-assertion-v11-609a1a54fd947475586f,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 33½′,-547/120,printed direction,1586-10-25,,
-assertion-v11-a1f6df2e02ab072139d7,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 32¼′,-363/80,printed direction,1586-10-25,,
-assertion-v11-4e2389a0a70b291bd90d,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,9° 56½′ ♌,15593/120,printed sign,1586-10-25,,
-assertion-v11-5b181d974830a0e0f1ea,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,10° 33⅓′ ♌,1175/9,printed sign,1586-10-25,,
-assertion-v11-6f1cdb5b2d064da4e3c0,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,10° 22′ ♌,3911/30,printed sign,1586-10-25,,
-assertion-v11-46e40debc628acc4fc09,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,10° 24½′ ♌,15649/120,printed sign,1586-10-25,,
-assertion-v11-daf947843d4969152a79,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,9° 57′ ♌,2599/20,printed sign,1586-10-25,,
-assertion-v11-e74978b89826beff0ff2,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,10° 36′ ♌,653/5,printed sign,1586-10-25,,
-assertion-v11-06f213bf894e555432da,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,3° 44′,-56/15,printed direction,1586-10-26,,
-assertion-v11-8ea1bb5f8f032f14a845,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,3° 51′,-77/20,printed direction,1586-10-26,,
-assertion-v11-7c5cfcafd9d703b3ec8d,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,3° 51′,-77/20,printed direction,1586-10-26,,
-assertion-v11-ccfd0b84d8707f560965,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,3° 45′,-15/4,printed direction,1586-10-26,,
-assertion-v11-042f48d78a788e407e03,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,26° 53′ ♌,8813/60,printed sign,1586-10-26,,
-assertion-v11-6cb031d5d47ac8d4f37a,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,25° 10′ ♌,871/6,printed sign,1586-10-26,,
-assertion-v11-48310a0a1f10bc91f4de,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,27° 10′ ♌,883/6,printed sign,1586-10-26,,
-assertion-v11-a1a5d2564288a939decb,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,25° 25′ ♌,1745/12,printed sign,1586-10-26,,
-assertion-v11-9b1832d886f45f450a18,tycho-oo-11,142,Moon,ecliptic_latitude,Alphonsine,0° 57′,-19/20,printed direction,1587-01-06,,
-assertion-v11-4e632b7983bcc134acdd,tycho-oo-11,142,Moon,ecliptic_latitude,Copernicus,0° 58½′,-39/40,printed direction,1587-01-06,,
-assertion-v11-e45de3749b42dcf6643c,tycho-oo-11,142,Moon,ecliptic_longitude,Alphonsine,23° 2′ ♈,691/30,printed sign,1587-01-06,,
-assertion-v11-89816eefec9f24ac63e9,tycho-oo-11,142,Moon,ecliptic_longitude,Copernicus,23° 12′ ♈,116/5,printed sign,1587-01-06,,
-assertion-v11-258586d661eaf03a189b,tycho-oo-11,156,Moon,ecliptic_latitude,Alphonsine,4° 56′,74/15,printed direction,1587-08-04,,
-assertion-v11-5a5d2ffb9658747f0b41,tycho-oo-11,156,Moon,ecliptic_latitude,Prutenic,4° 57′,99/20,printed direction,1587-08-04,,
-assertion-v11-9540ec253be6aa3e3738,tycho-oo-11,156,Moon,ecliptic_longitude,Alphonsine,7° 56′ ♑,4169/15,printed sign,1587-08-04,,
-assertion-v11-80fb89c910628214fbc5,tycho-oo-11,156,Moon,ecliptic_longitude,Prutenic,8° 21′ ♑,5567/20,printed sign,1587-08-04,,
-assertion-v11-80be821e90a9c1c92f95,tycho-oo-11,157,Moon,ecliptic_latitude,Alphonsine,4° 38′,139/30,printed direction,1587-08-05,,
-assertion-v11-91a68de3eb5f7f33e64a,tycho-oo-11,157,Moon,ecliptic_latitude,Prutenic,4° 39⅓′,419/90,printed direction,1587-08-05,,
-assertion-v11-970e0dba83abf0d8a709,tycho-oo-11,157,Moon,ecliptic_longitude,Alphonsine,21° 52′ ♑,4378/15,printed sign,1587-08-05,,
-assertion-v11-aeac0909b559688236a6,tycho-oo-11,157,Moon,ecliptic_longitude,Prutenic,22° 8′ ♑,4382/15,printed sign,1587-08-05,,
-assertion-v11-2e226952a97370a92181,tycho-oo-11,161,Moon,ecliptic_latitude,Alphonsine,4° 47¼′,-383/80,printed direction,1587-08-17,,
-assertion-v11-dcdd7eeddf7694c02de6,tycho-oo-11,161,Moon,ecliptic_latitude,Prutenic,4° 48′,-24/5,printed direction,1587-08-17,,
-assertion-v11-31e67d954139b1dc7e89,tycho-oo-11,161,Moon,ecliptic_longitude,Alphonsine,14° 2′ ♊,2221/30,printed sign,1587-08-17,,
-assertion-v11-a9bfa48aa3af73ee3df8,tycho-oo-11,161,Moon,ecliptic_longitude,Prutenic,13° 44′ ♊,1106/15,printed sign,1587-08-17,,
-assertion-v11-21e6b5c47a850a9e4d4c,tycho-oo-11,162,Moon,ecliptic_latitude,Alphonsine,5° 0′,-5,printed direction,1587-08-18,,
-assertion-v11-d94ee81cc7ddfdebedaf,tycho-oo-11,162,Moon,ecliptic_latitude,Prutenic,4° 59½′,-599/120,printed direction,1587-08-18,,
-assertion-v11-1b4e385871d6792febb7,tycho-oo-11,162,Moon,ecliptic_longitude,Alphonsine,27° 6′ ♊,871/10,printed sign,1587-08-18,,
-assertion-v11-77d8e1a19c5cb663acba,tycho-oo-11,162,Moon,ecliptic_longitude,Prutenic,26° 42′ ♊,867/10,printed sign,1587-08-18,,
-assertion-v12-7439b5d9874955deb17f,tycho-oo-12,126,Moon,ecliptic_latitude,Alphonsine,3° 40′,-11/3,printed direction,1591-12-16,,
-assertion-v12-15857b7cbc2f1ea494e4,tycho-oo-12,126,Moon,ecliptic_longitude,Alphonsine,18° 32′ ♉,728/15,printed sign,1591-12-16,,
-assertion-v12-aa50507f429d96651176,tycho-oo-12,271,Moon,ecliptic_latitude,Alphonsine,0° 10′,1/6,printed direction,1593-03-15,,
-assertion-v12-0c87873492f55b11eda4,tycho-oo-12,271,Moon,ecliptic_longitude,Alphonsine,18° 39′ ♑,5773/20,printed sign,1593-03-15,,
-assertion-v11-ff6b46f49668c4da047b,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1° 44′,26/15,printed direction,1586-10-25,before_noon,
-assertion-v11-28ea39b208eda01ba35b,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,0° 49′,49/60,printed direction,1586-10-25,before_noon,
-assertion-v11-f5bf99e9f99d52ab12ec,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,25° 37⅙′ ♎,74023/360,printed sign,1586-10-25,before_noon,
-assertion-v11-c01383eefad8ae8d8645,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,24° 29½′ ♎,24539/120,printed sign,1586-10-25,before_noon,
-assertion-v11-01f3f1d1d798539d815f,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1° 46′,53/30,printed direction,1586-10-29,,
-assertion-v11-19bd915c6fc851454c93,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1° 6½′,133/120,printed direction,1586-10-29,,
-assertion-v11-2e362f95fce9d8bbbe5f,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,27° 39′ ♎,4153/20,printed sign,1586-10-29,,
-assertion-v11-0d2d9a465848d0d09af2,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,28° 15′ ♎,833/4,printed sign,1586-10-29,,
-assertion-v12-14eac99adcc0cfa014c5,tycho-oo-12,225,Mercury,ecliptic_latitude,Alphonsine,0° 51′ north,17/20,printed direction,1592-02-03,,
-assertion-v12-225254fb4af84bf03211,tycho-oo-12,225,Mercury,ecliptic_latitude,Copernicus,0° 58′ north,29/30,printed direction,1592-02-03,,
-assertion-v12-0049da56e54fe3620949,tycho-oo-12,225,Mercury,ecliptic_longitude,Alphonsine,12° 50′,77/6,within the sign,1592-02-03,,
-assertion-v12-3404040f7310f0ef747f,tycho-oo-12,225,Mercury,ecliptic_longitude,Copernicus,12° 26½′,1493/120,within the sign,1592-02-03,,
-assertion-v12-f843ed602edcdd7a3f6e,tycho-oo-12,226,Mercury,ecliptic_latitude,Alphonsine,1° 20′ north,4/3,printed direction,1592-02-06,,
-assertion-v12-33d5b2848bef0341f870,tycho-oo-12,226,Mercury,ecliptic_latitude,Copernicus,1° 30′ 0″ north,3/2,printed direction,1592-02-06,,
-assertion-v12-3ff62641a2e4814d8e54,tycho-oo-12,226,Mercury,ecliptic_longitude,Alphonsine,16° 43′,1003/60,within the sign,1592-02-06,,
-assertion-v12-36ba311dcdbfd175bcd6,tycho-oo-12,226,Mercury,ecliptic_longitude,Copernicus,15° 6′ 45″,1209/80,within the sign,1592-02-06,,
-assertion-v10-3735277775594624121f,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,♀ in 24° 3′ ♊,1681/20,printed sign,1564-05-01,after_noon,
-assertion-v10-6c0b0f31b092bc698923,tycho-oo-10,5,Venus,ecliptic_longitude,Stadius,♀ in 22° 54′ ♊,829/10,printed sign,1564-05-01,after_noon,
-assertion-v10-efa55a333e8ac8ef6461,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,25° 13′ ♊,5113/60,printed sign,1564-05-02,,
-assertion-v10-f217ef16eaf46f34204e,tycho-oo-10,5,Venus,ecliptic_longitude,Stadius,24th degree and 6′ of ♊,841/10,printed sign,1564-05-02,,
-assertion-v12-17ebd72ef16d0cedc781,tycho-oo-12,71,Venus,ecliptic_latitude,Alphonsine,0° 51′,-17/20,printed direction,1590-09-01,morning,
-assertion-v12-4ff112c28134f74ab973,tycho-oo-12,71,Venus,ecliptic_latitude,Copernicus,0° 22′,-11/30,printed direction,1590-09-01,morning,
-assertion-v12-0d97890b3123b9d5449a,tycho-oo-12,71,Venus,ecliptic_longitude,Alphonsine,7° 50′ ♌,767/6,printed sign,1590-09-01,morning,
-assertion-v12-41177551d2f2475b3c5a,tycho-oo-12,71,Venus,ecliptic_longitude,Copernicus,7° 0′ ♌,127,printed sign,1590-09-01,morning,
-assertion-v12-298a9f0f5f8510f316ea,tycho-oo-12,153,Venus,ecliptic_latitude,Alphonsine,2° 17′ south,-137/60,printed direction,1591-09-27,evening,
-assertion-v12-e0a9c6587c151cc9553f,tycho-oo-12,153,Venus,ecliptic_latitude,Copernicus,0° 43′ south,-43/60,printed direction,1591-09-27,evening,
-assertion-v12-226fa142082840bd215c,tycho-oo-12,153,Venus,ecliptic_longitude,Alphonsine,0° 0′ ♐,240,printed sign,1591-09-27,evening,
-assertion-v12-090b65693f35efb478c3,tycho-oo-12,153,Venus,ecliptic_longitude,Copernicus,0° 0½′ ♐,28801/120,printed sign,1591-09-27,evening,
-assertion-v10-1296401d0ea5dc4377a3,tycho-oo-10,4,Mars,ecliptic_latitude,Alphonsine,southern latitude 1½,-3/2,printed direction,1563-09-20,,
-assertion-v10-3d9e9e970432b8d79d78,tycho-oo-10,4,Mars,ecliptic_longitude,Alphonsine,about 12° 40′ ♉,128/3,printed sign,1563-09-20,,
-assertion-v10-5331823e16bf7f80a20c,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,♂ in 1° 55′,1103/12,printed sign,1564-04-15,,
-assertion-v10-5c94f7122ed71ecbeb28,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,♂ in 3° 16′,1399/15,printed sign,1564-04-15,,
-assertion-v10-e391654215de052f8472,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,♂ in 11° 20′ ♋,304/3,printed sign,1564-05-01,after_noon,
-assertion-v10-319cba07fdbb5aeeca08,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,♂ in 12° 52′ ♋,1543/15,printed sign,1564-05-01,after_noon,
-assertion-v10-150b347b341d76aad293,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,11° 57′ ♋,2039/20,printed sign,1564-05-02,,
-assertion-v10-24759e36b2485f2b3004,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,13° 28′ ♋,1552/15,printed sign,1564-05-02,,
-assertion-v10-58210b69e606aa757cb6,tycho-oo-10,14,Mars,ecliptic_longitude,Alphonsine,28° 2′ ♋,3541/30,printed sign,1568-01-10,before_noon,
-assertion-v10-41cd7475b600ac9d435c,tycho-oo-10,14,Mars,ecliptic_longitude,Prutenic,3° 13′ ♌,7393/60,printed sign,1568-01-10,before_noon,
-assertion-v10-9699d08c537a9faf77d7,tycho-oo-10,15,Mars,ecliptic_latitude,Alphonsine,4 4 B,61/15,printed direction,1568-01-25,night,
-assertion-v10-f30a8879f8a11774f0a1,tycho-oo-10,15,Mars,ecliptic_latitude,Prutenic,3 40 B,11/3,printed direction,1568-01-25,night,
-assertion-v10-b442181f1882e6d1f00b,tycho-oo-10,15,Mars,ecliptic_longitude,Alphonsine,22 16 ♋,1684/15,printed sign,1568-01-25,night,
-assertion-v10-5f89a0eb56207d06c0f7,tycho-oo-10,15,Mars,ecliptic_longitude,Prutenic,27 19 ♋,7039/60,printed sign,1568-01-25,night,
-assertion-v10-315e0309dd1497acab78,tycho-oo-10,18,Mars,ecliptic_longitude,Alphonsine,26 53 ♌,8813/60,printed sign,1569-11-07,morning,
-assertion-v10-bd5a776c40c4dcfda6c5,tycho-oo-10,18,Mars,ecliptic_longitude,Stadius,28 50 ♌,893/6,printed sign,1569-11-07,morning,
-assertion-v10-85fec13193b72f5c56c8,tycho-oo-10,18,Mars,ecliptic_longitude,Alphonsine,27 45,591/4,printed sign,1569-11-09,morning,
-assertion-v10-b212f34b526afd714fea,tycho-oo-10,18,Mars,ecliptic_longitude,Copernicus,29.45,119/4,within the sign,1569-11-09,morning,
-assertion-v10-1de33f6151fbd22d9ebc,tycho-oo-10,18,Mars,ecliptic_longitude,Stadius,29 44,2246/15,printed sign,1569-11-09,morning,
-assertion-v10-3ee14762ab34e6950adb,tycho-oo-10,19,Mars,ecliptic_latitude,Alphonsine,1 40 Sep.,5/3,printed direction,1569-11-11,,
-assertion-v10-57db931c087371d57239,tycho-oo-10,19,Mars,ecliptic_latitude,Stadius,1 47 Sept.,107/60,printed direction,1569-11-11,,
-assertion-v10-18e9cdb78f8a9c139bd6,tycho-oo-10,19,Mars,ecliptic_longitude,Alphonsine,28 37 ♌,8917/60,printed sign,1569-11-11,,
-assertion-v10-cc39b03c80441e249baf,tycho-oo-10,19,Mars,ecliptic_longitude,Stadius,0 38 ♍,4519/30,printed sign,1569-11-11,,
-assertion-v10-e3ad30d43e6147d51212,tycho-oo-10,22,Mars,ecliptic_latitude,Leovitius,3.30,7/2,printed direction,1570-01-07,,
-assertion-v10-3a3a377977b909bd566d,tycho-oo-10,22,Mars,ecliptic_longitude,Leovitius,11.4 ♍,2416/15,printed sign,1570-01-07,,
-assertion-v10-b02304811f0077055a14,tycho-oo-10,22,Mars,ecliptic_longitude,Stadius,15.30 ♍,331/2,printed sign,1570-01-07,,
-assertion-v10-0453f56447fb9f6ac5cb,tycho-oo-10,26,Mars,ecliptic_longitude,Alphonsine,2.5,25/12,within the sign,1570-02-10,,
-assertion-v10-8596a154be2c9d96c486,tycho-oo-10,26,Mars,ecliptic_longitude,Prutenic,8.58,269/30,within the sign,1570-02-10,,
-assertion-v10-4cee78e94aa71c76ac8a,tycho-oo-10,26,Mars,ecliptic_longitude,Alphonsine,29.56 ♌,2249/15,printed sign,1570-02-15,,
-assertion-v10-2fd8c85c516da9f01ad2,tycho-oo-10,26,Mars,ecliptic_longitude,Prutenic,6^g^ 0′ ♍,156,printed sign,1570-02-15,noon,
-assertion-v10-22d0461f46e210731f2b,tycho-oo-10,27,Mars,ecliptic_longitude,Prutenic,1^g^ 13′ ♍,9073/60,printed sign,1570-02-26,,
-assertion-v10-e84b8581f3a8d9f262a0,tycho-oo-10,31,Mars,ecliptic_longitude,Alphonsine,21^g^ 35′ ♌,1699/12,printed sign,1570-03-24,,
-assertion-v10-a0dd4b10bdaa192ae6ee,tycho-oo-10,31,Mars,ecliptic_longitude,Stadius,25^g^ 25 ♌,1745/12,printed sign,1570-03-28,,
-assertion-v10-6a19dd7122f34b4a0e41,tycho-oo-10,34,Mars,ecliptic_latitude,Alphonsine,1 33 B,31/20,printed direction,1570-04-26,,
-assertion-v10-9efad037d2ea36b09b5c,tycho-oo-10,34,Mars,ecliptic_longitude,Alphonsine,27.31 ♌,8851/60,printed sign,1570-04-26,,
-assertion-v10-920efd3e01d511929712,tycho-oo-10,34,Mars,ecliptic_longitude,Prutenic,0 13 ♍,9013/60,printed sign,1570-04-26,,
-assertion-v10-92527a7c52c50982423b,tycho-oo-10,63,Mars,ecliptic_longitude,Alphonsine,`16.18` ♈,163/10,printed sign,1578-09-15,,
-assertion-v10-25844a455a38438be025,tycho-oo-10,63,Mars,ecliptic_longitude,Prutenic,`9.36` ♈,48/5,printed sign,1578-09-15,,
-assertion-v10-b004791fb64b798236c5,tycho-oo-10,65,Mars,ecliptic_latitude,Alphonsine,1 33 M.,-31/20,printed direction,1578-10-23,,
-assertion-v10-a586f848a5dbefa061b1,tycho-oo-10,65,Mars,ecliptic_latitude,Prutenic,2 35 M.,-31/12,printed direction,1578-10-23,,
-assertion-v10-b9978db8ca3a9bcc1686,tycho-oo-10,65,Mars,ecliptic_longitude,Alphonsine,`6 59` ♈,419/60,printed sign,1578-10-23,,
-assertion-v10-1f35d27ea2fcc8f1be63,tycho-oo-10,65,Mars,ecliptic_longitude,Prutenic,`2 24` ♈,12/5,printed sign,1578-10-23,,
-assertion-v10-7632869f96aca1f9dce0,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,5.48 ♊,329/5,printed sign,1580-11-17,,
-assertion-v10-deb9903d19c8921c89e1,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,6.15 ♊,265/4,printed sign,1580-11-17,,
-assertion-v10-04f1d1c1d8dd4bc621cf,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,29.8 ♉,887/15,printed sign,1580-12-10,,
-assertion-v10-0c4b65af31ee58a84cb2,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,29.45 ♉,239/4,printed sign,1580-12-10,,
-assertion-v10-7cf26251709abaff0330,tycho-oo-10,88,Mars,ecliptic_latitude,Alphonsine,2.9,43/20,printed direction,1580-12-24,,
-assertion-v10-81b7a7cbc61242e8490d,tycho-oo-10,88,Mars,ecliptic_latitude,Prutenic,1.46,53/30,printed direction,1580-12-24,,
-assertion-v10-72e6c7e34a4575294d7e,tycho-oo-10,88,Mars,ecliptic_longitude,Alphonsine,28.10 ♉,349/6,printed sign,1580-12-24,,
-assertion-v10-63b94c3e14a212f88500,tycho-oo-10,88,Mars,ecliptic_longitude,Prutenic,29.0 ♉,59,printed sign,1580-12-24,,
-assertion-v10-b771b94a785a5cc0f81c,tycho-oo-10,391,Mars,ecliptic_longitude,Prutenic,16 46⅔ ♋,961/9,printed sign,1582-12-28,after_noon,
-assertion-v10-7bb1545ae7937fe2d906,tycho-oo-10,250,Mars,ecliptic_longitude,Alphonsine,27 52,418/15,within the sign,1583-04-19,,
-assertion-v10-56f5e9ed6fff5ffcab4b,tycho-oo-10,250,Mars,ecliptic_longitude,Copernicus,29 47,1787/60,within the sign,1583-04-19,,
-assertion-v10-1a79c81922f8a2ccd3bd,tycho-oo-10,321,Mars,ecliptic_latitude,Alphonsine,1 55 B.,23/12,printed direction,1584-11-12,after_noon,
-assertion-v10-9b1f9a0501620a0c8c5c,tycho-oo-10,321,Mars,ecliptic_latitude,Copernicus,1 36 B.,8/5,printed direction,1584-11-12,after_noon,
-assertion-v10-7b0cf39ac128befb1891,tycho-oo-10,321,Mars,ecliptic_longitude,Alphonsine,21 40 ♌,425/3,printed sign,1584-11-12,after_noon,
-assertion-v10-5c384f27238b5c099293,tycho-oo-10,321,Mars,ecliptic_longitude,Copernicus,23 52 ♌,2158/15,printed sign,1584-11-12,after_noon,
-assertion-v10-23e3bd6da4383001b64f,tycho-oo-10,391,Mars,ecliptic_longitude,Prutenic,23°4′4″ ♌,128761/900,printed sign,1584-11-12,after_noon,
-assertion-v10-d5dd503581c7a0594909,tycho-oo-10,384,Mars,ecliptic_latitude,Alphonsine,4 9¾ B.,333/80,printed direction,1585-01-14,,
-assertion-v10-3a6d52062f84982fb6e4,tycho-oo-10,384,Mars,ecliptic_latitude,Copernicus,4 5 B.,49/12,printed direction,1585-01-14,,
-assertion-v10-d7536ebe9faf6a616c65,tycho-oo-10,384,Mars,ecliptic_longitude,Alphonsine,24 3 ♌,2881/20,printed sign,1585-01-14,,
-assertion-v10-5af54021fb3ef5168741,tycho-oo-10,384,Mars,ecliptic_longitude,Copernicus,29 35 ♌,1795/12,printed sign,1585-01-14,,
-assertion-v10-94c1bf49eb2d1683f70d,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 16 B.,64/15,printed direction,1585-01-22,,
-assertion-v10-85b9eb2cc995ca621fb2,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 17 B.,257/60,printed direction,1585-01-22,,
-assertion-v10-a43d09d9a4a3d00e933e,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,21 15 ♌,565/4,printed sign,1585-01-22,,
-assertion-v10-61cd9ee24dd9d5f3dc47,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,27 4 ♌,2206/15,printed sign,1585-01-22,,
-assertion-v10-65005f1030717d16d551,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 18⅓ B.,155/36,printed direction,1585-01-24,,
-assertion-v10-83b607c3e07c7121f626,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 19 B.,259/60,printed direction,1585-01-24,,
-assertion-v10-c2f5bd9e11c6890dfde9,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,20 35 ♌,1687/12,printed sign,1585-01-24,,
-assertion-v10-cb03950c405c0320ac32,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,26 25 ♌,1757/12,printed sign,1585-01-24,,
-assertion-v10-92655ee7b1615865a986,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 19 B.,259/60,printed direction,1585-01-31,,
-assertion-v10-a899c47ecc44f6f1851b,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 26½ B.,533/120,printed direction,1585-01-31,,
-assertion-v10-0edefbbf58793631c900,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,17 39 ♌,2753/20,printed sign,1585-01-31,,
-assertion-v10-a8ddeffdd84e2a4d28a8,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,23 38 ♌,4309/30,printed sign,1585-01-31,,
-assertion-v10-2d4020be59a0b59fe17d,tycho-oo-10,389,Mars,ecliptic_latitude,Alphonsine,4 16B.,64/15,printed direction,1585-02-03,,
-assertion-v10-078428848be6b8ad2fc3,tycho-oo-10,389,Mars,ecliptic_latitude,Copernicus,4 27B.,89/20,printed direction,1585-02-03,,
-assertion-v10-1c444b21128cad10b071,tycho-oo-10,389,Mars,ecliptic_longitude,Alphonsine,16 35 ♌,1639/12,printed sign,1585-02-03,,
-assertion-v10-72b57ab46aa5bbca350f,tycho-oo-10,389,Mars,ecliptic_longitude,Copernicus,22 35 ♌,1711/12,printed sign,1585-02-03,,
-assertion-v10-7dbc2245c5903da9936c,tycho-oo-10,389,Mars,ecliptic_latitude,Alphonsine,4 15 B.,17/4,printed direction,1585-02-04,,
-assertion-v10-2a861e1eb1f893ffdf9a,tycho-oo-10,389,Mars,ecliptic_latitude,Copernicus,4 27 B.,89/20,printed direction,1585-02-04,,
-assertion-v10-941acc33d48a0f48f2b3,tycho-oo-10,389,Mars,ecliptic_longitude,Alphonsine,16 11 ♌,8171/60,printed sign,1585-02-04,,
-assertion-v10-7c3a7f78f70e5b82f57e,tycho-oo-10,389,Mars,ecliptic_longitude,Copernicus,22 8 ♌,2132/15,printed sign,1585-02-04,,
-assertion-v10-54853becaa4cde6a2c9d,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,3 2 B.,91/30,printed direction,1585-03-12,,
-assertion-v10-d6b98db41882e3a29832,tycho-oo-10,397,Mars,ecliptic_latitude,Prutenic,3 32 B.,53/15,printed direction,1585-03-12,,
-assertion-v10-9ff98b4e1d9506e04f97,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,8 34½ ♌,5143/40,printed sign,1585-03-12,,
-assertion-v10-ec4b967b55c7cb146219,tycho-oo-10,397,Mars,ecliptic_longitude,Prutenic,12 54 ♌,1329/10,printed sign,1585-03-12,,
-assertion-v10-fc9d6800ad527d4ca64f,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,2 56 B.,44/15,printed direction,1585-03-16,,
-assertion-v10-b3fdf396919761cb74ac,tycho-oo-10,397,Mars,ecliptic_latitude,Copernicus,3 21¼ B.,161/48,printed direction,1585-03-16,,
-assertion-v10-0b1c1ab037ec0c4771d4,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,8 43 ♌,7723/60,printed sign,1585-03-16,,
-assertion-v10-676b1f2cff38e982638d,tycho-oo-10,397,Mars,ecliptic_longitude,Copernicus,12 51 ♌,2657/20,printed sign,1585-03-16,,
-assertion-v10-3efa77b366e146916ffd,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,2 47 B.,167/60,printed direction,1585-03-19,,
-assertion-v10-803369dfa56c3dcf7b1a,tycho-oo-10,397,Mars,ecliptic_latitude,Copernicus,3 14 B.,97/30,printed direction,1585-03-19,,
-assertion-v10-4cc94a110e9665c019f7,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,9 7 ♌,7747/60,printed sign,1585-03-19,,
-assertion-v10-da7bde6ac2e90d4fa6e5,tycho-oo-10,397,Mars,ecliptic_longitude,Copernicus,12 57 ♌,2659/20,printed sign,1585-03-19,,
-assertion-v10-cfd57532e9822f53aaed,tycho-oo-10,398,Mars,ecliptic_latitude,Alphonsine,2 30 B.,5/2,printed direction,1585-03-26,,
-assertion-v10-113356919c42318791af,tycho-oo-10,398,Mars,ecliptic_longitude,Alphonsine,10 0 ♌,130,printed sign,1585-03-26,,
-assertion-v10-5f6631af71848a839501,tycho-oo-10,398,Mars,ecliptic_longitude,Prutenic,13 35 ♌,1603/12,printed sign,1585-03-26,,
-assertion-v10-f1914bec52d5dca09b86,tycho-oo-10,399,Mars,ecliptic_latitude,Alphonsine,1 51 B.,37/20,printed direction,1585-04-15,,
-assertion-v10-edc86f1de8936d2e02bf,tycho-oo-10,399,Mars,ecliptic_latitude,Prutenic,2 12½ B.,53/24,printed direction,1585-04-15,,
-assertion-v10-f4ae5c08518469f31bbe,tycho-oo-10,399,Mars,ecliptic_longitude,Alphonsine,15 10 ♌,811/6,printed sign,1585-04-15,,
-assertion-v10-b3ba1e7d1d75aae9f3fb,tycho-oo-10,399,Mars,ecliptic_longitude,Prutenic,18 0 ♌,138,printed sign,1585-04-15,,
-assertion-v11-1e11d1d6bc6d4b4f377a,tycho-oo-11,64,Mars,ecliptic_latitude,Alphonsine,0° 41½′ north,83/120,printed direction,1586-09-23,,
-assertion-v11-c93f8aeb82fb38a76444,tycho-oo-11,64,Mars,ecliptic_latitude,Copernicus,0° 35′ north,7/12,printed direction,1586-09-23,,
-assertion-v11-7790188d46e359990343,tycho-oo-11,64,Mars,ecliptic_longitude,Alphonsine,12° 54′ ♌,1329/10,printed sign,1586-09-23,,
-assertion-v11-adfc6ba683432054b423,tycho-oo-11,64,Mars,ecliptic_longitude,Copernicus,13° 56′ ♌,2009/15,printed sign,1586-09-23,,
-assertion-v11-4abd57ac8513ee8d0712,tycho-oo-11,185,Mars,ecliptic_latitude,Prutenic,3° 33′,71/20,printed direction,1587-03-09,after_noon,
-assertion-v11-336e778edddcbde1aa82,tycho-oo-11,185,Mars,ecliptic_longitude,Prutenic,26° 38′ ♍,5299/30,printed sign,1587-03-09,after_noon,
-assertion-v11-ba52c94c0ec557c3762d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 16′,19/15,printed direction,1589-04-05,,
-assertion-v11-aecb0f391eb42b99b083,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,2° 4′,31/15,printed direction,1589-04-05,,
-assertion-v11-b9bd3b6205df1989794a,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,6° 27′ ♏,4329/20,printed sign,1589-04-05,,
-assertion-v11-01d9582dad5fdf4d611c,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,9° 19′ ♏,13159/60,printed sign,1589-04-05,,
-assertion-v11-2aad931b721db63ed5fc,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 10′,7/6,printed direction,1589-04-08,,
-assertion-v11-7abd761444288d69e8ba,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,2° 1′,121/60,printed direction,1589-04-08,,
-assertion-v11-e5ee26fd775d359ffddb,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,5° 27′,4309/20,printed sign,1589-04-08,,
-assertion-v11-35a5ffbb6925df59a909,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,8° 14′,6547/30,printed sign,1589-04-08,,
-assertion-v11-9aa012636cab8fe63d5e,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 0′,1,printed direction,1589-04-13,,
-assertion-v11-1d1e15651a78dfd668c2,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 51′,37/20,printed direction,1589-04-13,,
-assertion-v11-052338289fb7f91cd1a0,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,3° 43′,12823/60,printed sign,1589-04-13,,
-assertion-v11-46990590381d475038ff,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,6° 27′,4329/20,printed sign,1589-04-13,,
-assertion-v11-1d7fe8d1061e2c3ce073,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 54′,9/10,printed direction,1589-04-15,,
-assertion-v11-2c4ecd11844a80865191,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 47′,107/60,printed direction,1589-04-15,,
-assertion-v11-e48b8f80cb51f3c4d8c6,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,3° 1′,12781/60,printed sign,1589-04-15,,
-assertion-v11-bc4f81e6be9deffc3f92,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,5° 42′,2157/10,printed sign,1589-04-15,,
-assertion-v11-1fe5e3d2213ea46f3dc7,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 39′,13/20,printed direction,1589-04-20,,
-assertion-v11-499554eb17235f38022f,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 38′,49/30,printed direction,1589-04-20,,
-assertion-v11-d6b84fe1c3606e9f034b,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,1° 14′,6337/30,printed sign,1589-04-20,,
-assertion-v11-af8fa3f3b385fc4ed53d,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,3° 46′,6413/30,printed sign,1589-04-20,,
-assertion-v11-1c33e21969639dc44e3b,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 35′,7/12,printed direction,1589-04-22,,
-assertion-v11-b322f409294a56d0b5d6,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 35′,19/12,printed direction,1589-04-22,,
-assertion-v11-3e53740e168280286e6d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,0° 34′,6317/30,printed sign,1589-04-22,,
-assertion-v11-a24ea3f440c9ae688474,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,3° 1′,12781/60,printed sign,1589-04-22,,
-assertion-v11-62b57532fd3be6a448f8,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 33′,11/20,printed direction,1589-04-23,,
-assertion-v11-3794f6df12cb51da06d9,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 32′,23/15,printed direction,1589-04-23,,
-assertion-v11-190007fffc7e16fe9e5d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,0° 16′,3154/15,printed sign,1589-04-23,,
-assertion-v11-765291e30a8283caf2d4,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,2° 39′,4253/20,printed sign,1589-04-23,,
-assertion-v11-9d447165933791bbf19d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 31′,31/60,printed direction,1589-04-24,,
-assertion-v11-1b41eabdd2b2e33882b6,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 30′,3/2,printed direction,1589-04-24,,
-assertion-v11-fa6e9bc5efc624173d6d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,29° 58′ ♎,6299/30,printed sign,1589-04-24,,
-assertion-v11-e34b191f10bb3a342efa,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,2° 17′,12737/60,printed sign,1589-04-24,,
-assertion-v11-513ece10b8e02041ba4d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 26′,13/30,printed direction,1589-04-26,,
-assertion-v11-5d6c1fc8bd2d5093eac5,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 26′,43/30,printed direction,1589-04-26,,
-assertion-v11-058cc3906e0f0c8a00f6,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,29° 19′,12559/60,printed sign,1589-04-26,,
-assertion-v11-b94e6c0852a147ddaaeb,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,1° 33′,4231/20,printed sign,1589-04-26,,
-assertion-v12-43a047dfb2f2edddf9b9,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1° 30′ south,-3/2,printed direction,1591-04-29,,Julian
-assertion-v12-79a81f0fbae60f4149d8,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,0° 30′ south,-1/2,printed direction,1591-04-29,,Julian
-assertion-v12-b2ecba434ea9f494804f,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,4° 48¾′ ♑,4397/16,printed sign,1591-04-29,,Julian
-assertion-v12-face02b568531e9deecb,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 11′ ♑,16331/60,printed sign,1591-04-29,,Julian
-assertion-v12-b342dbd24b70e8c72af4,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,2° 26½′,-293/120,printed direction,1591-05-12,,Julian
-assertion-v12-05b0d0dad0852458f185,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 6½′,-133/120,printed direction,1591-05-12,,Julian
-assertion-v12-75ee04b8b0649eb26adc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 42½′,137/24,within the sign,1591-05-12,,Julian
-assertion-v12-5c48e140711d328cd390,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 33⅓′,23/9,within the sign,1591-05-12,,Julian
-assertion-v12-d7ec97cb62e1e4aeae2c,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,2° 30¾′,-201/80,printed direction,1591-05-13,,Julian
-assertion-v12-c1952387fc97e2324958,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 8¾′,-55/48,printed direction,1591-05-13,,Julian
-assertion-v12-d66bf1516bafb0293d60,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 42′,57/10,within the sign,1591-05-13,,Julian
-assertion-v12-4b4f979be4c1942ed097,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 30⅓′,451/180,within the sign,1591-05-13,,Julian
-assertion-v12-50b89d5103b11ab167bb,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 4′,-46/15,printed direction,1591-05-19,,Julian
-assertion-v12-bd9e9a1a2b432e182365,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 30′,-3/2,printed direction,1591-05-19,,Julian
-assertion-v12-06fa80b39d9edf45e953,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 20′,16/3,within the sign,1591-05-19,,Julian
-assertion-v12-dcf5ee7648b684c4c887,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1° 50¼′,147/80,within the sign,1591-05-19,,Julian
-assertion-v12-236f75ae4fe2cc4e92f8,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 10⅔′,-143/45,printed direction,1591-05-21,,Julian
-assertion-v12-35ff6c8853fb5c22a535,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 39′,-33/20,printed direction,1591-05-21,,Julian
-assertion-v12-2268c1c0ef74c1951c94,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 4¾′,1219/240,within the sign,1591-05-21,,Julian
-assertion-v12-54efefda98005405100d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1° 31⅓′,137/90,within the sign,1591-05-21,,Julian
-assertion-v12-a73426781485cda3184f,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 19⅔′,-599/180,printed direction,1591-05-24,,Julian
-assertion-v12-9d21c0f644a42d311bfc,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 0′,-2,printed direction,1591-05-24,,Julian
-assertion-v12-bb7f93f087c7abbc018b,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,4° 37′,277/60,within the sign,1591-05-24,,Julian
-assertion-v12-2c6944c0e3d6def440e2,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,0° 52⅓′,157/180,within the sign,1591-05-24,,Julian
-assertion-v12-0a1f314fd1969f100566,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 47′,-227/60,printed direction,1591-05-29,,Julian
-assertion-v12-e503df69381954e1f65e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 27⅚′,-887/360,printed direction,1591-05-29,,Julian
-assertion-v12-fe53db82cc10262bf2dc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,3° 39′,73/20,within the sign,1591-05-29,,Julian
-assertion-v12-fe7dd89e509d4c8e6425,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,29° 36½′ ♐,32353/120,printed sign,1591-05-29,,Julian
-assertion-v12-4ca9d7e1b732fedf62c6,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,4° 34′,-137/30,printed direction,1591-06-06,,Julian
-assertion-v12-fdd72a4596698d0e9319,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 59′,-179/60,printed direction,1591-06-06,,Julian
-assertion-v12-272b780893cb17614c4c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1° 36′,8/5,within the sign,1591-06-06,,Julian
-assertion-v12-f968a16cd639b413001f,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,27° 7′,1627/60,within the sign,1591-06-06,,Julian
-assertion-v12-be9021f26c2b22130549,tycho-oo-12,151,Mars,ecliptic_latitude,Prutenic,3° 8′ south,-47/15,printed direction,1591-06-08,,Julian
-assertion-v12-cbb857ea467d8bdb1430,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,0° 57′ ♑,5419/20,printed sign,1591-06-08,,Julian
-assertion-v12-5dab8a18fa6970c4a78e,tycho-oo-12,151,Mars,ecliptic_longitude,Prutenic,26° 27′ ♐,5329/20,printed sign,1591-06-08,,Julian
-assertion-v12-739f35cfd1f6b957013e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 19′,-199/60,printed direction,1591-06-10,,Julian
-assertion-v12-f9340cac5c8f25c7b4b5,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,0° 18′,3/10,within the sign,1591-06-10,,Julian
-assertion-v12-d59ebaecb37ef33f60cc,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 46′,773/30,within the sign,1591-06-10,,Julian
-assertion-v12-b4c67f8ff38e9a63cb97,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,5° 5′,-61/12,printed direction,1591-06-11,,Julian
-assertion-v12-0e85e4d0244e1133d240,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 19′,-199/60,printed direction,1591-06-11,,Julian
-assertion-v12-3e0adc83930118a9653a,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,29° 58′ ♐,8099/30,printed sign,1591-06-11,,Julian
-assertion-v12-6f1ed2d7376a259dd42b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 25′,305/12,within the sign,1591-06-11,,Julian
-assertion-v12-65989c8876178233c496,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,5° 8′,-77/15,printed direction,1591-06-12,,Julian
-assertion-v12-d30b7007fb7935b265b6,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 21′,-67/20,printed direction,1591-06-12,,Julian
-assertion-v12-ae5d12269f7b4ca7ec99,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,29° 39′,593/20,within the sign,1591-06-12,,Julian
-assertion-v12-9db42bda3b6423e0befd,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 3′,501/20,within the sign,1591-06-12,,Julian
-assertion-v12-8824a09d0bb776fe2342,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 50′,-23/6,printed direction,1591-06-28,,Julian
-assertion-v12-c73a65396130c9f518fa,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,24° 54′,249/10,within the sign,1591-06-28,,Julian
-assertion-v12-b0e52a89643c6623816d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,20° 22′,611/30,within the sign,1591-06-28,,Julian
-assertion-v12-d459523b1ececf1a0fdb,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 53′,-233/60,printed direction,1591-07-17,,Julian
-assertion-v12-60a1200046190bd9d11c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,22° 37′,1357/60,within the sign,1591-07-17,,Julian
-assertion-v12-624eaf21d82f79332588,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,18° 51′,377/20,within the sign,1591-07-17,,Julian
-assertion-v12-953afd1909f25094144f,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 32′,-38/15,printed direction,1591-09-26,,Julian
-assertion-v12-3e954cfbf01d45635cdb,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,20° 51′,417/20,within the sign,1591-09-26,,Julian
-assertion-v12-cae2b9dd97a2eef27d7b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,18° 21′,367/20,within the sign,1591-09-26,,Julian
-assertion-v12-412ea670ea50750e9246,tycho-oo-12,147,Mars,ecliptic_latitude,Alphonsine,0° 32⅔′ south,-49/90,printed direction,1591-12-10,evening,
-assertion-v12-6bdf52adee182b870ce2,tycho-oo-12,147,Mars,ecliptic_latitude,Copernicus,0° 59′ south,-59/60,printed direction,1591-12-10,evening,
-assertion-v12-a5fbef10ae575384100e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,0° 59′ south,-59/60,printed direction,1591-12-10,,Julian
-assertion-v12-09efef4d16aeb0c988a1,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,11° 29′ ♓,20489/60,printed sign,1591-12-10,,Julian
-assertion-v12-f5c709fbb00fbf9f564d,tycho-oo-12,147,Mars,ecliptic_longitude,Alphonsine,11° 29′ ♓,20489/60,printed sign,1591-12-10,evening,
-assertion-v12-2dcbd7a28d145e696e47,tycho-oo-12,147,Mars,ecliptic_longitude,Copernicus,9° 32′ ♓,5093/15,printed sign,1591-12-10,evening,
-assertion-v12-824bce125f2c1214855a,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,9° 32′ ♓,5093/15,printed sign,1591-12-10,,Julian
-assertion-v12-08db0aa23e94c585c1e4,tycho-oo-12,220,Mars,ecliptic_latitude,Alphonsine,0° 5¼′ north,7/80,printed direction,1592-02-03,,
-assertion-v12-ebb63e926cc90dc8ca52,tycho-oo-12,220,Mars,ecliptic_latitude,Copernicus,0° 5½′ north,11/120,printed direction,1592-02-03,,
-assertion-v12-db1e185b232132152370,tycho-oo-12,220,Mars,ecliptic_longitude,Alphonsine,19° 48′,99/5,within the sign,1592-02-03,,
-assertion-v12-6143d1ba6403d6719d8c,tycho-oo-12,220,Mars,ecliptic_longitude,Copernicus,18° 51½′,2263/120,within the sign,1592-02-03,,
-assertion-v12-ef2910eef1151dc90a5d,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,5° 29′ south,-329/60,printed direction,1593-07-21,,
-assertion-v12-2e940cf06ddab6eab438,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,5° 30′ south,-11/2,printed direction,1593-07-21,,
-assertion-v12-62fb03ba2cc1b0d3b1dc,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,22° 44′ ♓,5291/15,printed sign,1593-07-21,,
-assertion-v12-92a7c2348c3337fb6465,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,14° 48½′ ♓,41377/120,printed sign,1593-07-21,,
-assertion-v12-c9cd03cc8e62764cee63,tycho-oo-12,283,Mars,ecliptic_latitude,Alphonsine,5 29 south,-329/60,printed direction,1593-07-22,morning,
-assertion-v12-ae7eb92351c84192c36b,tycho-oo-12,283,Mars,ecliptic_latitude,Copernicus,5° 30′,-11/2,printed direction,1593-07-22,morning,
-assertion-v12-5f0d2bed19e9b283fa6b,tycho-oo-12,283,Mars,ecliptic_longitude,Alphonsine,22° 44′ ♓,5291/15,printed sign,1593-07-22,morning,
-assertion-v12-0e7e6666553facb4b194,tycho-oo-12,283,Mars,ecliptic_longitude,Copernicus,"14° 48½′ ♓,",41377/120,printed sign,1593-07-22,morning,
-assertion-v12-7682557205595f81fded,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,5° 46′,-173/30,printed direction,1593-07-30,,
-assertion-v12-427ab913e53e341e76cf,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 0′,-6,printed direction,1593-07-30,,
-assertion-v12-b5fd8f2f7821628d16f0,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,22° 46′,10583/30,printed sign,1593-07-30,,
-assertion-v12-771cc4be361f78351812,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,13° 57′,6879/20,printed sign,1593-07-30,,
-assertion-v12-36d97384c5da4648843c,tycho-oo-12,284,Mars,ecliptic_latitude,Alphonsine,5° 46′ south,-173/30,printed direction,1593-07-31,morning,
-assertion-v12-f886d4512ed8a45bafc0,tycho-oo-12,284,Mars,ecliptic_latitude,Copernicus,6° 0′ south,-6,printed direction,1593-07-31,morning,
-assertion-v12-7ac485ef3032c434fa42,tycho-oo-12,284,Mars,ecliptic_longitude,Alphonsine,22° 46′ ♓,10583/30,printed sign,1593-07-31,morning,
-assertion-v12-c6104d58aa46f3e91d4e,tycho-oo-12,284,Mars,ecliptic_longitude,Copernicus,13° 57′ ♓,6879/20,printed sign,1593-07-31,morning,
-assertion-v12-9fdae3abb05222564b1c,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 0′,-6,printed direction,1593-08-10,,
-assertion-v12-ebfa11291062521800d5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 30′,-13/2,printed direction,1593-08-10,,
-assertion-v12-8149c306fb130833f72c,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,21° 26′,10543/30,printed sign,1593-08-10,,
-assertion-v12-981f08dbd5cdb75acb12,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,12° 0′,342,printed sign,1593-08-10,,
-assertion-v12-b8bae8affaeb5e1450a3,tycho-oo-12,285,Mars,ecliptic_longitude,Alphonsine,21° 26′,643/30,within the sign,1593-08-11,morning,
-assertion-v12-394609affe925e94feef,tycho-oo-12,285,Mars,ecliptic_longitude,Copernicus,12° 0′ ♓,342,printed sign,1593-08-11,morning,
-assertion-v12-6e0d2d8a7aa9a3af5d63,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 6′,-61/10,printed direction,1593-08-17,,
-assertion-v12-4550a3b85cad6202b615,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 40′,-20/3,printed direction,1593-08-17,,
-assertion-v12-6780e141393bd85c1aad,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,19° 38′,10489/30,printed sign,1593-08-17,,
-assertion-v12-d07057d2847256a7b901,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,10° 11′,20411/60,printed sign,1593-08-17,,
-assertion-v12-57b14784768e799bca77,tycho-oo-12,286,Mars,ecliptic_latitude,Alphonsine,6° 6′ south,-61/10,printed direction,1593-08-18,morning,
-assertion-v12-0d7376bad523fc109488,tycho-oo-12,286,Mars,ecliptic_latitude,Copernicus,6° 40′ south,-20/3,printed direction,1593-08-18,morning,
-assertion-v12-199605e59145662afe56,tycho-oo-12,286,Mars,ecliptic_longitude,Alphonsine,19° 38′ ♓,10489/30,printed sign,1593-08-18,morning,
-assertion-v12-0c087655b7561eb2cc1a,tycho-oo-12,286,Mars,ecliptic_longitude,Copernicus,10° 11′ ♓,20411/60,printed sign,1593-08-18,morning,
-assertion-v12-93057932b0fece941c88,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 10′,-37/6,printed direction,1593-08-20,,
-assertion-v12-013a556ea606076542e5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 30′,-13/2,printed direction,1593-08-20,,
-assertion-v12-a0891b0235cd386766c4,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 46′,10463/30,printed sign,1593-08-20,,
-assertion-v12-5ae97932e6fa68134a56,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,9° 16′,5089/15,printed sign,1593-08-20,,
-assertion-v12-5aa291db3d4df751ba51,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 12′,-31/5,printed direction,1593-08-21,,
-assertion-v12-dd33038f85fc237c80e5,tycho-oo-12,287,Mars,ecliptic_latitude,Alphonsine,6° 12′ south,-31/5,printed direction,1593-08-21,before_midnight,
-assertion-v12-304ed201d272c0187a08,tycho-oo-12,287,Mars,ecliptic_latitude,Copernicus,6° 43′ south,-403/60,printed direction,1593-08-21,before_midnight,
-assertion-v12-b2a1285b317e69e4b412,tycho-oo-12,286,Mars,ecliptic_latitude,Copernicus,6° 30′ south,-13/2,printed direction,1593-08-21,morning,
-assertion-v12-f73d6f76e7ec2caf4981,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 43′,-403/60,printed direction,1593-08-21,,
-assertion-v12-764e1a12d7b8a1c8004a,tycho-oo-12,286,Mars,ecliptic_longitude,Alphonsine,18° 46′,563/30,within the sign,1593-08-21,morning,
-assertion-v12-ba9649b0fe0fd742b27d,tycho-oo-12,287,Mars,ecliptic_longitude,Alphonsine,18° 29′ ♓,20909/60,printed sign,1593-08-21,before_midnight,
-assertion-v12-e27c9cdd6e2245d25fc3,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 29′,20909/60,printed sign,1593-08-21,,
-assertion-v12-1685d4c4b411419c2f2d,tycho-oo-12,287,Mars,ecliptic_longitude,Copernicus,8° 58′ ♓,10169/30,printed sign,1593-08-21,before_midnight,
-assertion-v12-404d37fb2cd2bbcfc911,tycho-oo-12,286,Mars,ecliptic_longitude,Copernicus,9° 16′ ♓,5089/15,printed sign,1593-08-21,morning,
-assertion-v12-de759b503a9200cd7c0e,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 58′,10169/30,printed sign,1593-08-21,,
-assertion-v12-93526e6550007be48610,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 14′,-187/30,printed direction,1593-08-22,,
-assertion-v12-1594e5c8f21534373387,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 43′,-403/60,printed direction,1593-08-22,,
-assertion-v12-b874cb8d517a6f8b8648,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 11′,20891/60,printed sign,1593-08-22,,
-assertion-v12-7c4fec805f59b3ee9b95,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 39′,6773/20,printed sign,1593-08-22,,
-assertion-v12-23b74543baf731031670,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 15′,-25/4,printed direction,1593-08-23,,
-assertion-v12-43fb332baabcdd8a095e,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 40′,-20/3,printed direction,1593-08-23,,
-assertion-v12-e46982badeffdb6dc0e6,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,17° 53′,20873/60,printed sign,1593-08-23,,
-assertion-v12-fc531d2383c5ee80903f,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 21′,6767/20,printed sign,1593-08-23,,
-assertion-v12-5841fd040e225ce1d225,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 16′,-94/15,printed direction,1593-08-24,,
-assertion-v12-ac8e9a1cd96320fd00b2,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 37′,-397/60,printed direction,1593-08-24,,
-assertion-v12-a6248deb349bb17e0902,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,12° 35′,4111/12,printed sign,1593-08-24,,
-assertion-v12-b92f241cdc17eeb6b296,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,7° 4′,5056/15,printed sign,1593-08-24,,
-assertion-v12-d7e31aa7abf37c04e5c6,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 22′,-191/30,printed direction,1593-08-29,,
-assertion-v12-bf73814b4b73a6a0f68a,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 21′,-127/20,printed direction,1593-08-29,,
-assertion-v12-86aebbc13fa86208abe2,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,15° 59′,20759/60,printed sign,1593-08-29,,
-assertion-v12-267afa8f503a449263e1,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,6° 42′,3367/10,printed sign,1593-08-29,,
-assertion-v12-b54eb5328e555b481c01,tycho-oo-12,297,Mars,ecliptic_latitude,Alphonsine,0° 1′ 30″ north,1/40,printed direction,1593-12-10,,
-assertion-v12-de08c932aefc6c53ca18,tycho-oo-12,297,Mars,ecliptic_latitude,Copernicus,0° 30′ south,-1/2,printed direction,1593-12-10,,
-assertion-v12-699411e50f40ab157481,tycho-oo-12,297,Mars,ecliptic_longitude,Alphonsine,6° 9′ ♈,123/20,printed sign,1593-12-10,,
-assertion-v12-e38de4d893fa8a4ced6c,tycho-oo-12,297,Mars,ecliptic_longitude,Copernicus,4° 30′ ♈,9/2,printed sign,1593-12-10,,
-assertion-v12-5032621c9e74d854163d,tycho-oo-12,298,Mars,ecliptic_latitude,Alphonsine,0° 12′ north,1/5,printed direction,1593-12-19,,
-assertion-v12-f50828157af91e701d57,tycho-oo-12,298,Mars,ecliptic_latitude,Copernicus,0° 14′ south,-7/30,printed direction,1593-12-19,,
-assertion-v12-dff8e927a6470ac8344f,tycho-oo-12,298,Mars,ecliptic_longitude,Alphonsine,11° 8′ ♈,167/15,printed sign,1593-12-19,,
-assertion-v12-5c268fc799fa740d4812,tycho-oo-12,298,Mars,ecliptic_longitude,Copernicus,9° 33′ ♈,191/20,printed sign,1593-12-19,,
-assertion-v12-6ae6f163058ed7f323a7,tycho-oo-12,299,Mars,ecliptic_latitude,Alphonsine,0 22 north,11/30,printed direction,1593-12-30,,
-assertion-v12-751ff4d5d345b3fe428f,tycho-oo-12,299,Mars,ecliptic_longitude,Alphonsine,17° 17′ ♈,1037/60,printed sign,1593-12-30,,
-assertion-v12-995af7aa761fd66984ac,tycho-oo-12,299,Mars,ecliptic_longitude,Copernicus,16° 4′ ♈,241/15,printed sign,1593-12-30,,
-assertion-v12-19f4fdece68d9eb5bbe7,tycho-oo-12,347,Mars,ecliptic_latitude,Alphonsine,0° 6′ north,1/10,printed direction,1594-11-29,morning,
-assertion-v12-6f7a14a359f723d0060e,tycho-oo-12,347,Mars,ecliptic_latitude,Copernicus,0° 9′ north,3/20,printed direction,1594-11-29,morning,
-assertion-v12-ad59c2b47375321761d3,tycho-oo-12,347,Mars,ecliptic_longitude,Alphonsine,18° 10′ ♏,1369/6,printed sign,1594-11-29,morning,
-assertion-v12-99f2b0517ee6ba7610a3,tycho-oo-12,347,Mars,ecliptic_longitude,Copernicus,18° 13′ ♏,13693/60,printed sign,1594-11-29,morning,
-assertion-v12-f1a1c2c3b10fecc78c04,tycho-oo-12,348,Mars,ecliptic_latitude,Alphonsine,0 4,1/15,printed direction,1594-12-10,morning,
-assertion-v12-c3bd9ab110d6463fae78,tycho-oo-12,348,Mars,ecliptic_latitude,Copernicus,0° 8′,2/15,printed direction,1594-12-10,morning,
-assertion-v12-9b7085614064c22e15dc,tycho-oo-12,348,Mars,ecliptic_longitude,Alphonsine,26° 1′ ♏,14161/60,printed sign,1594-12-10,morning,
-assertion-v12-583722581446fe6447e2,tycho-oo-12,348,Mars,ecliptic_longitude,Copernicus,25° 51′ ♏,4717/20,printed sign,1594-12-10,morning,
-assertion-v12-06d187803d2fe8b5be1c,tycho-oo-12,443,Mars,ecliptic_latitude,Prutenic,2¾° south,-11/4,printed direction,1595-09-07,morning,
-assertion-v12-cf640bb5c48cb527990b,tycho-oo-12,443,Mars,ecliptic_longitude,Alphonsine,25⅙° ♉,331/6,printed sign,1595-09-07,morning,
-assertion-v12-9c447075f5723626173a,tycho-oo-12,443,Mars,ecliptic_longitude,Prutenic,22⅚° ♉,317/6,printed sign,1595-09-07,morning,
-assertion-v12-4d699f31ae88131ea7d5,tycho-oo-12,445,Mars,ecliptic_longitude,Alphonsine,26° 16′,394/15,within the sign,1595-09-30,before_noon,
-assertion-v12-5aab39138aac30134b90,tycho-oo-12,445,Mars,ecliptic_longitude,Copernicus,24° 20′,73/3,within the sign,1595-09-30,before_noon,
-assertion-v12-fc0e090808bb23a8651c,tycho-oo-12,446,Mars,ecliptic_longitude,Alphonsine,23° 51′,477/20,within the sign,1595-10-12,evening,
-assertion-v12-dffe7f79cdfdf0ed5ee0,tycho-oo-12,446,Mars,ecliptic_longitude,Copernicus,21° 56′,329/15,within the sign,1595-10-12,evening,
-assertion-v12-e667f3eea91d200cd460,tycho-oo-12,446,Mars,ecliptic_longitude,Alphonsine,22° 50′,137/6,within the sign,1595-10-16,morning,
-assertion-v12-5f20b5cba1aa924d5cb4,tycho-oo-12,446,Mars,ecliptic_longitude,Copernicus,21° 0′,21,within the sign,1595-10-16,morning,
-assertion-v12-d179164da05b47ffa663,tycho-oo-12,447,Mars,ecliptic_latitude,Alphonsine,0° 7′ south,-7/60,printed direction,1595-10-25,morning,
-assertion-v12-4199ffd46bda97d7aabd,tycho-oo-12,447,Mars,ecliptic_latitude,Copernicus,1° 8′ south,-17/15,printed direction,1595-10-25,morning,
-assertion-v12-8d31e26ad974abbb4231,tycho-oo-12,447,Mars,ecliptic_longitude,Alphonsine,19° 46′,593/30,within the sign,1595-10-25,morning,
-assertion-v12-223e9771b474f6bcc401,tycho-oo-12,447,Mars,ecliptic_longitude,Copernicus,17° 54′,179/10,within the sign,1595-10-25,morning,
-assertion-v13-72853f479b3d73507360,tycho-oo-13,151,Mars,ecliptic_longitude,Prutenic,3 51 ♋,1877/20,printed sign,1597-12-13,after_noon,
-assertion-v13-c927d9739374e382ea73,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1^G^ 3^M^ B.,21/20,printed direction,1599-10-20,,
-assertion-v13-59e3ac3fc6e13740115e,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0^G^ 43^M^ B.,43/60,printed direction,1599-10-20,,
-assertion-v13-07925b9ed549033e1355,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,0^G^ 15^M^ ♌,481/4,printed sign,1599-10-20,,
-assertion-v13-83de6f4ec5dba38da132,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,1^G^ 17^M^ ♌,7277/60,printed sign,1599-10-20,,
-assertion-v13-76b43c22a526495611f7,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 4,16/15,printed direction,1599-10-21,,
-assertion-v13-355d51f3e2b0e6c942c7,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 44,11/15,printed direction,1599-10-21,,
-assertion-v13-f649d9c1df9acc6e412c,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,0 42,1207/10,printed sign,1599-10-21,,
-assertion-v13-ccbd2a3c91a66a40c71b,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,1 46,3653/30,printed sign,1599-10-21,,
-assertion-v13-1f8cc661d2915d3935d9,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 7,67/60,printed direction,1599-10-24,,
-assertion-v13-49a95477dd97c803ebf0,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 48,4/5,printed direction,1599-10-24,,
-assertion-v13-1520ee020a6f120aeed5,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,2 1,7321/60,printed sign,1599-10-24,,
-assertion-v13-0dfa124ce68261991037,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,3 12,616/5,printed sign,1599-10-24,,
-assertion-v13-38d43da2f0f2a2379912,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 9,23/20,printed direction,1599-10-25,,
-assertion-v13-a5e3ea092079ef5d325e,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 49,49/60,printed direction,1599-10-25,,
-assertion-v13-f394d324299a6e087200,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,2 27,2449/20,printed sign,1599-10-25,,
-assertion-v13-bf95dab648ed978a5ccb,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,3 40,371/3,printed sign,1599-10-25,,
-assertion-v13-d983688bcaa65fc2de3b,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 12,6/5,printed direction,1599-10-27,,
-assertion-v13-882b322caf343c5840b6,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 52,13/15,printed direction,1599-10-27,,
-assertion-v13-b99365d2412c47a7254b,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,3 18,1233/10,printed sign,1599-10-27,,
-assertion-v13-c9dee89bbb9b25e0c406,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,4 35,1495/12,printed sign,1599-10-27,,
-assertion-v13-384a41a2ff68c8e0d0ba,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 14,37/30,printed direction,1599-10-29,,
-assertion-v13-c7bf30dba8b256505365,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 55,11/12,printed direction,1599-10-29,,
-assertion-v13-00e1b62d970e20e4d2be,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,4 8,1862/15,printed sign,1599-10-29,,
-assertion-v13-59af47eaffd0a6c5e5bf,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,5 29,7529/60,printed sign,1599-10-29,,
-assertion-v13-5aafc9cacd76e8a483fc,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 29 S.,209/60,printed direction,1600-03-02,,
-assertion-v13-b2ac50850eff7e12f4dc,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 48 S.,19/5,printed direction,1600-03-02,,
-assertion-v13-627777acfee17388fdc0,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,♋ 26° 15′,465/4,printed sign,1600-03-02,,
-assertion-v13-a80396f42b8edfd73373,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,♌ 0° 40′,362/3,printed sign,1600-03-02,,
-assertion-v13-95dddab53876f8941844,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 15,13/4,printed direction,1600-03-09,,
-assertion-v13-93d2f96c03e105e81649,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 35,43/12,printed direction,1600-03-09,,
-assertion-v13-48b3eeb8425806f0ec2f,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 6,1161/10,printed sign,1600-03-09,,
-assertion-v13-d01b4406b24318351a29,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 10,721/6,printed sign,1600-03-09,,
-assertion-v13-ae3fea8be3196284f4c2,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 4,46/15,printed direction,1600-03-15,,
-assertion-v13-e43d79ce5503f9e4efc0,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 12,16/5,printed direction,1600-03-15,,
-assertion-v13-c9355015affa16fd846b,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 23,6983/60,printed sign,1600-03-15,,
-assertion-v13-cc2774c7430b939cda78,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 10,721/6,printed sign,1600-03-15,,
-assertion-v13-6d7392543fad44a0bc96,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 1,181/60,printed direction,1600-03-16,,
-assertion-v13-cd49d8e40a1bf22520fd,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 10,19/6,printed direction,1600-03-16,,
-assertion-v13-e0b039797f51d55b92c5,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 30,233/2,printed sign,1600-03-16,,
-assertion-v13-aafae7585a25c1108a22,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 14,3607/30,printed sign,1600-03-16,,
-assertion-v10-c981b181f566108ddd22,tycho-oo-10,5,Jupiter,ecliptic_longitude,Carelli,♃ in 0° 50′ ♌,725/6,printed sign,1564-05-01,after_noon,
-assertion-v10-55c8a32aaa0cf6ae08d1,tycho-oo-10,5,Jupiter,ecliptic_longitude,Stadius,♃ in 1° 30′ ♌,243/2,printed sign,1564-05-01,after_noon,
-assertion-v10-177e16de2959fc2cfb30,tycho-oo-10,5,Jupiter,ecliptic_longitude,Carelli,0° 58′ ♌,3629/30,printed sign,1564-05-02,,
-assertion-v10-c4cc249e9733bc1f59b9,tycho-oo-10,5,Jupiter,ecliptic_longitude,Stadius,1° 38′ ♌,3649/30,printed sign,1564-05-02,,
-assertion-v11-85c886e044742943c826,tycho-oo-11,54,Jupiter,ecliptic_latitude,Alphonsine,0° 19′,-19/60,printed direction,1586-09-23,,
-assertion-v11-c62c65888b790dc7d1f7,tycho-oo-11,54,Jupiter,ecliptic_latitude,Copernicus,0° 38′,-19/30,printed direction,1586-09-23,,
-assertion-v11-261e065d5837f93006d9,tycho-oo-11,54,Jupiter,ecliptic_longitude,Alphonsine,13° 38′ ♋,3109/30,printed sign,1586-09-23,,
-assertion-v11-4483f8c44edf7868f595,tycho-oo-11,54,Jupiter,ecliptic_longitude,Copernicus,13° 21′ ♋,2067/20,printed sign,1586-09-23,,
-assertion-v11-ed1c6712a1509edebc23,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1° 40′,5/3,printed direction,1589-01-30,,
-assertion-v11-2a33627370d0041fd212,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1° 24′,7/5,printed direction,1589-01-30,,
-assertion-v11-b743c732cd8573207d9a,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,14° 14′ ♍,4927/30,printed sign,1589-01-30,,
-assertion-v11-bd06e1dfd1cf1a3967da,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1° 43′,103/60,printed direction,1589-02-21,,
-assertion-v11-44695b260556ee1f977d,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1° 30′,3/2,printed direction,1589-02-21,,
-assertion-v11-6edd4f766b76b801157c,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,11° 35′ ♍,1939/12,printed sign,1589-02-21,,
-assertion-v11-cea7da36b4ad046310d7,tycho-oo-11,329,Jupiter,ecliptic_longitude,Prutenic,13° 13′ ♍,9793/60,printed sign,1589-02-21,,
-assertion-v12-b2bfff7d2befc4cb3ff7,tycho-oo-12,136,Jupiter,ecliptic_latitude,Alphonsine,1° 50′,11/6,printed direction,1591-04-23,,
-assertion-v12-14d96569b6e7a0a8f3ec,tycho-oo-12,280,Jupiter,ecliptic_latitude,Alphonsine,0° 5′ south,-1/12,printed direction,1593-06-29,,
-assertion-v12-de5b90554232a6a558e7,tycho-oo-12,280,Jupiter,ecliptic_latitude,Copernicus,0° 21′ north,7/20,printed direction,1593-06-29,,
-assertion-v12-6a4a76f1bcc14d8fbc84,tycho-oo-12,280,Jupiter,ecliptic_longitude,Alphonsine,16° 34′ ♑,8597/30,printed sign,1593-06-29,,
-assertion-v12-d3f87c4db5320305eaf6,tycho-oo-12,280,Jupiter,ecliptic_longitude,Copernicus,17° 34′ ♑,8627/30,printed sign,1593-06-29,,
-assertion-v10-b9100569a07dbc427e0e,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,♄ in 29° 53′ ♋,7193/60,printed sign,1564-05-01,after_noon,
-assertion-v10-3a75a975d07653bbb3f8,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,♄ in 27° 36′ ♋,588/5,printed sign,1564-05-01,after_noon,
-assertion-v10-8157c55e238f71275575,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,29° 58′ ♋,3599/30,printed sign,1564-05-02,,
-assertion-v10-a4ca673ab6294fc487c0,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,27° 42′ ♋,1177/10,printed sign,1564-05-02,,
-assertion-v12-ec242c07cc0c3744c409,tycho-oo-12,32,Saturn,ecliptic_latitude,Alphonsine,1° 13′,-73/60,printed direction,1590-08-30,,
-assertion-v12-f064b58561ea68346b0a,tycho-oo-12,32,Saturn,ecliptic_longitude,Alphonsine,0° 40½′ ♋,3627/40,printed sign,1590-08-30,,
-assertion-v12-1ac80de850eb33bf4021,tycho-oo-12,128,Saturn,ecliptic_latitude,Alphonsine,0° 40′,-2/3,printed direction,1591-10-25,,
-assertion-v12-4c8aa2cc4b66b73fa1ea,tycho-oo-12,128,Saturn,ecliptic_latitude,Copernicus,1° 28½′,-59/40,printed direction,1591-10-25,,
-assertion-v12-2d43c73db283690675bd,tycho-oo-12,128,Saturn,ecliptic_longitude,Alphonsine,15° 43⅓′ ♋,1903/18,printed sign,1591-10-25,,
-assertion-v12-1aa019ed1b547149b4cf,tycho-oo-12,128,Saturn,ecliptic_longitude,Copernicus,12° 53⅓′ ♋,926/9,printed sign,1591-10-25,,
-assertion-v12-7d177f12f03e5a6fdf4b,tycho-oo-12,129,Saturn,ecliptic_latitude,Copernicus,1° 32½′,-37/24,printed direction,1591-12-06,,
-assertion-v12-b033a0cf95872f9735e5,tycho-oo-12,130,Saturn,ecliptic_latitude,Copernicus,1° 32⅖′,-77/50,printed direction,1591-12-06,,
-assertion-v12-753fb4e8e4397a8bdda0,tycho-oo-12,130,Saturn,ecliptic_longitude,Copernicus,10° 37⅓′ ♋,4528/45,printed sign,1591-12-06,,
-assertion-v12-f1cfae9590e1f2595b49,tycho-oo-12,129,Saturn,ecliptic_longitude,Copernicus,10° 43′ ♋,6043/60,printed sign,1591-12-06,,
-assertion-v12-f925c81477fa600add1b,tycho-oo-12,130,Saturn,ecliptic_latitude,Alphonsine,0° 39′,-13/20,printed direction,1591-12-09,,
-assertion-v12-40074f3b8d214eb69e90,tycho-oo-12,130,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-09,,
-assertion-v12-a829d72d29cf268ea89b,tycho-oo-12,130,Saturn,ecliptic_longitude,Alphonsine,13° 18½′ ♋,12397/120,printed sign,1591-12-09,,
-assertion-v12-353864bbf312f35487da,tycho-oo-12,130,Saturn,ecliptic_longitude,Copernicus,10° 17½′ ♋,2407/24,printed sign,1591-12-09,,
-assertion-v12-8f186251351c838f93a2,tycho-oo-12,131,Saturn,ecliptic_latitude,Alphonsine,0° 39′,-13/20,printed direction,1591-12-10,,
-assertion-v12-97c4c021052791d9d53b,tycho-oo-12,131,Saturn,ecliptic_latitude,Copernicus,1° 32½′,-37/24,printed direction,1591-12-10,,
-assertion-v12-ddcc0469d93f12d0ca5a,tycho-oo-12,131,Saturn,ecliptic_longitude,Alphonsine,13° 13½′ ♋,4129/40,printed sign,1591-12-10,,
-assertion-v12-390477fe590c9d4267f4,tycho-oo-12,131,Saturn,ecliptic_longitude,Copernicus,10° 12½′ ♋,2405/24,printed sign,1591-12-10,,
-assertion-v12-a3bd8bea1134832644f3,tycho-oo-12,131,Saturn,ecliptic_latitude,Alphonsine,0° 37′,-37/60,printed direction,1591-12-16,,
-assertion-v12-52a042a8f2545bf5de95,tycho-oo-12,131,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-16,,
-assertion-v12-27c66897f97ec2bdc99d,tycho-oo-12,131,Saturn,ecliptic_longitude,Alphonsine,12° 43⅔′ ♋,18491/180,printed sign,1591-12-16,,
-assertion-v12-336d0dee32a4410404c2,tycho-oo-12,131,Saturn,ecliptic_longitude,Copernicus,9° 42⅔′ ♋,4487/45,printed sign,1591-12-16,,
-assertion-v12-a35def01d080e5c6b192,tycho-oo-12,132,Saturn,ecliptic_latitude,Alphonsine,0° 37′,-37/60,printed direction,1591-12-21,,
-assertion-v12-fbddf093b640922435bd,tycho-oo-12,132,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-21,,
-assertion-v12-dadf9aa1fa76058c584f,tycho-oo-12,132,Saturn,ecliptic_longitude,Alphonsine,12° 18⅔′ ♋,4604/45,printed sign,1591-12-21,,
-assertion-v12-01b9149a1eb47f2a5fe5,tycho-oo-12,132,Saturn,ecliptic_longitude,Copernicus,9° 15⅔′ ♋,17867/180,printed sign,1591-12-21,,
-assertion-v12-594b6b84657a788dfaa6,tycho-oo-12,213,Saturn,ecliptic_latitude,Alphonsine,0° 6′,1/10,printed direction,1592-12-29,,
-assertion-v12-05c0d646fb0077a41d65,tycho-oo-12,420,Saturn,ecliptic_latitude,Alphonsine,1° 27′,29/20,printed direction,1595-01-24,,
-assertion-v12-72dba80c3f359161db0b,tycho-oo-12,420,Saturn,ecliptic_latitude,Prutenic,0° 36½′,73/120,printed direction,1595-01-24,,
-assertion-v12-fc35b35e985e9e3e3316,tycho-oo-12,420,Saturn,ecliptic_longitude,Alphonsine,24° 1½′ ♌,5761/40,printed sign,1595-01-24,,
-assertion-v12-5197641ea0b07d6959da,tycho-oo-12,420,Saturn,ecliptic_longitude,Prutenic,21° 52½′ ♌,1135/8,printed sign,1595-01-24,,
+id,source_id,printed_page,body,quantity,model,expression,degrees_exact,basis,julian_date,daypart,calendar_label,epoch_id,epoch_expression,epoch_seconds
+assertion-v10-aca5394e7ff41c780a28,tycho-oo-10,5,Moon,ecliptic_longitude,Carelli,☾ in 5° 5′ ♋,1141/12,printed sign,1564-04-15,,,,,
+assertion-v10-46ae9b6557d0712b0a24,tycho-oo-10,5,Moon,ecliptic_longitude,Stadius,☾ was in 5° 0′ ♋ [Cancer],95,printed sign,1564-04-15,,,,,
+assertion-v10-899f2edce8a030884bd1,tycho-oo-10,25,Moon,ecliptic_latitude,Leovitius,4^g^ 57′,-99/20,printed direction,1570-01-16,,,,,
+assertion-v10-1f9e3aa41821d81a4505,tycho-oo-10,25,Moon,ecliptic_longitude,Leovitius,5^g^ and 5 minutes ♊,781/12,printed sign,1570-01-16,,,,,
+assertion-v10-bc80065cafce01b41a91,tycho-oo-10,25,Moon,ecliptic_longitude,Leovitius,5^g^ 6′ ♊,651/10,printed sign,1570-01-16,,,,,
+assertion-v10-49721d77472e5361694e,tycho-oo-10,25,Moon,ecliptic_longitude,Prutenic,4.20 ♊,193/3,printed sign,1570-01-16,,,,,
+assertion-v10-da0e9e4403490d959ceb,tycho-oo-10,25,Moon,ecliptic_longitude,Prutenic,4^g^ 20′,193/3,printed sign,1570-01-16,,,,,
+assertion-v11-6e55e992a2aa343f4684,tycho-oo-11,31,Moon,ecliptic_latitude,Alphonsine,4° 53½′,-587/120,printed direction,1586-10-24,,,,,
+assertion-v11-c89f654d35bfaf708367,tycho-oo-11,31,Moon,ecliptic_latitude,Alphonsine,4° 53¼′,-391/80,printed direction,1586-10-24,,,,,
+assertion-v11-9dfeadc0667a55fd30a7,tycho-oo-11,31,Moon,ecliptic_latitude,Prutenic,4° 55′,-59/12,printed direction,1586-10-24,,,,,
+assertion-v11-fb52547c3cdaf6d047ee,tycho-oo-11,31,Moon,ecliptic_latitude,Prutenic,4° 5¼′,-327/80,printed direction,1586-10-24,,,,,
+assertion-v11-8978067f9462b2fe1afe,tycho-oo-11,31,Moon,ecliptic_longitude,Alphonsine,26° 15′ ♋,465/4,printed sign,1586-10-24,,,,,
+assertion-v11-c84a1b0790025d0d7766,tycho-oo-11,31,Moon,ecliptic_longitude,Alphonsine,26° 24½′ ♋,13969/120,printed sign,1586-10-24,,,,,
+assertion-v11-0bb4687b129f6caf7641,tycho-oo-11,31,Moon,ecliptic_longitude,Prutenic,26° 15′ ♋,465/4,printed sign,1586-10-24,,,,,
+assertion-v11-381b13a47964ec205c2b,tycho-oo-11,31,Moon,ecliptic_longitude,Prutenic,26° 5′ ♋,1393/12,printed sign,1586-10-24,,,,,
+assertion-v11-02a11f5cce1f6324f35c,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 32′,-68/15,printed direction,1586-10-25,,,,,
+assertion-v11-70cd305d230356e58884,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 31′,-271/60,printed direction,1586-10-25,,,,,
+assertion-v11-d385d8c5bae3c35fe0d1,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,4° 31′,-271/60,printed direction,1586-10-25,,,,,
+assertion-v11-38387f23f1fd23e3e7a7,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 32′,-68/15,printed direction,1586-10-25,,,,,
+assertion-v11-609a1a54fd947475586f,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 33½′,-547/120,printed direction,1586-10-25,,,,,
+assertion-v11-a1f6df2e02ab072139d7,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,4° 32¼′,-363/80,printed direction,1586-10-25,,,,,
+assertion-v11-4e2389a0a70b291bd90d,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,9° 56½′ ♌,15593/120,printed sign,1586-10-25,,,,,
+assertion-v11-5b181d974830a0e0f1ea,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,10° 33⅓′ ♌,1175/9,printed sign,1586-10-25,,,,,
+assertion-v11-6f1cdb5b2d064da4e3c0,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,10° 22′ ♌,3911/30,printed sign,1586-10-25,,,,,
+assertion-v11-46e40debc628acc4fc09,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,10° 24½′ ♌,15649/120,printed sign,1586-10-25,,,,,
+assertion-v11-daf947843d4969152a79,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,9° 57′ ♌,2599/20,printed sign,1586-10-25,,,,,
+assertion-v11-e74978b89826beff0ff2,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,10° 36′ ♌,653/5,printed sign,1586-10-25,,,,,
+assertion-v11-06f213bf894e555432da,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,3° 44′,-56/15,printed direction,1586-10-26,,,,,
+assertion-v11-8ea1bb5f8f032f14a845,tycho-oo-11,32,Moon,ecliptic_latitude,Alphonsine,3° 51′,-77/20,printed direction,1586-10-26,,,,,
+assertion-v11-7c5cfcafd9d703b3ec8d,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,3° 51′,-77/20,printed direction,1586-10-26,,,,,
+assertion-v11-ccfd0b84d8707f560965,tycho-oo-11,32,Moon,ecliptic_latitude,Prutenic,3° 45′,-15/4,printed direction,1586-10-26,,,,,
+assertion-v11-042f48d78a788e407e03,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,26° 53′ ♌,8813/60,printed sign,1586-10-26,,,,,
+assertion-v11-6cb031d5d47ac8d4f37a,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,25° 10′ ♌,871/6,printed sign,1586-10-26,,,,,
+assertion-v11-48310a0a1f10bc91f4de,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,27° 10′ ♌,883/6,printed sign,1586-10-26,,,,,
+assertion-v11-a1a5d2564288a939decb,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,25° 25′ ♌,1745/12,printed sign,1586-10-26,,,,,
+assertion-v11-9b1832d886f45f450a18,tycho-oo-11,142,Moon,ecliptic_latitude,Alphonsine,0° 57′,-19/20,printed direction,1587-01-06,,,,,
+assertion-v11-4e632b7983bcc134acdd,tycho-oo-11,142,Moon,ecliptic_latitude,Copernicus,0° 58½′,-39/40,printed direction,1587-01-06,,,,,
+assertion-v11-e45de3749b42dcf6643c,tycho-oo-11,142,Moon,ecliptic_longitude,Alphonsine,23° 2′ ♈,691/30,printed sign,1587-01-06,,,,,
+assertion-v11-89816eefec9f24ac63e9,tycho-oo-11,142,Moon,ecliptic_longitude,Copernicus,23° 12′ ♈,116/5,printed sign,1587-01-06,,,,,
+assertion-v11-258586d661eaf03a189b,tycho-oo-11,156,Moon,ecliptic_latitude,Alphonsine,4° 56′,74/15,printed direction,1587-08-04,,,,,
+assertion-v11-5a5d2ffb9658747f0b41,tycho-oo-11,156,Moon,ecliptic_latitude,Prutenic,4° 57′,99/20,printed direction,1587-08-04,,,,,
+assertion-v11-9540ec253be6aa3e3738,tycho-oo-11,156,Moon,ecliptic_longitude,Alphonsine,7° 56′ ♑,4169/15,printed sign,1587-08-04,,,,,
+assertion-v11-80fb89c910628214fbc5,tycho-oo-11,156,Moon,ecliptic_longitude,Prutenic,8° 21′ ♑,5567/20,printed sign,1587-08-04,,,,,
+assertion-v11-80be821e90a9c1c92f95,tycho-oo-11,157,Moon,ecliptic_latitude,Alphonsine,4° 38′,139/30,printed direction,1587-08-05,,,,,
+assertion-v11-91a68de3eb5f7f33e64a,tycho-oo-11,157,Moon,ecliptic_latitude,Prutenic,4° 39⅓′,419/90,printed direction,1587-08-05,,,,,
+assertion-v11-970e0dba83abf0d8a709,tycho-oo-11,157,Moon,ecliptic_longitude,Alphonsine,21° 52′ ♑,4378/15,printed sign,1587-08-05,,,,,
+assertion-v11-aeac0909b559688236a6,tycho-oo-11,157,Moon,ecliptic_longitude,Prutenic,22° 8′ ♑,4382/15,printed sign,1587-08-05,,,,,
+assertion-v11-2e226952a97370a92181,tycho-oo-11,161,Moon,ecliptic_latitude,Alphonsine,4° 47¼′,-383/80,printed direction,1587-08-17,,,,,
+assertion-v11-dcdd7eeddf7694c02de6,tycho-oo-11,161,Moon,ecliptic_latitude,Prutenic,4° 48′,-24/5,printed direction,1587-08-17,,,,,
+assertion-v11-31e67d954139b1dc7e89,tycho-oo-11,161,Moon,ecliptic_longitude,Alphonsine,14° 2′ ♊,2221/30,printed sign,1587-08-17,,,,,
+assertion-v11-a9bfa48aa3af73ee3df8,tycho-oo-11,161,Moon,ecliptic_longitude,Prutenic,13° 44′ ♊,1106/15,printed sign,1587-08-17,,,,,
+assertion-v11-21e6b5c47a850a9e4d4c,tycho-oo-11,162,Moon,ecliptic_latitude,Alphonsine,5° 0′,-5,printed direction,1587-08-18,,,,,
+assertion-v11-d94ee81cc7ddfdebedaf,tycho-oo-11,162,Moon,ecliptic_latitude,Prutenic,4° 59½′,-599/120,printed direction,1587-08-18,,,,,
+assertion-v11-1b4e385871d6792febb7,tycho-oo-11,162,Moon,ecliptic_longitude,Alphonsine,27° 6′ ♊,871/10,printed sign,1587-08-18,,,,,
+assertion-v11-77d8e1a19c5cb663acba,tycho-oo-11,162,Moon,ecliptic_longitude,Prutenic,26° 42′ ♊,867/10,printed sign,1587-08-18,,,,,
+assertion-v12-7439b5d9874955deb17f,tycho-oo-12,126,Moon,ecliptic_latitude,Alphonsine,3° 40′,-11/3,printed direction,1591-12-16,,,,,
+assertion-v12-15857b7cbc2f1ea494e4,tycho-oo-12,126,Moon,ecliptic_longitude,Alphonsine,18° 32′ ♉,728/15,printed sign,1591-12-16,,,,,
+assertion-v12-aa50507f429d96651176,tycho-oo-12,271,Moon,ecliptic_latitude,Alphonsine,0° 10′,1/6,printed direction,1593-03-15,,,,,
+assertion-v12-0c87873492f55b11eda4,tycho-oo-12,271,Moon,ecliptic_longitude,Alphonsine,18° 39′ ♑,5773/20,printed sign,1593-03-15,,,,,
+assertion-v11-ff6b46f49668c4da047b,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1° 44′,26/15,printed direction,1586-10-25,before_noon,,,,
+assertion-v11-28ea39b208eda01ba35b,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,0° 49′,49/60,printed direction,1586-10-25,before_noon,,,,
+assertion-v11-f5bf99e9f99d52ab12ec,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,25° 37⅙′ ♎,74023/360,printed sign,1586-10-25,before_noon,,,,
+assertion-v11-c01383eefad8ae8d8645,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,24° 29½′ ♎,24539/120,printed sign,1586-10-25,before_noon,,,,
+assertion-v11-01f3f1d1d798539d815f,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1° 46′,53/30,printed direction,1586-10-29,,,,,
+assertion-v11-19bd915c6fc851454c93,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1° 6½′,133/120,printed direction,1586-10-29,,,,,
+assertion-v11-2e362f95fce9d8bbbe5f,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,27° 39′ ♎,4153/20,printed sign,1586-10-29,,,,,
+assertion-v11-0d2d9a465848d0d09af2,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,28° 15′ ♎,833/4,printed sign,1586-10-29,,,,,
+assertion-v12-14eac99adcc0cfa014c5,tycho-oo-12,225,Mercury,ecliptic_latitude,Alphonsine,0° 51′ north,17/20,printed direction,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400
+assertion-v12-225254fb4af84bf03211,tycho-oo-12,225,Mercury,ecliptic_latitude,Copernicus,0° 58′ north,29/30,printed direction,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400
+assertion-v12-0049da56e54fe3620949,tycho-oo-12,225,Mercury,ecliptic_longitude,Alphonsine,12° 50′,77/6,within the sign,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400
+assertion-v12-3404040f7310f0ef747f,tycho-oo-12,225,Mercury,ecliptic_longitude,Copernicus,12° 26½′,1493/120,within the sign,1592-02-03,,,assertion-v12-65cf4462422367df8047,5^h^ 40^m^,20400
+assertion-v12-f843ed602edcdd7a3f6e,tycho-oo-12,226,Mercury,ecliptic_latitude,Alphonsine,1° 20′ north,4/3,printed direction,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120
+assertion-v12-33d5b2848bef0341f870,tycho-oo-12,226,Mercury,ecliptic_latitude,Copernicus,1° 30′ 0″ north,3/2,printed direction,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120
+assertion-v12-3ff62641a2e4814d8e54,tycho-oo-12,226,Mercury,ecliptic_longitude,Alphonsine,16° 43′,1003/60,within the sign,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120
+assertion-v12-36ba311dcdbfd175bcd6,tycho-oo-12,226,Mercury,ecliptic_longitude,Copernicus,15° 6′ 45″,1209/80,within the sign,1592-02-06,,,assertion-v12-dd6d7b121dbc39084f6f,5^h^ 52^m^,21120
+assertion-v10-3735277775594624121f,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,♀ in 24° 3′ ♊,1681/20,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-6c0b0f31b092bc698923,tycho-oo-10,5,Venus,ecliptic_longitude,Stadius,♀ in 22° 54′ ♊,829/10,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-efa55a333e8ac8ef6461,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,25° 13′ ♊,5113/60,printed sign,1564-05-02,,,,,
+assertion-v10-f217ef16eaf46f34204e,tycho-oo-10,5,Venus,ecliptic_longitude,Stadius,24th degree and 6′ of ♊,841/10,printed sign,1564-05-02,,,,,
+assertion-v12-17ebd72ef16d0cedc781,tycho-oo-12,71,Venus,ecliptic_latitude,Alphonsine,0° 51′,-17/20,printed direction,1590-09-01,morning,,,,
+assertion-v12-4ff112c28134f74ab973,tycho-oo-12,71,Venus,ecliptic_latitude,Copernicus,0° 22′,-11/30,printed direction,1590-09-01,morning,,,,
+assertion-v12-0d97890b3123b9d5449a,tycho-oo-12,71,Venus,ecliptic_longitude,Alphonsine,7° 50′ ♌,767/6,printed sign,1590-09-01,morning,,,,
+assertion-v12-41177551d2f2475b3c5a,tycho-oo-12,71,Venus,ecliptic_longitude,Copernicus,7° 0′ ♌,127,printed sign,1590-09-01,morning,,,,
+assertion-v12-298a9f0f5f8510f316ea,tycho-oo-12,153,Venus,ecliptic_latitude,Alphonsine,2° 17′ south,-137/60,printed direction,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260
+assertion-v12-e0a9c6587c151cc9553f,tycho-oo-12,153,Venus,ecliptic_latitude,Copernicus,0° 43′ south,-43/60,printed direction,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260
+assertion-v12-226fa142082840bd215c,tycho-oo-12,153,Venus,ecliptic_longitude,Alphonsine,0° 0′ ♐,240,printed sign,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260
+assertion-v12-090b65693f35efb478c3,tycho-oo-12,153,Venus,ecliptic_longitude,Copernicus,0° 0½′ ♐,28801/120,printed sign,1591-09-27,evening,,assertion-v12-075c07eda24d133d4346,6^h^ 11^m^,22260
+assertion-v10-1296401d0ea5dc4377a3,tycho-oo-10,4,Mars,ecliptic_latitude,Alphonsine,southern latitude 1½,-3/2,printed direction,1563-09-20,,,,,
+assertion-v10-3d9e9e970432b8d79d78,tycho-oo-10,4,Mars,ecliptic_longitude,Alphonsine,about 12° 40′ ♉,128/3,printed sign,1563-09-20,,,,,
+assertion-v10-5331823e16bf7f80a20c,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,♂ in 1° 55′,1103/12,printed sign,1564-04-15,,,,,
+assertion-v10-5c94f7122ed71ecbeb28,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,♂ in 3° 16′,1399/15,printed sign,1564-04-15,,,,,
+assertion-v10-e391654215de052f8472,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,♂ in 11° 20′ ♋,304/3,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-319cba07fdbb5aeeca08,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,♂ in 12° 52′ ♋,1543/15,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-150b347b341d76aad293,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,11° 57′ ♋,2039/20,printed sign,1564-05-02,,,,,
+assertion-v10-24759e36b2485f2b3004,tycho-oo-10,5,Mars,ecliptic_longitude,Stadius,13° 28′ ♋,1552/15,printed sign,1564-05-02,,,,,
+assertion-v10-58210b69e606aa757cb6,tycho-oo-10,14,Mars,ecliptic_longitude,Alphonsine,28° 2′ ♋,3541/30,printed sign,1568-01-10,before_noon,,,,
+assertion-v10-41cd7475b600ac9d435c,tycho-oo-10,14,Mars,ecliptic_longitude,Prutenic,3° 13′ ♌,7393/60,printed sign,1568-01-10,before_noon,,,,
+assertion-v10-9699d08c537a9faf77d7,tycho-oo-10,15,Mars,ecliptic_latitude,Alphonsine,4 4 B,61/15,printed direction,1568-01-25,night,,,,
+assertion-v10-f30a8879f8a11774f0a1,tycho-oo-10,15,Mars,ecliptic_latitude,Prutenic,3 40 B,11/3,printed direction,1568-01-25,night,,,,
+assertion-v10-b442181f1882e6d1f00b,tycho-oo-10,15,Mars,ecliptic_longitude,Alphonsine,22 16 ♋,1684/15,printed sign,1568-01-25,night,,,,
+assertion-v10-5f89a0eb56207d06c0f7,tycho-oo-10,15,Mars,ecliptic_longitude,Prutenic,27 19 ♋,7039/60,printed sign,1568-01-25,night,,,,
+assertion-v10-315e0309dd1497acab78,tycho-oo-10,18,Mars,ecliptic_longitude,Alphonsine,26 53 ♌,8813/60,printed sign,1569-11-07,morning,,,,
+assertion-v10-bd5a776c40c4dcfda6c5,tycho-oo-10,18,Mars,ecliptic_longitude,Stadius,28 50 ♌,893/6,printed sign,1569-11-07,morning,,,,
+assertion-v10-85fec13193b72f5c56c8,tycho-oo-10,18,Mars,ecliptic_longitude,Alphonsine,27 45,591/4,printed sign,1569-11-09,morning,,,,
+assertion-v10-b212f34b526afd714fea,tycho-oo-10,18,Mars,ecliptic_longitude,Copernicus,29.45,119/4,within the sign,1569-11-09,morning,,,,
+assertion-v10-1de33f6151fbd22d9ebc,tycho-oo-10,18,Mars,ecliptic_longitude,Stadius,29 44,2246/15,printed sign,1569-11-09,morning,,,,
+assertion-v10-3ee14762ab34e6950adb,tycho-oo-10,19,Mars,ecliptic_latitude,Alphonsine,1 40 Sep.,5/3,printed direction,1569-11-11,,,,,
+assertion-v10-57db931c087371d57239,tycho-oo-10,19,Mars,ecliptic_latitude,Stadius,1 47 Sept.,107/60,printed direction,1569-11-11,,,,,
+assertion-v10-18e9cdb78f8a9c139bd6,tycho-oo-10,19,Mars,ecliptic_longitude,Alphonsine,28 37 ♌,8917/60,printed sign,1569-11-11,,,,,
+assertion-v10-cc39b03c80441e249baf,tycho-oo-10,19,Mars,ecliptic_longitude,Stadius,0 38 ♍,4519/30,printed sign,1569-11-11,,,,,
+assertion-v10-e3ad30d43e6147d51212,tycho-oo-10,22,Mars,ecliptic_latitude,Leovitius,3.30,7/2,printed direction,1570-01-07,,,,,
+assertion-v10-3a3a377977b909bd566d,tycho-oo-10,22,Mars,ecliptic_longitude,Leovitius,11.4 ♍,2416/15,printed sign,1570-01-07,,,,,
+assertion-v10-b02304811f0077055a14,tycho-oo-10,22,Mars,ecliptic_longitude,Stadius,15.30 ♍,331/2,printed sign,1570-01-07,,,,,
+assertion-v10-0453f56447fb9f6ac5cb,tycho-oo-10,26,Mars,ecliptic_longitude,Alphonsine,2.5,25/12,within the sign,1570-02-10,,,,,
+assertion-v10-8596a154be2c9d96c486,tycho-oo-10,26,Mars,ecliptic_longitude,Prutenic,8.58,269/30,within the sign,1570-02-10,,,,,
+assertion-v10-4cee78e94aa71c76ac8a,tycho-oo-10,26,Mars,ecliptic_longitude,Alphonsine,29.56 ♌,2249/15,printed sign,1570-02-15,,,,,
+assertion-v10-2fd8c85c516da9f01ad2,tycho-oo-10,26,Mars,ecliptic_longitude,Prutenic,6^g^ 0′ ♍,156,printed sign,1570-02-15,noon,,,,
+assertion-v10-22d0461f46e210731f2b,tycho-oo-10,27,Mars,ecliptic_longitude,Prutenic,1^g^ 13′ ♍,9073/60,printed sign,1570-02-26,,,,,
+assertion-v10-e84b8581f3a8d9f262a0,tycho-oo-10,31,Mars,ecliptic_longitude,Alphonsine,21^g^ 35′ ♌,1699/12,printed sign,1570-03-24,,,,,
+assertion-v10-a0dd4b10bdaa192ae6ee,tycho-oo-10,31,Mars,ecliptic_longitude,Stadius,25^g^ 25 ♌,1745/12,printed sign,1570-03-28,,,,,
+assertion-v10-6a19dd7122f34b4a0e41,tycho-oo-10,34,Mars,ecliptic_latitude,Alphonsine,1 33 B,31/20,printed direction,1570-04-26,,,,,
+assertion-v10-9efad037d2ea36b09b5c,tycho-oo-10,34,Mars,ecliptic_longitude,Alphonsine,27.31 ♌,8851/60,printed sign,1570-04-26,,,,,
+assertion-v10-920efd3e01d511929712,tycho-oo-10,34,Mars,ecliptic_longitude,Prutenic,0 13 ♍,9013/60,printed sign,1570-04-26,,,,,
+assertion-v10-92527a7c52c50982423b,tycho-oo-10,63,Mars,ecliptic_longitude,Alphonsine,`16.18` ♈,163/10,printed sign,1578-09-15,,,assertion-v10-483371930aecdd6c631a,`1`^H^ `30`^M^,5400
+assertion-v10-25844a455a38438be025,tycho-oo-10,63,Mars,ecliptic_longitude,Prutenic,`9.36` ♈,48/5,printed sign,1578-09-15,,,assertion-v10-483371930aecdd6c631a,`1`^H^ `30`^M^,5400
+assertion-v10-b004791fb64b798236c5,tycho-oo-10,65,Mars,ecliptic_latitude,Alphonsine,1 33 M.,-31/20,printed direction,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490
+assertion-v10-a586f848a5dbefa061b1,tycho-oo-10,65,Mars,ecliptic_latitude,Prutenic,2 35 M.,-31/12,printed direction,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490
+assertion-v10-b9978db8ca3a9bcc1686,tycho-oo-10,65,Mars,ecliptic_longitude,Alphonsine,`6 59` ♈,419/60,printed sign,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490
+assertion-v10-1f35d27ea2fcc8f1be63,tycho-oo-10,65,Mars,ecliptic_longitude,Prutenic,`2 24` ♈,12/5,printed sign,1578-10-23,,,assertion-v10-b44a39b3bd43c911a209,H. 9 M. 51½,35490
+assertion-v10-7632869f96aca1f9dce0,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,5.48 ♊,329/5,printed sign,1580-11-17,,,assertion-v10-eab598e5c8a0b96a6273,H. 10,36000
+assertion-v10-deb9903d19c8921c89e1,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,6.15 ♊,265/4,printed sign,1580-11-17,,,assertion-v10-eab598e5c8a0b96a6273,H. 10,36000
+assertion-v10-04f1d1c1d8dd4bc621cf,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,29.8 ♉,887/15,printed sign,1580-12-10,,,,,
+assertion-v10-0c4b65af31ee58a84cb2,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,29.45 ♉,239/4,printed sign,1580-12-10,,,,,
+assertion-v10-7cf26251709abaff0330,tycho-oo-10,88,Mars,ecliptic_latitude,Alphonsine,2.9,43/20,printed direction,1580-12-24,,,,,
+assertion-v10-81b7a7cbc61242e8490d,tycho-oo-10,88,Mars,ecliptic_latitude,Prutenic,1.46,53/30,printed direction,1580-12-24,,,,,
+assertion-v10-72e6c7e34a4575294d7e,tycho-oo-10,88,Mars,ecliptic_longitude,Alphonsine,28.10 ♉,349/6,printed sign,1580-12-24,,,,,
+assertion-v10-63b94c3e14a212f88500,tycho-oo-10,88,Mars,ecliptic_longitude,Prutenic,29.0 ♉,59,printed sign,1580-12-24,,,,,
+assertion-v10-b771b94a785a5cc0f81c,tycho-oo-10,391,Mars,ecliptic_longitude,Prutenic,16 46⅔ ♋,961/9,printed sign,1582-12-28,after_noon,,,,
+assertion-v10-7bb1545ae7937fe2d906,tycho-oo-10,250,Mars,ecliptic_longitude,Alphonsine,27 52,418/15,within the sign,1583-04-19,,,,,
+assertion-v10-56f5e9ed6fff5ffcab4b,tycho-oo-10,250,Mars,ecliptic_longitude,Copernicus,29 47,1787/60,within the sign,1583-04-19,,,,,
+assertion-v10-1a79c81922f8a2ccd3bd,tycho-oo-10,321,Mars,ecliptic_latitude,Alphonsine,1 55 B.,23/12,printed direction,1584-11-12,after_noon,,,,
+assertion-v10-9b1f9a0501620a0c8c5c,tycho-oo-10,321,Mars,ecliptic_latitude,Copernicus,1 36 B.,8/5,printed direction,1584-11-12,after_noon,,,,
+assertion-v10-7b0cf39ac128befb1891,tycho-oo-10,321,Mars,ecliptic_longitude,Alphonsine,21 40 ♌,425/3,printed sign,1584-11-12,after_noon,,,,
+assertion-v10-5c384f27238b5c099293,tycho-oo-10,321,Mars,ecliptic_longitude,Copernicus,23 52 ♌,2158/15,printed sign,1584-11-12,after_noon,,,,
+assertion-v10-23e3bd6da4383001b64f,tycho-oo-10,391,Mars,ecliptic_longitude,Prutenic,23°4′4″ ♌,128761/900,printed sign,1584-11-12,after_noon,,,,
+assertion-v10-d5dd503581c7a0594909,tycho-oo-10,384,Mars,ecliptic_latitude,Alphonsine,4 9¾ B.,333/80,printed direction,1585-01-14,,,,,
+assertion-v10-3a6d52062f84982fb6e4,tycho-oo-10,384,Mars,ecliptic_latitude,Copernicus,4 5 B.,49/12,printed direction,1585-01-14,,,,,
+assertion-v10-d7536ebe9faf6a616c65,tycho-oo-10,384,Mars,ecliptic_longitude,Alphonsine,24 3 ♌,2881/20,printed sign,1585-01-14,,,,,
+assertion-v10-5af54021fb3ef5168741,tycho-oo-10,384,Mars,ecliptic_longitude,Copernicus,29 35 ♌,1795/12,printed sign,1585-01-14,,,,,
+assertion-v10-94c1bf49eb2d1683f70d,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 16 B.,64/15,printed direction,1585-01-22,,,,,
+assertion-v10-85b9eb2cc995ca621fb2,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 17 B.,257/60,printed direction,1585-01-22,,,,,
+assertion-v10-a43d09d9a4a3d00e933e,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,21 15 ♌,565/4,printed sign,1585-01-22,,,,,
+assertion-v10-61cd9ee24dd9d5f3dc47,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,27 4 ♌,2206/15,printed sign,1585-01-22,,,,,
+assertion-v10-65005f1030717d16d551,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 18⅓ B.,155/36,printed direction,1585-01-24,,,,,
+assertion-v10-83b607c3e07c7121f626,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 19 B.,259/60,printed direction,1585-01-24,,,,,
+assertion-v10-c2f5bd9e11c6890dfde9,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,20 35 ♌,1687/12,printed sign,1585-01-24,,,,,
+assertion-v10-cb03950c405c0320ac32,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,26 25 ♌,1757/12,printed sign,1585-01-24,,,,,
+assertion-v10-92655ee7b1615865a986,tycho-oo-10,388,Mars,ecliptic_latitude,Alphonsine,4 19 B.,259/60,printed direction,1585-01-31,,,,,
+assertion-v10-a899c47ecc44f6f1851b,tycho-oo-10,388,Mars,ecliptic_latitude,Copernicus,4 26½ B.,533/120,printed direction,1585-01-31,,,,,
+assertion-v10-0edefbbf58793631c900,tycho-oo-10,388,Mars,ecliptic_longitude,Alphonsine,17 39 ♌,2753/20,printed sign,1585-01-31,,,,,
+assertion-v10-a8ddeffdd84e2a4d28a8,tycho-oo-10,388,Mars,ecliptic_longitude,Copernicus,23 38 ♌,4309/30,printed sign,1585-01-31,,,,,
+assertion-v10-2d4020be59a0b59fe17d,tycho-oo-10,389,Mars,ecliptic_latitude,Alphonsine,4 16B.,64/15,printed direction,1585-02-03,,,,,
+assertion-v10-078428848be6b8ad2fc3,tycho-oo-10,389,Mars,ecliptic_latitude,Copernicus,4 27B.,89/20,printed direction,1585-02-03,,,,,
+assertion-v10-1c444b21128cad10b071,tycho-oo-10,389,Mars,ecliptic_longitude,Alphonsine,16 35 ♌,1639/12,printed sign,1585-02-03,,,,,
+assertion-v10-72b57ab46aa5bbca350f,tycho-oo-10,389,Mars,ecliptic_longitude,Copernicus,22 35 ♌,1711/12,printed sign,1585-02-03,,,,,
+assertion-v10-7dbc2245c5903da9936c,tycho-oo-10,389,Mars,ecliptic_latitude,Alphonsine,4 15 B.,17/4,printed direction,1585-02-04,,,,,
+assertion-v10-2a861e1eb1f893ffdf9a,tycho-oo-10,389,Mars,ecliptic_latitude,Copernicus,4 27 B.,89/20,printed direction,1585-02-04,,,,,
+assertion-v10-941acc33d48a0f48f2b3,tycho-oo-10,389,Mars,ecliptic_longitude,Alphonsine,16 11 ♌,8171/60,printed sign,1585-02-04,,,,,
+assertion-v10-7c3a7f78f70e5b82f57e,tycho-oo-10,389,Mars,ecliptic_longitude,Copernicus,22 8 ♌,2132/15,printed sign,1585-02-04,,,,,
+assertion-v10-54853becaa4cde6a2c9d,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,3 2 B.,91/30,printed direction,1585-03-12,,,,,
+assertion-v10-d6b98db41882e3a29832,tycho-oo-10,397,Mars,ecliptic_latitude,Prutenic,3 32 B.,53/15,printed direction,1585-03-12,,,,,
+assertion-v10-9ff98b4e1d9506e04f97,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,8 34½ ♌,5143/40,printed sign,1585-03-12,,,,,
+assertion-v10-ec4b967b55c7cb146219,tycho-oo-10,397,Mars,ecliptic_longitude,Prutenic,12 54 ♌,1329/10,printed sign,1585-03-12,,,,,
+assertion-v10-fc9d6800ad527d4ca64f,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,2 56 B.,44/15,printed direction,1585-03-16,,,,,
+assertion-v10-b3fdf396919761cb74ac,tycho-oo-10,397,Mars,ecliptic_latitude,Copernicus,3 21¼ B.,161/48,printed direction,1585-03-16,,,,,
+assertion-v10-0b1c1ab037ec0c4771d4,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,8 43 ♌,7723/60,printed sign,1585-03-16,,,,,
+assertion-v10-676b1f2cff38e982638d,tycho-oo-10,397,Mars,ecliptic_longitude,Copernicus,12 51 ♌,2657/20,printed sign,1585-03-16,,,,,
+assertion-v10-3efa77b366e146916ffd,tycho-oo-10,397,Mars,ecliptic_latitude,Alphonsine,2 47 B.,167/60,printed direction,1585-03-19,,,,,
+assertion-v10-803369dfa56c3dcf7b1a,tycho-oo-10,397,Mars,ecliptic_latitude,Copernicus,3 14 B.,97/30,printed direction,1585-03-19,,,,,
+assertion-v10-4cc94a110e9665c019f7,tycho-oo-10,397,Mars,ecliptic_longitude,Alphonsine,9 7 ♌,7747/60,printed sign,1585-03-19,,,,,
+assertion-v10-da7bde6ac2e90d4fa6e5,tycho-oo-10,397,Mars,ecliptic_longitude,Copernicus,12 57 ♌,2659/20,printed sign,1585-03-19,,,,,
+assertion-v10-cfd57532e9822f53aaed,tycho-oo-10,398,Mars,ecliptic_latitude,Alphonsine,2 30 B.,5/2,printed direction,1585-03-26,,,,,
+assertion-v10-113356919c42318791af,tycho-oo-10,398,Mars,ecliptic_longitude,Alphonsine,10 0 ♌,130,printed sign,1585-03-26,,,,,
+assertion-v10-5f6631af71848a839501,tycho-oo-10,398,Mars,ecliptic_longitude,Prutenic,13 35 ♌,1603/12,printed sign,1585-03-26,,,,,
+assertion-v10-f1914bec52d5dca09b86,tycho-oo-10,399,Mars,ecliptic_latitude,Alphonsine,1 51 B.,37/20,printed direction,1585-04-15,,,,,
+assertion-v10-edc86f1de8936d2e02bf,tycho-oo-10,399,Mars,ecliptic_latitude,Prutenic,2 12½ B.,53/24,printed direction,1585-04-15,,,,,
+assertion-v10-f4ae5c08518469f31bbe,tycho-oo-10,399,Mars,ecliptic_longitude,Alphonsine,15 10 ♌,811/6,printed sign,1585-04-15,,,,,
+assertion-v10-b3ba1e7d1d75aae9f3fb,tycho-oo-10,399,Mars,ecliptic_longitude,Prutenic,18 0 ♌,138,printed sign,1585-04-15,,,,,
+assertion-v11-1e11d1d6bc6d4b4f377a,tycho-oo-11,64,Mars,ecliptic_latitude,Alphonsine,0° 41½′ north,83/120,printed direction,1586-09-23,,,,,
+assertion-v11-c93f8aeb82fb38a76444,tycho-oo-11,64,Mars,ecliptic_latitude,Copernicus,0° 35′ north,7/12,printed direction,1586-09-23,,,,,
+assertion-v11-7790188d46e359990343,tycho-oo-11,64,Mars,ecliptic_longitude,Alphonsine,12° 54′ ♌,1329/10,printed sign,1586-09-23,,,,,
+assertion-v11-adfc6ba683432054b423,tycho-oo-11,64,Mars,ecliptic_longitude,Copernicus,13° 56′ ♌,2009/15,printed sign,1586-09-23,,,,,
+assertion-v11-4abd57ac8513ee8d0712,tycho-oo-11,185,Mars,ecliptic_latitude,Prutenic,3° 33′,71/20,printed direction,1587-03-09,after_noon,,,,
+assertion-v11-336e778edddcbde1aa82,tycho-oo-11,185,Mars,ecliptic_longitude,Prutenic,26° 38′ ♍,5299/30,printed sign,1587-03-09,after_noon,,,,
+assertion-v11-ba52c94c0ec557c3762d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 16′,19/15,printed direction,1589-04-05,,,,,
+assertion-v11-aecb0f391eb42b99b083,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,2° 4′,31/15,printed direction,1589-04-05,,,,,
+assertion-v11-b9bd3b6205df1989794a,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,6° 27′ ♏,4329/20,printed sign,1589-04-05,,,,,
+assertion-v11-01d9582dad5fdf4d611c,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,9° 19′ ♏,13159/60,printed sign,1589-04-05,,,,,
+assertion-v11-2aad931b721db63ed5fc,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 10′,7/6,printed direction,1589-04-08,,,,,
+assertion-v11-7abd761444288d69e8ba,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,2° 1′,121/60,printed direction,1589-04-08,,,,,
+assertion-v11-e5ee26fd775d359ffddb,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,5° 27′,4309/20,printed sign,1589-04-08,,,,,
+assertion-v11-35a5ffbb6925df59a909,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,8° 14′,6547/30,printed sign,1589-04-08,,,,,
+assertion-v11-9aa012636cab8fe63d5e,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,1° 0′,1,printed direction,1589-04-13,,,,,
+assertion-v11-1d1e15651a78dfd668c2,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 51′,37/20,printed direction,1589-04-13,,,,,
+assertion-v11-052338289fb7f91cd1a0,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,3° 43′,12823/60,printed sign,1589-04-13,,,,,
+assertion-v11-46990590381d475038ff,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,6° 27′,4329/20,printed sign,1589-04-13,,,,,
+assertion-v11-1d7fe8d1061e2c3ce073,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 54′,9/10,printed direction,1589-04-15,,,,,
+assertion-v11-2c4ecd11844a80865191,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 47′,107/60,printed direction,1589-04-15,,,,,
+assertion-v11-e48b8f80cb51f3c4d8c6,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,3° 1′,12781/60,printed sign,1589-04-15,,,,,
+assertion-v11-bc4f81e6be9deffc3f92,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,5° 42′,2157/10,printed sign,1589-04-15,,,,,
+assertion-v11-1fe5e3d2213ea46f3dc7,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 39′,13/20,printed direction,1589-04-20,,,,,
+assertion-v11-499554eb17235f38022f,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 38′,49/30,printed direction,1589-04-20,,,,,
+assertion-v11-d6b84fe1c3606e9f034b,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,1° 14′,6337/30,printed sign,1589-04-20,,,,,
+assertion-v11-af8fa3f3b385fc4ed53d,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,3° 46′,6413/30,printed sign,1589-04-20,,,,,
+assertion-v11-1c33e21969639dc44e3b,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 35′,7/12,printed direction,1589-04-22,,,,,
+assertion-v11-b322f409294a56d0b5d6,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 35′,19/12,printed direction,1589-04-22,,,,,
+assertion-v11-3e53740e168280286e6d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,0° 34′,6317/30,printed sign,1589-04-22,,,,,
+assertion-v11-a24ea3f440c9ae688474,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,3° 1′,12781/60,printed sign,1589-04-22,,,,,
+assertion-v11-62b57532fd3be6a448f8,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 33′,11/20,printed direction,1589-04-23,,,,,
+assertion-v11-3794f6df12cb51da06d9,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 32′,23/15,printed direction,1589-04-23,,,,,
+assertion-v11-190007fffc7e16fe9e5d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,0° 16′,3154/15,printed sign,1589-04-23,,,,,
+assertion-v11-765291e30a8283caf2d4,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,2° 39′,4253/20,printed sign,1589-04-23,,,,,
+assertion-v11-9d447165933791bbf19d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 31′,31/60,printed direction,1589-04-24,,,,,
+assertion-v11-1b41eabdd2b2e33882b6,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 30′,3/2,printed direction,1589-04-24,,,,,
+assertion-v11-fa6e9bc5efc624173d6d,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,29° 58′ ♎,6299/30,printed sign,1589-04-24,,,,,
+assertion-v11-e34b191f10bb3a342efa,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,2° 17′,12737/60,printed sign,1589-04-24,,,,,
+assertion-v11-513ece10b8e02041ba4d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphonsine,0° 26′,13/30,printed direction,1589-04-26,,,,,
+assertion-v11-5d6c1fc8bd2d5093eac5,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1° 26′,43/30,printed direction,1589-04-26,,,,,
+assertion-v11-058cc3906e0f0c8a00f6,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,29° 19′,12559/60,printed sign,1589-04-26,,,,,
+assertion-v11-b94e6c0852a147ddaaeb,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,1° 33′,4231/20,printed sign,1589-04-26,,,,,
+assertion-v12-43a047dfb2f2edddf9b9,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1° 30′ south,-3/2,printed direction,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400
+assertion-v12-79a81f0fbae60f4149d8,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,0° 30′ south,-1/2,printed direction,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400
+assertion-v12-b2ecba434ea9f494804f,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,4° 48¾′ ♑,4397/16,printed sign,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400
+assertion-v12-face02b568531e9deecb,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 11′ ♑,16331/60,printed sign,1591-04-29,,Julian,assertion-v12-1fc518125185f553e436,14^h^ 0^m^,50400
+assertion-v12-b342dbd24b70e8c72af4,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,2° 26½′,-293/120,printed direction,1591-05-12,,Julian,assertion-v12-2e740b4c7725536ac714,13^h^ 40^m^,49200
+assertion-v12-05b0d0dad0852458f185,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 6½′,-133/120,printed direction,1591-05-12,,Julian,assertion-v12-2e740b4c7725536ac714,13^h^ 40^m^,49200
+assertion-v12-75ee04b8b0649eb26adc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 42½′,137/24,within the sign,1591-05-12,,Julian,assertion-v12-2e740b4c7725536ac714,13^h^ 40^m^,49200
+assertion-v12-5c48e140711d328cd390,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 33⅓′,23/9,within the sign,1591-05-12,,Julian,assertion-v12-2e740b4c7725536ac714,13^h^ 40^m^,49200
+assertion-v12-d7ec97cb62e1e4aeae2c,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,2° 30¾′,-201/80,printed direction,1591-05-13,,Julian,assertion-v12-dffe6bd3f085030065ae,13^h^ 50^m^,49800
+assertion-v12-c1952387fc97e2324958,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 8¾′,-55/48,printed direction,1591-05-13,,Julian,assertion-v12-dffe6bd3f085030065ae,13^h^ 50^m^,49800
+assertion-v12-d66bf1516bafb0293d60,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 42′,57/10,within the sign,1591-05-13,,Julian,assertion-v12-dffe6bd3f085030065ae,13^h^ 50^m^,49800
+assertion-v12-4b4f979be4c1942ed097,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,2° 30⅓′,451/180,within the sign,1591-05-13,,Julian,assertion-v12-dffe6bd3f085030065ae,13^h^ 50^m^,49800
+assertion-v12-50b89d5103b11ab167bb,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 4′,-46/15,printed direction,1591-05-19,,Julian,assertion-v12-d50cb6d1052d55ce86b8,13^h^ 40^m^,49200
+assertion-v12-bd9e9a1a2b432e182365,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 30′,-3/2,printed direction,1591-05-19,,Julian,assertion-v12-d50cb6d1052d55ce86b8,13^h^ 40^m^,49200
+assertion-v12-06fa80b39d9edf45e953,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 20′,16/3,within the sign,1591-05-19,,Julian,assertion-v12-d50cb6d1052d55ce86b8,13^h^ 40^m^,49200
+assertion-v12-dcf5ee7648b684c4c887,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1° 50¼′,147/80,within the sign,1591-05-19,,Julian,assertion-v12-d50cb6d1052d55ce86b8,13^h^ 40^m^,49200
+assertion-v12-236f75ae4fe2cc4e92f8,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 10⅔′,-143/45,printed direction,1591-05-21,,Julian,assertion-v12-24584a99b73e931ffd65,13^h^ 34^m^,48840
+assertion-v12-35ff6c8853fb5c22a535,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1° 39′,-33/20,printed direction,1591-05-21,,Julian,assertion-v12-24584a99b73e931ffd65,13^h^ 34^m^,48840
+assertion-v12-2268c1c0ef74c1951c94,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,5° 4¾′,1219/240,within the sign,1591-05-21,,Julian,assertion-v12-24584a99b73e931ffd65,13^h^ 34^m^,48840
+assertion-v12-54efefda98005405100d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1° 31⅓′,137/90,within the sign,1591-05-21,,Julian,assertion-v12-24584a99b73e931ffd65,13^h^ 34^m^,48840
+assertion-v12-a73426781485cda3184f,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 19⅔′,-599/180,printed direction,1591-05-24,,Julian,assertion-v12-e6807b215267f78db4d7,13^h^ 13^m^,47580
+assertion-v12-9d21c0f644a42d311bfc,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 0′,-2,printed direction,1591-05-24,,Julian,assertion-v12-e6807b215267f78db4d7,13^h^ 13^m^,47580
+assertion-v12-bb7f93f087c7abbc018b,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,4° 37′,277/60,within the sign,1591-05-24,,Julian,assertion-v12-e6807b215267f78db4d7,13^h^ 13^m^,47580
+assertion-v12-2c6944c0e3d6def440e2,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,0° 52⅓′,157/180,within the sign,1591-05-24,,Julian,assertion-v12-e6807b215267f78db4d7,13^h^ 13^m^,47580
+assertion-v12-0a1f314fd1969f100566,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,3° 47′,-227/60,printed direction,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720
+assertion-v12-e503df69381954e1f65e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 27⅚′,-887/360,printed direction,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720
+assertion-v12-fe53db82cc10262bf2dc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,3° 39′,73/20,within the sign,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720
+assertion-v12-fe7dd89e509d4c8e6425,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,29° 36½′ ♐,32353/120,printed sign,1591-05-29,,Julian,assertion-v12-2977874c7e0e3f15fdf5,12^h^ 42^m^,45720
+assertion-v12-4ca9d7e1b732fedf62c6,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,4° 34′,-137/30,printed direction,1591-06-06,,Julian,assertion-v12-f9f8336abf16b8f0f8e0,12^h^ 10^m^,43800
+assertion-v12-fdd72a4596698d0e9319,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 59′,-179/60,printed direction,1591-06-06,,Julian,assertion-v12-f9f8336abf16b8f0f8e0,12^h^ 10^m^,43800
+assertion-v12-272b780893cb17614c4c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1° 36′,8/5,within the sign,1591-06-06,,Julian,assertion-v12-f9f8336abf16b8f0f8e0,12^h^ 10^m^,43800
+assertion-v12-f968a16cd639b413001f,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,27° 7′,1627/60,within the sign,1591-06-06,,Julian,assertion-v12-f9f8336abf16b8f0f8e0,12^h^ 10^m^,43800
+assertion-v12-be9021f26c2b22130549,tycho-oo-12,151,Mars,ecliptic_latitude,Prutenic,3° 8′ south,-47/15,printed direction,1591-06-08,,Julian,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880
+assertion-v12-cbb857ea467d8bdb1430,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,0° 57′ ♑,5419/20,printed sign,1591-06-08,,Julian,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880
+assertion-v12-5dab8a18fa6970c4a78e,tycho-oo-12,151,Mars,ecliptic_longitude,Prutenic,26° 27′ ♐,5329/20,printed sign,1591-06-08,,Julian,assertion-v12-115d36490f275bfb1bdc,13^h^ 18^m^,47880
+assertion-v12-739f35cfd1f6b957013e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 19′,-199/60,printed direction,1591-06-10,,Julian,assertion-v12-be9d331459d091fd824d,11^h^ 40^m^,42000
+assertion-v12-f9340cac5c8f25c7b4b5,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,0° 18′,3/10,within the sign,1591-06-10,,Julian,assertion-v12-be9d331459d091fd824d,11^h^ 40^m^,42000
+assertion-v12-d59ebaecb37ef33f60cc,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 46′,773/30,within the sign,1591-06-10,,Julian,assertion-v12-be9d331459d091fd824d,11^h^ 40^m^,42000
+assertion-v12-b4c67f8ff38e9a63cb97,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,5° 5′,-61/12,printed direction,1591-06-11,,Julian,assertion-v12-bcfe1ca85574b3561c37,11^h^ 30^m^,41400
+assertion-v12-0e85e4d0244e1133d240,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 19′,-199/60,printed direction,1591-06-11,,Julian,assertion-v12-bcfe1ca85574b3561c37,11^h^ 30^m^,41400
+assertion-v12-3e0adc83930118a9653a,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,29° 58′ ♐,8099/30,printed sign,1591-06-11,,Julian,assertion-v12-bcfe1ca85574b3561c37,11^h^ 30^m^,41400
+assertion-v12-6f1ed2d7376a259dd42b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 25′,305/12,within the sign,1591-06-11,,Julian,assertion-v12-bcfe1ca85574b3561c37,11^h^ 30^m^,41400
+assertion-v12-65989c8876178233c496,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,5° 8′,-77/15,printed direction,1591-06-12,,Julian,assertion-v12-57ffa132ce40d86ff87c,11^h^ 50^m^,42600
+assertion-v12-d30b7007fb7935b265b6,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 21′,-67/20,printed direction,1591-06-12,,Julian,assertion-v12-57ffa132ce40d86ff87c,11^h^ 50^m^,42600
+assertion-v12-ae5d12269f7b4ca7ec99,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,29° 39′,593/20,within the sign,1591-06-12,,Julian,assertion-v12-57ffa132ce40d86ff87c,11^h^ 50^m^,42600
+assertion-v12-9db42bda3b6423e0befd,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,25° 3′,501/20,within the sign,1591-06-12,,Julian,assertion-v12-57ffa132ce40d86ff87c,11^h^ 50^m^,42600
+assertion-v12-8824a09d0bb776fe2342,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 50′,-23/6,printed direction,1591-06-28,,Julian,assertion-v12-d0ec7ac2a870d79838f9,10^h^ 26^m^,37560
+assertion-v12-c73a65396130c9f518fa,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,24° 54′,249/10,within the sign,1591-06-28,,Julian,assertion-v12-d0ec7ac2a870d79838f9,10^h^ 26^m^,37560
+assertion-v12-b0e52a89643c6623816d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,20° 22′,611/30,within the sign,1591-06-28,,Julian,assertion-v12-d0ec7ac2a870d79838f9,10^h^ 26^m^,37560
+assertion-v12-d459523b1ececf1a0fdb,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,3° 53′,-233/60,printed direction,1591-07-17,,Julian,assertion-v12-7224712d7f0a426bc80a,9^h^ 32^m^,34320
+assertion-v12-60a1200046190bd9d11c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,22° 37′,1357/60,within the sign,1591-07-17,,Julian,assertion-v12-7224712d7f0a426bc80a,9^h^ 32^m^,34320
+assertion-v12-624eaf21d82f79332588,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,18° 51′,377/20,within the sign,1591-07-17,,Julian,assertion-v12-7224712d7f0a426bc80a,9^h^ 32^m^,34320
+assertion-v12-953afd1909f25094144f,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,2° 32′,-38/15,printed direction,1591-09-26,,Julian,assertion-v12-2dd2f1b05b04140ca4a2,7^h^ 0^m^,25200
+assertion-v12-3e954cfbf01d45635cdb,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,20° 51′,417/20,within the sign,1591-09-26,,Julian,assertion-v12-2dd2f1b05b04140ca4a2,7^h^ 0^m^,25200
+assertion-v12-cae2b9dd97a2eef27d7b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,18° 21′,367/20,within the sign,1591-09-26,,Julian,assertion-v12-2dd2f1b05b04140ca4a2,7^h^ 0^m^,25200
+assertion-v12-412ea670ea50750e9246,tycho-oo-12,147,Mars,ecliptic_latitude,Alphonsine,0° 32⅔′ south,-49/90,printed direction,1591-12-10,evening,,,,
+assertion-v12-6bdf52adee182b870ce2,tycho-oo-12,147,Mars,ecliptic_latitude,Copernicus,0° 59′ south,-59/60,printed direction,1591-12-10,evening,,,,
+assertion-v12-a5fbef10ae575384100e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,0° 59′ south,-59/60,printed direction,1591-12-10,,Julian,assertion-v12-9f02e3ddba1f20e7c60f,5^h^ 26^m^,19560
+assertion-v12-09efef4d16aeb0c988a1,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,11° 29′ ♓,20489/60,printed sign,1591-12-10,,Julian,assertion-v12-9f02e3ddba1f20e7c60f,5^h^ 26^m^,19560
+assertion-v12-f5c709fbb00fbf9f564d,tycho-oo-12,147,Mars,ecliptic_longitude,Alphonsine,11° 29′ ♓,20489/60,printed sign,1591-12-10,evening,,,,
+assertion-v12-2dcbd7a28d145e696e47,tycho-oo-12,147,Mars,ecliptic_longitude,Copernicus,9° 32′ ♓,5093/15,printed sign,1591-12-10,evening,,,,
+assertion-v12-824bce125f2c1214855a,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,9° 32′ ♓,5093/15,printed sign,1591-12-10,,Julian,assertion-v12-9f02e3ddba1f20e7c60f,5^h^ 26^m^,19560
+assertion-v12-08db0aa23e94c585c1e4,tycho-oo-12,220,Mars,ecliptic_latitude,Alphonsine,0° 5¼′ north,7/80,printed direction,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960
+assertion-v12-ebb63e926cc90dc8ca52,tycho-oo-12,220,Mars,ecliptic_latitude,Copernicus,0° 5½′ north,11/120,printed direction,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960
+assertion-v12-db1e185b232132152370,tycho-oo-12,220,Mars,ecliptic_longitude,Alphonsine,19° 48′,99/5,within the sign,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960
+assertion-v12-6143d1ba6403d6719d8c,tycho-oo-12,220,Mars,ecliptic_longitude,Copernicus,18° 51½′,2263/120,within the sign,1592-02-03,,,assertion-v12-b93f1bbb2bb7bc4d024c,6^h^ 6^m^,21960
+assertion-v12-ef2910eef1151dc90a5d,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,5° 29′ south,-329/60,printed direction,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400
+assertion-v12-2e940cf06ddab6eab438,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,5° 30′ south,-11/2,printed direction,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400
+assertion-v12-62fb03ba2cc1b0d3b1dc,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,22° 44′ ♓,5291/15,printed sign,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400
+assertion-v12-92a7c2348c3337fb6465,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,14° 48½′ ♓,41377/120,printed sign,1593-07-21,,,assertion-v12-364dd1fbbf7922a38cbe,14^h^ 0^m^,50400
+assertion-v12-c9cd03cc8e62764cee63,tycho-oo-12,283,Mars,ecliptic_latitude,Alphonsine,5 29 south,-329/60,printed direction,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200
+assertion-v12-ae7eb92351c84192c36b,tycho-oo-12,283,Mars,ecliptic_latitude,Copernicus,5° 30′,-11/2,printed direction,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200
+assertion-v12-5f0d2bed19e9b283fa6b,tycho-oo-12,283,Mars,ecliptic_longitude,Alphonsine,22° 44′ ♓,5291/15,printed sign,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200
+assertion-v12-0e7e6666553facb4b194,tycho-oo-12,283,Mars,ecliptic_longitude,Copernicus,"14° 48½′ ♓,",41377/120,printed sign,1593-07-22,morning,,assertion-v12-5d61411343fa1e008759,2^h^ 0^m^,7200
+assertion-v12-7682557205595f81fded,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,5° 46′,-173/30,printed direction,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500
+assertion-v12-427ab913e53e341e76cf,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 0′,-6,printed direction,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500
+assertion-v12-b5fd8f2f7821628d16f0,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,22° 46′,10583/30,printed sign,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500
+assertion-v12-771cc4be361f78351812,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,13° 57′,6879/20,printed sign,1593-07-30,,,assertion-v12-fe845c49bc1f5b042cc1,13 45,49500
+assertion-v12-36d97384c5da4648843c,tycho-oo-12,284,Mars,ecliptic_latitude,Alphonsine,5° 46′ south,-173/30,printed direction,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300
+assertion-v12-f886d4512ed8a45bafc0,tycho-oo-12,284,Mars,ecliptic_latitude,Copernicus,6° 0′ south,-6,printed direction,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300
+assertion-v12-7ac485ef3032c434fa42,tycho-oo-12,284,Mars,ecliptic_longitude,Alphonsine,22° 46′ ♓,10583/30,printed sign,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300
+assertion-v12-c6104d58aa46f3e91d4e,tycho-oo-12,284,Mars,ecliptic_longitude,Copernicus,13° 57′ ♓,6879/20,printed sign,1593-07-31,morning,,assertion-v12-51f7330f016340b7e1e2,1^h^ 45^m^,6300
+assertion-v12-9fdae3abb05222564b1c,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 0′,-6,printed direction,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500
+assertion-v12-ebfa11291062521800d5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 30′,-13/2,printed direction,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500
+assertion-v12-8149c306fb130833f72c,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,21° 26′,10543/30,printed sign,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500
+assertion-v12-981f08dbd5cdb75acb12,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,12° 0′,342,printed sign,1593-08-10,,,assertion-v12-ee4af4820ae1f0b70760,13 45,49500
+assertion-v12-b8bae8affaeb5e1450a3,tycho-oo-12,285,Mars,ecliptic_longitude,Alphonsine,21° 26′,643/30,within the sign,1593-08-11,morning,,assertion-v12-6cb12fd07016ec4a08bf,1¾^h^,6300
+assertion-v12-394609affe925e94feef,tycho-oo-12,285,Mars,ecliptic_longitude,Copernicus,12° 0′ ♓,342,printed sign,1593-08-11,morning,,assertion-v12-6cb12fd07016ec4a08bf,1¾^h^,6300
+assertion-v12-6e0d2d8a7aa9a3af5d63,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 6′,-61/10,printed direction,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800
+assertion-v12-4550a3b85cad6202b615,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 40′,-20/3,printed direction,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800
+assertion-v12-6780e141393bd85c1aad,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,19° 38′,10489/30,printed sign,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800
+assertion-v12-d07057d2847256a7b901,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,10° 11′,20411/60,printed sign,1593-08-17,,,assertion-v12-e6ab719b2edd248ee6e1,13 0,46800
+assertion-v12-57b14784768e799bca77,tycho-oo-12,286,Mars,ecliptic_latitude,Alphonsine,6° 6′ south,-61/10,printed direction,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600
+assertion-v12-0d7376bad523fc109488,tycho-oo-12,286,Mars,ecliptic_latitude,Copernicus,6° 40′ south,-20/3,printed direction,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600
+assertion-v12-199605e59145662afe56,tycho-oo-12,286,Mars,ecliptic_longitude,Alphonsine,19° 38′ ♓,10489/30,printed sign,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600
+assertion-v12-0c087655b7561eb2cc1a,tycho-oo-12,286,Mars,ecliptic_longitude,Copernicus,10° 11′ ♓,20411/60,printed sign,1593-08-18,morning,,assertion-v12-90534f40bbdeda89695e,1^h^ 0^m^,3600
+assertion-v12-93057932b0fece941c88,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 10′,-37/6,printed direction,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800
+assertion-v12-013a556ea606076542e5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 30′,-13/2,printed direction,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800
+assertion-v12-a0891b0235cd386766c4,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 46′,10463/30,printed sign,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800
+assertion-v12-5ae97932e6fa68134a56,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,9° 16′,5089/15,printed sign,1593-08-20,,,assertion-v12-9dcd0b2a5216280408c6,13 0,46800
+assertion-v12-5aa291db3d4df751ba51,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 12′,-31/5,printed direction,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000
+assertion-v12-dd33038f85fc237c80e5,tycho-oo-12,287,Mars,ecliptic_latitude,Alphonsine,6° 12′ south,-31/5,printed direction,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800
+assertion-v12-304ed201d272c0187a08,tycho-oo-12,287,Mars,ecliptic_latitude,Copernicus,6° 43′ south,-403/60,printed direction,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800
+assertion-v12-b2a1285b317e69e4b412,tycho-oo-12,286,Mars,ecliptic_latitude,Copernicus,6° 30′ south,-13/2,printed direction,1593-08-21,morning,,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600
+assertion-v12-f73d6f76e7ec2caf4981,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 43′,-403/60,printed direction,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000
+assertion-v12-764e1a12d7b8a1c8004a,tycho-oo-12,286,Mars,ecliptic_longitude,Alphonsine,18° 46′,563/30,within the sign,1593-08-21,morning,,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600
+assertion-v12-ba9649b0fe0fd742b27d,tycho-oo-12,287,Mars,ecliptic_longitude,Alphonsine,18° 29′ ♓,20909/60,printed sign,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800
+assertion-v12-e27c9cdd6e2245d25fc3,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 29′,20909/60,printed sign,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000
+assertion-v12-1685d4c4b411419c2f2d,tycho-oo-12,287,Mars,ecliptic_longitude,Copernicus,8° 58′ ♓,10169/30,printed sign,1593-08-21,before_midnight,,assertion-v12-4270d3049fe9e2e5c5f3,0½^h^,1800
+assertion-v12-404d37fb2cd2bbcfc911,tycho-oo-12,286,Mars,ecliptic_longitude,Copernicus,9° 16′ ♓,5089/15,printed sign,1593-08-21,morning,,assertion-v12-0a928f676f7c27de4baf,1^h^ 0^m^,3600
+assertion-v12-de759b503a9200cd7c0e,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 58′,10169/30,printed sign,1593-08-21,,,assertion-v12-f16bd831d876211119d0,12 30,45000
+assertion-v12-93526e6550007be48610,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 14′,-187/30,printed direction,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400
+assertion-v12-1594e5c8f21534373387,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 43′,-403/60,printed direction,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400
+assertion-v12-b874cb8d517a6f8b8648,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,18° 11′,20891/60,printed sign,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400
+assertion-v12-7c4fec805f59b3ee9b95,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 39′,6773/20,printed sign,1593-08-22,,,assertion-v12-13cbeec5de384dac72af,12 20,44400
+assertion-v12-23b74543baf731031670,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 15′,-25/4,printed direction,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600
+assertion-v12-43fb332baabcdd8a095e,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 40′,-20/3,printed direction,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600
+assertion-v12-e46982badeffdb6dc0e6,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,17° 53′,20873/60,printed sign,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600
+assertion-v12-fc531d2383c5ee80903f,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,8° 21′,6767/20,printed sign,1593-08-23,,,assertion-v12-5ab807975418bc910977,11 0,39600
+assertion-v12-5841fd040e225ce1d225,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 16′,-94/15,printed direction,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800
+assertion-v12-ac8e9a1cd96320fd00b2,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 37′,-397/60,printed direction,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800
+assertion-v12-a6248deb349bb17e0902,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,12° 35′,4111/12,printed sign,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800
+assertion-v12-b92f241cdc17eeb6b296,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,7° 4′,5056/15,printed sign,1593-08-24,,,assertion-v12-6b6b65d7c2449822e8ab,10 30,37800
+assertion-v12-d7e31aa7abf37c04e5c6,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,6° 22′,-191/30,printed direction,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200
+assertion-v12-bf73814b4b73a6a0f68a,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,6° 21′,-127/20,printed direction,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200
+assertion-v12-86aebbc13fa86208abe2,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,15° 59′,20759/60,printed sign,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200
+assertion-v12-267afa8f503a449263e1,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,6° 42′,3367/10,printed sign,1593-08-29,,,assertion-v12-40c0492645067dff6685,10 20,37200
+assertion-v12-b54eb5328e555b481c01,tycho-oo-12,297,Mars,ecliptic_latitude,Alphonsine,0° 1′ 30″ north,1/40,printed direction,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200
+assertion-v12-de08c932aefc6c53ca18,tycho-oo-12,297,Mars,ecliptic_latitude,Copernicus,0° 30′ south,-1/2,printed direction,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200
+assertion-v12-699411e50f40ab157481,tycho-oo-12,297,Mars,ecliptic_longitude,Alphonsine,6° 9′ ♈,123/20,printed sign,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200
+assertion-v12-e38de4d893fa8a4ced6c,tycho-oo-12,297,Mars,ecliptic_longitude,Copernicus,4° 30′ ♈,9/2,printed sign,1593-12-10,,,assertion-v12-a0f11ad1125beb4ea09b,7^h^,25200
+assertion-v12-5032621c9e74d854163d,tycho-oo-12,298,Mars,ecliptic_latitude,Alphonsine,0° 12′ north,1/5,printed direction,1593-12-19,,,assertion-v12-b5d933870a5addf46f1d,5¾^h^,20700
+assertion-v12-f50828157af91e701d57,tycho-oo-12,298,Mars,ecliptic_latitude,Copernicus,0° 14′ south,-7/30,printed direction,1593-12-19,,,assertion-v12-b5d933870a5addf46f1d,5¾^h^,20700
+assertion-v12-dff8e927a6470ac8344f,tycho-oo-12,298,Mars,ecliptic_longitude,Alphonsine,11° 8′ ♈,167/15,printed sign,1593-12-19,,,assertion-v12-b5d933870a5addf46f1d,5¾^h^,20700
+assertion-v12-5c268fc799fa740d4812,tycho-oo-12,298,Mars,ecliptic_longitude,Copernicus,9° 33′ ♈,191/20,printed sign,1593-12-19,,,assertion-v12-b5d933870a5addf46f1d,5¾^h^,20700
+assertion-v12-6ae6f163058ed7f323a7,tycho-oo-12,299,Mars,ecliptic_latitude,Alphonsine,0 22 north,11/30,printed direction,1593-12-30,,,assertion-v12-e7f2c76b58fe186317f6,5½^h^,19800
+assertion-v12-751ff4d5d345b3fe428f,tycho-oo-12,299,Mars,ecliptic_longitude,Alphonsine,17° 17′ ♈,1037/60,printed sign,1593-12-30,,,assertion-v12-e7f2c76b58fe186317f6,5½^h^,19800
+assertion-v12-995af7aa761fd66984ac,tycho-oo-12,299,Mars,ecliptic_longitude,Copernicus,16° 4′ ♈,241/15,printed sign,1593-12-30,,,assertion-v12-e7f2c76b58fe186317f6,5½^h^,19800
+assertion-v12-19f4fdece68d9eb5bbe7,tycho-oo-12,347,Mars,ecliptic_latitude,Alphonsine,0° 6′ north,1/10,printed direction,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000
+assertion-v12-6f7a14a359f723d0060e,tycho-oo-12,347,Mars,ecliptic_latitude,Copernicus,0° 9′ north,3/20,printed direction,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000
+assertion-v12-ad59c2b47375321761d3,tycho-oo-12,347,Mars,ecliptic_longitude,Alphonsine,18° 10′ ♏,1369/6,printed sign,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000
+assertion-v12-99f2b0517ee6ba7610a3,tycho-oo-12,347,Mars,ecliptic_longitude,Copernicus,18° 13′ ♏,13693/60,printed sign,1594-11-29,morning,,assertion-v12-ad622852fdf73eb65166,6^h^ 40^m^,24000
+assertion-v12-f1a1c2c3b10fecc78c04,tycho-oo-12,348,Mars,ecliptic_latitude,Alphonsine,0 4,1/15,printed direction,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100
+assertion-v12-c3bd9ab110d6463fae78,tycho-oo-12,348,Mars,ecliptic_latitude,Copernicus,0° 8′,2/15,printed direction,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100
+assertion-v12-9b7085614064c22e15dc,tycho-oo-12,348,Mars,ecliptic_longitude,Alphonsine,26° 1′ ♏,14161/60,printed sign,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100
+assertion-v12-583722581446fe6447e2,tycho-oo-12,348,Mars,ecliptic_longitude,Copernicus,25° 51′ ♏,4717/20,printed sign,1594-12-10,morning,,assertion-v12-89cb311198027a14efda,7^h^ 15^m^,26100
+assertion-v12-06d187803d2fe8b5be1c,tycho-oo-12,443,Mars,ecliptic_latitude,Prutenic,2¾° south,-11/4,printed direction,1595-09-07,morning,,,,
+assertion-v12-cf640bb5c48cb527990b,tycho-oo-12,443,Mars,ecliptic_longitude,Alphonsine,25⅙° ♉,331/6,printed sign,1595-09-07,morning,,,,
+assertion-v12-9c447075f5723626173a,tycho-oo-12,443,Mars,ecliptic_longitude,Prutenic,22⅚° ♉,317/6,printed sign,1595-09-07,morning,,,,
+assertion-v12-4d699f31ae88131ea7d5,tycho-oo-12,445,Mars,ecliptic_longitude,Alphonsine,26° 16′,394/15,within the sign,1595-09-30,before_noon,,assertion-v12-a34dc2b7c78cca0e06f2,4^h^,14400
+assertion-v12-5aab39138aac30134b90,tycho-oo-12,445,Mars,ecliptic_longitude,Copernicus,24° 20′,73/3,within the sign,1595-09-30,before_noon,,assertion-v12-a34dc2b7c78cca0e06f2,4^h^,14400
+assertion-v12-fc0e090808bb23a8651c,tycho-oo-12,446,Mars,ecliptic_longitude,Alphonsine,23° 51′,477/20,within the sign,1595-10-12,evening,,,,
+assertion-v12-dffe7f79cdfdf0ed5ee0,tycho-oo-12,446,Mars,ecliptic_longitude,Copernicus,21° 56′,329/15,within the sign,1595-10-12,evening,,,,
+assertion-v12-e667f3eea91d200cd460,tycho-oo-12,446,Mars,ecliptic_longitude,Alphonsine,22° 50′,137/6,within the sign,1595-10-16,morning,,,,
+assertion-v12-5f20b5cba1aa924d5cb4,tycho-oo-12,446,Mars,ecliptic_longitude,Copernicus,21° 0′,21,within the sign,1595-10-16,morning,,,,
+assertion-v12-d179164da05b47ffa663,tycho-oo-12,447,Mars,ecliptic_latitude,Alphonsine,0° 7′ south,-7/60,printed direction,1595-10-25,morning,,,,
+assertion-v12-4199ffd46bda97d7aabd,tycho-oo-12,447,Mars,ecliptic_latitude,Copernicus,1° 8′ south,-17/15,printed direction,1595-10-25,morning,,,,
+assertion-v12-8d31e26ad974abbb4231,tycho-oo-12,447,Mars,ecliptic_longitude,Alphonsine,19° 46′,593/30,within the sign,1595-10-25,morning,,,,
+assertion-v12-223e9771b474f6bcc401,tycho-oo-12,447,Mars,ecliptic_longitude,Copernicus,17° 54′,179/10,within the sign,1595-10-25,morning,,,,
+assertion-v13-72853f479b3d73507360,tycho-oo-13,151,Mars,ecliptic_longitude,Prutenic,3 51 ♋,1877/20,printed sign,1597-12-13,after_noon,,assertion-v13-a0368c4afffaf6856f89,13 hours Mi. 26 p. M.,48360
+assertion-v13-c927d9739374e382ea73,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1^G^ 3^M^ B.,21/20,printed direction,1599-10-20,,,,,
+assertion-v13-59e3ac3fc6e13740115e,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0^G^ 43^M^ B.,43/60,printed direction,1599-10-20,,,,,
+assertion-v13-07925b9ed549033e1355,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,0^G^ 15^M^ ♌,481/4,printed sign,1599-10-20,,,,,
+assertion-v13-83de6f4ec5dba38da132,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,1^G^ 17^M^ ♌,7277/60,printed sign,1599-10-20,,,,,
+assertion-v13-76b43c22a526495611f7,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 4,16/15,printed direction,1599-10-21,,,,,
+assertion-v13-355d51f3e2b0e6c942c7,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 44,11/15,printed direction,1599-10-21,,,,,
+assertion-v13-f649d9c1df9acc6e412c,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,0 42,1207/10,printed sign,1599-10-21,,,,,
+assertion-v13-ccbd2a3c91a66a40c71b,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,1 46,3653/30,printed sign,1599-10-21,,,,,
+assertion-v13-1f8cc661d2915d3935d9,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 7,67/60,printed direction,1599-10-24,,,,,
+assertion-v13-49a95477dd97c803ebf0,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 48,4/5,printed direction,1599-10-24,,,,,
+assertion-v13-1520ee020a6f120aeed5,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,2 1,7321/60,printed sign,1599-10-24,,,,,
+assertion-v13-0dfa124ce68261991037,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,3 12,616/5,printed sign,1599-10-24,,,,,
+assertion-v13-38d43da2f0f2a2379912,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 9,23/20,printed direction,1599-10-25,,,,,
+assertion-v13-a5e3ea092079ef5d325e,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 49,49/60,printed direction,1599-10-25,,,,,
+assertion-v13-f394d324299a6e087200,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,2 27,2449/20,printed sign,1599-10-25,,,,,
+assertion-v13-bf95dab648ed978a5ccb,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,3 40,371/3,printed sign,1599-10-25,,,,,
+assertion-v13-d983688bcaa65fc2de3b,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 12,6/5,printed direction,1599-10-27,,,,,
+assertion-v13-882b322caf343c5840b6,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 52,13/15,printed direction,1599-10-27,,,,,
+assertion-v13-b99365d2412c47a7254b,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,3 18,1233/10,printed sign,1599-10-27,,,,,
+assertion-v13-c9dee89bbb9b25e0c406,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,4 35,1495/12,printed sign,1599-10-27,,,,,
+assertion-v13-384a41a2ff68c8e0d0ba,tycho-oo-13,181,Mars,ecliptic_latitude,Alphonsine,1 14,37/30,printed direction,1599-10-29,,,,,
+assertion-v13-c7bf30dba8b256505365,tycho-oo-13,181,Mars,ecliptic_latitude,Copernicus,0 55,11/12,printed direction,1599-10-29,,,,,
+assertion-v13-00e1b62d970e20e4d2be,tycho-oo-13,181,Mars,ecliptic_longitude,Alphonsine,4 8,1862/15,printed sign,1599-10-29,,,,,
+assertion-v13-59af47eaffd0a6c5e5bf,tycho-oo-13,181,Mars,ecliptic_longitude,Copernicus,5 29,7529/60,printed sign,1599-10-29,,,,,
+assertion-v13-5aafc9cacd76e8a483fc,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 29 S.,209/60,printed direction,1600-03-02,,,,,
+assertion-v13-b2ac50850eff7e12f4dc,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 48 S.,19/5,printed direction,1600-03-02,,,,,
+assertion-v13-627777acfee17388fdc0,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,♋ 26° 15′,465/4,printed sign,1600-03-02,,,,,
+assertion-v13-a80396f42b8edfd73373,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,♌ 0° 40′,362/3,printed sign,1600-03-02,,,,,
+assertion-v13-95dddab53876f8941844,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 15,13/4,printed direction,1600-03-09,,,,,
+assertion-v13-93d2f96c03e105e81649,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 35,43/12,printed direction,1600-03-09,,,,,
+assertion-v13-48b3eeb8425806f0ec2f,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 6,1161/10,printed sign,1600-03-09,,,,,
+assertion-v13-d01b4406b24318351a29,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 10,721/6,printed sign,1600-03-09,,,,,
+assertion-v13-ae3fea8be3196284f4c2,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 4,46/15,printed direction,1600-03-15,,,,,
+assertion-v13-e43d79ce5503f9e4efc0,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 12,16/5,printed direction,1600-03-15,,,,,
+assertion-v13-c9355015affa16fd846b,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 23,6983/60,printed sign,1600-03-15,,,,,
+assertion-v13-cc2774c7430b939cda78,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 10,721/6,printed sign,1600-03-15,,,,,
+assertion-v13-6d7392543fad44a0bc96,tycho-oo-13,224,Mars,ecliptic_latitude,Alphonsine,3 1,181/60,printed direction,1600-03-16,,,,,
+assertion-v13-cd49d8e40a1bf22520fd,tycho-oo-13,224,Mars,ecliptic_latitude,Copernicus,3 10,19/6,printed direction,1600-03-16,,,,,
+assertion-v13-e0b039797f51d55b92c5,tycho-oo-13,224,Mars,ecliptic_longitude,Alphonsine,26 30,233/2,printed sign,1600-03-16,,,,,
+assertion-v13-aafae7585a25c1108a22,tycho-oo-13,224,Mars,ecliptic_longitude,Copernicus,0 14,3607/30,printed sign,1600-03-16,,,,,
+assertion-v10-c981b181f566108ddd22,tycho-oo-10,5,Jupiter,ecliptic_longitude,Carelli,♃ in 0° 50′ ♌,725/6,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-55c8a32aaa0cf6ae08d1,tycho-oo-10,5,Jupiter,ecliptic_longitude,Stadius,♃ in 1° 30′ ♌,243/2,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-177e16de2959fc2cfb30,tycho-oo-10,5,Jupiter,ecliptic_longitude,Carelli,0° 58′ ♌,3629/30,printed sign,1564-05-02,,,,,
+assertion-v10-c4cc249e9733bc1f59b9,tycho-oo-10,5,Jupiter,ecliptic_longitude,Stadius,1° 38′ ♌,3649/30,printed sign,1564-05-02,,,,,
+assertion-v11-85c886e044742943c826,tycho-oo-11,54,Jupiter,ecliptic_latitude,Alphonsine,0° 19′,-19/60,printed direction,1586-09-23,,,,,
+assertion-v11-c62c65888b790dc7d1f7,tycho-oo-11,54,Jupiter,ecliptic_latitude,Copernicus,0° 38′,-19/30,printed direction,1586-09-23,,,,,
+assertion-v11-261e065d5837f93006d9,tycho-oo-11,54,Jupiter,ecliptic_longitude,Alphonsine,13° 38′ ♋,3109/30,printed sign,1586-09-23,,,,,
+assertion-v11-4483f8c44edf7868f595,tycho-oo-11,54,Jupiter,ecliptic_longitude,Copernicus,13° 21′ ♋,2067/20,printed sign,1586-09-23,,,,,
+assertion-v11-ed1c6712a1509edebc23,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1° 40′,5/3,printed direction,1589-01-30,,,,,
+assertion-v11-2a33627370d0041fd212,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1° 24′,7/5,printed direction,1589-01-30,,,,,
+assertion-v11-b743c732cd8573207d9a,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,14° 14′ ♍,4927/30,printed sign,1589-01-30,,,,,
+assertion-v11-bd06e1dfd1cf1a3967da,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1° 43′,103/60,printed direction,1589-02-21,,,,,
+assertion-v11-44695b260556ee1f977d,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1° 30′,3/2,printed direction,1589-02-21,,,,,
+assertion-v11-6edd4f766b76b801157c,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,11° 35′ ♍,1939/12,printed sign,1589-02-21,,,,,
+assertion-v11-cea7da36b4ad046310d7,tycho-oo-11,329,Jupiter,ecliptic_longitude,Prutenic,13° 13′ ♍,9793/60,printed sign,1589-02-21,,,,,
+assertion-v12-b2bfff7d2befc4cb3ff7,tycho-oo-12,136,Jupiter,ecliptic_latitude,Alphonsine,1° 50′,11/6,printed direction,1591-04-23,,,,,
+assertion-v12-14d96569b6e7a0a8f3ec,tycho-oo-12,280,Jupiter,ecliptic_latitude,Alphonsine,0° 5′ south,-1/12,printed direction,1593-06-29,,,assertion-v12-5dda2dd2c219fdeee4cb,3½^h^,12600
+assertion-v12-de5b90554232a6a558e7,tycho-oo-12,280,Jupiter,ecliptic_latitude,Copernicus,0° 21′ north,7/20,printed direction,1593-06-29,,,assertion-v12-5dda2dd2c219fdeee4cb,3½^h^,12600
+assertion-v12-6a4a76f1bcc14d8fbc84,tycho-oo-12,280,Jupiter,ecliptic_longitude,Alphonsine,16° 34′ ♑,8597/30,printed sign,1593-06-29,,,assertion-v12-5dda2dd2c219fdeee4cb,3½^h^,12600
+assertion-v12-d3f87c4db5320305eaf6,tycho-oo-12,280,Jupiter,ecliptic_longitude,Copernicus,17° 34′ ♑,8627/30,printed sign,1593-06-29,,,assertion-v12-5dda2dd2c219fdeee4cb,3½^h^,12600
+assertion-v10-b9100569a07dbc427e0e,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,♄ in 29° 53′ ♋,7193/60,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-3a75a975d07653bbb3f8,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,♄ in 27° 36′ ♋,588/5,printed sign,1564-05-01,after_noon,,,,
+assertion-v10-8157c55e238f71275575,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,29° 58′ ♋,3599/30,printed sign,1564-05-02,,,,,
+assertion-v10-a4ca673ab6294fc487c0,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,27° 42′ ♋,1177/10,printed sign,1564-05-02,,,,,
+assertion-v12-ec242c07cc0c3744c409,tycho-oo-12,32,Saturn,ecliptic_latitude,Alphonsine,1° 13′,-73/60,printed direction,1590-08-30,,,,,
+assertion-v12-f064b58561ea68346b0a,tycho-oo-12,32,Saturn,ecliptic_longitude,Alphonsine,0° 40½′ ♋,3627/40,printed sign,1590-08-30,,,,,
+assertion-v12-1ac80de850eb33bf4021,tycho-oo-12,128,Saturn,ecliptic_latitude,Alphonsine,0° 40′,-2/3,printed direction,1591-10-25,,,,,
+assertion-v12-4c8aa2cc4b66b73fa1ea,tycho-oo-12,128,Saturn,ecliptic_latitude,Copernicus,1° 28½′,-59/40,printed direction,1591-10-25,,,,,
+assertion-v12-2d43c73db283690675bd,tycho-oo-12,128,Saturn,ecliptic_longitude,Alphonsine,15° 43⅓′ ♋,1903/18,printed sign,1591-10-25,,,,,
+assertion-v12-1aa019ed1b547149b4cf,tycho-oo-12,128,Saturn,ecliptic_longitude,Copernicus,12° 53⅓′ ♋,926/9,printed sign,1591-10-25,,,,,
+assertion-v12-7d177f12f03e5a6fdf4b,tycho-oo-12,129,Saturn,ecliptic_latitude,Copernicus,1° 32½′,-37/24,printed direction,1591-12-06,,,,,
+assertion-v12-b033a0cf95872f9735e5,tycho-oo-12,130,Saturn,ecliptic_latitude,Copernicus,1° 32⅖′,-77/50,printed direction,1591-12-06,,,,,
+assertion-v12-753fb4e8e4397a8bdda0,tycho-oo-12,130,Saturn,ecliptic_longitude,Copernicus,10° 37⅓′ ♋,4528/45,printed sign,1591-12-06,,,,,
+assertion-v12-f1cfae9590e1f2595b49,tycho-oo-12,129,Saturn,ecliptic_longitude,Copernicus,10° 43′ ♋,6043/60,printed sign,1591-12-06,,,,,
+assertion-v12-f925c81477fa600add1b,tycho-oo-12,130,Saturn,ecliptic_latitude,Alphonsine,0° 39′,-13/20,printed direction,1591-12-09,,,,,
+assertion-v12-40074f3b8d214eb69e90,tycho-oo-12,130,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-09,,,,,
+assertion-v12-a829d72d29cf268ea89b,tycho-oo-12,130,Saturn,ecliptic_longitude,Alphonsine,13° 18½′ ♋,12397/120,printed sign,1591-12-09,,,,,
+assertion-v12-353864bbf312f35487da,tycho-oo-12,130,Saturn,ecliptic_longitude,Copernicus,10° 17½′ ♋,2407/24,printed sign,1591-12-09,,,,,
+assertion-v12-8f186251351c838f93a2,tycho-oo-12,131,Saturn,ecliptic_latitude,Alphonsine,0° 39′,-13/20,printed direction,1591-12-10,,,,,
+assertion-v12-97c4c021052791d9d53b,tycho-oo-12,131,Saturn,ecliptic_latitude,Copernicus,1° 32½′,-37/24,printed direction,1591-12-10,,,,,
+assertion-v12-ddcc0469d93f12d0ca5a,tycho-oo-12,131,Saturn,ecliptic_longitude,Alphonsine,13° 13½′ ♋,4129/40,printed sign,1591-12-10,,,,,
+assertion-v12-390477fe590c9d4267f4,tycho-oo-12,131,Saturn,ecliptic_longitude,Copernicus,10° 12½′ ♋,2405/24,printed sign,1591-12-10,,,,,
+assertion-v12-a3bd8bea1134832644f3,tycho-oo-12,131,Saturn,ecliptic_latitude,Alphonsine,0° 37′,-37/60,printed direction,1591-12-16,,,,,
+assertion-v12-52a042a8f2545bf5de95,tycho-oo-12,131,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-16,,,,,
+assertion-v12-27c66897f97ec2bdc99d,tycho-oo-12,131,Saturn,ecliptic_longitude,Alphonsine,12° 43⅔′ ♋,18491/180,printed sign,1591-12-16,,,,,
+assertion-v12-336d0dee32a4410404c2,tycho-oo-12,131,Saturn,ecliptic_longitude,Copernicus,9° 42⅔′ ♋,4487/45,printed sign,1591-12-16,,,,,
+assertion-v12-a35def01d080e5c6b192,tycho-oo-12,132,Saturn,ecliptic_latitude,Alphonsine,0° 37′,-37/60,printed direction,1591-12-21,,,,,
+assertion-v12-fbddf093b640922435bd,tycho-oo-12,132,Saturn,ecliptic_latitude,Copernicus,1° 32′,-23/15,printed direction,1591-12-21,,,,,
+assertion-v12-dadf9aa1fa76058c584f,tycho-oo-12,132,Saturn,ecliptic_longitude,Alphonsine,12° 18⅔′ ♋,4604/45,printed sign,1591-12-21,,,,,
+assertion-v12-01b9149a1eb47f2a5fe5,tycho-oo-12,132,Saturn,ecliptic_longitude,Copernicus,9° 15⅔′ ♋,17867/180,printed sign,1591-12-21,,,,,
+assertion-v12-594b6b84657a788dfaa6,tycho-oo-12,213,Saturn,ecliptic_latitude,Alphonsine,0° 6′,1/10,printed direction,1592-12-29,,,,,
+assertion-v12-05c0d646fb0077a41d65,tycho-oo-12,420,Saturn,ecliptic_latitude,Alphonsine,1° 27′,29/20,printed direction,1595-01-24,,,,,
+assertion-v12-72dba80c3f359161db0b,tycho-oo-12,420,Saturn,ecliptic_latitude,Prutenic,0° 36½′,73/120,printed direction,1595-01-24,,,,,
+assertion-v12-fc35b35e985e9e3e3316,tycho-oo-12,420,Saturn,ecliptic_longitude,Alphonsine,24° 1½′ ♌,5761/40,printed sign,1595-01-24,,,,,
+assertion-v12-5197641ea0b07d6959da,tycho-oo-12,420,Saturn,ecliptic_longitude,Prutenic,21° 52½′ ♌,1135/8,printed sign,1595-01-24,,,,,

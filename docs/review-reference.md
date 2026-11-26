@@ -275,15 +275,48 @@ separately. Ordinary imports continue to require unchanged prior quantities.
 A consolidated-stage revision corrects a reading that already carries an
 interpretation. A reading revision selects the quantity type, subject,
 reference, or role that the printed page establishes. A date revision binds
-readings to the date that their own heading or table states. Each decision
+readings to the date that their own heading, table, or sentence states. A
+sentence binds the values it gives for the day it names, and the rows that
+run on from it. A day that a sentence names for a comparison, an interval, or
+a reference to another entry binds nothing. Each decision
 names the reading, its current version and field values, and the lines of the
-bound edition that print the label and the reading. The printed expression,
-components, and value never change. A type change must reproduce the stored
-value, and a source group moves whole. The catalog records each revision as a
-new interpretation version. Its `interpretation_review` gives the kind
-(`reviewed_reading_revision` or `reviewed_date_binding`), the previous and
-revised fields or date claims, and the printed label with the reason. The
-decisions and edition fingerprints stay in working storage.
+bound edition that print the label and the reading. In these two kinds the
+printed expression, components, and value never change. A type change must
+reproduce the stored value, and a source group moves whole.
+
+A date revision takes one of three forms. It states the complete day that the
+heading or table prints. Where the page names the last day of a month without
+a number, it states the year and month with the rule `last_day_of_month`, and
+the claim keeps the rule in place of a day. Where a night heading stands
+relative to a dated day, it states that day with the relation
+`preceding_night` or `following_night`, and the claim keeps the printed day
+and the relation. A decision without a date withdraws a date that the page
+does not print for the readings. They keep the earlier claim in their history
+and carry none.
+
+An edition reading is the third kind. It gives a reading the whole expression
+that its line of the bound edition prints, where the catalog held a part of
+that expression or a reading that the edition has since corrected. The earlier
+expression must be a part of the printed one or must no longer stand on the
+cited line. The reviewed components must carry the printed numerals in order,
+and the value comes from the same conversion as every other reading. A whole
+expression with a number that no component can hold keeps no value. A value
+that the page prints in parts, with other text between them or on separate
+lines, takes the parts in the order of the value, joined by an ellipsis for
+what stands between. The cited lines must print the parts in that order. A record
+that held nothing but the rest of the expression leaves the catalog. So does a
+record that held one end of a value printed across a page break, and a second
+record of a value that its cell prints once. In that last case the reading
+keeps its expression and value and changes only by the record it takes in. The
+reading that remains lists each such record with its identifier, expression,
+and value.
+
+The catalog records each revision as a new interpretation version. Its
+`interpretation_review` gives the kind (`reviewed_reading_revision`,
+`reviewed_date_binding`, or `reviewed_edition_reading`), the previous and
+revised fields, date claims, or expression and value, and the printed label
+with the reason. The decisions and edition fingerprints stay in working
+storage.
 
 `append --review` accepts either one reviewed JSON record or a nonempty list.
 Every packet and supplementary decision is validated before the ledger changes.

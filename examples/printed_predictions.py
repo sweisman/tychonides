@@ -7,8 +7,9 @@ predictions_ephemeris.py, so this script runs offline:
 
 Each prediction is set beside the log's own values for the same body and
 quantity on the same date, and beside the apparent geocentric position of date
-from DE441. The ephemeris is evaluated at the instants of the log's values, or
-at local noon when the log prints no usable hour or no value for that date.
+from DE441. The ephemeris is evaluated at the instants of the log's values,
+then at the printed hour of the calculation itself, and at local noon when the
+log prints no usable hour.
 The tables need NumPy. The figure needs Matplotlib.
 """
 
@@ -100,12 +101,28 @@ def instant(row):
     return mm.jd_ut(date.fromisoformat(row["julian_date"]), hours), basis.startswith("printed")
 
 
+def calculation_instant(item):
+    """UT Julian date of the calculation hour printed with a prediction, or None.
+
+    The hour follows the rule for a log value. An hour whose label leaves its origin open,
+    such as "4h A.M.", is not used.
+    """
+    if not item.get("epoch_seconds"):
+        return None
+    hours, basis = mm.clock(item["daypart"], item["epoch_seconds"])
+    if not basis.startswith("printed"):
+        return None
+    return mm.jd_ut(date.fromisoformat(item["julian_date"]), hours)
+
+
 def instants():
     """Every UT Julian date the study needs from the ephemeris, by body."""
     wanted = defaultdict(set)
     for row in read("printed-predictions.csv"):
         base = noon(date.fromisoformat(row["julian_date"]))
         wanted[row["body"]] |= {f"{base:.6f}", f"{base + 0.5:.6f}"}
+        if calculation_instant(row) is not None:
+            wanted[row["body"]].add(f"{calculation_instant(row):.6f}")
     for row in read("printed-predictions-references.csv"):
         wanted[row["body"]].add(f"{instant(row)[0]:.6f}")
     return {body: sorted(wanted[body]) for body in TARGETS if body in wanted}
@@ -177,10 +194,20 @@ def compare():
             )
             result["log_degrees"] = f"{log:.6f}"
         timed = bool(same) and printed == len(same)
+        own = calculation_instant(item)
+        if own is not None and not timed:
+            # The prediction was computed for this hour, so both comparisons are read there.
+            modern, timed = ephemeris[(item["body"], f"{own:.6f}")][column], True
+            result["de441_time_basis"] = "calculation hour"
+        else:
+            result["de441_time_basis"] = (
+                "printed hours"
+                if timed
+                else "nominal noon"
+                if same
+                else "nominal noon, no log value"
+            )
         result["log_values_with_printed_hour"] = printed
-        result["de441_time_basis"] = (
-            "printed hours" if timed else "nominal noon" if same else "nominal noon, no log value"
-        )
         if item["body"] == "Moon" and not timed:
             # The Moon moves about half a degree an hour, so it needs a printed hour.
             result["de441_time_basis"] = "not compared, no printed hour"
@@ -231,7 +258,9 @@ def summarize(table):
         }
         # The statistics leave out the rows flagged for review.
         rows = [row for row in groups[key] if not row["review"]]
-        timed = [row for row in rows if row["de441_time_basis"] == "printed hours"]
+        timed = [
+            row for row in rows if row["de441_time_basis"] in ("printed hours", "calculation hour")
+        ]
         line |= {
             "with_a_log_value": sum(row["log_values"] > 0 for row in rows),
             "timed": len(timed),

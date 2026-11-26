@@ -1,9 +1,17 @@
 """Append source-reviewed revisions to readings that already carry an interpretation.
 
 A reading revision assigns the quantity type, subject, reference or role that the printed page
-establishes. A date revision moves readings from an inherited date claim to the date their own
-heading or table states. Neither changes a printed expression, a component or a value, and every
-earlier interpretation stays in the version history.
+establishes. It may also set the north or south that the page prints beside the value, or drop
+one that the page prints for another value of the label. A date revision moves readings from an
+inherited date claim to the date their own heading or table states. Neither changes a printed
+expression, a component or a magnitude, and every earlier interpretation stays in the version
+history.
+
+An edition reading is the one revision that changes a value. It gives a reading the whole
+expression that its line of the bound edition prints, where the catalogue holds only a part of
+that expression or a reading that the edition has since corrected. The numerals come from the
+cited line and from nowhere else, and the value is converted again from them. A record that
+holds nothing but the rest of the same printed expression is merged into the reading.
 
 Each decision names lines of the bound edition. The edition text is read at apply time and only
 the reviewed label and statement are stored with the catalogue.
@@ -17,14 +25,67 @@ import json
 import re
 
 from .catalog_release import WORKING_CATALOGUE_VIEW, encoded
+from .core import fraction_text, number
 from .date_claims import DAYPARTS
 from .normalization import ANGLE_QUANTITIES, ANGULAR_RATES, normalize_quantity
+from .numeric_integrity import NUMBER
 from .vocabulary import load_vocabulary
 
 READING_REVISION = "reviewed_reading_revision"
 DATE_REVISION = "reviewed_date_binding"
-REVIEWED_KINDS = (READING_REVISION, DATE_REVISION)
-BASIS_KINDS = ("printed_heading", "printed_label", "printed_reckoning", "printed_table_column")
+EDITION_READING = "reviewed_edition_reading"
+REVIEWED_KINDS = (READING_REVISION, DATE_REVISION, EDITION_READING)
+BASIS_KINDS = (
+    "printed_expression",
+    "printed_heading",
+    "printed_label",
+    "printed_reckoning",
+    "printed_table_column",
+)
+# The places of a printed expression, from the greatest to the least, for each kind of unit.
+COMPONENT_ORDER = (
+    "sign_count",
+    "degree",
+    "arcminute",
+    "arcsecond",
+    "arcsexagesimal_third",
+    "arcsexagesimal_fourth",
+    "day",
+    "hour",
+    "minute",
+    "second",
+    "time_third",
+    "time_fourth",
+    "time_fifth",
+    "source_part",
+    "part_minute",
+    "part_second",
+    "proportional_minute",
+    "proportional_second",
+    "mile",
+    "mile_minute",
+    "scalar",
+)
+GROUPED_DIGITS = re.compile(r"(?<=\d),(?=\d{3}(?!\d))")
+PARTS_BETWEEN = " … "  # stands for the printed text between two parts of one value
+# A record that anything else points to is never merged into another reading.
+REFERENCES = (
+    ("groups", "clock_quantity_id"),
+    ("groups", "epoch_quantity_id"),
+    ("series_quantities", "quantity_id"),
+    ("derivations", "output_quantity_id"),
+    ("derivation_inputs", "quantity_id"),
+    ("control_links", "quantity_id"),
+    ("quantity_links", "from_id"),
+    ("quantity_links", "to_id"),
+)
+OWNED = (
+    ("interpretations", "quantity_id"),
+    ("quantity_contexts", "id"),
+    ("quantity_dates", "quantity_id"),
+    ("locus_quantities", "quantity_id"),
+    ("quantities", "id"),
+)
 CARRIED_FIELDS = ("completed_source_expression", "date_claim_ids")
 READING_FIELDS = ("quantity", "subject", "reference", "role")
 PLAIN_ANGLES = ANGLE_QUANTITIES - set(ANGULAR_RATES)
@@ -42,6 +103,16 @@ CLAIM_FIELDS = {
     "calendar_validation",
     "accepted_observing_date",
     "absolute_timestamp",
+}
+BOOK_CLAIM_FIELDS = (CLAIM_FIELDS - {"volume"}) | {"source_id"}
+# What a supplementary book's claim may record about its own date expression.
+BOOK_CLAIM_NOTES = {
+    "source_clock_qualification",
+    "source_context_record_type",
+    "source_date_expression",
+    "source_date_role",
+    "source_date_witness",
+    "source_day_relation",
 }
 SPACE = re.compile(r"\s+")  # Unicode white space, including the no-break forms in table cells.
 INSERT = "INSERT INTO interpretations VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"
@@ -164,7 +235,18 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
         ):
             raise ValueError("Reading revision differs from its frozen reading: " + identifier)
         original = json.loads(current["original_json"])
-        if revised["quantity"] != previous["quantity"]:
+        kept = carried(current)
+        turn = decision.get("direction")
+        if turn is not None and (
+            tuple(sorted(turn)) != ("label", "previous", "revised")
+            or turn["previous"] != kept["direction"]
+            or turn["revised"] == kept["direction"]
+            or turn["revised"] not in (None, "north", "south")
+            or not flat(turn["label"] or "")
+        ):
+            raise ValueError("Direction revision differs from its frozen reading: " + identifier)
+        signed, normalized = current["signed_value_exact"], current["normalized_json"]
+        if revised["quantity"] != previous["quantity"] or turn is not None:
             if not {previous["quantity"], revised["quantity"]} <= PLAIN_ANGLES:
                 raise ValueError(
                     "A reading revision cannot change the printed value: " + identifier
@@ -178,6 +260,7 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
                     subject=revised["subject"],
                     reference=revised["reference"],
                     role=revised["role"],
+                    direction=turn["revised"] if turn else kept["direction"],
                 )
             )
             if (
@@ -186,11 +269,15 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
                 or trial.get("status") != "exact"
                 or trial.get("unit") != "arcsecond"
                 or trial.get("magnitude") != current["value_exact"]
-                or trial.get("signed_magnitude") != current["signed_value_exact"]
+                or (turn is None and trial.get("signed_magnitude") != signed)
             ):
                 raise ValueError(
                     "A reading revision cannot change the printed value: " + identifier
                 )
+            if turn is not None:
+                # The printed magnitude stays. Only the side of the circle it is counted on moves.
+                signed = trial.get("signed_magnitude")
+                normalized = encoded(dict(json.loads(normalized), signed_magnitude=signed))
         terms = [
             dict(quantity_id=term["quantity_id"], sign=term["sign"])
             for term in decision.get("reckoning", ())
@@ -213,14 +300,21 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
         withdrawn = list(decision.get("withdrawn_flags", ()))
         if any(flag not in flags for flag in withdrawn):
             raise ValueError("Withdrawn flag is not on the reading: " + identifier)
+        printed = [current["expression"]] + ([turn["label"]] if turn else [])
         revision = dict(
-            carried(current),
+            kept,
             kind=READING_REVISION,
             role=revised["role"],
             previous=previous,
             revised=revised,
-            basis=reviewed_basis(decision, editions, [current["expression"]]),
+            basis=reviewed_basis(decision, editions, printed),
         )
+        if turn is not None:
+            revision.update(
+                direction=turn["revised"],
+                previous_direction=turn["previous"],
+                direction_label=flat(turn["label"]),
+            )
         if terms:
             revision["reckoning"] = terms
         if withdrawn:
@@ -236,8 +330,8 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
                 current["status"],
                 current["unit"],
                 current["value_exact"],
-                current["signed_value_exact"],
-                current["normalized_json"],
+                signed,
+                normalized,
                 current["components_json"],
                 encoded([flag for flag in flags if flag not in withdrawn]),
                 encoded(revision),
@@ -249,6 +343,241 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
     return revised_ids
 
 
+def printed_numbers(text):
+    """The numbers of a printed expression in order, as exact values."""
+    return [
+        number(token) for token in re.findall(NUMBER, fraction_text(GROUPED_DIGITS.sub("", text)))
+    ]
+
+
+def run_within(part, whole):
+    """Does the sequence stand unbroken inside the other?"""
+    return bool(part) and any(
+        whole[start : start + len(part)] == part for start in range(len(whole) - len(part) + 1)
+    )
+
+
+def printed_in_order(parts, lines):
+    """Do the parts stand one after another, without overlap, on the lines in the order cited?"""
+    text, at = "\n".join(lines), 0
+    for part in parts:
+        at = text.find(part, at)
+        if at < 0:
+            return False
+        at += len(part)
+    return True
+
+
+def adjacent(first, second):
+    """True for two printed pages numbered one apart."""
+    try:
+        return abs(int(first) - int(second)) == 1
+    except (TypeError, ValueError):
+        return False
+
+
+def apply_edition_readings(db, decisions: Iterable[dict], editions: Mapping):
+    """Give each reading the whole expression that its line of the bound edition prints.
+
+    The earlier expression must be a part of the printed one, or must no longer stand on the
+    cited lines. The reviewed components must carry the printed numerals in order, and the
+    value comes from the same conversion as every other reading. A longer expression with a
+    number that no component can hold keeps no value. A record named as absorbed must hold
+    nothing but the rest of the printed expression, or, on the page before or after, one end
+    of a value printed across the page break. It leaves the catalogue, and the reading keeps
+    its identifier and expression. A reading that already holds the whole expression changes
+    only by absorbing such a record: a part of that expression kept as a record of its own, or
+    a second record of the same expression.
+
+    A value that the page prints in parts, with other text between them or on neighboring
+    lines, is decided with its parts. The expression is then the parts in printed order with
+    an ellipsis for what stands between, and the cited lines must print them in that order.
+    """
+    vocabulary = load_vocabulary("historical")
+    revised_ids, absorbed_ids = [], []
+    for decision in decisions:
+        identifier = decision["quantity_id"]
+        current = current_reading(db, identifier)
+        previous, revised = decision["previous"], decision["revised"]
+        old, new = flat(current["expression"]), flat(decision["expression"])
+        components = {key: str(value) for key, value in decision["components"].items()}
+        held = json.loads(current["components_json"])
+        if (
+            identifier in revised_ids
+            or identifier in absorbed_ids
+            or tuple(sorted(previous)) != tuple(sorted(READING_FIELDS))
+            or tuple(sorted(revised)) != tuple(sorted(READING_FIELDS))
+            or current["source_id"] != decision["source_id"]
+            or current["printed_page"] != decision["printed_page"]
+            or old != flat(decision["source_expression"])
+            or current["version"] != decision["version"]
+            or {key: current[key] for key in READING_FIELDS} != previous
+            or revised["quantity"] not in vocabulary["quantity"]
+            or revised["role"] not in vocabulary["role"]
+            or not flat(revised["subject"] or "")
+            or not new
+            or (new == old and not decision.get("absorbed"))
+        ):
+            raise ValueError("Edition reading differs from its frozen reading: " + identifier)
+        if new == old and (components != held or revised != previous):
+            raise ValueError(
+                "A reading that keeps its expression keeps its components: " + identifier
+            )
+        parts = [flat(part) for part in decision.get("parts", ())]
+        basis = reviewed_basis(decision, editions, parts or [new])
+        lines = editions[decision["source_id"]]["lines"]
+        cited = [flat(lines[number_ - 1]) for number_ in decision["basis"]["lines"]]
+        if "parts" in decision and (
+            len(parts) < 2
+            or not all(parts)
+            or new != PARTS_BETWEEN.join(parts)
+            or not printed_in_order(parts, cited)
+        ):
+            raise ValueError("The cited lines do not print these parts in order: " + identifier)
+        if old not in new and any(old in line for line in cited):
+            raise ValueError("The cited lines still print the earlier reading: " + identifier)
+        printed = printed_numbers(new)
+        if any(key not in COMPONENT_ORDER for key in components) or (
+            components
+            and [
+                number(fraction_text(components[key]))
+                for key in COMPONENT_ORDER
+                if key in components
+            ]
+            != printed
+        ):
+            raise ValueError("Components differ from the printed numerals: " + identifier)
+        original = json.loads(current["original_json"])
+        kept = carried(current)
+
+        def converted(expression, parts, typing, original=original, kept=kept):
+            return normalize_quantity(
+                dict(
+                    original,
+                    source_expression=expression,
+                    components=parts,
+                    quantity=typing["quantity"],
+                    subject=typing["subject"],
+                    reference=typing["reference"],
+                    role=typing["role"],
+                    direction=kept["direction"],
+                )
+            )
+
+        frozen = converted(current["expression"], held, previous)
+        # A reading that intake marked incomplete has no value to reproduce. Only a longer
+        # printed expression can complete it.
+        open_reading = current["status"] == "incomplete" and old != new and old in new
+        if not open_reading and (
+            frozen.get("status"),
+            frozen.get("unit"),
+            frozen.get("magnitude"),
+            frozen.get("signed_magnitude"),
+        ) != (
+            current["status"],
+            current["unit"],
+            current["value_exact"],
+            current["signed_value_exact"],
+        ):
+            raise ValueError("The conversion does not reproduce the frozen reading: " + identifier)
+        trial = converted(decision["expression"], components, revised)
+        if components:
+            sound = trial.get("status") == "exact"
+        elif held:  # The longer expression has a number that no component can hold.
+            sound = old != new and old in new and trial.get("status") == "unsupported"
+        else:
+            sound = trial.get("status") == current["status"]
+        if not sound or (not components and revised != previous):
+            raise ValueError("The printed expression does not convert as decided: " + identifier)
+        absorbed = []
+        rest = new if new == old else new.replace(old, " ", 1)
+        ungrouped = [GROUPED_DIGITS.sub("", line) for line in cited]
+        for other_id in decision.get("absorbed", ()):
+            other = current_reading(db, other_id)
+            numerals = printed_numbers(other["expression"])
+            if other["printed_page"] == current["printed_page"]:
+                joins = (
+                    old in new
+                    and run_within(numerals, printed_numbers(rest))
+                    and any(
+                        GROUPED_DIGITS.sub("", flat(other["expression"])) in line
+                        for line in ungrouped
+                    )
+                )
+            else:
+                # A value printed across a page break, with one end kept as a record of its own
+                # page. The reading must hold each component of that record.
+                parts = json.loads(other["components_json"])
+                joins = (
+                    adjacent(other["printed_page"], current["printed_page"])
+                    and bool(parts)
+                    and all(components.get(key) == str(value) for key, value in parts.items())
+                )
+            if (
+                other_id in [identifier, *revised_ids, *absorbed_ids]
+                or other_id in [record["id"] for record in absorbed]
+                or other["source_id"] != current["source_id"]
+                or other["event_id"] is not None
+                or not joins
+                or any(
+                    db.execute(f"SELECT 1 FROM {table} WHERE {column}=?", (other_id,)).fetchone()
+                    for table, column in REFERENCES
+                )
+            ):
+                raise ValueError("Only the rest of the printed expression is merged: " + other_id)
+            absorbed.append(
+                dict(
+                    id=other_id,
+                    source_expression=other["expression"],
+                    quantity=other["quantity"],
+                    subject=other["subject"],
+                    role=other["role"],
+                    unit=other["unit"],
+                    value_exact=other["value_exact"],
+                )
+            )
+        revision = dict(
+            kept,
+            kind=EDITION_READING,
+            role=revised["role"],
+            previous_source_expression=current["expression"],
+            completed_source_expression=decision["expression"],
+            previous_unit=current["unit"],
+            previous_value_exact=current["value_exact"],
+            basis=basis,
+        )
+        if revised != previous:
+            revision.update(previous=previous, revised=revised)
+        if absorbed:
+            revision["absorbed_readings"] = absorbed
+        db.execute(
+            INSERT,
+            (
+                identifier,
+                current["version"] + 1,
+                revised["quantity"],
+                revised["subject"],
+                revised["reference"],
+                trial["status"],
+                trial["unit"],
+                trial["magnitude"],
+                trial["signed_magnitude"],
+                encoded(trial),
+                encoded(components),
+                current["flags_json"],
+                encoded(revision),
+            ),
+        )
+        for record in absorbed:
+            for table, column in OWNED:
+                db.execute(f"DELETE FROM {table} WHERE {column}=?", (record["id"],))
+            absorbed_ids.append(record["id"])
+        revised_ids.append(identifier)
+    if revised_ids:
+        recreate_view(db)
+    return revised_ids, absorbed_ids
+
+
 def swap_link(db, table, identifier, old, new):
     """Move one link from the old claim to the new one, in every scope that holds it."""
     db.execute(
@@ -256,20 +585,56 @@ def swap_link(db, table, identifier, old, new):
     )
 
 
+def printed_date(components, label):
+    """Whether a decision's date is a full day, or the last day of a month named as such.
+
+    A full day may be the one that a heading names for the night before or after it.
+    """
+    keys = set(components)
+    if keys - {"day_relation"} == {"year", "month", "day", "daypart_original"}:
+        day = type(components["day"]) is int and 1 <= components["day"] <= 31
+        if "day_relation" in keys:
+            day = (
+                day
+                and components["day_relation"] in ("preceding_night", "following_night")
+                and label is not None
+                and DAYPARTS.get(flat(label).upper()) == "night"
+            )
+    else:
+        day = (
+            keys == {"year", "month", "day_rule", "daypart_original"}
+            and components["day_rule"] == "last_day_of_month"
+        )
+    return (
+        day
+        and all(type(components[key]) is int for key in ("year", "month"))
+        and 1 <= components["year"] <= 9999
+        and 1 <= components["month"] <= 12
+        and (label is None or flat(label).upper() in DAYPARTS)
+    )
+
+
 def stated_claim(db, prior, stated):
     """Return the source's claim for the stated components, adding it when none exists.
 
     A heading states its own day. A calendar or day origin stated for the prior claim is
-    not carried to it.
+    not carried to it. Neither is what a book's claim records about its own date
+    expression, such as its role or clock qualification. A heading that names the last
+    day of its month keeps that rule and no day number. A heading for the night before or
+    after a named day keeps that day, with its relation to the night.
     """
-    if set(prior) != CLAIM_FIELDS:
+    fields = set(prior)
+    book = BOOK_CLAIM_FIELDS <= fields <= BOOK_CLAIM_FIELDS | BOOK_CLAIM_NOTES
+    if fields != CLAIM_FIELDS and not book:
         raise ValueError("Date revision needs a plain reviewed claim: " + prior["id"])
     wanted = dict(
-        prior,
+        {key: value for key, value in prior.items() if key not in BOOK_CLAIM_NOTES},
         **stated,
         calendar=None,
         day_origin=None,
-        component_status="complete_named_components",
+        component_status=(
+            "partial_named_components" if stated["day"] is None else "complete_named_components"
+        ),
         claim_basis="reviewed_source_context",
         calendar_validation="not_performed",
         accepted_observing_date=None,
@@ -323,24 +688,21 @@ def apply_date_revisions(db, decisions: Iterable[dict], editions: Mapping):
             stored is None
             or not readings
             or set(readings) & set(moved)
-            or (
-                components is not None
-                and (
-                    set(components) != {"year", "month", "day", "daypart_original"}
-                    or any(type(components[key]) is not int for key in ("year", "month", "day"))
-                    or not 1 <= components["year"] <= 9999
-                    or not 1 <= components["month"] <= 12
-                    or not 1 <= components["day"] <= 31
-                    or (label is not None and flat(label).upper() not in DAYPARTS)
-                )
-            )
+            or (components is not None and not printed_date(components, label))
         ):
             raise ValueError("Date revision needs one prior claim and complete printed components")
         prior = json.loads(stored[0])
         stated = components and dict(
-            {key: components[key] for key in ("year", "month", "day")},
+            {key: components.get(key) for key in ("year", "month", "day")},
             daypart=None if label is None else DAYPARTS[flat(label).upper()],
         )
+        if stated and "day_rule" in components:
+            stated["day_rule"] = components["day_rule"]
+        if stated and "day_relation" in components:
+            stated.update(
+                source_date_role="observation_label",
+                source_day_relation=components["day_relation"],
+            )
         if stated and all(prior.get(key) == stated[key] for key in stated):
             raise ValueError("Date revision repeats the prior claim: " + old)
         expressions, loci, rows = [], set(), {}
@@ -398,7 +760,9 @@ def apply_date_revisions(db, decisions: Iterable[dict], editions: Mapping):
                         f"DELETE FROM {table} WHERE id=? AND context_id=?", (identifier, old)
                     )
         else:
-            value = {key: components[key] for key in ("day", "month", "year")}
+            value = {key: stated[key] for key in ("day", "month", "year")}
+            if "day_rule" in stated:
+                value["day_rule"] = stated["day_rule"]
             if label is not None:
                 value["daypart_original"] = flat(label)
             locator = dict(role="source_evidence_pages", source_locus_ids=sorted(loci))

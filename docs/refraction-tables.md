@@ -80,7 +80,7 @@ against the printed page.
 ## Inputs and reproduction
 
 The [selection script](../examples/refraction_select.py) reads
-[Tychonides 1.3.3](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.3)
+[Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
 and writes the [table entries](../examples/refraction-tables.csv) with their
 catalog identities. The [analysis script](../examples/refraction_tables.py)
 writes the [entry-by-entry comparison](figures/refraction-tables-comparison.csv),

@@ -178,7 +178,7 @@ page and on the [Mercury and Venus page](mercury-venus-parallax.md). It runs
 offline and needs NumPy.
 
 - **Printed values.** A [selection script](../examples/parallax_select.py) reads
-  [Tychonides 1.3.3](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.3)
+  [Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
   and writes the [printed inputs](../examples/parallax-inputs.csv), the
   [Venus pairs](../examples/parallax-venus-pairs.csv), and
   [Riccioli’s table](../examples/parallax-riccioli.csv). Of the 58 printed

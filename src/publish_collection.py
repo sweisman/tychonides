@@ -246,7 +246,7 @@ def publish_collection(source, output, release_id=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", default="work/combined-catalogue/expanded", type=Path)
+    parser.add_argument("--source", required=True, type=Path)
     parser.add_argument(
         "--output", required=True, type=Path, help="Staging directory for Release assets"
     )

@@ -34,10 +34,10 @@ assertion-v11-042f48d78a788e407e03,tycho-oo-11,32,Moon,ecliptic_longitude,Alphon
 assertion-v11-6cb031d5d47ac8d4f37a,tycho-oo-11,32,Moon,ecliptic_longitude,Alphonsine,1586-10-26,main,,printed sign,145.166667,1,0,,,"not compared, no printed hour",422.7,,,
 assertion-v11-48310a0a1f10bc91f4de,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,1586-10-26,main,,printed sign,147.166667,1,0,,,"not compared, no printed hour",422.7,,,
 assertion-v11-a1a5d2564288a939decb,tycho-oo-11,32,Moon,ecliptic_longitude,Prutenic,1586-10-26,main,,printed sign,145.416667,1,0,,,"not compared, no printed hour",422.7,,,
-assertion-v11-9b1832d886f45f450a18,tycho-oo-11,142,Moon,ecliptic_latitude,Alphonsine,1587-01-06,main,,printed direction,-0.950000,0,0,,,"not compared, no printed hour",30.5,,,
-assertion-v11-4e632b7983bcc134acdd,tycho-oo-11,142,Moon,ecliptic_latitude,Copernicus,1587-01-06,main,,printed direction,-0.975000,0,0,,,"not compared, no printed hour",30.5,,,
-assertion-v11-e45de3749b42dcf6643c,tycho-oo-11,142,Moon,ecliptic_longitude,Alphonsine,1587-01-06,main,,printed sign,23.033333,0,0,,,"not compared, no printed hour",353.7,,,
-assertion-v11-89816eefec9f24ac63e9,tycho-oo-11,142,Moon,ecliptic_longitude,Copernicus,1587-01-06,main,,printed sign,23.200000,0,0,,,"not compared, no printed hour",353.7,,,
+assertion-v11-9b1832d886f45f450a18,tycho-oo-11,142,Moon,ecliptic_latitude,Alphonsine,1587-01-06,main,,printed direction,-0.950000,1,0,,,"not compared, no printed hour",30.5,,,
+assertion-v11-4e632b7983bcc134acdd,tycho-oo-11,142,Moon,ecliptic_latitude,Copernicus,1587-01-06,main,,printed direction,-0.975000,1,0,,,"not compared, no printed hour",30.5,,,
+assertion-v11-e45de3749b42dcf6643c,tycho-oo-11,142,Moon,ecliptic_longitude,Alphonsine,1587-01-06,main,,printed sign,23.033333,1,0,,,"not compared, no printed hour",353.7,,,
+assertion-v11-89816eefec9f24ac63e9,tycho-oo-11,142,Moon,ecliptic_longitude,Copernicus,1587-01-06,main,,printed sign,23.200000,1,0,,,"not compared, no printed hour",353.7,,,
 assertion-v11-258586d661eaf03a189b,tycho-oo-11,156,Moon,ecliptic_latitude,Alphonsine,1587-08-04,main,,printed direction,4.933333,1,0,,,"not compared, no printed hour",4.1,,,
 assertion-v11-5a5d2ffb9658747f0b41,tycho-oo-11,156,Moon,ecliptic_latitude,Prutenic,1587-08-04,main,,printed direction,4.950000,1,0,,,"not compared, no printed hour",4.1,,,
 assertion-v11-9540ec253be6aa3e3738,tycho-oo-11,156,Moon,ecliptic_longitude,Alphonsine,1587-08-04,main,,printed sign,277.933333,1,0,,,"not compared, no printed hour",418.3,,,
@@ -60,12 +60,12 @@ assertion-v12-aa50507f429d96651176,tycho-oo-12,271,Moon,ecliptic_latitude,Alphon
 assertion-v12-0c87873492f55b11eda4,tycho-oo-12,271,Moon,ecliptic_longitude,Alphonsine,1593-03-15,main,,printed sign,288.650000,0,0,,,"not compared, no printed hour",355.4,,,
 assertion-v11-ff6b46f49668c4da047b,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1586-10-25,main,,printed direction,1.733333,0,0,,2.253008,"nominal noon, no log value",1.1,,-31.18,
 assertion-v11-28ea39b208eda01ba35b,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1586-10-25,main,,printed direction,0.816667,0,0,,2.253008,"nominal noon, no log value",1.1,,-86.18,
-assertion-v11-f5bf99e9f99d52ab12ec,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-25,main,,printed sign,205.619444,1,0,202.622222,202.844389,nominal noon,25.4,179.83,166.50,-13.33
-assertion-v11-c01383eefad8ae8d8645,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-25,main,,printed sign,204.491667,1,0,202.622222,202.844389,nominal noon,25.4,112.17,98.84,-13.33
+assertion-v11-f5bf99e9f99d52ab12ec,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-25,main,,printed sign,205.619444,5,0,202.631944,202.844389,nominal noon,25.4,179.25,166.50,-12.75
+assertion-v11-c01383eefad8ae8d8645,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-25,main,,printed sign,204.491667,5,0,202.631944,202.844389,nominal noon,25.4,111.58,98.84,-12.75
 assertion-v11-01f3f1d1d798539d815f,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1586-10-29,main,,printed direction,1.766667,0,0,,2.266588,"nominal noon, no log value",1.0,,-30.00,
 assertion-v11-19bd915c6fc851454c93,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1586-10-29,main,,printed direction,1.108333,0,0,,2.266588,"nominal noon, no log value",1.0,,-69.50,
-assertion-v11-2e362f95fce9d8bbbe5f,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-29,main,,printed sign,207.650000,0,0,,206.917234,"nominal noon, no log value",36.1,,43.97,
-assertion-v11-0d2d9a465848d0d09af2,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-29,main,,printed sign,208.250000,0,0,,206.917234,"nominal noon, no log value",36.1,,79.97,
+assertion-v11-2e362f95fce9d8bbbe5f,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-29,main,,printed sign,207.650000,6,0,206.639630,206.917234,nominal noon,36.1,60.62,43.97,-16.66
+assertion-v11-0d2d9a465848d0d09af2,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-29,main,,printed sign,208.250000,6,0,206.639630,206.917234,nominal noon,36.1,96.62,79.97,-16.66
 assertion-v12-14eac99adcc0cfa014c5,tycho-oo-12,225,Mercury,ecliptic_latitude,Alphonsine,1592-02-03,main,,printed direction,0.850000,3,3,0.802500,0.799119,printed hours,7.4,2.85,3.05,0.20
 assertion-v12-225254fb4af84bf03211,tycho-oo-12,225,Mercury,ecliptic_latitude,Copernicus,1592-02-03,main,,printed direction,0.966667,3,3,0.802500,0.799119,printed hours,7.4,9.85,10.05,0.20
 assertion-v12-0049da56e54fe3620949,tycho-oo-12,225,Mercury,ecliptic_longitude,Alphonsine,1592-02-03,main,,within the sign,12.833333,3,3,342.308426,342.257960,printed hours,35.2,31.49,34.52,3.03
@@ -82,8 +82,8 @@ assertion-v12-17ebd72ef16d0cedc781,tycho-oo-12,71,Venus,ecliptic_latitude,Alphon
 assertion-v12-4ff112c28134f74ab973,tycho-oo-12,71,Venus,ecliptic_latitude,Copernicus,1590-09-01,main,,printed direction,-0.366667,0,0,,-0.378660,"nominal noon, no log value",2.0,,0.72,
 assertion-v12-0d97890b3123b9d5449a,tycho-oo-12,71,Venus,ecliptic_longitude,Alphonsine,1590-09-01,main,,printed sign,127.833333,0,0,,127.887125,"nominal noon, no log value",34.7,,-3.23,
 assertion-v12-41177551d2f2475b3c5a,tycho-oo-12,71,Venus,ecliptic_longitude,Copernicus,1590-09-01,main,,printed sign,127.000000,0,0,,127.887125,"nominal noon, no log value",34.7,,-53.23,
-assertion-v12-298a9f0f5f8510f316ea,tycho-oo-12,153,Venus,ecliptic_latitude,Alphonsine,1591-09-27,main,,printed direction,-2.283333,3,1,-3.372963,-3.513744,nominal noon,1.8,65.38,73.82,8.45
-assertion-v12-e0a9c6587c151cc9553f,tycho-oo-12,153,Venus,ecliptic_latitude,Copernicus,1591-09-27,main,,printed direction,-0.716667,3,1,-3.372963,-3.513744,nominal noon,1.8,159.38,167.82,8.45
+assertion-v12-298a9f0f5f8510f316ea,tycho-oo-12,153,Venus,ecliptic_latitude,Alphonsine,1591-09-27,main,,printed direction,-2.283333,4,1,-3.408403,-3.524207,calculation hour,1.8,67.50,74.45,6.95
+assertion-v12-e0a9c6587c151cc9553f,tycho-oo-12,153,Venus,ecliptic_latitude,Copernicus,1591-09-27,main,,printed direction,-0.716667,4,1,-3.408403,-3.524207,calculation hour,1.8,161.50,168.45,6.95
 assertion-v12-226fa142082840bd215c,tycho-oo-12,153,Venus,ecliptic_longitude,Alphonsine,1591-09-27,main,,printed sign,240.000000,1,1,240.528611,240.587901,printed hours,30.0,-31.72,-35.27,-3.56
 assertion-v12-090b65693f35efb478c3,tycho-oo-12,153,Venus,ecliptic_longitude,Copernicus,1591-09-27,main,,printed sign,240.008333,1,1,240.528611,240.587901,printed hours,30.0,-31.22,-34.77,-3.56
 assertion-v10-1296401d0ea5dc4377a3,tycho-oo-10,4,Mars,ecliptic_latitude,Alphonsine,1563-09-20,away from opposition,,printed direction,-1.500000,0,0,,-2.506989,"nominal noon, no log value",1.0,,60.42,
@@ -128,8 +128,8 @@ assertion-v10-b004791fb64b798236c5,tycho-oo-10,65,Mars,ecliptic_latitude,Alphons
 assertion-v10-a586f848a5dbefa061b1,tycho-oo-10,65,Mars,ecliptic_latitude,Prutenic,1578-10-23,away from opposition,,printed direction,-2.583333,1,1,-2.083333,-1.607407,printed hours,2.0,-30.00,-58.56,-28.56
 assertion-v10-b9978db8ca3a9bcc1686,tycho-oo-10,65,Mars,ecliptic_longitude,Alphonsine,1578-10-23,away from opposition,,printed sign,6.983333,1,1,5.200000,5.054443,printed hours,0.7,107.00,115.73,8.73
 assertion-v10-1f35d27ea2fcc8f1be63,tycho-oo-10,65,Mars,ecliptic_longitude,Prutenic,1578-10-23,away from opposition,,printed sign,2.400000,1,1,5.200000,5.054443,printed hours,0.7,-168.00,-159.27,8.73
-assertion-v10-7632869f96aca1f9dce0,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,1580-11-17,near opposition,,printed sign,65.800000,2,1,66.783333,66.802538,nominal noon,11.5,-59.00,-60.15,-1.15
-assertion-v10-deb9903d19c8921c89e1,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,1580-11-17,near opposition,,printed sign,66.250000,2,1,66.783333,66.802538,nominal noon,11.5,-32.00,-33.15,-1.15
+assertion-v10-7632869f96aca1f9dce0,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,1580-11-17,near opposition,,printed sign,65.800000,2,1,66.783333,66.722439,calculation hour,11.5,-59.00,-55.35,3.65
+assertion-v10-deb9903d19c8921c89e1,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,1580-11-17,near opposition,,printed sign,66.250000,2,1,66.783333,66.722439,calculation hour,11.5,-32.00,-28.35,3.65
 assertion-v10-04f1d1c1d8dd4bc621cf,tycho-oo-10,85,Mars,ecliptic_longitude,Alphonsine,1580-12-10,near opposition,,printed sign,59.133333,3,0,60.122222,59.796226,nominal noon,5.4,-59.33,-39.77,19.56
 assertion-v10-0c4b65af31ee58a84cb2,tycho-oo-10,85,Mars,ecliptic_longitude,Prutenic,1580-12-10,near opposition,,printed sign,59.750000,3,0,60.122222,59.796226,nominal noon,5.4,-22.33,-2.77,19.56
 assertion-v10-7cf26251709abaff0330,tycho-oo-10,88,Mars,ecliptic_latitude,Alphonsine,1580-12-24,near opposition,,printed direction,2.150000,1,0,0.583333,2.523528,nominal noon,0.1,94.00,-22.41,-116.41
@@ -229,68 +229,68 @@ assertion-v11-513ece10b8e02041ba4d,tycho-oo-11,334,Mars,ecliptic_latitude,Alphon
 assertion-v11-5d6c1fc8bd2d5093eac5,tycho-oo-11,334,Mars,ecliptic_latitude,Copernicus,1589-04-26,near opposition,,printed direction,1.433333,1,1,0.555556,0.536038,printed hours,1.4,52.67,53.84,1.17
 assertion-v11-058cc3906e0f0c8a00f6,tycho-oo-11,334,Mars,ecliptic_longitude,Alphonsine,1589-04-26,near opposition,,printed sign,209.316667,1,1,210.041667,210.060415,printed hours,10.1,-43.50,-44.62,-1.12
 assertion-v11-b94e6c0852a147ddaaeb,tycho-oo-11,334,Mars,ecliptic_longitude,Copernicus,1589-04-26,near opposition,,printed sign,211.550000,1,1,210.041667,210.060415,printed hours,10.1,90.50,89.38,-1.12
-assertion-v12-43a047dfb2f2edddf9b9,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-04-29,near opposition,,printed direction,-1.500000,2,1,-1.412500,-1.436054,nominal noon,1.7,-5.25,-3.84,1.41
-assertion-v12-79a81f0fbae60f4149d8,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-04-29,near opposition,,printed direction,-0.500000,2,1,-1.412500,-1.436054,nominal noon,1.7,54.75,56.16,1.41
-assertion-v12-b2ecba434ea9f494804f,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-04-29,near opposition,,printed sign,274.812500,2,1,272.252778,272.180096,nominal noon,2.8,153.58,157.94,4.36
-assertion-v12-face02b568531e9deecb,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-04-29,near opposition,,printed sign,272.183333,2,1,272.252778,272.180096,nominal noon,2.8,-4.17,0.19,4.36
-assertion-v12-b342dbd24b70e8c72af4,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-12,near opposition,,printed direction,-2.441667,2,1,-2.250000,-2.238189,nominal noon,2.0,-11.50,-12.21,-0.71
-assertion-v12-05b0d0dad0852458f185,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-12,near opposition,,printed direction,-1.108333,2,1,-2.250000,-2.238189,nominal noon,2.0,68.50,67.79,-0.71
-assertion-v12-75ee04b8b0649eb26adc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-12,near opposition,,within the sign,5.708333,1,0,272.407500,272.402497,nominal noon,2.0,198.05,198.35,0.30
-assertion-v12-5c48e140711d328cd390,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-12,near opposition,,within the sign,2.555556,1,0,272.407500,272.402497,nominal noon,2.0,8.88,9.18,0.30
+assertion-v12-43a047dfb2f2edddf9b9,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-04-29,near opposition,,printed direction,-1.500000,2,1,-1.412500,-1.452514,calculation hour,1.7,-5.25,-2.85,2.40
+assertion-v12-79a81f0fbae60f4149d8,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-04-29,near opposition,,printed direction,-0.500000,2,1,-1.412500,-1.452514,calculation hour,1.7,54.75,57.15,2.40
+assertion-v12-b2ecba434ea9f494804f,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-04-29,near opposition,,printed sign,274.812500,2,1,272.252778,272.207395,calculation hour,2.8,153.58,156.31,2.72
+assertion-v12-face02b568531e9deecb,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-04-29,near opposition,,printed sign,272.183333,2,1,272.252778,272.207395,calculation hour,2.8,-4.17,-1.44,2.72
+assertion-v12-b342dbd24b70e8c72af4,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-12,near opposition,,printed direction,-2.441667,2,1,-2.250000,-2.257071,calculation hour,2.0,-11.50,-11.08,0.42
+assertion-v12-05b0d0dad0852458f185,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-12,near opposition,,printed direction,-1.108333,2,1,-2.250000,-2.257071,calculation hour,2.0,68.50,68.92,0.42
+assertion-v12-75ee04b8b0649eb26adc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-12,near opposition,,within the sign,5.708333,1,0,272.407500,272.365131,calculation hour,2.0,198.05,200.59,2.54
+assertion-v12-5c48e140711d328cd390,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-12,near opposition,,within the sign,2.555556,1,0,272.407500,272.365131,calculation hour,2.0,8.88,11.43,2.54
 assertion-v12-d7ec97cb62e1e4aeae2c,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-13,near opposition,,printed direction,-2.512500,1,1,-2.479167,-2.324275,printed hours,2.0,-2.00,-11.29,-9.29
 assertion-v12-c1952387fc97e2324958,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-13,near opposition,,printed direction,-1.145833,1,1,-2.479167,-2.324275,printed hours,2.0,80.00,70.71,-9.29
-assertion-v12-d66bf1516bafb0293d60,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-13,near opposition,,within the sign,5.700000,0,0,,272.334148,"nominal noon, no log value",2.3,,201.95,
-assertion-v12-4b4f979be4c1942ed097,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-13,near opposition,,within the sign,2.505556,0,0,,272.334148,"nominal noon, no log value",2.3,,10.28,
-assertion-v12-50b89d5103b11ab167bb,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-19,near opposition,,printed direction,-3.066667,2,1,-2.670833,-2.713363,nominal noon,2.1,-23.75,-21.20,2.55
-assertion-v12-bd9e9a1a2b432e182365,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-19,near opposition,,printed direction,-1.500000,2,1,-2.670833,-2.713363,nominal noon,2.1,70.25,72.80,2.55
-assertion-v12-06fa80b39d9edf45e953,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-19,near opposition,,within the sign,5.333333,1,0,271.579167,271.661816,nominal noon,4.5,225.25,220.29,-4.96
-assertion-v12-dcf5ee7648b684c4c887,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-19,near opposition,,within the sign,1.837500,1,0,271.579167,271.661816,nominal noon,4.5,15.50,10.54,-4.96
-assertion-v12-236f75ae4fe2cc4e92f8,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-21,near opposition,,printed direction,-3.177778,2,1,-2.870833,-2.851549,nominal noon,2.1,-18.42,-19.57,-1.16
-assertion-v12-35ff6c8853fb5c22a535,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-21,near opposition,,printed direction,-1.650000,2,1,-2.870833,-2.851549,nominal noon,2.1,73.25,72.09,-1.16
-assertion-v12-2268c1c0ef74c1951c94,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-21,near opposition,,within the sign,5.079167,1,0,271.263333,271.341259,nominal noon,5.2,228.95,224.27,-4.68
-assertion-v12-54efefda98005405100d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-21,near opposition,,within the sign,1.522222,1,0,271.263333,271.341259,nominal noon,5.2,15.53,10.86,-4.68
-assertion-v12-a73426781485cda3184f,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-24,near opposition,,printed direction,-3.327778,2,1,-3.083333,-3.058727,nominal noon,2.1,-14.67,-16.14,-1.48
-assertion-v12-9d21c0f644a42d311bfc,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-24,near opposition,,printed direction,-2.000000,2,1,-3.083333,-3.058727,nominal noon,2.1,65.00,63.52,-1.48
-assertion-v12-bb7f93f087c7abbc018b,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-24,near opposition,,within the sign,4.616667,1,0,270.672222,270.775961,nominal noon,6.2,236.67,230.44,-6.22
-assertion-v12-2c6944c0e3d6def440e2,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-24,near opposition,,within the sign,0.872222,1,0,270.672222,270.775961,nominal noon,6.2,12.00,5.78,-6.22
-assertion-v12-0a1f314fd1969f100566,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-29,near opposition,,printed direction,-3.783333,2,1,-3.420833,-3.399292,nominal noon,2.0,-21.75,-23.04,-1.29
-assertion-v12-e503df69381954e1f65e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-29,near opposition,,printed direction,-2.463889,2,1,-3.420833,-3.399292,nominal noon,2.0,57.42,56.12,-1.29
-assertion-v12-fe53db82cc10262bf2dc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-29,near opposition,,within the sign,3.650000,2,1,269.505556,269.562319,nominal noon,7.6,248.67,245.26,-3.41
-assertion-v12-fe7dd89e509d4c8e6425,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-29,near opposition,,printed sign,269.608333,2,1,269.505556,269.562319,nominal noon,7.6,6.17,2.76,-3.41
+assertion-v12-d66bf1516bafb0293d60,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-13,near opposition,,within the sign,5.700000,0,0,,272.288998,calculation hour,2.3,,204.66,
+assertion-v12-4b4f979be4c1942ed097,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-13,near opposition,,within the sign,2.505556,0,0,,272.288998,calculation hour,2.3,,12.99,
+assertion-v12-50b89d5103b11ab167bb,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-19,near opposition,,printed direction,-3.066667,2,1,-2.670833,-2.733015,calculation hour,2.1,-23.75,-20.02,3.73
+assertion-v12-bd9e9a1a2b432e182365,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-19,near opposition,,printed direction,-1.500000,2,1,-2.670833,-2.733015,calculation hour,2.1,70.25,73.98,3.73
+assertion-v12-06fa80b39d9edf45e953,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-19,near opposition,,within the sign,5.333333,1,0,271.579167,271.575288,calculation hour,4.5,225.25,225.48,0.23
+assertion-v12-dcf5ee7648b684c4c887,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-19,near opposition,,within the sign,1.837500,1,0,271.579167,271.575288,calculation hour,4.5,15.50,15.73,0.23
+assertion-v12-236f75ae4fe2cc4e92f8,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-21,near opposition,,printed direction,-3.177778,2,1,-2.870833,-2.871126,calculation hour,2.1,-18.42,-18.40,0.02
+assertion-v12-35ff6c8853fb5c22a535,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-21,near opposition,,printed direction,-1.650000,2,1,-2.870833,-2.871126,calculation hour,2.1,73.25,73.27,0.02
+assertion-v12-2268c1c0ef74c1951c94,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-21,near opposition,,within the sign,5.079167,1,0,271.263333,271.242333,calculation hour,5.2,228.95,230.21,1.26
+assertion-v12-54efefda98005405100d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-21,near opposition,,within the sign,1.522222,1,0,271.263333,271.242333,calculation hour,5.2,15.53,16.79,1.26
+assertion-v12-a73426781485cda3184f,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-24,near opposition,,printed direction,-3.327778,2,1,-3.083333,-3.077748,calculation hour,2.1,-14.67,-15.00,-0.34
+assertion-v12-9d21c0f644a42d311bfc,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-24,near opposition,,printed direction,-2.000000,2,1,-3.083333,-3.077748,calculation hour,2.1,65.00,64.66,-0.34
+assertion-v12-bb7f93f087c7abbc018b,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-24,near opposition,,within the sign,4.616667,1,0,270.672222,270.661703,calculation hour,6.2,236.67,237.30,0.63
+assertion-v12-2c6944c0e3d6def440e2,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-24,near opposition,,within the sign,0.872222,1,0,270.672222,270.661703,calculation hour,6.2,12.00,12.63,0.63
+assertion-v12-0a1f314fd1969f100566,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-05-29,near opposition,,printed direction,-3.783333,2,1,-3.420833,-3.417038,calculation hour,2.0,-21.75,-21.98,-0.23
+assertion-v12-e503df69381954e1f65e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-05-29,near opposition,,printed direction,-2.463889,2,1,-3.420833,-3.417038,calculation hour,2.0,57.42,57.19,-0.23
+assertion-v12-fe53db82cc10262bf2dc,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-05-29,near opposition,,within the sign,3.650000,2,1,269.505556,269.494989,calculation hour,7.6,248.67,249.30,0.63
+assertion-v12-fe7dd89e509d4c8e6425,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-05-29,near opposition,,printed sign,269.608333,2,1,269.505556,269.494989,calculation hour,7.6,6.17,6.80,0.63
 assertion-v12-4ca9d7e1b732fedf62c6,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-06-06,near opposition,,printed direction,-4.566667,1,1,-3.925000,-3.921320,printed hours,1.8,-38.50,-38.72,-0.22
 assertion-v12-fdd72a4596698d0e9319,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-06,near opposition,,printed direction,-2.983333,1,1,-3.925000,-3.921320,printed hours,1.8,56.50,56.28,-0.22
 assertion-v12-272b780893cb17614c4c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-06,near opposition,,within the sign,1.600000,1,1,267.250000,267.231415,printed hours,9.1,261.00,262.12,1.12
 assertion-v12-f968a16cd639b413001f,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-06,near opposition,,within the sign,27.116667,1,1,267.250000,267.231415,printed hours,9.1,-8.00,-6.88,1.12
 assertion-v12-be9021f26c2b22130549,tycho-oo-12,151,Mars,ecliptic_latitude,Prutenic,1591-06-08,near opposition,,printed direction,-3.133333,1,1,-4.033333,-4.037897,printed hours,1.7,54.00,54.27,0.27
-assertion-v12-cbb857ea467d8bdb1430,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-08,near opposition,,printed sign,270.950000,2,1,266.628333,266.688478,nominal noon,9.3,259.30,255.69,-3.61
-assertion-v12-5dab8a18fa6970c4a78e,tycho-oo-12,151,Mars,ecliptic_longitude,Prutenic,1591-06-08,near opposition,,printed sign,266.450000,2,1,266.628333,266.688478,nominal noon,9.3,-10.70,-14.31,-3.61
+assertion-v12-cbb857ea467d8bdb1430,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-08,near opposition,,printed sign,270.950000,2,1,266.628333,266.602932,calculation hour,9.3,259.30,260.82,1.52
+assertion-v12-5dab8a18fa6970c4a78e,tycho-oo-12,151,Mars,ecliptic_longitude,Prutenic,1591-06-08,near opposition,,printed sign,266.450000,2,1,266.628333,266.602932,calculation hour,9.3,-10.70,-9.18,1.52
 assertion-v12-739f35cfd1f6b957013e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-10,near opposition,,printed direction,-3.316667,1,1,-4.141667,-4.141752,printed hours,1.6,49.50,49.51,0.01
 assertion-v12-f9340cac5c8f25c7b4b5,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-10,near opposition,,within the sign,0.300000,1,1,266.041667,266.003445,printed hours,9.3,255.50,257.79,2.29
 assertion-v12-d59ebaecb37ef33f60cc,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-10,near opposition,,within the sign,25.766667,1,1,266.041667,266.003445,printed hours,9.3,-16.50,-14.21,2.29
-assertion-v12-b4c67f8ff38e9a63cb97,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-06-11,near opposition,,printed direction,-5.083333,5,3,-4.174444,-4.182218,nominal noon,1.5,-54.53,-54.07,0.47
-assertion-v12-0e85e4d0244e1133d240,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-11,near opposition,,printed direction,-3.316667,5,3,-4.174444,-4.182218,nominal noon,1.5,51.47,51.93,0.47
-assertion-v12-3e0adc83930118a9653a,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-11,near opposition,,printed sign,269.966667,3,0,265.669444,265.843712,nominal noon,9.3,257.83,247.38,-10.46
-assertion-v12-6f1ed2d7376a259dd42b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-11,near opposition,,within the sign,25.416667,3,0,265.669444,265.843712,nominal noon,9.3,-15.17,-25.62,-10.46
-assertion-v12-65989c8876178233c496,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-06-12,near opposition,,printed direction,-5.133333,2,1,-4.241667,-4.230692,nominal noon,1.5,-53.50,-54.16,-0.66
-assertion-v12-d30b7007fb7935b265b6,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-12,near opposition,,printed direction,-3.350000,2,1,-4.241667,-4.230692,nominal noon,1.5,53.50,52.84,-0.66
-assertion-v12-ae5d12269f7b4ca7ec99,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-12,near opposition,,within the sign,29.650000,1,0,265.427778,265.533275,nominal noon,9.3,253.33,247.00,-6.33
-assertion-v12-9db42bda3b6423e0befd,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-12,near opposition,,within the sign,25.050000,1,0,265.427778,265.533275,nominal noon,9.3,-22.67,-29.00,-6.33
-assertion-v12-8824a09d0bb776fe2342,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-28,near opposition,,printed direction,-3.833333,5,3,-4.782778,-4.758880,nominal noon,0.5,56.97,55.53,-1.43
-assertion-v12-c73a65396130c9f518fa,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-28,near opposition,,within the sign,24.900000,2,0,261.184444,261.237205,nominal noon,5.9,222.93,219.77,-3.17
-assertion-v12-b0e52a89643c6623816d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-28,near opposition,,within the sign,20.366667,2,0,261.184444,261.237205,nominal noon,5.9,-49.07,-52.23,-3.17
+assertion-v12-b4c67f8ff38e9a63cb97,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-06-11,near opposition,,printed direction,-5.083333,5,3,-4.174444,-4.192639,calculation hour,1.5,-54.53,-53.44,1.09
+assertion-v12-0e85e4d0244e1133d240,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-11,near opposition,,printed direction,-3.316667,5,3,-4.174444,-4.192639,calculation hour,1.5,51.47,52.56,1.09
+assertion-v12-3e0adc83930118a9653a,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-11,near opposition,,printed sign,269.966667,3,0,265.669444,265.694862,calculation hour,9.3,257.83,256.31,-1.53
+assertion-v12-6f1ed2d7376a259dd42b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-11,near opposition,,within the sign,25.416667,3,0,265.669444,265.694862,calculation hour,9.3,-15.17,-16.69,-1.53
+assertion-v12-65989c8876178233c496,tycho-oo-12,151,Mars,ecliptic_latitude,Alphonsine,1591-06-12,near opposition,,printed direction,-5.133333,2,1,-4.241667,-4.242762,calculation hour,1.5,-53.50,-53.43,0.07
+assertion-v12-d30b7007fb7935b265b6,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-12,near opposition,,printed direction,-3.350000,2,1,-4.241667,-4.242762,calculation hour,1.5,53.50,53.57,0.07
+assertion-v12-ae5d12269f7b4ca7ec99,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-12,near opposition,,within the sign,29.650000,1,0,265.427778,265.380607,calculation hour,9.3,253.33,256.16,2.83
+assertion-v12-9db42bda3b6423e0befd,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-12,near opposition,,within the sign,25.050000,1,0,265.427778,265.380607,calculation hour,9.3,-22.67,-19.84,2.83
+assertion-v12-8824a09d0bb776fe2342,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-06-28,near opposition,,printed direction,-3.833333,5,3,-4.782778,-4.761875,calculation hour,0.5,56.97,55.71,-1.25
+assertion-v12-c73a65396130c9f518fa,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-06-28,near opposition,,within the sign,24.900000,2,0,261.184444,261.151272,calculation hour,5.9,222.93,224.92,1.99
+assertion-v12-b0e52a89643c6623816d,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-06-28,near opposition,,within the sign,20.366667,2,0,261.184444,261.151272,calculation hour,5.9,-49.07,-47.08,1.99
 assertion-v12-d459523b1ececf1a0fdb,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-07-17,near opposition,,printed direction,-3.883333,1,1,-4.833333,-4.762094,printed hours,0.4,57.00,52.73,-4.27
-assertion-v12-60a1200046190bd9d11c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-07-17,near opposition,,within the sign,22.616667,0,0,,259.771007,"nominal noon, no log value",1.7,,170.74,
-assertion-v12-624eaf21d82f79332588,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-07-17,near opposition,,within the sign,18.850000,0,0,,259.771007,"nominal noon, no log value",1.7,,-55.26,
-assertion-v12-953afd1909f25094144f,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-09-26,away from opposition,,printed direction,-2.533333,2,1,-2.829167,-2.824257,nominal noon,0.9,17.75,17.46,-0.29
-assertion-v12-3e954cfbf01d45635cdb,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-09-26,away from opposition,,within the sign,20.850000,2,1,288.570833,288.441835,nominal noon,18.6,136.75,144.49,7.74
-assertion-v12-cae2b9dd97a2eef27d7b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-09-26,away from opposition,,within the sign,18.350000,2,1,288.570833,288.441835,nominal noon,18.6,-13.25,-5.51,7.74
+assertion-v12-60a1200046190bd9d11c,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-07-17,near opposition,,within the sign,22.616667,0,0,,259.793860,calculation hour,1.7,,169.37,
+assertion-v12-624eaf21d82f79332588,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-07-17,near opposition,,within the sign,18.850000,0,0,,259.793860,calculation hour,1.7,,-56.63,
+assertion-v12-953afd1909f25094144f,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-09-26,away from opposition,,printed direction,-2.533333,2,1,-2.829167,-2.819818,calculation hour,0.9,17.75,17.19,-0.56
+assertion-v12-3e954cfbf01d45635cdb,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-09-26,away from opposition,,within the sign,20.850000,2,1,288.570833,288.531967,calculation hour,18.6,136.75,139.08,2.33
+assertion-v12-cae2b9dd97a2eef27d7b,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-09-26,away from opposition,,within the sign,18.350000,2,1,288.570833,288.531967,calculation hour,18.6,-13.25,-10.92,2.33
 assertion-v12-412ea670ea50750e9246,tycho-oo-12,147,Mars,ecliptic_latitude,Alphonsine,1591-12-10,away from opposition,,printed direction,-0.544444,2,1,-0.274722,-0.825341,nominal noon,0.7,-16.18,16.85,33.04
 assertion-v12-6bdf52adee182b870ce2,tycho-oo-12,147,Mars,ecliptic_latitude,Copernicus,1591-12-10,away from opposition,,printed direction,-0.983333,2,1,-0.274722,-0.825341,nominal noon,0.7,-42.52,-9.48,33.04
-assertion-v12-a5fbef10ae575384100e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-12-10,away from opposition,,printed direction,-0.983333,2,1,-0.274722,-0.825341,nominal noon,0.7,-42.52,-9.48,33.04
-assertion-v12-09efef4d16aeb0c988a1,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-12-10,away from opposition,,printed sign,341.483333,2,1,340.058750,339.917655,nominal noon,21.5,85.47,93.94,8.47
+assertion-v12-a5fbef10ae575384100e,tycho-oo-12,151,Mars,ecliptic_latitude,Copernicus,1591-12-10,away from opposition,,printed direction,-0.983333,2,1,-0.274722,-0.822884,calculation hour,0.7,-42.52,-9.63,32.89
+assertion-v12-09efef4d16aeb0c988a1,tycho-oo-12,151,Mars,ecliptic_longitude,Alphonsine,1591-12-10,away from opposition,,printed sign,341.483333,2,1,340.058750,339.998868,calculation hour,21.5,85.47,89.07,3.59
 assertion-v12-f5c709fbb00fbf9f564d,tycho-oo-12,147,Mars,ecliptic_longitude,Alphonsine,1591-12-10,away from opposition,,printed sign,341.483333,2,1,340.058750,339.917655,nominal noon,21.5,85.47,93.94,8.47
 assertion-v12-2dcbd7a28d145e696e47,tycho-oo-12,147,Mars,ecliptic_longitude,Copernicus,1591-12-10,away from opposition,,printed sign,339.533333,2,1,340.058750,339.917655,nominal noon,21.5,-31.53,-23.06,8.47
-assertion-v12-824bce125f2c1214855a,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-12-10,away from opposition,,printed sign,339.533333,2,1,340.058750,339.917655,nominal noon,21.5,-31.53,-23.06,8.47
+assertion-v12-824bce125f2c1214855a,tycho-oo-12,151,Mars,ecliptic_longitude,Copernicus,1591-12-10,away from opposition,,printed sign,339.533333,2,1,340.058750,339.998868,calculation hour,21.5,-31.53,-27.93,3.59
 assertion-v12-08db0aa23e94c585c1e4,tycho-oo-12,220,Mars,ecliptic_latitude,Alphonsine,1592-02-03,away from opposition,,printed direction,0.087500,1,1,0.112500,0.148145,printed hours,0.4,-1.50,-3.64,-2.14
 assertion-v12-ebb63e926cc90dc8ca52,tycho-oo-12,220,Mars,ecliptic_latitude,Copernicus,1592-02-03,away from opposition,,printed direction,0.091667,1,1,0.112500,0.148145,printed hours,0.4,-1.25,-3.39,-2.14
 assertion-v12-db1e185b232132152370,tycho-oo-12,220,Mars,ecliptic_longitude,Alphonsine,1592-02-03,away from opposition,,within the sign,19.800000,1,1,19.290000,19.235655,printed hours,21.1,30.60,33.86,3.26
@@ -311,8 +311,8 @@ assertion-v12-36d97384c5da4648843c,tycho-oo-12,284,Mars,ecliptic_latitude,Alphon
 assertion-v12-f886d4512ed8a45bafc0,tycho-oo-12,284,Mars,ecliptic_latitude,Copernicus,1593-07-31,near opposition,,printed direction,-6.000000,1,1,-6.104167,-6.137686,printed hours,0.9,6.25,8.26,2.01
 assertion-v12-7ac485ef3032c434fa42,tycho-oo-12,284,Mars,ecliptic_longitude,Alphonsine,1593-07-31,near opposition,,printed sign,352.766667,1,1,347.658333,347.664704,printed hours,2.4,306.50,306.12,-0.38
 assertion-v12-c6104d58aa46f3e91d4e,tycho-oo-12,284,Mars,ecliptic_longitude,Copernicus,1593-07-31,near opposition,,printed sign,343.950000,1,1,347.658333,347.664704,printed hours,2.4,-222.50,-222.88,-0.38
-assertion-v12-9fdae3abb05222564b1c,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-10,near opposition,,printed direction,-6.000000,2,1,-6.278056,-6.341174,nominal noon,0.2,16.68,20.47,3.79
-assertion-v12-ebfa11291062521800d5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-10,near opposition,,printed direction,-6.500000,2,1,-6.278056,-6.341174,nominal noon,0.2,-13.32,-9.53,3.79
+assertion-v12-9fdae3abb05222564b1c,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-10,near opposition,,printed direction,-6.000000,2,1,-6.278056,-6.342837,calculation hour,0.2,16.68,20.57,3.89
+assertion-v12-ebfa11291062521800d5,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-10,near opposition,,printed direction,-6.500000,2,1,-6.278056,-6.342837,calculation hour,0.2,-13.32,-9.43,3.89
 assertion-v12-8149c306fb130833f72c,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,1593-08-10,near opposition,,printed sign,351.433333,1,1,346.125000,346.130828,printed hours,6.0,318.50,318.15,-0.35
 assertion-v12-981f08dbd5cdb75acb12,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-10,near opposition,,printed sign,342.000000,1,1,346.125000,346.130828,printed hours,6.0,-247.50,-247.85,-0.35
 assertion-v12-b8bae8affaeb5e1450a3,tycho-oo-12,285,Mars,ecliptic_longitude,Alphonsine,1593-08-11,near opposition,,within the sign,21.433333,1,1,346.125000,346.130828,printed hours,6.3,318.50,318.15,-0.35
@@ -340,16 +340,16 @@ assertion-v12-e27c9cdd6e2245d25fc3,tycho-oo-12,291,Mars,ecliptic_longitude,Alpho
 assertion-v12-1685d4c4b411419c2f2d,tycho-oo-12,287,Mars,ecliptic_longitude,Copernicus,1593-08-21,near opposition,,printed sign,338.966667,3,3,343.538889,343.572380,printed hours,8.2,-274.33,-276.34,-2.01
 assertion-v12-404d37fb2cd2bbcfc911,tycho-oo-12,286,Mars,ecliptic_longitude,Copernicus,1593-08-21,near opposition,,printed sign,339.266667,3,3,343.538889,343.572380,printed hours,8.2,-256.33,-258.34,-2.01
 assertion-v12-de759b503a9200cd7c0e,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-21,near opposition,,printed sign,338.966667,3,3,343.538889,343.572380,printed hours,8.2,-274.33,-276.34,-2.01
-assertion-v12-93526e6550007be48610,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-22,near opposition,,printed direction,-6.233333,2,1,-6.147222,-6.199207,nominal noon,0.9,-5.17,-2.05,3.12
-assertion-v12-1594e5c8f21534373387,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-22,near opposition,,printed direction,-6.716667,2,1,-6.147222,-6.199207,nominal noon,0.9,-34.17,-31.05,3.12
-assertion-v12-b874cb8d517a6f8b8648,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,1593-08-22,near opposition,,printed sign,348.183333,2,1,343.170833,343.235350,nominal noon,8.3,300.75,296.88,-3.87
-assertion-v12-7c4fec805f59b3ee9b95,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-22,near opposition,,printed sign,338.650000,2,1,343.170833,343.235350,nominal noon,8.3,-271.25,-275.12,-3.87
+assertion-v12-93526e6550007be48610,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-22,near opposition,,printed direction,-6.233333,2,1,-6.147222,-6.191460,calculation hour,0.9,-5.17,-2.51,2.65
+assertion-v12-1594e5c8f21534373387,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-22,near opposition,,printed direction,-6.716667,2,1,-6.147222,-6.191460,calculation hour,0.9,-34.17,-31.51,2.65
+assertion-v12-b874cb8d517a6f8b8648,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,1593-08-22,near opposition,,printed sign,348.183333,2,1,343.170833,343.164559,calculation hour,8.3,300.75,301.13,0.38
+assertion-v12-7c4fec805f59b3ee9b95,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-22,near opposition,,printed sign,338.650000,2,1,343.170833,343.164559,calculation hour,8.3,-271.25,-270.87,0.38
 assertion-v12-23b74543baf731031670,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-23,near opposition,,printed direction,-6.250000,3,3,-6.129167,-6.160029,printed hours,1.0,-7.25,-5.40,1.85
 assertion-v12-43fb332baabcdd8a095e,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-23,near opposition,,printed direction,-6.666667,3,3,-6.129167,-6.160029,printed hours,1.0,-32.25,-30.40,1.85
 assertion-v12-e46982badeffdb6dc0e6,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,1593-08-23,near opposition,,printed sign,347.883333,3,3,342.908333,342.896411,printed hours,8.3,298.50,299.22,0.72
 assertion-v12-fc531d2383c5ee80903f,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-23,near opposition,,printed sign,338.350000,3,3,342.908333,342.896411,printed hours,8.3,-273.50,-272.78,0.72
-assertion-v12-5841fd040e225ce1d225,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-24,near opposition,,printed direction,-6.266667,6,5,-6.079306,-6.131618,nominal noon,1.1,-11.24,-8.10,3.14
-assertion-v12-ac8e9a1cd96320fd00b2,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-24,near opposition,,printed direction,-6.616667,6,5,-6.079306,-6.131618,nominal noon,1.1,-32.24,-29.10,3.14
+assertion-v12-5841fd040e225ce1d225,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-24,near opposition,,printed direction,-6.266667,6,5,-6.079306,-6.126371,calculation hour,1.1,-11.24,-8.42,2.82
+assertion-v12-ac8e9a1cd96320fd00b2,tycho-oo-12,291,Mars,ecliptic_latitude,Copernicus,1593-08-24,near opposition,,printed direction,-6.616667,6,5,-6.079306,-6.126371,calculation hour,1.1,-32.24,-29.42,2.82
 assertion-v12-a6248deb349bb17e0902,tycho-oo-12,291,Mars,ecliptic_longitude,Alphonsine,1593-08-24,near opposition,,printed sign,342.583333,4,4,342.656597,342.646401,printed hours,8.3,-4.40,-3.78,0.61
 assertion-v12-b92f241cdc17eeb6b296,tycho-oo-12,291,Mars,ecliptic_longitude,Copernicus,1593-08-24,near opposition,,printed sign,337.066667,4,4,342.656597,342.646401,printed hours,8.3,-335.40,-334.78,0.61
 assertion-v12-d7e31aa7abf37c04e5c6,tycho-oo-12,291,Mars,ecliptic_latitude,Alphonsine,1593-08-29,near opposition,,printed direction,-6.366667,2,2,-5.870833,-5.907408,printed hours,1.5,-29.75,-27.56,2.19
@@ -362,8 +362,8 @@ assertion-v12-699411e50f40ab157481,tycho-oo-12,297,Mars,ecliptic_longitude,Alpho
 assertion-v12-e38de4d893fa8a4ced6c,tycho-oo-12,297,Mars,ecliptic_longitude,Copernicus,1593-12-10,away from opposition,,printed sign,4.500000,2,2,4.741667,4.699499,printed hours,16.7,-14.50,-11.97,2.53
 assertion-v12-5032621c9e74d854163d,tycho-oo-12,298,Mars,ecliptic_latitude,Alphonsine,1593-12-19,away from opposition,,printed direction,0.200000,3,3,0.230185,0.199980,printed hours,0.7,-1.81,0.00,1.81
 assertion-v12-f50828157af91e701d57,tycho-oo-12,298,Mars,ecliptic_latitude,Copernicus,1593-12-19,away from opposition,,printed direction,-0.233333,3,3,0.230185,0.199980,printed hours,0.7,-27.81,-26.00,1.81
-assertion-v12-dff8e927a6470ac8344f,tycho-oo-12,298,Mars,ecliptic_longitude,Alphonsine,1593-12-19,away from opposition,,printed sign,11.133333,4,3,9.757361,9.734775,nominal noon,17.3,82.56,83.91,1.36
-assertion-v12-5c268fc799fa740d4812,tycho-oo-12,298,Mars,ecliptic_longitude,Copernicus,1593-12-19,away from opposition,,printed sign,9.550000,4,3,9.757361,9.734775,nominal noon,17.3,-12.44,-11.09,1.36
+assertion-v12-dff8e927a6470ac8344f,tycho-oo-12,298,Mars,ecliptic_longitude,Alphonsine,1593-12-19,away from opposition,,printed sign,11.133333,4,3,9.757361,9.767636,calculation hour,17.3,82.56,81.94,-0.62
+assertion-v12-5c268fc799fa740d4812,tycho-oo-12,298,Mars,ecliptic_longitude,Copernicus,1593-12-19,away from opposition,,printed sign,9.550000,4,3,9.757361,9.767636,calculation hour,17.3,-12.44,-13.06,-0.62
 assertion-v12-6ae6f163058ed7f323a7,tycho-oo-12,299,Mars,ecliptic_latitude,Alphonsine,1593-12-30,away from opposition,,printed direction,0.366667,1,1,0.411111,0.423956,printed hours,0.6,-2.67,-3.44,-0.77
 assertion-v12-751ff4d5d345b3fe428f,tycho-oo-12,299,Mars,ecliptic_longitude,Alphonsine,1593-12-30,away from opposition,,printed sign,17.283333,1,1,16.039722,16.191321,printed hours,17.8,74.62,65.52,-9.10
 assertion-v12-995af7aa761fd66984ac,tycho-oo-12,299,Mars,ecliptic_longitude,Copernicus,1593-12-30,away from opposition,,printed sign,16.066667,1,1,16.039722,16.191321,printed hours,17.8,1.62,-7.48,-9.10
@@ -445,8 +445,8 @@ assertion-v11-44695b260556ee1f977d,tycho-oo-11,329,Jupiter,ecliptic_latitude,Pru
 assertion-v11-6edd4f766b76b801157c,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,1589-02-21,main,,printed sign,161.583333,2,0,163.033056,162.977227,nominal noon,3.9,-86.98,-83.63,3.35
 assertion-v11-cea7da36b4ad046310d7,tycho-oo-11,329,Jupiter,ecliptic_longitude,Prutenic,1589-02-21,main,,printed sign,163.216667,2,0,163.033056,162.977227,nominal noon,3.9,11.02,14.37,3.35
 assertion-v12-b2bfff7d2befc4cb3ff7,tycho-oo-12,136,Jupiter,ecliptic_latitude,Alphonsine,1591-04-23,main,,printed direction,1.833333,0,0,,1.305665,"nominal noon, no log value",0.0,,31.66,
-assertion-v12-14d96569b6e7a0a8f3ec,tycho-oo-12,280,Jupiter,ecliptic_latitude,Alphonsine,1593-06-29,main,,printed direction,-0.083333,3,2,-0.265741,-0.316840,nominal noon,0.1,10.94,14.01,3.07
-assertion-v12-de5b90554232a6a558e7,tycho-oo-12,280,Jupiter,ecliptic_latitude,Copernicus,1593-06-29,main,,printed direction,0.350000,3,2,-0.265741,-0.316840,nominal noon,0.1,36.94,40.01,3.07
+assertion-v12-14d96569b6e7a0a8f3ec,tycho-oo-12,280,Jupiter,ecliptic_latitude,Alphonsine,1593-06-29,main,,printed direction,-0.083333,3,2,-0.265741,-0.316673,calculation hour,0.1,10.94,14.00,3.06
+assertion-v12-de5b90554232a6a558e7,tycho-oo-12,280,Jupiter,ecliptic_latitude,Copernicus,1593-06-29,main,,printed direction,0.350000,3,2,-0.265741,-0.316673,calculation hour,0.1,36.94,40.00,3.06
 assertion-v12-6a4a76f1bcc14d8fbc84,tycho-oo-12,280,Jupiter,ecliptic_longitude,Alphonsine,1593-06-29,main,,printed sign,286.566667,1,1,287.383333,287.384178,printed hours,3.9,-49.00,-49.05,-0.05
 assertion-v12-d3f87c4db5320305eaf6,tycho-oo-12,280,Jupiter,ecliptic_longitude,Copernicus,1593-06-29,main,,printed sign,287.566667,1,1,287.383333,287.384178,printed hours,3.9,11.00,10.95,-0.05
 assertion-v10-b9100569a07dbc427e0e,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,1564-05-01,main,,printed sign,119.883333,1,0,120.000000,118.224400,nominal noon,2.2,-7.00,99.54,106.54

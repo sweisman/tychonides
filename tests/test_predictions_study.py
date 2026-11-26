@@ -8,6 +8,7 @@ import sys
 import tempfile
 import unittest
 from contextlib import closing
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,7 +50,7 @@ class PredictionSelectionTests(unittest.TestCase):
 
         with closing(sqlite3.connect(f"file:{CATALOG}?mode=ro", uri=True)) as db:
             predictions, references, excluded = predictions_select.select(db)
-        self.assertEqual((len(predictions), len(references), len(excluded)), (485, 327, 186))
+        self.assertEqual((len(predictions), len(references), len(excluded)), (485, 340, 284))
         files = {
             "printed-predictions.csv": (predictions_select.PREDICTION_FIELDS, predictions),
             "printed-predictions-references.csv": (predictions_select.REFERENCE_FIELDS, references),
@@ -103,6 +104,23 @@ class PredictionStudyTests(unittest.TestCase):
             timed = row["de441_time_basis"] == "printed hours"
             self.assertEqual(bool(row["prediction_minus_de441_arcmin"]), timed, row["id"])
             self.assertEqual(bool(row["prediction_minus_log_arcmin"]), timed, row["id"])
+
+    def test_a_calculation_hour_is_used_only_when_its_label_places_it(self):
+        import printed_predictions
+
+        item = {"julian_date": "1595-09-30", "daypart": "", "epoch_seconds": "14400"}
+        noon = printed_predictions.mm.jd_ut(date(1595, 9, 30), 12.0)
+        self.assertAlmostEqual(printed_predictions.calculation_instant(item) - noon, 4 / 24)
+        # "4h A.M." can be a clock hour or four hours before noon.
+        marked = {**item, "daypart": "before_noon"}
+        self.assertIsNone(printed_predictions.calculation_instant(marked))
+        self.assertIsNone(printed_predictions.calculation_instant({**item, "epoch_seconds": ""}))
+        used = [
+            row
+            for row in printed_predictions.compare()
+            if row["de441_time_basis"] == "calculation hour"
+        ]
+        self.assertEqual(len(used), 63)
 
 
 if __name__ == "__main__":

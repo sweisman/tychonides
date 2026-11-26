@@ -1,5 +1,23 @@
 # Catalog releases
 
+## 1.3.4
+
+This release closes the open lists of both audits and adds 9,763 versioned
+interpretations. In the records of Tycho’s four logs, 2,720 readings take the
+day that their own row, column, heading, caption, or sentence prints, and 182
+give up a carried date where the page prints none for them. 4,807 take the
+type, subject, reference star, or role that their printed label gives, among
+them 1,275 typed readings that had no subject and 980 rows of reckonings that
+the automated intake had typed as readings. In the supplementary books, 1,629
+places computed from tables become predictions or comparisons, and 556
+readings take the expression that their line prints. 225 records that
+repeated a printed value or held a part of one are merged into their
+readings, so the catalog has 225 fewer quantities. Every revision cites its
+printed line and keeps the earlier interpretation and the identity. The
+[edition findings](docs/edition-findings.md) list 29 places where a printed
+value is in doubt. The release contains
+**710,195 quantities and 115,972 source groups**. [Audits, corrections, and limits](docs/status.md#audit-of-the-tycho-log-records)
+
 ## 1.3.3
 
 A first audit of the seven supplementary books and the modern collections adds

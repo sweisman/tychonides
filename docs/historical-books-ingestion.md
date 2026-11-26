@@ -1,20 +1,23 @@
 # Supplementary Historical Collections: Coverage and Limits
 
-Seven historical editions contribute **303,175 quantities and 10,930 source groups**,
+Seven historical editions contribute **303,125 quantities and 10,930 source groups**,
 covering all celestial bodies and relevant supporting material in the selected
 editions. All **4,078 selected source regions** have recorded review decisions.
+The acquisition added 303,175 quantities. Release 1.3.4 merged 50 records
+that held a part of a printed value into the
+[readings they belong to](status.md#audit-of-the-other-works).
 These records join the earlier Mars and modern collections in the
 [single Tychonides catalog](../resources/catalog/README.md).
 
 | Work | Quantities | Selected regions with decisions | Material represented |
 | --- | ---: | ---: | --- |
 | Snellius, *Observationes Hassiacae* | 6,189 | 47 / 47 | Hessian, Bohemian and earlier observations, reductions and observer attributions |
-| Brahe, *Progymnasmata* | 22,910 | 629 / 629 | Recorded observations, stellar and solar material, refraction, parallax and historical calculations |
-| Longomontanus, *Astronomia Danica*, 1640 | 35,349 | 691 / 691 | Observations, reductions, planetary parameters, correction tables and worked calculations |
+| Brahe, *Progymnasmata* | 22,908 | 629 / 629 | Recorded observations, stellar and solar material, refraction, parallax and historical calculations |
+| Longomontanus, *Astronomia Danica*, 1640 | 35,322 | 691 / 691 | Observations, reductions, planetary parameters, correction tables and worked calculations |
 | Ursus, *Fundamentum Astronomicum* | 43 | 64 / 64 | Observational material, coordinate reductions and numerical evidence for the stated hypothesis |
 | Origanus, *Ephemerides Brandenburgicae* | 88,727 | 275 / 275 | Material present in the supplied introductory edition, time conventions, correction tables and astronomical examples |
-| Riccioli, *Astronomia Reformata* | 114,155 | 840 / 840 | Collected observations of all bodies, competing reductions, parameters and prediction tables |
-| Riccioli, *Almagestum Novum*, supplied tome-I edition | 35,802 | 1,532 / 1,532 | Observations, astronomical tables, correction methods and numerical model evidence within this edition |
+| Riccioli, *Astronomia Reformata* | 114,145 | 840 / 840 | Collected observations of all bodies, competing reductions, parameters and prediction tables |
+| Riccioli, *Almagestum Novum*, supplied tome-I edition | 35,791 | 1,532 / 1,532 | Observations, astronomical tables, correction methods and numerical model evidence within this edition |
 
 See the [source guide](sources.md) for published editions and witnesses. Other
 books and the remaining planetary material in Tycho's four observation logs are
@@ -38,8 +41,8 @@ and correction states require source evidence. Follow the existing
 
 ## Numerical coverage and limits
 
-Of these quantities, **295,189 have exact conversions**, **486 are incomplete**
-and **7,500 retain unsupported or unresolved interpretations**. Exactness describes
+Of these quantities, **295,148 have exact conversions**, **485 are incomplete**
+and **7,492 retain unsupported or unresolved interpretations**. Exactness describes
 rational arithmetic under the recorded interpretation, not observational accuracy.
 An unresolved expression is preserved without an invented scalar. Counts include
 historical inputs, calculations, adopted values, bounds and alternatives; they

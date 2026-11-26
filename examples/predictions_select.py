@@ -23,8 +23,10 @@ Rules, in order:
    label stays blank.
 3. A longitude printed without a zodiac sign keeps only its value within the
    sign. Such a value of 30 degrees or more is left out, because it cannot be
-   a place within a sign. A latitude needs a printed direction. Neither a sign
-   nor a direction is supplied from neighboring entries.
+   a place within a sign. So is a value the catalog labels a mean longitude or
+   counts from an origin other than the equinox. A latitude needs a printed
+   direction. Neither a sign nor a direction is supplied from neighboring
+   entries.
 4. The log's own values for a prediction are the exact reductions and adopted
    values of the same body and quantity whose single complete date is the same
    day. They need a printed zodiac sign or direction. On each date the adopted
@@ -32,6 +34,7 @@ Rules, in order:
    date is used. The rows of one date share a total weight of one.
 5. A printed calculation hour attached to the same source group as a log value
    is carried with it, together with the daypart recorded in the date claim.
+   So is the calculation hour that the catalog links to a prediction.
 """
 
 import argparse
@@ -56,16 +59,15 @@ QUERY = f"""SELECT c.id, c.source_id, c.printed_page, c.subject, c.quantity, c.r
     ORDER BY c.id"""
 SHARED = ["id", "source_id", "printed_page", "body", "quantity"]
 DATED = ["julian_date", "daypart", "calendar_label"]
-PREDICTION_FIELDS = [*SHARED, "model", "expression", "degrees_exact", "basis", *DATED]
+HOUR = ["epoch_id", "epoch_expression", "epoch_seconds"]
+PREDICTION_FIELDS = [*SHARED, "model", "expression", "degrees_exact", "basis", *DATED, *HOUR]
 REFERENCE_FIELDS = [
     *SHARED,
     "role",
     "expression",
     "degrees_exact",
     *DATED,
-    "epoch_id",
-    "epoch_expression",
-    "epoch_seconds",
+    *HOUR,
     "date_weight",
 ]
 EXCLUDED_FIELDS = [*SHARED, "role", "model", "expression", "julian_date", "reason"]
@@ -88,6 +90,7 @@ def entries(db, roles):
     for row in db.execute(query):
         identifier, source, page, body, quantity, role, expression, event, unit, signed = row[:10]
         degrees, basis, gap = value(quantity, unit, signed, json.loads(row[11]))
+        original = json.loads(row[10])
         yield {
             "id": identifier,
             "source_id": source,
@@ -95,7 +98,9 @@ def entries(db, roles):
             "body": body,
             "quantity": quantity,
             "role": role,
-            "model": json.loads(row[10]).get("model_name") or "",
+            "model": original.get("model_name") or "",
+            "not_a_place": original.get("argument_name") == "mean_longitude"
+            or bool(original.get("source_longitude_origin")),
             "expression": clean(expression),
             "degrees_exact": degrees,
             "basis": basis,
@@ -114,6 +119,18 @@ def epoch(db, event):
     return (found[0], clean(found[1]), found[2]) if found else ("", "", "")
 
 
+def calculation_hour(db, identifier):
+    """The single exact calculation hour that the catalog links to a prediction."""
+    found = db.execute(
+        """SELECT c.id, c.expression, c.value_exact FROM quantity_links l
+           JOIN catalogue c ON c.id = l.to_id
+           WHERE l.from_id = ? AND l.kind = 'calculation_epoch_id'
+             AND c.status = 'exact' AND c.unit = 'second_of_time' ORDER BY c.id""",
+        (identifier,),
+    ).fetchall()
+    return (found[0][0], clean(found[0][1]), found[0][2]) if len(found) == 1 else ("", "", "")
+
+
 def select(db):
     excluded = []
 
@@ -127,13 +144,16 @@ def select(db):
             reason = "no model name"
         if not reason and row["quantity"] == "ecliptic_latitude":
             reason = row["gap"]
+        if not reason and row["not_a_place"]:
+            reason = "a mean longitude or an origin other than the equinox"
         if not reason and row["gap"] and Fraction(row["degrees_exact"]) >= 30:
             reason = "no zodiac sign and a value of 30 degrees or more"
         if reason:
             drop(row, reason, when or "")
             continue
         dated = {"julian_date": when, "daypart": daypart, "calendar_label": calendar}
-        predictions.append({**row, **dated})
+        hour = dict(zip(HOUR, calculation_hour(db, row["id"]), strict=True))
+        predictions.append({**row, **dated, **hour})
     wanted = {(row["body"], row["quantity"], row["julian_date"]) for row in predictions}
 
     chosen = defaultdict(list)
@@ -152,9 +172,7 @@ def select(db):
                 "julian_date": when,
                 "daypart": daypart,
                 "calendar_label": calendar,
-                "epoch_id": identifier,
-                "epoch_expression": expression,
-                "epoch_seconds": seconds,
+                **dict(zip(HOUR, (identifier, expression, seconds), strict=True)),
             }
         )
     references = []

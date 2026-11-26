@@ -23,7 +23,11 @@ their printed dates in the catalog, which does not change that study’s
 numbers. The solar theory and the 1587 parallax studies are published on
 catalog 1.3.2 from the start. Catalog 1.3.3 corrects records in the
 supplementary books and the JPL series. Every selection was rerun on it and
-none changed.
+none changed. Catalog 1.3.4 closes the open lists of both audits. Every
+selection was rerun on it. Six select the same inputs. The 1587 parallax
+study selects the same 48 distances, and three readings that it leaves out
+take a corrected reference star. The printed predictions keep their 485
+predictions and gain 13 values of the log on four dates.
 
 ## Mars reverses direction in 1595
 
@@ -102,21 +106,27 @@ none changed.
   opposition the Copernican longitudes have a median difference of 20′,
   against 1.9° near opposition. Tycho’s own timed longitudes agree with DE441
   within a few arcminutes.
-- **Inputs.** 485 printed predictions from 1563 to 1600 and 327 values of the
+- **Inputs.** 485 printed predictions from 1563 to 1600 and 340 values of the
   log on the same dates, [selected from the catalog](../examples/printed-predictions.csv),
   with cached JPL Horizons positions.
-- **Limits.** The log does not state the hour of a prediction, so 257 of 426
-  comparisons use local noon. The 59 predictions of the Moon are listed and
+- **Limits.** The log prints an hour for 232 of the 426 comparisons. The other
+  194 use local noon. The 59 predictions of the Moon are listed and
   not compared. Forty Mars predictions of 1599 and 1600 are set aside because
   their calendar is not recorded. Samples for Mercury, Venus, and Jupiter are
   small. A Venus entry that stood 51° from the ephemeris carried a wrong date
   in catalog 1.3.1. With the date its heading prints, it lies 3′ away.
+  Catalog 1.3.4 types 98 more places as predictions. The catalog records no
+  model name for 78 of them and no single date for 20, so they enter no
+  comparison.
 - **Rerun.** `python examples/printed_predictions.py --output docs/figures`
   regenerates the [summary](figures/printed-predictions-summary.csv), the
   [results](figures/printed-predictions-results.csv), and the figure. A test
   regenerates the tables.
-- **Reviewed.** November 25, 2026. Rerun on catalog 1.3.2. The Mercury and
-  Venus rows changed with the corrected dates of two printed entries.
+- **Reviewed.** November 26, 2026. Rerun on catalog 1.3.2. The Mercury and
+  Venus rows changed with the corrected dates of two printed entries. Rerun
+  on catalog 1.3.4. The predictions and their differences from DE441 are
+  unchanged. The log has 13 more values on four dates, and the differences
+  from the log changed there.
 
 ## Tycho’s solar theory
 

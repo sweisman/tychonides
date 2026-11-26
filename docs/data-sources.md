@@ -54,15 +54,15 @@ parallax corrections remain dependencies of reduced coordinate products.
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Sun, Saturn, and Venus observations, reductions, and supporting records | [Available: 46,300 additional quantities](#sun-saturn-and-venus-coverage) |
 | Tycho Brahe, *Thesaurus Observationum*, Opera Omnia X–XIII | Mercury, seven comet accounts, fixed-star observations and catalogs, follow-up readings of the new star of 1572, and supporting records | [Available: 50,647 additional quantities](#full-log-coverage) |
 | [Wayne Pafko, Mars transcription](https://www.pafko.com/tycho/) | Independent transcription used to reconcile entries in Tycho’s books | 923 linked validation controls; not an additional observing program |
-| Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,910 quantities](historical-books-ingestion.md) |
-| Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,349 quantities](historical-books-ingestion.md) |
+| Tycho Brahe, [*Astronomiae Instauratae Progymnasmata*](https://arsastronomica.com/works/tycho-brahe-astronomiae-instauratae-progymnasmata/) (1610 edition) | Observations, refraction tables, reference coordinates and distance investigations | [22,908 quantities](historical-books-ingestion.md) |
+| Longomontanus, [*Astronomia Danica*](https://arsastronomica.com/works/longomontanus-astronomia-danica/) (1640) | Observations, planetary parameters and historical model formulations | [35,322 quantities](historical-books-ingestion.md) |
 | Origanus, [*Ephemerides Brandenburgicae*](https://arsastronomica.com/works/david-origanus-ephemerides-brandenburgicae/) (1609), supplied introductory edition | Calendars, conventions, tables and astronomical examples; no claim of complete daily ephemeris volumes | [88,727 quantities](historical-books-ingestion.md) |
 | Snellius, [*Observationes Hassiacae*](https://arsastronomica.com/works/willebrord-snellius-observationes-hassiacae/) (1618) | Hessian observations and records attributed to other astronomers | [6,189 quantities](historical-books-ingestion.md) |
 | Ursus, [*Fundamentum Astronomicum*](https://arsastronomica.com/works/nicolaus-reimers-ursus-fundamentum-astronomicum/) (1588) | Geometry, reductions and planetary theory | [43 quantities](historical-books-ingestion.md) |
-| Riccioli, [*Astronomia Reformata*](https://arsastronomica.com/works/giovanni-battista-riccioli-astronomia-reformata/) (1665) | Collected observations, numerical theories, refraction and parallax | [114,155 quantities](historical-books-ingestion.md) |
-| Riccioli, [*Almagestum Novum*](https://arsastronomica.com/works/giovanni-battista-riccioli-almagestum-novum-tomus-primus-pars-prior/) (1651), supplied tome-I edition | Observations, astronomical tables and numerical model evidence | [35,802 quantities](historical-books-ingestion.md) |
+| Riccioli, [*Astronomia Reformata*](https://arsastronomica.com/works/giovanni-battista-riccioli-astronomia-reformata/) (1665) | Collected observations, numerical theories, refraction and parallax | [114,145 quantities](historical-books-ingestion.md) |
+| Riccioli, [*Almagestum Novum*](https://arsastronomica.com/works/giovanni-battista-riccioli-almagestum-novum-tomus-primus-pars-prior/) (1651), supplied tome-I edition | Observations, astronomical tables and numerical model evidence | [35,791 quantities](historical-books-ingestion.md) |
 
-The supplementary books contribute 303,175 quantities across all bodies within
+The supplementary books contribute 303,125 quantities across all bodies within
 their selected editions. [Coverage and limitations](historical-books-ingestion.md)
 distinguish quantity rows, contextual annotation literals and unresolved cases.
 The [book source guide](sources.md) links editions, PDFs and original witnesses.
@@ -130,13 +130,17 @@ bodies also captured comparison readings, clock and instrument entries,
 correction and reduction material, and separate notes about observing
 circumstances. [Editions and printed witnesses](sources.md)
 
-| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.3 |
+| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.4 |
 | --- | ---: | ---: |
-| X | 11,737 | 31,772 |
-| XI | 14,807 | 40,132 |
-| XII | 12,417 | 49,829 |
-| XIII | 11,661 | 28,710 |
-| **Total** | **50,622** | **150,443** |
+| X | 11,737 | 31,766 |
+| XI | 14,807 | 40,125 |
+| XII | 12,417 | 49,760 |
+| XIII | 11,661 | 28,617 |
+| **Total** | **50,622** | **150,268** |
+
+Releases 1.3.1 to 1.3.3 held 150,443 quantities from the four volumes. Release
+1.3.4 merges 175 records that repeated a printed value or held a part of one
+into their readings.
 
 The 1.3.0 additions span 2,397 source groups and include 1,698 separate observing
 context records. The release reuses existing records for matched source
@@ -147,7 +151,7 @@ printed page citations.
 
 #### Interpretation review
 
-[Release 1.3.3](../resources/catalog/README.md#download) contains **710,420 quantities**. The review
+[Release 1.3.4](../resources/catalog/README.md#download) contains **710,195 quantities**. The review
 made for release 1.3.1 classifies 8,341 of the initially unresolved entries and establishes exact
 values for another 14,234 whose uses remain open. It also recovers the complete
 expressions for three earlier readings while preserving their original
@@ -175,8 +179,15 @@ open.
 A [first audit of the supplementary books and the modern collections](status.md#audit-of-the-other-works)
 followed. Release 1.3.3 gives 98 longitudes of an apogee, a perigee, or a
 node in the books their printed subject, and marks 350 whole-minute
-coordinates in the JPL series Washington 6b and 6c as placeholders. That audit
-is less complete than the audit of the logs.
+coordinates in the JPL series Washington 6b and 6c as placeholders.
+
+Release 1.3.4 closes the open lists of both audits. In the logs, 2,720 more
+values take the day that the page prints for them, 182 give up a carried
+date, and 4,807 take the type, subject, reference star, or role that their
+label prints. In the books, 1,629 places computed from tables become
+predictions or comparisons, and 556 readings take the expression that their
+line prints. The status page states
+[what the audits did not test](status.md#audit-of-the-tycho-log-records).
 
 ## Modern observing programs
 

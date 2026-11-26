@@ -7,7 +7,12 @@ import sqlite3
 # Reviews whose record states the direction of the reading and is exported with its row.
 # Other review kinds leave the direction and the metadata as the source recorded them.
 PUBLISHED_REVIEWS = frozenset(
-    {"log_reading_interpretation", "reviewed_reading_revision", "reviewed_date_binding"}
+    {
+        "log_reading_interpretation",
+        "reviewed_reading_revision",
+        "reviewed_date_binding",
+        "reviewed_edition_reading",
+    }
 )
 
 

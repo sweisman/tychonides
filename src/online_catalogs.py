@@ -504,7 +504,7 @@ def finish_merge(workspace, base, checkpoint):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--workspace", type=Path, default=Path("work/online-catalogues"))
-    parser.add_argument("--base", type=Path, default=Path("work/combined-catalogue/expanded"))
+    parser.add_argument("--base", type=Path, required=True)
     parser.add_argument("--repeat", action="store_true")
     args = parser.parse_args()
     require_checkout(parser)

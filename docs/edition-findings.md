@@ -2,8 +2,10 @@
 
 These findings document discrepancies in the [published editions](sources.md) and their printed-source witnesses. Corrections remain separate from the recorded readings. The [review policy](edition-issues.md) distinguishes edition problems, printed-source variants and pipeline defects.
 
-Browse findings for [Origanus](#origanus), the [Progymnasmata](#progymnasmata)
-and the [Thesaurus Observationum](#thesaurus-observationum). Each entry retains
+Browse findings for [Origanus](#origanus), the [Progymnasmata](#progymnasmata),
+the [Thesaurus Observationum](#thesaurus-observationum),
+[Riccioli](#riccioli), [Longomontanus](#longomontanus) and
+[Snellius](#snellius). Each entry retains
 its source scope and interpretation limits; inclusion here does not imply a
 confirmed translation error or an automatically applied correction.
 
@@ -92,6 +94,62 @@ between these statements and the printed unit wording remains unresolved. This
 is a suspected unit ambiguity requiring a targeted source check. Retain the
 edition's wording and qualify its interpretation; no correction is adopted.
 See the [published source directory](sources.md).
+
+### Progymnasmata: suspected month of a Venus observation, p.182
+
+Printed p.182 dates a distance between the Sun and Venus “In the year 1588, on
+26 September.” The same passage gives the Sun’s right ascension as 220° 41′ 5″
+and its declination as 15° 50½′ south, and the edition marks the Sun’s sign as
+uncertain between Virgo and Scorpio. On p.103 the second solar example, dated
+“26 October of this same year 1588,” has the Sun near the middle of Scorpio
+with a right ascension of 220° 41′ 47″. The two passages agree on the Sun’s
+place and differ in the month. The scan reads *Die 26 Septemb.* at the foot of
+p.181, where the sentence begins, as the edition does. On p.182 the passage
+goes on to the observation of “the next day following, 27 October” (*Die
+autem proximè sequenti 27 Octob.*). This is a slip of the month in the print.
+The catalog keeps 26 September as printed. See the [published source directory](sources.md).
+
+### Progymnasmata: readings corrected in the edition after ingestion
+
+The edition has changed the numerals of thirteen readings since the catalog
+was made. Every reading of the book was compared with the current edition at
+its own place. The working catalog holds the edition’s reading of each and
+keeps the earlier one in its review record.
+
+| Locus | Reading at ingestion | Reading in the edition now |
+| --- | --- | --- |
+| Description of the title figure, longitude beside the latitude 55 55 | 36 41 | 3⁰6 4′5 |
+| p.26, excess of the interval from Aries to Libra over the assumed value | 2 minutes | 11 minutes |
+| p.28, greatest declination once adopted | P.23.M.31½ | P.23.M.31 |
+| p.35, excess of the polar altitude of Frauenburg over Copernicus’s value | 22′¾ | about 2¾ minutes |
+| p.51, the Sun’s apogee in Cancer | 4° 5′ | 4¼° |
+| p.61, table of the Sun’s equation, row 29 | 1° 5′ 36″ | 1° 5′ 26″ |
+| p.64, ephemeris of the Sun for 1572, February 29 | 20° 5′ 28″ | 20° 5′ 38″ |
+| p.65, ephemeris of the Sun for 1572, December 7 | 25° 43′ 35″ | 25° 43′ 36″ |
+| p.206, latitude of the star at the end of the reckoning | 5° 30⅝′ | 5° 30⅚′ south |
+| p.208, complement of the star’s declination | 76° 59¼′ | 76° 59⅓′ |
+| p.227, difference of ascension of two stars | 41°.41¼′ | 41°.41⅓′ |
+| p.461, observed diameter of the Moon | 32⅓ minutes | 32½ minutes |
+| p.764, a diameter concluded by another author | 46 miles and 49⅔ minutes | 46 miles and 49⅓ minutes |
+
+The edition’s notes at most of these places say that the edition formerly
+read the old figure. They are corrections of the edition’s transcription, not
+variants of the print. The changes in the title figure, on p.35, and in the
+three table cells have not been traced to a note. The catalog keeps the title
+figure as written, without a value. See the
+[published source directory](sources.md).
+
+### Progymnasmata: unit marks in the hourly table of the Sun’s mean motion, p.59
+
+The table *In Horis* on printed p.59 gives the Sun’s mean motion in 1 to 24
+hours. The edition now sets each row in one cell and marks its three numbers
+as hours, minutes, and seconds of time, as in “6^h^ 14^m^ 47^s^”. The second
+and third numbers are the motion in minutes and seconds of arc: in 24 hours
+the row gives 59 8, the daily motion of 59′ 8″. The scan heads the three
+columns *H.*, *M.*, *S.* under the title of the Sun’s mean motion in
+longitude, and the table of days beside it *D.*, *G.*, *M.*, *S.* This is an
+error in the unit marks of the edition. No numeral changes. The catalog holds the
+hours and the motion apart and records the motion as an angle.
 
 ## Thesaurus Observationum
 
@@ -279,3 +337,155 @@ The catalog retains the number with the native reference and records the
 header discrepancy separately. No numerical correction is made. The final
 9h44½m clock and 15°40½′ stellar declination agree with the sharp printed witness.
 See the [published editions and scans](sources.md).
+
+### Suspected year of two Jupiter sessions: XII pp.39–40
+
+In the section of 1590 headed for the observations of Jupiter, 44 values stand
+under “29 January, evening” and “30 January.” They give Jupiter a declination
+of about 7° north and an azimuth of 100° east at an altitude of 1°, with a
+clock of 7h 19½m. A modern ephemeris has Jupiter 5.6° south of the equator on
+January 29, 1590, rising near 22h, and 7.0° north a year earlier, rising near
+19h. Agreement with an ephemeris cannot settle a question about a source. The
+scan of p.39 reads as the edition does, under the running head 1590, and the
+page itself shows the difficulty. Its session of 24 January puts Jupiter about
+33½° from the tail of Leo and 26¾° from the northern Scale. Its session of 30
+January puts Jupiter about 21½° from the heart of Leo and 32½° from Spica.
+Jupiter does not move so far in six days. This is a suspected problem of the
+year section in the print. The catalog follows the printed heading and year.
+No date is chosen from the agreement. See the
+[published editions and scans](sources.md).
+
+### Suspected readings met in the audit: volumes X to XII
+
+The audit of the log records met nineteen readings that their own page or a
+neighboring one puts in doubt. The scan of each page reads as the edition
+does, so the doubt lies in the print or in the observation itself. The
+catalog keeps each as printed, and no reading is chosen from agreement with
+an ephemeris.
+
+| Page | Printed | Doubt |
+| --- | --- | --- |
+| X p.321 | “Declination of ♂ 13 54 B,” by the armillae, 13 November 1584, after midnight | The reckoning of the place of Mars beneath it takes the same distance from the lower head of Gemini, 35 53, and gives “Declination of ♂ B. 15 54.” The degrees differ by 2. |
+| XI p.51 | “Declination of ♄ 8° 21½′,” 26 December 1586. The line beneath repeats it as 8° 21¼′. | The same page gives Saturn’s declination as 7° 32¾′ on 6 December and as 7° 34½′ to 7° 34¾′ on 16 December. Saturn’s declination changes by less than half a degree in ten days. |
+| XI p.111 | Longitude of the bright star of the Vulture by the zodiacal armillae, “26° 2′ ♒” and “again 26° 2⅔′ ♒” | The same star stands at 26° 0′ ♑ on p.89 and at 26° 1′ ♑ in the evening table on p.112. The sign differs. |
+| XI p.188 | “♂ passed the meridian and had an altitude by the revolving quadrant 51° 43½′,” 13 April 1587 | The entry opens with the declination of Mars, 7° 39½′ north. At Uraniborg that declination belongs to a meridian altitude near 41° 45′, and the entry of 1 April on the same page gives 41° 40⅙′ with a declination of 7° 35′. The degrees differ by 10. |
+| XI p.267 | “Latitude 17° 4′ 0″” of the Moon, under 23 May 1588 | The Moon’s latitude stays within about 5°. The unlabeled row beneath adds 0° 5′ to the value, and the sum, 17° 9′ of Virgo, is given as the Moon’s true place. |
+| XI p.273 | “Declination of ♃ 21° 23′,” 2 March 1588, at 12h 5m | The line above gives Jupiter a meridian altitude of 53° 20⅓′ on the same day, and the altitudes of the two days before run from 53° 18⅚′ to 53° 20′. At Uraniborg that altitude belongs to a declination near 19¼°. |
+| XI p.275 | “Declination of ♂, south 4° 45⅙′” and “4° 45′,” 12 February 1588, evening | The reckoning for the same day beneath, from another codex, takes the observation of 6h 20m with the same distance from the bright star of Aries, 39° 51′, and gives the declination of Mars as 3° 15⅓′ south. |
+| XI p.293 | “Declination of ☿ 20° 14½′,” 16 April 1588 | The note beneath the table says: “I think the preceding observation was on the star ☿; a test can be made from the observations of the preceding days and ephemerides.” The log leaves the identification open. The catalog keeps the body that the column names. |
+| XI p.326 | “The declination of ♄ was 7° 24′” and “7° 24⅙′,” 28 October 1589, evening | The same page gives Saturn’s declination as 18° 3½′ on 27 March and as 20° 28⅚′ on 14 November. |
+| XI p.330 | “Declination of ♂ 13° 33⅙′” and “13° 32½′,” 12 February 1589, morning | The line beneath, from another codex, says that the meridian altitude gives a declination of 12° 27′. |
+| XI p.330 | Declination of ♃ “10° 44½′,” “10° 45′,” “10° 42⅚′,” and “10° 42⅓′,” 27 May 1589 | The same page gives 9° 8½′ on 15 March, with Jupiter 38° 2′ from Spica, and 9° 41½′ on 31 March, at 39° 28½′ from Spica. On 27 May the distance from Spica is 38° 43′ to 38° 44′, between the two. |
+| XII p.41 | Declination of ♃ “16° 44′ south,” “16° 44′,” and “16° 44½′,” 25 November 1590, morning | The print’s own footnote says “Thus in the codex” and gives 12° 59′ from modern tables. The entry of 14 November on the same page gives 12° 17′ to 12° 19⅓′. The log adds that the observations are not to be trusted far, because of the dawn and the clouds. |
+| XII p.125 | “Latitude 28° 3′ south” of the Moon, in the repeated calculation for 22 March 1591 | The Moon’s latitude stays within about 5°. The first calculation on the page gives 0° 28′ south. |
+| XII p.127 | “Declination of Saturn, north 45° 30′ with both pinnules” and eight more readings from 45° 27′ to 45° 31′, 17 February 1591 | The print’s own footnote says that both pinnules seem to have been moved, since the declination of Saturn was about 22° 16′. The entries of 9 and 25 February on the same page give about 22° 15′ and 22° 19′. |
+| XII p.153 | “Southern declination of Venus, with one pinnule 2° 28¾′,” 27 September 1591, evening | The row above gives Venus an altitude of 1° 45′. The four declinations before it on the page run from 23° 33′ to 23° 30′. |
+| XII p.214 | Declination of Jupiter “22° 10′” and, beneath it in the same column, “10° 9½′,” 19 February 1592 | The second row of such a pair gives the reading of the other pinnule. The degrees differ by 12. |
+| XII p.271 | “Observed declination of Venus 17° 7½′ north,” in the calculation of the Moon’s place for 8 September 1593 | The entry for Venus on the same morning (p.300) gives its declination as 15° 8′, 15° 7½′, and 15° 6⅚′. The degrees differ by 2. |
+| XII p.334 | Declination of ♄ “13° 56⅓′” and, beneath it, “13° 55½′,” 9 October 1594, morning | The entry of 19 October on the same page gives 14° 50½′. Saturn’s declination changes by less than half a degree in ten days. |
+| XII p.395 | Declination of the Moon’s limbs “26° 12′” and, beneath it, “12° 39′,” 15 September 1595 | The column is headed for the upper and the lower limb, which differ by the Moon’s diameter. The pairs beside it read 26° 12′ with 25° 37½′ and 26° 12½′ with 25° 39½′. |
+
+## Riccioli
+
+### Astronomia Reformata: suspected year of Tycho’s Mercury observations, pp.346–347
+
+The edition prints “In the year 1589 Mercury was observed by Tycho” on 1, 2,
+3, 4, 6 and 11 April, and the catalog dates the tables that follow 1589.
+Tycho’s own log holds the same readings, among them the declinations 18° 34′,
+19° 21½′ and 20° 37′, under April 4, 6 and 11 of 1595
+(*Opera Omnia* XII, pp.477–478). The two witnesses differ in the year. The
+scan of p.345, where the sentence stands, reads *Anno 1589*, as the edition
+does. This is a suspected slip of the year in Riccioli’s print or in the copy
+sent to him. Both records stay as printed.
+See the [published source directory](sources.md).
+
+### Astronomia Reformata: suspected month in the eclipse example of 1659
+
+The worked example in the precepts, which are paged separately, is headed “Of
+the eclipsic new moon of the year 1659, November 14” (p.20). Two of its result
+rows print October: *Nouilunium ergo verius Octobr. 14. p. m.* and *Verum
+Nouilunium Octobris 14.* The example’s own place of the Sun is 7 signs 22° 11′,
+or 22° of Scorpio, which belongs to the middle of November. The scan of p.20
+reads *Octobr.* and *Octobris* in the two rows and *Nouemb.* in the heading
+and the conclusion, as the edition does. This is a slip of the month in the print. The
+catalog records both dates on the two values and November 14 on the rest of
+the example. See the [published source directory](sources.md).
+
+### Astronomia Reformata: lunar longitudes in the libration tables, pp.185–188
+
+The tables of Hevelius’s and Gassendi’s libration observations give the Moon’s
+longitude in whole degrees. Several lie 10° to 94° from the Moon’s place on
+the printed date by a modern ephemeris. On p.185 the row of April 29, 1646,
+marked as an opposition, prints 1° of Cancer. The scan of p.185 reads 1 ♋ in
+that row, as the edition does. This is a suspected problem of the table in the
+print, or of the meaning of its column. No value is changed.
+See the [published source directory](sources.md).
+
+### Almagestum Novum: suspected day of the Mars opposition of 1580, p.551
+
+Riccioli reprints Longomontanus’s table of the oppositions of Mars. Its first
+row reads 1580, November 28, 1h 30m, Gemini 6° 27½′. Longomontanus’s own table
+in the *Astronomia Danica* prints November 18 with the same hour and place,
+and the table of Tycho’s oppositions on the same page of the *Almagestum
+Novum* prints November 18, 1h 31m, Gemini 6° 28′ 35″. The scan of p.551 reads
+*Nou. 28* in the reprinted table and *Nou. 18* in the other, as the edition
+does. This is a slip of the day in Riccioli’s reprint. The catalog keeps 28
+as printed. See the [published source directory](sources.md).
+
+## Longomontanus
+
+### Astronomia Danica: readings corrected in the edition after ingestion
+
+The edition has changed the numerals of fourteen readings since the catalog
+was made, and has reworded one sentence so that it prints a count of signs.
+Every reading of the book was compared with the current edition at its own
+place. The working catalog holds the edition’s reading of each and keeps the
+earlier one in its review record.
+
+| Locus | Reading at ingestion | Reading in the edition now |
+| --- | --- | --- |
+| p.280, table of the parallaxes of the Sun and Moon, row 44, columns 58 to 60 | 43 12, 42 23, 41 41 | 43 8, 42 24, 41 43 |
+| p.280, row 45, columns 58 and 59 | 42 28, 41 44 | 42 23, 41 41 |
+| p.280, row 48, columns 58 to 60 | 40 9, 39 24, 38 44 | 40 11, 39 29, 38 50 |
+| p.280, row 49, columns 59 and 60 | 38 38, 37 58 | 38 44, 38 5 |
+| p.331, the sum “aggregated from the mean motion” | 6° 24¼′ | 6° 24⅓′ |
+| p.331, place of the fixed star from the mean equinox | 9°9′25″ | 5s 9° 9′ 25″ |
+| p.352, true place of the Sun from the mean equinox | 24°38½′ | 9 sig. 24°38⅙′ |
+| p.412, correction of the anomaly drawn from the Prutenic Tables | 3 degrees | ¾ of one degree |
+| p.448, latitude of Mercury | 2°4¾′ | 2° 4⅔′ north |
+
+None of these changes has been traced to a note of the edition. See the
+[published source directory](sources.md).
+
+### Astronomia Danica: an interval stated twice, p.179
+
+The edition gives a corrected interval as “45 days, 3 hours, 42 minutes” and
+notes there that it reads the page as *d. 45 hor. 3*. Its next sentence
+repeats the interval as “45 days 3 minutes 42 [seconds]” and gives the Sun’s
+mean motion in it as 44° 30′ 22″. That motion fits 45 days 3 hours 42 minutes.
+The scan settles it. At the head of printed p.180 the first statement reads
+*d. 45 hor. 3 minut. 42* and the second *d. 45 hor. 3 min. 42*. The second
+statement of the edition has lost the hours. This is an error of the edition,
+not of the print. The catalog holds the edition’s wording of both statements
+and gives neither a value. The second takes the printed reading once the
+edition is corrected.
+
+### Astronomia Danica: suspected unit of a lunar motion, p.317
+
+On printed p.317 a difference of 9 hours 43 minutes is turned into the Moon’s
+motion from the Sun at “14 degrees 14 minutes” a day, and the text gives “5
+degrees 46 seconds.” The stated rate gives 5° 46′ in that time. The scan
+reads *5 gr. 46 sec.*, as the edition does. This is a slip of the unit in the
+print. The catalog keeps 5 degrees 46 seconds as printed.
+
+## Snellius
+
+### Observationes Hassiacae: day of a lunar eclipse in a table, p.21
+
+The prose on p.21 places the opposition “on April 21, when 12h 59m after noon
+were complete.” The table under it gives the middle of the eclipse as *Die 12*
+of April at 12h 59m. The two digits of the day are exchanged between the
+prose and the table. The scan reads *die 21. Aprilis* in the prose, at the
+foot of p.20, and *Die 12* in the table, as the edition does. The catalog
+keeps each as printed and corrects neither. See the
+[published source directory](sources.md).
