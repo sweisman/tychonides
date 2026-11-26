@@ -121,11 +121,6 @@ keeps them.
   [The 108 other distances](../examples/mars-parallax-excluded.csv) on pages
   181 to 187 fall on other nights, lack a single complete date, or use a star
   that the log does not identify. The campaign of 1582 and 1583 is not covered.
-- **One distance depends on the release.** At 5h 7m on the morning after
-  February 23 the log gives a distance of 4° 45¾′ from the third star in the
-  wing of Virgo. Release 1.3.1 typed it as an altitude, so the selection finds
-  47 distances there and the fit of both nights is 18″ ± 32″. Release 1.3.2
-  types it as a distance.
 - **Rules.** The selection rules were fixed before any distance was computed.
   The grouping of the fit and the list of cases were settled after a first
   look at the residuals, so every case is shown.

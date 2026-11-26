@@ -661,8 +661,20 @@ the *Astronomia Reformata*.
 against the project’s editions. Scans of the printed pages were read only for
 the suspected problems above.
 
-The [study selections](studies.md) were rerun on release 1.3.3. None changed.
-They were rerun on release 1.3.4. Six select the same inputs. The 1587
+**Effect on the studies.** Every [study](studies.md) is rerun on each
+release. On release 1.3.2 four of the six earlier studies selected the same
+inputs. In the [printed predictions](printed-predictions.md) eight
+predictions took corrected dates and the log gained one value. The Venus
+longitudes on XII p. 71, which release 1.3.1 dated July 15, 1590 and the
+study had flagged at 51° from DE441, take the printed September 1 and lie 3′
+and 53′ away. Four Mercury predictions on XI p. 79 moved from October 29 to
+October 25, 1586. The seven Venus pairs of March 1590, which release 1.3.1
+dated December 20 from an earlier entry, took the days of their table, the
+ones the [study](mercury-venus-parallax.md) had assigned. In the
+[1587 parallax study](mars-parallax-1587.md) one distance had been typed as
+an altitude. Without it the selection held 47 distances and the fit of both
+nights gave 18″ ± 32″. On release 1.3.3 no selection changed.
+On release 1.3.4 six select the same inputs. The 1587
 parallax study selects the same 48 distances, and three readings that it
 leaves out take a corrected reference star. The
 [printed predictions](printed-predictions.md) keep their 485 predictions and
@@ -701,6 +713,7 @@ The research program gives each milestone’s
 | November 25, 2026 | Verification: the release check now recomputes 123,591 exact historical values from their printed expressions, reports any check it skips, guards the totals in the source directory, and decompresses the database once beside the download. |
 | November 25, 2026 | Review of the two parallax studies: every table now regenerates from a script and committed inputs, the printed inputs are tied to catalog entries, and the Venus scenario comparison covers all seven pairs of March 1590. |
 | November 25, 2026 | Study: [Historical refraction tables against modern refraction](refraction-tables.md). Tycho’s fixed-star table stays within 1′ of modern refraction from 4° to 16° and stops at 20°. His solar table runs 4½′ higher. |
+| November 25, 2026 | Review of the [Mars oppositions](mars-oppositions.md) study: one Copernican prediction of 1591, printed as 247° 42′ with no zodiac sign, is left out where it had been compared within the sign. The Copernican mean for 1591 moves from +48′ to −8′. |
 | November 25, 2026 | Study: [Mars at the oppositions of 1580 to 1600](mars-oppositions.md). Tycho’s longitudes agree with a modern ephemeris within 5′ at nine oppositions. The printed table predictions miss by up to 4.7°. |
 | November 25, 2026 | Review of the 1595 Mars study: inputs selected from the catalog by a written rule, printed hours used, the JPL DE441 ephemeris added, and sensitivity, validation, and prediction tables published with a regeneration test. |
 | November 25, 2026 | Study: [Mars reverses direction in 1595](mars-apparent-motion.md), with its inputs, residuals, figure, and script. |

@@ -15,19 +15,8 @@ Each entry gives the question, the result, the inputs, and how to rerun it. The
 | [Mercury and Venus parallax](#mercury-and-venus-parallax) | Historical reductions and the 1590 Venus test | 1582 to 1610 |
 | [The parallax of Mars in 1587](#the-parallax-of-mars-in-1587) | Mars-to-star distances of two nights against the log’s parallax and a modern one | February and March 1587 |
 
-Every selection was rerun on catalog 1.3.2, which corrects dates and types in
-the records of Tycho’s logs. The inputs of four of the six earlier studies
-came out unchanged. The printed predictions gained corrected dates for eight
-predictions and one more log value. The seven Venus pairs of 1590 now carry
-their printed dates in the catalog, which does not change that study’s
-numbers. The solar theory and the 1587 parallax studies are published on
-catalog 1.3.2 from the start. Catalog 1.3.3 corrects records in the
-supplementary books and the JPL series. Every selection was rerun on it and
-none changed. Catalog 1.3.4 closes the open lists of both audits. Every
-selection was rerun on it. Six select the same inputs. The 1587 parallax
-study selects the same 48 distances, and three readings that it leaves out
-take a corrected reference star. The printed predictions keep their 485
-predictions and gain 13 values of the log on four dates.
+Every study is computed from the current catalog,
+[release 1.3.4](../resources/catalog/README.md#download).
 
 ## Mars reverses direction in 1595
 
@@ -56,9 +45,6 @@ predictions and gain 13 values of the log on four dates.
   the [results](figures/mars-1595-results.csv), the summary, sensitivity,
   validation, and prediction tables, and all three figures. The tables need
   NumPy and the figures need Matplotlib. A test regenerates the tables.
-- **Reviewed.** November 25, 2026. The review replaced 14 hand-chosen rows with
-  a written selection rule, used the printed hours, corrected the placement of
-  the mean Sun, and added the sensitivity and validation tables.
 
 ## Mars at the oppositions of 1580 to 1600
 
@@ -89,9 +75,6 @@ predictions and gain 13 values of the log on four dates.
   `python examples/mars_opposition_table.py --output docs/figures` regenerates
   the [opposition table comparison](figures/mars-opposition-table.csv). Tests
   regenerate the tables.
-- **Reviewed.** November 25, 2026. One Copernican prediction of 1591, printed
-  as 247° 42′ with no zodiac sign, had been compared within the sign. It is
-  now left out, which moves the Copernican mean for 1591 from +48′ to −8′.
 
 ## Printed predictions for the Moon and planets
 
@@ -113,20 +96,12 @@ predictions and gain 13 values of the log on four dates.
   194 use local noon. The 59 predictions of the Moon are listed and
   not compared. Forty Mars predictions of 1599 and 1600 are set aside because
   their calendar is not recorded. Samples for Mercury, Venus, and Jupiter are
-  small. A Venus entry that stood 51° from the ephemeris carried a wrong date
-  in catalog 1.3.1. With the date its heading prints, it lies 3′ away.
-  Catalog 1.3.4 types 98 more places as predictions. The catalog records no
-  model name for 78 of them and no single date for 20, so they enter no
-  comparison.
+  small. The catalog records no model name for 87 more predictions and no
+  single complete date for 35, so they enter no comparison.
 - **Rerun.** `python examples/printed_predictions.py --output docs/figures`
   regenerates the [summary](figures/printed-predictions-summary.csv), the
   [results](figures/printed-predictions-results.csv), and the figure. A test
   regenerates the tables.
-- **Reviewed.** November 26, 2026. Rerun on catalog 1.3.2. The Mercury and
-  Venus rows changed with the corrected dates of two printed entries. Rerun
-  on catalog 1.3.4. The predictions and their differences from DE441 are
-  unchanged. The log has 13 more values on four dates, and the differences
-  from the log changed there.
 
 ## Tycho’s solar theory
 
@@ -157,7 +132,6 @@ predictions and gain 13 values of the log on four dates.
   [intervals](figures/solar-theory-intervals.csv), the
   [elements](figures/solar-theory-elements.csv), and the figure. A test
   regenerates the tables.
-- **Reviewed.** November 25, 2026, when the study was first published.
 
 ## Historical refraction tables
 
@@ -180,7 +154,6 @@ predictions and gain 13 values of the log on four dates.
 - **Rerun.** `python examples/refraction_tables.py --output docs/figures`
   regenerates the [summary](figures/refraction-tables-summary.csv), the other
   tables, and the figure. A test regenerates the tables.
-- **Reviewed.** November 25, 2026, when the study was first published.
 
 ## Mars, Jupiter, and Saturn corrections
 
@@ -204,9 +177,6 @@ predictions and gain 13 values of the log on four dates.
   regenerates the [outer-planet table](figures/parallax-outer-planets.csv) and
   every other table on the page from committed inputs. A test regenerates the
   tables.
-- **Reviewed.** November 25, 2026. The review reproduced every table, added the
-  script, tied each printed input to its catalog entry where one entry matches,
-  and made the list of Riccioli’s authorities the same on both parallax pages.
 
 ## Mercury and Venus parallax
 
@@ -224,17 +194,13 @@ predictions and gain 13 values of the log on four dates.
 - **Limits.** Scenario calculations from recorded readings. They show the
   sensitivity to each assumption and do not estimate a parallax. Across the
   seven Venus pairs the residuals scatter by 55″ to 80″, more than the 34″
-  between the historical and modern parallax scales. The catalog does not
-  record the day of each pair, so the days are assigned in page order and
-  checked against the ephemeris.
+  between the historical and modern parallax scales. The study assigns the
+  days of the pairs in page order. They agree with the catalog’s dates and
+  with the ephemeris.
 - **Rerun.** `python examples/planetary_parallax.py --output docs/figures`
   regenerates the [seven-pair table](figures/parallax-venus-pairs.csv) and
   every other table on the page from committed inputs. A test regenerates the
   tables.
-- **Reviewed.** November 25, 2026. The review reproduced every table, added the
-  script and the selection of the Venus pairs from the catalog, extended the
-  scenario comparison from one pair to all seven, and stated the hours used for
-  Mercury.
 
 ## The parallax of Mars in 1587
 
@@ -261,4 +227,3 @@ predictions and gain 13 values of the log on four dates.
   [fits](figures/mars-parallax-1587-summary.csv), the
   [clock check](figures/mars-parallax-1587-clocks.csv), and the figure. A test
   regenerates the tables.
-- **Reviewed.** November 25, 2026, when the study was first published.

@@ -100,9 +100,8 @@ The catalog keeps each row of the recap together. The study gives the rows the
 page’s day labels in order, from the latest meridian clock to the earliest.
 Each recorded meridian altitude then lies within 31″ of the value the modern
 ephemeris gives for that day. A one-day error would move it by more than 10′.
-Release 1.3.1 dated all of these values December 20, 1590, a date carried from
-an earlier entry. Release 1.3.2 dates each row from the day column of the
-recap, and its seven dates are the ones the study assigned.
+The catalog dates each row from the day column of the recap, and its seven
+dates are the ones the study assigned.
 The catalog also does not say which of a row’s two armillae readings is the
 evening one. They are ordered like the row’s two altitude-derived
 declinations. [Selected pairs with catalog identities](../examples/parallax-venus-pairs.csv) · [Every term for each pair](figures/parallax-venus-pairs.csv)

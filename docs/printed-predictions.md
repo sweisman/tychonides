@@ -132,30 +132,19 @@ calculations for different hours.
 
 ## Rows flagged or set aside
 
-- **Venus, September 1, 1590.** The longitudes printed on *Opera Omnia* XII
-  p. 71 are 127° 50′ and 127° 00′. Release 1.3.1 dated them July 15, when DE441
-  puts Venus at 76°, and this study flagged the entry because no table of the
-  period errs by 51°. The [audit](status.md#audit-of-the-tycho-log-records)
-  found the cause. The heading over the calculation names the morning
-  observation of September 1, and the earlier date was carried from another
-  entry. With the printed date the Alphonsine longitude is 3′ from DE441 and
-  the Copernican one 53′. The rule still flags any longitude more than 10°
-  from DE441, together with the other predictions of that body in the same
-  printed entry. It now flags none.
-- **Mercury, October 25, 1586.** Release 1.3.1 dated the four predictions on
-  *Opera Omnia* XI p. 79 October 29. Their heading prints October 25, before
-  noon. The mean of the log’s five longitudes for that day is 13′ from
-  DE441. The Alphonsine longitude is 167′ ahead and the Prutenic one 99′.
-- **Predictions typed by the audit.** Release 1.3.4 types 98 more longitudes
-  and latitudes of the Moon and the planets as predictions, from labels that
-  give them to a named model, a set of tables, or an ephemeris. The catalog
-  does not yet record the name of the source for these values, so 78 of them
-  have no model name here, and 20 have no single complete date. They are
-  listed among the excluded candidates and enter no comparison. The same
-  release gives the log more values of its own on four dates: Mercury on
-  October 25 and 29, 1586, the Moon on January 6, 1587, and Venus on
-  September 27, 1591. The differences from the log changed on those dates.
-  No difference from DE441 changed.
+- **Flagged longitudes.** The rule flags any longitude more than 10° from
+  DE441, together with the other predictions of that body in the same printed
+  entry. It flags none.
+- **Mercury, October 25, 1586.** The heading over the four predictions on
+  *Opera Omnia* XI p. 79 prints October 25, before noon. The mean of the
+  log’s five longitudes for that day is 13′ from DE441. The Alphonsine
+  longitude is 167′ ahead and the Prutenic one 99′.
+- **Predictions without a model name.** The catalog holds 87 longitudes and
+  latitudes of the Moon and the planets as predictions without the name of
+  their table. For 78 of them the label on the page gives the place to a
+  named model, a set of tables, or an ephemeris, and the catalog does not yet
+  record that name. They are listed among the excluded candidates and enter
+  no comparison.
 - **Mars, 1599 and 1600.** The catalog records no calendar for 40 predictions
   from these years. Read as Julian, the log’s own longitudes of October 1599
   lie 4.3° to 4.7° from DE441, the pattern of a ten-day calendar shift. These
