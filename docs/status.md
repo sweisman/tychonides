@@ -738,9 +738,10 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
    revision records the role and the label it rests on, and not the name of
    the table. Record the names. The 78 dated longitudes and latitudes of the
    Moon and the planets among them can then be considered for the
-   [published comparison](printed-predictions.md). In the whole release, 308
-   predictions and 52 comparisons of the logs and 3,294 predictions and 1,973
-   comparisons of the other works carry no model name.
+   [published comparison](printed-predictions.md). In the whole release, 319
+   predictions and 57 comparisons of the logs and 3,399 predictions and 1,973
+   comparisons of the other works carry no model name. The *Astronomia
+   Reformata* holds 5,036 of them.
 3. **Printed predictions of the Moon.** Record the hours of the 59 lunar
    predictions and of the log’s values beside them, then add the Moon to the
    [published comparison](printed-predictions.md).
