@@ -130,7 +130,7 @@ bodies also captured comparison readings, clock and instrument entries,
 correction and reduction material, and separate notes about observing
 circumstances. [Editions and printed witnesses](sources.md)
 
-| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.3.4 |
+| Opera Omnia volume | Added in the 1.3.0 intake | Quantities in 1.4.0 |
 | --- | ---: | ---: |
 | X | 11,737 | 31,766 |
 | XI | 14,807 | 40,125 |
@@ -151,7 +151,7 @@ printed page citations.
 
 #### Interpretation review
 
-[Release 1.3.4](../resources/catalog/README.md#download) contains **710,195 quantities**. The review
+[Release 1.4.0](../resources/catalog/README.md#download) contains **710,195 quantities**. The review
 made for release 1.3.1 classifies 8,341 of the initially unresolved entries and establishes exact
 values for another 14,234 whose uses remain open. It also recovers the complete
 expressions for three earlier readings while preserving their original
@@ -188,6 +188,11 @@ label prints. In the books, 1,629 places computed from tables become
 predictions or comparisons, and 556 readings take the expression that their
 line prints. The status page states
 [what the audits did not test](status.md#audit-of-the-tycho-log-records).
+
+Release 1.4.0 records the table or ephemeris behind the printed predictions
+and comparisons. 5,017 take the name that their page prints, and 482 are
+recorded with the wording of a page that names none. The count of quantities
+is unchanged.
 
 ## Modern observing programs
 

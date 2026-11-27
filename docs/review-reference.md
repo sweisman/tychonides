@@ -284,6 +284,16 @@ bound edition that print the label and the reading. In these two kinds the
 printed expression, components, and value never change. A type change must
 reproduce the stored value, and a source group moves whole.
 
+A reading revision can also state the model that a prediction or comparison
+belongs to. It gives the name of the model, tables, or ephemeris that the
+value's own label, column heading, or sentence prints. Where the page gives a
+source without naming it, the revision keeps that wording, marks the source as
+unnamed, and assigns no name. The cited lines must print the wording. The
+decision states the attribution the reading carried before, and it applies only
+to a value whose role is a prediction or a comparison. A name is never chosen
+by matching a value to a table. Later revisions of the reading keep the
+attribution.
+
 A date revision takes one of three forms. It states the complete day that the
 heading or table prints. Where the page names the last day of a month without
 a number, it states the year and month with the rule `last_day_of_month`, and
@@ -315,7 +325,9 @@ The catalog records each revision as a new interpretation version. Its
 `interpretation_review` gives the kind (`reviewed_reading_revision`,
 `reviewed_date_binding`, or `reviewed_edition_reading`), the previous and
 revised fields, date claims, or expression and value, and the printed label
-with the reason. The decisions and edition fingerprints stay in working
+with the reason. A revision that states a model gives `model_name`,
+`source_model_label`, and `source_model_attribution`, with the earlier values
+in `previous_model`. The decisions and edition fingerprints stay in working
 storage.
 
 `append --review` accepts either one reviewed JSON record or a nonempty list.

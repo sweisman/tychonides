@@ -1,5 +1,11 @@
 # Mercury and Venus parallax
 
+**In plain terms.** Tycho calculated how far parallax should lower Mercury and
+Venus in the sky. In March 1590 he tested it on Venus by comparing readings
+taken high and low, and found no drop he could detect. This page reproduces
+his numbers and shows what his readings can and cannot decide. The
+[plain-language guide](plain-language.md) explains the terms.
+
 Tycho calculated parallax corrections for both Mercury and Venus. For Venus he
 also made an observational test. In March 1590 he compared readings near the
 meridian with readings farther west and judged the parallax imperceptible. He

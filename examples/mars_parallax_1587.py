@@ -189,11 +189,11 @@ def of_date(direction, jd):
     return seen / np.linalg.norm(seen)
 
 
-def sidereal(jd):
-    """Local mean sidereal time at Uraniborg, in radians."""
+def sidereal(jd, east_longitude=mm.SITE_EAST_LONGITUDE):
+    """Local mean sidereal time in radians, at Uraniborg unless another longitude is given."""
     t = (jd - J2000) / 36525
     greenwich = 280.46061837 + 360.98564736629 * (jd - J2000) + 0.000387933 * t**2
-    return np.deg2rad((greenwich + mm.SITE_EAST_LONGITUDE) % 360)
+    return np.deg2rad((greenwich + east_longitude) % 360)
 
 
 def zenith(jd):
@@ -213,13 +213,17 @@ def tycho_table():
 
 
 def lifted(direction, jd, air):
-    """Direction after refraction raises it toward the zenith.
+    """Direction after refraction raises it toward the zenith of Uraniborg."""
+    return raised(direction, zenith(jd), air)
+
+
+def raised(direction, up, air):
+    """Direction after refraction raises it toward a zenith.
 
     `air` is a pressure and temperature for the modern formula, or a function
     that gives the refraction in arcseconds at an apparent altitude in degrees.
     """
     bend = air if callable(air) else lambda seen: float(bennett(seen, *air))
-    up = zenith(jd)
     true = np.arcsin(direction @ up)
     seen = true
     for _ in range(4):

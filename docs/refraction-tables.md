@@ -1,5 +1,15 @@
 # Historical refraction tables against modern refraction
 
+**In plain terms.** Air bends light, so everything near the horizon looks
+higher than it is. Tycho and Riccioli printed tables of how much to take off.
+This study sets those tables beside a modern formula. It also works out how
+the 3′ parallax Tycho assumed for the Sun relates to his solar table and to
+Riccioli’s. The [plain-language guide](plain-language.md) explains the terms.
+
+No observation enters this study. It compares printed tables with a formula.
+Whether the tables match the refraction Tycho observed is a separate question
+that needs his altitude readings.
+
 Tycho corrected his altitudes with printed refraction tables: one for the Sun
 and one for the fixed stars. Riccioli later printed tables for the Sun, the
 Moon, and the stars in three seasons. This study sets each table entry beside a
@@ -80,7 +90,7 @@ against the printed page.
 ## Inputs and reproduction
 
 The [selection script](../examples/refraction_select.py) reads
-[Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
+[Tychonides 1.4.0](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.4.0)
 and writes the [table entries](../examples/refraction-tables.csv) with their
 catalog identities. The [analysis script](../examples/refraction_tables.py)
 writes the [entry-by-entry comparison](figures/refraction-tables-comparison.csv),

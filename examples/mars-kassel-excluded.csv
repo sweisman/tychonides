@@ -1,0 +1,87 @@
+id,site,source_id,printed_page,julian_date,daypart,star,expression,clock_expression,reason
+assertion-v12-aafdab8116ea14aa0d91,Uraniborg,tycho-oo-12,286,1593-08-21,before_midnight,mouth of Pegasus,32° 59′,1^h^ 34½^m^,no timed reading of this star at the other site that night
+assertion-v12-ff0cd3686d0f977c23f2,Uraniborg,tycho-oo-12,286,1593-08-21,before_midnight,mouth of Pegasus,32° 59⅓′,1^h^ 20^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-6a85ce196a0b3cfd6dfe,Kassel,snellius-observationes-hassiacae,34,1593-08-22,,mouth of Pegasus,32° 49′,,no exact printed clock
+assertion-ssnellius-observationes-hassiacae-6b61b98c30e94bc3c87b,Kassel,snellius-observationes-hassiacae,34,1593-08-22,,mouth of Pegasus,the same,,no exact printed clock
+assertion-ssnellius-observationes-hassiacae-f06034336cfee50eed31,Kassel,snellius-observationes-hassiacae,34,1593-08-22,,mouth of Pegasus,32° 48′,,no exact printed clock
+assertion-ssnellius-observationes-hassiacae-f96f74e773b71fbc0930,Kassel,snellius-observationes-hassiacae,35,1593-08-22,before_noon,third star of Aries,51° 17′,3^h^,hour labeled before noon or after midnight: its day is open
+assertion-v12-2f078cb7455bd72c049c,Uraniborg,tycho-oo-12,288,1593-08-23,evening,left shoulder of Aquarius,29° 9′,10^h^ 54⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-32c19bb7d907f2ddae78,Uraniborg,tycho-oo-12,288,1593-08-23,evening,bright star of Aries,51° 28′,11^h^ 20^m^,no timed reading of this star at the other site that night
+assertion-v12-4325576f211966a64a6a,Uraniborg,tycho-oo-12,288,1593-08-23,evening,bright star of Aries,51° 28½′,11^h^ 39^m^,no timed reading of this star at the other site that night
+assertion-v12-4ed11a5ae41d6475404e,Uraniborg,tycho-oo-12,288,1593-08-23,evening,left shoulder of Aquarius,29° 9¼′,11^h^ 8⅓^m^,no timed reading of this star at the other site that night
+assertion-v12-77eae0b6bda55e41dafb,Uraniborg,tycho-oo-12,288,1593-08-23,evening,bright star of Aries,51° 27⅚′,11^h^ 33⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-9fe97d65b62115bdc419,Uraniborg,tycho-oo-12,288,1593-08-23,evening,mouth of Pegasus,32° 39⅙′,12^h^ 28½^m^,no timed reading of this star at the other site that night
+assertion-v12-a04bf35a5318bfd73404,Uraniborg,tycho-oo-12,288,1593-08-23,evening,mouth of Pegasus,32° 38⅚′,12^h^ 43^m^,no timed reading of this star at the other site that night
+assertion-v12-f222aa147c0173c8a471,Uraniborg,tycho-oo-12,288,1593-08-23,evening,left shoulder of Aquarius,29° 8⅚′,11^h^ 5¾^m^,no timed reading of this star at the other site that night
+assertion-v12-f67fa7ae718f34514f8e,Uraniborg,tycho-oo-12,288,1593-08-23,evening,mouth of Pegasus,32° 39⅙′,12^h^ 46⅙^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-17c5913956c282a8b5ae,Kassel,snellius-observationes-hassiacae,35,1593-08-24,after_noon,mouth of Pegasus,32° 30′,,no exact printed clock
+assertion-ssnellius-observationes-hassiacae-d6dc3d4dd81faf2fdeb7,Kassel,snellius-observationes-hassiacae,35,1593-08-24,after_noon,mouth of Pegasus,32° 29′,,no exact printed clock
+assertion-ssnellius-observationes-hassiacae-707e0f4574c961b3db24,Kassel,snellius-observationes-hassiacae,35,1593-08-28,after_noon,third star of Aries,52° 44′,9^h^,no timed reading of this star at the other site that night
+assertion-v12-08d22463753980f71b5e,Uraniborg,tycho-oo-12,289,1593-08-29,evening,bright star of Aries,52° 55¾′,10^h^ 33½^m^,no timed reading of this star at the other site that night
+assertion-v12-15c854e48ac1a9390dfc,Uraniborg,tycho-oo-12,289,1593-08-29,evening,bright star of Aries,52° 56⅓′,11^h^ 8⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-327fb34bfbd65a6a9bd7,Uraniborg,tycho-oo-12,289,1593-08-29,evening,bright star of Aries,52° 56⅔′,10^h^ 39⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-aa992dcf1156d0987f70,Uraniborg,tycho-oo-12,289,1593-08-29,evening,bright star of Aries,52° 56¾′,10^h^ 48^m^,no timed reading of this star at the other site that night
+assertion-v12-0f75261a764dc5034cb5,Uraniborg,tycho-oo-12,295,1593-12-01,evening,bright star of Aries,33° 38½′,7^h^ 39^m^ 50^s^,no timed reading of this star at the other site that night
+assertion-v12-24969328b13bcfb99c1a,Uraniborg,tycho-oo-12,295,1593-12-01,evening,bright star of Aries,33° 39′,7^h^ 50^m^ 30^s^,no timed reading of this star at the other site that night
+assertion-v12-afe9c6337a85b05ccb7b,Uraniborg,tycho-oo-12,295,1593-12-01,evening,bright star of Aries,33° 38⅚′,8^h^ 0^m^ 10^s^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-8a73113bfe31ca7b9497,Kassel,snellius-observationes-hassiacae,36,1593-12-02,after_noon,third star of Aries,21° … 26¼′,8^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-a479558f08e57a02f558,Kassel,snellius-observationes-hassiacae,36,1593-12-02,after_noon,third star of Aries,21° 26′,8^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-ba75c084bd6af1bde78b,Kassel,snellius-observationes-hassiacae,36,1593-12-02,after_noon,third star of Aries,21° … 26¼′,8^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-b007ea0b782bc126d05d,Kassel,snellius-observationes-hassiacae,37,1594-01-02,,eye of Taurus,46° 28′,8^h^,no timed reading of this star at the other site that night
+assertion-v12-3afa50c27916a869b870,Uraniborg,tycho-oo-12,346,1594-01-03,evening,Aldebaran,45° 51′,6^h^ 15½^m^,no timed reading of this star at the other site that night
+assertion-v12-40245db601174cb94705,Uraniborg,tycho-oo-12,346,1594-01-03,evening,Aldebaran,45° 20½′,6^h^ 30½^m^,no timed reading of this star at the other site that night
+assertion-v12-9da0a00d572a05d1a225,Uraniborg,tycho-oo-12,346,1594-01-03,evening,Aldebaran,45° 51⅔′,6^h^ 20^m^,no timed reading of this star at the other site that night
+assertion-v12-ebbb6a2b011fcf1ada19,Uraniborg,tycho-oo-12,346,1594-01-03,evening,Aldebaran,45° 50⅚′,6^h^ 25^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-642dc49c97a4171dfb99,Kassel,snellius-observationes-hassiacae,50,1595-07-21,,eye of Taurus,30° 36′,3^h^,hour falls in daylight and its entry has no evening hour
+assertion-ssnellius-observationes-hassiacae-44ba61538ea3d151d88f,Kassel,snellius-observationes-hassiacae,51,1595-07-22,,eye of Taurus,30° 2′,2^h^,hour falls in daylight and its entry has no evening hour
+assertion-v12-eeda3e9543a2b64e5c79,Uraniborg,tycho-oo-12,441,1595-07-22,morning,eye of Taurus,29° 58½′,2^h^ 43⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-f32941da65888994d39a,Uraniborg,tycho-oo-12,441,1595-07-22,morning,eye of Taurus,29° 58½′,2^h^ 41⅔^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-e58a987034e789620785,Kassel,snellius-observationes-hassiacae,52,1595-09-07,after_noon,eye of Taurus,10° 9′,,no exact printed clock
+assertion-v12-19fbdc7fa523a348a38a,Uraniborg,tycho-oo-12,442,1595-09-07,morning,eye of Taurus,10° 17′,3^h^ 22⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-4aef31b6692df8ffeb61,Uraniborg,tycho-oo-12,442,1595-09-07,morning,eye of Taurus,10° 16½′,3^h^ 19^m^,no timed reading of this star at the other site that night
+assertion-v12-6ab8d3aa6c59676ec258,Uraniborg,tycho-oo-12,442,1595-09-07,morning,eye of Taurus,10° 16′,3^h^ 15⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-a54a83701fdb96f3bcfd,Uraniborg,tycho-oo-12,442,1595-09-07,morning,eye of Taurus,10° 15½′,3^h^ 13½^m^,no timed reading of this star at the other site that night
+assertion-v12-466207d735d0f3fb810a,Uraniborg,tycho-oo-12,443,1595-09-10,morning,eye of Taurus,9° 43⅓′,2^h^ 56½^m^,no timed reading of this star at the other site that night
+assertion-v12-7356b879af685275191d,Uraniborg,tycho-oo-12,443,1595-09-10,morning,eye of Taurus,9° 43′,2^h^ 54⅙^m^,no timed reading of this star at the other site that night
+assertion-v12-7f710b52f2a4240948fc,Uraniborg,tycho-oo-12,443,1595-09-10,morning,eye of Taurus,9° 43⅓′,2^h^ 58⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-81065d50e6143e76042f,Uraniborg,tycho-oo-12,443,1595-09-10,morning,eye of Taurus,9° 43½′,2^h^ 49⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-2dc9a6b69f2fd35386c1,Uraniborg,tycho-oo-12,443,1595-09-11,morning,eye of Taurus,16° 33′,3^h^ 34^m^,no timed reading of this star at the other site that night
+assertion-v12-4ad0e23bc4118d50b2ee,Uraniborg,tycho-oo-12,443,1595-09-11,morning,eye of Taurus,16° 32½′,3^h^ 25^m^,no timed reading of this star at the other site that night
+assertion-v12-6c04afe48422b0dbfddd,Uraniborg,tycho-oo-12,443,1595-09-11,morning,eye of Taurus,16° 32⅔′,3^h^ 32⅙^m^,no timed reading of this star at the other site that night
+assertion-v12-bafc8a7ecc61a47a5a06,Uraniborg,tycho-oo-12,443,1595-09-11,morning,eye of Taurus,16° 32⅔′,3^h^ 27⅙^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-547a2212ec67eeeb3c6a,Kassel,snellius-observationes-hassiacae,53,1595-10-15,before_noon,eye of Taurus,11° 52′,4½^h^,hour labeled before noon or after midnight: its day is open
+assertion-ssnellius-observationes-hassiacae-0d3ca42f78700594acdb,Kassel,snellius-observationes-hassiacae,53,1595-10-16,after_noon,third star of Aries,23° 11′,9^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-9825a5f52722aa48fbd0,Kassel,snellius-observationes-hassiacae,53,1595-10-16,after_noon,eye of Taurus,12° 21½′,9^h^,no timed reading of this star at the other site that night
+assertion-v12-374706c4886c1f76c821,Uraniborg,tycho-oo-12,448,1595-10-26,evening,Aldebaran,15° 43′,8^h^ 28^m^,no timed reading of this star at the other site that night
+assertion-v12-53e23954619b69eb4664,Uraniborg,tycho-oo-12,448,1595-10-26,evening,Aldebaran,15° 38½′,7^h^ 25^m^,no timed reading of this star at the other site that night
+assertion-v12-782f438dc039e8fd9690,Uraniborg,tycho-oo-12,448,1595-10-26,evening,Aldebaran,15° 42½′,8^h^ 18⅖^m^,no timed reading of this star at the other site that night
+assertion-v12-c13c6a4359c3613b75b9,Uraniborg,tycho-oo-12,448,1595-10-26,evening,Aldebaran,15° 43⅓′,8^h^ 33⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-c2575844604b19992397,Uraniborg,tycho-oo-12,448,1595-10-26,evening,Aldebaran,15° 43′,8^h^ 22⅖^m^,no timed reading of this star at the other site that night
+assertion-v12-1e623c892c4a0d6cafd0,Uraniborg,tycho-oo-12,449,1595-10-26,evening,Aldebaran,15° 51⅓′,11^h^ 17^m^,no timed reading of this star at the other site that night
+assertion-v12-51871a2932f5c5d77d62,Uraniborg,tycho-oo-12,449,1595-10-26,evening,Aldebaran,15° 51′,11^h^ 14⅓^m^,no timed reading of this star at the other site that night
+assertion-v12-985544389f7302a4311c,Uraniborg,tycho-oo-12,449,1595-10-26,evening,Aldebaran,15° 50⅔′,11^h^ 13^m^,no timed reading of this star at the other site that night
+assertion-v12-9d40f69b3185a335246f,Uraniborg,tycho-oo-12,449,1595-10-26,evening,Aldebaran,15° 50½′,11^h^ 9^m^,no timed reading of this star at the other site that night
+assertion-v12-246540f470285c986fba,Uraniborg,tycho-oo-12,449,1595-10-27,morning,Aldebaran,15° 54′,6^h^ 49^m^,no timed reading of this star at the other site that night
+assertion-v12-3da9f40387b74475f492,Uraniborg,tycho-oo-12,449,1595-10-27,morning,Aldebaran,15° 52½′,6^h^ 53⅙^m^,no timed reading of this star at the other site that night
+assertion-v12-bfeeafa34b4d2c2c53a4,Uraniborg,tycho-oo-12,449,1595-10-27,morning,Aldebaran,15° 53⅓′,6^h^ 56⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-08c57d648ca5ee47a9d2,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Aldebaran,17° 12⅔′ twice,8^h^ 4⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-18c937721f44ac994d90,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Aldebaran,17° 12⅔′,8^h^ 18⅙^m^,no timed reading of this star at the other site that night
+assertion-v12-4931b236b9cf9e1edcbe,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Aldebaran,17° 12½′,8^h^ 8½^m^,no timed reading of this star at the other site that night
+assertion-v12-4e093defe1aa9284eb47,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Capella,35° 48⅙′,7^h^ 43^m^,no timed reading of this star at the other site that night
+assertion-v12-772170afbc2046f86990,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Capella,35° 47½′,7^h^ 50⅚^m^,no timed reading of this star at the other site that night
+assertion-v12-af7ac2264596a40d9cbc,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Capella,35° 47′,7^h^ 46½^m^,no timed reading of this star at the other site that night
+assertion-v12-d20b13dc93e0117802b2,Uraniborg,tycho-oo-12,452,1595-10-30,evening,Capella,35° 45¾′,7^h^ 56½^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-40339a6c3da876566c2b,Kassel,snellius-observationes-hassiacae,54,1595-10-31,after_noon,Capella,36° 5′,9^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-84e2fbb14eb98e05ce79,Kassel,snellius-observationes-hassiacae,54,1595-10-31,after_noon,eye of Taurus,17° 38½′,9^h^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-14ba41874bd55c87ef22,Kassel,snellius-observationes-hassiacae,55,1595-11-20,,eye of Taurus,23° 27′,9^h^,no timed reading of this star at the other site that night
+assertion-v12-0b0fc0d7cf4abf51d275,Uraniborg,tycho-oo-12,456,1595-11-21,evening,eye of Taurus,23° 37′ nearly,10^h^ 6⅔^m^,no timed reading of this star at the other site that night
+assertion-v12-b7698fd1c63aab2491cd,Uraniborg,tycho-oo-12,456,1595-11-21,evening,eye of Taurus,23° 37½′,10^h^ 9^m^,no timed reading of this star at the other site that night
+assertion-v12-c734ca41607af84bf75e,Uraniborg,tycho-oo-12,456,1595-11-21,evening,eye of Taurus,23° 37⅙′,10^h^ 5⅓^m^,no timed reading of this star at the other site that night
+assertion-v12-8ec7d25fa058ca7cb611,Uraniborg,tycho-oo-12,460,1595-12-23,evening,Aldebaran,22° 38½′,7^h^ 48⅙^m^,no timed reading of this star at the other site that night
+assertion-v12-9de4c75b5cf881053041,Uraniborg,tycho-oo-12,460,1595-12-23,evening,Aldebaran,22° 38½′,7^h^ 45½^m^,no timed reading of this star at the other site that night
+assertion-v12-eb1738f8b8e7ce987ea9,Uraniborg,tycho-oo-12,460,1595-12-23,evening,Aldebaran,22° 38⅓′,7^h^ 34½^m^,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-cd7b0a976a6efb0c9b8b,Kassel,snellius-observationes-hassiacae,56,1595-12-24,after_noon,eye of Taurus,22° 26′,7^h^,no timed reading of this star at the other site that night
+assertion-v13-23d07ffe869e5e20a384,Uraniborg,tycho-oo-13,44,1596-01-16,evening,eye of Taurus,15 45,6 33⅙,no timed reading of this star at the other site that night
+assertion-v13-3736f79fafb46342066a,Uraniborg,tycho-oo-13,44,1596-01-16,evening,eye of Taurus,15 45⅙,6 34,no timed reading of this star at the other site that night
+assertion-v13-ccd94132eccee4f10b86,Uraniborg,tycho-oo-13,44,1596-01-16,evening,eye of Taurus,15 45,6 31,no timed reading of this star at the other site that night
+assertion-ssnellius-observationes-hassiacae-9f9135957900de4b739c,Kassel,snellius-observationes-hassiacae,57,1596-01-17,,eye of Taurus,15° 22½′,7^h^,no timed reading of this star at the other site that night

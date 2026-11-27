@@ -54,18 +54,43 @@ assertion-v11-21e6b5c47a850a9e4d4c,tycho-oo-11,162,Moon,ecliptic_latitude,Alphon
 assertion-v11-d94ee81cc7ddfdebedaf,tycho-oo-11,162,Moon,ecliptic_latitude,Prutenic,1587-08-18,main,,printed direction,-4.991667,0,0,,,"not compared, no printed hour",1.5,,,
 assertion-v11-1b4e385871d6792febb7,tycho-oo-11,162,Moon,ecliptic_longitude,Alphonsine,1587-08-18,main,,printed sign,87.100000,0,0,,,"not compared, no printed hour",373.2,,,
 assertion-v11-77d8e1a19c5cb663acba,tycho-oo-11,162,Moon,ecliptic_longitude,Prutenic,1587-08-18,main,,printed sign,86.700000,0,0,,,"not compared, no printed hour",373.2,,,
+assertion-v11-69e7a734d0dc1b569f15,tycho-oo-11,265,Moon,ecliptic_longitude,"Prutenic, corrected",1588-02-25,main,,within the sign,1.873889,1,0,,,"not compared, no printed hour",360.7,,,
+assertion-v11-a086de498d1e82d2528f,tycho-oo-11,266,Moon,ecliptic_longitude,"Prutenic, corrected",1588-02-27,main,,within the sign,27.793056,1,0,,,"not compared, no printed hour",373.8,,,
+assertion-v12-a01493e17b48f766f360,tycho-oo-12,20,Moon,ecliptic_latitude,Leovitius,1590-12-28,main,,printed direction,-2.475000,0,0,,,"not compared, no printed hour",31.2,,,
+assertion-v12-e1389c4cc39c070bd1c6,tycho-oo-12,20,Moon,ecliptic_longitude,Leovitius,1590-12-28,main,,printed sign,84.755556,0,0,,,"not compared, no printed hour",403.0,,,
+assertion-v12-09e8e8a5a6e5cbb1ea59,tycho-oo-12,20,Moon,ecliptic_longitude,Maestlin,1590-12-28,main,,printed sign,84.922222,0,0,,,"not compared, no printed hour",403.0,,,
+assertion-v12-fbda8f70c455e6393c90,tycho-oo-12,119,Moon,ecliptic_longitude,Prutenic,1591-01-05,main,,within the sign,25.996667,0,0,,,"not compared, no printed hour",355.9,,,
 assertion-v12-7439b5d9874955deb17f,tycho-oo-12,126,Moon,ecliptic_latitude,Alphonsine,1591-12-16,main,,printed direction,-3.666667,2,0,,,"not compared, no printed hour",26.6,,,
 assertion-v12-15857b7cbc2f1ea494e4,tycho-oo-12,126,Moon,ecliptic_longitude,Alphonsine,1591-12-16,main,,printed sign,48.533333,1,0,,,"not compared, no printed hour",439.5,,,
+assertion-v12-89e63b44126212e20548,tycho-oo-12,206,Moon,ecliptic_longitude,Prutenic,1592-08-21,main,,within the sign,24.747222,0,0,,,"not compared, no printed hour",422.7,,,
 assertion-v12-aa50507f429d96651176,tycho-oo-12,271,Moon,ecliptic_latitude,Alphonsine,1593-03-15,main,,printed direction,0.166667,0,0,,,"not compared, no printed hour",27.0,,,
 assertion-v12-0c87873492f55b11eda4,tycho-oo-12,271,Moon,ecliptic_longitude,Alphonsine,1593-03-15,main,,printed sign,288.650000,0,0,,,"not compared, no printed hour",355.4,,,
+assertion-v11-7da6ba3be5d473b25d35,tycho-oo-11,77,Mercury,ecliptic_longitude,Prutenic,1586-01-23,main,,printed sign,330.666667,2,0,329.825000,331.207448,nominal noon,37.8,50.50,-32.45,-82.95
+assertion-v11-d17d49bfadbae0c190b3,tycho-oo-11,77,Mercury,ecliptic_longitude,Prutenic,1586-01-23,main,,printed sign,329.550000,2,0,329.825000,331.207448,nominal noon,37.8,-16.50,-99.45,-82.95
 assertion-v11-ff6b46f49668c4da047b,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1586-10-25,main,,printed direction,1.733333,0,0,,2.253008,"nominal noon, no log value",1.1,,-31.18,
 assertion-v11-28ea39b208eda01ba35b,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1586-10-25,main,,printed direction,0.816667,0,0,,2.253008,"nominal noon, no log value",1.1,,-86.18,
+assertion-v11-5ab1853675e280ce7bd1,tycho-oo-11,80,Mercury,ecliptic_longitude,Alphonsine,1586-10-25,main,,printed sign,205.616667,5,0,202.631944,202.844389,nominal noon,25.4,179.08,166.34,-12.75
 assertion-v11-f5bf99e9f99d52ab12ec,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-25,main,,printed sign,205.619444,5,0,202.631944,202.844389,nominal noon,25.4,179.25,166.50,-12.75
+assertion-v11-689a8124324bed484aae,tycho-oo-11,87,Mercury,ecliptic_longitude,Leovitius,1586-10-25,main,,printed sign,205.616667,5,0,202.631944,202.844389,nominal noon,25.4,179.08,166.34,-12.75
+assertion-v11-fdaa6dc4c163f50bbf89,tycho-oo-11,87,Mercury,ecliptic_longitude,Maestlin,1586-10-25,main,,printed sign,204.491667,5,0,202.631944,202.844389,nominal noon,25.4,111.58,98.84,-12.75
+assertion-v11-4d3dff8375b4791b3a8f,tycho-oo-11,80,Mercury,ecliptic_longitude,Prutenic,1586-10-25,main,,printed sign,204.500000,5,0,202.631944,202.844389,nominal noon,25.4,112.08,99.34,-12.75
 assertion-v11-c01383eefad8ae8d8645,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-25,main,,printed sign,204.491667,5,0,202.631944,202.844389,nominal noon,25.4,111.58,98.84,-12.75
 assertion-v11-01f3f1d1d798539d815f,tycho-oo-11,79,Mercury,ecliptic_latitude,Alphonsine,1586-10-29,main,,printed direction,1.766667,0,0,,2.266588,"nominal noon, no log value",1.0,,-30.00,
 assertion-v11-19bd915c6fc851454c93,tycho-oo-11,79,Mercury,ecliptic_latitude,Prutenic,1586-10-29,main,,printed direction,1.108333,0,0,,2.266588,"nominal noon, no log value",1.0,,-69.50,
 assertion-v11-2e362f95fce9d8bbbe5f,tycho-oo-11,79,Mercury,ecliptic_longitude,Alphonsine,1586-10-29,main,,printed sign,207.650000,6,0,206.639630,206.917234,nominal noon,36.1,60.62,43.97,-16.66
+assertion-v11-9727a410d2f74196c878,tycho-oo-11,80,Mercury,ecliptic_longitude,Alphonsine,1586-10-29,main,,printed sign,207.650000,6,0,206.639630,206.917234,nominal noon,36.1,60.62,43.97,-16.66
 assertion-v11-0d2d9a465848d0d09af2,tycho-oo-11,79,Mercury,ecliptic_longitude,Prutenic,1586-10-29,main,,printed sign,208.250000,6,0,206.639630,206.917234,nominal noon,36.1,96.62,79.97,-16.66
+assertion-v11-5e787f46aec37896646c,tycho-oo-11,80,Mercury,ecliptic_longitude,Prutenic,1586-10-29,main,,printed sign,208.250000,6,0,206.639630,206.917234,nominal noon,36.1,96.62,79.97,-16.66
+assertion-v11-aa38b6c48df1328da447,tycho-oo-11,87,Mercury,ecliptic_longitude,Maestlin,1586-10-31,main,,printed sign,210.333333,1,0,209.169444,209.410745,nominal noon,39.4,69.83,55.36,-14.48
+assertion-v11-05ba34e843624e8d7f1b,tycho-oo-11,87,Mercury,ecliptic_longitude,Leovitius,1586-11-02,main,,printed sign,210.838889,2,0,211.802083,212.103512,nominal noon,41.8,-57.79,-75.88,-18.09
+assertion-v11-58100590f2f74b66140f,tycho-oo-11,293,Mercury,ecliptic_latitude,Leovitius,1588-04-11,main,,printed direction,1.750000,0,0,,2.633144,"nominal noon, no log value",1.6,,-52.99,
+assertion-v11-275d434e928a6a9e63d2,tycho-oo-11,293,Mercury,ecliptic_latitude,Maestlin,1588-04-11,main,,printed direction,2.100000,0,0,,2.633144,"nominal noon, no log value",1.6,,-31.99,
+assertion-v11-863a001ff079ffdeffaf,tycho-oo-11,293,Mercury,ecliptic_longitude,Leovitius,1588-04-11,main,,printed sign,51.083333,1,0,50.225000,51.666934,nominal noon,34.6,51.50,-35.02,-86.52
+assertion-v11-07470a6d27d1f3a74e89,tycho-oo-11,293,Mercury,ecliptic_longitude,Maestlin,1588-04-11,main,,printed sign,51.350000,1,0,50.225000,51.666934,nominal noon,34.6,67.50,-19.02,-86.52
+assertion-v11-ed0c5162bdc50190cdc0,tycho-oo-11,339,Mercury,ecliptic_longitude,Leovitius,1589-03-24,main,,printed sign,32.050000,1,0,33.078333,32.547252,nominal noon,37.0,-61.70,-29.84,31.86
+assertion-v11-d416539a40f7c2877b76,tycho-oo-11,339,Mercury,ecliptic_longitude,Maestlin,1589-03-24,main,,printed sign,32.750000,1,0,33.078333,32.547252,nominal noon,37.0,-19.70,12.16,31.86
+assertion-v12-ae31f5f84a3431b49425,tycho-oo-12,161,Mercury,ecliptic_longitude,Alphonsine,1591-02-20,main,,printed sign,0.233333,1,0,359.835556,359.479471,nominal noon,33.2,23.87,45.23,21.37
+assertion-v12-5601d176dd82e8f60b6f,tycho-oo-12,161,Mercury,ecliptic_longitude,Copernicus,1591-02-20,main,,printed sign,0.116667,1,0,359.835556,359.479471,nominal noon,33.2,16.87,38.23,21.37
 assertion-v12-14eac99adcc0cfa014c5,tycho-oo-12,225,Mercury,ecliptic_latitude,Alphonsine,1592-02-03,main,,printed direction,0.850000,3,3,0.802500,0.799119,printed hours,7.4,2.85,3.05,0.20
 assertion-v12-225254fb4af84bf03211,tycho-oo-12,225,Mercury,ecliptic_latitude,Copernicus,1592-02-03,main,,printed direction,0.966667,3,3,0.802500,0.799119,printed hours,7.4,9.85,10.05,0.20
 assertion-v12-0049da56e54fe3620949,tycho-oo-12,225,Mercury,ecliptic_longitude,Alphonsine,1592-02-03,main,,within the sign,12.833333,3,3,342.308426,342.257960,printed hours,35.2,31.49,34.52,3.03
@@ -74,6 +99,8 @@ assertion-v12-f843ed602edcdd7a3f6e,tycho-oo-12,226,Mercury,ecliptic_latitude,Alp
 assertion-v12-33d5b2848bef0341f870,tycho-oo-12,226,Mercury,ecliptic_latitude,Copernicus,1592-02-06,main,,printed direction,1.500000,2,2,1.590278,1.560622,printed hours,7.7,-5.42,-3.64,1.78
 assertion-v12-3ff62641a2e4814d8e54,tycho-oo-12,226,Mercury,ecliptic_longitude,Alphonsine,1592-02-06,main,,within the sign,16.716667,3,3,345.339352,345.256480,printed hours,24.0,82.64,87.61,4.97
 assertion-v12-36ba311dcdbfd175bcd6,tycho-oo-12,226,Mercury,ecliptic_longitude,Copernicus,1592-02-06,main,,within the sign,15.112500,3,3,345.339352,345.256480,printed hours,24.0,-13.61,-8.64,4.97
+assertion-v12-7c427d11871331c0363f,tycho-oo-12,479,Mercury,ecliptic_latitude,Alphonsine,1595-04-11,main,,printed direction,2.000000,0,0,,2.831730,"nominal noon, no log value",0.9,,-49.90,
+assertion-v12-7e38c5669cbc830a05a3,tycho-oo-12,479,Mercury,ecliptic_latitude,Copernicus,1595-04-11,main,,printed direction,2.750000,0,0,,2.831730,"nominal noon, no log value",0.9,,-4.90,
 assertion-v10-3735277775594624121f,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,1564-05-01,main,,printed sign,84.050000,1,0,85.000000,83.244768,nominal noon,35.7,-57.00,48.31,105.31
 assertion-v10-6c0b0f31b092bc698923,tycho-oo-10,5,Venus,ecliptic_longitude,Stadius,1564-05-01,main,,printed sign,82.900000,1,0,85.000000,83.244768,nominal noon,35.7,-126.00,-20.69,105.31
 assertion-v10-efa55a333e8ac8ef6461,tycho-oo-10,5,Venus,ecliptic_longitude,Carelli,1564-05-02,main,,printed sign,85.216667,0,0,,84.435649,"nominal noon, no log value",35.7,,46.86,
@@ -83,9 +110,14 @@ assertion-v12-4ff112c28134f74ab973,tycho-oo-12,71,Venus,ecliptic_latitude,Copern
 assertion-v12-0d97890b3123b9d5449a,tycho-oo-12,71,Venus,ecliptic_longitude,Alphonsine,1590-09-01,main,,printed sign,127.833333,0,0,,127.887125,"nominal noon, no log value",34.7,,-3.23,
 assertion-v12-41177551d2f2475b3c5a,tycho-oo-12,71,Venus,ecliptic_longitude,Copernicus,1590-09-01,main,,printed sign,127.000000,0,0,,127.887125,"nominal noon, no log value",34.7,,-53.23,
 assertion-v12-298a9f0f5f8510f316ea,tycho-oo-12,153,Venus,ecliptic_latitude,Alphonsine,1591-09-27,main,,printed direction,-2.283333,4,1,-3.408403,-3.524207,calculation hour,1.8,67.50,74.45,6.95
+assertion-v12-8b4fb2d91950d861642f,tycho-oo-12,156,Venus,ecliptic_latitude,Alphonsine,1591-09-27,main,,printed direction,-2.283333,4,1,-3.408403,-3.512437,nominal noon,1.8,67.50,73.75,6.24
+assertion-v12-da461729cfff6b148214,tycho-oo-12,156,Venus,ecliptic_latitude,Copernicus,1591-09-27,main,,printed direction,-2.716667,4,1,-3.408403,-3.512437,nominal noon,1.8,41.50,47.75,6.24
 assertion-v12-e0a9c6587c151cc9553f,tycho-oo-12,153,Venus,ecliptic_latitude,Copernicus,1591-09-27,main,,printed direction,-0.716667,4,1,-3.408403,-3.524207,calculation hour,1.8,161.50,168.45,6.95
 assertion-v12-226fa142082840bd215c,tycho-oo-12,153,Venus,ecliptic_longitude,Alphonsine,1591-09-27,main,,printed sign,240.000000,1,1,240.528611,240.587901,printed hours,30.0,-31.72,-35.27,-3.56
 assertion-v12-090b65693f35efb478c3,tycho-oo-12,153,Venus,ecliptic_longitude,Copernicus,1591-09-27,main,,printed sign,240.008333,1,1,240.528611,240.587901,printed hours,30.0,-31.22,-34.77,-3.56
+assertion-v12-d11bdb0a893ae0128d96,tycho-oo-12,474,Venus,ecliptic_latitude,Alphonsine,1595-09-22,main,,printed direction,0.916667,0,0,,1.444535,"nominal noon, no log value",0.3,,-31.67,
+assertion-v12-e079a998e4efbd8dfc92,tycho-oo-12,474,Venus,ecliptic_latitude,Copernicus,1595-09-22,main,,printed direction,1.116667,0,0,,1.444535,"nominal noon, no log value",0.3,,-19.67,
+assertion-v12-55e984e42fdf25b9703a,tycho-oo-12,474,Venus,ecliptic_longitude,Alphonsine,1595-09-22,main,,printed sign,169.650000,0,0,,169.984507,"nominal noon, no log value",37.3,,-20.07,
 assertion-v10-1296401d0ea5dc4377a3,tycho-oo-10,4,Mars,ecliptic_latitude,Alphonsine,1563-09-20,away from opposition,,printed direction,-1.500000,0,0,,-2.506989,"nominal noon, no log value",1.0,,60.42,
 assertion-v10-3d9e9e970432b8d79d78,tycho-oo-10,4,Mars,ecliptic_longitude,Alphonsine,1563-09-20,away from opposition,,printed sign,42.666667,0,0,,42.984284,"nominal noon, no log value",3.5,,-19.06,
 assertion-v10-5331823e16bf7f80a20c,tycho-oo-10,5,Mars,ecliptic_longitude,Carelli,1564-04-15,away from opposition,,printed sign,91.916667,0,0,,92.921095,"nominal noon, no log value",17.7,,-60.27,
@@ -440,6 +472,7 @@ assertion-v11-4483f8c44edf7868f595,tycho-oo-11,54,Jupiter,ecliptic_longitude,Cop
 assertion-v11-ed1c6712a1509edebc23,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1589-01-30,main,,printed direction,1.666667,1,0,1.469444,1.443910,nominal noon,0.1,11.83,13.37,1.53
 assertion-v11-2a33627370d0041fd212,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1589-01-30,main,,printed direction,1.400000,1,0,1.469444,1.443910,nominal noon,0.1,-4.17,-2.63,1.53
 assertion-v11-b743c732cd8573207d9a,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,1589-01-30,main,,printed sign,164.233333,1,0,165.718611,165.678136,nominal noon,3.3,-89.12,-86.69,2.43
+assertion-v11-bf8a56c3802e0e44fdb4,tycho-oo-11,329,Jupiter,ecliptic_longitude,Prutenic,1589-01-30,main,,within the sign,15.783333,1,0,165.718611,165.678136,nominal noon,3.3,3.88,6.31,2.43
 assertion-v11-bd06e1dfd1cf1a3967da,tycho-oo-11,329,Jupiter,ecliptic_latitude,Alphonsine,1589-02-21,main,,printed direction,1.716667,2,0,1.501528,1.489590,nominal noon,0.0,12.91,13.62,0.72
 assertion-v11-44695b260556ee1f977d,tycho-oo-11,329,Jupiter,ecliptic_latitude,Prutenic,1589-02-21,main,,printed direction,1.500000,2,0,1.501528,1.489590,nominal noon,0.0,-0.09,0.62,0.72
 assertion-v11-6edd4f766b76b801157c,tycho-oo-11,329,Jupiter,ecliptic_longitude,Alphonsine,1589-02-21,main,,printed sign,161.583333,2,0,163.033056,162.977227,nominal noon,3.9,-86.98,-83.63,3.35
@@ -449,10 +482,20 @@ assertion-v12-14d96569b6e7a0a8f3ec,tycho-oo-12,280,Jupiter,ecliptic_latitude,Alp
 assertion-v12-de5b90554232a6a558e7,tycho-oo-12,280,Jupiter,ecliptic_latitude,Copernicus,1593-06-29,main,,printed direction,0.350000,3,2,-0.265741,-0.316673,calculation hour,0.1,36.94,40.00,3.06
 assertion-v12-6a4a76f1bcc14d8fbc84,tycho-oo-12,280,Jupiter,ecliptic_longitude,Alphonsine,1593-06-29,main,,printed sign,286.566667,1,1,287.383333,287.384178,printed hours,3.9,-49.00,-49.05,-0.05
 assertion-v12-d3f87c4db5320305eaf6,tycho-oo-12,280,Jupiter,ecliptic_longitude,Copernicus,1593-06-29,main,,printed sign,287.566667,1,1,287.383333,287.384178,printed hours,3.9,11.00,10.95,-0.05
+assertion-v12-6f8a1c293776d920124e,tycho-oo-12,341,Jupiter,ecliptic_latitude,Alphonsine,1594-10-28,main,,printed direction,-1.166667,0,0,,-1.102328,"nominal noon, no log value",0.1,,-3.86,
+assertion-v12-7d265432d212db91097b,tycho-oo-12,341,Jupiter,ecliptic_latitude,Copernicus,1594-10-28,main,,printed direction,-0.883333,0,0,,-1.102328,"nominal noon, no log value",0.1,,13.14,
+assertion-v12-27fc3e2e6e5f429f3e8f,tycho-oo-12,341,Jupiter,ecliptic_longitude,Alphonsine,1594-10-28,main,,printed sign,318.750000,0,0,,318.506956,"nominal noon, no log value",2.4,,14.58,
+assertion-v12-896390199b862fcf9a51,tycho-oo-12,341,Jupiter,ecliptic_longitude,Copernicus,1594-10-28,main,,printed sign,318.533333,0,0,,318.506956,"nominal noon, no log value",2.4,,1.58,
 assertion-v10-b9100569a07dbc427e0e,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,1564-05-01,main,,printed sign,119.883333,1,0,120.000000,118.224400,nominal noon,2.2,-7.00,99.54,106.54
 assertion-v10-3a75a975d07653bbb3f8,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,1564-05-01,main,,printed sign,117.600000,1,0,120.000000,118.224400,nominal noon,2.2,-144.00,-37.46,106.54
 assertion-v10-8157c55e238f71275575,tycho-oo-10,5,Saturn,ecliptic_longitude,Carelli,1564-05-02,main,,printed sign,119.966667,0,0,,118.298341,"nominal noon, no log value",2.2,,100.10,
 assertion-v10-a4ca673ab6294fc487c0,tycho-oo-10,5,Saturn,ecliptic_longitude,Stadius,1564-05-02,main,,printed sign,117.700000,0,0,,118.298341,"nominal noon, no log value",2.2,,-35.90,
+assertion-v12-42c3148369f2b7c9cce8,tycho-oo-12,31,Saturn,ecliptic_latitude,Leovitius,1590-07-19,main,,printed direction,-1.105556,0,0,,-1.166962,"nominal noon, no log value",0.0,,3.68,
+assertion-v12-4503b9f18ab46e843de2,tycho-oo-12,31,Saturn,ecliptic_latitude,Maestlin,1590-07-19,main,,printed direction,-1.621389,0,0,,-1.166962,"nominal noon, no log value",0.0,,-27.27,
+assertion-v12-e96335e6197882f7355c,tycho-oo-12,31,Saturn,ecliptic_longitude,Leovitius,1590-07-19,main,,printed sign,86.802222,0,0,,84.159894,"nominal noon, no log value",3.3,,158.54,
+assertion-v12-b64236308dcb1fe95a79,tycho-oo-12,31,Saturn,ecliptic_longitude,Maestlin,1590-07-19,main,,printed sign,84.184167,0,0,,84.159894,"nominal noon, no log value",3.3,,1.46,
+assertion-v12-e61a7e5ec163a34807e2,tycho-oo-12,32,Saturn,ecliptic_latitude,Maestlin,1590-08-04,main,,printed direction,-1.700000,0,0,,-1.169512,"nominal noon, no log value",0.0,,-31.83,
+assertion-v12-367319b6a372418c8234,tycho-oo-12,32,Saturn,ecliptic_longitude,Maestlin,1590-08-04,main,,printed sign,85.962500,0,0,,85.776981,"nominal noon, no log value",2.8,,11.13,
 assertion-v12-ec242c07cc0c3744c409,tycho-oo-12,32,Saturn,ecliptic_latitude,Alphonsine,1590-08-30,main,,printed direction,-1.216667,0,0,,-1.182862,"nominal noon, no log value",0.0,,-2.03,
 assertion-v12-f064b58561ea68346b0a,tycho-oo-12,32,Saturn,ecliptic_longitude,Alphonsine,1590-08-30,main,,printed sign,90.675000,0,0,,87.738691,"nominal noon, no log value",1.7,,176.18,
 assertion-v12-1ac80de850eb33bf4021,tycho-oo-12,128,Saturn,ecliptic_latitude,Alphonsine,1591-10-25,main,,printed direction,-0.666667,0,0,,-0.591167,"nominal noon, no log value",0.0,,-4.53,

@@ -206,10 +206,19 @@ CATALOGUE_EXPRESSION = (
     "COALESCE(json_extract(i.revision_json,'$.completed_source_expression'),q.expression)"
 )
 
+# The model, tables or ephemeris that a value is attributed to. A review that states the
+# attribution replaces the recorded name, also where it leaves the source unnamed.
+CATALOGUE_MODEL = (
+    "CASE WHEN json_type(i.revision_json,'$.model_name') IS NULL"
+    " THEN json_extract(q.original_json,'$.model_name')"
+    " ELSE json_extract(i.revision_json,'$.model_name') END"
+)
+
 WORKING_CATALOGUE_VIEW = f"""
 CREATE VIEW catalogue AS SELECT q.id,q.source_id,q.artifact_sha256,q.source_entry_id,q.locator,
  q.volume,q.printed_page,{CATALOGUE_EXPRESSION} AS expression,{CATALOGUE_ROLE} AS role,q.event_id,q.series_id,
- i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact
+ i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact,
+ {CATALOGUE_MODEL} AS model_name
  FROM quantities q JOIN interpretations i ON i.quantity_id=q.id
  WHERE i.version=(SELECT MAX(j.version) FROM interpretations j WHERE j.quantity_id=q.id);
 """

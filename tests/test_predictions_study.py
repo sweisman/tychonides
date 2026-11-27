@@ -50,7 +50,7 @@ class PredictionSelectionTests(unittest.TestCase):
 
         with closing(sqlite3.connect(f"file:{CATALOG}?mode=ro", uri=True)) as db:
             predictions, references, excluded = predictions_select.select(db)
-        self.assertEqual((len(predictions), len(references), len(excluded)), (485, 340, 284))
+        self.assertEqual((len(predictions), len(references), len(excluded)), (528, 350, 242))
         files = {
             "printed-predictions.csv": (predictions_select.PREDICTION_FIELDS, predictions),
             "printed-predictions-references.csv": (predictions_select.REFERENCE_FIELDS, references),
@@ -75,6 +75,64 @@ class PredictionStudyTests(unittest.TestCase):
             )
             for name in produced:
                 self.assertEqual(table(Path(scratch) / name), table(FIGURES / name), name)
+
+    def test_the_figure_refuses_a_source_without_a_color_and_marker(self):
+        import printed_predictions
+
+        table = printed_predictions.compare()
+        shown = printed_predictions.figure_rows(table)
+        self.assertLessEqual({row["model"] for row in shown}, set(printed_predictions.STYLES))
+        stranger = dict(shown[0], model="A new ephemeris")
+        with self.assertRaisesRegex(ValueError, "A new ephemeris"):
+            printed_predictions.figure_rows([*table, stranger])
+
+    def test_the_figure_measures_from_the_log_and_from_the_ephemeris_only_without_one(self):
+        import printed_predictions
+
+        with_a_log_value = {
+            "prediction_minus_log_arcmin": "-120.00",
+            "prediction_minus_de441_arcmin": "-60.00",
+        }
+        without = {"prediction_minus_log_arcmin": "", "prediction_minus_de441_arcmin": "30.00"}
+        self.assertEqual(printed_predictions.figure_point(with_a_log_value), (-2.0, "log"))
+        self.assertEqual(printed_predictions.figure_point(without), (0.5, "DE441"))
+
+    def test_the_ephemeris_is_measured_against_the_log_once_per_date(self):
+        import printed_predictions
+
+        def row(day, gap, basis="printed hours"):
+            return {
+                "body": "Mars",
+                "quantity": "ecliptic_longitude",
+                "set": "near opposition",
+                "julian_date": day,
+                "de441_time_basis": basis,
+                "log_minus_de441_arcmin": gap,
+                "review": "",
+            }
+
+        rows = [
+            row("1593-08-21", "2.00"),
+            row("1593-08-21", "2.00"),  # A second table's prediction for the same date.
+            row("1593-08-24", "-4.00"),
+            # Without the log's own hours the ephemeris is not read at the observation.
+            row("1593-08-25", "30.00", basis="nominal noon"),
+            row("1593-08-26", "9.00", basis="calculation hour"),
+        ]
+        self.assertEqual(
+            printed_predictions.ephemeris_check(rows),
+            [
+                {
+                    "body": "Mars",
+                    "quantity": "ecliptic_longitude",
+                    "set": "near opposition",
+                    "dates": 2,
+                    "mean_de441_minus_log_arcmin": "1.0",
+                    "median_absolute_de441_minus_log_arcmin": "3.0",
+                    "largest_absolute_de441_minus_log_arcmin": "4.0",
+                }
+            ],
+        )
 
     def test_cached_ephemeris_covers_exactly_the_instants_the_study_uses(self):
         import printed_predictions

@@ -1,6 +1,6 @@
 # Database schema reference
 
-Schema versions 5 and 6 share this layout. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.
+Schema version 7 has this layout. Versions 5 and 6 share it without `catalogue.model_name`. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.
 JSON preserves structured qualifications. Foreign keys below identify relationship targets.
 See the [historical terms](historical-data-dictionary.md), [modern terms](modern-data-dictionary.md) and [normalization conventions](normalization-conventions.md).
 
@@ -54,6 +54,7 @@ Current interpretation plus usable derived conversions and citations.
 | `catalogue.source_url` | TEXT | — | Original public source-file URL. |
 | `catalogue.source_page_url` | TEXT | — | Deep link supported by explicit PDF index or archive page metadata; null when unverified. |
 | `catalogue.source_line_number` | INTEGER | — | One-based source-file line number where explicitly stated by the locator. |
+| `catalogue.model_name` | derived | — | Model, tables or ephemeris that the current interpretation attributes the value to; null where the source names none. |
 
 ## contexts
 

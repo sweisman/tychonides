@@ -14,6 +14,9 @@ PUBLISHED_REVIEWS = frozenset(
         "reviewed_edition_reading",
     }
 )
+# What a record states about the model, tables or ephemeris that a value is attributed to:
+# its name, or the wording of a source that the page leaves unnamed and how it is unnamed.
+MODEL_FIELDS = ("model_name", "source_model_label", "source_model_attribution")
 
 
 def project_csv(db, columns, *, identifier=None):
@@ -44,6 +47,8 @@ def project_csv(db, columns, *, identifier=None):
             direction = revision.get("direction")
             metadata = json.loads(row["scientific_metadata_json"])
             metadata["interpretation_review"] = revision
+            # A review that attributes the value replaces the recorded attribution with its own.
+            metadata.update({key: revision[key] for key in MODEL_FIELDS if key in revision})
             row["scientific_metadata_json"] = json.dumps(
                 metadata, ensure_ascii=False, sort_keys=True, separators=(",", ":")
             )

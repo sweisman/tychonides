@@ -1,5 +1,13 @@
 # Planetary parallax and refraction comparisons
 
+**In plain terms.** A nearby planet seen from the Earth’s surface looks
+slightly lower in the sky than it would from the Earth’s center. That drop is
+its parallax, and its size gives the planet’s distance. This page shows that
+the parallax corrections printed in Tycho’s records for Mars, Jupiter, and
+Saturn were calculated from distances he adopted. His attempt to measure the
+drop for Mars is the subject of the [1587 study](mars-parallax-1587.md). The
+[plain-language guide](plain-language.md) explains the terms.
+
 Tycho’s records contain a direct observing program for Mars and numerical
 diurnal-parallax calculations for Jupiter and Saturn. The tables below hold the
 recorded geometry fixed while varying the distance and the refraction rule
@@ -178,7 +186,7 @@ page and on the [Mercury and Venus page](mercury-venus-parallax.md). It runs
 offline and needs NumPy.
 
 - **Printed values.** A [selection script](../examples/parallax_select.py) reads
-  [Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
+  [Tychonides 1.4.0](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.4.0)
   and writes the [printed inputs](../examples/parallax-inputs.csv), the
   [Venus pairs](../examples/parallax-venus-pairs.csv), and
   [Riccioli’s table](../examples/parallax-riccioli.csv). Of the 58 printed

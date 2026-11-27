@@ -51,7 +51,7 @@ BODIES = ("Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn")
 QUANTITIES = ("ecliptic_longitude", "ecliptic_latitude")
 QUERY = f"""SELECT c.id, c.source_id, c.printed_page, c.subject, c.quantity, c.role,
                    c.expression, c.event_id, c.unit, c.signed_value_exact, q.original_json,
-                   i.normalized_json
+                   i.normalized_json, c.model_name
     FROM catalogue c JOIN quantities q ON q.id = c.id
     JOIN interpretations i ON i.quantity_id = c.id AND i.version = c.version
     WHERE c.source_id IN {LOGS} AND c.status = 'exact'
@@ -98,7 +98,7 @@ def entries(db, roles):
             "body": body,
             "quantity": quantity,
             "role": role,
-            "model": original.get("model_name") or "",
+            "model": row[12] or "",
             "not_a_place": original.get("argument_name") == "mean_longitude"
             or bool(original.get("source_longitude_origin")),
             "expression": clean(expression),

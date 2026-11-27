@@ -1,5 +1,13 @@
 # The parallax of Mars in the distances of 1587
 
+**In plain terms.** If Mars were as near as Tycho’s log assumes, it would
+shift by several arcminutes against the stars between rising and setting. On
+two nights in 1587 Tycho measured Mars against the stars from evening to
+morning. This study asks what shift those measurements show. They do not
+settle it: three whole sessions of measurements are offset by one to four
+arcminutes, as much as the shift he sought. The
+[plain-language guide](plain-language.md) explains the terms.
+
 On two nights around the opposition of March 1587, Tycho measured the distance
 of Mars from fixed stars with Mars low in the east, near the meridian, and low
 in the west. A parallax pushes a planet toward the horizon, so it would change
@@ -136,7 +144,7 @@ keeps them.
 ## Inputs and reproduction
 
 The [selection script](../examples/mars_parallax_select.py) reads
-[Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
+[Tychonides 1.4.0](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.4.0)
 and writes the [selected distances](../examples/mars-parallax-readings.csv)
 with their clocks, recorded altitudes, and catalog identities. All 48
 distances, clocks, and altitudes were compared with the text of the edition,

@@ -2,6 +2,7 @@ from contextlib import closing
 import csv
 import gzip
 from hashlib import sha256
+import io
 import json
 from pathlib import Path
 import sqlite3
@@ -92,19 +93,22 @@ class PublicCollectionTests(unittest.TestCase):
                     db.execute("SAVEPOINT fabricated")
                     db.execute(f"UPDATE {table} SET {assignment} WHERE quantity_id=?", (key,))
                     public = root / "public"
-                    csv_path = public / "tychonides.csv"
-                    with csv_path.open(encoding="utf-8", newline="") as stream:
+                    csv_path = public / "tychonides.csv.gz"
+                    with gzip.open(csv_path, "rt", encoding="utf-8", newline="") as stream:
                         columns = csv.DictReader(stream).fieldnames
-                    with csv_path.open("w", encoding="utf-8", newline="") as stream:
-                        writer = csv.DictWriter(stream, columns)
-                        writer.writeheader()
-                        writer.writerows(project_csv(db, columns))
+                    text = io.StringIO(newline="")
+                    writer = csv.DictWriter(text, columns)
+                    writer.writeheader()
+                    writer.writerows(project_csv(db, columns))
+                    rewritten = text.getvalue().encode("utf-8")
+                    csv_path.write_bytes(gzip.compress(rewritten))
                     altered = db.serialize()
                     gzip_path = public / "tychonides.sqlite.gz"
                     gzip_path.write_bytes(gzip.compress(altered))
                     manifest_path = public / "manifest.json"
                     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
                     manifest["sqlite_sha256"] = sha256(altered).hexdigest()
+                    manifest["csv_sha256"] = sha256(rewritten).hexdigest()
                     for path in (csv_path, gzip_path):
                         manifest["output_hashes"][path.name] = digest(path)
                     manifest_path.write_text(json.dumps(manifest), encoding="utf-8")

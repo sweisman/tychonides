@@ -4,8 +4,16 @@ from fractions import Fraction
 import json
 import re
 
-from .catalog_release import CATALOGUE_EXPRESSION, CATALOGUE_ROLE, CSV_COLUMNS, encoded
+from .catalog_release import (
+    CATALOGUE_EXPRESSION,
+    CATALOGUE_MODEL,
+    CATALOGUE_ROLE,
+    CSV_COLUMNS,
+    encoded,
+)
 
+# The schema of a public release. Version 7 adds the model_name column.
+PUBLIC_SCHEMA = 7
 DERIVED_COLUMNS = (
     "derived_value_exact",
     "derived_signed_value_exact",
@@ -17,6 +25,16 @@ DERIVED_COLUMNS = (
     "derived_timestamp",
 )
 PUBLIC_CSV_COLUMNS = CSV_COLUMNS + DERIVED_COLUMNS + ("source_page_url", "source_line_number")
+
+
+def public_columns(schema=PUBLIC_SCHEMA):
+    """The CSV columns of a public release under its schema version, in file order."""
+    columns = PUBLIC_CSV_COLUMNS
+    if schema >= 5:
+        columns += ("normalized_json",)
+    if schema >= 7:
+        columns += ("model_name",)
+    return columns
 
 
 def derived_fields(payload):
@@ -178,7 +196,8 @@ def enrich_catalogue(db, registry):
       i.version,i.quantity,i.subject,i.reference_object,i.status,i.unit,i.value_exact,i.signed_value_exact,
       d.derived_value_exact,d.derived_signed_value_exact,d.derived_unit,
       d.derived_value_decimal,d.derived_signed_value_decimal,d.derived_method,
-      d.derived_time_scale,d.derived_timestamp,c.source_url,c.source_page_url,c.source_line_number
+      d.derived_time_scale,d.derived_timestamp,c.source_url,c.source_page_url,c.source_line_number,
+      {CATALOGUE_MODEL} AS model_name
       FROM quantities q JOIN interpretations i ON i.quantity_id=q.id
       LEFT JOIN derived_values d ON d.quantity_id=q.id
       JOIN quantity_citations c ON c.quantity_id=q.id

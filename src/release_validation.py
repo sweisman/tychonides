@@ -5,6 +5,7 @@ from contextlib import closing
 import csv
 from fractions import Fraction
 import gzip
+import hashlib
 import os
 import shutil
 import tempfile
@@ -16,7 +17,7 @@ import tomllib
 from urllib.parse import unquote, urlsplit
 
 from .catalog_release import CSV_COLUMNS
-from .catalog_enrichment import PUBLIC_CSV_COLUMNS
+from .catalog_enrichment import PUBLIC_SCHEMA, public_columns
 from .core import digest
 from .catalog_files import catalog_files
 from .csv_projection import project_csv, same_cell
@@ -142,8 +143,18 @@ def scratch_directory(assets):
     return assets if os.access(assets, os.W_OK) else None
 
 
+def unpacked_digest(path):
+    """Checksum of the content of a compressed file, read in blocks."""
+    checksum = hashlib.sha256()
+    with gzip.open(path, "rb") as stream:
+        for block in iter(lambda: stream.read(1 << 20), b""):
+            checksum.update(block)
+    return checksum.hexdigest()
+
+
 def validate_csv(db, path, columns, count):
-    with path.open(encoding="utf-8", newline="") as stream:
+    unpack = gzip.open if path.name.endswith(".gz") else open
+    with unpack(path, "rt", encoding="utf-8", newline="") as stream:
         reader = csv.DictReader(stream)
         if reader.fieldnames != list(columns):
             raise ValueError("CSV columns differ from the documented export contract")
@@ -186,12 +197,16 @@ def validate_release(directory, assets_dir=None, keep_database=None):
     # Optional manifest fields skip their checks. Each skipped check is reported.
     skipped = ["schema_version"] if "schema_version" not in manifest else []
     schema = manifest.get("schema_version", 3)
-    if schema not in (3, 4, 5, 6):
+    if schema not in range(3, PUBLIC_SCHEMA + 1):
         raise ValueError("Unsupported catalogue schema version")
     database_name, csv_name = catalog_files(manifest)
     compressed = database_name.endswith(".gz")
     if compressed and not re.fullmatch(r"[0-9a-f]{64}", str(manifest.get("sqlite_sha256", ""))):
         raise ValueError("Compressed manifest requires a valid sqlite_sha256 checksum")
+    # Releases through schema 6 ship the CSV as it is; later ones compress it.
+    packed = csv_name.endswith(".gz")
+    if packed and not re.fullmatch(r"[0-9a-f]{64}", str(manifest.get("csv_sha256", ""))):
+        raise ValueError("Compressed manifest requires a valid csv_sha256 checksum")
     if "download_urls" in manifest:
         expected_urls = {
             name: f"https://github.com/sweisman/tychonides/releases/download/{manifest.get('release_id')}/{name}"
@@ -206,6 +221,8 @@ def validate_release(directory, assets_dir=None, keep_database=None):
             raise ValueError("Missing release file: " + name)
         if digest(assets / name) != expected:
             raise ValueError("Release checksum mismatch: " + name)
+    if packed and unpacked_digest(assets / csv_name) != manifest["csv_sha256"]:
+        raise ValueError("Uncompressed CSV checksum mismatch")
     recomputed = None
     with tempfile.TemporaryDirectory(
         prefix=".tychonides-verify-", dir=scratch_directory(assets)
@@ -247,9 +264,7 @@ def validate_release(directory, assets_dir=None, keep_database=None):
                     raise ValueError("Source bibliography is incomplete")
             if schema >= 6:
                 recomputed = validate_marked_values(db)
-            columns = PUBLIC_CSV_COLUMNS if schema >= 4 else CSV_COLUMNS
-            if schema >= 5:
-                columns += ("normalized_json",)
+            columns = public_columns(schema) if schema >= 4 else CSV_COLUMNS
             for key, table in (
                 ("groups", "groups"),
                 ("sources", "sources"),
@@ -285,7 +300,7 @@ def validate_release(directory, assets_dir=None, keep_database=None):
 def validate_documentation(root):
     root = Path(root)
     dictionary = (root / "docs/catalog-data-dictionary.md").read_text(encoding="utf-8")
-    missing = [field for field in PUBLIC_CSV_COLUMNS if "`" + field + "`" not in dictionary]
+    missing = [field for field in public_columns() if "`" + field + "`" not in dictionary]
     if missing:
         raise ValueError("Undocumented CSV fields: " + ", ".join(missing))
     from .vocabulary import validate_reference_pages

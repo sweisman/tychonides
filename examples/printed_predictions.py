@@ -9,7 +9,8 @@ Each prediction is set beside the log's own values for the same body and
 quantity on the same date, and beside the apparent geocentric position of date
 from DE441. The ephemeris is evaluated at the instants of the log's values,
 then at the printed hour of the calculation itself, and at local noon when the
-log prints no usable hour.
+log prints no usable hour. A separate table measures DE441 itself against the
+log on the dates where the log prints every hour.
 The tables need NumPy. The figure needs Matplotlib.
 """
 
@@ -35,13 +36,23 @@ TARGETS = {
 CALENDAR_OPEN_FROM = 1599  # Tycho reached Prague in June 1599, where both calendars were in use.
 WINDOW_DAYS = 60  # The window of the Mars opposition studies.
 REVIEW_DEGREES = 10  # A longitude this far from the ephemeris puts its date or body in question.
-MODELS = ("Alphonsine", "Copernicus", "Prutenic", "Stadius", "Leovitius", "Carelli")
-STYLES = {  # Color and marker for each table or ephemeris.
+MODELS = (
+    "Alphonsine",
+    "Copernicus",
+    "Prutenic",
+    "Prutenic, corrected",
+    "Stadius",
+    "Leovitius",
+    "Maestlin",
+    "Carelli",
+)
+STYLES = {  # Color and marker for each table or ephemeris with a longitude in the figure.
     "Alphonsine": ("#996019", "o"),
     "Copernicus": ("#00699a", "s"),
     "Prutenic": ("#3a9cc4", "^"),
     "Stadius": ("#7a5195", "D"),
     "Leovitius": ("#c8553d", "v"),
+    "Maestlin": ("#3d4fb8", "X"),
     "Carelli": ("#12a089", "P"),
 }
 RESULT_FIELDS = [
@@ -83,6 +94,15 @@ SUMMARY_FIELDS = [
     "largest_absolute_minus_de441_arcmin",
     "median_absolute_minus_de441_timed_arcmin",
     "median_absolute_log_minus_de441_timed_arcmin",
+]
+CHECK_FIELDS = [
+    "body",
+    "quantity",
+    "set",
+    "dates",
+    "mean_de441_minus_log_arcmin",
+    "median_absolute_de441_minus_log_arcmin",
+    "largest_absolute_de441_minus_log_arcmin",
 ]
 
 
@@ -284,6 +304,35 @@ def summarize(table):
     return summary
 
 
+def ephemeris_check(table):
+    """DE441 minus the log, once for each date on which the log prints every hour.
+
+    Only those dates read the ephemeris at the instants of the observations. Several
+    predictions for one date share one log value, so the date counts once.
+    """
+    dates = {}
+    for row in table:
+        if row["de441_time_basis"] == "printed hours" and not row["review"]:
+            key = (row["body"], row["quantity"], row["set"], row["julian_date"])
+            dates[key] = -float(row["log_minus_de441_arcmin"])
+    groups = defaultdict(list)
+    for (body, quantity, name, _), difference in dates.items():
+        groups[(body, quantity, name)].append(difference)
+    order = {name: index for index, name in enumerate(TARGETS)}
+    check = []
+    for key in sorted(groups, key=lambda item: (order[item[0]], item[1], item[2])):
+        gaps = np.array(groups[key])
+        line = dict(zip(("body", "quantity", "set"), key, strict=True))
+        line |= {
+            "dates": len(gaps),
+            "mean_de441_minus_log_arcmin": f"{gaps.mean():.1f}",
+            "median_absolute_de441_minus_log_arcmin": f"{np.median(np.abs(gaps)):.1f}",
+            "largest_absolute_de441_minus_log_arcmin": f"{np.abs(gaps).max():.1f}",
+        }
+        check.append(line)
+    return check
+
+
 def write_csv(path, fields, rows):
     with path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=fields, lineterminator="\n")
@@ -296,51 +345,103 @@ def write_tables(output):
     table = compare()
     write_csv(output / "printed-predictions-results.csv", RESULT_FIELDS, table)
     write_csv(output / "printed-predictions-summary.csv", SUMMARY_FIELDS, summarize(table))
+    write_csv(
+        output / "printed-predictions-ephemeris-check.csv", CHECK_FIELDS, ephemeris_check(table)
+    )
     return table
+
+
+FIGURE_COLUMNS = [  # Body, set, and label of each column of the figure.
+    ("Mercury", "main", "Mercury"),
+    ("Venus", "main", "Venus"),
+    ("Mars", "away from opposition", "Mars, away from\nopposition"),
+    ("Mars", "near opposition", "Mars, near\nopposition"),
+    ("Jupiter", "main", "Jupiter"),
+    ("Saturn", "main", "Saturn"),
+]
+
+
+def figure_rows(table):
+    """The compared longitudes that the figure shows. Each source needs a color and marker."""
+    shown = [
+        row
+        for row in table
+        if row["quantity"] == "ecliptic_longitude"
+        and not row["review"]
+        and row["prediction_minus_de441_arcmin"] != ""
+        and any((row["body"], row["set"]) == (body, name) for body, name, _ in FIGURE_COLUMNS)
+    ]
+    missing = {row["model"] for row in shown} - set(STYLES)
+    if missing:
+        raise ValueError("No color and marker for " + ", ".join(sorted(missing)))
+    return shown
+
+
+def figure_point(row):
+    """Degrees from the log, or from DE441 where the study has no log value, and which it is."""
+    if row["prediction_minus_log_arcmin"] != "":
+        return float(row["prediction_minus_log_arcmin"]) / 60, "log"
+    return float(row["prediction_minus_de441_arcmin"]) / 60, "DE441"
 
 
 def plot(plt, output, table):
     """Every compared longitude, one column per body and one marker per table or ephemeris."""
-    columns = [
-        ("Mercury", "main", "Mercury"),
-        ("Venus", "main", "Venus"),
-        ("Mars", "away from opposition", "Mars, away from\nopposition"),
-        ("Mars", "near opposition", "Mars, near\nopposition"),
-        ("Jupiter", "main", "Jupiter"),
-        ("Saturn", "main", "Saturn"),
-    ]
-    fig, ax = plt.subplots(figsize=(9.5, 5), layout="constrained")
+    columns = FIGURE_COLUMNS
+    shown = figure_rows(table)
+    fig, ax = plt.subplots(figsize=(9.5, 5.3), layout="constrained")
+    middle = (len(STYLES) - 1) / 2
     for position, (body, name, _) in enumerate(columns):
-        for slot, model in enumerate(MODELS):
-            color, marker = STYLES[model]
-            values = sorted(
-                float(row["prediction_minus_de441_arcmin"]) / 60
-                for row in table
+        for slot, (model, (color, marker)) in enumerate(STYLES.items()):
+            points = sorted(
+                figure_point(row)
+                for row in shown
                 if (row["body"], row["set"], row["model"]) == (body, name, model)
-                and row["quantity"] == "ecliptic_longitude"
-                and not row["review"]
             )
-            across = [
-                position + (slot - 2.5) * 0.14 + (index % 5 - 2) * 0.014
-                for index in range(len(values))
-            ]
-            ax.scatter(
-                across, values, s=30, color=color, marker=marker, edgecolor="white", linewidth=0.5
-            )
+            for reference in ("log", "DE441"):
+                # Filled from the log. Open from DE441, where the study has no log value.
+                across, values = [], []
+                for index, (value, measured_from) in enumerate(points):
+                    if measured_from == reference:
+                        across.append(position + (slot - middle) * 0.12 + (index % 5 - 2) * 0.012)
+                        values.append(value)
+                filled = reference == "log"
+                ax.scatter(
+                    across,
+                    values,
+                    s=30,
+                    marker=marker,
+                    facecolor=color if filled else "none",
+                    edgecolor="white" if filled else color,
+                    linewidth=0.5 if filled else 1.2,
+                )
         if position:
             ax.axvline(position - 0.5, color="#d5dae0", lw=0.8)
     ax.axhline(0, color="#89939f", lw=0.8)
     ax.set_xticks(range(len(columns)), [label for *_, label in columns])
     ax.set_xlim(-0.5, len(columns) - 0.5)
     ax.set(
-        ylabel="Printed longitude − DE441 (degrees)",
-        title="Table and ephemeris longitudes printed in the logs, against DE441",
+        ylabel="Printed longitude − log longitude (degrees)",
+        title="Table and ephemeris longitudes printed in the logs, against the log",
     )
     handles = [
         plt.Line2D([], [], ls="", marker=marker, color=color, mec="white", ms=7.5, label=model)
         for model, (color, marker) in STYLES.items()
     ]
-    ax.legend(handles=handles, frameon=False, ncols=3, loc="upper right", fontsize=9.5)
+    # Below the axes, in one row: seven entries inside the axes would cover points.
+    fig.legend(
+        handles=handles, frameon=False, ncols=len(handles), loc="outside lower center", fontsize=9.5
+    )
+    neutral = "#5b6673"
+    ax.legend(
+        handles=[
+            plt.Line2D([], [], ls="", marker="o", color=neutral, mec="white", ms=7.5),
+            plt.Line2D([], [], ls="", marker="o", mfc="none", mec=neutral, mew=1.2, ms=6.5),
+        ],
+        labels=["Measured from the log", "No log value: measured from DE441"],
+        frameon=False,
+        loc="upper left",
+        fontsize=9.5,
+    )
     ax.grid(axis="y", alpha=0.18)
     ax.tick_params(axis="x", length=0)
     ax.spines[["top", "right"]].set_visible(False)

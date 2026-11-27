@@ -268,23 +268,23 @@ def candidates(db):
 
 def predictions(db, centers, drop):
     """Apply rule 8."""
-    query = f"""SELECT c.id, c.source_id, c.printed_page, c.role, c.expression, q.original_json,
+    query = f"""SELECT c.id, c.source_id, c.printed_page, c.role, c.expression, c.model_name,
                       i.normalized_json
-        FROM catalogue c JOIN quantities q ON q.id = c.id
+        FROM catalogue c
         JOIN interpretations i ON i.quantity_id = c.id AND i.version = c.version
         WHERE c.source_id IN {LOGS}
           AND c.subject = 'Mars' AND c.quantity = 'ecliptic_longitude' AND c.status = 'exact'
           AND c.role = 'historical_prediction'
         ORDER BY c.id"""
     kept = []
-    for identifier, source, page, role, expression, original, normalized in db.execute(query):
+    for identifier, source, page, role, expression, model, normalized in db.execute(query):
         normalized = json.loads(normalized)
         row = {
             "source_id": source,
             "printed_page": page,
             "longitude_id": identifier,
             "role": role,
-            "model": json.loads(original).get("model_name") or "",
+            "model": model or "",
             "longitude_expression": clean(expression),
             "within_sign_degrees_exact": normalized.get("magnitude_degrees"),
             "longitude_degrees_exact": normalized.get("zodiac_longitude_degrees") or "",

@@ -1,5 +1,11 @@
 # Mars reverses direction in 1595
 
+**In plain terms.** For a few months every two years Mars appears to stop,
+drift backward among the stars, and then move forward again. This page takes
+the places Tycho recorded for Mars through one such loop and measures how far
+four accounts of its motion, and the tables of his day, fall from them. The
+[plain-language guide](plain-language.md) explains the terms.
+
 In the autumn of 1595, Tycho’s reductions place Mars in Taurus. Its longitude
 peaks near 26°07′ on September 18 and falls to about 10°26′ on December 6, a
 westward movement of about **15°41′**. By December 18 it is moving eastward
@@ -32,9 +38,11 @@ share a weight of one. Twelve rows on ten dates have a usable hour. The
 [summary file](figures/mars-1595-summary.csv) holds these numbers as the script
 writes them.
 
-The DE441 row is the only one that is not tied to the anchor. On the rows with
-a usable hour, Tycho’s reductions and the modern ephemeris differ by about one
-arcminute RMS, and by half an arcminute on average.
+Every row measures a construction from Tycho’s reductions. The DE441 row is
+the only one that is not tied to the anchor. On the rows with a usable hour,
+the modern ephemeris lies about one arcminute RMS from Tycho’s reductions, and
+half an arcminute on average. DE441 is fitted to modern measurements and uses
+none of Tycho’s, so his log tests it independently.
 
 ## What the comparison supports
 
@@ -179,7 +187,7 @@ only.
 ## Inputs and reproduction
 
 **Selection.** The [selection script](../examples/mars_select.py) reads
-[Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
+[Tychonides 1.4.0](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.4.0)
 and writes the [selected reductions](../examples/mars-observations.csv), the
 [printed predictions](../examples/mars-predictions.csv), the
 [opposition table](../examples/mars-oppositions.csv), and the

@@ -385,6 +385,21 @@ an ephemeris.
 | XII p.334 | Declination of ♄ “13° 56⅓′” and, beneath it, “13° 55½′,” 9 October 1594, morning | The entry of 19 October on the same page gives 14° 50½′. Saturn’s declination changes by less than half a degree in ten days. |
 | XII p.395 | Declination of the Moon’s limbs “26° 12′” and, beneath it, “12° 39′,” 15 September 1595 | The column is headed for the upper and the lower limb, which differ by the Moon’s diameter. The pairs beside it read 26° 12′ with 25° 37½′ and 26° 12½′ with 25° 39½′. |
 
+### Suspected readings met in the Kassel study: XII pp.443–446
+
+The [comparison with Kassel](mars-kassel.md) met three places in the Mars
+entries of 1595 that the same pages or the Kassel book put in doubt. The
+edition prints each as the catalog has it. No scan of these pages has been
+read yet, so it is open whether the doubt lies in the edition, the print, or
+the observation. The catalog keeps each as printed, and no reading is chosen
+from agreement with an ephemeris or with Kassel.
+
+| Page | Printed | Doubt |
+| --- | --- | --- |
+| XII p.443 | Distances of Mars under “Vice versa, from the eye of ♉,” 16° 32½′, 16° 32⅔′, 16° 32⅔′, and 16° 33′, 11 September 1595, morning | The same page gives the distance of Mars from the eye of Taurus as 9° 43′ to 9° 43½′ on the morning of 10 September, and p.444 gives 9° 1½′ at a later entry. |
+| XII p.444 | Distance of Mars under “Vice versa, from Aldebaran,” 16° 29′ at 4h 37⅓m, 12 September 1595, morning | Kassel gives the distance of Mars from the eye of Taurus as 9° 29′ on the evening of 11 September. The two differ by 7°. |
+| XII p.446 | Clock “5h 35⅙m” beside a distance of Mars from the bright star of Aries, with the altitude of Mars 44° 44′, 16 October 1595, morning | The row stands between rows of 3h 31⅔m and 3h 37m. The altitudes of Mars beside the distances fall from 45° 15′ at 3h 27¾m to 43° 4′ at 3h 48m. |
+
 ## Riccioli
 
 ### Astronomia Reformata: suspected year of Tycho’s Mercury observations, pp.346–347

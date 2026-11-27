@@ -1,5 +1,21 @@
 # Catalog releases
 
+## 1.4.0
+
+This release records the table or ephemeris behind the printed predictions
+and comparisons, and it changes the download format. 5,499 versioned
+interpretations give 5,017 predictions and comparisons the name of the table
+or ephemeris that their page prints. For 482 more they record the wording of
+a page that names none, such as “our calculation.” Of the catalog’s 7,277
+predictions and 2,188 comparisons, 6,851 and 1,883 now carry a name. The name
+is a new last column, `model_name`, in the catalog views and the CSV, under
+schema 7. The CSV is now downloaded compressed, as `tychonides.csv.gz`, and
+the manifest records the checksum of its content. `scripts/download-catalog`
+and the verifier handle this release and the earlier ones. The revisions
+change no printed expression, exact value, date, or identity. The release
+contains **710,195 quantities and 115,972 source groups**.
+[Status and limits](docs/status.md)
+
 ## 1.3.4
 
 This release closes the open lists of both audits and adds 9,763 versioned

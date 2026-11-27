@@ -1,5 +1,7 @@
 from contextlib import closing, redirect_stderr, redirect_stdout
 import csv
+import gzip
+from hashlib import sha256
 import io
 import json
 import shutil
@@ -56,7 +58,9 @@ class ReleaseValidationTests(unittest.TestCase):
         self.assertEqual(validate_release(self.release)["quantities"], 2)
         output = self.root / "renamed"
         manifest = publish_collection(self.release, output)
-        self.assertEqual(set(manifest["output_hashes"]), {"tychonides.sqlite.gz", "tychonides.csv"})
+        self.assertEqual(
+            set(manifest["output_hashes"]), {"tychonides.sqlite.gz", "tychonides.csv.gz"}
+        )
         self.assertTrue(manifest["release_id"].startswith("tychonides-"))
         self.assertFalse((output / "mars.sqlite.gz").exists())
         for name, checksum in legacy["output_hashes"].items():
@@ -97,7 +101,7 @@ class ReleaseValidationTests(unittest.TestCase):
         output = self.root / "zodiac-public"
         publish_collection(draft, output)
         validate_release(output)
-        with (output / "tychonides.csv").open(encoding="utf-8", newline="") as stream:
+        with gzip.open(output / "tychonides.csv.gz", "rt", encoding="utf-8", newline="") as stream:
             rows = list(csv.DictReader(stream))
         for row in rows:
             norm = json.loads(row["normalized_json"])
@@ -112,10 +116,11 @@ class ReleaseValidationTests(unittest.TestCase):
         public = self.root / "complete"
         publish_collection(self.release, public)
         self.release = public
-        path = public / "tychonides.csv"
+        path = public / "tychonides.csv.gz"
         original = path.read_bytes()
-        with path.open(encoding="utf-8", newline="") as stream:
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as stream:
             columns = next(csv.reader(stream))
+        self.assertEqual(columns[-1], "model_name")
         for index, name in enumerate(columns):
             with self.subTest(column=name):
                 path.write_bytes(original)
@@ -167,13 +172,108 @@ class ReleaseValidationTests(unittest.TestCase):
         path.write_text(json.dumps(value), encoding="utf-8")
 
     def csv_change(self, change):
+        """Rewrite the CSV of a working release, or the compressed one of a public release."""
         path = self.release / "tychonides.csv"
-        with path.open(encoding="utf-8", newline="") as stream:
+        packed = not path.exists()
+        if packed:
+            path = self.release / "tychonides.csv.gz"
+        unpack = gzip.open if packed else open
+        with unpack(path, "rt", encoding="utf-8", newline="") as stream:
             rows = list(csv.reader(stream))
         change(rows)
-        with path.open("w", encoding="utf-8", newline="") as stream:
-            csv.writer(stream).writerows(rows)
-        self.manifest(lambda m: m["output_hashes"].update({"tychonides.csv": digest(path)}))
+        text = io.StringIO(newline="")
+        csv.writer(text).writerows(rows)
+        data = text.getvalue().encode("utf-8")
+        path.write_bytes(gzip.compress(data, mtime=0) if packed else data)
+
+        def rehash(manifest):
+            manifest["output_hashes"][path.name] = digest(path)
+            if packed:
+                manifest["csv_sha256"] = sha256(data).hexdigest()
+
+        self.manifest(rehash)
+
+    def published(self):
+        """Publish the working release and make the public one the release under test."""
+        public = self.root / "public"
+        manifest = publish_collection(self.release, public)
+        self.release = public
+        return public, manifest
+
+    def test_a_public_release_ships_both_files_compressed(self):
+        public, manifest = self.published()
+        names = {"tychonides.sqlite.gz", "tychonides.csv.gz"}
+        self.assertEqual((manifest["schema_version"], set(manifest["output_hashes"])), (7, names))
+        self.assertEqual(set(manifest["download_urls"]), names)
+        self.assertEqual({path.name for path in public.iterdir()}, names | {"manifest.json"})
+        unpacked = gzip.decompress((public / "tychonides.csv.gz").read_bytes())
+        self.assertEqual(manifest["csv_sha256"], sha256(unpacked).hexdigest())
+        self.assertEqual(validate_release(public)["status"], "verified")
+
+    def test_the_checksum_of_the_unpacked_csv_is_required_and_checked(self):
+        public, _ = self.published()
+        self.manifest(lambda m: m.update(csv_sha256="a" * 64))
+        with self.assertRaisesRegex(ValueError, "Uncompressed CSV checksum mismatch"):
+            validate_release(public)
+        self.manifest(lambda m: m.pop("csv_sha256"))
+        with self.assertRaisesRegex(ValueError, "Compressed manifest requires a valid csv_sha256"):
+            validate_release(public)
+
+    def test_an_earlier_release_with_a_plain_csv_and_no_model_column_still_verifies(self):
+        public, _ = self.published()
+        packed = public / "tychonides.csv.gz"
+        with gzip.open(packed, "rt", encoding="utf-8", newline="") as stream:
+            rows = list(csv.reader(stream))
+        self.assertEqual(rows[0][-1], "model_name")
+        packed.unlink()
+        plain = public / "tychonides.csv"
+        with plain.open("w", encoding="utf-8", newline="") as stream:
+            csv.writer(stream).writerows(row[:-1] for row in rows)
+
+        def earlier(manifest):
+            manifest.update(schema_version=6)
+            del manifest["csv_sha256"], manifest["output_hashes"][packed.name]
+            manifest["output_hashes"][plain.name] = digest(plain)
+            address = manifest["download_urls"].pop(packed.name)
+            manifest["download_urls"][plain.name] = address.removesuffix(".gz")
+
+        self.manifest(earlier)
+        self.assertEqual(validate_release(public)["status"], "verified")
+
+    def test_asset_names_of_two_packagings_are_never_mixed(self):
+        from src.catalog_files import catalog_files, working_files
+
+        def named(*names):
+            return {"output_hashes": dict.fromkeys(names, "a" * 64)}
+
+        self.assertEqual(
+            catalog_files(named("tychonides.sqlite.gz", "tychonides.csv.gz")),
+            ("tychonides.sqlite.gz", "tychonides.csv.gz"),
+        )
+        with self.assertRaisesRegex(ValueError, "file set"):
+            catalog_files(named("tychonides.sqlite", "tychonides.csv.gz"))
+        public, _ = self.published()
+        with self.assertRaisesRegex(ValueError, "uncompressed working catalogue"):
+            working_files(public)
+
+    def test_the_public_catalog_states_the_model_of_each_value(self):
+        from test_catalog_release import CatalogueReleaseTests
+
+        source, public, contexts = CatalogueReleaseTests().fixture()
+        public[0]["model_name"] = "Copernicus"
+        draft = self.root / "named"
+        write_catalogue(draft, source, public, contexts, [], [], [], [], [], [], {})
+        output = self.root / "named-public"
+        publish_collection(draft, output)
+        expected = {row["id"]: row.get("model_name") for row in public}
+        with gzip.open(output / "tychonides.csv.gz", "rt", encoding="utf-8", newline="") as stream:
+            exported = {row["id"]: row["model_name"] or None for row in csv.DictReader(stream)}
+        database = self.root / "named.sqlite"
+        database.write_bytes(gzip.decompress((output / "tychonides.sqlite.gz").read_bytes()))
+        with closing(sqlite3.connect(database)) as db:
+            shown = dict(db.execute("SELECT id,model_name FROM catalogue"))
+        self.assertEqual((exported, shown), (expected, expected))
+        self.assertEqual(sorted(expected.values(), key=str), ["Copernicus", None])
 
     def test_missing_compressed_checksum_is_actionable(self):
         public = self.root / "public"

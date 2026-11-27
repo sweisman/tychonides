@@ -1,6 +1,6 @@
 {
-  "release_id": "tychonides-1.3.4",
-  "schema_version": 6,
+  "release_id": "tychonides-1.4.0",
+  "schema_version": 7,
   "status": "research_catalogue",
   "index_contract": 1,
   "vocabulary_contract": 1,
@@ -10,7 +10,7 @@
   "images": 1963,
   "artifacts": 23,
   "controls": 923,
-  "interpretations": 752007,
+  "interpretations": 757506,
   "quantities_by_source": {
     "brahe-progymnasmata-erara": 22908,
     "cds-carlsberg-planets": 96296,
@@ -41,13 +41,14 @@
   "code_license": "AGPL-3.0-or-later",
   "data_license": "CC0-1.0",
   "license_scope": "Project contributions; third-party sources retain their terms",
-  "sqlite_sha256": "6e538136fec27248ffbde227a4cdd352e4ed0ad62f5d5567c0899814391f0383",
+  "sqlite_sha256": "765e92bd9c6a773666e3e0d1ae559835fbdf6456bd5d6418eddfd763d8abcb32",
+  "csv_sha256": "f53f3ae0a6f6454e80170dabc506b3285e95789569c9c5b6cf8b15d51afa8d8f",
   "output_hashes": {
-    "tychonides.sqlite.gz": "a7c208a45970b40b0aa2eb8d712927bea0160d2b6b32acdd3211b5a55f184796",
-    "tychonides.csv": "472e8d62ac710eed02cb86d812cde9132956694d5f798a707987f0becc0507f2"
+    "tychonides.sqlite.gz": "072deb93f40907d1d4fe2482bec036d62df24494cbb994e97e9cd548f4d25114",
+    "tychonides.csv.gz": "6d028943201664ac7ee45cbbc13b220aeaf2aaf8db75004ce86c1342a15f7544"
   },
   "download_urls": {
-    "tychonides.sqlite.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.4/tychonides.sqlite.gz",
-    "tychonides.csv": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.4/tychonides.csv"
+    "tychonides.sqlite.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.4.0/tychonides.sqlite.gz",
+    "tychonides.csv.gz": "https://github.com/sweisman/tychonides/releases/download/tychonides-1.4.0/tychonides.csv.gz"
   }
 }

@@ -5,18 +5,18 @@ comes next. The [research program](research-plan.md) defines the objectives and
 milestones. The [source directory](data-sources.md) defines catalog coverage.
 Finished analyses are collected on the [studies page](studies.md).
 
-Last updated November 26, 2026.
+Last updated November 27, 2026.
 
 ## Objectives
 
 | Objective | Status | Done so far | Next step |
 | --- | --- | --- | --- |
-| Observation catalog | Available, [audited](#audit-of-the-tycho-log-records) | [Release 1.3.4](../resources/catalog/README.md#download) holds 710,195 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. The records of the four logs are audited and corrected. The [other works](#audit-of-the-other-works) have had three audit passes. The open lists of both audits are closed. | The [planned acquisitions](data-sources.md#planned-ingestions) |
+| Observation catalog | Available, [audited](#audit-of-the-tycho-log-records) | [Release 1.4.0](../resources/catalog/README.md#download) holds 710,195 quantities from Tycho’s four logs, seven supplementary books, and modern optical collections. The records of the four logs are audited and corrected. The [other works](#audit-of-the-other-works) have had three audit passes. The open lists of both audits are closed. Printed predictions and comparisons carry the name of their table or ephemeris. | The [planned acquisitions](data-sources.md#planned-ingestions) |
 | Mars apparent motion and geometry | Nine oppositions compared | [The 1595 retrograde passage](mars-apparent-motion.md) and [the oppositions of 1580 to 1600](mars-oppositions.md) compare Tycho’s reductions with four constructions and the JPL DE441 ephemeris. | The 1600 opposition, once the calendar of its entries is recorded |
 | Historical model comparison | Printed predictions compared | The [printed predictions study](printed-predictions.md) compares every table and ephemeris position the logs print for the five planets with the log and DE441. The opposition study covers Mars near opposition. | The Moon, once the hours of its entries are recorded, then independently reconstructed tables and Ursus’s formulation where the sources permit |
 | Mars, Jupiter, and Saturn parallax | One campaign tested | [Recorded and modern corrections](planetary-parallax-comparisons.md) are compared. [The Mars-to-star distances of 1587](mars-parallax-1587.md) are tested for a parallax. | The campaign of 1582 and 1583, then parallax feasibility |
 | Mercury and Venus parallax | Initial calculations | [Historical reductions and the 1590 Venus experiment](mercury-venus-parallax.md) are recomputed under historical and modern assumptions. | Parallax feasibility |
-| Accuracy and refraction | Tables compared | The [refraction tables](refraction-tables.md) of Tycho and Riccioli are set against modern refraction. The [planetary comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. In 1595 Tycho’s Mars longitudes agree with DE441 to about one arcminute where the log prints a usable hour. | The tables that lack recorded altitudes, then the observations behind the tables and calibrated observing sessions |
+| Accuracy and refraction | Tables compared | The [refraction tables](refraction-tables.md) of Tycho and Riccioli are set against modern refraction. The [planetary comparisons](planetary-parallax-comparisons.md) vary distance and refraction independently. In 1595 Tycho’s Mars longitudes agree with DE441 to about one arcminute where the log prints a usable hour. On seven nights of 1593 and 1595 his distances of Mars from the stars agree with [those measured at Kassel](mars-kassel.md) within a median of 1.7′. | The tables that lack recorded altitudes, then the observations behind the tables and calibrated observing sessions |
 | Kepler and opposition tables | Table checked | Longomontanus’s fourteen oppositions [reproduce from DE441](mars-oppositions.md#the-opposition-table-against-de441) within 4′ in longitude. Tycho’s [solar theory](solar-theory.md) reproduces from his printed intervals, and his altitude corrections account for the seasonal pattern in the table’s instants. | The steps from the log’s readings to each tabulated opposition |
 | Interactive visualization | Planned | [Visualization plan](visualization-plan.md) | Catalog explorer |
 | Stellar aberration | Planned | | |
@@ -24,7 +24,7 @@ Last updated November 26, 2026.
 
 ## State of the catalog rows
 
-Of the 150,268 quantities from Tycho’s four logs in release 1.3.4:
+Of the 150,268 quantities from Tycho’s four logs in release 1.4.0:
 
 | State | Quantities | Share |
 | --- | ---: | ---: |
@@ -682,6 +682,12 @@ every difference from DE441. The log has 13 more values of its own on four
 dates, and the differences from the log changed there. The 98 places that
 release 1.3.4 newly types as predictions enter no comparison: the catalog
 records no model name for 78 of them and no single date for 20.
+Release 1.4.0 differs from 1.3.4 only in the names of the tables and
+ephemerides, and six studies select the same inputs. The
+[printed predictions](printed-predictions.md) gain the 43 predictions whose
+table the catalog now names, 528 in all, and the log has 350 values beside
+them where it had 340. No earlier result changes. The
+[Kassel study](mars-kassel.md) is new on this release.
 
 ## Milestones
 
@@ -700,6 +706,10 @@ The research program gives each milestone’s
 
 | Date | Result |
 | --- | --- |
+| November 27, 2026 | Catalog 1.4.0: the table or ephemeris behind the printed predictions and comparisons. 5,017 take the name that their page prints, in the new `model_name` column, and 482 are recorded with the wording of a page that names none. Of 7,277 predictions and 2,188 comparisons, 6,851 and 1,883 carry a name. The CSV is downloaded compressed. No printed expression, exact value, date, or identity changed. 710,195 quantities and 115,972 source groups. |
+| November 27, 2026 | Study: [Mars from Kassel and from Uraniborg](mars-kassel.md). In 14 pairs on seven nights of 1593 and 1595, Jost Bürgi’s distances of Mars from the stars and Tycho’s agree within a median of 1.7′. Kassel’s run 1.8′ longer on average. Three places in the log are [listed for a check against the printed pages](edition-findings.md#suspected-readings-met-in-the-kassel-study-xii-pp443446). |
+| November 27, 2026 | The [studies](studies.md) measure from the log. Tycho’s recorded values are the reference, and each table, model, and the DE441 ephemeris is measured from them. Each study opens in plain terms, and a [plain-language guide](plain-language.md) explains the vocabulary. |
+| November 27, 2026 | [Printed predictions](printed-predictions.md): 43 more predictions enter with the names of their tables, 528 in all. The figure measures each prediction from the log where the study has a log value. |
 | November 26, 2026 | Catalog 1.3.4: the open lists of [both](#audit-of-the-tycho-log-records) [audits](#audit-of-the-other-works), closed. In Tycho’s logs 2,720 values take the day that their row, column, heading, caption, or sentence prints, 182 give up a carried date, 4,807 take the type, subject, reference star, or role that their label prints, and 175 records that repeated a printed value or held a part of one are merged into their readings. In the books 1,629 places computed from tables become predictions or comparisons, and 556 readings take the expression their line prints. The [edition findings](edition-findings.md) list the 29 places where a printed value is in doubt. 710,195 quantities and 115,972 source groups. |
 | November 26, 2026 | Second pass of the [audit of the other works](#audit-of-the-other-works): named points in captioned tables, dates in every book, and every body of the modern collections. 15 values take the subject or reference their page prints, and 5 take the day of their observation. The corrections are in release 1.3.4. Seven suspected problems of the sources moved to the [edition findings](edition-findings.md). |
 | November 26, 2026 | [Printed predictions](printed-predictions.md): DE441 is taken at the printed hour of the calculation for 63 more predictions, and one mean longitude is left out. |
@@ -733,15 +743,10 @@ The [catalog release notes](../CHANGELOG.md) describe each release.
    Longomontanus and the unit marks of the hourly table of the Sun’s motion
    in the *Progymnasmata* are [errors of the edition](edition-findings.md).
    Once the interval is corrected, the catalog takes the printed reading.
-2. **Model names for the predictions typed by the audit.** Release 1.3.4
-   types 308 more values of the logs as predictions from their labels. A
-   revision records the role and the label it rests on, and not the name of
-   the table. Record the names. The 78 dated longitudes and latitudes of the
-   Moon and the planets among them can then be considered for the
-   [published comparison](printed-predictions.md). In the whole release, 319
-   predictions and 57 comparisons of the logs and 3,399 predictions and 1,973
-   comparisons of the other works carry no model name. The *Astronomia
-   Reformata* holds 5,036 of them.
+2. **Three places in the Mars entries of 1595.** Read the printed pages for
+   the distances from Aldebaran on XII pp. 443 and 444 and for the clock on
+   p. 446, which the [Kassel study](mars-kassel.md#values-set-aside) sets
+   aside.
 3. **Printed predictions of the Moon.** Record the hours of the 59 lunar
    predictions and of the log’s values beside them, then add the Moon to the
    [published comparison](printed-predictions.md).

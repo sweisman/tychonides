@@ -26,6 +26,7 @@ import re
 
 from .catalog_release import WORKING_CATALOGUE_VIEW, encoded
 from .core import fraction_text, number
+from .csv_projection import MODEL_FIELDS
 from .date_claims import DAYPARTS
 from .normalization import ANGLE_QUANTITIES, ANGULAR_RATES, normalize_quantity
 from .numeric_integrity import NUMBER
@@ -88,6 +89,10 @@ OWNED = (
 )
 CARRIED_FIELDS = ("completed_source_expression", "date_claim_ids")
 READING_FIELDS = ("quantity", "subject", "reference", "role")
+# A value is attributed to a model where the page gives it as that model's place or as the
+# difference of that place from the observed one.
+MODEL_ROLES = ("historical_prediction", "historical_comparison")
+UNNAMED_SOURCES = ("unnamed_as_stated", "unestablished_from_canon")
 PLAIN_ANGLES = ANGLE_QUANTITIES - set(ANGULAR_RATES)
 CLAIM_FIELDS = {
     "id",
@@ -199,11 +204,36 @@ def reviewed_basis(decision, editions: Mapping, expressions):
 def carried(current):
     """Keep what an earlier review established and this one does not change."""
     previous = json.loads(current["revision_json"] or "{}")
-    kept = {key: previous[key] for key in CARRIED_FIELDS if key in previous}
+    kept = {key: previous[key] for key in (*CARRIED_FIELDS, *MODEL_FIELDS) if key in previous}
     kept["direction"] = previous.get(
         "direction", json.loads(current["original_json"]).get("direction")
     )
     return kept
+
+
+def attributed(naming, recorded, role):
+    """Return the reviewed attribution, or None unless it names a model or states that none is."""
+    if tuple(sorted(naming)) != ("previous", "revised") or any(
+        tuple(sorted(part)) != tuple(sorted(MODEL_FIELDS)) for part in naming.values()
+    ):
+        return None
+    revised = {
+        key: flat(value) if isinstance(value, str) else value
+        for key, value in naming["revised"].items()
+    }
+    name, label, unnamed = (revised[key] for key in MODEL_FIELDS)
+    if (
+        naming["previous"] != recorded
+        or revised == recorded
+        or role not in MODEL_ROLES
+        or any(type(value) not in (str, type(None)) for value in revised.values())
+        or (name is None) == (unnamed is None)
+        or (label is None) != (unnamed is None)
+        or not (name or label)
+        or unnamed not in (None, *UNNAMED_SOURCES)
+    ):
+        return None
+    return revised
 
 
 def recreate_view(db):
@@ -219,11 +249,12 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
         identifier = decision["quantity_id"]
         current = current_reading(db, identifier)
         previous, revised = decision["previous"], decision["revised"]
+        naming = decision.get("model")
         if (
             identifier in revised_ids
             or tuple(sorted(previous)) != tuple(sorted(READING_FIELDS))
             or tuple(sorted(revised)) != tuple(sorted(READING_FIELDS))
-            or previous == revised
+            or (previous == revised and naming is None)
             or current["source_id"] != decision["source_id"]
             or current["printed_page"] != decision["printed_page"]
             or flat(current["expression"]) != flat(decision["source_expression"])
@@ -245,6 +276,12 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
             or not flat(turn["label"] or "")
         ):
             raise ValueError("Direction revision differs from its frozen reading: " + identifier)
+        model = None
+        if naming is not None:
+            recorded = {key: kept.get(key, original.get(key)) for key in MODEL_FIELDS}
+            model = attributed(naming, recorded, revised["role"])
+            if model is None:
+                raise ValueError("Model attribution differs from its frozen reading: " + identifier)
         signed, normalized = current["signed_value_exact"], current["normalized_json"]
         if revised["quantity"] != previous["quantity"] or turn is not None:
             if not {previous["quantity"], revised["quantity"]} <= PLAIN_ANGLES:
@@ -301,6 +338,9 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
         if any(flag not in flags for flag in withdrawn):
             raise ValueError("Withdrawn flag is not on the reading: " + identifier)
         printed = [current["expression"]] + ([turn["label"]] if turn else [])
+        if model is not None and model["source_model_label"] is not None:
+            # The wording kept for a source that the page leaves unnamed is the page's own.
+            printed.append(model["source_model_label"])
         revision = dict(
             kept,
             kind=READING_REVISION,
@@ -309,6 +349,8 @@ def apply_reading_revisions(db, decisions: Iterable[dict], editions: Mapping):
             revised=revised,
             basis=reviewed_basis(decision, editions, printed),
         )
+        if model is not None:
+            revision.update(model, previous_model=naming["previous"])
         if turn is not None:
             revision.update(
                 direction=turn["revised"],

@@ -3,7 +3,7 @@
 set -euo pipefail
 
 usage() {
-  printf 'Usage: %s [DESTINATION]\nDownloads, verifies and decompresses the catalog from this checkout.\nUse a destination without existing catalog files.\n' "$0"
+  printf 'Usage: %s [DESTINATION]\nDownloads and verifies the catalog from this checkout and decompresses its database.\nThe CSV stays compressed. Use a destination without existing catalog files.\n' "$0"
 }
 if [[ ${1:-} == --help ]]; then
   usage
@@ -21,7 +21,8 @@ destination=${1:-downloads}
 for command in curl jq tychonides-verify; do
   command -v "$command" >/dev/null || { printf 'Required command missing: %s\n' "$command" >&2; exit 1; }
 done
-for asset in manifest.json tychonides.csv tychonides.sqlite.gz tychonides.sqlite; do
+assets=(tychonides.sqlite.gz tychonides.csv.gz tychonides.csv tychonides.sqlite manifest.json)
+for asset in "${assets[@]}"; do
   if [[ -e "$destination/$asset" ]]; then
     printf 'Catalog file already exists: %s/%s; choose a fresh destination.\n' "$destination" "$asset" >&2
     exit 1
@@ -33,7 +34,8 @@ stage=$(mktemp -d "$destination/.catalog-download.XXXXXX")
 trap 'rm -rf -- "$stage"' EXIT
 while IFS=$'\t' read -r asset url; do
   case "$asset" in
-    tychonides.sqlite.gz|tychonides.csv) ;;
+    # Releases through 1.3.4 ship the CSV as it is; later ones compress it.
+    tychonides.sqlite.gz|tychonides.csv.gz|tychonides.csv) ;;
     *) printf 'Unexpected catalog asset: %s\n' "$asset" >&2; exit 1 ;;
   esac
   curl --fail --location --retry 2 --output "$stage/$asset" "$url"
@@ -41,7 +43,12 @@ done < <(jq -er '.download_urls | to_entries[] | [.key, .value] | @tsv' "$manife
 cp -- "$manifest" "$stage/manifest.json"
 # The verifier decompresses the database once, beside the download, and keeps it.
 tychonides-verify "$stage" --keep-database "$stage/tychonides.sqlite"
-for asset in tychonides.sqlite.gz tychonides.csv tychonides.sqlite manifest.json; do
-  mv -- "$stage/$asset" "$destination/$asset"
+for asset in "${assets[@]}"; do
+  if [[ -e "$stage/$asset" ]]; then
+    mv -- "$stage/$asset" "$destination/$asset"
+  fi
 done
 printf 'Verified catalog ready: %s/tychonides.sqlite\n' "$destination"
+if [[ -e "$destination/tychonides.csv.gz" ]]; then
+  printf 'The CSV is compressed: %s/tychonides.csv.gz (unpack a copy with gunzip -k).\n' "$destination"
+fi

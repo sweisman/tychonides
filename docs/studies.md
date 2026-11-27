@@ -4,19 +4,27 @@ Finished analyses built on the [Tychonides catalog](../resources/catalog/README.
 Each entry gives the question, the result, the inputs, and how to rerun it. The
 [status page](status.md) shows how these fit the wider objectives.
 
+What Tycho recorded is the reference in these studies. Each account of a
+planet’s motion, whether a sixteenth-century table or the modern JPL DE441
+ephemeris, is measured by how far it falls from the recorded place. DE441 uses
+none of Tycho’s observations, so his logs test it. Where a study has no
+observation to measure from, its entry says so. The
+[plain-language guide](plain-language.md) explains the terms and this rule.
+
 | Study | Subject | Period |
 | --- | --- | --- |
 | [Mars reverses direction in 1595](#mars-reverses-direction-in-1595) | Four model geometries against Tycho’s reductions | September to December 1595 |
-| [Mars at the oppositions of 1580 to 1600](#mars-at-the-oppositions-of-1580-to-1600) | Tycho’s longitudes, three constructions, and printed table predictions against a modern ephemeris | 1580 to 1600 |
-| [Printed predictions for the Moon and planets](#printed-predictions-for-the-moon-and-planets) | Table and ephemeris positions printed in the logs against the log and a modern ephemeris | 1563 to 1600 |
+| [Mars at the oppositions of 1580 to 1600](#mars-at-the-oppositions-of-1580-to-1600) | A modern ephemeris, three constructions, and printed table predictions against Tycho’s longitudes | 1580 to 1600 |
+| [Printed predictions for the Moon and planets](#printed-predictions-for-the-moon-and-planets) | Table and ephemeris positions printed in the logs against Tycho’s own values, with a modern ephemeris held to the same test | 1563 to 1600 |
 | [Tycho’s solar theory](#tychos-solar-theory) | His equinoxes, apogee, and eccentricity against a modern ephemeris and his own altitude corrections | 1584 to 1588 |
 | [Historical refraction tables](#historical-refraction-tables) | The printed tables of Tycho and Riccioli against a modern formula | 1602 and 1665 |
 | [Mars, Jupiter, and Saturn corrections](#mars-jupiter-and-saturn-corrections) | Recorded parallax and refraction against modern values | 1582 to 1599 |
 | [Mercury and Venus parallax](#mercury-and-venus-parallax) | Historical reductions and the 1590 Venus test | 1582 to 1610 |
 | [The parallax of Mars in 1587](#the-parallax-of-mars-in-1587) | Mars-to-star distances of two nights against the log’s parallax and a modern one | February and March 1587 |
+| [Mars from Kassel and from Uraniborg](#mars-from-kassel-and-from-uraniborg) | Distances of Mars from the same stars on the same nights at two observatories | 1593 and 1595 |
 
 Every study is computed from the current catalog,
-[release 1.3.4](../resources/catalog/README.md#download).
+[release 1.4.0](../resources/catalog/README.md#download).
 
 ## Mars reverses direction in 1595
 
@@ -26,8 +34,8 @@ Every study is computed from the current catalog,
   constructions follow Mars through one retrograde passage as Tycho’s
   reductions record it, and how close were the table predictions he printed?
 - **Result.** All four constructions produce the reversal. Where the log prints
-  a usable hour, Tycho’s reductions agree with the JPL DE441 ephemeris to about
-  one arcminute. Historical curves tied to one opposition longitude differ from
+  a usable hour, the JPL DE441 ephemeris lies about one arcminute from Tycho’s
+  reductions. Historical curves tied to one opposition longitude differ from
   the log by 0.27° (Tychonic), 0.50° (Ptolemaic), and 0.67° (Copernican). That
   order changes with the assumed apsidal direction, so it does not rank the
   systems. From September 30 the printed Alphonsine predictions stay within 10′
@@ -50,12 +58,13 @@ Every study is computed from the current catalog,
 
 [Read the study](mars-oppositions.md)
 
-- **Question.** Across the oppositions Tycho’s logs cover, how close are his
-  reduced longitudes to a modern ephemeris, how do the historical constructions
-  follow each passage, and how close were the table predictions he printed?
-- **Result.** At nine oppositions, where the log prints a usable hour, Tycho’s
-  longitudes differ from the JPL DE441 ephemeris by 0.5′ to 4.6′. The printed
-  Alphonsine and Copernican predictions miss by up to 4.7° and 4.2°, with
+- **Question.** Across the oppositions Tycho’s logs cover, how close does a
+  modern ephemeris come to his reduced longitudes, how do the historical
+  constructions follow each passage, and how close were the table predictions
+  he printed?
+- **Result.** At nine oppositions, where the log prints a usable hour, the JPL
+  DE441 ephemeris lies 0.5′ to 4.6′ from Tycho’s longitudes. The printed
+  Alphonsine and Copernican predictions miss them by up to 4.7° and 4.2°, with
   neither reliably closer. Curves tied to each opposition depart from the log
   by up to 0.6° for the Ptolemaic and Copernican constructions and up to 0.2°
   for the Tychonic one, which was fitted to these oppositions. Longomontanus’s
@@ -81,27 +90,32 @@ Every study is computed from the current catalog,
 [Read the study](printed-predictions.md)
 
 - **Question.** How close were the table and ephemeris positions that Tycho’s
-  logs print for the planets, measured against his own values and a modern
-  ephemeris?
-- **Result.** For Saturn in 1590 and 1591 the Alphonsine longitudes run 2.9°
-  ahead of JPL DE441 and the Copernican ones stay within 10′, while the
-  Copernican latitudes lie about 1° south. For Mars more than 60 days from
-  opposition the Copernican longitudes have a median difference of 20′,
-  against 1.9° near opposition. Tycho’s own timed longitudes agree with DE441
-  within a few arcminutes.
-- **Inputs.** 485 printed predictions from 1563 to 1600 and 340 values of the
+  logs print for the planets, measured from his own values, and how does a
+  modern ephemeris fare by the same measure?
+- **Result.** On 31 dates near the oppositions of Mars where the log prints
+  its hours, JPL DE441 lies a median of 0.8′ from Tycho’s longitude. The
+  Copernican longitudes of Mars have a median difference from the log of 17′
+  more than 60 days from opposition and 1.9° near it. The Alphonsine medians
+  are 1.4° and 3.6°. For Saturn in 1590 and 1591 the study has no log value.
+  Measured from DE441, the Alphonsine longitudes there run 2.9° ahead and the
+  Copernican ones stay within 10′, while the Copernican latitudes lie about 1°
+  south.
+- **Inputs.** 528 printed predictions from 1563 to 1600 and 350 values of the
   log on the same dates, [selected from the catalog](../examples/printed-predictions.csv),
   with cached JPL Horizons positions.
-- **Limits.** The log prints an hour for 232 of the 426 comparisons. The other
-  194 use local noon. The 59 predictions of the Moon are listed and
+- **Limits.** The log prints an hour for 232 of the 462 comparisons. The other
+  230 use local noon. The 66 predictions of the Moon are listed and
   not compared. Forty Mars predictions of 1599 and 1600 are set aside because
   their calendar is not recorded. Samples for Mercury, Venus, and Jupiter are
-  small. The catalog records no model name for 87 more predictions and no
-  single complete date for 35, so they enter no comparison.
+  small. Twelve more predictions carry a label that names no table, 35 have
+  no single complete date, and 64 latitudes have no printed direction, so
+  they enter no comparison. DE441 is not tested against the log for Saturn,
+  and in May 1564 the log and DE441 differ by 91′ to 107′.
 - **Rerun.** `python examples/printed_predictions.py --output docs/figures`
   regenerates the [summary](figures/printed-predictions-summary.csv), the
-  [results](figures/printed-predictions-results.csv), and the figure. A test
-  regenerates the tables.
+  [results](figures/printed-predictions-results.csv), the
+  [ephemeris check](figures/printed-predictions-ephemeris-check.csv), and the
+  figure. A test regenerates the tables.
 
 ## Tycho’s solar theory
 
@@ -122,8 +136,9 @@ Every study is computed from the current catalog,
   [selected from the catalog](../examples/solar-theory-inputs.csv), Tycho’s
   solar refraction table from the refraction study, and cached JPL Horizons
   positions of the Sun.
-- **Limits.** The equinox table is a smoothed series with one vernal and one
-  autumnal instant. The reduction models one exact meridian altitude in
+- **Limits.** No instrument reading enters the study, so the ephemeris is its
+  only measure of the equinoxes. The equinox table is a smoothed series with
+  one vernal and one autumnal instant. The reduction models one exact meridian altitude in
   standard air. The pole altitude of the 1588 work is not printed in the
   chapter. The entries into the middle of Taurus and Leo are printed only as
   intervals.
@@ -226,4 +241,33 @@ Every study is computed from the current catalog,
   [pairs](figures/mars-parallax-1587-pairs.csv), the
   [fits](figures/mars-parallax-1587-summary.csv), the
   [clock check](figures/mars-parallax-1587-clocks.csv), and the figure. A test
+  regenerates the tables.
+
+## Mars from Kassel and from Uraniborg
+
+[Read the study](mars-kassel.md)
+
+- **Question.** On nights when Jost Bürgi at Kassel and Tycho’s observers at
+  Uraniborg measured Mars from the same star, do the two sets of sextant
+  distances agree?
+- **Result.** In 14 pairs on seven nights of 1593 and 1595 they agree within a
+  median of 1.7′, and 12 of the 14 within 3.1′. Kassel’s distances run 1.8′
+  longer on average. Distances computed from JPL DE441 and modern star
+  positions lie at most 1.4′ from Uraniborg’s readings and up to 5.5′ from
+  Kassel’s. One further pair differs by 7° and is set aside: the log’s printed
+  distance is in question.
+- **Inputs.** 22 distances from Snellius’s *Observationes Hassiacae* and 65
+  from *Opera Omnia* XII with their printed clocks,
+  [selected from the catalog](../examples/mars-kassel-readings.csv), modern
+  positions of five stars, and cached JPL Horizons positions of Mars.
+- **Limits.** Fourteen pairs, ten of them resting on a single Kassel reading.
+  Kassel prints its hours to the half hour. Standard air for every night. The
+  motion of Mars between two readings of a night comes from DE441, so the
+  readings are also given as read. One reading is left out because its printed
+  altitude contradicts its printed hour, by a rule added after the first run.
+- **Rerun.** `python examples/mars_kassel.py --output docs/figures`
+  regenerates the [readings](figures/mars-kassel-readings.csv), the
+  [pairs](figures/mars-kassel-pairs.csv), the
+  [summary](figures/mars-kassel-summary.csv), the
+  [altitude check](figures/mars-kassel-altitudes.csv), and the figure. A test
   regenerates the tables.

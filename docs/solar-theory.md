@@ -1,4 +1,15 @@
-# Tycho’s solar theory against DE441
+# Tycho’s solar theory
+
+**In plain terms.** Tycho worked out the moments of the equinoxes and, from
+them, the shape of the Sun’s yearly path. This study repeats his working, sets
+it beside a modern ephemeris, and traces the three-hour difference to two
+corrections he applied to his own measurements. The
+[plain-language guide](plain-language.md) explains the terms.
+
+No reading from an instrument enters this study. The ten equinoxes are
+instants Tycho computed from his solar altitudes, so the modern ephemeris is
+the only measure the study has for them. The solar altitudes in his logs are
+not used here.
 
 The first chapter of the *Progymnasmata* derives the Sun’s apogee and
 eccentricity for 1588. Tycho prints ten equinoxes from 1584 to 1588, three
@@ -22,14 +33,14 @@ his construction uses.
   equinoxes fall 2.9 to 3.1 hours early and the autumnal ones 2.7 hours late.
   At his vernal instants the Sun is still 7.1′ to 7.8′ short of the equinox.
   At his autumnal instants it is 6.6′ to 6.7′ past it.
-- **His summer half-year is six hours too long.** He prints 186 days 18½ hours
+- **His summer half-year is six hours longer than the ephemeris gives.** He prints 186 days 18½ hours
   from the vernal to the autumnal equinox. DE441 gives 186 days 12½ hours for
   the same five years.
 - **His construction is carried out correctly.** Recomputed from his three
   intervals, the apogee is 95.51° from the middle of Taurus and 95.44° from the
   middle of Leo, with eccentricity 0.03585 from both. He prints Cancer 5° 30′
   and 5° 27′, and 0.03584.
-- **Exact intervals give a smaller eccentricity.** The same construction on
+- **The ephemeris intervals give a smaller eccentricity.** The same construction on
   the DE441 intervals gives 0.03377 and 0.03371. Twice the eccentricity of the
   Earth’s orbit in 1586 is 0.03376. Tycho’s value is 6% larger, which makes his
   greatest solar equation 2° 03′ where the DE441 intervals give 1° 56′.
@@ -39,7 +50,7 @@ his construction uses.
   That puts his vernal equinox 3.4 hours early and his autumnal equinox 3.4
   hours late. The DE441 Sun reduced this way gives a half-year of 186 days
   19.4 hours and an eccentricity of 0.0362.
-- **The error in his solar longitude runs with the seasons.** The eccentric set
+- **The difference in his solar longitude runs with the seasons.** The eccentric set
   on his equinoxes is 8′ ahead of DE441 around the vernal equinox and 7′ behind
   just after the autumnal one. It crosses DE441 near both solstices.
 
@@ -152,7 +163,7 @@ of it.
 ## Inputs and reproduction
 
 The [selection script](../examples/solar_select.py) reads
-[Tychonides 1.3.4](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.3.4)
+[Tychonides 1.4.0](https://github.com/sweisman/tychonides/releases/tag/tychonides-1.4.0)
 and writes the [printed elements](../examples/solar-theory-inputs.csv) with
 their catalog identities. Tycho’s solar refraction table comes from the
 [refraction study](refraction-tables.md). The

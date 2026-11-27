@@ -15,7 +15,9 @@ python -m pip install .
 ```
 
 The download helper retrieves the files pinned by the checkout, verifies them and
-decompresses `tychonides.sqlite`. To verify files obtained separately:
+decompresses `tychonides.sqlite`. The CSV stays compressed as
+`tychonides.csv.gz`. Most tools read it directly, and `gunzip -k` unpacks a
+copy. To verify files obtained separately:
 
 ```sh
 tychonides-verify resources/catalog --assets-dir downloads --docs-root .
@@ -32,20 +34,22 @@ From a checkout, `python -m src` provides the same entry point.
 
 ## What Verification Checks
 
-For schema 6 releases, the verifier checks:
+For schema 7 releases, the verifier checks:
 
 | Check | Guarantee within this contract |
 | --- | --- |
-| File identity | Downloaded bytes and the decompressed database match manifest SHA-256 values. |
+| File identity | Downloaded bytes, the decompressed database and the decompressed CSV match manifest SHA-256 values. |
 | Database structure | SQLite integrity, foreign keys and declared indexes pass their checks. |
 | Representation consistency | Every CSV field agrees with the canonical database projection. JSON is compared structurally; decimal conveniences come from exact values. Row identities and all declared counts, including per-source totals, agree. |
 | Mechanical conversion | Supported modern conversions are recomputed from preserved notation. The JPL qualification rules additionally check the original fixed-width fields, the displayed flags and which derived values must be absent. |
-| Marked historical values | An exact historical angle or clock time is recomputed from its printed expression when that expression carries every unit mark and no other table cell contributes. In release 1.3.4 this covers 123,434 values, about a third of the exact historical values. |
+| Marked historical values | An exact historical angle or clock time is recomputed from its printed expression when that expression carries every unit mark and no other table cell contributes. In release 1.4.0 this covers 123,434 values, about a third of the exact historical values. |
 | Documentation contracts | With `--docs-root`, CSV and schema fields, vocabulary coverage, generated references, local links and their heading anchors, documented totals and release identifiers are checked. |
 
 The historical compiler separately checks literal components, explicit units and
 reviewed source bindings. The download verifier does not repeat that compilation
 or inspect source images. Earlier schemas have their own verification contracts.
+Releases through 1.3.4 use schema 6 or earlier, ship the CSV uncompressed and
+have no `model_name` column. The verifier still accepts them.
 
 Two limits follow from how the files are made. The CSV and the database come
 from the same export code, so their agreement shows that neither file is
@@ -69,7 +73,7 @@ astronomical analysis. See [terminology](catalog-terms.md) and
 | Review and assembly | Declarative reviews, candidates and source bindings | Quantities, groups, context and relationships |
 | Working export | Assembled records and source evidence | Verified SQLite, CSV and manifest |
 | Consolidation | Compatible verified working catalogs | One catalog preserving every input record and relationship |
-| Public packaging | Verified consolidated catalog and publication policy | Compressed SQLite, CSV and public manifest |
+| Public packaging | Verified consolidated catalog and publication policy | Compressed SQLite, compressed CSV and public manifest |
 
 Staging proposes occurrences; source review establishes their interpretation.
 Processing commands require a source checkout and the corresponding workspace.
@@ -154,23 +158,26 @@ external; working artifact bytes and local locators require public projection.
 
 ## Public Release
 
-The current release is [tychonides-1.3.4](../resources/catalog/README.md).
+The current release is [tychonides-1.4.0](../resources/catalog/README.md).
 To prepare its public files from a verified working catalog:
 
 ```sh
 python -m src.publish_collection --source WORKING_CATALOG \
-  --output PUBLIC_DIRECTORY --release-id tychonides-1.3.4
+  --output PUBLIC_DIRECTORY --release-id tychonides-1.4.0
 ```
 
-Packaging adds citations and derived-value columns, removes source-document bytes
-and local image paths, checks for private material, and verifies the public
-database and CSV. The manifest identifies the compressed download and the
-decompressed database separately. The SQLite database includes the relationships;
-the CSV provides one row per quantity for spreadsheet use.
+Packaging adds citations, derived-value columns and the model name, removes
+source-document bytes and local image paths, checks for private material, and
+verifies the public database and CSV. It compresses both files. The manifest
+identifies each compressed download and its decompressed content separately.
+The SQLite database includes the relationships; the CSV provides one row per
+quantity for spreadsheet use. Package into an empty directory, because files
+left by an earlier packaging are not removed.
 
 Large files are GitHub Release assets. The repository retains the manifest and
-download documentation. Upload the matching compressed database, CSV and manifest
-to the named release; CI verifies those assets against the repository manifest.
+download documentation. Upload the matching compressed database, compressed CSV
+and manifest to the named release; CI verifies those assets against the
+repository manifest.
 Local packaging does not upload files or deploy a website.
 
 ## Recovery and Working-Data Retention

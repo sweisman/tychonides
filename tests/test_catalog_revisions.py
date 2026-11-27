@@ -35,6 +35,8 @@ LINES = [
     "| The first star | 7^h^ | 12^m^ |",
     "| The second star | | 29^m^ |",
     "the month runs to 29 days, 12^h^ 44^m^ 3^s^ 10‴ 58⁗ [recte: 38⁗] 10^v^.",
+    "| From the Prutenic, Mästlin's [E Prutenico Mæſtlini] | 51° 59′ 35″ | 2° 45½′ |",
+    "| From our Tables [Ex Tabulis noſtris] | 2° 45½′ |",
 ]
 TEXT = "\n".join(LINES)
 EDITIONS = {SOURCE: {"sha256": hashlib.sha256(TEXT.encode()).hexdigest(), "lines": LINES}}
@@ -399,6 +401,243 @@ class ReadingRevisionTests(DatabaseCase):
             db = self.database()
             with self.subTest(direction=direction), self.assertRaisesRegex(ValueError, message):
                 apply_reading_revisions(db, [southward(direction=direction)], EDITIONS)
+
+
+NAMELESS = dict(model_name=None, source_model_label=None, source_model_attribution=None)
+PLACE = dict(quantity="altitude", subject="Venus", reference=None)
+
+
+def attributing(**changes):
+    decision = dict(
+        quantity_id=reading("december"),
+        source_id=SOURCE,
+        printed_page=12,
+        source_expression="2° 45½′",
+        version=0,
+        edition_sha256=EDITIONS[SOURCE]["sha256"],
+        previous=dict(PLACE, role="recorded_reading"),
+        revised=dict(PLACE, role="historical_prediction"),
+        model=dict(previous=NAMELESS, revised=dict(NAMELESS, model_name="Maestlin")),
+        basis=dict(
+            kind="printed_table_column",
+            label="Mästlin's",
+            lines=[15],
+            statement="The row gives the place from the ephemerides of Mästlin.",
+        ),
+    )
+    decision.update(changes)
+    return decision
+
+
+def typing_only(**changes):
+    decision = attributing(**changes)
+    del decision["model"]
+    return decision
+
+
+def published_model(db, name):
+    row = exported(db, name)
+    return row, json.loads(row["scientific_metadata_json"])
+
+
+class ModelAttributionTests(DatabaseCase):
+    def test_a_place_takes_the_model_that_its_label_names(self):
+        db = self.database()
+        before = db.execute("SELECT * FROM quantities ORDER BY id").fetchall()
+        with db:
+            apply_reading_revisions(db, [attributing()], EDITIONS)
+        self.assertEqual(db.execute("SELECT * FROM quantities ORDER BY id").fetchall(), before)
+        row, metadata = published_model(db, "december")
+        self.assertEqual(
+            (row["role"], row["interpretation_version"], metadata["model_name"]),
+            ("historical_prediction", 1, "Maestlin"),
+        )
+        review = metadata["interpretation_review"]
+        self.assertEqual(review["model_name"], "Maestlin")
+        self.assertEqual(
+            review["previous_model"],
+            {"model_name": None, "source_model_label": None, "source_model_attribution": None},
+        )
+        self.assertEqual(review["basis"]["source_label"], "Mästlin's")
+
+    def test_a_model_is_named_where_nothing_else_changes(self):
+        db = self.database()
+        prediction = dict(PLACE, role="historical_prediction")
+        with db:
+            apply_reading_revisions(db, [typing_only()], EDITIONS)
+            apply_reading_revisions(
+                db, [attributing(version=1, previous=prediction, revised=prediction)], EDITIONS
+            )
+        row, metadata = published_model(db, "december")
+        self.assertEqual(
+            (row["role"], row["interpretation_version"], metadata["model_name"]),
+            ("historical_prediction", 2, "Maestlin"),
+        )
+        with self.assertRaisesRegex(ValueError, "frozen reading"):
+            apply_reading_revisions(
+                db, [typing_only(version=2, previous=prediction, revised=prediction)], EDITIONS
+            )
+
+    def test_a_source_that_the_page_leaves_unnamed_keeps_its_wording(self):
+        db = self.database()
+        unnamed = dict(
+            model_name=None,
+            source_model_label="our Tables",
+            source_model_attribution="unnamed_as_stated",
+        )
+        decision = attributing(
+            model=dict(previous=NAMELESS, revised=unnamed),
+            basis=dict(attributing()["basis"], label="From our Tables", lines=[16]),
+        )
+        with db:
+            apply_reading_revisions(db, [decision], EDITIONS)
+        _, metadata = published_model(db, "december")
+        self.assertEqual(
+            (
+                metadata["model_name"],
+                metadata["source_model_label"],
+                metadata["source_model_attribution"],
+            ),
+            (None, "our Tables", "unnamed_as_stated"),
+        )
+
+    def test_attributions_that_the_page_does_not_support_are_rejected(self):
+        maestlin = dict(NAMELESS, model_name="Maestlin")
+        ours = dict(NAMELESS, source_model_label="our Tables")
+        cases = (
+            (
+                dict(model=dict(previous=dict(NAMELESS, model_name="Prutenic"), revised=maestlin)),
+                "Model",
+            ),
+            (dict(model=dict(previous=NAMELESS, revised=NAMELESS)), "Model"),
+            (dict(model=dict(previous=NAMELESS, revised=dict(model_name="Maestlin"))), "Model"),
+            (dict(model=dict(previous=NAMELESS, revised=dict(NAMELESS, model_name=" "))), "Model"),
+            (
+                dict(
+                    model=dict(
+                        previous=NAMELESS,
+                        revised=dict(maestlin, source_model_attribution="unnamed_as_stated"),
+                    )
+                ),
+                "Model",
+            ),
+            (
+                dict(
+                    model=dict(
+                        previous=NAMELESS,
+                        revised=dict(NAMELESS, source_model_attribution="unnamed_as_stated"),
+                    )
+                ),
+                "Model",
+            ),
+            (dict(model=dict(previous=NAMELESS, revised=ours)), "Model"),
+            (
+                dict(
+                    model=dict(
+                        previous=NAMELESS, revised=dict(ours, source_model_attribution="guessed")
+                    )
+                ),
+                "Model",
+            ),
+            (dict(revised=dict(PLACE, role="repeated_reading")), "Model"),
+            (
+                dict(
+                    model=dict(
+                        previous=NAMELESS,
+                        revised=dict(ours, source_model_attribution="unnamed_as_stated"),
+                    )
+                ),
+                "do not print the reviewed label",
+            ),
+        )
+        for changes, message in cases:
+            db = self.database()
+            with self.subTest(changes=changes), self.assertRaisesRegex(ValueError, message):
+                apply_reading_revisions(db, [attributing(**changes)], EDITIONS)
+
+    def test_a_later_date_revision_keeps_the_named_model(self):
+        db = self.database()
+        named = attributing(quantity_id=reading("march"), source_expression="51° 59′ 35″")
+        with db:
+            apply_reading_revisions(db, [named], EDITIONS)
+            apply_date_revisions(db, [redating()], EDITIONS)
+        row, metadata = published_model(db, "march")
+        self.assertEqual((row["interpretation_version"], metadata["model_name"]), (2, "Maestlin"))
+        self.assertEqual(json.loads(row["date_claims_json"])[0]["day"], 4)
+
+    def test_a_recorded_model_stays_until_a_review_replaces_it(self):
+        db = self.database()
+        identifier = reading("december")
+        recorded = db.execute("SELECT original_json FROM quantities WHERE id=?", (identifier,))
+        original = dict(json.loads(recorded.fetchone()[0]), model_name="Alphonsine")
+        prediction = dict(PLACE, role="historical_prediction")
+        with db:
+            db.execute(
+                "UPDATE quantities SET original_json=?, scientific_metadata_json=? WHERE id=?",
+                (encoded(original), '{"model_name":"Alphonsine"}', identifier),
+            )
+            apply_reading_revisions(db, [typing_only()], EDITIONS)
+        _, metadata = published_model(db, "december")
+        self.assertEqual(metadata["model_name"], "Alphonsine")
+        self.assertNotIn("model_name", metadata["interpretation_review"])
+        replaced = attributing(
+            version=1,
+            previous=prediction,
+            revised=prediction,
+            model=dict(
+                previous=dict(NAMELESS, model_name="Alphonsine"),
+                revised=dict(NAMELESS, model_name="Maestlin"),
+            ),
+        )
+        with db:
+            apply_reading_revisions(db, [replaced], EDITIONS)
+        _, metadata = published_model(db, "december")
+        self.assertEqual(metadata["model_name"], "Maestlin")
+        self.assertEqual(
+            metadata["interpretation_review"]["previous_model"]["model_name"], "Alphonsine"
+        )
+
+    def test_the_catalogue_states_the_model_of_the_current_interpretation(self):
+        db = self.database()
+        identifier = reading("december")
+
+        def shown():
+            stated = db.execute("SELECT model_name FROM catalogue WHERE id=?", (identifier,))
+            return stated.fetchone()[0]
+
+        self.assertIsNone(shown())
+        recorded = db.execute("SELECT original_json FROM quantities WHERE id=?", (identifier,))
+        original = dict(json.loads(recorded.fetchone()[0]), model_name="Alphonsine")
+        with db:
+            db.execute(
+                "UPDATE quantities SET original_json=? WHERE id=?", (encoded(original), identifier)
+            )
+            apply_reading_revisions(db, [typing_only()], EDITIONS)
+        self.assertEqual(shown(), "Alphonsine")
+        prediction = dict(PLACE, role="historical_prediction")
+        named = dict(previous=prediction, revised=prediction)
+        renamed = dict(
+            previous=dict(NAMELESS, model_name="Alphonsine"),
+            revised=dict(NAMELESS, model_name="Maestlin"),
+        )
+        with db:
+            apply_reading_revisions(db, [attributing(version=1, model=renamed, **named)], EDITIONS)
+        self.assertEqual(shown(), "Maestlin")
+        # A review that leaves the source unnamed withdraws the name; the recorded one stays out.
+        unnamed = dict(
+            previous=renamed["revised"],
+            revised=dict(
+                model_name=None,
+                source_model_label="our Tables",
+                source_model_attribution="unnamed_as_stated",
+            ),
+        )
+        basis = dict(attributing()["basis"], label="From our Tables", lines=[16])
+        with db:
+            apply_reading_revisions(
+                db, [attributing(version=2, model=unnamed, basis=basis, **named)], EDITIONS
+            )
+        self.assertIsNone(shown())
 
 
 CALCULATION = dict(

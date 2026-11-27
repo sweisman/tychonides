@@ -19,6 +19,7 @@ control agreement, release verification and analysis eligibility.
 | Interpret dates | [Dates and clocks](#dates-and-clocks) |
 | Follow dependencies | [Source relationships](#source-relationships-and-interpretation); [derivations](#derivations) |
 | Retain complete context | [Complete normalization](#complete-normalization-schema-5-and-later) |
+| Identify a model or set of tables | [Model names](#model-names-schema-7-and-later) |
 
 The detailed definitions below describe source-specific representations. The
 [schema reference](database-schema.md) gives SQL structure; the generated
@@ -76,8 +77,8 @@ provide the original readings and their surrounding context.
 
 | Download or database table | Contents |
 | --- | --- |
-| `tychonides.sqlite` | Self-contained catalog, source citations, original expressions, interpretations and relationships. |
-| `tychonides.csv` | One row per quantity, with exact values, decimal conveniences, date claims and scientific qualifications. |
+| `tychonides.sqlite` | Self-contained catalog, source citations, original expressions, interpretations and relationships. Downloaded as `tychonides.sqlite.gz`. |
+| `tychonides.csv` | One row per quantity, with exact values, decimal conveniences, date claims and scientific qualifications. Downloaded as `tychonides.csv.gz` from schema 7. Releases through 1.3.4 ship it uncompressed. |
 | `catalogue` | View of the current interpretation of each source quantity. |
 | `quantities`, `interpretations` | Preserved source records and separately versioned interpretations. |
 | `groups` | Source groupings and their clock or calculation-epoch links. |
@@ -187,6 +188,9 @@ Columns have a fixed order, verified against the exporter:
 | `direction`, `record_status` | Recorded direction and qualification. |
 | `flags_json`, `uncertainty_json`, `components_json` | Structured qualifications, uncertainty and original number components. |
 | `scientific_metadata_json`, `date_claims_json`, `source_url` | Additional scientific context, recorded date statements and public source link. |
+| `derived_value_exact` through `derived_timestamp`, `source_page_url`, `source_line_number` | Stored conversions and citation links; see [original and derived fields](#original-and-derived-fields). |
+| `normalized_json` | Complete normalization of the selected interpretation, from schema 5; see [complete normalization](#complete-normalization-schema-5-and-later). |
+| `model_name` | Model, tables or ephemeris of a prediction or comparison, from schema 7; see [model names](#model-names-schema-7-and-later). |
 
 Nested series payloads retain `assertion_ids`, the associated quantity identifiers;
 the database also exposes these through `series_quantities`. Date payloads retain
@@ -729,7 +733,7 @@ zodiac glyph; they do not enter the normalized angle or remove its sign.
 
 `model_name` attributes historical predictions to Copernicus, Tycho Brahe, the Alphonsine or
 Prutenic tables, or named ephemerides such as those of Stadius, Carelli, Magini,
-Scala and Origanus. Ephemeris names
+Scala and Origanus. [Model names](#model-names-schema-7-and-later) defines every name. Ephemeris names
 identify the cited tables; they do not establish a physical cosmology. These are source-published calculations, not outputs of a
 newly implemented model. One written quantity can apply to several bodies: it
 retains one identity and a primary subject, with the shared body scope in linked
@@ -1600,3 +1604,61 @@ identified convention use `distance_in_unspecified_miles` and
 `source_unspecified_mile`. Neither supplies a physical length conversion. When
 a source adds paces to miles, preserve the separate quantities and stated sum;
 do not infer the pace-to-mile ratio.
+
+## Model names (schema 7 and later)
+
+`model_name` in the `catalogue` view and the CSV gives the model, set of tables
+or ephemeris that a prediction or comparison is attributed to. It is the name
+of the current interpretation: the recorded name, or the one stated by a later
+review. `scientific_metadata_json` carries the same name with
+`source_model_label` and `source_model_attribution`. A review that states a
+model also records its evidence in `interpretation_review`.
+
+A name is read from the printed row label, column heading or sentence that
+governs the value. It is never chosen by matching a value to a table. A
+comparison takes the name of the computed place that it differences. A
+difference between the results of two observers, or between two calculations,
+has no name.
+
+Where the page gives a source without naming it, `model_name` is null.
+`source_model_label` then keeps the printed wording, such as `Our calculation`,
+`Ours` or `the Author's New Tables`, and `source_model_attribution` is
+`unnamed_as_stated`. An author's references to his own tables are recorded this
+way. The wording is not assigned to a published set of tables.
+
+Different printed names stay different, also where they may rest on the same
+theory. Forms of one word share a name: Lansbergen and Lansbergian, Ptolemy and
+Ptolemaic. A name does not state which edition of the tables was used, who
+computed from them, or that the calculation was checked.
+
+| Name | What the page names |
+| --- | --- |
+| `Alphonsine` | The Alphonsine tables, also printed as the tables of Alfonso. |
+| `Prutenic` | The Prutenic tables. |
+| `Prutenic, corrected` | Places that the page computes from the Prutenic tables with corrected mean motions. |
+| `Copernicus` | A place or calculation that the page gives to Copernicus. |
+| `Tycho Brahe` | Tycho’s own tables, ephemerides or calculation, where the page names him. |
+| `Tychonic` | The tables that Riccioli marks Tychonic, in the computation of Origanus or his own. |
+| `Magini's Tychonic` | The row that Riccioli labels _Magini Tychonicis_, printed apart from the Tychonic row. |
+| `Danish` | The Danish tables of Longomontanus, in his own computation or that of Pétau or Argoli. |
+| `Longomontanus` | A calculation that the page gives to Longomontanus by name. |
+| `Rudolphine` | The Rudolphine tables. |
+| `Kepler` | A calculation that the page gives to Kepler by name. |
+| `Lansbergian` | The tables of Philips van Lansbergen, or a calculation that the page gives to him. |
+| `Philolaic` | The Philolaic tables of Boulliau, as Riccioli marks them. |
+| `Boulliau` | A calculation that the page gives to Boulliau by name. |
+| `Parisian` | The tables that Riccioli marks Parisian, from Pétau’s calculations. |
+| `Atlantic` | The Atlantic tables of Wendelen. |
+| `Wendelen` | A calculation that the page gives to Wendelen by name. |
+| `Hevelius` | The table of the Moon’s libration in the letter of Johannes Hevelius printed in _Astronomia Reformata_, pp. 173–176. |
+| `Ptolemy` | Ptolemy’s tables or star places, also printed as Ptolemaic. |
+| `Almagest` | Printed as _Almag._ or _Almagest._ in _Astronomia Reformata_, pp. 285 and 295. The page does not say whether this is Ptolemy’s work or Riccioli’s own _Almagestum Novum_. |
+| `al-Battani` | Star places that a column heading gives to al-Battānī. |
+| `Argoli` | A calculation that the page gives to Argoli. |
+| `Peurbach` | A calculation that the page gives to Peurbach. |
+| `Stadius`, `Carelli`, `Leovitius`, `Maestlin`, `Magini`, `Scala`, `Origanus` | The ephemerides of that author. |
+
+Two limits apply to _Astronomia Reformata_. The mark _A._ on pp. 127–128 is not
+in the printed legend of its table, so its ten values keep the mark as an
+unnamed source. Where one sentence or heading gives a value to two sources, the
+name is the first that it prints, and the review record keeps the whole wording.

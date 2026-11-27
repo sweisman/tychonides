@@ -34,17 +34,22 @@ evidence, compare source accounts and develop analyses. The
 historical and modern collections already available, with coverage and
 interpretation limits.
 
-The [1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
+The studies take what Tycho recorded as the reference and measure every
+account of the motion from it, old or modern. The
+[plain-language guide](docs/plain-language.md) explains the terms. The
+[1595 Mars comparison](docs/mars-apparent-motion.md) follows a retrograde
 passage through four models. The [opposition study](docs/mars-oppositions.md)
-sets Tycho’s Mars longitudes and the tables of his day against a modern
-ephemeris. The [printed predictions study](docs/printed-predictions.md) does
+measures the tables of his day and a modern ephemeris from Tycho’s Mars
+longitudes. The [printed predictions study](docs/printed-predictions.md) does
 the same for every planet the logs compare with a table. The
 [solar theory study](docs/solar-theory.md) rebuilds Tycho’s apogee and
 eccentricity from his printed equinoxes. The
 [refraction study](docs/refraction-tables.md) sets the printed tables of Tycho
 and Riccioli beside modern refraction. The
 [1587 parallax study](docs/mars-parallax-1587.md) tests his distances of Mars
-from the stars for a parallax. The
+from the stars for a parallax. The [Kassel study](docs/mars-kassel.md) sets
+those distances beside the ones Jost Bürgi measured at Kassel on the same
+nights. The
 [planetary correction comparisons](docs/planetary-parallax-comparisons.md)
 show how historical and modern distance and refraction assumptions change the
 results. The [studies page](docs/studies.md) lists each finished analysis with
@@ -143,6 +148,7 @@ Release assets; cloning the repository alone does not download them.
 | Your goal | Reading route |
 | --- | --- |
 | See what is done and what is next | [Status](docs/status.md) → [studies](docs/studies.md) |
+| Read it without the jargon | [In plain terms](docs/plain-language.md) |
 | Understand the project | [Research program](docs/research-plan.md) → [sources and coverage](docs/data-sources.md) |
 | Use the data | [Catalog guide](resources/catalog/README.md) → [worked values](docs/catalog-data-dictionary.md#worked-numerical-examples) → [source uses](docs/data-sources.md#intended-uses) |
 | Verify or contribute | [Workflow](docs/data-workflow.md) → [ingestion strategy](docs/ingestion-strategy.md) → [public worked example](docs/worked-example.md) → [tests](https://github.com/sweisman/tychonides/tree/main/tests) |

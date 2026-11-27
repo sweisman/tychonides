@@ -14,18 +14,25 @@ along with the calculations and instrument records that give them context.
 
 ## Download
 
-Release **tychonides-1.3.4** provides the verified catalog as GitHub Release
+Release **tychonides-1.4.0** provides the verified catalog as GitHub Release
 assets. Data files are retained by release version, with their checksums in Git.
 No separate storage service is required.
 
-- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.4/tychonides.sqlite.gz)** — decompress once to obtain
+- **[Complete SQLite database](https://github.com/sweisman/tychonides/releases/download/tychonides-1.4.0/tychonides.sqlite.gz)** — decompress once to obtain
   `tychonides.sqlite`. All numerical records, source identities, contextual relationships
   and interpretation versions are in this one database.
-- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.3.4/tychonides.csv)** — one row per quantity, with exact values, decimal
-  conveniences and scientific qualifications.
+- **[CSV](https://github.com/sweisman/tychonides/releases/download/tychonides-1.4.0/tychonides.csv.gz)** — one row per quantity, with exact values, decimal
+  conveniences and scientific qualifications. It is compressed with gzip.
 
-The repository keeps the [manifest](manifest.json) with download and uncompressed database
-checksums. Compression reduces download size, without changing SQLite contents.
+The repository keeps the [manifest](manifest.json) with the checksums of each
+download and of its uncompressed content. Compression reduces download size
+without changing the contents.
+
+Release 1.4.0 records the table or ephemeris behind the printed predictions
+and comparisons. 5,017 of them take the name that their page prints, in the
+new `model_name` column, and 482 are recorded with the wording of a page that
+names none. No printed expression, exact value, date, or identity changed.
+Earlier releases ship the CSV uncompressed.
 
 Releases 1.3.2 to 1.3.4 carry the corrections from two audits, of the
 [Tycho log records](../../docs/status.md#audit-of-the-tycho-log-records) and
@@ -42,8 +49,9 @@ audits have stated limits, and faults may remain where no test looks. Check a
 date, a type, or a subject against the printed page before relying on it.
 
 After installing the package from a source checkout, run
-`./scripts/download-catalog downloads` to fetch, verify and decompress both
-downloads in one command. Existing catalog files are preserved; choose a fresh
+`./scripts/download-catalog downloads` to fetch and verify both downloads and
+decompress the database in one command. The CSV stays compressed, and most
+tools read it as it is. Existing catalog files are preserved; choose a fresh
 destination when fetching another version. The [README](../../README.md#quick-start)
 shows installation and an example query.
 

@@ -13,9 +13,10 @@ import tempfile
 
 from .catalog_release import encoded
 from .catalog_enrichment import (
-    PUBLIC_CSV_COLUMNS,
+    PUBLIC_SCHEMA,
     enrich_catalogue,
     load_registry,
+    public_columns,
 )
 from .core import digest
 from .recovery import write_json_atomic
@@ -95,6 +96,16 @@ def revise_counted_sign_boundaries(db):
             )
 
 
+RELEASE_FILES = ("tychonides.sqlite.gz", "tychonides.csv.gz")
+
+
+def pack(path):
+    """Compress a file beside itself. The same bytes always give the same compressed file."""
+    with path.open("rb") as incoming, path.with_name(path.name + ".gz").open("wb") as outgoing:
+        with gzip.GzipFile(filename="", mode="wb", fileobj=outgoing, mtime=0) as compressed:
+            shutil.copyfileobj(incoming, compressed)
+
+
 def publish_collection(source, output, release_id=None):
     if release_id is None:
         import tomllib
@@ -172,7 +183,10 @@ def publish_collection(source, output, release_id=None):
                     image_pixels_included=False,
                     source_artifact_bytes_included=False,
                 )
-                db.execute("UPDATE metadata SET value_json='6' WHERE key='schema_version'")
+                db.execute(
+                    "UPDATE metadata SET value_json=? WHERE key='schema_version'",
+                    (str(PUBLIC_SCHEMA),),
+                )
                 for key, value in meta.items():
                     db.execute("INSERT INTO metadata VALUES (?,?)", (key, encoded(value)))
             counts = {
@@ -199,7 +213,7 @@ def publish_collection(source, output, release_id=None):
             db.row_factory = sqlite3.Row
             from .csv_projection import project_csv
 
-            columns = (*PUBLIC_CSV_COLUMNS, "normalized_json")
+            columns = public_columns()
             with (stage / "tychonides.csv").open("w", encoding="utf-8", newline="") as outgoing:
                 writer = csv.DictWriter(outgoing, fieldnames=columns)
                 writer.writeheader()
@@ -210,15 +224,11 @@ def publish_collection(source, output, release_id=None):
         with (stage / "tychonides.csv").open(encoding="utf-8") as stream:
             if any(PRIVATE.search(line) for line in stream):
                 raise ValueError("Private material remains in CSV")
-        with (
-            (stage / "tychonides.sqlite").open("rb") as incoming,
-            (stage / "tychonides.sqlite.gz").open("wb") as outgoing,
-        ):
-            with gzip.GzipFile(filename="", mode="wb", fileobj=outgoing, mtime=0) as compressed:
-                shutil.copyfileobj(incoming, compressed)
+        for name in ("tychonides.sqlite", "tychonides.csv"):
+            pack(stage / name)
         manifest = dict(
             release_id=release_id,
-            schema_version=6,
+            schema_version=PUBLIC_SCHEMA,
             status="research_catalogue",
             index_contract=1,
             vocabulary_contract=1,
@@ -228,12 +238,11 @@ def publish_collection(source, output, release_id=None):
             data_license="CC0-1.0",
             license_scope=meta["license_scope"],
             sqlite_sha256=digest(stage / "tychonides.sqlite"),
-            output_hashes={
-                n: digest(stage / n) for n in ("tychonides.sqlite.gz", "tychonides.csv")
-            },
+            csv_sha256=digest(stage / "tychonides.csv"),
+            output_hashes={name: digest(stage / name) for name in RELEASE_FILES},
             download_urls={
                 name: f"https://github.com/sweisman/tychonides/releases/download/{release_id}/{name}"
-                for name in ("tychonides.sqlite.gz", "tychonides.csv")
+                for name in RELEASE_FILES
             },
         )
         write_json_atomic(stage / "manifest.json", manifest)

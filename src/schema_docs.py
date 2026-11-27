@@ -63,6 +63,7 @@ COLUMNS = {
     "printed_page": "Printed bibliographic page, not automatically a PDF image index.",
     "expression": "Literal source numeric expression.",
     "role": "Evidential role; see the quantity and role reference.",
+    "model_name": "Model, tables or ephemeris that the current interpretation attributes the value to; null where the source names none.",
     "event_id": "Associated source group.",
     "series_id": "Associated source series.",
     "original_json": "Original interpretation payload; shared fixed-width lines live in source_lines.",
@@ -144,7 +145,7 @@ def render(db):
     lines = [
         "# Database schema reference",
         "",
-        "Schema versions 5 and 6 share this layout. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.",
+        "Schema version 7 has this layout. Versions 5 and 6 share it without `catalogue.model_name`. Exact values are rational strings; SQL null means unknown or inapplicable, never zero.",
         "JSON preserves structured qualifications. Foreign keys below identify relationship targets.",
         "See the [historical terms](historical-data-dictionary.md), [modern terms](modern-data-dictionary.md) and [normalization conventions](normalization-conventions.md).",
         "",

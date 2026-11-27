@@ -7,11 +7,14 @@ from pathlib import Path
 def catalog_files(manifest, *, uncompressed=False):
     """Accept one complete naming family; never mix or guess asset paths."""
     names = set(manifest.get("output_hashes", {}))
+    # A working catalogue is unpacked. Public releases compress the database, and from
+    # schema 7 the CSV as well.
+    families = ((".sqlite", ".csv"), (".sqlite.gz", ".csv"), (".sqlite.gz", ".csv.gz"))
     for stem in ("tychonides", "mars"):
-        for suffix in (".sqlite", ".sqlite.gz"):
-            database, csv = stem + suffix, stem + ".csv"
+        for packing in families:
+            database, csv = (stem + suffix for suffix in packing)
             if names == {database, csv}:
-                if uncompressed and suffix.endswith(".gz"):
+                if uncompressed and database.endswith(".gz"):
                     raise ValueError("Processing requires an uncompressed working catalogue")
                 return database, csv
     raise ValueError("Unexpected release file set")

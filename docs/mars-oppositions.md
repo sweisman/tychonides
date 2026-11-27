@@ -1,11 +1,18 @@
 # Mars at the oppositions of 1580 to 1600
 
+**In plain terms.** About every two years Mars stands opposite the Sun and is
+at its brightest. This study takes the places Tycho recorded for Mars around
+nine of those dates and measures how far each account of its motion, old or
+modern, falls from them. The [plain-language guide](plain-language.md) explains
+the terms.
+
 Longomontanus tabulates fourteen oppositions of Mars from 1580 to 1610. Tycho’s
 logs cover the first ten. This study repeats the
 [1595 comparison](mars-apparent-motion.md) at each of them, with one set of
-rules, and asks three questions:
+rules. Tycho’s reduced longitudes are the reference throughout, and the study
+asks three questions:
 
-1. How close are Tycho’s reduced longitudes to a modern ephemeris?
+1. How close does a modern ephemeris come to Tycho’s reduced longitudes?
 2. How do Ptolemaic, Copernican, and Tychonic constructions follow each passage?
 3. How close were the table predictions Tycho printed beside his reductions?
 
@@ -14,11 +21,12 @@ rules, and asks three questions:
 Filled points have a printed hour the study can use. Open points are evaluated
 at local noon. The vertical scale differs between panels.
 
-## Tycho’s longitudes against a modern ephemeris
+## A modern ephemeris against Tycho’s longitudes
 
-At nine oppositions, where the log prints a usable hour, Tycho’s reduced
-longitudes differ from the JPL DE441 ephemeris by 0.5′ to 4.6′ RMS. The mean
-difference stays within 1.7′ at every one of them.
+At nine oppositions, where the log prints a usable hour, the JPL DE441
+ephemeris lies 0.5′ to 4.6′ RMS from Tycho’s reduced longitudes. The mean
+difference stays within 1.7′ at every one of them. DE441 is fitted to modern
+measurements and uses none of Tycho’s, so his logs test it independently.
 
 | Opposition | Dates | Rows | Rows with a usable hour | DE441 − log, RMS on those rows | Mean | DE441 − log, RMS on all rows |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -99,26 +107,30 @@ for the same date and with DE441 at that reduction’s time.
 
 | Opposition | Alphonsine | Copernicus | Prutenic |
 | --- | ---: | ---: | ---: |
-| 1580 Nov 18 | −42′ (3) | | −4′ (3) |
-| 1582 Dec 28 | | | −3′ (1) |
-| 1585 Jan 30 | −205′ (10) | +112′ (8) | +57′ (2) |
-| 1587 Mar 6 | | | +124′ (1) |
-| 1589 Apr 14 | −57′ (9) | +96′ (9) | |
-| 1591 Jun 8 | +231′ (12) | −8′ (11) | −14′ (1) |
-| 1593 Aug 25 | +284′ (16) | −253′ (16) | |
-| 1595 Oct 31 | +8′ (5) | −115′ (4) | −97′ (1) |
+| 1580 Nov 18 | −103′ (3) | | −65′ (3) |
+| 1582 Dec 28 | | | −2′ (1) |
+| 1585 Jan 30 | −214′ (10) | +101′ (8) | +57′ (2) |
+| 1587 Mar 6 | | | +126′ (1) |
+| 1589 Apr 14 | −56′ (9) | +97′ (9) | |
+| 1591 Jun 8 | +233′ (12) | −5′ (11) | −11′ (1) |
+| 1593 Aug 25 | +285′ (16) | −252′ (16) | |
+| 1595 Oct 31 | +8′ (5) | −114′ (4) | −95′ (1) |
 | 1597 Dec 13 | | | +83′ (1) |
 
-Each cell is the mean of prediction minus DE441, with the number of predictions
-in parentheses. The [prediction summary](figures/mars-oppositions-prediction-summary.csv)
-also gives the differences from the log and the medians.
+Each cell is the mean of prediction minus the log’s reduction for the same
+date, with the number of predictions in parentheses. The
+[prediction summary](figures/mars-oppositions-prediction-summary.csv) also
+gives the differences from DE441 and the medians.
 
-- **Neither table is reliably closer.** The Alphonsine predictions run 3.4°
-  behind in 1585 and 4.7° ahead in 1593. The Copernican ones run 1.9° ahead in
+- **Neither table is reliably closer.** The Alphonsine predictions run 3.6°
+  behind in 1585 and 4.7° ahead in 1593. The Copernican ones run 1.7° ahead in
   1585 and 4.2° behind in 1593. In 1595 the Alphonsine values happen to fall
   within 10′ on four of five dates.
 - **The errors belong to the tables.** Measured from the log or from DE441, the
-  means agree within 3′ at the oppositions that have no flagged row.
+  means agree within 4′ at the seven oppositions that have no flagged row. At
+  the other two the log itself has a row far from the ephemeris. Measured from
+  DE441, the 1580 means are −42′ and −4′, and the 1585 means are −205′, +112′,
+  and +57′.
 - **These errors are far larger than those of the anchored curves.** A printed
   prediction carries its table’s epoch and mean-motion errors. An anchored
   curve removes them.
